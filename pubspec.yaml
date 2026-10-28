@@ -19,4 +19,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/worlds/
+    - assets/images/emblems/
+    - assets/images/mascots/
+    - assets/images/rewards/
 

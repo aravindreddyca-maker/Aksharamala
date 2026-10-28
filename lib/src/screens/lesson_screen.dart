@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../app.dart';
 import '../models.dart';
 import '../services/speech_service.dart';
+import '../theme.dart';
 import '../widgets/common.dart';
 
 class LessonScreen extends StatefulWidget {
@@ -25,6 +26,15 @@ class _LessonScreenState extends State<LessonScreen> {
 
   bool get _isTracing => widget.lesson.kind == LessonKind.tracing;
   bool get _isStory => widget.lesson.kind == LessonKind.story;
+
+  /// Counting and sums in Number Galaxy: one picture, one question, three big
+  /// answers, English only. "Number Names" keeps the multilingual layout
+  /// because matching the Telugu/Hindi/Tamil words is its whole point.
+  bool get _isMath =>
+      widget.world.id == 'numbers' &&
+      widget.lesson.id != 'num-names' &&
+      (widget.lesson.kind == LessonKind.numbers ||
+          widget.lesson.kind == LessonKind.game);
 
   Future<void> _speak() async {
     setState(() => _speaking = true);
@@ -120,6 +130,7 @@ class _LessonScreenState extends State<LessonScreen> {
         builder: (context, constraints) {
           final twoPanel = constraints.maxWidth >= 600;
           final padding = constraints.maxHeight < 400 ? 10.0 : 18.0;
+          if (_isMath) return _buildMath(twoPanel: twoPanel, padding: padding);
           final activity = _isTracing
               ? _buildTracing()
               : _isStory
@@ -157,6 +168,165 @@ class _LessonScreenState extends State<LessonScreen> {
           );
         },
       ),
+    );
+  }
+
+  Widget _buildMath({required bool twoPanel, required double padding}) {
+    final visual = _mathVisual();
+    if (!twoPanel) {
+      return SingleChildScrollView(
+        padding: EdgeInsets.all(padding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(height: 230, child: visual),
+            const SizedBox(height: 12),
+            _mathAnswers(tileHeight: 68),
+          ],
+        ),
+      );
+    }
+    return Padding(
+      padding: EdgeInsets.fromLTRB(padding, 4, padding, padding),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(flex: 5, child: visual),
+          SizedBox(width: padding),
+          Expanded(
+            flex: 5,
+            child: LayoutBuilder(
+              builder: (context, box) {
+                // The question (which grows with text size) and the gaps come
+                // off the top; the three tiles share what is left.
+                final title =
+                    MediaQuery.textScalerOf(context).scale(24) * 1.3 + 12;
+                final tile = ((box.maxHeight - title - 36) / 3).clamp(
+                  56.0,
+                  120.0,
+                );
+                return SingleChildScrollView(
+                  child: _mathAnswers(tileHeight: tile),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Stars to count (bundled image) or the sum to solve, plus Listen.
+  Widget _mathVisual() {
+    final lesson = widget.lesson;
+    final stars = '★'.allMatches(lesson.symbol).length;
+    return Card(
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          children: [
+            Expanded(
+              child: Center(
+                child: stars > 0
+                    ? LayoutBuilder(
+                        builder: (context, box) {
+                          final perRow = stars <= 5 ? stars : 5;
+                          final rows = (stars / perRow).ceil();
+                          final size = ((box.maxWidth / perRow) - 10)
+                              .clamp(32.0, 96.0)
+                              .toDouble();
+                          final fit = (box.maxHeight / rows) - 10;
+                          return Wrap(
+                            alignment: WrapAlignment.center,
+                            spacing: 8,
+                            runSpacing: 8,
+                            children: [
+                              for (var i = 0; i < stars; i++)
+                                Image.asset(
+                                  'assets/images/rewards/star.png',
+                                  width: size < fit ? size : fit,
+                                  height: size < fit ? size : fit,
+                                  excludeFromSemantics: true,
+                                ),
+                            ],
+                          );
+                        },
+                      )
+                    : FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          lesson.symbol,
+                          style: TextStyle(
+                            fontSize: 84,
+                            fontWeight: FontWeight.w900,
+                            color: widget.world.darkColor,
+                          ),
+                        ),
+                      ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            FilledButton.tonalIcon(
+              key: const Key('speak_button'),
+              onPressed: _speaking ? null : _speak,
+              icon: Icon(
+                _speaking ? Icons.graphic_eq_rounded : Icons.volume_up_rounded,
+              ),
+              label: Text(_speaking ? 'Speaking…' : 'Listen'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// The question and three big tiles. Tapping an answer ends the quest
+  /// straight away, so there is no separate Check button to hunt for.
+  Widget _mathAnswers({required double tileHeight}) {
+    final lesson = widget.lesson;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10, top: 2),
+          // One line, shrunk to fit, so the tile sizing below stays exact.
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              lesson.challenge,
+              maxLines: 1,
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontSize: 24,
+                    color: GameTokens.ink,
+                  ),
+            ),
+          ),
+        ),
+        for (final option in lesson.options)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: _MathTile(
+              key: Key('answer_$option'),
+              label: option,
+              height: tileHeight,
+              state: !_submitted
+                  ? _TileState.idle
+                  : option == lesson.answer
+                      ? _TileState.correct
+                      : option == _selected
+                          ? _TileState.wrong
+                          : _TileState.idle,
+              onTap: _submitted
+                  ? null
+                  : () {
+                      setState(() => _selected = option);
+                      _finish(option == lesson.answer);
+                    },
+            ),
+          ),
+      ],
     );
   }
 
@@ -369,6 +539,89 @@ class _LessonScreenState extends State<LessonScreen> {
           ),
         ),
       );
+}
+
+enum _TileState { idle, correct, wrong }
+
+class _MathTile extends StatelessWidget {
+  const _MathTile({
+    required this.label,
+    required this.height,
+    required this.state,
+    required this.onTap,
+    super.key,
+  });
+
+  final String label;
+  final double height;
+  final _TileState state;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    // Colour is never the only signal: right/wrong also get an icon.
+    final (fill, border, icon) = switch (state) {
+      _TileState.idle => (Colors.white, const Color(0xFFCFC8E6), null),
+      _TileState.correct => (
+          const Color(0xFFC8F2D2),
+          const Color(0xFF1E8A4C),
+          Icons.check_circle_rounded,
+        ),
+      _TileState.wrong => (
+          const Color(0xFFFFD9D2),
+          const Color(0xFFC0392B),
+          Icons.cancel_rounded,
+        ),
+    };
+    return Semantics(
+      button: true,
+      label: switch (state) {
+        _TileState.idle => 'Answer $label',
+        _TileState.correct => 'Answer $label, correct',
+        _TileState.wrong => 'Answer $label, not this one',
+      },
+      excludeSemantics: true,
+      child: Material(
+        color: fill,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+          side: BorderSide(
+              color: border, width: state == _TileState.idle ? 1.5 : 3),
+        ),
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(20),
+          child: SizedBox(
+            height: height,
+            child: Center(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (icon != null) ...[
+                    Icon(icon, color: border, size: 30),
+                    const SizedBox(width: 10),
+                  ],
+                  Flexible(
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        label,
+                        style: const TextStyle(
+                          fontSize: 34,
+                          fontWeight: FontWeight.w900,
+                          color: GameTokens.ink,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _TracePainter extends CustomPainter {

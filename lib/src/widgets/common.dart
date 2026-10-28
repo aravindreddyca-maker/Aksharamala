@@ -55,7 +55,17 @@ class StarPill extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.star_rounded, color: Color(0xFF7A4E00), size: 21),
+            Image.asset(
+              'assets/images/rewards/star.png',
+              width: 24,
+              height: 24,
+              excludeFromSemantics: true,
+              errorBuilder: (_, __, ___) => const Icon(
+                Icons.star_rounded,
+                color: Color(0xFF7A4E00),
+                size: 21,
+              ),
+            ),
             const SizedBox(width: 4),
             Text(
               '$stars',
