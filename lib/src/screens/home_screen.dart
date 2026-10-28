@@ -1,3 +1,5 @@
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 
 import '../app.dart';
@@ -18,17 +20,14 @@ const _emblemAssets = <String, String>{
   'numbers': 'assets/images/emblems/numbers.png',
 };
 
-const _mascotAssets = <String>[
-  'assets/images/mascots/boy.png',
-  'assets/images/mascots/girl.png',
-  'assets/images/mascots/tiger.png',
-  'assets/images/mascots/parrot.png',
-  'assets/images/mascots/elephant.png',
-];
-
-/// A stable guide per child, so each learner always meets the same friend.
-String _mascotFor(ChildProfile profile) => _mascotAssets[
-    profile.id.codeUnits.fold<int>(0, (a, b) => a + b) % _mascotAssets.length];
+/// The friend who stands in each world's card.
+const _worldMascots = <String, String>{
+  'english': 'assets/images/mascots/boy.png',
+  'telugu': 'assets/images/mascots/elephant.png',
+  'hindi': 'assets/images/mascots/tiger.png',
+  'tamil': 'assets/images/mascots/girl.png',
+  'numbers': 'assets/images/mascots/robot.png',
+};
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -40,37 +39,55 @@ class HomeScreen extends StatelessWidget {
     if (profile == null) return const ProfileScreen();
     return Scaffold(
       backgroundColor: GameTokens.navy,
-      body: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Color(0xFF1E3157), GameTokens.navy],
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Softened so the scenery reads as a backdrop, not competing detail.
+          ImageFiltered(
+            imageFilter: ui.ImageFilter.blur(
+              sigmaX: 4,
+              sigmaY: 4,
+              tileMode: TileMode.clamp,
+            ),
+            child: Image.asset(
+              'assets/images/backgrounds/home_bg.webp',
+              fit: BoxFit.cover,
+              excludeFromSemantics: true,
+              errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+            ),
           ),
-        ),
-        child: SafeArea(
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              final compact =
-                  constraints.maxHeight < 430 || constraints.maxWidth < 720;
-              final pad = compact ? 12.0 : 24.0;
-              return Column(
-                children: [
-                  _TopBar(profile: profile, compact: compact, pad: pad),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: pad),
-                    child: _AdventureBanner(
+          // Light scrim only: the banner, buttons and cards carry their own
+          // contrast, so the meadow can stay bright.
+          const DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0x66132A4F), Color(0x8013213A)],
+              ),
+            ),
+          ),
+          SafeArea(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final compact =
+                    constraints.maxHeight < 430 || constraints.maxWidth < 720;
+                final pad = compact ? 12.0 : 24.0;
+                return Column(
+                  children: [
+                    _HomeHeader(
+                      profile: profile,
                       message: controller.adaptiveMessage,
-                      mascot: _mascotFor(profile),
                       compact: compact,
+                      pad: pad,
                     ),
-                  ),
-                  Expanded(child: _WorldStrip(pad: pad, compact: compact)),
-                ],
-              );
-            },
+                    Expanded(child: _WorldStrip(pad: pad, compact: compact)),
+                  ],
+                );
+              },
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
@@ -125,66 +142,85 @@ Future<void> _parentGate(BuildContext context) async {
   }
 }
 
-class _TopBar extends StatelessWidget {
-  const _TopBar({
+/// One row: greeting banner with the child's avatar overlapping it, then
+/// Rewards, Parents and the star count. Frees height for the world cards.
+class _HomeHeader extends StatelessWidget {
+  const _HomeHeader({
     required this.profile,
+    required this.message,
     required this.compact,
     required this.pad,
   });
   final ChildProfile profile;
+  final String message;
   final bool compact;
   final double pad;
 
   @override
   Widget build(BuildContext context) {
     // Labelled buttons only when there is room; icon-only keeps 640dp safe.
-    final labelled = MediaQuery.sizeOf(context).width >= 860 &&
+    final labelled = MediaQuery.sizeOf(context).width >= 900 &&
         MediaQuery.textScalerOf(context).scale(1) <= 1.3;
+    final bannerHeight = compact ? 54.0 : 66.0;
+    final avatarSize = bannerHeight + 12;
     return Padding(
-      padding: EdgeInsets.fromLTRB(pad, 8, pad, 6),
+      padding: EdgeInsets.fromLTRB(pad, 10, pad, 6),
       child: Row(
         children: [
-          Semantics(
-            button: true,
-            label: 'Change learner',
-            child: InkWell(
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute<void>(
-                  builder: (_) => const ProfileScreen(allowSkip: true),
-                ),
+          Expanded(
+            child: SizedBox(
+              height: avatarSize,
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Positioned(
+                    left: avatarSize * .55,
+                    right: 0,
+                    top: 6,
+                    height: bannerHeight,
+                    child: _GreetingBanner(
+                      name: profile.name,
+                      message: message,
+                      compact: compact,
+                      leftInset: avatarSize * .5,
+                    ),
+                  ),
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: Semantics(
+                      button: true,
+                      label: 'Change learner',
+                      child: InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute<void>(
+                            builder: (_) =>
+                                const ProfileScreen(allowSkip: true),
+                          ),
+                        ),
+                        borderRadius: BorderRadius.circular(avatarSize),
+                        child: GameAvatar(
+                          value: profile.avatar,
+                          size: avatarSize,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              borderRadius: BorderRadius.circular(30),
-              child: GameAvatar(value: profile.avatar, size: compact ? 44 : 52),
             ),
           ),
           const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Namaste, ${profile.name}!',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: compact ? 17 : 21,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-                if (!compact)
-                  Text(
-                    '${profile.stage.label} • ${profile.stage.ageLabel}',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(color: Color(0xFFD3DDF1)),
-                  ),
-              ],
-            ),
-          ),
           _ActionButton(
-            icon: Icons.emoji_events_rounded,
+            icon: Image.asset(
+              'assets/images/rewards/trophy.png',
+              width: 26,
+              height: 26,
+              excludeFromSemantics: true,
+              errorBuilder: (_, __, ___) =>
+                  const Icon(Icons.emoji_events_rounded),
+            ),
             label: 'Rewards',
             showLabel: labelled,
             onTap: () => Navigator.push(
@@ -196,7 +232,7 @@ class _TopBar extends StatelessWidget {
           ),
           const SizedBox(width: 8),
           _ActionButton(
-            icon: Icons.family_restroom_rounded,
+            icon: const Icon(Icons.family_restroom_rounded),
             label: 'Parents',
             showLabel: labelled,
             onTap: () => _parentGate(context),
@@ -209,74 +245,73 @@ class _TopBar extends StatelessWidget {
   }
 }
 
-class _AdventureBanner extends StatelessWidget {
-  const _AdventureBanner({
+class _GreetingBanner extends StatelessWidget {
+  const _GreetingBanner({
+    required this.name,
     required this.message,
-    required this.mascot,
     required this.compact,
+    required this.leftInset,
   });
+  final String name;
   final String message;
-  final String mascot;
   final bool compact;
+  final double leftInset;
 
   @override
-  Widget build(BuildContext context) => Container(
-        width: double.infinity,
-        padding: EdgeInsets.symmetric(
-          horizontal: compact ? 12 : 20,
-          vertical: compact ? 4 : 8,
-        ),
+  Widget build(BuildContext context) =>
+      // The banner has a fixed height, so its text scales up to 125% only;
+      // the rest of the screen still follows the system text size.
+      MediaQuery.withClampedTextScaling(maxScaleFactor: 1.25, child: _body());
+
+  Widget _body() => Container(
+        padding: EdgeInsets.fromLTRB(leftInset + 12, 4, 16, 4),
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [Color(0xFF5D4DD4), Color(0xFF9A5DE2)],
           ),
-          borderRadius: BorderRadius.circular(compact ? 18 : 22),
+          borderRadius: BorderRadius.circular(30),
           boxShadow: const [
             BoxShadow(
-              color: Color(0x44000000),
+              color: Color(0x55000000),
               blurRadius: 12,
               offset: Offset(0, 5),
             ),
           ],
         ),
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              mascot,
-              height: compact ? 44 : 64,
-              fit: BoxFit.contain,
-              excludeFromSemantics: true,
-              errorBuilder: (_, __, ___) => Icon(
-                Icons.auto_awesome_rounded,
-                color: const Color(0xFFFFE879),
-                size: compact ? 28 : 40,
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text.rich(
+                TextSpan(
+                  children: [
+                    const TextSpan(text: 'Namaste, '),
+                    TextSpan(
+                      text: '$name!',
+                      style: const TextStyle(color: GameTokens.gold),
+                    ),
+                  ],
+                ),
+                maxLines: 1,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: compact ? 18 : 23,
+                  fontWeight: FontWeight.w900,
+                  height: 1.1,
+                ),
               ),
             ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  if (!compact)
-                    const Text(
-                      'Today’s learning trail',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                  Text(
-                    message,
-                    maxLines: compact ? 1 : 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: Colors.white,
-                      height: 1.25,
-                      fontWeight: compact ? FontWeight.w700 : FontWeight.w500,
-                    ),
-                  ),
-                ],
+            Text(
+              message,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: compact ? 12 : 14,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ],
@@ -291,7 +326,7 @@ class _ActionButton extends StatelessWidget {
     required this.showLabel,
     required this.onTap,
   });
-  final IconData icon;
+  final Widget icon;
   final String label;
   final bool showLabel;
   final VoidCallback onTap;
@@ -302,15 +337,18 @@ class _ActionButton extends StatelessWidget {
         child: showLabel
             ? FilledButton.tonalIcon(
                 onPressed: onTap,
-                icon: Icon(icon),
+                icon: icon,
                 label: Text(label),
                 style: FilledButton.styleFrom(
-                  minimumSize: const Size(GameTokens.minTouch, 48),
+                  minimumSize: const Size(GameTokens.minTouch, 44),
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  visualDensity: VisualDensity.compact,
                 ),
               )
             : IconButton.filledTonal(
                 onPressed: onTap,
-                icon: Icon(icon),
+                icon: icon,
+                tooltip: label,
                 constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
               ),
       );
@@ -333,15 +371,16 @@ class _WorldStrip extends StatelessWidget {
           final count = curriculum.length;
           final fit = (available - _gap * (count - 1)) / count;
           final tileWidth = fit < _minTile ? _minTile : fit;
+          final bottom = compact ? 12.0 : 20.0;
           return CustomScrollView(
             key: const Key('home_scroll'),
             scrollDirection: Axis.horizontal,
             slivers: [
               SliverPadding(
-                padding: EdgeInsets.fromLTRB(pad, 10, pad, compact ? 12 : 20),
+                padding: EdgeInsets.fromLTRB(pad, 6, pad, bottom),
                 sliver: SliverToBoxAdapter(
                   child: SizedBox(
-                    height: constraints.maxHeight - 10 - (compact ? 12 : 20),
+                    height: constraints.maxHeight - 6 - bottom,
                     child: Row(
                       children: [
                         for (var i = 0; i < count; i++) ...[
@@ -370,11 +409,17 @@ class _WorldCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = AppScope.of(context);
     final done = controller.completedInWorld(world);
-    final progress = done / world.lessons.length;
+    final total = world.lessons.length;
+    final progress = done / total;
     final emblem = _emblemAssets[world.id];
+    final mascot = _worldMascots[world.id];
+    // Panel tinted from the world's own colour, dark enough for white text.
+    final panelTop = Color.lerp(world.darkColor, Colors.black, .30)!;
+    final panelBottom = Color.lerp(world.darkColor, Colors.black, .52)!;
     return Semantics(
       button: true,
-      label: 'Open ${world.name}, $done of ${world.lessons.length} quests done',
+      label: 'Open ${world.name}, $done of $total quests done, '
+          '${(progress * 100).round()} percent',
       excludeSemantics: true,
       child: Material(
         color: Colors.transparent,
@@ -390,6 +435,11 @@ class _WorldCard extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(26),
+              // A thin world-coloured edge so each world reads as its own.
+              border: Border.all(
+                color: world.color.withValues(alpha: .9),
+                width: 2.5,
+              ),
               image: DecorationImage(
                 // Decoded at tile size: the source art is 1672 px wide.
                 image: ResizeImage(
@@ -400,40 +450,145 @@ class _WorldCard extends StatelessWidget {
               ),
               boxShadow: const [
                 BoxShadow(
-                  color: Color(0x55000000),
+                  color: Color(0x66000000),
                   blurRadius: 12,
                   offset: Offset(0, 7),
                 ),
               ],
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(26),
+              borderRadius: BorderRadius.circular(24),
               child: LayoutBuilder(
                 builder: (context, box) {
+                  final panelHeight = box.maxHeight * .32;
                   final emblemSize =
-                      (box.maxHeight * .24).clamp(40.0, 64.0).toDouble();
-                  final roomy = box.maxHeight >= 250;
+                      (box.maxHeight * .15).clamp(32.0, 44.0).toDouble();
+                  final arrowSize =
+                      (box.maxHeight * .14).clamp(26.0, 36.0).toDouble();
                   return Stack(
                     fit: StackFit.expand,
                     children: [
-                      const Align(
-                        alignment: Alignment.bottomCenter,
-                        child: FractionallySizedBox(
-                          heightFactor: .56,
-                          widthFactor: 1,
-                          child: DecoratedBox(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                // Fades in over the art, solid before the
-                                // text so white copy keeps 4.5:1 contrast.
-                                stops: [0, .22, 1],
-                                colors: [
-                                  Color(0x00253247),
-                                  Color(0xFF253247),
-                                  Color(0xFF070D17),
-                                ],
+                      if (mascot != null)
+                        Positioned(
+                          left: 6,
+                          right: 6,
+                          bottom: panelHeight - 8,
+                          // Sized to stay clear of the corner badge.
+                          height: box.maxHeight * .50,
+                          child: Image.asset(
+                            mascot,
+                            fit: BoxFit.contain,
+                            alignment: Alignment.bottomCenter,
+                            excludeFromSemantics: true,
+                            errorBuilder: (_, __, ___) =>
+                                const SizedBox.shrink(),
+                          ),
+                        ),
+                      Positioned(
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        height: panelHeight,
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [panelTop, panelBottom],
+                            ),
+                            border: Border(
+                              top: BorderSide(
+                                color: world.color.withValues(alpha: .9),
+                                width: 2.5,
+                              ),
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                alignment: Alignment.centerLeft,
+                                child: SizedBox(
+                                  width:
+                                      (box.maxWidth - 20).clamp(100.0, 400.0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        world.name,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 17,
+                                          height: 1.15,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 5),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(8),
+                                                  child:
+                                                      LinearProgressIndicator(
+                                                    value: progress,
+                                                    minHeight: 8,
+                                                    backgroundColor:
+                                                        Colors.white30,
+                                                    color: const Color(
+                                                      0xFFFFE36E,
+                                                    ),
+                                                  ),
+                                                ),
+                                                const SizedBox(height: 4),
+                                                Text(
+                                                  '$done/$total quests',
+                                                  maxLines: 1,
+                                                  style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w800,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          Container(
+                                            width: arrowSize,
+                                            height: arrowSize,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: world.color,
+                                              border: Border.all(
+                                                color: Colors.white,
+                                                width: 2,
+                                              ),
+                                            ),
+                                            child: Icon(
+                                              Icons.chevron_right_rounded,
+                                              color: Colors.white,
+                                              size: arrowSize * .8,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -452,76 +607,6 @@ class _WorldCard extends StatelessWidget {
                                 SizedBox(width: emblemSize),
                           ),
                         ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(12, 8, 12, 12),
-                        child: Align(
-                          alignment: Alignment.bottomLeft,
-                          child: FittedBox(
-                            fit: BoxFit.scaleDown,
-                            alignment: Alignment.bottomLeft,
-                            child: SizedBox(
-                              width: (box.maxWidth - 24).clamp(80.0, 400.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    world.name,
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 19,
-                                      height: 1.1,
-                                      fontWeight: FontWeight.w900,
-                                      shadows: [
-                                        Shadow(
-                                          color: Colors.black,
-                                          blurRadius: 6,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  if (roomy) ...[
-                                    const SizedBox(height: 3),
-                                    Text(
-                                      world.description,
-                                      maxLines: 3,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: const TextStyle(
-                                        color: Color(0xFFF5F7FF),
-                                        fontSize: 13,
-                                        height: 1.2,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                  ],
-                                  const SizedBox(height: 8),
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: LinearProgressIndicator(
-                                      value: progress,
-                                      minHeight: 8,
-                                      backgroundColor: Colors.white30,
-                                      color: const Color(0xFFFFE36E),
-                                    ),
-                                  ),
-                                  const SizedBox(height: 4),
-                                  Text(
-                                    '$done/${world.lessons.length} quests',
-                                    maxLines: 1,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w800,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
                     ],
                   );
                 },

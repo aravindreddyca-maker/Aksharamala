@@ -22,4 +22,6 @@ flutter:
     - assets/images/emblems/
     - assets/images/mascots/
     - assets/images/rewards/
+    - assets/images/avatars/
+    - assets/images/backgrounds/
 

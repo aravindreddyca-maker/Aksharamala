@@ -9,6 +9,8 @@ Future<void> main() async {
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
   ]);
-  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  // Full-screen for children: status and navigation bars hide, and a swipe
+  // from the edge brings them back briefly.
+  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(const AksharamalaApp());
 }

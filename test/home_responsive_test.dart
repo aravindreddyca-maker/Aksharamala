@@ -4,8 +4,10 @@ import 'package:aksharamala/src/curriculum.dart';
 import 'package:aksharamala/src/models.dart';
 import 'package:aksharamala/src/screens/home_screen.dart';
 import 'package:aksharamala/src/screens/lesson_screen.dart';
+import 'package:aksharamala/src/screens/world_map_screen.dart';
 import 'package:aksharamala/src/screens/splash_screen.dart';
 import 'package:aksharamala/src/theme.dart';
+import 'package:aksharamala/src/widgets/common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -115,7 +117,17 @@ void main() {
             findsWidgets,
           );
         }
-        // Each learner gets one of the five bundled mascot guides.
+        expect(
+          find.byWidgetPredicate(
+            (w) =>
+                w is Image &&
+                w.image is AssetImage &&
+                (w.image as AssetImage).assetName ==
+                    'assets/images/backgrounds/home_bg.webp',
+          ),
+          findsOneWidget,
+        );
+        // A bundled mascot stands in each of the five cards.
         expect(
           find.byWidgetPredicate(
             (w) =>
@@ -125,7 +137,7 @@ void main() {
                       'assets/images/mascots/',
                     ),
           ),
-          findsOneWidget,
+          findsNWidgets(5),
         );
       },
     );
@@ -163,6 +175,54 @@ void main() {
     expect(tester.takeException(), isNull);
     expect(find.text('Aksharamala'), findsOneWidget);
   });
+
+  for (final size in sizes) {
+    for (final scale in [1.0, 1.3]) {
+      testWidgets(
+        'launch page fits and Start is tappable at ${size.width.toInt()}x${size.height.toInt()} text $scale',
+        (tester) async {
+          await setViewport(tester, size, scale);
+          await tester.pumpWidget(
+            AppScope(
+              controller: controller(),
+              child: MaterialApp(
+                theme: buildTheme(),
+                home: const SplashScreen(),
+              ),
+            ),
+          );
+          // Not tappable while loading, tappable once the delay has passed.
+          expect(
+            tester
+                .widget<FilledButton>(find.byKey(const Key('start_adventure')))
+                .onPressed,
+            isNull,
+          );
+          await tester.pump(const Duration(milliseconds: 1300));
+          await tester.pump(const Duration(milliseconds: 1000));
+          expect(tester.takeException(), isNull);
+          expect(find.text('Aksharamala'), findsOneWidget);
+          final button = find.byKey(const Key('start_adventure'));
+          expect(tester.widget<FilledButton>(button).onPressed, isNotNull);
+          final rect = tester.getRect(button);
+          expect(rect.height, greaterThanOrEqualTo(48));
+          expect(rect.bottom, lessThanOrEqualTo(size.height));
+          expect(rect.right, lessThanOrEqualTo(size.width));
+          expect(
+            find.byWidgetPredicate(
+              (w) =>
+                  w is Image &&
+                  w.image is AssetImage &&
+                  (w.image as AssetImage).assetName.startsWith(
+                        'assets/images/mascots/',
+                      ),
+            ),
+            findsNWidgets(5),
+          );
+        },
+      );
+    }
+  }
 
   for (final size in sizes) {
     testWidgets(
@@ -222,6 +282,47 @@ void main() {
     );
   }
 
+  testWidgets('every avatar choice, and legacy emoji values, uses bundled art',
+      (
+    tester,
+  ) async {
+    await setViewport(tester, const Size(800, 360), 1.0);
+    const legacy = {
+      '🦁': 'lion',
+      '🐼': 'panda',
+      '🦄': 'unicorn',
+      '🐯': 'tiger'
+    };
+    final values = [...GameAvatar.options, ...legacy.keys, '🐸', '🤖'];
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: buildTheme(),
+        home: Scaffold(
+          body: Wrap(
+            children: [for (final v in values) GameAvatar(value: v, size: 64)],
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+    final names = tester
+        .widgetList<Image>(find.byType(Image))
+        .map((i) => (i.image as AssetImage).assetName)
+        .toSet();
+    expect(names, {
+      for (final n in GameAvatar.options) 'assets/images/avatars/$n.png',
+    });
+    // An unknown value falls back to the icon avatar rather than crashing.
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: buildTheme(),
+        home: const Scaffold(body: GameAvatar(value: 'mystery')),
+      ),
+    );
+    expect(find.byType(Image), findsNothing);
+  });
+
   testWidgets('Number Names keeps its multilingual choices', (tester) async {
     await setViewport(tester, const Size(960, 540), 1.0);
     final lesson = numbers.lessons.firstWhere((l) => l.id == 'num-names');
@@ -240,22 +341,30 @@ void main() {
     expect(find.textContaining('ஐந்து'), findsWidgets);
   });
 
-  testWidgets('Tamil, Telugu and Hindi scripts render in the landscape home', (
-    tester,
-  ) async {
-    await setViewport(tester, const Size(960, 540), 1.2);
-    await tester.pumpWidget(
-      AppScope(
-        controller: controller(),
-        child: MaterialApp(theme: buildTheme(), home: const HomeScreen()),
-      ),
-    );
-    await tester.drag(
-      find.byKey(const Key('home_scroll')),
-      const Offset(0, -700),
-    );
-    await tester.pumpAndSettle();
-    expect(tester.takeException(), isNull);
-    expect(find.textContaining('தமிழ்'), findsWidgets);
-  });
+  // The home cards now show English names only; the scripts appear on each
+  // world's map, so that is where their rendering is checked.
+  for (final entry in {
+    'telugu': 'అక్షరాలు',
+    'hindi': 'अक्षर',
+    'tamil': 'தமிழ்',
+  }.entries) {
+    testWidgets('${entry.key} script renders on its landscape world map', (
+      tester,
+    ) async {
+      await setViewport(tester, const Size(960, 540), 1.2);
+      final world = curriculum.firstWhere((w) => w.id == entry.key);
+      await tester.pumpWidget(
+        AppScope(
+          controller: controller(),
+          child: MaterialApp(
+            theme: buildTheme(),
+            home: WorldMapScreen(world: world),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(tester.takeException(), isNull);
+      expect(find.textContaining(entry.value), findsWidgets);
+    });
+  }
 }

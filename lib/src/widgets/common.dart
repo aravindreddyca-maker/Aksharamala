@@ -111,6 +111,17 @@ class GameAvatar extends StatelessWidget {
         _ => Icons.face_rounded,
       };
 
+  /// Bundled artwork name. Older profiles stored an emoji; those still map.
+  String? get _artwork => switch (value) {
+        'lion' || '🦁' => 'lion',
+        'panda' || '🐼' => 'panda',
+        'unicorn' || '🦄' => 'unicorn',
+        'tiger' || '🐯' => 'tiger',
+        'frog' || '🐸' => 'frog',
+        'robot' || '🤖' => 'robot',
+        _ => null,
+      };
+
   Color get _color => switch (value) {
         'lion' || '🦁' => const Color(0xFFF6A623),
         'panda' || '🐼' => const Color(0xFF50627A),
@@ -121,26 +132,53 @@ class GameAvatar extends StatelessWidget {
         _ => const Color(0xFF6657D9),
       };
 
-  @override
-  Widget build(BuildContext context) => Semantics(
-        image: true,
-        label:
-            '${value.replaceAll(RegExp(r'[^A-Za-z]'), '').isEmpty ? 'Learner' : value} avatar',
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 180),
-          width: size,
-          height: size,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: _color.withValues(alpha: .16),
-            border: Border.all(
-              color: selected ? _color : Colors.white,
-              width: selected ? 4 : 2,
-            ),
+  Widget get _iconAvatar => AnimatedContainer(
+        duration: const Duration(milliseconds: 180),
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: _color.withValues(alpha: .16),
+          border: Border.all(
+            color: selected ? _color : Colors.white,
+            width: selected ? 4 : 2,
           ),
-          child: Icon(_icon, color: _color, size: size * .56),
         ),
+        child: Icon(_icon, color: _color, size: size * .56),
       );
+
+  @override
+  Widget build(BuildContext context) {
+    final art = _artwork;
+    return Semantics(
+      image: true,
+      label:
+          '${value.replaceAll(RegExp(r'[^A-Za-z]'), '').isEmpty ? 'Learner' : value} avatar',
+      excludeSemantics: true,
+      child: art == null
+          ? _iconAvatar
+          : AnimatedContainer(
+              duration: const Duration(milliseconds: 180),
+              width: size,
+              height: size,
+              padding: EdgeInsets.all(selected ? 3 : 0),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: selected ? _color : Colors.transparent,
+                  width: 4,
+                ),
+              ),
+              child: Image.asset(
+                'assets/images/avatars/$art.png',
+                fit: BoxFit.contain,
+                filterQuality: FilterQuality.medium,
+                excludeFromSemantics: true,
+                errorBuilder: (_, __, ___) => _iconAvatar,
+              ),
+            ),
+    );
+  }
 }
 
 IconData lessonIcon(LessonKind kind) => switch (kind) {

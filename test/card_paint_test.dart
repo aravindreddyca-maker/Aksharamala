@@ -47,9 +47,8 @@ void main() {
       );
       await tester.pump(const Duration(milliseconds: 500));
 
-      final boundary =
-          boundaryKey.currentContext!.findRenderObject()!
-              as RenderRepaintBoundary;
+      final boundary = boundaryKey.currentContext!.findRenderObject()!
+          as RenderRepaintBoundary;
       final image = (await tester.runAsync(
         () => boundary.toImage(pixelRatio: 1),
       ))!;
@@ -64,8 +63,9 @@ void main() {
         final rect = tester.getRect(find.byKey(Key('world_${world.id}')));
         // Sample two points inside the opaque lower text panel.
         for (final p in [
-          Offset(rect.left + 40, rect.top + rect.height * .65),
-          Offset(rect.right - 40, rect.bottom - 30),
+          Offset(rect.left + 40, rect.top + rect.height * .71),
+          // Panel margin below the text row, clear of glyphs and the border.
+          Offset(rect.left + 16, rect.bottom - 8),
         ]) {
           final px = (p.dx * scaleX).round().clamp(0, image.width - 1);
           final py = (p.dy * scaleY).round().clamp(0, image.height - 1);

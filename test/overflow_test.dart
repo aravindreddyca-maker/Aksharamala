@@ -25,7 +25,8 @@ AppController _controller({bool withProfile = true}) {
 }
 
 void main() {
-  testWidgets('no screen overflows on phones, tablets, landscape or large text', (
+  testWidgets('no screen overflows on phones, tablets, landscape or large text',
+      (
     tester,
   ) async {
     const sizes = [
