@@ -1,0 +1,94 @@
+import 'package:flutter/material.dart';
+
+import 'models.dart';
+
+const curriculum = <LearningWorld>[
+  LearningWorld(
+    id: 'english',
+    name: 'English Forest',
+    emoji: '🌳',
+    assetPath: 'assets/images/worlds/english_forest.png',
+    color: Color(0xFF5CCB78),
+    darkColor: Color(0xFF177A45),
+    description: 'Meet letter animals, grow words and unlock forest tales.',
+    lessons: [
+      Lesson(id: 'en-a', title: 'A is for Apple', subtitle: 'Listen and recognise', kind: LessonKind.alphabet, symbol: 'A a', speech: 'A. Apple.', locale: 'en-US', challenge: 'Which word begins with A?', options: ['Apple', 'Ball', 'Cat'], answer: 'Apple'),
+      Lesson(id: 'en-word', title: 'Word Builder', subtitle: 'Spell a forest word', kind: LessonKind.words, symbol: 'C A T', speech: 'Cat', locale: 'en-US', challenge: 'Choose the missing letter: C _ T', options: ['A', 'E', 'O'], answer: 'A'),
+      Lesson(id: 'en-trace', title: 'Trace the Letter', subtitle: 'Draw A with your finger', kind: LessonKind.tracing, symbol: 'A', speech: 'Trace the letter A', locale: 'en-US', challenge: 'Trace from the top and cross the middle.', options: [], answer: ''),
+      Lesson(id: 'en-story', title: 'Mina and the Mango', subtitle: 'A tiny reading adventure', kind: LessonKind.story, symbol: '📖', speech: 'Mina found a golden mango in the green forest.', locale: 'en-US', challenge: 'What did Mina find?', options: ['A mango', 'A kite', 'A boat'], answer: 'A mango', story: ['Mina walked into the green forest.', 'A parrot showed her a golden mango.', 'Mina shared it with all her friends.']),
+    ],
+  ),
+  LearningWorld(
+    id: 'telugu',
+    name: 'Telugu Kingdom',
+    emoji: '🏰',
+    assetPath: 'assets/images/worlds/telugu_kingdom.png',
+    color: Color(0xFFFF9D55),
+    darkColor: Color(0xFFC94E2B),
+    description: 'Discover అక్షరాలు, పదాలు and royal Telugu stories.',
+    lessons: [
+      Lesson(id: 'te-a', title: 'అ – అమ్మ', subtitle: 'విని గుర్తించండి', kind: LessonKind.alphabet, symbol: 'అ', speech: 'అ. అమ్మ.', locale: 'te-IN', challenge: 'అ తో మొదలయ్యే పదం ఏది?', options: ['అమ్మ', 'ఇల్లు', 'ఏనుగు'], answer: 'అమ్మ'),
+      Lesson(id: 'te-word', title: 'పదాల తోట', subtitle: 'సరైన పదాన్ని ఎంచుకోండి', kind: LessonKind.words, symbol: 'క లం', speech: 'కలం', locale: 'te-IN', challenge: 'చిత్రానికి సరైన పదం?', options: ['కలం', 'బడి', 'పండు'], answer: 'కలం'),
+      Lesson(id: 'te-trace', title: 'అ వ్రాయండి', subtitle: 'వేలితో అక్షరాన్ని గీయండి', kind: LessonKind.tracing, symbol: 'అ', speech: 'అ అక్షరాన్ని వ్రాయండి', locale: 'te-IN', challenge: 'చుక్కల మీదుగా అ గీయండి.', options: [], answer: ''),
+      Lesson(id: 'te-story', title: 'చిన్ని చిలుక', subtitle: 'ఒక చిన్న కథ', kind: LessonKind.story, symbol: '🦜', speech: 'చిన్ని చిలుక తోటలో ఒక ఎర్ర పండు చూసింది.', locale: 'te-IN', challenge: 'చిలుక ఏమి చూసింది?', options: ['ఎర్ర పండు', 'నీలి బంతి', 'తెల్ల పువ్వు'], answer: 'ఎర్ర పండు', story: ['చిన్ని చిలుక తోటకు వెళ్లింది.', 'అక్కడ ఒక ఎర్ర పండు చూసింది.', 'పండును స్నేహితులతో పంచుకుంది.']),
+    ],
+  ),
+  LearningWorld(
+    id: 'hindi',
+    name: 'Hindi Valley',
+    emoji: '⛰️',
+    assetPath: 'assets/images/worlds/hindi_valley.png',
+    color: Color(0xFFFFD15C),
+    darkColor: Color(0xFFB87400),
+    description: 'Learn अक्षर, शब्द and stories along the sunny valley.',
+    lessons: [
+      Lesson(id: 'hi-a', title: 'अ – अनार', subtitle: 'सुनो और पहचानो', kind: LessonKind.alphabet, symbol: 'अ', speech: 'अ से अनार', locale: 'hi-IN', challenge: 'अ से कौन सा शब्द शुरू होता है?', options: ['अनार', 'कमल', 'घर'], answer: 'अनार'),
+      Lesson(id: 'hi-word', title: 'शब्द बनाओ', subtitle: 'सही अक्षर चुनो', kind: LessonKind.words, symbol: 'क _ ल', speech: 'कमल', locale: 'hi-IN', challenge: 'क _ ल में क्या आएगा?', options: ['म', 'न', 'र'], answer: 'म'),
+      Lesson(id: 'hi-trace', title: 'अ लिखो', subtitle: 'उंगली से अक्षर बनाओ', kind: LessonKind.tracing, symbol: 'अ', speech: 'अ अक्षर लिखिए', locale: 'hi-IN', challenge: 'बिंदुओं पर अ बनाओ।', options: [], answer: ''),
+      Lesson(id: 'hi-story', title: 'नीला पतंग', subtitle: 'एक छोटी कहानी', kind: LessonKind.story, symbol: '🪁', speech: 'रवि की नीली पतंग पहाड़ी के ऊपर उड़ी।', locale: 'hi-IN', challenge: 'पतंग का रंग क्या था?', options: ['नीला', 'लाल', 'हरा'], answer: 'नीला', story: ['रवि घाटी में पतंग लेकर आया।', 'नीली पतंग बहुत ऊपर उड़ी।', 'रवि ने अपने दोस्त को भी उड़ाने दिया।']),
+    ],
+  ),
+  LearningWorld(
+    id: 'tamil',
+    name: 'Tamil Garden',
+    emoji: '🌺',
+    assetPath: 'assets/images/worlds/tamil_garden.png',
+    color: Color(0xFFEF72A8),
+    darkColor: Color(0xFFA52C68),
+    description: 'Discover தமிழ் எழுத்துகள், சொற்கள் and garden stories.',
+    lessons: [
+      Lesson(id: 'ta-a', title: 'அ – அம்மா', subtitle: 'கேட்டு அடையாளம் காணுங்கள்', kind: LessonKind.alphabet, symbol: 'அ', speech: 'அ. அம்மா.', locale: 'ta-IN', challenge: 'அ என்ற எழுத்தில் தொடங்கும் சொல் எது?', options: ['அம்மா', 'இலை', 'ஊஞ்சல்'], answer: 'அம்மா'),
+      Lesson(id: 'ta-word', title: 'சொல் தோட்டம்', subtitle: 'சரியான சொல்லைத் தேர்ந்தெடுங்கள்', kind: LessonKind.words, symbol: 'ம லர்', speech: 'மலர்', locale: 'ta-IN', challenge: 'பூவைக் குறிக்கும் சொல் எது?', options: ['மலர்', 'வீடு', 'கல்'], answer: 'மலர்'),
+      Lesson(id: 'ta-trace', title: 'அ எழுதுங்கள்', subtitle: 'விரலால் எழுத்தை வரையுங்கள்', kind: LessonKind.tracing, symbol: 'அ', speech: 'அ எழுத்தை எழுதுங்கள்', locale: 'ta-IN', challenge: 'புள்ளிகளின் மேல் அ எழுத்தை வரையுங்கள்.', options: [], answer: ''),
+      Lesson(id: 'ta-story', title: 'வண்ணத்துப்பூச்சி', subtitle: 'ஒரு சிறிய தோட்டக் கதை', kind: LessonKind.story, symbol: '🦋', speech: 'ஒரு வண்ணத்துப்பூச்சி மலர்த் தோட்டத்திற்கு வந்தது.', locale: 'ta-IN', challenge: 'வண்ணத்துப்பூச்சி எங்கே வந்தது?', options: ['மலர்த் தோட்டம்', 'கடற்கரை', 'மலை'], answer: 'மலர்த் தோட்டம்', story: ['மீனா தோட்டத்தில் ஒரு விதையை நட்டாள்.', 'அது அழகான மலராக வளர்ந்தது.', 'ஒரு வண்ணத்துப்பூச்சி மலரைப் பார்க்க வந்தது.']),
+    ],
+  ),
+  LearningWorld(
+    id: 'numbers',
+    name: 'Number Galaxy',
+    emoji: '🚀',
+    assetPath: 'assets/images/worlds/number_galaxy.png',
+    color: Color(0xFF8B7CF6),
+    darkColor: Color(0xFF4B3DBA),
+    description: 'Count stars, solve space maths and learn number names.',
+    lessons: [
+      Lesson(id: 'num-count', title: 'Count the Stars', subtitle: 'One • ఒకటి • एक • ஒன்று', kind: LessonKind.numbers, symbol: '⭐ ⭐ ⭐', speech: 'Three. మూడు. तीन. மூன்று.', locale: 'en-IN', challenge: 'How many stars? ఎన్ని? कितने? எத்தனை?', options: ['2', '3', '4'], answer: '3'),
+      Lesson(id: 'num-add', title: 'Rocket Addition', subtitle: 'Add fuel crystals', kind: LessonKind.game, symbol: '2 + 3', speech: 'Two plus three equals five', locale: 'en-IN', challenge: '2 + 3 = ?', options: ['4', '5', '6'], answer: '5'),
+      Lesson(id: 'num-subtract', title: 'Moon Subtraction', subtitle: 'Count what remains', kind: LessonKind.game, symbol: '7 − 2', speech: 'Seven minus two equals five', locale: 'en-IN', challenge: '7 − 2 = ?', options: ['4', '5', '6'], answer: '5'),
+      Lesson(id: 'num-names', title: 'Number Names', subtitle: 'English • తెలుగు • हिन्दी • தமிழ்', kind: LessonKind.numbers, symbol: '5', speech: 'Five. ఐదు. पाँच. ஐந்து.', locale: 'en-IN', challenge: 'Which means five?', options: ['ఐదు / पाँच / ஐந்து', 'మూడు / तीन / மூன்று', 'ఏడు / सात / ஏழு'], answer: 'ఐదు / पाँच / ஐந்து'),
+    ],
+  ),
+];
+
+const numberNames = <int, Map<String, String>>{
+  1: {'en': 'One', 'te': 'ఒకటి', 'hi': 'एक', 'ta': 'ஒன்று'},
+  2: {'en': 'Two', 'te': 'రెండు', 'hi': 'दो', 'ta': 'இரண்டு'},
+  3: {'en': 'Three', 'te': 'మూడు', 'hi': 'तीन', 'ta': 'மூன்று'},
+  4: {'en': 'Four', 'te': 'నాలుగు', 'hi': 'चार', 'ta': 'நான்கு'},
+  5: {'en': 'Five', 'te': 'ఐదు', 'hi': 'पाँच', 'ta': 'ஐந்து'},
+  6: {'en': 'Six', 'te': 'ఆరు', 'hi': 'छह', 'ta': 'ஆறு'},
+  7: {'en': 'Seven', 'te': 'ఏడు', 'hi': 'सात', 'ta': 'ஏழு'},
+  8: {'en': 'Eight', 'te': 'ఎనిమిది', 'hi': 'आठ', 'ta': 'எட்டு'},
+  9: {'en': 'Nine', 'te': 'తొమ్మిది', 'hi': 'नौ', 'ta': 'ஒன்பது'},
+  10: {'en': 'Ten', 'te': 'పది', 'hi': 'दस', 'ta': 'பத்து'},
+};
