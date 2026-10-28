@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../models.dart';
+import '../theme.dart';
+
 class GradientScaffold extends StatelessWidget {
   const GradientScaffold({
     required this.child,
@@ -41,11 +44,103 @@ class StarPill extends StatelessWidget {
         decoration: BoxDecoration(
           color: const Color(0xFFFFE585),
           borderRadius: BorderRadius.circular(30),
-          boxShadow: const [BoxShadow(color: Color(0x22000000), blurRadius: 8, offset: Offset(0, 3))],
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0x22000000),
+              blurRadius: 8,
+              offset: Offset(0, 3),
+            ),
+          ],
         ),
-        child: Text('⭐ $stars', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.star_rounded, color: Color(0xFF7A4E00), size: 21),
+            const SizedBox(width: 4),
+            Text(
+              '$stars',
+              style: const TextStyle(
+                color: GameTokens.ink,
+                fontWeight: FontWeight.w900,
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
       );
 }
+
+class GameAvatar extends StatelessWidget {
+  const GameAvatar({
+    required this.value,
+    super.key,
+    this.size = 48,
+    this.selected = false,
+  });
+
+  final String value;
+  final double size;
+  final bool selected;
+
+  static const options = <String>[
+    'lion',
+    'panda',
+    'unicorn',
+    'tiger',
+    'frog',
+    'robot',
+  ];
+
+  IconData get _icon => switch (value) {
+        'lion' || '🦁' => Icons.pets_rounded,
+        'panda' || '🐼' => Icons.cruelty_free_rounded,
+        'unicorn' || '🦄' => Icons.auto_awesome_rounded,
+        'tiger' || '🐯' => Icons.forest_rounded,
+        'frog' || '🐸' => Icons.water_rounded,
+        'robot' || '🤖' => Icons.smart_toy_rounded,
+        _ => Icons.face_rounded,
+      };
+
+  Color get _color => switch (value) {
+        'lion' || '🦁' => const Color(0xFFF6A623),
+        'panda' || '🐼' => const Color(0xFF50627A),
+        'unicorn' || '🦄' => const Color(0xFF9B61DA),
+        'tiger' || '🐯' => const Color(0xFFEA6A2A),
+        'frog' || '🐸' => const Color(0xFF3C9A5F),
+        'robot' || '🤖' => const Color(0xFF3978C6),
+        _ => const Color(0xFF6657D9),
+      };
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+        image: true,
+        label:
+            '${value.replaceAll(RegExp(r'[^A-Za-z]'), '').isEmpty ? 'Learner' : value} avatar',
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          width: size,
+          height: size,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: _color.withValues(alpha: .16),
+            border: Border.all(
+              color: selected ? _color : Colors.white,
+              width: selected ? 4 : 2,
+            ),
+          ),
+          child: Icon(_icon, color: _color, size: size * .56),
+        ),
+      );
+}
+
+IconData lessonIcon(LessonKind kind) => switch (kind) {
+      LessonKind.alphabet => Icons.abc_rounded,
+      LessonKind.words => Icons.chat_bubble_rounded,
+      LessonKind.numbers => Icons.calculate_rounded,
+      LessonKind.story => Icons.auto_stories_rounded,
+      LessonKind.tracing => Icons.gesture_rounded,
+      LessonKind.game => Icons.extension_rounded,
+    };
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle(this.title, {super.key, this.trailing});
@@ -58,7 +153,9 @@ class SectionTitle extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(4, 18, 4, 10),
         child: Row(
           children: [
-            Expanded(child: Text(title, style: Theme.of(context).textTheme.titleLarge)),
+            Expanded(
+              child: Text(title, style: Theme.of(context).textTheme.titleLarge),
+            ),
             if (trailing != null) trailing!,
           ],
         ),
@@ -75,7 +172,11 @@ Future<void> showInfoDialog(
       builder: (context) => AlertDialog(
         title: Text(title),
         content: Text(message),
-        actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('Got it'))],
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Got it'),
+          ),
+        ],
       ),
     );
-

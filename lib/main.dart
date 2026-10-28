@@ -12,4 +12,3 @@ Future<void> main() async {
   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   runApp(const AksharamalaApp());
 }
-

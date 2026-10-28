@@ -15,55 +15,153 @@ class ParentDashboard extends StatelessWidget {
     final record = controller.activeProgress;
     final totalAttempts = record.attempts.values.fold<int>(0, (a, b) => a + b);
     final totalCorrect = record.correct.values.fold<int>(0, (a, b) => a + b);
-    final accuracy = totalAttempts == 0 ? 0 : (100 * totalCorrect / totalAttempts).round();
+    final accuracy =
+        totalAttempts == 0 ? 0 : (100 * totalCorrect / totalAttempts).round();
     return GradientScaffold(
-      appBar: AppBar(title: const Text('Parent Dashboard'), backgroundColor: Colors.transparent),
-      child: ListView(
-        padding: const EdgeInsets.all(20),
-        children: [
-          Text('${profile.name}’s learning', style: Theme.of(context).textTheme.headlineMedium),
-          Text('${profile.stage.ageLabel} • ${profile.stage.focus}'),
-          const SizedBox(height: 18),
-          Row(children: [
-            Expanded(child: _Metric(label: 'Stars', value: '${profile.stars}', icon: '⭐')),
-            const SizedBox(width: 10),
-            Expanded(child: _Metric(label: 'Quests', value: '${record.completedLessons.length}', icon: '✅')),
-            const SizedBox(width: 10),
-            Expanded(child: _Metric(label: 'Accuracy', value: '$accuracy%', icon: '🎯')),
-          ]),
-          const SectionTitle('Progress by world'),
-          ...curriculum.map((world) {
-            final complete = controller.completedInWorld(world);
-            final worldAttempts = record.attempts[world.id] ?? 0;
-            final worldAccuracy = worldAttempts == 0 ? 0 : (100 * (record.correct[world.id] ?? 0) / worldAttempts).round();
-            return Card(
-              child: Padding(
-                padding: const EdgeInsets.all(17),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Row(children: [Text(world.emoji, style: const TextStyle(fontSize: 28)), const SizedBox(width: 10), Expanded(child: Text(world.name, style: Theme.of(context).textTheme.titleMedium)), Text('$worldAccuracy%')]),
-                  const SizedBox(height: 10),
-                  LinearProgressIndicator(value: complete / world.lessons.length, minHeight: 10, borderRadius: BorderRadius.circular(10), color: world.darkColor),
-                  const SizedBox(height: 6),
-                  Text('$complete/${world.lessons.length} quests • $worldAttempts attempts'),
-                ]),
+      appBar: AppBar(
+        title: const Text('Parent Dashboard'),
+        backgroundColor: Colors.transparent,
+      ),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final wide = constraints.maxWidth >= 900;
+          return ListView(
+            padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '${profile.name}’s learning',
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                        Text(
+                          '${profile.stage.ageLabel} • ${profile.stage.focus}',
+                        ),
+                      ],
+                    ),
+                  ),
+                  StarPill(profile.stars),
+                ],
               ),
-            );
-          }),
-          const SectionTitle('Adaptive learning insight'),
-          Card(
-            color: const Color(0xFFEDE8FF),
-            child: Padding(
-              padding: const EdgeInsets.all(18),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(controller.adaptiveMessage, style: const TextStyle(fontWeight: FontWeight.w700)),
-                const SizedBox(height: 8),
-                const Text('Aksharamala recommends the first unfinished activity, then rotates mastered lessons for spaced review. A world below 70% accuracy is prioritised after two attempts.'),
-              ]),
-            ),
-          ),
-          const SectionTitle('Offline & privacy'),
-          const Card(child: Padding(padding: EdgeInsets.all(18), child: Text('Progress is stored locally on this device. This vertical slice has no sign-in, advertising, analytics, cloud sync or network requirement.'))),
-        ],
+              const SizedBox(height: 14),
+              Row(
+                children: [
+                  Expanded(
+                    child: _Metric(
+                      label: 'Stars',
+                      value: '${profile.stars}',
+                      icon: Icons.star_rounded,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: _Metric(
+                      label: 'Quests',
+                      value: '${record.completedLessons.length}',
+                      icon: Icons.task_alt_rounded,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: _Metric(
+                      label: 'Accuracy',
+                      value: '$accuracy%',
+                      icon: Icons.track_changes_rounded,
+                    ),
+                  ),
+                ],
+              ),
+              const SectionTitle('Progress by world'),
+              GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: wide ? 3 : 2,
+                  childAspectRatio: wide ? 2.4 : 2.15,
+                  crossAxisSpacing: 12,
+                  mainAxisSpacing: 12,
+                ),
+                itemCount: curriculum.length,
+                itemBuilder: (context, index) {
+                  final world = curriculum[index];
+                  final complete = controller.completedInWorld(world);
+                  final attempts = record.attempts[world.id] ?? 0;
+                  final worldAccuracy = attempts == 0
+                      ? 0
+                      : (100 * (record.correct[world.id] ?? 0) / attempts)
+                          .round();
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    child: Row(
+                      children: [
+                        AspectRatio(
+                          aspectRatio: .9,
+                          child: Image.asset(
+                            world.assetPath,
+                            fit: BoxFit.cover,
+                            semanticLabel: world.name,
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  world.name,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium,
+                                ),
+                                const SizedBox(height: 8),
+                                LinearProgressIndicator(
+                                  value: complete / world.lessons.length,
+                                  minHeight: 9,
+                                  borderRadius: BorderRadius.circular(9),
+                                  color: world.darkColor,
+                                ),
+                                const SizedBox(height: 5),
+                                Text(
+                                  '$complete/${world.lessons.length} quests • $worldAccuracy%',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SectionTitle('Learning guidance'),
+              if (wide)
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: _Insight(message: controller.adaptiveMessage),
+                    ),
+                    const SizedBox(width: 12),
+                    const Expanded(child: _Privacy()),
+                  ],
+                )
+              else ...[
+                _Insight(message: controller.adaptiveMessage),
+                const SizedBox(height: 10),
+                const _Privacy(),
+              ],
+            ],
+          );
+        },
       ),
     );
   }
@@ -71,16 +169,100 @@ class ParentDashboard extends StatelessWidget {
 
 class _Metric extends StatelessWidget {
   const _Metric({required this.label, required this.value, required this.icon});
-
   final String label;
   final String value;
-  final String icon;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) => Card(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 8),
-          child: Column(children: [Text(icon, style: const TextStyle(fontSize: 28)), Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)), Text(label, textAlign: TextAlign.center)]),
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, color: const Color(0xFF6657D9), size: 28),
+              const SizedBox(width: 8),
+              Flexible(
+                child: Column(
+                  children: [
+                    Text(
+                      value,
+                      style: const TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    Text(label, maxLines: 1, overflow: TextOverflow.ellipsis),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+}
+
+class _Insight extends StatelessWidget {
+  const _Insight({required this.message});
+  final String message;
+
+  @override
+  Widget build(BuildContext context) => Card(
+        color: const Color(0xFFEDE8FF),
+        child: Padding(
+          padding: const EdgeInsets.all(18),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Row(
+                children: [
+                  Icon(Icons.psychology_alt_rounded),
+                  SizedBox(width: 8),
+                  Text(
+                    'Adaptive insight',
+                    style: TextStyle(fontWeight: FontWeight.w900),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Text(message,
+                  style: const TextStyle(fontWeight: FontWeight.w700)),
+              const SizedBox(height: 6),
+              const Text(
+                'The next unfinished activity is recommended first. Mastered lessons rotate for review; a world below 70% accuracy is prioritised after two attempts.',
+              ),
+            ],
+          ),
+        ),
+      );
+}
+
+class _Privacy extends StatelessWidget {
+  const _Privacy();
+
+  @override
+  Widget build(BuildContext context) => const Card(
+        child: Padding(
+          padding: EdgeInsets.all(18),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.shield_rounded),
+                  SizedBox(width: 8),
+                  Text(
+                    'Offline & private',
+                    style: TextStyle(fontWeight: FontWeight.w900),
+                  ),
+                ],
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Progress is stored locally on this device. There is no sign-in, advertising, analytics, cloud sync or network requirement.',
+              ),
+            ],
+          ),
         ),
       );
 }

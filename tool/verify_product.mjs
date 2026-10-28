@@ -35,7 +35,7 @@ if (missing.length) {
   process.exit(1);
 }
 
-const lessonIds = [...dart.matchAll(/Lesson\(id:\s*'([^']+)'/g)].map((match) => match[1]);
+const lessonIds = [...dart.matchAll(/Lesson\(\s*id:\s*'([^']+)'/g)].map((match) => match[1]);
 if (lessonIds.length < 20 || new Set(lessonIds).size !== lessonIds.length) {
   console.error(`Expected at least 20 unique lessons, found ${lessonIds.length}/${new Set(lessonIds).size} unique`);
   process.exit(1);

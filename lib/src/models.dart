@@ -162,14 +162,15 @@ class ProgressRecord {
       };
 
   factory ProgressRecord.fromJson(Map<String, dynamic> json) => ProgressRecord(
-        completedLessons:
-            Set<String>.from(json['completedLessons'] as List? ?? const []),
+        completedLessons: Set<String>.from(
+          json['completedLessons'] as List? ?? const [],
+        ),
         attempts: Map<String, int>.from(json['attempts'] as Map? ?? const {}),
         correct: Map<String, int>.from(json['correct'] as Map? ?? const {}),
-        lastPlayed:
-            Map<String, String>.from(json['lastPlayed'] as Map? ?? const {}),
+        lastPlayed: Map<String, String>.from(
+          json['lastPlayed'] as Map? ?? const {},
+        ),
         earnedBadges:
             Set<String>.from(json['earnedBadges'] as List? ?? const []),
       );
 }
-

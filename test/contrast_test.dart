@@ -14,9 +14,14 @@ void main() {
   test('white card text meets 4.5:1 on both gradient stops of every world', () {
     final weak = <String>[];
     for (final world in curriculum) {
-      for (final entry in {'cardStart': world.cardStart, 'cardEnd': world.cardEnd}.entries) {
+      for (final entry in {
+        'cardStart': world.cardStart,
+        'cardEnd': world.cardEnd,
+      }.entries) {
         final ratio = _ratio(Colors.white, entry.value);
-        if (ratio < 4.5) weak.add('${world.id} ${entry.key} ${ratio.toStringAsFixed(2)}:1');
+        if (ratio < 4.5) {
+          weak.add('${world.id} ${entry.key} ${ratio.toStringAsFixed(2)}:1');
+        }
       }
     }
     expect(weak, isEmpty, reason: weak.join('\n'));

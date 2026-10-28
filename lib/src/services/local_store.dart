@@ -28,7 +28,9 @@ class LocalStore {
       base = Directory.systemTemp;
     }
     final dataDirectory = Directory('${base.path}/.aksharamala');
-    if (!await dataDirectory.exists()) await dataDirectory.create(recursive: true);
+    if (!await dataDirectory.exists()) {
+      await dataDirectory.create(recursive: true);
+    }
     return File('${dataDirectory.path}/progress.json');
   }
 
@@ -38,9 +40,13 @@ class LocalStore {
       if (!await file.exists()) {
         return const LocalSnapshot(profiles: [], progress: {});
       }
-      final value = jsonDecode(await file.readAsString()) as Map<String, dynamic>;
+      final value =
+          jsonDecode(await file.readAsString()) as Map<String, dynamic>;
       final profiles = (value['profiles'] as List? ?? const [])
-          .map((item) => ChildProfile.fromJson(Map<String, dynamic>.from(item as Map)))
+          .map(
+            (item) =>
+                ChildProfile.fromJson(Map<String, dynamic>.from(item as Map)),
+          )
           .toList();
       final progress = <String, ProgressRecord>{};
       for (final entry in (value['progress'] as Map? ?? const {}).entries) {
@@ -58,15 +64,17 @@ class LocalStore {
     final file = await _file();
     await file.parent.create(recursive: true);
     final temp = File('${file.path}.tmp');
-    await temp.writeAsString(jsonEncode({
-      'version': 1,
-      'profiles': snapshot.profiles.map((profile) => profile.toJson()).toList(),
-      'progress': snapshot.progress.map(
-        (key, value) => MapEntry(key, value.toJson()),
-      ),
-    }));
+    await temp.writeAsString(
+      jsonEncode({
+        'version': 1,
+        'profiles':
+            snapshot.profiles.map((profile) => profile.toJson()).toList(),
+        'progress': snapshot.progress.map(
+          (key, value) => MapEntry(key, value.toJson()),
+        ),
+      }),
+    );
     if (await file.exists()) await file.delete();
     await temp.rename(file.path);
   }
 }
-

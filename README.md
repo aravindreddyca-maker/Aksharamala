@@ -4,6 +4,8 @@ Aksharamala is a colourful, offline-first Flutter learning adventure for childre
 
 The main learning experience is landscape-first and locked to landscape on Android. Its illustrated adventure map uses five bundled ChatGPT-generated PNG scenes; lesson activities use responsive two-panel layouts on phones and tablets.
 
+The Phase 1–2 landscape foundation also includes horizontal artwork-backed quest trails, responsive profile/reward/parent layouts, a shared game UI token set, large child-friendly controls, and system font fallbacks for Telugu, Devanagari and Tamil. See `AUDIT_PHASES_1_2.md` for the inspected surfaces, resolved defects and deliberately pending later phases.
+
 ## Run
 
 Prerequisites: Flutter 3.47 or newer, Dart 3.13 or newer, JDK 17, and an Android SDK for device/APK builds.
@@ -73,7 +75,9 @@ Before a store release, also add original reviewed audio assets as a fallback fo
 - `models_test.dart`: stage boundaries, five-world coverage and four-language number names.
 - `controller_test.dart`: profile/progress persistence, rewards and adaptive next-lesson behavior.
 - `app_widget_test.dart`: age-adaptive home, functional launch controls for all five worlds, a world map, and a playable lesson surface.
+- `overflow_test.dart`: every implemented screen and lesson at 640x360, 800x360, 960x540 and 1280x800 with normal and enlarged text.
 - `tool/verify_product.mjs`: dependency-independent source audit used when reviewing the vertical slice.
+- `tool/verify_phase12.mjs`: landscape, artwork, compatibility, script fallback and audit-boundary checks.
 
 ## Privacy
 

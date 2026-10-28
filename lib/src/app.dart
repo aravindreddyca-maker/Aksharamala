@@ -53,4 +53,3 @@ class _AksharamalaAppState extends State<AksharamalaApp> {
         ),
       );
 }
-

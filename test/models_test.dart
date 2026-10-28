@@ -17,12 +17,24 @@ void main() {
   });
 
   test('vertical slice has five distinct worlds and playable lessons', () {
-    expect(curriculum.map((world) => world.id).toSet(),
-        {'english', 'telugu', 'hindi', 'tamil', 'numbers'});
+    expect(curriculum.map((world) => world.id).toSet(), {
+      'english',
+      'telugu',
+      'hindi',
+      'tamil',
+      'numbers',
+    });
     for (final world in curriculum) {
       expect(world.lessons.length, greaterThanOrEqualTo(4));
       expect(world.lessons.every((lesson) => lesson.speech.isNotEmpty), isTrue);
-      expect(world.lessons.any((lesson) => lesson.kind == LessonKind.tracing || lesson.kind == LessonKind.game), isTrue);
+      expect(
+        world.lessons.any(
+          (lesson) =>
+              lesson.kind == LessonKind.tracing ||
+              lesson.kind == LessonKind.game,
+        ),
+        isTrue,
+      );
     }
   });
 
@@ -34,4 +46,3 @@ void main() {
     }
   });
 }
-

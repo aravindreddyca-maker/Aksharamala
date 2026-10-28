@@ -56,19 +56,22 @@ class AppController extends ChangeNotifier {
   }
 
   Lesson recommendedLesson(LearningWorld world) {
-    final unfinished = world.lessons
-        .where((lesson) => !activeProgress.completedLessons.contains(lesson.id));
+    final unfinished = world.lessons.where(
+      (lesson) => !activeProgress.completedLessons.contains(lesson.id),
+    );
     if (unfinished.isNotEmpty) return unfinished.first;
     // Adaptive review: replay a varied item after mastery.
-    final index = (activeProgress.attempts[world.id] ?? 0) % world.lessons.length;
+    final index =
+        (activeProgress.attempts[world.id] ?? 0) % world.lessons.length;
     return world.lessons[index];
   }
 
   String get adaptiveMessage {
     if (activeProfile == null) return '';
     final stage = activeProfile!.stage;
-    final weakWorld = curriculum.reduce((a, b) =>
-        accuracyFor(a.id) <= accuracyFor(b.id) ? a : b);
+    final weakWorld = curriculum.reduce(
+      (a, b) => accuracyFor(a.id) <= accuracyFor(b.id) ? a : b,
+    );
     if ((activeProgress.attempts[weakWorld.id] ?? 0) >= 2 &&
         accuracyFor(weakWorld.id) < .7) {
       return 'Practice pick: ${weakWorld.name} — a gentle review is ready.';
@@ -93,8 +96,9 @@ class AppController extends ChangeNotifier {
     if (completed.isNotEmpty) badges.add('first-step');
     if (completed.length >= 4) badges.add('world-walker');
     if (completed.length >= 8) badges.add('bright-star');
-    if (curriculum.every((item) =>
-        item.lessons.any((l) => completed.contains(l.id)))) {
+    if (curriculum.every(
+      (item) => item.lessons.any((l) => completed.contains(l.id)),
+    )) {
       badges.add('four-world-hero');
     }
     progress[profile.id] = ProgressRecord(
@@ -106,15 +110,14 @@ class AppController extends ChangeNotifier {
     );
     final gained = correct ? 3 : 1;
     final updated = profile.copyWith(stars: profile.stars + gained);
-    profiles = profiles.map((item) => item.id == profile.id ? updated : item).toList();
+    profiles =
+        profiles.map((item) => item.id == profile.id ? updated : item).toList();
     activeProfile = updated;
     await _persist();
     notifyListeners();
     return gained;
   }
 
-  Future<void> _persist() => _store.save(
-        LocalSnapshot(profiles: profiles, progress: progress),
-      );
+  Future<void> _persist() =>
+      _store.save(LocalSnapshot(profiles: profiles, progress: progress));
 }
-

@@ -21,7 +21,11 @@ void main() {
     await first.initialise();
     await first.addProfile('Asha', 6, '🦄');
     final world = curriculum.first;
-    await first.recordResult(world: world, lesson: world.lessons.first, correct: true);
+    await first.recordResult(
+      world: world,
+      lesson: world.lessons.first,
+      correct: true,
+    );
 
     final second = AppController(store: LocalStore(fileOverride: snapshot));
     await second.initialise();
@@ -37,8 +41,11 @@ void main() {
     await controller.addProfile('Kabir', 8, '🐯');
     final world = curriculum.first;
     expect(controller.recommendedLesson(world).id, world.lessons.first.id);
-    await controller.recordResult(world: world, lesson: world.lessons.first, correct: true);
+    await controller.recordResult(
+      world: world,
+      lesson: world.lessons.first,
+      correct: true,
+    );
     expect(controller.recommendedLesson(world).id, world.lessons[1].id);
   });
 }
-

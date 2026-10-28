@@ -25,9 +25,15 @@ AppController _controller({bool withProfile = true}) {
 }
 
 void main() {
-  testWidgets('no screen overflows on phones, tablets, landscape or large text',
-      (tester) async {
-    const sizes = [Size(360, 640), Size(411, 914), Size(768, 1024), Size(914, 411)];
+  testWidgets('no screen overflows on phones, tablets, landscape or large text', (
+    tester,
+  ) async {
+    const sizes = [
+      Size(640, 360),
+      Size(800, 360),
+      Size(960, 540),
+      Size(1280, 800),
+    ];
     const scales = [1.0, 1.3];
     final screens = <String, Widget Function()>{
       'splash': () => const SplashScreen(),
@@ -38,7 +44,8 @@ void main() {
       for (final world in curriculum) ...{
         'map ${world.id}': () => WorldMapScreen(world: world),
         for (final lesson in world.lessons)
-          'lesson ${lesson.id}': () => LessonScreen(world: world, lesson: lesson),
+          'lesson ${lesson.id}': () =>
+              LessonScreen(world: world, lesson: lesson),
       },
     };
 
@@ -53,21 +60,25 @@ void main() {
       for (final size in sizes) {
         for (final scale in scales) {
           for (final entry in screens.entries) {
-            label = '${entry.key} @ ${size.width.toInt()}x${size.height.toInt()} text x$scale';
+            label =
+                '${entry.key} @ ${size.width.toInt()}x${size.height.toInt()} text x$scale';
             tester.view
               ..devicePixelRatio = 2
               ..physicalSize = size * 2;
-            await tester.pumpWidget(AppScope(
-              controller: _controller(withProfile: entry.key != 'profile'),
-              child: MaterialApp(
-                theme: buildTheme(),
-                builder: (context, child) => MediaQuery(
-                  data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(scale)),
-                  child: child!,
+            await tester.pumpWidget(
+              AppScope(
+                controller: _controller(withProfile: entry.key != 'profile'),
+                child: MaterialApp(
+                  theme: buildTheme(),
+                  builder: (context, child) => MediaQuery(
+                    data: MediaQuery.of(context)
+                        .copyWith(textScaler: TextScaler.linear(scale)),
+                    child: child!,
+                  ),
+                  home: entry.value(),
                 ),
-                home: entry.value(),
               ),
-            ));
+            );
             await tester.pump(const Duration(milliseconds: 500));
           }
         }
