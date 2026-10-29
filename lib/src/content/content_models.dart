@@ -193,6 +193,7 @@ class ContentPack {
     required this.status,
     required this.chapters,
     required this.lessons,
+    this.gates = const {},
   });
 
   final ContentModule module;
@@ -202,6 +203,10 @@ class ContentPack {
   final String status;
   final List<String> chapters;
   final List<LessonRecord> lessons;
+
+  /// Named prerequisites that are not single lessons: gate name -> the chapters
+  /// that must be finished. A lesson may list a gate as a prerequisite.
+  final Map<String, List<String>> gates;
 }
 
 class ParsedPack {
@@ -270,6 +275,21 @@ ParsedPack parseContentPack(
     }
   } else {
     issue('E002', 'field "chapters" missing or not a list');
+  }
+
+  final gates = <String, List<String>>{};
+  final gatesRaw = json['gates'];
+  if (gatesRaw is Map) {
+    for (final e in gatesRaw.entries) {
+      final req = e.value is Map ? (e.value as Map)['requires_chapters'] : null;
+      if (e.key is String && req is List && req.every((c) => c is String)) {
+        gates[e.key as String] = req.cast<String>();
+      } else {
+        issue('E002', 'gate "${e.key}" needs a "requires_chapters" list');
+      }
+    }
+  } else if (gatesRaw != null) {
+    issue('E002', 'field "gates" must be an object');
   }
 
   final lessons = <LessonRecord>[];
@@ -383,6 +403,7 @@ ParsedPack parseContentPack(
       status: status,
       chapters: chapters,
       lessons: lessons,
+      gates: gates,
     ),
     issues,
   );

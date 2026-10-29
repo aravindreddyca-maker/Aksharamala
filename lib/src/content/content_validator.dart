@@ -145,6 +145,14 @@ class ContentValidator {
       issues.add(_err('E005', m, null,
           'pack locale "${pack.locale}" should be "${m.locale}"'));
     }
+    for (final g in pack.gates.entries) {
+      for (final c in g.value) {
+        if (!pack.chapters.contains(c)) {
+          issues.add(_err('E018', m, null,
+              'gate "${g.key}" requires chapter "$c" which is not declared'));
+        }
+      }
+    }
   }
 
   // -- lesson level -------------------------------------------------------
@@ -180,8 +188,8 @@ class ContentValidator {
     }
 
     for (final p in l.prerequisites) {
-      if (!ids.contains(p)) {
-        warn('W101', 'prerequisite "$p" is not a lesson id');
+      if (!ids.contains(p) && !pack.gates.containsKey(p)) {
+        warn('W101', 'prerequisite "$p" is not a lesson id or a declared gate');
       }
     }
 

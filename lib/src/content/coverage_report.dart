@@ -8,6 +8,7 @@ library;
 import 'content_issue.dart';
 import 'content_models.dart';
 import 'content_validator.dart';
+import 'playable_summary.dart';
 
 const _bands = ['3-4', '5-6', '7-9', '10-12'];
 const _levels = Readiness.values;
@@ -21,10 +22,13 @@ String _levelName(Readiness r) => switch (r) {
     };
 
 class CoverageReport {
-  CoverageReport(this.packs, this.validation);
+  CoverageReport(this.packs, this.validation, {this.playable});
 
   final List<ContentPack> packs;
   final ValidationReport validation;
+
+  /// What the app can play today. When given, the report opens with it.
+  final PlayableSummary? playable;
 
   Readiness readinessOf(LessonRecord l) =>
       validation.readiness['${l.module.name}/${l.id}']!;
@@ -87,7 +91,7 @@ class CoverageReport {
     b.writeln();
     b.writeln('Source: `$generatedFor` (schema ${packs.first.schemaVersion}). '
         'Produced by the importer in `lib/src/content/`; regenerate with '
-        '`dart run tool/content_report.dart`.');
+        '`flutter test --dart-define=WRITE_REPORTS=true test/batch/reports_test.dart`.');
     b.writeln();
     b.writeln(
         '**Read this first.** The pack holds **$total** lesson records, but '
@@ -96,6 +100,7 @@ class CoverageReport {
         'sorts every record by how far it is from that. **No record is '
         'published or verified.**');
     b.writeln();
+    if (playable != null) _writePlayable(b);
 
     b.writeln('## 1. Records by readiness');
     b.writeln();
@@ -299,6 +304,55 @@ class CoverageReport {
     b.writeln('- Whether the age bands are right: they are the pack author\'s '
         'indicative labels.');
     return b.toString();
+  }
+
+  // -- playable -----------------------------------------------------------
+
+  void _writePlayable(StringBuffer b) {
+    final p = playable!;
+    b.writeln('## 0. What is playable in the app today');
+    b.writeln();
+    b.writeln('Only the first batch is imported, behind the parent switch '
+        '"Try the new lessons". Everything else in the pack is still data.');
+    b.writeln();
+    b.writeln('| Module | Playable lessons | Pack records used by questions | '
+        'Writing practice records | Still draft (not imported) | '
+        'Placeholder, outline or blueprint |');
+    b.writeln('|---|---:|---:|---:|---:|---:|');
+    for (final pack in packs) {
+      final lessons = p.forModule(pack.module).length;
+      final q = p.questionRecords(pack.module);
+      final w = p.writingRecords(pack.module);
+      final ready = teachable(pack).toList();
+      final draftLeft = ready.where((l) => !q.contains(l.id)).length;
+      final notReady = pack.lessons.length - ready.length;
+      b.writeln(
+          '| ${pack.module.name} | $lessons | ${q.length} | ${w.length} | '
+          '$draftLeft | $notReady |');
+    }
+    b.writeln();
+    b.writeln('- *Playable lesson*: plays end to end offline in the app, every '
+        'answer key checked against the pack.');
+    b.writeln('- *Writing practice*: the handwriting engine checks the shape '
+        'and gives feedback, but **no mastery is awarded** until a teacher '
+        'verifies stroke order (see the asset manifest).');
+    b.writeln('- Writing records are counted separately: in the pack they are '
+        'still placeholders (no stroke geometry).');
+    b.writeln();
+    b.writeln('### What each playable lesson still lacks');
+    b.writeln();
+    b.writeln('| Lesson | Module | Picture missing for | Stroke template | '
+        'Stroke order verified | Audio recorded | Native review |');
+    b.writeln('|---|---|---|---|---|---|---|');
+    for (final l in p.lessons) {
+      b.writeln('| ${l.id} (${l.title}) | ${l.module.name} | '
+          '${l.missingPictures.isEmpty ? '—' : l.missingPictures.join(', ')} | '
+          '${l.hasStrokeTemplate ? 'yes' : 'no (font outline only)'} | '
+          '${l.strokeOrderVerified ? 'yes' : 'no'} | '
+          '${l.audioRecorded ? 'yes' : 'no'} | '
+          '${l.nativeReviewed ? 'yes' : 'no'} |');
+    }
+    b.writeln();
   }
 
   // -- CSV ----------------------------------------------------------------

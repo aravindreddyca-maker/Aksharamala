@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 
+import 'batch/batch_content.dart';
 import 'curriculum.dart';
 import 'models.dart';
 import 'services/local_store.dart';
@@ -13,10 +14,27 @@ class AppController extends ChangeNotifier {
   ChildProfile? activeProfile;
   bool loaded = false;
 
+  /// Feature flag (a parent setting, off by default): when on, the first batch
+  /// of curriculum-pack lessons is added to the Telugu and Number Galaxy worlds.
+  bool newLessonsEnabled = false;
+
+  /// The worlds the child sees: the existing curriculum, plus the new lessons
+  /// when the flag is on. Existing quests are never changed or removed.
+  List<LearningWorld> get worlds =>
+      newLessonsEnabled ? worldsWithBatch(curriculum) : curriculum;
+
+  Future<void> setNewLessons(bool value) async {
+    if (value == newLessonsEnabled) return;
+    newLessonsEnabled = value;
+    await _persist();
+    notifyListeners();
+  }
+
   Future<void> initialise() async {
     final snapshot = await _store.load();
     profiles = List<ChildProfile>.of(snapshot.profiles);
     progress = Map<String, ProgressRecord>.of(snapshot.progress);
+    newLessonsEnabled = snapshot.newLessons;
     if (profiles.isNotEmpty) activeProfile = profiles.first;
     loaded = true;
     notifyListeners();
@@ -46,7 +64,7 @@ class AppController extends ChangeNotifier {
       : progress[activeProfile!.id] ?? ProgressRecord.empty();
 
   int completedInWorld(LearningWorld world) => world.lessons
-      .where((lesson) => activeProgress.completedLessons.contains(lesson.id))
+      .where((lesson) => activeProgress.completedWithLegacy.contains(lesson.id))
       .length;
 
   double accuracyFor(String worldId) {
@@ -56,8 +74,9 @@ class AppController extends ChangeNotifier {
   }
 
   Lesson recommendedLesson(LearningWorld world) {
+    final done = activeProgress.completedWithLegacy;
     final unfinished = world.lessons.where(
-      (lesson) => !activeProgress.completedLessons.contains(lesson.id),
+      (lesson) => !done.contains(lesson.id),
     );
     if (unfinished.isNotEmpty) return unfinished.first;
     // Adaptive review: replay a varied item after mastery.
@@ -126,6 +145,11 @@ class AppController extends ChangeNotifier {
     return gained;
   }
 
-  Future<void> _persist() =>
-      _store.save(LocalSnapshot(profiles: profiles, progress: progress));
+  Future<void> _persist() => _store.save(
+        LocalSnapshot(
+          profiles: profiles,
+          progress: progress,
+          newLessons: newLessonsEnabled,
+        ),
+      );
 }

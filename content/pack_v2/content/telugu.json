@@ -20,6 +20,12 @@
     "writing",
     "review"
   ],
+  "gates": {
+    "letter_and_combination_mastery": {
+      "description": "Letters taught and, where the language has them, vowel combinations, before spelling and word building.",
+      "requires_chapters": ["letters", "vowel_combinations"]
+    }
+  },
   "lessons": [
     {
       "id": "telugu-recognise-001",

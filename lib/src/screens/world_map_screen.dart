@@ -3,10 +3,13 @@ import 'dart:ui' show PointerDeviceKind;
 import 'package:flutter/material.dart';
 
 import '../app.dart';
+import '../batch/batch_content.dart' show batchQuestArt;
+import '../batch/batch_lesson.dart';
 import '../models.dart';
 import '../quest_art.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'batch_lesson_screen.dart';
 import 'lesson_screen.dart';
 
 /// Warm cream for quest cards: dark text on it clears 7:1, and it reads as
@@ -74,7 +77,7 @@ class WorldMapScreen extends StatelessWidget {
                     Expanded(
                       child: _QuestTrail(
                         world: world,
-                        completed: progress.completedLessons,
+                        completed: progress.completedWithLegacy,
                         recommended: recommended,
                         pad: pad,
                       ),
@@ -546,7 +549,10 @@ class _QuestCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final art = questArt[lesson.id];
+    final art = questArt[lesson.id] ?? batchQuestArt[lesson.id];
+    final item = lesson;
+    final label =
+        questLabel[lesson.id] ?? (item is BatchLesson ? item.symbol : null);
     final picture = ClipRRect(
       borderRadius: BorderRadius.circular(horizontal ? 16 : 18),
       child: Stack(
@@ -554,7 +560,8 @@ class _QuestCard extends StatelessWidget {
         children: [
           // Tracing quests teach one letter: show that letter, big, instead of
           // a picture of something else.
-          if (lesson.kind == LessonKind.tracing)
+          if (lesson.kind == LessonKind.tracing ||
+              (item is BatchLesson && art == null))
             _GlyphArt(world: world, glyph: lesson.symbol)
           else if (art != null)
             Image.asset(
@@ -577,11 +584,11 @@ class _QuestCard extends StatelessWidget {
           if (complete) const Positioned(top: 6, right: 6, child: _DoneBadge()),
           if (recommended && !horizontal)
             const Positioned(left: 6, bottom: 6, child: _NextChip()),
-          if (questLabel[lesson.id] != null)
+          if (label != null)
             Positioned(
               right: 6,
               bottom: 6,
-              child: _LabelChip(text: questLabel[lesson.id]!, world: world),
+              child: _LabelChip(text: label, world: world),
             ),
         ],
       ),
@@ -650,7 +657,9 @@ class _QuestCard extends StatelessWidget {
           onTap: () => Navigator.push(
             context,
             MaterialPageRoute<void>(
-              builder: (_) => LessonScreen(world: world, lesson: lesson),
+              builder: (_) => item is BatchLesson
+                  ? BatchLessonScreen(world: world, lesson: item)
+                  : LessonScreen(world: world, lesson: lesson),
             ),
           ),
           child: Padding(

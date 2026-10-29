@@ -6,10 +6,17 @@ import 'package:flutter/services.dart';
 import '../models.dart';
 
 class LocalSnapshot {
-  const LocalSnapshot({required this.profiles, required this.progress});
+  const LocalSnapshot({
+    required this.profiles,
+    required this.progress,
+    this.newLessons = false,
+  });
 
   final List<ChildProfile> profiles;
   final Map<String, ProgressRecord> progress;
+
+  /// Parent setting: show the new curriculum-pack lessons (feature flag).
+  final bool newLessons;
 }
 
 class LocalStore {
@@ -54,7 +61,12 @@ class LocalStore {
           Map<String, dynamic>.from(entry.value as Map),
         );
       }
-      return LocalSnapshot(profiles: profiles, progress: progress);
+      final settings = value['settings'];
+      return LocalSnapshot(
+        profiles: profiles,
+        progress: progress,
+        newLessons: settings is Map && settings['newLessons'] == true,
+      );
     } on Object {
       return const LocalSnapshot(profiles: [], progress: {});
     }
@@ -67,6 +79,7 @@ class LocalStore {
     await temp.writeAsString(
       jsonEncode({
         'version': 1,
+        'settings': {'newLessons': snapshot.newLessons},
         'profiles':
             snapshot.profiles.map((profile) => profile.toJson()).toList(),
         'progress': snapshot.progress.map(

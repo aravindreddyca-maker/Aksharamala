@@ -37,13 +37,34 @@ void main() {
     expect(ids.toSet().length, ids.length);
   });
 
-  test('the only structural errors are the 20 undeclared math_topics chapters',
-      () {
-    expect(merged.errors.map((e) => e.code).toSet(), {'E014'});
-    expect(merged.errors.length, 20);
-    expect(merged.errors.every((e) => e.module == 'numbers'), isTrue);
-    expect(merged.errors.every((e) => e.lessonId!.startsWith('numbers-topic-')),
-        isTrue);
+  test('the pack has no structural errors', () {
+    expect(merged.errors, isEmpty, reason: merged.errors.take(5).join('\n'));
+  });
+
+  test('every prerequisite resolves to a lesson or a declared gate', () {
+    expect(merged.byCode('W101'), isEmpty);
+    for (final p in loaded.packs) {
+      final ids = p.lessons.map((l) => l.id).toSet();
+      for (final l in p.lessons) {
+        for (final pre in l.prerequisites) {
+          expect(ids.contains(pre) || p.gates.containsKey(pre), isTrue,
+              reason: '${l.id} -> $pre');
+        }
+      }
+    }
+  });
+
+  test('the mastery gate points at declared chapters that have lessons', () {
+    for (final p in loaded.packs) {
+      final used = p.lessons.map((l) => l.chapter).toSet();
+      for (final g in p.gates.entries) {
+        for (final c in g.value) {
+          expect(p.chapters, contains(c), reason: '${p.module.name} $c');
+          expect(used, contains(c),
+              reason: '${p.module.name} gate $c is empty');
+        }
+      }
+    }
   });
 
   test('no handwriting record can award mastery or score strokes yet', () {

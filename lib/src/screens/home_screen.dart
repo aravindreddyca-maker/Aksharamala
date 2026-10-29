@@ -3,7 +3,6 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 
 import '../app.dart';
-import '../curriculum.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
@@ -368,7 +367,8 @@ class _WorldStrip extends StatelessWidget {
   Widget build(BuildContext context) => LayoutBuilder(
         builder: (context, constraints) {
           final available = constraints.maxWidth - pad * 2;
-          final count = curriculum.length;
+          final worlds = AppScope.of(context).worlds;
+          final count = worlds.length;
           final fit = (available - _gap * (count - 1)) / count;
           final tileWidth = fit < _minTile ? _minTile : fit;
           final bottom = compact ? 12.0 : 20.0;
@@ -387,7 +387,7 @@ class _WorldStrip extends StatelessWidget {
                           if (i > 0) const SizedBox(width: _gap),
                           SizedBox(
                             width: tileWidth,
-                            child: _WorldCard(world: curriculum[i]),
+                            child: _WorldCard(world: worlds[i]),
                           ),
                         ],
                       ],

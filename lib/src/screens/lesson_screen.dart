@@ -1,4 +1,4 @@
-import 'dart:math';
+﻿import 'dart:math';
 
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter/material.dart';
@@ -105,7 +105,7 @@ class _LessonScreenState extends State<LessonScreen> {
     await showDialog<void>(
       context: context,
       barrierDismissible: false,
-      builder: (context) => _ResultDialog(
+      builder: (context) => LessonResultDialog(
         correct: correct,
         text: ResultText.forLocale(widget.lesson.locale),
         gained: gained,
@@ -652,13 +652,14 @@ class _LessonScreenState extends State<LessonScreen> {
 /// After a quest: the cheering or winking lion (its words are painted in the
 /// artwork, so they are announced through the image's label), what was earned,
 /// and the two ways on. Side by side in landscape, scroll-safe on short screens.
-class _ResultDialog extends StatelessWidget {
-  const _ResultDialog({
+class LessonResultDialog extends StatelessWidget {
+  const LessonResultDialog({
     required this.correct,
     required this.text,
     required this.gained,
     required this.onBack,
     required this.onAgain,
+    super.key,
   });
 
   final bool correct;

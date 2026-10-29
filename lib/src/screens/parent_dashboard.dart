@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../app.dart';
-import '../curriculum.dart';
 import '../models.dart';
 import '../widgets/common.dart';
 
@@ -75,6 +74,20 @@ class ParentDashboard extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 10),
+              Card(
+                child: SwitchListTile(
+                  key: const Key('new_lessons_switch'),
+                  title: const Text('Try the new lessons (preview)'),
+                  subtitle: const Text(
+                    '10 Telugu letter lessons and Number Galaxy 0–10, with '
+                    'counting, comparing and writing practice. Stars and '
+                    'progress already earned are kept; turn it off any time.',
+                  ),
+                  value: controller.newLessonsEnabled,
+                  onChanged: controller.setNewLessons,
+                ),
+              ),
               const SectionTitle('Progress by world'),
               GridView.builder(
                 shrinkWrap: true,
@@ -85,9 +98,9 @@ class ParentDashboard extends StatelessWidget {
                   crossAxisSpacing: 12,
                   mainAxisSpacing: 12,
                 ),
-                itemCount: curriculum.length,
+                itemCount: controller.worlds.length,
                 itemBuilder: (context, index) {
-                  final world = curriculum[index];
+                  final world = controller.worlds[index];
                   final complete = controller.completedInWorld(world);
                   final attempts = record.attempts[world.id] ?? 0;
                   final worldAccuracy = attempts == 0

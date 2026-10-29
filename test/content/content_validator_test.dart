@@ -47,6 +47,7 @@ Map<String, Object?> packJson(
   String module = 'telugu',
   String locale = 'te-IN',
   List<Object?> chapters = const ['letters', 'handwriting', 'grammar'],
+  Map<String, List<String>> gates = const {},
 }) =>
     {
       'schema_version': '2.0-draft',
@@ -54,6 +55,10 @@ Map<String, Object?> packJson(
       'locale': locale,
       'status': 'test',
       'chapters': chapters,
+      if (gates.isNotEmpty)
+        'gates': {
+          for (final g in gates.entries) g.key: {'requires_chapters': g.value},
+        },
       'lessons': lessons,
     };
 
@@ -63,6 +68,7 @@ ValidationReport check(
   String? locale,
   List<Object?>? chapters,
   AssetExists? assetExists,
+  Map<String, List<String>> gates = const {},
 }) {
   final parsed = parseContentPack(
     packJson(
@@ -70,6 +76,7 @@ ValidationReport check(
       module: module.name,
       locale: locale ?? module.locale,
       chapters: chapters ?? const ['letters', 'handwriting', 'grammar'],
+      gates: gates,
     ),
     expected: module,
   );
@@ -508,6 +515,26 @@ void main() {
       ]);
       expect(codes(r), contains('W101'));
       expect(r.errors, isEmpty);
+    });
+
+    test('a declared gate resolves; a gate on a missing chapter is E018', () {
+      final ok = check(
+        [
+          lesson(prerequisites: ['mastery'])
+        ],
+        gates: {
+          'mastery': ['letters']
+        },
+      );
+      expect(codes(ok), isNot(contains('W101')));
+      expect(ok.errors, isEmpty);
+      final bad = check(
+        [lesson()],
+        gates: {
+          'mastery': ['nope']
+        },
+      );
+      expect(errorCodes(bad), contains('E018'));
     });
 
     test('a real prerequisite resolves', () {

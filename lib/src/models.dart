@@ -183,7 +183,26 @@ class ProgressRecord {
   /// treated as fully paid, so old saves cannot be replayed for more stars.
   int starsPaidBy(String lessonId) =>
       questStars[lessonId] ??
-      (completedLessons.contains(lessonId) ? starsPerQuest : 0);
+      (completedLessons.contains(lessonId)
+          ? starsPerQuest
+          : legacyQuestAliases[lessonId] == null
+              ? 0
+              : starsPaidBy(legacyQuestAliases[lessonId]!));
+
+  /// A new lesson that replaces an older quest -> that older quest's id. A
+  /// child who finished (or was paid for) the old quest is treated as having
+  /// done the new one, so nothing is lost and nothing can be farmed twice.
+  /// Nothing is ever rewritten in the save: the link is applied when reading.
+  static const legacyQuestAliases = <String, String>{
+    'telugu-recognise-001': 'te-a',
+  };
+
+  /// Finished lessons, including new lessons whose older quest was finished.
+  Set<String> get completedWithLegacy => {
+        ...completedLessons,
+        for (final e in legacyQuestAliases.entries)
+          if (completedLessons.contains(e.value)) e.key,
+      };
 
   Map<String, Object> toJson() => {
         'completedLessons': completedLessons.toList(),
