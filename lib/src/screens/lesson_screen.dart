@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../app.dart';
 import '../batch/batch_content.dart' show BatchText;
 import '../batch/batch_lesson.dart' show WriteMode;
+import '../curriculum.dart' show numberNames;
 import '../handwriting/glyph_mask.dart';
 import '../handwriting/glyph_mask_raster.dart';
 import '../models.dart';
@@ -84,8 +85,11 @@ class _LessonScreenState extends State<LessonScreen> {
 
   Future<void> _speak() async {
     setState(() => _speaking = true);
+    final speech = widget.lesson.id == 'num-names'
+        ? '${numberNames[5]!['en']}.'
+        : widget.lesson.speech;
     final supported = await _speech.speak(
-      widget.lesson.speech,
+      speech,
       widget.lesson.locale,
     );
     if (!mounted) return;

@@ -7,28 +7,32 @@ class AchievementsScreen extends StatelessWidget {
   const AchievementsScreen({super.key});
 
   static const badges =
-      <({String id, IconData icon, String title, String detail})>[
+      <({String id, IconData icon, String asset, String title, String detail})>[
     (
       id: 'first-step',
       icon: Icons.flag_rounded,
+      asset: 'assets/images/rewards/gift.png',
       title: 'First Step',
       detail: 'Complete your first quest',
     ),
     (
       id: 'world-walker',
       icon: Icons.explore_rounded,
+      asset: 'assets/images/rewards/gem.png',
       title: 'World Walker',
       detail: 'Complete four quests',
     ),
     (
       id: 'bright-star',
       icon: Icons.auto_awesome_rounded,
+      asset: 'assets/images/rewards/medal.png',
       title: 'Bright Star',
       detail: 'Complete eight quests',
     ),
     (
       id: 'all-world-hero',
       icon: Icons.emoji_events_rounded,
+      asset: 'assets/images/rewards/crown.png',
       title: 'All-World Hero',
       detail: 'Complete a quest in every world',
     ),
@@ -127,12 +131,21 @@ class AchievementsScreen extends StatelessWidget {
                                 : const Color(0xFFE8E9EF),
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(
-                            badge.icon,
-                            color: unlocked
-                                ? const Color(0xFF8A5B00)
-                                : Colors.grey,
-                            size: 32,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Image.asset(
+                              badge.asset,
+                              color: unlocked ? null : Colors.grey,
+                              colorBlendMode:
+                                  unlocked ? null : BlendMode.saturation,
+                              errorBuilder: (_, __, ___) => Icon(
+                                badge.icon,
+                                color: unlocked
+                                    ? const Color(0xFF8A5B00)
+                                    : Colors.grey,
+                                size: 32,
+                              ),
+                            ),
                           ),
                         ),
                         const SizedBox(width: 12),

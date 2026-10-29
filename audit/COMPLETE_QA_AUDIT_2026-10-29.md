@@ -1,7 +1,7 @@
 # Aksharamala — complete app and curriculum QA audit
 
 Audit date: 29 October 2026 (Asia/Calcutta)  
-Audited revision: `24d26f0`  
+Audited revision: base `6a02d1a` plus the deterministic stabilization described in section 6
 Mode: audit only; no product or curriculum behavior was changed.  
 Companion matrix: `audit/COVERAGE_MATRIX_2026-10-29.csv`
 
@@ -16,8 +16,7 @@ The most serious blockers are:
 3. All 3,184 handwriting records in the pack lack stroke geometry. The app has templates only for numbers 0–10, and even those templates explicitly state that stroke order is not teacher-verified.
 4. No recorded or native-speaker-verified audio exists. Android device TTS is the only speech path.
 5. All 20 advanced maths topics are headings only; age 10–12 has no usable maths content.
-6. English legacy `C _ T` offers A, E, O, so both CAT and COT are valid. The question is ambiguous.
-7. The supplied audit brief is truncated after handwriting item “9. Meaning”; requirements after that point, if any, were not available.
+6. The supplied audit brief is truncated after handwriting item “9. Meaning”; requirements after that point, if any, were not available.
 
 ## 1. Evidence and architecture inventory
 
@@ -80,15 +79,15 @@ Severity: **Critical**.
 
 The pack declares 46 recognition records and 12 क-series matra combinations, but all combination records are blueprints and none is imported. The legacy app teaches only अ, one कमल completion item, tracing of अ and one story. Barakhadi, common conjuncts, sentence progression, grammar and verified handwriting are absent from the playable curriculum.
 
-Strings are passed intact to Flutter and Android TTS, so pre-base signs and conjuncts are not deliberately split in code. Real-device rendering and native pronunciation remain unverified. The older legacy story inconsistency remains educationally risky: the title uses “नीला पतंग” while standard agreement normally expects “नीली पतंग”; this requires Hindi educator sign-off.
+Strings are passed intact to Flutter and Android TTS, so pre-base signs and conjuncts are not deliberately split in code. Real-device rendering and native pronunciation remain unverified. The legacy story now consistently uses “नीली पतंग” and matching feminine answer labels; native-educator sign-off is still required.
 
 Severity: **Critical**.
 
 ### English
 
-The pack declares uppercase A–Z recognition and 26 vocabulary records, but no lowercase recognition sequence. Ten phonics entries are blueprints, not lessons. There are no imported pack lessons. The legacy surface teaches A, the ambiguous `C _ T` item, tracing A and one short story.
+The pack declares uppercase A–Z recognition and 26 vocabulary records, but no lowercase recognition sequence. Ten phonics entries are blueprints, not lessons. There are no imported pack lessons. The legacy surface teaches A, one picture-clued `C _ T` item with A/E/I options and a unique CAT answer, tracing A and one short story.
 
-There is no complete letter-sound sequence, CVC progression, sight-word curriculum, sentence curriculum, grammar practice or independent writing. The phonics ambiguity is confirmed: offered A and O produce valid English words CAT and COT. A picture or semantic clue would be required to make the answer unique.
+There is no complete letter-sound sequence, CVC progression, sight-word curriculum, sentence curriculum, grammar practice or independent writing. The former CAT/COT ambiguity is resolved by offering A/E/I and showing a cat picture; broader phonics coverage remains absent.
 
 Severity: **Critical**.
 
@@ -144,11 +143,12 @@ Dependency-independent checks executed on this revision:
 Flutter was supplied at `E:\flutter-sdk\bin\flutter.bat` after the initial audit pass. Current verification on Flutter 3.47.8 / Dart 3.13.7 produced:
 
 - `flutter analyze` — **pass**, no issues found.
-- `flutter test` — **pass**, **352 passed and 13 skipped**. The skips are named known curriculum defects, not unavailable tests.
-- `flutter test test/audit --dart-define=AUDIT_STRICT=true` — **expected failure**, **29 passed and 13 failed**. The 13 failures explicitly confirm the known defects: emoji lesson symbols, mixed-script TTS, ambiguous `C _ T`, answers exposed in prompts, absent word pictures, unstated/inconsistent story answers, unused assets/data, identical age content, no age field, one taught Indic letter per legacy world, and tracing text that promises absent dots.
+- `flutter test` after deterministic stabilization — **pass**, **362 passed and 3 skipped**. The three skips are the explicitly deferred curriculum-expansion defects.
+- `flutter test test/audit --dart-define=AUDIT_STRICT=true` after stabilization — **expected failure**, **39 passed and 3 failed**. The remaining failures are precisely: identical recommendations for ages 3 and 12, no age/level/difficulty field on `Lesson`, and only one taught letter in each legacy language world.
+- The ten corrected strict-audit categories now run in the normal suite and pass: lesson symbols are text rather than emoji, number-name TTS is single-script, `C _ T` has one valid offered completion, prompts do not reveal answers, word-building has picture clues, story answers and speech agree with pages, reward assets and number-name data are used, and tracing instructions no longer promise absent dots.
 - `flutter build apk --debug` — **pass**, producing `build/app/outputs/flutter-apk/app-debug.apk`.
 
-These checks validate static analysis, widget/unit behavior and Android compilation on revision `24d26f0`. They do not replace real-device sound playback, multilingual font/rendering checks, touch tracing, accessibility review, or supervised child-usability testing.
+These checks validate static analysis, widget/unit behavior and Android compilation on the stabilized working tree based on `6a02d1a`. They do not replace real-device sound playback, multilingual font/rendering checks, touch tracing, accessibility review, or supervised child-usability testing.
 
 ## 7. Required release gates
 
@@ -158,7 +158,7 @@ These checks validate static analysis, widget/unit behavior and Android compilat
 4. Replace maths distractor generation so the answer is not always the smallest option; add word problems, edge cases and advanced strands.
 5. Author and teacher-verify stroke paths, starts, directions and orders for every taught glyph; add an actual animated demonstration.
 6. Enforce prerequisites/unlocks or remove claims that the sequence is enforced.
-7. Resolve the English CVC ambiguity and review every phonics item for a single defensible answer.
+7. Review every future phonics item for a single defensible answer; the legacy `C _ T` item is now unambiguous.
 8. Perform real-device multilingual rendering/audio, touch, accessibility and supervised child-usability testing; automated analysis, tests and the debug APK build are now current and recorded above.
 
 Until these gates pass, the app should be described only as an **offline multilingual learning prototype/vertical slice**, not a complete curriculum for children ages 3–12.

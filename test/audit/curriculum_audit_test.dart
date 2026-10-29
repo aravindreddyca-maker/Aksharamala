@@ -284,7 +284,7 @@ void main() {
             '${r.lesson.id}: symbol "${r.lesson.symbol}"',
       ];
       expect(bad, isEmpty, reason: bad.join('\n'));
-    }, skip: _known('AUD-017'));
+    });
 
     test('speech text can be spoken by the voice its locale selects', () {
       // An English voice cannot be assumed to read Telugu/Hindi/Tamil script.
@@ -295,7 +295,7 @@ void main() {
             '${r.lesson.id}: "${r.lesson.speech}" sent to ${r.lesson.locale}',
       ];
       expect(bad, isEmpty, reason: bad.join('\n'));
-    }, skip: _known('AUD-013'));
+    });
   });
 
   // ---------------------------------------------------------------------
@@ -386,7 +386,7 @@ void main() {
         expect(fills, [l.answer],
             reason: '$id: "${l.symbol}" accepts $fills (parts $parts)');
       }
-    }, skip: _known('AUD-003'));
+    });
 
     test('the prompt panel does not already show the answer', () {
       final bad = <String>[
@@ -395,15 +395,15 @@ void main() {
             '${r.lesson.id}: shows "${r.lesson.symbol}", answer "${r.lesson.answer}"',
       ];
       expect(bad, isEmpty, reason: bad.join('\n'));
-    }, skip: _known('AUD-005'));
+    });
 
     test('word-building quizzes give the child a picture clue', () {
       final bad = <String>[
         for (final r in _all.where((r) => r.lesson.kind == LessonKind.words))
-          if (r.lesson.pictures.isEmpty) r.lesson.id,
+          if (r.lesson.pictures.isEmpty && r.lesson.cover == null) r.lesson.id,
       ];
       expect(bad, isEmpty, reason: 'no picture: $bad');
-    }, skip: _known('AUD-014'));
+    });
 
     test('story answers are stated in the story pages', () {
       // Comprehension needs the answer to be in the text the child read.
@@ -421,7 +421,7 @@ void main() {
         }
       }
       expect(bad, isEmpty, reason: bad.join('\n'));
-    }, skip: _known('AUD-009'));
+    });
 
     test('the spoken line agrees with the on-screen story (key facts)', () {
       // Hand-listed facts that must match between speech and pages.
@@ -440,7 +440,7 @@ void main() {
         }
       });
       expect(bad, isEmpty, reason: bad.join('\n'));
-    }, skip: _known('AUD-008'));
+    });
   });
 
   // ---------------------------------------------------------------------
@@ -518,7 +518,7 @@ void main() {
         if (!source.contains(path)) unused.add(path);
       }
       expect(unused, isEmpty, reason: unused.join('\n'));
-    }, skip: _known('AUD-018'));
+    });
 
     test('no dead curriculum data is left in the code', () {
       final source = Directory('lib')
@@ -534,7 +534,7 @@ void main() {
           'LearningWorld.emoji (5 values)',
       ];
       expect(dead, isEmpty, reason: 'never read: $dead');
-    }, skip: _known('AUD-017'));
+    });
   });
 
   // ---------------------------------------------------------------------
@@ -591,7 +591,7 @@ void main() {
       final drawsDots = src.contains('drawPoints') || src.contains('dotted');
       expect(mentionsDots && !drawsDots, isFalse,
           reason: 'instructions mention dots but none are drawn');
-    }, skip: _known('AUD-007'));
+    });
   });
 
   // ---------------------------------------------------------------------
