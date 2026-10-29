@@ -477,8 +477,8 @@ class _ArrowButton extends StatelessWidget {
       );
 }
 
-/// One dot per quest: the one at the left edge is the long pill; finished
-/// quests are filled with the world colour.
+/// A compact position indicator. Small trails show one dot per quest; complete
+/// alphabet trails use a readable counter so dozens of dots never overflow.
 class _Dots extends StatelessWidget {
   const _Dots({
     required this.count,
@@ -503,26 +503,34 @@ class _Dots extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  for (var i = 0; i < count; i++)
-                    AnimatedContainer(
-                      duration: const Duration(milliseconds: 200),
-                      margin: const EdgeInsets.symmetric(horizontal: 3),
-                      width: i == current ? 26 : 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: i == current
-                            ? Colors.white
-                            : done[i]
-                                ? color
-                                : Colors.white38,
+              child: count > 12
+                  ? Text(
+                      '${current + 1} / $count',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900,
                       ),
+                    )
+                  : Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        for (var i = 0; i < count; i++)
+                          AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            margin: const EdgeInsets.symmetric(horizontal: 3),
+                            width: i == current ? 26 : 10,
+                            height: 10,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: i == current
+                                  ? Colors.white
+                                  : done[i]
+                                      ? color
+                                      : Colors.white38,
+                            ),
+                          ),
+                      ],
                     ),
-                ],
-              ),
             ),
           ),
         ),

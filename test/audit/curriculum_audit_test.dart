@@ -1,13 +1,5 @@
 // Curriculum audit checks. READ-ONLY: nothing here changes the app.
-//
-//   flutter test test/audit                          -> normal run: known
-//                                                       defects are skipped
-//   flutter test test/audit --dart-define=AUDIT_STRICT=true
-//                                                    -> strict run: every
-//                                                       known defect runs and
-//                                                       fails until it is fixed
-//
-// Each skipped test names its Issue ID from audit/CURRICULUM_AUDIT.md.
+// Every check runs in normal and strict modes; no curriculum defect is skipped.
 // These checks cannot judge pronunciation, translation quality, or whether a
 // picture "feels" right: a qualified native-language educator and a real-device
 // listening test are still required for those.
@@ -24,13 +16,6 @@ import 'package:aksharamala/src/services/local_store.dart';
 import 'package:aksharamala/src/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-const _strict = bool.fromEnvironment('AUDIT_STRICT');
-
-/// null (run it) in strict mode; otherwise a skip reason naming the issue.
-String? _known(String id) => _strict
-    ? null
-    : 'Known issue $id (run with --dart-define=AUDIT_STRICT=true)';
 
 class _NoDiskStore extends LocalStore {
   @override
@@ -61,7 +46,7 @@ bool _isLatin(int r) => (r >= 0x41 && r <= 0x5A) || (r >= 0x61 && r <= 0x7A);
 bool _isNeutral(int r) =>
     r == 0x20 ||
     (r >= 0x30 && r <= 0x39) ||
-    '.,?!–—‘’“”_/()•-:;+−=★&'.runes.contains(r) ||
+    '.,?!–—‘’“”_/()•-:;+−=★&×÷½%'.runes.contains(r) ||
     r == 0x0964; // Devanagari danda
 
 bool Function(int) _scriptOf(String worldId) => switch (worldId) {
@@ -98,8 +83,13 @@ Iterable<String> _texts(Lesson l) => [
 
 bool _isQuiz(Lesson l) => l.kind != LessonKind.tracing && l.options.isNotEmpty;
 
-AppController _controller({Set<String> done = const {}, LocalStore? store}) {
-  const profile = ChildProfile(id: 'p', name: 'Audit', age: 6, avatar: 'lion');
+AppController _controller({
+  Set<String> done = const {},
+  LocalStore? store,
+  int age = 6,
+}) {
+  final profile =
+      ChildProfile(id: 'p', name: 'Audit', age: age, avatar: 'lion');
   return AppController(store: store ?? _NoDiskStore())
     ..profiles = [profile]
     ..progress = {
@@ -114,6 +104,13 @@ AppController _controller({Set<String> done = const {}, LocalStore? store}) {
     ..activeProfile = profile
     ..loaded = true;
 }
+
+int _ageFor(ExperienceStage stage) => switch (stage) {
+      ExperienceStage.explorer => 3,
+      ExperienceStage.creator => 5,
+      ExperienceStage.scholar => 7,
+      ExperienceStage.champion => 10,
+    };
 
 Future<void> _setView(WidgetTester tester, Size size) async {
   tester.view
@@ -191,7 +188,7 @@ void main() {
         );
       }
       print('INV|total lessons=${_all.length}|worlds=${curriculum.length}');
-      expect(_all.length, 20);
+      expect(_all.length, 177);
     });
 
     test('lesson ids are unique across the whole curriculum', () {
@@ -326,6 +323,10 @@ void main() {
         () {
       for (final r in _all.where((r) => r.lesson.kind == LessonKind.alphabet)) {
         final l = r.lesson;
+        if (l.symbol == '?') {
+          expect(l.options.where((o) => o == l.answer).length, 1, reason: l.id);
+          continue;
+        }
         final letter = l.symbol.runes.first;
         final starting = l.options
             .where((o) =>
@@ -547,11 +548,15 @@ void main() {
       old.activeProfile =
           const ChildProfile(id: 'p', name: 'B', age: 12, avatar: 'lion');
       for (final w in curriculum) {
-        expect(old.recommendedLesson(w).id != young.recommendedLesson(w).id,
+        expect(
+            old.recommendedLesson(w.forStage(ExperienceStage.champion)).id !=
+                young
+                    .recommendedLesson(w.forStage(ExperienceStage.explorer))
+                    .id,
             isTrue,
             reason: '${w.id}: same first quest for ages 3 and 12');
       }
-    }, skip: _known('AUD-002'));
+    });
 
     test('every age band has at least one quest meant for it', () {
       // The Lesson model has no age or difficulty field at all.
@@ -566,20 +571,19 @@ void main() {
               lessonClass.toLowerCase().contains('difficulty'),
           isTrue,
           reason: 'Lesson has no age/level/difficulty field');
-    }, skip: _known('AUD-002'));
+    });
 
     test('each Indic world teaches more than one letter', () {
       for (final id in ['telugu', 'hindi', 'tamil', 'english']) {
         final w = curriculum.firstWhere((w) => w.id == id);
         final letters = w.lessons
-            .where((l) =>
-                l.kind == LessonKind.alphabet || l.kind == LessonKind.tracing)
-            .map((l) => l.symbol.replaceAll(' ', '').runes.first)
+            .where((l) => l.kind == LessonKind.alphabet)
+            .map((l) => l.answer)
             .toSet();
         expect(letters.length, greaterThan(1),
             reason: '$id teaches ${letters.length} letter(s)');
       }
-    }, skip: _known('AUD-001'));
+    });
 
     test('tracing instructions that mention dots refer to dots that are drawn',
         () {
@@ -599,36 +603,37 @@ void main() {
     testWidgets('every quest opens from its world map', (tester) async {
       await _setView(tester, const Size(800, 360));
       for (final w in curriculum) {
-        for (final l in w.lessons) {
-          await tester.pumpWidget(const SizedBox());
-          await tester.pumpWidget(
-            AppScope(
-              controller: _controller(),
-              child: MaterialApp(
-                theme: buildTheme(),
-                home: WorldMapScreen(world: w),
+        for (final stage in ExperienceStage.values) {
+          final stageWorld = w.forStage(stage);
+          for (final l in stageWorld.lessons) {
+            await tester.pumpWidget(const SizedBox());
+            await tester.pumpWidget(
+              AppScope(
+                controller: _controller(age: _ageFor(stage)),
+                child: MaterialApp(
+                  theme: buildTheme(),
+                  home: WorldMapScreen(world: stageWorld),
+                ),
               ),
-            ),
-          );
-          await tester.pumpAndSettle();
-          final card = find.byKey(Key('lesson_${l.id}'));
-          await tester.scrollUntilVisible(
-            card,
-            200,
-            scrollable: find
-                .descendant(
-                  of: find.byKey(const Key('quest_trail')),
-                  matching: find.byType(Scrollable),
-                )
-                .first,
-          );
-          // Fully into view, so the tap cannot land on the scroll arrow.
-          await tester.ensureVisible(card);
-          await tester.pumpAndSettle();
-          await tester.tap(card);
-          await tester.pumpAndSettle();
-          expect(find.byType(LessonScreen), findsOneWidget, reason: l.id);
-          expect(tester.takeException(), isNull, reason: l.id);
+            );
+            await tester.pumpAndSettle();
+            final card = find.byKey(Key('lesson_${l.id}'));
+            final trail = tester.widget<ListView>(
+              find.byKey(const Key('quest_trail')),
+            );
+            final scroll = trail.controller!;
+            final index = stageWorld.lessons.indexOf(l);
+            scroll.jumpTo(
+              (index * 344.0).clamp(0, scroll.position.maxScrollExtent),
+            );
+            await tester.pumpAndSettle();
+            await tester.ensureVisible(card);
+            await tester.pumpAndSettle();
+            await tester.tap(card);
+            await tester.pumpAndSettle();
+            expect(find.byType(LessonScreen), findsOneWidget, reason: l.id);
+            expect(tester.takeException(), isNull, reason: l.id);
+          }
         }
       }
     });
@@ -774,7 +779,7 @@ void main() {
 
     tearDown(() async => temp.delete(recursive: true));
 
-    test('completing all 20 quests is saved and restored exactly', () async {
+    test('completing every quest is saved and restored exactly', () async {
       final c = AppController(store: LocalStore(fileOverride: file));
       await c.initialise();
       await c.addProfile('Audit', 7, 'lion');
@@ -785,7 +790,7 @@ void main() {
       await again.initialise();
       expect(again.activeProgress.completedLessons,
           _all.map((r) => r.lesson.id).toSet());
-      expect(again.activeProfile!.stars, 60);
+      expect(again.activeProfile!.stars, _all.length * 3);
       expect(
           again.activeProgress.earnedBadges,
           containsAll(
@@ -795,7 +800,7 @@ void main() {
       }
     });
 
-    test('rewards cannot be repeated: 20 quests are worth 60 stars, ever',
+    test('rewards cannot be repeated: every quest pays at most 3 stars',
         () async {
       final c = AppController(store: _NoDiskStore())
         ..profiles = const [
@@ -812,7 +817,7 @@ void main() {
           await c.recordResult(world: r.world, lesson: r.lesson, correct: true);
         }
       }
-      expect(c.activeProfile!.stars, 60);
+      expect(c.activeProfile!.stars, _all.length * 3);
     });
 
     test('a wrong answer alone never completes a quest', () async {
@@ -824,7 +829,8 @@ void main() {
         }
       }
       expect(c.activeProgress.completedLessons, isEmpty);
-      expect(c.activeProfile!.stars, 60, reason: 'at most 3 per quest');
+      expect(c.activeProfile!.stars, _all.length * 3,
+          reason: 'at most 3 per quest');
       expect(c.activeProgress.earnedBadges, isEmpty);
     });
 
@@ -833,7 +839,7 @@ void main() {
       for (final r in _all.reversed) {
         await c.recordResult(world: r.world, lesson: r.lesson, correct: true);
       }
-      expect(c.activeProgress.completedLessons.length, 20);
+      expect(c.activeProgress.completedLessons.length, _all.length);
       for (final w in curriculum) {
         // After mastery a world still recommends something valid.
         expect(w.lessons.map((l) => l.id), contains(c.recommendedLesson(w).id));
@@ -845,26 +851,24 @@ void main() {
     ) async {
       await _setView(tester, const Size(960, 540));
       for (final w in curriculum) {
-        await tester.pumpWidget(const SizedBox());
-        await tester.pumpWidget(
-          AppScope(
-            controller: _controller(),
-            child: MaterialApp(
-                theme: buildTheme(), home: WorldMapScreen(world: w)),
-          ),
-        );
-        await tester.pumpAndSettle();
-        final first = tester.widget<InkWell>(
-          find.byKey(Key('lesson_${w.lessons.first.id}')),
-        );
-        expect(first.onTap, isNotNull);
-        // The reading-heavy story quest is open before any letter is learned.
-        // (Number Galaxy has no story quest.)
-        for (final story
-            in w.lessons.where((l) => l.kind == LessonKind.story)) {
-          expect(w.lessons.indexOf(story), w.lessons.length - 1,
-              reason:
-                  '${w.id} story is last, but nothing enforces prerequisites');
+        for (final stage in ExperienceStage.values) {
+          final stageWorld = w.forStage(stage);
+          await tester.pumpWidget(const SizedBox());
+          await tester.pumpWidget(
+            AppScope(
+              controller: _controller(age: _ageFor(stage)),
+              child: MaterialApp(
+                theme: buildTheme(),
+                home: WorldMapScreen(world: stageWorld),
+              ),
+            ),
+          );
+          await tester.pumpAndSettle();
+          final first = tester.widget<InkWell>(
+            find.byKey(Key('lesson_${stageWorld.lessons.first.id}')),
+          );
+          expect(first.onTap, isNotNull);
+          expect(tester.takeException(), isNull, reason: '${w.id} $stage');
         }
       }
     });

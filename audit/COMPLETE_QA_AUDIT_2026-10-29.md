@@ -3,6 +3,22 @@
 Audit date: 29 October 2026 (Asia/Calcutta)  
 Audited revision: base `6a02d1a` plus the deterministic stabilization described in section 6
 Mode: audit only; no product or curriculum behavior was changed.  
+
+## Resolution addendum — 2026-10-30
+
+The three deferred strict curriculum failures documented in this snapshot are
+now resolved. The app has 177 playable core lessons with explicit age-band,
+difficulty, objective and prerequisite metadata; age-specific content in all
+five worlds; and complete recognition sequences for English (26), Telugu (51),
+Hindi (46) and Tamil (30). All 20 legacy lesson IDs and saved-progress behavior
+remain compatible. Handwriting remains practice-only without verified stroke
+geometry.
+
+Verification after implementation: strict audit **42/42 passed**, complete
+Flutter suite **372/372 passed**, and `flutter analyze` reported **no issues**.
+See `CURRICULUM_COVERAGE_REPORT_2026-10-29.md` and
+`COVERAGE_MATRIX_2026-10-29.csv` for current per-module/per-age evidence. The
+original findings below are retained as the pre-remediation audit record.
 Companion matrix: `audit/COVERAGE_MATRIX_2026-10-29.csv`
 
 ## Release decision

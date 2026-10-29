@@ -20,8 +20,12 @@ class AppController extends ChangeNotifier {
 
   /// The worlds the child sees: the existing curriculum, plus the new lessons
   /// when the flag is on. Existing quests are never changed or removed.
-  List<LearningWorld> get worlds =>
-      newLessonsEnabled ? worldsWithBatch(curriculum) : curriculum;
+  List<LearningWorld> get worlds {
+    final all = newLessonsEnabled ? worldsWithBatch(curriculum) : curriculum;
+    final stage = activeProfile?.stage;
+    if (stage == null) return all;
+    return [for (final world in all) world.forStage(stage)];
+  }
 
   Future<void> setNewLessons(bool value) async {
     if (value == newLessonsEnabled) return;
@@ -74,15 +78,18 @@ class AppController extends ChangeNotifier {
   }
 
   Lesson recommendedLesson(LearningWorld world) {
+    // [worlds] already returns the active profile's age-filtered worlds. Keep
+    // this scoped to the world it receives so deliberate subsets are not
+    // silently filtered a second time.
+    final candidates = world.lessons;
     final done = activeProgress.completedWithLegacy;
-    final unfinished = world.lessons.where(
+    final unfinished = candidates.where(
       (lesson) => !done.contains(lesson.id),
     );
     if (unfinished.isNotEmpty) return unfinished.first;
     // Adaptive review: replay a varied item after mastery.
-    final index =
-        (activeProgress.attempts[world.id] ?? 0) % world.lessons.length;
-    return world.lessons[index];
+    final index = (activeProgress.attempts[world.id] ?? 0) % candidates.length;
+    return candidates[index];
   }
 
   String get adaptiveMessage {

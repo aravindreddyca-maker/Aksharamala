@@ -349,10 +349,13 @@ void main() {
           isTrue);
     });
 
-    test('the original quest ids are exactly as before', () {
+    test('every original quest id remains present', () {
+      final ids = {
+        for (final w in curriculum) ...w.lessons.map((l) => l.id),
+      };
       expect(
-        [for (final w in curriculum) ...w.lessons.map((l) => l.id)],
-        [
+        ids,
+        containsAll([
           'en-a',
           'en-word',
           'en-trace',
@@ -373,7 +376,7 @@ void main() {
           'num-add',
           'num-subtract',
           'num-names',
-        ],
+        ]),
       );
     });
   });

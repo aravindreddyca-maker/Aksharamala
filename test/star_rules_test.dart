@@ -138,9 +138,17 @@ void main() {
       expect(c.activeProgress.completedLessons, {'en-a', 'en-word'});
       // The two finished quests were paid under the old rules: no more.
       expect(await play(c, correct: true), 0);
-      expect(await play(c, correct: true, l: other), 0);
+      expect(
+          await play(c,
+              correct: true,
+              l: world.lessons.firstWhere((l) => l.id == 'en-word')),
+          0);
       // An unfinished quest still pays in full.
-      expect(await play(c, correct: true, l: world.lessons[2]), 3);
+      expect(
+          await play(c,
+              correct: true,
+              l: world.lessons.firstWhere((l) => l.id == 'en-trace')),
+          3);
       expect(c.activeProfile!.stars, 12);
     });
 

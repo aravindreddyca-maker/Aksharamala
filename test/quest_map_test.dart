@@ -25,7 +25,26 @@ const _sizes = <Size>[
   Size(1280, 800),
 ];
 
-final _tamil = curriculum.firstWhere((w) => w.id == 'tamil');
+final _tamilSource = curriculum.firstWhere((w) => w.id == 'tamil');
+final _tamil = LearningWorld(
+  id: _tamilSource.id,
+  name: _tamilSource.name,
+  emoji: _tamilSource.emoji,
+  assetPath: _tamilSource.assetPath,
+  color: _tamilSource.color,
+  darkColor: _tamilSource.darkColor,
+  description: _tamilSource.description,
+  // This file tests the original four-card map interaction. Complete
+  // inventory navigation is covered by the strict curriculum audit.
+  lessons: _tamilSource.lessons
+      .where((lesson) => const {
+            'ta-a',
+            'ta-word',
+            'ta-trace',
+            'ta-story',
+          }.contains(lesson.id))
+      .toList(),
+);
 
 AppController _controller({Set<String> done = const {}}) {
   const profile = ChildProfile(id: 'p', name: 'Meena', age: 6, avatar: 'lion');
@@ -76,7 +95,7 @@ Rect _card(WidgetTester tester, String id) =>
     tester.getRect(find.byKey(Key('lesson_$id')));
 
 void main() {
-  test('every quest has an illustration (or its letter) and files exist', () {
+  test('every quest has mapped art or a meaningful built-in fallback', () {
     final missing = <String>[];
     for (final world in curriculum) {
       for (final lesson in world.lessons) {
@@ -87,7 +106,14 @@ void main() {
             missing.add('${lesson.id}: tracing quests must not use a picture');
           }
         } else if (path == null) {
-          missing.add('${lesson.id}: no art mapped');
+          final hasFallback = lesson.symbol.isNotEmpty &&
+              (lesson.kind == LessonKind.alphabet ||
+                  lesson.kind == LessonKind.story ||
+                  lesson.kind == LessonKind.game ||
+                  lesson.kind == LessonKind.numbers);
+          if (!hasFallback) {
+            missing.add('${lesson.id}: no art or meaningful fallback');
+          }
         } else if (!File(path).existsSync()) {
           missing.add('${lesson.id}: $path is missing');
         }

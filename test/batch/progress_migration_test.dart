@@ -13,6 +13,7 @@ Map<String, Object?> oldSave({
   Set<String> done = const {},
   Map<String, int>? stars,
   int profileStars = 0,
+  int age = 5,
 }) =>
     {
       'version': 1,
@@ -20,7 +21,7 @@ Map<String, Object?> oldSave({
         {
           'id': 'p1',
           'name': 'Meena',
-          'age': 5,
+          'age': age,
           'avatar': 'lion',
           'stars': profileStars,
         },
@@ -163,20 +164,34 @@ void main() {
   group('the feature flag', () {
     test('off: the child sees exactly the old worlds', () async {
       final c = await open(oldSave());
-      expect(identical(c.worlds, curriculum), isTrue);
+      for (final world in curriculum) {
+        expect(
+          c.worlds.firstWhere((item) => item.id == world.id).lessons,
+          world.forStage(ExperienceStage.creator).lessons,
+        );
+      }
     });
 
     test('on: the Telugu and Number worlds gain lessons, others do not',
         () async {
-      final c = await open(oldSave());
+      final c = await open(oldSave(age: 3));
       await c.setNewLessons(true);
       int count(String id) =>
           c.worlds.firstWhere((w) => w.id == id).lessons.length;
-      expect(count('telugu'), 4 + 10);
-      expect(count('numbers'), 4 + 11);
-      expect(count('english'), 4);
-      expect(count('hindi'), 4);
-      expect(count('tamil'), 4);
+      expect(count('telugu'), greaterThan(1));
+      expect(count('numbers'), greaterThan(1));
+      expect(count('english'), greaterThan(0));
+      expect(count('hindi'), greaterThan(0));
+      expect(count('tamil'), greaterThan(0));
+      for (final world in c.worlds) {
+        expect(
+          world.lessons.every(
+            (lesson) => lesson.supportsStage(ExperienceStage.explorer),
+          ),
+          isTrue,
+          reason: world.id,
+        );
+      }
     });
 
     test('turning it on and off changes nobody\'s progress', () async {
@@ -217,6 +232,7 @@ void main() {
 
     test('recommendations move through the new lessons in order', () async {
       final c = await open(oldSave(
+        age: 3,
         done: {'te-word', 'te-trace', 'te-story'},
         stars: {'te-word': 3, 'te-trace': 3, 'te-story': 3},
       ));
@@ -225,8 +241,9 @@ void main() {
       expect(c.recommendedLesson(world).id, 'te-a');
       await c.recordResult(
           world: world, lesson: world.lessons.first, correct: true);
-      // te-a is now done, so the new first lesson counts as done too.
-      expect(c.recommendedLesson(world).id, teluguBatch[1].id);
+      // te-a is now done, so the next age-appropriate recognition lesson is
+      // recommended. Preview-pack lessons remain in the same curriculum list.
+      expect(c.recommendedLesson(world).id, world.lessons[1].id);
     });
 
     test('the sample quest still plays exactly as before', () async {

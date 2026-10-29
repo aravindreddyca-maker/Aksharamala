@@ -224,7 +224,11 @@ void main() {
       final world = _world('tamil');
       for (final size in _sizes) {
         for (final scale in [1.0, 1.3]) {
-          for (final lesson in world.lessons.take(2)) {
+          // This is the picture-tile touch-target regression. Text-only
+          // recognition quests use the separately tested compact choice UI.
+          for (final lesson in world.lessons
+              .where((lesson) => lesson.pictures.isNotEmpty)
+              .take(2)) {
             await _open(
               tester,
               world,

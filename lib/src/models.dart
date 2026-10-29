@@ -75,6 +75,8 @@ class ChildProfile {
 
 enum LessonKind { alphabet, words, numbers, story, tracing, game }
 
+enum LessonDifficulty { foundation, beginner, intermediate, advanced }
+
 class Lesson {
   const Lesson({
     required this.id,
@@ -87,6 +89,15 @@ class Lesson {
     required this.challenge,
     required this.options,
     required this.answer,
+    this.ageBands = const {
+      ExperienceStage.explorer,
+      ExperienceStage.creator,
+      ExperienceStage.scholar,
+      ExperienceStage.champion,
+    },
+    this.difficultyLevel = LessonDifficulty.foundation,
+    this.learningObjective = 'Complete the lesson activity.',
+    this.prerequisites = const [],
     this.story = const [],
     this.pictures = const {},
     this.cover,
@@ -102,7 +113,13 @@ class Lesson {
   final String challenge;
   final List<String> options;
   final String answer;
+  final Set<ExperienceStage> ageBands;
+  final LessonDifficulty difficultyLevel;
+  final String learningObjective;
+  final List<String> prerequisites;
   final List<String> story;
+
+  bool supportsStage(ExperienceStage stage) => ageBands.contains(stage);
 
   /// Optional bundled picture per answer option. When present the quiz shows
   /// big picture answers (the word is written by the app, never baked in).
@@ -132,6 +149,18 @@ class LearningWorld {
   final Color darkColor;
   final String description;
   final List<Lesson> lessons;
+
+  LearningWorld forStage(ExperienceStage stage) => LearningWorld(
+        id: id,
+        name: name,
+        emoji: emoji,
+        assetPath: assetPath,
+        color: color,
+        darkColor: darkColor,
+        description: description,
+        lessons:
+            lessons.where((lesson) => lesson.supportsStage(stage)).toList(),
+      );
 
   /// Gradient stops for cards that carry white text.
   /// Guaranteed contrast colors used by the artwork scrim behind card copy.

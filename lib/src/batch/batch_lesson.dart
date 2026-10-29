@@ -100,13 +100,16 @@ class BatchLesson extends Lesson {
     required super.locale,
     required this.steps,
     required this.sourceRecords,
-    this.prerequisites = const [],
+    super.prerequisites = const [],
     this.ageBand = '3-4',
   }) : super(
           speech: steps.first.speech,
           challenge: steps.firstWhere((s) => s.kind.isQuestion).prompt,
           options: const [],
           answer: '',
+          ageBands: {_stageForAgeBand(ageBand)},
+          difficultyLevel: LessonDifficulty.foundation,
+          learningObjective: 'Complete the guided ${kind.name} sequence.',
         );
 
   final List<BatchStep> steps;
@@ -114,11 +117,16 @@ class BatchLesson extends Lesson {
   /// Every pack record this lesson draws on; each must exist in the pack.
   final List<String> sourceRecords;
 
-  /// Lessons to finish first (ids of other batch lessons).
-  final List<String> prerequisites;
-
   final String ageBand;
 
   List<BatchStep> get questions =>
       steps.where((s) => s.kind.isQuestion).toList();
 }
+
+ExperienceStage _stageForAgeBand(String ageBand) => switch (ageBand) {
+      '3-4' => ExperienceStage.explorer,
+      '5-6' => ExperienceStage.creator,
+      '7-9' => ExperienceStage.scholar,
+      '10-12' => ExperienceStage.champion,
+      _ => throw ArgumentError.value(ageBand, 'ageBand'),
+    };

@@ -76,10 +76,13 @@ Future<void> _open(
 
 void main() {
   test('the quizzes under test are the text-only ones', () {
+    final ids = _checkQuizzes.map((r) => r.lesson.id).toSet();
     expect(
-      _checkQuizzes.map((r) => r.lesson.id).toSet(),
-      {'en-word', 'hi-word', 'te-story', 'ta-story', 'num-names'},
+      ids,
+      containsAll({'en-word', 'hi-word', 'te-story', 'ta-story', 'num-names'}),
     );
+    expect(ids.length, greaterThan(5),
+        reason: 'expanded recognition quizzes must also be layout-tested');
   });
 
   for (final size in _sizes) {
