@@ -272,6 +272,7 @@ void main() {
           expect(e.value.trim(), isNotEmpty, reason: '$locale ${e.key}');
           expect(e.value, isNot(contains(r'$')), reason: '$locale ${e.key}');
         }
+        expect(t.backToMap, 'Back to map', reason: '$locale back button');
         expect(all['earned3'], contains('3'), reason: locale);
         expect(all['earned2'], contains('2'), reason: locale);
         expect(all['earned1'], contains('1'), reason: locale);
@@ -294,6 +295,8 @@ void main() {
             _ => RegExp('[ऀ-ॿ]'),
           };
           for (final e in all.entries) {
+            // "Back to map" is English in every language, on purpose.
+            if (e.key == 'back') continue;
             expect(
               script.hasMatch(e.value),
               isTrue,
@@ -348,9 +351,11 @@ void main() {
                   text.message(correct: correct, gained: correct ? 3 : 1)),
               findsOneWidget,
             );
+            // The play button follows the quest's language; the back button is
+            // English everywhere.
+            expect(find.text('Back to map'), findsOneWidget);
             if (entry.key != 'english') {
               expect(find.text('Play again'), findsNothing);
-              expect(find.text('Back to map'), findsNothing);
             }
             // Buttons are on screen and big enough.
             for (final key in ['result_again', 'result_back']) {

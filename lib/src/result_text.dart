@@ -2,7 +2,9 @@
 ///
 /// English quests (and the Number Galaxy maths quests) use English; Tamil,
 /// Telugu and Hindi quests use their own language so a child reading that
-/// script is not suddenly pushed into English.
+/// script is not suddenly pushed into English. The exception is the "Back to
+/// map" button, which is English everywhere (it is for navigation, and a short
+/// familiar label is easier to find than a long translated one).
 ///
 /// NOTE FOR REVIEW: the Tamil, Telugu and Hindi sentences below were written
 /// for this app, not taken from the curriculum. They are deliberately short and
@@ -31,7 +33,6 @@ class ResultText {
     required this.courage,
     required this.tryAgain,
     required this.playAgain,
-    required this.backToMap,
   });
 
   factory ResultText.forLocale(String locale) =>
@@ -55,7 +56,9 @@ class ResultText {
   final String tryAgain;
 
   final String playAgain;
-  final String backToMap;
+
+  /// English in every language, by design (see the note at the top).
+  String get backToMap => 'Back to map';
 
   /// The sentence for a result. [gained] is what was really paid.
   String message({required bool correct, required int gained}) {
@@ -77,7 +80,6 @@ final _byLanguage = <QuestLanguage, ResultText>{
     courage: 'You earned a courage star. Try the quest again to master it!',
     tryAgain: 'Not quite. Look at the pictures and try again!',
     playAgain: 'Play again',
-    backToMap: 'Back to map',
   ),
   QuestLanguage.tamil: ResultText._(
     language: QuestLanguage.tamil,
@@ -90,7 +92,6 @@ final _byLanguage = <QuestLanguage, ResultText>{
         'உங்களுக்கு ஒரு தைரிய நட்சத்திரம் கிடைத்தது. மீண்டும் விளையாடி இன்னும் நன்றாகச் செய்யுங்கள்!',
     tryAgain: 'சரியில்லை. படங்களைப் பார்த்து மீண்டும் முயற்சி செய்யுங்கள்!',
     playAgain: 'மீண்டும் விளையாடு',
-    backToMap: 'வரைபடத்திற்குத் திரும்பு',
   ),
   QuestLanguage.telugu: ResultText._(
     language: QuestLanguage.telugu,
@@ -101,7 +102,6 @@ final _byLanguage = <QuestLanguage, ResultText>{
     courage: 'మీకు ఒక ధైర్య నక్షత్రం వచ్చింది. మళ్లీ ఆడి మరింత బాగా చేయండి!',
     tryAgain: 'సరిగ్గా లేదు. బొమ్మలను చూసి మళ్లీ ప్రయత్నించండి!',
     playAgain: 'మళ్లీ ఆడండి',
-    backToMap: 'మ్యాప్‌కు తిరిగి వెళ్లండి',
   ),
   QuestLanguage.hindi: ResultText._(
     language: QuestLanguage.hindi,
@@ -112,6 +112,5 @@ final _byLanguage = <QuestLanguage, ResultText>{
     courage: 'आपको एक हिम्मत का सितारा मिला। इसे फिर से खेलकर और अच्छा करें!',
     tryAgain: 'ठीक नहीं। तस्वीरें देखिए और फिर कोशिश कीजिए!',
     playAgain: 'फिर खेलें',
-    backToMap: 'नक्शे पर वापस',
   ),
 };
