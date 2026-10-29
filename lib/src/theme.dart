@@ -20,6 +20,33 @@ abstract final class GameTokens {
   ];
 }
 
+/// The Noto family that carries [text]'s script, or null for Latin-only or
+/// mixed text (which keeps the default font so English letters stay uniform).
+String? scriptFamilyFor(String text) {
+  if (RegExp('[A-Za-z]').hasMatch(text)) return null;
+  for (final rune in text.runes) {
+    if (rune >= 0x0B80 && rune <= 0x0BFF) return 'Noto Sans Tamil';
+    if (rune >= 0x0C00 && rune <= 0x0C7F) return 'Noto Sans Telugu';
+    if (rune >= 0x0900 && rune <= 0x097F) return 'Noto Sans Devanagari';
+  }
+  return null;
+}
+
+/// [base] with the right font for Indic text, so every Tamil, Telugu or Hindi
+/// string uses one font throughout (consistent vowel signs and conjuncts).
+/// These scripts have tall marks above and below the line, so the line height
+/// is raised to stop them being clipped.
+TextStyle scriptStyle(String text, TextStyle base) {
+  final family = scriptFamilyFor(text);
+  if (family == null) return base;
+  return base.copyWith(
+    fontFamily: family,
+    fontFamilyFallback: GameTokens.multilingualFallback,
+    height: (base.height ?? 1) < 1.3 ? 1.3 : base.height,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+}
+
 ThemeData buildTheme() {
   final scheme = ColorScheme.fromSeed(
     seedColor: const Color(0xFF6657D9),
