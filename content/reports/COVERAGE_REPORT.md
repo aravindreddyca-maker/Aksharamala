@@ -25,15 +25,15 @@ Only the first batch is imported, behind the parent switch "Try the new lessons"
 | Lesson | Module | Picture missing for | Stroke template | Stroke order verified | Audio recorded | Native review |
 |---|---|---|---|---|---|---|
 | telugu-recognise-001 (అ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
-| telugu-recognise-002 (ఆ అక్షరం) | telugu | ఆవు | no (font outline only) | no | no | no |
+| telugu-recognise-002 (ఆ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
 | telugu-recognise-003 (ఇ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
-| telugu-recognise-004 (ఈ అక్షరం) | telugu | ఈగ | no (font outline only) | no | no | no |
-| telugu-recognise-005 (ఉ అక్షరం) | telugu | ఉడుత | no (font outline only) | no | no | no |
-| telugu-recognise-006 (ఊ అక్షరం) | telugu | ఊయల | no (font outline only) | no | no | no |
+| telugu-recognise-004 (ఈ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
+| telugu-recognise-005 (ఉ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
+| telugu-recognise-006 (ఊ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
 | telugu-recognise-008 (ఎ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
 | telugu-recognise-009 (ఏ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
-| telugu-recognise-010 (ఐ అక్షరం) | telugu | ఐదు | no (font outline only) | no | no | no |
-| telugu-recognise-011 (ఒ అక్షరం) | telugu | ఒంటె | no (font outline only) | no | no | no |
+| telugu-recognise-010 (ఐ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
+| telugu-recognise-011 (ఒ అక్షరం) | telugu | — | no (font outline only) | no | no | no |
 | numbers-count-000 (Number 0) | numbers | — | yes | no | no | no |
 | numbers-count-001 (Number 1) | numbers | — | yes | no | no | no |
 | numbers-count-002 (Number 2) | numbers | — | yes | no | no | no |

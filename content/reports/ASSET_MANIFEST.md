@@ -4,7 +4,7 @@ Generated from the lessons in `lib/src/batch/`; regenerate with `flutter test --
 
 | What | Needed | Present | Missing |
 |---|---:|---:|---:|
-| Pictures (Telugu words) | 18 | 6 | 12 |
+| Pictures (Telugu words) | 18 | 12 | 6 |
 | Recorded audio lines | 97 | 0 | 97 |
 | Stroke templates (glyphs) | 21 | 11 | 10 |
 | Teacher-verified stroke orders | 21 | 0 | 21 |
@@ -17,14 +17,14 @@ Number Galaxy needs **no new pictures**: it uses the existing star art. Its Engl
 | Word | Meaning | Pack record | Used by | Suggested file | Status |
 |---|---|---|---|---|---|
 | అమ్మ | mother | telugu-vocab-001 | 1 lesson | `assets/images/quiz/te_amma.webp` | present |
-| ఆవు | cow | telugu-vocab-002 | 1 lesson | `assets/images/quiz/te_cow.webp` | missing |
+| ఆవు | cow | telugu-vocab-002 | 1 lesson | `assets/images/quiz/te_cow.webp` | present |
 | ఇల్లు | house | telugu-vocab-003 | 1 lesson | `assets/images/quiz/te_house.webp` | present |
-| ఈగ | fly | telugu-vocab-004 | 1 lesson | `assets/images/quiz/te_fly.webp` | missing |
-| ఉడుత | squirrel | telugu-vocab-005 | 2 lessons | `assets/images/quiz/te_squirrel.webp` | missing |
-| ఊయల | swing | telugu-vocab-006 | 2 lessons | `assets/images/quiz/te_swing.webp` | missing |
+| ఈగ | fly | telugu-vocab-004 | 1 lesson | `assets/images/quiz/te_fly.webp` | present |
+| ఉడుత | squirrel | telugu-vocab-005 | 2 lessons | `assets/images/quiz/te_squirrel.webp` | present |
+| ఊయల | swing | telugu-vocab-006 | 2 lessons | `assets/images/quiz/te_swing.webp` | present |
 | ఏనుగు | elephant | telugu-vocab-007 | 2 lessons | `assets/images/quiz/te_elephant.webp` | present |
-| ఐదు | five | telugu-vocab-008 | 2 lessons | `assets/images/quiz/te_five.webp` | missing |
-| ఒంటె | camel | telugu-vocab-009 | 2 lessons | `assets/images/quiz/te_camel.webp` | missing |
+| ఐదు | five | telugu-vocab-008 | 2 lessons | `assets/images/quiz/te_five.webp` | present |
+| ఒంటె | camel | telugu-vocab-009 | 2 lessons | `assets/images/quiz/te_camel.webp` | present |
 | ఓడ | boat | telugu-vocab-010 | 2 lessons | `assets/images/quiz/te_boat.webp` | missing |
 | కలం | pen | telugu-vocab-011 | 2 lessons | `assets/images/quiz/te_pen.webp` | present |
 | బడి | school | telugu-vocab-012 | 2 lessons | `assets/images/quiz/te_school.webp` | present |

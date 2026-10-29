@@ -18,8 +18,14 @@ import 'batch_lesson.dart';
 /// as text until its picture is added (listed in the asset manifest).
 const teluguWordPictures = <String, String>{
   'అమ్మ': 'assets/images/quiz/te_amma.webp',
+  'ఆవు': 'assets/images/quiz/te_cow.webp',
   'ఇల్లు': 'assets/images/quiz/te_house.webp',
+  'ఈగ': 'assets/images/quiz/te_fly.webp',
+  'ఉడుత': 'assets/images/quiz/te_squirrel.webp',
+  'ఊయల': 'assets/images/quiz/te_swing.webp',
   'ఏనుగు': 'assets/images/quiz/te_elephant.webp',
+  'ఐదు': 'assets/images/quiz/te_five.webp',
+  'ఒంటె': 'assets/images/quiz/te_camel.webp',
   'కలం': 'assets/images/quiz/te_pen.webp',
   'బడి': 'assets/images/quiz/te_school.webp',
   'పండు': 'assets/images/quiz/te_fruit.webp',
@@ -444,8 +450,14 @@ List<BatchLesson> get allBatchLessons => [...teluguBatch, ...numbersBatch];
 /// The lesson as the quest map shows it: card picture and label.
 const batchQuestArt = <String, String>{
   'telugu-recognise-001': 'assets/images/quiz/te_amma.webp',
+  'telugu-recognise-002': 'assets/images/quiz/te_cow.webp',
   'telugu-recognise-003': 'assets/images/quiz/te_house.webp',
+  'telugu-recognise-004': 'assets/images/quiz/te_fly.webp',
+  'telugu-recognise-005': 'assets/images/quiz/te_squirrel.webp',
+  'telugu-recognise-006': 'assets/images/quiz/te_swing.webp',
   'telugu-recognise-009': 'assets/images/quiz/te_elephant.webp',
+  'telugu-recognise-010': 'assets/images/quiz/te_five.webp',
+  'telugu-recognise-011': 'assets/images/quiz/te_camel.webp',
 };
 
 /// Worlds with the new lessons added after their existing quests. Existing
