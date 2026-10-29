@@ -29,6 +29,8 @@ class WritingPad extends StatefulWidget {
     this.mask,
     this.policy = const HandwritingPolicy(),
     this.locale = 'en-IN',
+    this.padKey = const Key('writing_pad'),
+    this.finish,
   });
 
   final String glyph;
@@ -42,6 +44,13 @@ class WritingPad extends StatefulWidget {
   final HandwritingPolicy policy;
   final String locale;
   final ValueChanged<WritingResult> onResult;
+
+  /// Key of the drawing surface (tests and the older tracing quests use it).
+  final Key padKey;
+
+  /// An extra button shown beside Clear and Check (the older tracing quests
+  /// finish with it, once a letter has been accepted).
+  final Widget? finish;
 
   @override
   State<WritingPad> createState() => _WritingPadState();
@@ -119,7 +128,7 @@ class _WritingPadState extends State<WritingPad> {
                     builder: (context, box) {
                       _size = Size(box.maxWidth, box.maxHeight);
                       return GestureDetector(
-                        key: const Key('writing_pad'),
+                        key: widget.padKey,
                         behavior: HitTestBehavior.opaque,
                         // Start the stroke at the finger's first touch, not
                         // where the drag was recognised a few pixels later,
@@ -202,6 +211,10 @@ class _WritingPadState extends State<WritingPad> {
                 label: const Text('Check'),
               ),
             ),
+            if (widget.finish != null) ...[
+              const SizedBox(width: 10),
+              Expanded(child: widget.finish!),
+            ],
           ],
         ),
       ],

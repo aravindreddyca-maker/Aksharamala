@@ -298,6 +298,39 @@ void main() {
     });
   });
 
+  group('writing messages in every language', () {
+    final hindi = RegExp(r'[\u0900-\u097F]');
+    final tamil = RegExp(r'[\u0B80-\u0BFF]');
+    List<String> all(BatchText t) => [
+          t.rightMessage,
+          t.tryAgainMessage,
+          t.goodWriting,
+          t.writeAgain,
+          t.strokeHint,
+          t.directionHint,
+          t.orderHint,
+          t.strokesHint,
+        ];
+
+    test('Hindi and Tamil use their own script and no Latin', () {
+      for (final s in all(BatchText.hindi)) {
+        expect(hindi.hasMatch(s), isTrue, reason: s);
+        expect(_latin.hasMatch(s), isFalse, reason: s);
+      }
+      for (final s in all(BatchText.tamil)) {
+        expect(tamil.hasMatch(s), isTrue, reason: s);
+        expect(_latin.hasMatch(s), isFalse, reason: s);
+      }
+    });
+
+    test('each locale gets its own messages', () {
+      expect(BatchText.forLocale('hi-IN'), same(BatchText.hindi));
+      expect(BatchText.forLocale('ta-IN'), same(BatchText.tamil));
+      expect(BatchText.forLocale('te-IN'), same(BatchText.telugu));
+      expect(BatchText.forLocale('en-US'), same(BatchText.english));
+    });
+  });
+
   group('existing curriculum is untouched', () {
     test('worldsWithBatch only appends, never changes or removes', () {
       final merged = worldsWithBatch(curriculum);

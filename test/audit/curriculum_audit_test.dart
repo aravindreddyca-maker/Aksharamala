@@ -759,7 +759,6 @@ void main() {
         }
         expect(accepted, isEmpty, reason: 'scribble accepted in: $accepted');
       },
-      skip: _known('AUD-006') != null,
     );
   });
 

@@ -228,8 +228,36 @@ class BatchText {
     strokesHint: 'Check how many strokes the number needs',
   );
 
-  static BatchText forLocale(String locale) =>
-      locale.startsWith('te') ? telugu : english;
+  /// Drafts for a native Hindi educator to approve.
+  static const hindi = BatchText(
+    rightMessage: 'शाबाश!',
+    tryAgainMessage: 'फिर से कोशिश करो',
+    goodWriting: 'बहुत अच्छा लिखा!',
+    writeAgain: 'फिर से कोशिश करो',
+    strokeHint: 'अक्षर के आकार पर चलो',
+    directionHint: 'हरे बिंदु से शुरू करो',
+    orderHint: 'क्रम से बनाओ',
+    strokesHint: 'रेखाओं की संख्या ठीक नहीं है',
+  );
+
+  /// Drafts for a native Tamil educator to approve.
+  static const tamil = BatchText(
+    rightMessage: 'சபாஷ்!',
+    tryAgainMessage: 'மீண்டும் முயற்சி செய்',
+    goodWriting: 'நன்றாக எழுதினாய்!',
+    writeAgain: 'மீண்டும் முயற்சி செய்',
+    strokeHint: 'எழுத்தின் வடிவத்தைப் பின்பற்று',
+    directionHint: 'பச்சைப் புள்ளியிலிருந்து தொடங்கு',
+    orderHint: 'வரிசைப்படி வரை',
+    strokesHint: 'கோடுகளின் எண்ணிக்கை சரியில்லை',
+  );
+
+  static BatchText forLocale(String locale) {
+    if (locale.startsWith('te')) return telugu;
+    if (locale.startsWith('hi')) return hindi;
+    if (locale.startsWith('ta')) return tamil;
+    return english;
+  }
 }
 
 // -- Telugu ---------------------------------------------------------------

@@ -4,11 +4,16 @@ import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter/material.dart';
 
 import '../app.dart';
+import '../batch/batch_content.dart' show BatchText;
+import '../batch/batch_lesson.dart' show WriteMode;
+import '../handwriting/glyph_mask.dart';
+import '../handwriting/glyph_mask_raster.dart';
 import '../models.dart';
 import '../result_text.dart';
 import '../services/speech_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/writing_pad.dart';
 
 /// What the result pop-up says, in the quest's language. [gained] is what the
 /// quest actually paid, which is 0 once a quest has already paid its stars, so
@@ -47,7 +52,9 @@ class _LessonScreenState extends State<LessonScreen> {
   bool _submitted = false;
   bool _speaking = false;
   int _storyPage = 0;
-  List<Offset?> _tracePoints = [];
+  bool _traceOk = false;
+  int _traceRound = 0;
+  GlyphMask? _glyphMask;
 
   /// The answers in a fresh random order, never the order just shown. Quests
   /// list the right answer first, so without this a child learns "tap the
@@ -118,13 +125,32 @@ class _LessonScreenState extends State<LessonScreen> {
           setState(() {
             _submitted = false;
             _selected = null;
-            _tracePoints = [];
+            _traceOk = false;
+            _traceRound++;
             // A new order each time, so the same slot is not the answer.
             _options = _shuffled(widget.lesson.options, avoid: _options);
           });
         },
       ),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loadMask();
+  }
+
+  /// The traced letter drawn from the font, used to check the child's shape.
+  void _loadMask() {
+    if (!_isTracing) return;
+    final glyph = widget.lesson.symbol;
+    _glyphMask = null;
+    rasteriseGlyph(glyph).then((m) {
+      if (mounted && widget.lesson.symbol == glyph) {
+        setState(() => _glyphMask = m);
+      }
+    });
   }
 
   @override
@@ -137,7 +163,9 @@ class _LessonScreenState extends State<LessonScreen> {
       _selected = null;
       _submitted = false;
       _storyPage = 0;
-      _tracePoints = [];
+      _traceOk = false;
+      _traceRound++;
+      _loadMask();
     }
   }
 
@@ -580,73 +608,52 @@ class _LessonScreenState extends State<LessonScreen> {
     return _buildQuestion(pinned: pinned);
   }
 
-  Widget _buildTracing() => Card(
-        child: Padding(
-          padding: const EdgeInsets.all(18),
-          child: Column(
-            children: [
-              Text(
-                widget.lesson.challenge,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.titleLarge,
+  /// Tracing: the shared handwriting engine checks the shape against the
+  /// letter's font outline, so a scribble cannot finish the quest. The quest
+  /// is finished by a letter that was really traced; mastery is a separate
+  /// matter (see HandwritingPolicy) and is not awarded here.
+  Widget _buildTracing() {
+    final lesson = widget.lesson;
+    final height = MediaQuery.sizeOf(context).height < 480 ? 255.0 : 320.0;
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          children: [
+            Text(
+              lesson.challenge,
+              textAlign: TextAlign.center,
+              style: scriptStyle(
+                lesson.challenge,
+                Theme.of(context).textTheme.titleLarge!,
               ),
-              const SizedBox(height: 14),
-              Container(
-                height: 260,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFFFFDF7),
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: widget.world.color, width: 2),
+            ),
+            const SizedBox(height: 10),
+            SizedBox(
+              height: height,
+              child: WritingPad(
+                key: ValueKey('trace_${lesson.id}_$_traceRound'),
+                padKey: const Key('trace_pad'),
+                glyph: lesson.symbol,
+                mode: WriteMode.guided,
+                text: BatchText.forLocale(lesson.locale),
+                color: widget.world.darkColor,
+                mask: _glyphMask,
+                locale: lesson.locale,
+                onResult: (r) => setState(() => _traceOk = r.shapeOk),
+                finish: FilledButton(
+                  key: const Key('finish_trace'),
+                  onPressed:
+                      _traceOk && !_submitted ? () => _finish(true) : null,
+                  child: const Text('I traced it!'),
                 ),
-                clipBehavior: Clip.antiAlias,
-                child: LayoutBuilder(
-                  builder: (context, constraints) => GestureDetector(
-                    key: const Key('trace_pad'),
-                    behavior: HitTestBehavior.opaque,
-                    onPanStart: (details) =>
-                        setState(() => _tracePoints.add(details.localPosition)),
-                    onPanUpdate: (details) =>
-                        setState(() => _tracePoints.add(details.localPosition)),
-                    onPanEnd: (_) => setState(() => _tracePoints.add(null)),
-                    child: CustomPaint(
-                      painter: _TracePainter(
-                        points: _tracePoints,
-                        guide: widget.lesson.symbol,
-                        color: widget.world.darkColor,
-                      ),
-                      size: Size.infinite,
-                    ),
-                  ),
-                ),
               ),
-              const SizedBox(height: 14),
-              Row(
-                children: [
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      onPressed: () => setState(() => _tracePoints = []),
-                      icon: const Icon(Icons.refresh_rounded),
-                      label: const Text('Clear'),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: FilledButton.icon(
-                      key: const Key('finish_trace'),
-                      onPressed: _tracePoints.whereType<Offset>().length < 12 ||
-                              _submitted
-                          ? null
-                          : () => _finish(true),
-                      icon: const Icon(Icons.check_rounded),
-                      label: const Text('I traced it!'),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-      );
+      ),
+    );
+  }
 }
 
 /// After a quest: the cheering or winking lion (its words are painted in the
@@ -903,51 +910,4 @@ class _AnswerTile extends StatelessWidget {
       ),
     );
   }
-}
-
-class _TracePainter extends CustomPainter {
-  const _TracePainter({
-    required this.points,
-    required this.guide,
-    required this.color,
-  });
-
-  final List<Offset?> points;
-  final String guide;
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final guidePainter = TextPainter(
-      text: TextSpan(
-        text: guide,
-        style: TextStyle(
-          fontSize: 240,
-          fontWeight: FontWeight.w900,
-          color: color.withValues(alpha: .13),
-        ),
-      ),
-      textDirection: TextDirection.ltr,
-    )..layout(maxWidth: size.width);
-    guidePainter.paint(
-      canvas,
-      Offset(
-        (size.width - guidePainter.width) / 2,
-        (size.height - guidePainter.height) / 2,
-      ),
-    );
-    final paint = Paint()
-      ..color = color
-      ..strokeWidth = 16
-      ..strokeCap = StrokeCap.round;
-    for (var i = 0; i < points.length - 1; i++) {
-      final a = points[i];
-      final b = points[i + 1];
-      if (a != null && b != null) canvas.drawLine(a, b, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant _TracePainter oldDelegate) =>
-      oldDelegate.points != points;
 }
