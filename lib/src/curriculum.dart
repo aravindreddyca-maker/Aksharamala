@@ -23,6 +23,11 @@ const curriculum = <LearningWorld>[
         challenge: 'Which word begins with A?',
         options: ['Apple', 'Ball', 'Cat'],
         answer: 'Apple',
+        pictures: {
+          'Apple': 'assets/images/quiz/apple.png',
+          'Ball': 'assets/images/quiz/ball.png',
+          'Cat': 'assets/images/quiz/cat.png',
+        },
       ),
       Lesson(
         id: 'en-word',
@@ -59,6 +64,12 @@ const curriculum = <LearningWorld>[
         challenge: 'What did Mina find?',
         options: ['A mango', 'A kite', 'A boat'],
         answer: 'A mango',
+        cover: 'assets/images/stories/mango.webp',
+        pictures: {
+          'A mango': 'assets/images/quiz/mango.png',
+          'A kite': 'assets/images/quiz/kite.png',
+          'A boat': 'assets/images/quiz/boat.png',
+        },
         story: [
           'Mina walked into the green forest.',
           'A parrot showed her a golden mango.',
@@ -87,6 +98,11 @@ const curriculum = <LearningWorld>[
         challenge: 'అ తో మొదలయ్యే పదం ఏది?',
         options: ['అమ్మ', 'ఇల్లు', 'ఏనుగు'],
         answer: 'అమ్మ',
+        pictures: {
+          'అమ్మ': 'assets/images/quiz/te_amma.webp',
+          'ఇల్లు': 'assets/images/quiz/te_house.webp',
+          'ఏనుగు': 'assets/images/quiz/te_elephant.webp',
+        },
       ),
       Lesson(
         id: 'te-word',
@@ -99,6 +115,11 @@ const curriculum = <LearningWorld>[
         challenge: 'చిత్రానికి సరైన పదం?',
         options: ['కలం', 'బడి', 'పండు'],
         answer: 'కలం',
+        pictures: {
+          'కలం': 'assets/images/quiz/te_pen.webp',
+          'బడి': 'assets/images/quiz/te_school.webp',
+          'పండు': 'assets/images/quiz/te_fruit.webp',
+        },
       ),
       Lesson(
         id: 'te-trace',
@@ -123,6 +144,7 @@ const curriculum = <LearningWorld>[
         challenge: 'చిలుక ఏమి చూసింది?',
         options: ['ఎర్ర పండు', 'నీలి బంతి', 'తెల్ల పువ్వు'],
         answer: 'ఎర్ర పండు',
+        cover: 'assets/images/stories/parrot.webp',
         story: [
           'చిన్ని చిలుక తోటకు వెళ్లింది.',
           'అక్కడ ఒక ఎర్ర పండు చూసింది.',
@@ -151,6 +173,11 @@ const curriculum = <LearningWorld>[
         challenge: 'अ से कौन सा शब्द शुरू होता है?',
         options: ['अनार', 'कमल', 'घर'],
         answer: 'अनार',
+        pictures: {
+          'अनार': 'assets/images/quiz/hi_pomegranate.webp',
+          'कमल': 'assets/images/quiz/hi_lotus.webp',
+          'घर': 'assets/images/quiz/hi_house.webp',
+        },
       ),
       Lesson(
         id: 'hi-word',
@@ -187,6 +214,12 @@ const curriculum = <LearningWorld>[
         challenge: 'पतंग का रंग क्या था?',
         options: ['नीला', 'लाल', 'हरा'],
         answer: 'नीला',
+        cover: 'assets/images/stories/kite.webp',
+        pictures: {
+          'नीला': 'assets/images/quiz/hi_kite_blue.webp',
+          'लाल': 'assets/images/quiz/hi_kite_red.webp',
+          'हरा': 'assets/images/quiz/hi_kite_green.webp',
+        },
         story: [
           'रवि घाटी में पतंग लेकर आया।',
           'नीली पतंग बहुत ऊपर उड़ी।',
@@ -215,6 +248,11 @@ const curriculum = <LearningWorld>[
         challenge: 'அ என்ற எழுத்தில் தொடங்கும் சொல் எது?',
         options: ['அம்மா', 'இலை', 'ஊஞ்சல்'],
         answer: 'அம்மா',
+        pictures: {
+          'அம்மா': 'assets/images/quiz/ta_mother.webp',
+          'இலை': 'assets/images/quiz/ta_leaf.webp',
+          'ஊஞ்சல்': 'assets/images/quiz/ta_swing.webp',
+        },
       ),
       Lesson(
         id: 'ta-word',
@@ -227,6 +265,11 @@ const curriculum = <LearningWorld>[
         challenge: 'பூவைக் குறிக்கும் சொல் எது?',
         options: ['மலர்', 'வீடு', 'கல்'],
         answer: 'மலர்',
+        pictures: {
+          'மலர்': 'assets/images/quiz/ta_flower.webp',
+          'வீடு': 'assets/images/quiz/ta_house.webp',
+          'கல்': 'assets/images/quiz/ta_stone.webp',
+        },
       ),
       Lesson(
         id: 'ta-trace',
@@ -251,6 +294,7 @@ const curriculum = <LearningWorld>[
         challenge: 'வண்ணத்துப்பூச்சி எங்கே வந்தது?',
         options: ['மலர்த் தோட்டம்', 'கடற்கரை', 'மலை'],
         answer: 'மலர்த் தோட்டம்',
+        cover: 'assets/images/stories/butterfly.webp',
         story: [
           'மீனா தோட்டத்தில் ஒரு விதையை நட்டாள்.',
           'அது அழகான மலராக வளர்ந்தது.',

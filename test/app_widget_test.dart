@@ -77,6 +77,10 @@ void main() {
     );
     await tester.pump();
     expect(find.byKey(const Key('speak_button')), findsOneWidget);
-    expect(find.byKey(const Key('check_answer')), findsOneWidget);
+    // "A is for Apple" is a picture quiz: tap a picture to answer, no Check.
+    expect(find.byKey(const Key('check_answer')), findsNothing);
+    for (final option in ['Apple', 'Ball', 'Cat']) {
+      expect(find.byKey(Key('answer_$option')), findsOneWidget);
+    }
   });
 }

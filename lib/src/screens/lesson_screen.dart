@@ -66,38 +66,23 @@ class _LessonScreenState extends State<LessonScreen> {
     await showDialog<void>(
       context: context,
       barrierDismissible: false,
-      builder: (context) => AlertDialog(
-        icon: Icon(
-          correct ? Icons.celebration_rounded : Icons.eco_rounded,
-          color: correct ? const Color(0xFFF2A900) : Colors.green,
-          size: 54,
-        ),
-        title: Text(correct ? 'Wonderful!' : 'Good try!'),
-        content: Text(
-          correct
-              ? 'You earned $gained stars and completed this quest.'
-              : 'You earned a courage star. Try the quest again to master it!',
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-              Navigator.pop(context);
-            },
-            child: const Text('Back to map'),
-          ),
-          FilledButton(
-            onPressed: () {
-              Navigator.pop(context);
-              setState(() {
-                _submitted = false;
-                _selected = null;
-                _tracePoints = [];
-              });
-            },
-            child: const Text('Play again'),
-          ),
-        ],
+      builder: (context) => _ResultDialog(
+        correct: correct,
+        message: correct
+            ? 'You earned $gained stars and completed this quest.'
+            : 'You earned a courage star. Try the quest again to master it!',
+        onBack: () {
+          Navigator.pop(context);
+          Navigator.pop(context);
+        },
+        onAgain: () {
+          Navigator.pop(context);
+          setState(() {
+            _submitted = false;
+            _selected = null;
+            _tracePoints = [];
+          });
+        },
       ),
     );
   }
@@ -307,9 +292,10 @@ class _LessonScreenState extends State<LessonScreen> {
         for (final option in lesson.options)
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
-            child: _MathTile(
+            child: _AnswerTile(
               key: Key('answer_$option'),
               label: option,
+              picture: lesson.pictures[option],
               height: tileHeight,
               state: !_submitted
                   ? _TileState.idle
@@ -336,18 +322,30 @@ class _LessonScreenState extends State<LessonScreen> {
           padding: const EdgeInsets.all(18),
           child: Column(
             children: [
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  lesson.symbol,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: lesson.symbol.length > 5 ? 48 : 78,
-                    fontWeight: FontWeight.w900,
-                    color: widget.world.darkColor,
+              if (lesson.cover != null)
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(18),
+                  child: Image.asset(
+                    lesson.cover!,
+                    fit: BoxFit.cover,
+                    cacheWidth: 640,
+                    semanticLabel: lesson.title,
+                    errorBuilder: (_, __, ___) => const SizedBox(height: 80),
+                  ),
+                )
+              else
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    lesson.symbol,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: lesson.symbol.length > 5 ? 48 : 78,
+                      fontWeight: FontWeight.w900,
+                      color: widget.world.darkColor,
+                    ),
                   ),
                 ),
-              ),
               const SizedBox(height: 8),
               Text(
                 lesson.subtitle,
@@ -372,7 +370,18 @@ class _LessonScreenState extends State<LessonScreen> {
         ),
       );
 
-  Widget _buildQuestion() => Card(
+  /// Picture quizzes answer on a tap (no Check button), like the math quests;
+  /// text-only quizzes keep select-then-check.
+  Widget _buildQuestion() => widget.lesson.pictures.isEmpty
+      ? _buildChoiceQuestion()
+      : Card(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(14, 10, 14, 2),
+            child: _mathAnswers(tileHeight: 72),
+          ),
+        );
+
+  Widget _buildChoiceQuestion() => Card(
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
@@ -541,18 +550,121 @@ class _LessonScreenState extends State<LessonScreen> {
       );
 }
 
+/// After a quest: the cheering or winking lion (its words are painted in the
+/// artwork, so they are announced through the image's label), what was earned,
+/// and the two ways on. Side by side in landscape, scroll-safe on short screens.
+class _ResultDialog extends StatelessWidget {
+  const _ResultDialog({
+    required this.correct,
+    required this.message,
+    required this.onBack,
+    required this.onAgain,
+  });
+
+  final bool correct;
+  final String message;
+  final VoidCallback onBack;
+  final VoidCallback onAgain;
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+    final imageHeight = (size.height * .62).clamp(150.0, 320.0);
+    return Dialog(
+      backgroundColor: Colors.white,
+      insetPadding: const EdgeInsets.all(16),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxWidth: 640,
+          maxHeight: size.height - 32,
+        ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Semantics(
+                image: true,
+                label: correct ? 'Wonderful!' : 'Good try!',
+                child: Image.asset(
+                  correct
+                      ? 'assets/images/feedback/wonderful.png'
+                      : 'assets/images/feedback/good_try.png',
+                  height: imageHeight,
+                  fit: BoxFit.contain,
+                  excludeFromSemantics: true,
+                  errorBuilder: (_, __, ___) => SizedBox(
+                    height: imageHeight,
+                    child: Center(
+                      child: Text(
+                        correct ? 'Wonderful!' : 'Good try!',
+                        style: const TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      message,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                            color: GameTokens.ink,
+                          ),
+                    ),
+                    const SizedBox(height: 16),
+                    FilledButton(
+                      key: const Key('result_again'),
+                      onPressed: onAgain,
+                      child: const Text('Play again'),
+                    ),
+                    const SizedBox(height: 8),
+                    OutlinedButton(
+                      key: const Key('result_back'),
+                      onPressed: onBack,
+                      style: OutlinedButton.styleFrom(
+                        minimumSize: const Size(
+                          GameTokens.minTouch,
+                          GameTokens.minTouch,
+                        ),
+                      ),
+                      child: const Text('Back to map'),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 enum _TileState { idle, correct, wrong }
 
-class _MathTile extends StatelessWidget {
-  const _MathTile({
+class _AnswerTile extends StatelessWidget {
+  const _AnswerTile({
     required this.label,
     required this.height,
     required this.state,
     required this.onTap,
+    this.picture,
     super.key,
   });
 
   final String label;
+
+  /// Bundled picture shown beside the word; null for number answers.
+  final String? picture;
   final double height;
   final _TileState state;
   final VoidCallback? onTap;
@@ -593,30 +705,70 @@ class _MathTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           child: SizedBox(
             height: height,
-            child: Center(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  if (icon != null) ...[
-                    Icon(icon, color: border, size: 30),
-                    const SizedBox(width: 10),
-                  ],
-                  Flexible(
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Text(
-                        label,
-                        style: const TextStyle(
-                          fontSize: 34,
-                          fontWeight: FontWeight.w900,
-                          color: GameTokens.ink,
+            child: picture == null
+                ? Center(
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (icon != null) ...[
+                          Icon(icon, color: border, size: 30),
+                          const SizedBox(width: 10),
+                        ],
+                        Flexible(
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                              label,
+                              style: const TextStyle(
+                                fontSize: 34,
+                                fontWeight: FontWeight.w900,
+                                color: GameTokens.ink,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
+                    ),
+                  )
+                : Padding(
+                    padding: const EdgeInsets.all(6),
+                    child: Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(14),
+                          child: Image.asset(
+                            picture!,
+                            width: height - 12,
+                            height: height - 12,
+                            fit: BoxFit.cover,
+                            cacheWidth: 240,
+                            excludeFromSemantics: true,
+                            errorBuilder: (_, __, ___) =>
+                                SizedBox(width: height - 12),
+                          ),
+                        ),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              label,
+                              style: const TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.w900,
+                                color: GameTokens.ink,
+                              ),
+                            ),
+                          ),
+                        ),
+                        if (icon != null) ...[
+                          const SizedBox(width: 8),
+                          Icon(icon, color: border, size: 30),
+                        ],
+                      ],
                     ),
                   ),
-                ],
-              ),
-            ),
           ),
         ),
       ),

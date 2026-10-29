@@ -24,4 +24,8 @@ flutter:
     - assets/images/rewards/
     - assets/images/avatars/
     - assets/images/backgrounds/
+    - assets/images/quiz/
+    - assets/images/feedback/
+    - assets/images/stories/
+    - assets/images/brand/
 

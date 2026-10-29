@@ -88,6 +88,8 @@ class Lesson {
     required this.options,
     required this.answer,
     this.story = const [],
+    this.pictures = const {},
+    this.cover,
   });
 
   final String id;
@@ -101,6 +103,13 @@ class Lesson {
   final List<String> options;
   final String answer;
   final List<String> story;
+
+  /// Optional bundled picture per answer option. When present the quiz shows
+  /// big picture answers (the word is written by the app, never baked in).
+  final Map<String, String> pictures;
+
+  /// Optional bundled scene shown in place of the lesson symbol (story covers).
+  final String? cover;
 }
 
 class LearningWorld {

@@ -134,9 +134,12 @@ class _SplashScreenState extends State<SplashScreen> {
                               curve: Curves.elasticOut,
                               builder: (_, scale, child) =>
                                   Transform.scale(scale: scale, child: child),
-                              child: _TitlePlate(compact: compact),
+                              child: _Logo(
+                                height: constraints.maxHeight *
+                                    (compact ? .40 : .38),
+                              ),
                             ),
-                            SizedBox(height: compact ? 10 : 22),
+                            SizedBox(height: compact ? 8 : 16),
                             _StartButton(
                               enabled: canContinue,
                               compact: compact,
@@ -157,66 +160,32 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-/// Same purple banner language as the home screen's greeting.
-class _TitlePlate extends StatelessWidget {
-  const _TitlePlate({required this.compact});
-  final bool compact;
+/// The Aksharamala logo, announced as the app's name.
+class _Logo extends StatelessWidget {
+  const _Logo({required this.height});
+  final double height;
 
   @override
-  Widget build(BuildContext context) => ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 560),
-        child: Container(
-          padding: EdgeInsets.symmetric(
-            horizontal: compact ? 22 : 36,
-            vertical: compact ? 8 : 16,
-          ),
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFF5D4DD4), Color(0xFF9A5DE2)],
+  Widget build(BuildContext context) => Semantics(
+        header: true,
+        label: 'Aksharamala',
+        child: Image.asset(
+          'assets/images/brand/logo.png',
+          height: height,
+          fit: BoxFit.contain,
+          excludeFromSemantics: true,
+          errorBuilder: (_, __, ___) => SizedBox(
+            height: height,
+            child: const FittedBox(
+              child: Text(
+                'Aksharamala',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                  shadows: [Shadow(color: Color(0x99000000), blurRadius: 8)],
+                ),
+              ),
             ),
-            borderRadius: BorderRadius.circular(compact ? 28 : 36),
-            border: Border.all(color: Colors.white, width: 3),
-            boxShadow: const [
-              BoxShadow(
-                color: Color(0x66000000),
-                blurRadius: 18,
-                offset: Offset(0, 8),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  'Aksharamala',
-                  maxLines: 1,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: compact ? 34 : 52,
-                    fontWeight: FontWeight.w900,
-                    height: 1.1,
-                    shadows: const [
-                      Shadow(color: Color(0x66000000), blurRadius: 6),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: compact ? 2 : 4),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  'Five worlds. One joyful learning adventure.',
-                  maxLines: 1,
-                  style: TextStyle(
-                    color: GameTokens.gold,
-                    fontSize: compact ? 14 : 19,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
-            ],
           ),
         ),
       );
