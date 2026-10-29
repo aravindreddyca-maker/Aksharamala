@@ -1,16 +1,39 @@
+import 'dart:math';
+
+import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter/material.dart';
 
 import '../app.dart';
 import '../models.dart';
+import '../result_text.dart';
 import '../services/speech_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 
+/// What the result pop-up says, in the quest's language. [gained] is what the
+/// quest actually paid, which is 0 once a quest has already paid its stars, so
+/// the words must not promise stars that were not given.
+String questResultMessage({
+  required bool correct,
+  required int gained,
+  String locale = 'en-US',
+}) =>
+    ResultText.forLocale(locale).message(correct: correct, gained: gained);
+
 class LessonScreen extends StatefulWidget {
-  const LessonScreen({required this.world, required this.lesson, super.key});
+  const LessonScreen({
+    required this.world,
+    required this.lesson,
+    super.key,
+    this.random,
+  });
 
   final LearningWorld world;
   final Lesson lesson;
+
+  /// Source of the answer shuffle. Tests pass a seeded one; the app uses its
+  /// own.
+  final Random? random;
 
   @override
   State<LessonScreen> createState() => _LessonScreenState();
@@ -18,11 +41,27 @@ class LessonScreen extends StatefulWidget {
 
 class _LessonScreenState extends State<LessonScreen> {
   final _speech = const SpeechService();
+  late final Random _random = widget.random ?? Random();
+  late List<String> _options = _shuffled(widget.lesson.options);
   String? _selected;
   bool _submitted = false;
   bool _speaking = false;
   int _storyPage = 0;
   List<Offset?> _tracePoints = [];
+
+  /// The answers in a fresh random order, never the order just shown. Quests
+  /// list the right answer first, so without this a child learns "tap the
+  /// first one", and after a mistake could win by ruling one out in place.
+  List<String> _shuffled(List<String> options, {List<String>? avoid}) {
+    final result = [...options];
+    if (result.length < 2) return result;
+    for (var attempt = 0; attempt < 8; attempt++) {
+      result.shuffle(_random);
+      if (avoid == null || !listEquals(result, avoid)) return result;
+    }
+    // Vanishingly unlikely; rotate so it still differs from the last order.
+    return [...result.skip(1), result.first];
+  }
 
   bool get _isTracing => widget.lesson.kind == LessonKind.tracing;
   bool get _isStory => widget.lesson.kind == LessonKind.story;
@@ -68,9 +107,8 @@ class _LessonScreenState extends State<LessonScreen> {
       barrierDismissible: false,
       builder: (context) => _ResultDialog(
         correct: correct,
-        message: correct
-            ? 'You earned $gained stars and completed this quest.'
-            : 'You earned a courage star. Try the quest again to master it!',
+        text: ResultText.forLocale(widget.lesson.locale),
+        gained: gained,
         onBack: () {
           Navigator.pop(context);
           Navigator.pop(context);
@@ -81,10 +119,26 @@ class _LessonScreenState extends State<LessonScreen> {
             _submitted = false;
             _selected = null;
             _tracePoints = [];
+            // A new order each time, so the same slot is not the answer.
+            _options = _shuffled(widget.lesson.options, avoid: _options);
           });
         },
       ),
     );
+  }
+
+  @override
+  void didUpdateWidget(covariant LessonScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // The same screen handed a different lesson must not keep the old
+    // lesson's answers or progress.
+    if (oldWidget.lesson.id != widget.lesson.id) {
+      _options = _shuffled(widget.lesson.options);
+      _selected = null;
+      _submitted = false;
+      _storyPage = 0;
+      _tracePoints = [];
+    }
   }
 
   @override
@@ -289,7 +343,7 @@ class _LessonScreenState extends State<LessonScreen> {
             ),
           ),
         ),
-        for (final option in lesson.options)
+        for (final option in _options)
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: _AnswerTile(
@@ -393,7 +447,7 @@ class _LessonScreenState extends State<LessonScreen> {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 18),
-              ...widget.lesson.options.map(
+              ..._options.map(
                 (option) => Padding(
                   padding: const EdgeInsets.only(bottom: 10),
                   child: ChoiceChip(
@@ -556,13 +610,15 @@ class _LessonScreenState extends State<LessonScreen> {
 class _ResultDialog extends StatelessWidget {
   const _ResultDialog({
     required this.correct,
-    required this.message,
+    required this.text,
+    required this.gained,
     required this.onBack,
     required this.onAgain,
   });
 
   final bool correct;
-  final String message;
+  final ResultText text;
+  final int gained;
   final VoidCallback onBack;
   final VoidCallback onAgain;
 
@@ -614,17 +670,34 @@ class _ResultDialog extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(
-                      message,
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            color: GameTokens.ink,
-                          ),
-                    ),
+                    Builder(builder: (context) {
+                      final message =
+                          text.message(correct: correct, gained: gained);
+                      return Text(
+                        message,
+                        style: scriptStyle(
+                          message,
+                          Theme.of(context).textTheme.titleMedium!.copyWith(
+                                color: GameTokens.ink,
+                              ),
+                        ),
+                      );
+                    }),
                     const SizedBox(height: 16),
                     FilledButton(
                       key: const Key('result_again'),
                       onPressed: onAgain,
-                      child: const Text('Play again'),
+                      child: Text(
+                        text.playAgain,
+                        textAlign: TextAlign.center,
+                        style: scriptStyle(
+                          text.playAgain,
+                          const TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
                     ),
                     const SizedBox(height: 8),
                     OutlinedButton(
@@ -636,7 +709,17 @@ class _ResultDialog extends StatelessWidget {
                           GameTokens.minTouch,
                         ),
                       ),
-                      child: const Text('Back to map'),
+                      child: Text(
+                        text.backToMap,
+                        textAlign: TextAlign.center,
+                        style: scriptStyle(
+                          text.backToMap,
+                          const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),

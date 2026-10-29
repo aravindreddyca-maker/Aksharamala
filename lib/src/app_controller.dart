@@ -99,16 +99,24 @@ class AppController extends ChangeNotifier {
     if (curriculum.every(
       (item) => item.lessons.any((l) => completed.contains(l.id)),
     )) {
-      badges.add('four-world-hero');
+      badges.add(ProgressRecord.allWorldHeroBadge);
     }
+    // Stars: finishing a quest pays 3, a mistake pays 1, but a quest never pays
+    // more than 3 in total. So a mistake then a right answer still adds up to
+    // 3, and replaying a finished quest is practice only. Without a cap a
+    // child could tap "Play again" for endless stars.
+    final paid = old.starsPaidBy(lesson.id);
+    final wanted = correct ? 3 : 1;
+    final room = ProgressRecord.starsPerQuest - paid;
+    final gained = room <= 0 ? 0 : (wanted < room ? wanted : room);
     progress[profile.id] = ProgressRecord(
       completedLessons: completed,
       attempts: attempts,
       correct: correctMap,
       lastPlayed: {...old.lastPlayed, world.id: lesson.id},
       earnedBadges: badges,
+      questStars: {...old.questStars, lesson.id: paid + gained},
     );
-    final gained = correct ? 3 : 1;
     final updated = profile.copyWith(stars: profile.stars + gained);
     profiles =
         profiles.map((item) => item.id == profile.id ? updated : item).toList();

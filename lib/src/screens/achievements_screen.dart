@@ -27,7 +27,7 @@ class AchievementsScreen extends StatelessWidget {
       detail: 'Complete eight quests',
     ),
     (
-      id: 'four-world-hero',
+      id: 'all-world-hero',
       icon: Icons.emoji_events_rounded,
       title: 'All-World Hero',
       detail: 'Complete a quest in every world',

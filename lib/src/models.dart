@@ -146,6 +146,7 @@ class ProgressRecord {
     required this.correct,
     required this.lastPlayed,
     required this.earnedBadges,
+    this.questStars = const {},
   });
 
   factory ProgressRecord.empty() => const ProgressRecord(
@@ -156,11 +157,33 @@ class ProgressRecord {
         earnedBadges: {},
       );
 
+  /// Most stars one quest can ever pay: the reward for finishing it.
+  static const starsPerQuest = 3;
+
+  /// The badge for a quest in every world is 'all-world-hero'. Earlier saves
+  /// stored it as 'four-world-hero' (from when there were four worlds); those
+  /// load as the new id so nobody loses a badge they earned.
+  static const allWorldHeroBadge = 'all-world-hero';
+  static const legacyBadgeIds = <String, String>{
+    'four-world-hero': allWorldHeroBadge,
+  };
+
   final Set<String> completedLessons;
   final Map<String, int> attempts;
   final Map<String, int> correct;
   final Map<String, String> lastPlayed;
   final Set<String> earnedBadges;
+
+  /// Stars already paid out by each quest (lesson id -> stars, up to
+  /// [starsPerQuest]). Saves made before this field existed have none, so a
+  /// finished quest from such a save counts as fully paid (see [starsPaidBy]).
+  final Map<String, int> questStars;
+
+  /// Stars [lessonId] has already paid. A finished quest with no record is
+  /// treated as fully paid, so old saves cannot be replayed for more stars.
+  int starsPaidBy(String lessonId) =>
+      questStars[lessonId] ??
+      (completedLessons.contains(lessonId) ? starsPerQuest : 0);
 
   Map<String, Object> toJson() => {
         'completedLessons': completedLessons.toList(),
@@ -168,6 +191,7 @@ class ProgressRecord {
         'correct': correct,
         'lastPlayed': lastPlayed,
         'earnedBadges': earnedBadges.toList(),
+        'questStars': questStars,
       };
 
   factory ProgressRecord.fromJson(Map<String, dynamic> json) => ProgressRecord(
@@ -179,7 +203,12 @@ class ProgressRecord {
         lastPlayed: Map<String, String>.from(
           json['lastPlayed'] as Map? ?? const {},
         ),
-        earnedBadges:
-            Set<String>.from(json['earnedBadges'] as List? ?? const []),
+        earnedBadges: {
+          for (final id in (json['earnedBadges'] as List? ?? const []))
+            legacyBadgeIds[id as String] ?? id,
+        },
+        questStars: Map<String, int>.from(
+          json['questStars'] as Map? ?? const {},
+        ),
       );
 }

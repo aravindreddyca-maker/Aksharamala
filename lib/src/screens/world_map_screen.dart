@@ -266,9 +266,21 @@ class _QuestTrailState extends State<_QuestTrail> {
   double get _offset => _ready ? _controller.offset : 0;
   double get _max => _ready ? _controller.position.maxScrollExtent : 0;
 
-  void _scrollBy(int cards) {
+  /// Moves to the next (or previous) whole-card stop, never to a position that
+  /// leaves a card half cut off. The last stop is the true end of the list.
+  void _scrollBy(int direction) {
     if (!_ready) return;
-    final target = (_offset + cards * _step).clamp(0.0, _max);
+    const slack = 2.0;
+    final stops = <double>[
+      for (var i = 0; i * _step < _max - slack; i++) i * _step,
+      _max,
+    ];
+    final double target;
+    if (direction > 0) {
+      target = stops.firstWhere((s) => s > _offset + slack, orElse: () => _max);
+    } else {
+      target = stops.lastWhere((s) => s < _offset - slack, orElse: () => 0);
+    }
     _controller.animateTo(
       target,
       duration: const Duration(milliseconds: 320),
@@ -294,7 +306,10 @@ class _QuestTrailState extends State<_QuestTrail> {
       builder: (context, constraints) {
         const dotsHeight = 34.0;
         const gap = 14.0;
-        final areaHeight = constraints.maxHeight - dotsHeight - 8;
+        // Room under the dots (on top of any system inset the SafeArea took)
+        // and between the cards and the dots, so nothing hugs the edge.
+        final bottomGap = constraints.maxHeight < 390 ? 12.0 : 18.0;
+        final areaHeight = constraints.maxHeight - dotsHeight - bottomGap - 14;
         final cardHeight = areaHeight.clamp(120.0, 440.0);
         final horizontal = cardHeight < 270;
         final cardWidth =
@@ -416,7 +431,7 @@ class _QuestTrailState extends State<_QuestTrail> {
                 color: widget.world.color,
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: bottomGap),
           ],
         );
       },
@@ -537,7 +552,11 @@ class _QuestCard extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          if (art != null)
+          // Tracing quests teach one letter: show that letter, big, instead of
+          // a picture of something else.
+          if (lesson.kind == LessonKind.tracing)
+            _GlyphArt(world: world, glyph: lesson.symbol)
+          else if (art != null)
             Image.asset(
               art,
               fit: BoxFit.cover,
@@ -558,6 +577,12 @@ class _QuestCard extends StatelessWidget {
           if (complete) const Positioned(top: 6, right: 6, child: _DoneBadge()),
           if (recommended && !horizontal)
             const Positioned(left: 6, bottom: 6, child: _NextChip()),
+          if (questLabel[lesson.id] != null)
+            Positioned(
+              right: 6,
+              bottom: 6,
+              child: _LabelChip(text: questLabel[lesson.id]!, world: world),
+            ),
         ],
       ),
     );
@@ -706,6 +731,119 @@ class _ArtFallback extends StatelessWidget {
         color: world.color.withValues(alpha: .25),
         child: Center(
           child: Icon(lessonIcon(kind), size: 48, color: world.darkColor),
+        ),
+      );
+}
+
+/// The letter being traced, large, inside a dashed guide ring.
+class _GlyphArt extends StatelessWidget {
+  const _GlyphArt({required this.world, required this.glyph});
+  final LearningWorld world;
+  final String glyph;
+
+  @override
+  Widget build(BuildContext context) => DecoratedBox(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color.lerp(Colors.white, world.color, .25)!,
+              Color.lerp(Colors.white, world.color, .55)!,
+            ],
+          ),
+        ),
+        child: CustomPaint(
+          painter: _DashedRingPainter(color: world.darkColor),
+          child: Padding(
+            padding: const EdgeInsets.all(22),
+            child: Center(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  glyph,
+                  maxLines: 1,
+                  style: scriptStyle(
+                    glyph,
+                    TextStyle(
+                      color: world.darkColor,
+                      fontSize: 120,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+}
+
+class _DashedRingPainter extends CustomPainter {
+  const _DashedRingPainter({required this.color});
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final radius = (size.shortestSide / 2) - 12;
+    if (radius <= 0) return;
+    final paint = Paint()
+      ..color = color.withValues(alpha: .55)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3
+      ..strokeCap = StrokeCap.round;
+    final centre = size.center(Offset.zero);
+    const dashes = 28;
+    for (var i = 0; i < dashes; i++) {
+      final start = i * 2 * 3.141592653589793 / dashes;
+      canvas.drawArc(
+        Rect.fromCircle(center: centre, radius: radius),
+        start,
+        2 * 3.141592653589793 / dashes * .5,
+        false,
+        paint,
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _DashedRingPainter oldDelegate) =>
+      oldDelegate.color != color;
+}
+
+/// The letter or word a quest teaches, on its picture.
+class _LabelChip extends StatelessWidget {
+  const _LabelChip({required this.text, required this.world});
+  final String text;
+  final LearningWorld world;
+
+  @override
+  Widget build(BuildContext context) => ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 110),
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: world.color, width: 2),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                text,
+                maxLines: 1,
+                style: scriptStyle(
+                  text,
+                  TextStyle(
+                    color: world.darkColor,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
 }

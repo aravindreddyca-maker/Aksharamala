@@ -76,12 +76,17 @@ Rect _card(WidgetTester tester, String id) =>
     tester.getRect(find.byKey(Key('lesson_$id')));
 
 void main() {
-  test('every quest has an illustration and every file exists', () {
+  test('every quest has an illustration (or its letter) and files exist', () {
     final missing = <String>[];
     for (final world in curriculum) {
       for (final lesson in world.lessons) {
         final path = questArt[lesson.id];
-        if (path == null) {
+        if (lesson.kind == LessonKind.tracing) {
+          // Tracing teaches one letter, so the card draws that letter.
+          if (path != null) {
+            missing.add('${lesson.id}: tracing quests must not use a picture');
+          }
+        } else if (path == null) {
           missing.add('${lesson.id}: no art mapped');
         } else if (!File(path).existsSync()) {
           missing.add('${lesson.id}: $path is missing');
@@ -94,6 +99,31 @@ void main() {
       for (final w in curriculum) ...w.lessons.map((l) => l.id),
     };
     expect(ids.containsAll(questArt.keys), isTrue);
+  });
+
+  test('quest labels are text the lesson already contains (nothing invented)',
+      () {
+    final bad = <String>[];
+    for (final world in curriculum) {
+      for (final lesson in world.lessons) {
+        final label = questLabel[lesson.id];
+        if (label == null) continue;
+        final pool = [
+          lesson.symbol,
+          lesson.title,
+          lesson.subtitle,
+          lesson.challenge,
+          lesson.answer,
+          ...lesson.options,
+        ].join(' | ');
+        if (!pool.contains(label)) bad.add('${lesson.id}: "$label"');
+      }
+    }
+    expect(bad, isEmpty, reason: bad.join('\n'));
+    final ids = {
+      for (final w in curriculum) ...w.lessons.map((l) => l.id),
+    };
+    expect(ids.containsAll(questLabel.keys), isTrue);
   });
 
   test('Indic text gets one consistent script font and tall line height', () {
@@ -206,6 +236,173 @@ void main() {
     await tester.tap(find.byKey(const Key('trail_prev')));
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('trail_next')), findsOneWidget);
+  });
+
+  testWidgets('each arrow press lands on the next whole card', (tester) async {
+    for (final size in const [Size(640, 360), Size(800, 360), Size(960, 540)]) {
+      await _show(tester, size);
+      final margin = size.width < 720 ? 14.0 : 24.0;
+      final lessons = _tamil.lessons;
+      for (var i = 1; i < lessons.length; i++) {
+        if (find.byKey(const Key('trail_next')).evaluate().isEmpty) break;
+        await tester.tap(find.byKey(const Key('trail_next')));
+        await tester.pumpAndSettle();
+        // After pressing, either card i sits exactly at the left margin, or
+        // the list has reached its end with the last card fully visible.
+        final left = _card(tester, lessons[i].id).left;
+        final atEnd = find.byKey(const Key('trail_next')).evaluate().isEmpty;
+        expect(
+          (left - margin).abs() < 1.5 || atEnd,
+          isTrue,
+          reason: '$size press $i: card ${lessons[i].id} left=$left',
+        );
+        if (atEnd) {
+          final last = _card(tester, lessons.last.id);
+          expect(last.right, lessThanOrEqualTo(size.width + 0.5));
+          expect(last.left, greaterThanOrEqualTo(0));
+        }
+        // Whatever is at the margin is a complete card on screen.
+        final shown = _card(tester, lessons[i].id);
+        expect(shown.right, lessThanOrEqualTo(size.width + 0.5));
+      }
+    }
+  });
+
+  testWidgets('a quick flick moves on by a card, not a stray distance', (
+    tester,
+  ) async {
+    await _show(tester, const Size(800, 360));
+    await tester.fling(
+      find.byKey(const Key('quest_trail')),
+      const Offset(-300, 0),
+      1200,
+    );
+    await tester.pumpAndSettle();
+    // Only cards near the screen are built; measure those.
+    final lefts = [
+      for (final l in _tamil.lessons)
+        if (find.byKey(Key('lesson_${l.id}')).evaluate().isNotEmpty)
+          _card(tester, l.id).left,
+    ];
+    final atMargin = lefts.any((x) => (x - 24).abs() < 1.5);
+    final atEnd = find.byKey(const Key('trail_next')).evaluate().isEmpty;
+    expect(atMargin || atEnd, isTrue, reason: 'lefts $lefts');
+    // The first card has left the margin: the flick really moved the list.
+    expect(
+      find.byKey(const Key('lesson_ta-a')).evaluate().isEmpty ||
+          _card(tester, 'ta-a').left < 24,
+      isTrue,
+    );
+  });
+
+  testWidgets('the dots and card bottoms keep clear of the lower edge', (
+    tester,
+  ) async {
+    const insets = [
+      EdgeInsets.zero,
+      EdgeInsets.only(bottom: 16, left: 48, right: 48),
+      EdgeInsets.only(bottom: 24, left: 32, right: 32, top: 12),
+    ];
+    for (final size in _sizes) {
+      for (final inset in insets) {
+        tester.view
+          ..devicePixelRatio = 1
+          ..physicalSize = size
+          ..padding = FakeViewPadding(
+            left: inset.left,
+            top: inset.top,
+            right: inset.right,
+            bottom: inset.bottom,
+          )
+          ..viewPadding = FakeViewPadding(
+            left: inset.left,
+            top: inset.top,
+            right: inset.right,
+            bottom: inset.bottom,
+          );
+        addTearDown(tester.view.reset);
+        await tester.pumpWidget(const SizedBox());
+        await tester.pumpWidget(
+          AppScope(
+            controller: _controller(),
+            child: MaterialApp(
+              theme: buildTheme(),
+              home: WorldMapScreen(world: _tamil),
+            ),
+          ),
+        );
+        await tester.pumpAndSettle();
+        expect(tester.takeException(), isNull, reason: '$size $inset');
+        final dots = tester.getRect(find.byKey(const Key('trail_dots')));
+        final card = _card(tester, 'ta-a');
+        // At least 10 dp between the dots and the usable bottom edge...
+        expect(
+          dots.bottom,
+          lessThanOrEqualTo(size.height - inset.bottom - 10),
+          reason: 'dots at $size $inset',
+        );
+        // ...and a visible gap between the cards and the dots.
+        expect(
+          card.bottom,
+          lessThanOrEqualTo(dots.top - 6),
+          reason: 'card/dots gap at $size $inset',
+        );
+        // Cards stay inside the side insets too.
+        expect(card.left, greaterThanOrEqualTo(inset.left));
+      }
+    }
+  });
+
+  testWidgets('tracing quests show their own letter, big, not a picture', (
+    tester,
+  ) async {
+    await _show(tester, const Size(960, 540));
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('lesson_ta-trace')),
+      200,
+      scrollable: find
+          .descendant(
+            of: find.byKey(const Key('quest_trail')),
+            matching: find.byType(Scrollable),
+          )
+          .first,
+    );
+    final glyph = tester.widget<Text>(
+      find.descendant(
+        of: find.byKey(const Key('lesson_ta-trace')),
+        matching: find.text('அ'),
+      ),
+    );
+    expect(glyph.style?.fontFamily, 'Noto Sans Tamil');
+    expect(glyph.style?.fontSize, greaterThanOrEqualTo(100));
+    // No photo on this card.
+    expect(
+      find.descendant(
+        of: find.byKey(const Key('lesson_ta-trace')),
+        matching: find.byType(Image),
+      ),
+      findsNothing,
+    );
+  });
+
+  testWidgets('word and letter quests label their picture with the word', (
+    tester,
+  ) async {
+    await _show(tester, const Size(960, 540));
+    expect(
+      find.descendant(
+        of: find.byKey(const Key('lesson_ta-a')),
+        matching: find.text('அ'),
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.descendant(
+        of: find.byKey(const Key('lesson_ta-word')),
+        matching: find.text('மலர்'),
+      ),
+      findsOneWidget,
+    );
   });
 
   testWidgets('a finger drag moves the trail and settles on a card edge', (
