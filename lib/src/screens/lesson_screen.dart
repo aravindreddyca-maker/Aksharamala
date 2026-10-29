@@ -173,8 +173,8 @@ class _LessonScreenState extends State<LessonScreen> {
           final activity = _isTracing
               ? _buildTracing()
               : _isStory
-                  ? _buildStory()
-                  : _buildQuestion();
+                  ? _buildStory(pinned: twoPanel)
+                  : _buildQuestion(pinned: twoPanel);
           if (!twoPanel) {
             return SingleChildScrollView(
               padding: EdgeInsets.all(padding),
@@ -200,7 +200,12 @@ class _LessonScreenState extends State<LessonScreen> {
                 SizedBox(width: padding),
                 Expanded(
                   flex: 6,
-                  child: SingleChildScrollView(child: activity),
+                  // A text-only quiz pins its Check Answer button under a
+                  // scrolling list of answers, so the button is always on
+                  // screen. Everything else scrolls as one piece.
+                  child: _pinsCheck
+                      ? Align(alignment: Alignment.topCenter, child: activity)
+                      : SingleChildScrollView(child: activity),
                 ),
               ],
             ),
@@ -424,70 +429,110 @@ class _LessonScreenState extends State<LessonScreen> {
         ),
       );
 
+  /// True when this screen shows a text-only question whose Check Answer button
+  /// is pinned below a scrolling answer list (the side-by-side layout only).
+  bool get _pinsCheck =>
+      !_isTracing &&
+      (!_isStory || _storyPage >= widget.lesson.story.length) &&
+      widget.lesson.pictures.isEmpty;
+
   /// Picture quizzes answer on a tap (no Check button), like the math quests;
   /// text-only quizzes keep select-then-check.
-  Widget _buildQuestion() => widget.lesson.pictures.isEmpty
-      ? _buildChoiceQuestion()
-      : Card(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(14, 10, 14, 2),
-            child: _mathAnswers(tileHeight: 72),
-          ),
-        );
-
-  Widget _buildChoiceQuestion() => Card(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                widget.lesson.challenge,
-                style: Theme.of(context).textTheme.titleLarge,
-                textAlign: TextAlign.center,
+  Widget _buildQuestion({required bool pinned}) =>
+      widget.lesson.pictures.isEmpty
+          ? _buildChoiceQuestion(pinned: pinned)
+          : Card(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(14, 10, 14, 2),
+                child: _mathAnswers(tileHeight: 72),
               ),
-              const SizedBox(height: 18),
-              ..._options.map(
-                (option) => Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: ChoiceChip(
-                    key: Key('answer_$option'),
-                    label: SizedBox(
-                      width: double.infinity,
-                      child: Text(
-                        option,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                    ),
-                    selected: _selected == option,
-                    onSelected: _submitted
-                        ? null
-                        : (_) => setState(() => _selected = option),
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 13,
-                      horizontal: 10,
-                    ),
-                  ),
+            );
+
+  /// Select an answer, then press Check Answer. When [pinned] (side-by-side
+  /// layout) the button stays under the answers and only the answers scroll,
+  /// so a 360 dp-high screen never hides it.
+  Widget _buildChoiceQuestion({required bool pinned}) {
+    // On a short landscape screen (a 360 dp phone) everything is compacted so
+    // the question, three answers and the button all fit; answers stay at
+    // least 44 dp tall.
+    final short = pinned && MediaQuery.sizeOf(context).height < 420;
+    final body = <Widget>[
+      Text(
+        widget.lesson.challenge,
+        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              fontSize: short ? 18 : null,
+            ),
+        textAlign: TextAlign.center,
+      ),
+      SizedBox(height: short ? 6 : (pinned ? 12 : 18)),
+      ..._options.map(
+        (option) => Padding(
+          padding: EdgeInsets.only(bottom: short ? 6 : 10),
+          child: ChoiceChip(
+            materialTapTargetSize:
+                short ? MaterialTapTargetSize.shrinkWrap : null,
+            key: Key('answer_$option'),
+            label: SizedBox(
+              width: double.infinity,
+              child: Text(
+                option,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              const SizedBox(height: 8),
-              FilledButton(
-                key: const Key('check_answer'),
-                onPressed: _selected == null || _submitted
-                    ? null
-                    : () => _finish(_selected == widget.lesson.answer),
-                child: const Text('Check Answer'),
-              ),
-            ],
+            ),
+            selected: _selected == option,
+            onSelected:
+                _submitted ? null : (_) => setState(() => _selected = option),
+            padding: EdgeInsets.symmetric(
+              vertical: short ? 9 : (pinned ? 9 : 13),
+              horizontal: 10,
+            ),
           ),
         ),
-      );
+      ),
+    ];
+    final check = FilledButton(
+      style: short
+          ? FilledButton.styleFrom(minimumSize: const Size.fromHeight(48))
+          : null,
+      key: const Key('check_answer'),
+      onPressed: _selected == null || _submitted
+          ? null
+          : () => _finish(_selected == widget.lesson.answer),
+      child: const Text('Check Answer'),
+    );
+    return Card(
+      child: Padding(
+        padding: EdgeInsets.all(short ? 10 : (pinned ? 14 : 20)),
+        child: pinned
+            ? Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Flexible(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: body,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  check,
+                ],
+              )
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [...body, const SizedBox(height: 8), check],
+              ),
+      ),
+    );
+  }
 
-  Widget _buildStory() {
+  Widget _buildStory({required bool pinned}) {
     if (_storyPage < widget.lesson.story.length) {
       return Card(
         child: Padding(
@@ -532,7 +577,7 @@ class _LessonScreenState extends State<LessonScreen> {
         ),
       );
     }
-    return _buildQuestion();
+    return _buildQuestion(pinned: pinned);
   }
 
   Widget _buildTracing() => Card(
