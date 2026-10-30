@@ -62,7 +62,7 @@ void main() {
   test('new production illustrations are compact WebP assets', () {
     final files =
         Directory('assets/images/age56').listSync().whereType<File>().toList();
-    expect(files, hasLength(7));
+    expect(files, hasLength(11));
     for (final file in files) {
       expect(file.path.endsWith('.webp'), isTrue, reason: file.path);
       expect(file.lengthSync(), lessThan(100 * 1024), reason: file.path);

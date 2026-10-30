@@ -102,10 +102,10 @@ numbers-56-044,numbers,counting,"","","","","code-native",true
 numbers-56-045,numbers,counting,"","","","","code-native",true
 numbers-56-046,numbers,counting,"","","","","code-native",true
 numbers-56-047,numbers,counting,"","","","","code-native",true
-numbers-56-048,numbers,pictureWordMatch,"triangle","","triangle","","code-native",false
-numbers-56-049,numbers,pictureWordMatch,"square","","square","","code-native",false
-numbers-56-050,numbers,pictureWordMatch,"rectangle","","rectangle","","code-native",false
-numbers-56-051,numbers,pictureWordMatch,"circle","","circle","","code-native",false
+numbers-56-048,numbers,pictureWordMatch,"triangle","triangle","","","code-native",true
+numbers-56-049,numbers,pictureWordMatch,"square","square","","","code-native",true
+numbers-56-050,numbers,pictureWordMatch,"rectangle","rectangle","","","code-native",true
+numbers-56-051,numbers,pictureWordMatch,"circle","circle","","","code-native",true
 numbers-56-052,numbers,pictureWordMatch,"morning","","morning","","code-native",false
 numbers-56-053,numbers,pictureWordMatch,"longer","","longer","","code-native",false
 numbers-56-054,numbers,pictureWordMatch,"rupees","","rupees","","code-native",false

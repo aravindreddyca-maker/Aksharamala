@@ -4539,6 +4539,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.pictureWordMatch,
       images: {
+        'triangle': 'assets/images/age56/triangle.webp',
       },
       requiredImages: ['triangle'],
       pronunciationVerified: false,
@@ -4559,6 +4560,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         options: ['3', '4', '5'],
         answer: '3',
         pictures: {
+          'triangle': 'assets/images/age56/triangle.webp',
         },
         sourceRecord: 'numbers-56-048',
       ),
@@ -4582,6 +4584,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.pictureWordMatch,
       images: {
+        'square': 'assets/images/age56/square.webp',
       },
       requiredImages: ['square'],
       pronunciationVerified: false,
@@ -4602,6 +4605,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         options: ['4', '3', '5'],
         answer: '4',
         pictures: {
+          'square': 'assets/images/age56/square.webp',
         },
         sourceRecord: 'numbers-56-049',
       ),
@@ -4625,6 +4629,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.pictureWordMatch,
       images: {
+        'rectangle': 'assets/images/age56/rectangle.webp',
       },
       requiredImages: ['rectangle'],
       pronunciationVerified: false,
@@ -4645,6 +4650,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         options: ['4', '2', '6'],
         answer: '4',
         pictures: {
+          'rectangle': 'assets/images/age56/rectangle.webp',
         },
         sourceRecord: 'numbers-56-050',
       ),
@@ -4668,6 +4674,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.pictureWordMatch,
       images: {
+        'circle': 'assets/images/age56/circle.webp',
       },
       requiredImages: ['circle'],
       pronunciationVerified: false,
@@ -4688,6 +4695,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         options: ['0', '2', '4'],
         answer: '0',
         pictures: {
+          'circle': 'assets/images/age56/circle.webp',
         },
         sourceRecord: 'numbers-56-051',
       ),

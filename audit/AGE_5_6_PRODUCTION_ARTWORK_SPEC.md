@@ -34,6 +34,10 @@ minimum meaningful scene. Each focus is appended verbatim to the shared prompt.
 | `nature-tree` / `tree.webp` | చెట్టు / மரம் / पेड़ / tree | One leafy green tree. | tamil-56-017 | Existing Age 5–6 WebP; semantic and path verified |
 | `animal-elephant` / `te_elephant.webp` | ఏనుగు / யானை / हाथी / elephant | One friendly standing elephant. | hindi-56-020; tamil-56-018 | Existing asset; cross-language meaning verified |
 | `animal-cat` / `cat.png` | పిల్లి / பூனை / बिल्ली / cat | One friendly sitting cat. | tamil-56-020 | Existing asset; semantic and path verified |
+| `shape-triangle` / `triangle.webp` | త్రిభుజం / முக்கோணம் / त्रिभुज / triangle | One solid colorful equilateral triangle with three clear straight sides. | numbers-56-048 | Pack WebP; geometry, transparency and phone legibility verified |
+| `shape-square` / `square.webp` | చతురస్రం / சதுரம் / वर्ग / square | One solid colorful square with four equal sides. | numbers-56-049 | Pack WebP; geometry, transparency and phone legibility verified |
+| `shape-rectangle` / `rectangle.webp` | దీర్ఘచతురస్రం / செவ்வகம் / आयत / rectangle | One wide solid colorful rectangle, clearly not a square. | numbers-56-050 | Pack WebP; geometry, transparency and phone legibility verified |
+| `shape-circle` / `circle.webp` | వృత్తం / வட்டம் / वृत्त / circle | One solid colorful perfect circle. | numbers-56-051 | Pack WebP; geometry, transparency and phone legibility verified |
 
 ## Remaining production queue
 
@@ -62,10 +66,6 @@ meaning is educator-reviewed where noted, and the asset-path tests pass.
 | `person-paternal-uncle` / `paternal_uncle.webp` | Father's younger brother | బాబాయి / சித்தப்பா / चाचा / paternal uncle | Friendly Indian paternal uncle standing alone, adult male, neutral family clothing. | hindi-56-017 | Not generated; kinship educator verification required |
 | `number-three` / `three.webp` | Quantity three | మూడు / மூன்று / तीन / three | Exactly three red apples, separated and fully visible; no numeral. | hindi-56-018 | Not generated; object count verification required |
 | `person-king` / `king.webp` | King | రాజు / ராஜா / राजा / king | Friendly storybook Indian king with a simple crown and royal robe. | hindi-56-019 | Not generated; cultural review required |
-| `shape-triangle` / `triangle.webp` | Triangle | త్రిభుజం / முக்கோணம் / त्रिभुज / triangle | One solid colorful equilateral triangle with three clear straight sides. | numbers-56-048 | Not generated; geometry verification required |
-| `shape-square` / `square.webp` | Square | చతురస్రం / சதுரம் / वर्ग / square | One solid colorful square with four equal sides. | numbers-56-049 | Not generated; geometry verification required |
-| `shape-rectangle` / `rectangle.webp` | Rectangle | దీర్ఘచతురస్రం / செவ்வகம் / आयत / rectangle | One wide solid colorful rectangle, clearly not a square. | numbers-56-050 | Not generated; geometry verification required |
-| `shape-circle` / `circle.webp` | Circle | వృత్తం / வட்டம் / वृत्त / circle | One solid colorful perfect circle. | numbers-56-051 | Not generated; geometry verification required |
 | `time-morning` / `morning.webp` | Morning | ఉదయం / காலை / सुबह / morning | Sunrise outside a child's window with the child waking and stretching. | numbers-56-052 | Not generated; educator review for time concept |
 | `comparison-longer` / `longer.webp` | Longer | పొడవైన / நீளமான / लंबा / longer | Two otherwise identical pencils aligned at one end, one visibly longer; no arrows or text. | numbers-56-053 | Not generated; comparison verification required |
 | `money-rupees` / `rupees.webp` | Indian rupees | రూపాయలు / ரூபாய் / रुपये / rupees | Child-safe illustration of generic Indian coins and notes without readable denominations. | numbers-56-054 | Not generated; currency educator review required |
