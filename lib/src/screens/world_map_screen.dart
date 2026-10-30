@@ -329,11 +329,18 @@ class _QuestTrailState extends State<_QuestTrail> {
             (horizontal ? 330.0 : (cardHeight * .66).clamp(230.0, 310.0))
                 .clamp(0.0, constraints.maxWidth - 2 * widget.pad);
         _step = cardWidth + gap;
+        // While letters are still being learned, open on the All letters card
+        // (the first option) instead of jumping on to a later quest.
+        final lettersDone = letters == null ||
+            [
+              for (var i = 0; i < letters.letters.length; i++)
+                widget.completed.contains(letters.lessonId(i)),
+            ].every((d) => d);
         _revealRecommended(
           constraints.maxWidth,
           cardWidth,
           lead + lessons.indexWhere((l) => l.id == widget.recommended.id),
-          lead,
+          lettersDone ? lead : 1 << 30,
         );
         final canLeft = _offset > 2;
         final canRight = _ready && _offset < _max - 2;

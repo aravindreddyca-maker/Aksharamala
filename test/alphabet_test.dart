@@ -363,6 +363,34 @@ void main() {
       );
     });
 
+    testWidgets('the map opens on All letters even when later quests are done',
+        (tester) async {
+      tester.view
+        ..devicePixelRatio = 1
+        ..physicalSize = const Size(960, 540);
+      addTearDown(tester.view.reset);
+      final w = curriculum.firstWhere((w) => w.id == 'english');
+      final c = _controller();
+      c.progress['p'] = ProgressRecord(
+        completedLessons: {w.lessons[0].id, w.lessons[1].id, w.lessons[2].id},
+        attempts: const {},
+        correct: const {},
+        lastPlayed: const {},
+        earnedBadges: const {},
+      );
+      await tester.pumpWidget(
+        AppScope(
+          controller: c,
+          child:
+              MaterialApp(theme: buildTheme(), home: WorldMapScreen(world: w)),
+        ),
+      );
+      await tester.pumpAndSettle();
+      final card = tester.getRect(find.byKey(const Key('all_letters')));
+      expect(card.left, greaterThanOrEqualTo(0));
+      expect(card.right, lessThanOrEqualTo(960));
+    });
+
     testWidgets('Number Galaxy has none: numbers are not an alphabet',
         (tester) async {
       tester.view
