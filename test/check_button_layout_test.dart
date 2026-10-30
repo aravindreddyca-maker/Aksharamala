@@ -75,6 +75,9 @@ Future<void> _open(
 }
 
 void main() {
+  setUp(() => feedbackPause = Duration.zero);
+  tearDown(() => feedbackPause = defaultFeedbackPause);
+
   test('the quizzes under test are the text-only ones', () {
     final ids = _checkQuizzes.map((r) => r.lesson.id).toSet();
     expect(

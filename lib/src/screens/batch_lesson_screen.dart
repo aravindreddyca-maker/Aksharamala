@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show HapticFeedback;
 
 import '../app.dart';
 import '../batch/batch_content.dart';
@@ -102,8 +103,10 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
   void _pick(String option) {
     if (_right != null || _wrong.contains(option)) return;
     if (option == _step.answer) {
+      HapticFeedback.lightImpact();
       setState(() => _right = option);
     } else {
+      HapticFeedback.heavyImpact();
       setState(() {
         _wrong.add(option);
         _mistakes++;
@@ -645,7 +648,7 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                             fontWeight: FontWeight.w900,
                             color: _right != null
                                 ? const Color(0xFF1B7A41)
-                                : const Color(0xFF8A4B00),
+                                : const Color(0xFF9C2C20),
                           ),
                         ),
                       ),
@@ -735,12 +738,12 @@ class _AnswerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final border = switch (state) {
       _Mark.correct => const Color(0xFF2E9D57),
-      _Mark.wrong => const Color(0xFFD9822B),
+      _Mark.wrong => const Color(0xFFC0392B),
       _Mark.idle => color,
     };
     final fill = switch (state) {
       _Mark.correct => const Color(0xFFE3F6E9),
-      _Mark.wrong => const Color(0xFFF1EEEA),
+      _Mark.wrong => const Color(0xFFFFD9D2),
       _Mark.idle => Colors.white,
     };
     final stars = kind == StepKind.pickQuantity ? int.tryParse(label) : null;
@@ -828,12 +831,17 @@ class _AnswerCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                  if (state == _Mark.correct)
-                    const Padding(
-                      padding: EdgeInsets.only(left: 10),
+                  if (state != _Mark.idle)
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
                       child: Icon(
-                        Icons.check_circle_rounded,
-                        color: Color(0xFF2E9D57),
+                        state == _Mark.correct
+                            ? Icons.check_circle_rounded
+                            : Icons.cancel_rounded,
+                        size: 32,
+                        color: state == _Mark.correct
+                            ? const Color(0xFF2E9D57)
+                            : const Color(0xFFC0392B),
                       ),
                     ),
                 ],

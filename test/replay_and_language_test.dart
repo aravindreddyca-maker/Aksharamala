@@ -91,6 +91,9 @@ List<String> _order(WidgetTester tester, Lesson lesson) {
 }
 
 void main() {
+  setUp(() => feedbackPause = Duration.zero);
+  tearDown(() => feedbackPause = defaultFeedbackPause);
+
   group('answer order', () {
     test('every quest lists the right answer first, so shuffling matters', () {
       // This is why the order cannot stay as authored: a child would learn

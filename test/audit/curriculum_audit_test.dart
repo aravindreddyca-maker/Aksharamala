@@ -165,6 +165,9 @@ Future<void> _answer(WidgetTester tester, String option) async {
 }
 
 void main() {
+  setUp(() => feedbackPause = Duration.zero);
+  tearDown(() => feedbackPause = defaultFeedbackPause);
+
   // ---------------------------------------------------------------------
   group('1 inventory', () {
     test('prints the inventory used by the audit report', () {

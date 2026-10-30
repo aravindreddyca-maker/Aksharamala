@@ -1,7 +1,8 @@
-﻿import 'dart:math';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show HapticFeedback;
 
 import '../app.dart';
 import '../batch/batch_content.dart' show BatchText;
@@ -25,6 +26,13 @@ String questResultMessage({
   String locale = 'en-US',
 }) =>
     ResultText.forLocale(locale).message(correct: correct, gained: gained);
+
+/// How long the right and wrong answers stay on screen before the result
+/// pop-up appears.
+const defaultFeedbackPause = Duration(milliseconds: 1100);
+
+/// Tests set this to zero to reach the pop-up without waiting.
+Duration feedbackPause = defaultFeedbackPause;
 
 class LessonScreen extends StatefulWidget {
   const LessonScreen({
@@ -107,11 +115,22 @@ class _LessonScreenState extends State<LessonScreen> {
   Future<void> _finish(bool correct) async {
     if (_submitted) return;
     setState(() => _submitted = true);
+    // A buzz the child can feel the moment they answer: light for right,
+    // firm for wrong.
+    if (correct) {
+      HapticFeedback.lightImpact();
+    } else {
+      HapticFeedback.heavyImpact();
+    }
     final gained = await AppScope.of(context).recordResult(
       world: widget.world,
       lesson: widget.lesson,
       correct: correct,
     );
+    if (!mounted) return;
+    // Hold on the coloured answers so the child sees which one was right
+    // before the pop-up covers them.
+    await Future<void>.delayed(feedbackPause);
     if (!mounted) return;
     await showDialog<void>(
       context: context,
@@ -498,33 +517,79 @@ class _LessonScreenState extends State<LessonScreen> {
       ),
       SizedBox(height: short ? 6 : (pinned ? 12 : 18)),
       ..._options.map(
-        (option) => Padding(
-          padding: EdgeInsets.only(bottom: short ? 6 : 10),
-          child: ChoiceChip(
-            materialTapTargetSize:
-                short ? MaterialTapTargetSize.shrinkWrap : null,
-            key: Key('answer_$option'),
-            label: SizedBox(
-              width: double.infinity,
-              child: Text(
-                option,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w800,
+        (option) {
+          final right = _submitted && option == widget.lesson.answer;
+          final wrong = _submitted && option == _selected && !right;
+          final tone = right
+              ? const Color(0xFF1E8A4C)
+              : wrong
+                  ? const Color(0xFFC0392B)
+                  : null;
+          return Padding(
+            padding: EdgeInsets.only(bottom: short ? 6 : 10),
+            child: ChoiceChip(
+              materialTapTargetSize:
+                  short ? MaterialTapTargetSize.shrinkWrap : null,
+              key: Key('answer_$option'),
+              // Colour is never the only signal: a tick or a cross too.
+              avatar: tone == null
+                  ? null
+                  : Icon(
+                      right ? Icons.check_circle_rounded : Icons.cancel_rounded,
+                      color: tone,
+                    ),
+              label: SizedBox(
+                width: double.infinity,
+                child: Text(
+                  option,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+              selected: _selected == option || right,
+              selectedColor: right
+                  ? const Color(0xFFC8F2D2)
+                  : wrong
+                      ? const Color(0xFFFFD9D2)
+                      : null,
+              side: tone == null ? null : BorderSide(color: tone, width: 3),
+              onSelected:
+                  _submitted ? null : (_) => setState(() => _selected = option),
+              padding: EdgeInsets.symmetric(
+                vertical: short ? 9 : (pinned ? 9 : 13),
+                horizontal: 10,
+              ),
+            ),
+          );
+        },
+      ),
+      if (_submitted)
+        Padding(
+          padding: const EdgeInsets.only(top: 2, bottom: 4),
+          child: Semantics(
+            liveRegion: true,
+            child: Text(
+              _selected == widget.lesson.answer
+                  ? BatchText.forLocale(widget.lesson.locale).rightMessage
+                  : BatchText.forLocale(widget.lesson.locale).tryAgainMessage,
+              key: const Key('answer_feedback'),
+              textAlign: TextAlign.center,
+              style: scriptStyle(
+                BatchText.forLocale(widget.lesson.locale).rightMessage,
+                TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  color: _selected == widget.lesson.answer
+                      ? const Color(0xFF1B7A41)
+                      : const Color(0xFF9C2C20),
                 ),
               ),
             ),
-            selected: _selected == option,
-            onSelected:
-                _submitted ? null : (_) => setState(() => _selected = option),
-            padding: EdgeInsets.symmetric(
-              vertical: short ? 9 : (pinned ? 9 : 13),
-              horizontal: 10,
-            ),
           ),
         ),
-      ),
     ];
     final check = FilledButton(
       style: short

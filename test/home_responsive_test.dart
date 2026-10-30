@@ -20,6 +20,9 @@ class _NoDiskStore extends LocalStore {
 }
 
 void main() {
+  setUp(() => feedbackPause = Duration.zero);
+  tearDown(() => feedbackPause = defaultFeedbackPause);
+
   final sizes = <Size>[
     const Size(640, 360),
     const Size(800, 360),
