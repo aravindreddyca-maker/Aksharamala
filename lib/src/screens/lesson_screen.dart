@@ -10,6 +10,7 @@ import '../batch/batch_lesson.dart' show WriteMode;
 import '../curriculum.dart' show numberNames;
 import '../handwriting/glyph_mask.dart';
 import '../handwriting/glyph_mask_raster.dart';
+import '../handwriting/handwriting_registry.dart';
 import '../models.dart';
 import '../result_text.dart';
 import '../services/speech_service.dart';
@@ -707,6 +708,7 @@ class _LessonScreenState extends State<LessonScreen> {
                 mode: WriteMode.guided,
                 text: BatchText.forLocale(lesson.locale),
                 color: widget.world.darkColor,
+                template: templateFor(lesson.symbol),
                 mask: _glyphMask,
                 locale: lesson.locale,
                 onResult: (r) => setState(() => _traceOk = r.shapeOk),

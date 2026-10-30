@@ -153,7 +153,7 @@ class _WritingPadState extends State<WritingPad> {
                             glyph: widget.glyph,
                             template: widget.template,
                             ink: widget.color,
-                            guideColor: widget.color.withValues(alpha: .16),
+                            guideColor: widget.color.withValues(alpha: .13),
                             revision: _strokes.fold<int>(
                               _strokes.length,
                               (n, s) => n + s.length,
@@ -279,12 +279,30 @@ class _PadPainter extends CustomPainter {
     }
   }
 
+  /// The "route map": the letter's outline, a dashed path along each stroke in
+  /// the order it is written, an arrow showing the way, and a numbered dot
+  /// where each stroke starts (1 in green, the others in blue).
   void _paintTemplate(Canvas canvas, Size size, StrokeTemplate t) {
     Offset at(Pt p) => Offset(p.x * size.width, p.y * size.height);
-    final line = Paint()
+    // The letter as a wide, pale road drawn from the template itself, so the
+    // route always sits exactly on it.
+    final road = Paint()
       ..color = guideColor
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 18
+      ..strokeWidth = size.width * 0.115
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
+    for (final s in t.strokes) {
+      final p = Path()..moveTo(at(s.first).dx, at(s.first).dy);
+      for (final q in s.skip(1)) {
+        p.lineTo(at(q).dx, at(q).dy);
+      }
+      canvas.drawPath(p, road);
+    }
+    final route = Paint()
+      ..color = const Color(0xFF6B7280)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3
       ..strokeCap = StrokeCap.round
       ..strokeJoin = StrokeJoin.round;
     for (var i = 0; i < t.strokes.length; i++) {
@@ -293,26 +311,51 @@ class _PadPainter extends CustomPainter {
       for (final p in s.skip(1)) {
         path.lineTo(at(p).dx, at(p).dy);
       }
-      canvas.drawPath(path, line);
-
-      // An arrow part-way along shows the direction.
-      final mid = (s.length * .55).floor().clamp(1, s.length - 1);
-      final a = at(s[mid - 1]);
-      final b = at(s[mid]);
-      final angle = math.atan2(b.dy - a.dy, b.dx - a.dx);
-      final tip = b;
+      // Dashes along the whole stroke.
+      for (final metric in path.computeMetrics()) {
+        var d = 0.0;
+        while (d < metric.length) {
+          final end = math.min(d + 9, metric.length);
+          canvas.drawPath(metric.extractPath(d, end), route);
+          d += 16;
+        }
+      }
+      // An arrowhead near the end, pointing the way the pen travels.
+      final metric = path.computeMetrics().first;
+      final tipAt = metric.length - 6;
+      final tip = metric.getTangentForOffset(tipAt)!;
+      final angle = math.atan2(tip.vector.dy, tip.vector.dx);
+      final p = tip.position;
       final arrow = Path()
-        ..moveTo(tip.dx, tip.dy)
-        ..lineTo(tip.dx - 13 * math.cos(angle - .5),
-            tip.dy - 13 * math.sin(angle - .5))
-        ..lineTo(tip.dx - 13 * math.cos(angle + .5),
-            tip.dy - 13 * math.sin(angle + .5))
+        ..moveTo(p.dx, p.dy)
+        ..lineTo(
+            p.dx - 12 * math.cos(angle - .5), p.dy - 12 * math.sin(angle - .5))
+        ..lineTo(
+            p.dx - 12 * math.cos(angle + .5), p.dy - 12 * math.sin(angle + .5))
         ..close();
-      canvas.drawPath(arrow, Paint()..color = ink.withValues(alpha: .55));
-
-      // Start dot with the stroke's number.
-      final start = at(s.first);
-      canvas.drawCircle(start, 13, Paint()..color = const Color(0xFF2E9D57));
+      canvas.drawPath(arrow, Paint()..color = const Color(0xFF6B7280));
+    }
+    // Numbered start dots on top, so they are never hidden by a dash. Strokes
+    // that start in the same place (B, D, P, R) get their dots set a little
+    // way along the stroke, so every number can be read.
+    final placed = <Offset>[];
+    for (var i = 0; i < t.strokes.length; i++) {
+      final s = t.strokes[i];
+      var start = at(s.first);
+      final next = at(s[math.min(3, s.length - 1)]);
+      final dir = next - start;
+      final unit = dir.distance == 0 ? Offset.zero : dir / dir.distance;
+      var guard = 0;
+      while (placed.any((o) => (o - start).distance < 26) && guard++ < 4) {
+        start += unit * 24;
+      }
+      placed.add(start);
+      canvas.drawCircle(
+        start,
+        13,
+        Paint()
+          ..color = i == 0 ? const Color(0xFF2E9D57) : const Color(0xFF2F7CF6),
+      );
       final label = TextPainter(
         text: TextSpan(
           text: '${i + 1}',
@@ -324,10 +367,7 @@ class _PadPainter extends CustomPainter {
         ),
         textDirection: TextDirection.ltr,
       )..layout();
-      label.paint(
-        canvas,
-        start - Offset(label.width / 2, label.height / 2),
-      );
+      label.paint(canvas, start - Offset(label.width / 2, label.height / 2));
     }
   }
 

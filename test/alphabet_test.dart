@@ -8,6 +8,7 @@ import 'package:aksharamala/src/content/content_loader.dart';
 import 'package:aksharamala/src/content/content_models.dart';
 import 'package:aksharamala/src/curriculum.dart';
 import 'package:aksharamala/src/handwriting/glyph_mask.dart';
+import 'package:aksharamala/src/handwriting/handwriting_registry.dart';
 import 'package:aksharamala/src/models.dart';
 import 'package:aksharamala/src/screens/alphabet_screen.dart';
 import 'package:aksharamala/src/screens/world_map_screen.dart';
@@ -102,6 +103,24 @@ void main() {
       }
     });
 
+    test('every English letter has its picture except Q (queen)', () {
+      final without = [
+        for (final l in englishAlphabet.letters)
+          if (l.picture == null) l.glyph,
+      ];
+      expect(without, ['Q'],
+          reason:
+              'the supplied queen is cropped at the hem, so it is not shipped');
+      for (final l in englishAlphabet.letters.where((l) => l.picture != null)) {
+        final b = File(l.picture!).readAsBytesSync();
+        // WebP (RIFF....WEBP) or one of the first art set's PNGs.
+        final isWebp = String.fromCharCodes(b.sublist(8, 12)) == 'WEBP';
+        final isPng =
+            b[0] == 0x89 && String.fromCharCodes(b.sublist(1, 4)) == 'PNG';
+        expect(isWebp || isPng, isTrue, reason: l.picture);
+      }
+    });
+
     test('lesson ids are unique and never collide with real quests', () {
       final real = {for (final w in curriculum) ...w.lessons.map((l) => l.id)};
       final ids = [
@@ -149,22 +168,42 @@ void main() {
     return c;
   }
 
+  /// Writes the letter on screen: its stroke template where it has one (the
+  /// English capitals), otherwise a ring, which traces the stand-in font mask.
   Future<void> traceRing(WidgetTester tester) async {
     final rect = tester.getRect(find.byKey(const Key('letter_pad')));
-    final pts = [
-      for (var k = 0; k <= 40; k++)
-        Offset(
-          rect.left + rect.width * (.5 + .28 * math.sin(2 * math.pi * k / 40)),
-          rect.top + rect.height * (.5 - .28 * math.cos(2 * math.pi * k / 40)),
-        ),
-    ];
-    final g = await tester.startGesture(pts.first);
-    for (final p in pts.skip(1)) {
-      await g.moveTo(p);
+    final glyph =
+        tester.widget<Text>(find.byKey(const Key('letter_big'))).data!;
+    final template = templateFor(glyph);
+    final strokes = template != null
+        ? [
+            for (final s in template.strokes)
+              [
+                for (final p in s)
+                  Offset(rect.left + rect.width * p.x,
+                      rect.top + rect.height * p.y),
+              ],
+          ]
+        : [
+            [
+              for (var k = 0; k <= 40; k++)
+                Offset(
+                  rect.left +
+                      rect.width * (.5 + .28 * math.sin(2 * math.pi * k / 40)),
+                  rect.top +
+                      rect.height * (.5 - .28 * math.cos(2 * math.pi * k / 40)),
+                ),
+            ],
+          ];
+    for (final pts in strokes) {
+      final g = await tester.startGesture(pts.first);
+      for (final p in pts.skip(1)) {
+        await g.moveTo(p);
+        await tester.pump();
+      }
+      await g.up();
       await tester.pump();
     }
-    await g.up();
-    await tester.pump();
     await tester.tap(find.byKey(const Key('write_check')));
     await tester.pump();
   }

@@ -6,6 +6,7 @@ import '../batch/batch_content.dart' show BatchText;
 import '../batch/batch_lesson.dart' show WriteMode;
 import '../handwriting/glyph_mask.dart';
 import '../handwriting/glyph_mask_raster.dart';
+import '../handwriting/handwriting_registry.dart';
 import '../models.dart';
 import '../services/speech_service.dart';
 import '../theme.dart';
@@ -353,18 +354,25 @@ class _LetterScreenState extends State<LetterScreen> {
               mode: WriteMode.guided,
               text: text,
               color: widget.world.darkColor,
+              template: templateFor(_letter.glyph),
               mask: _mask,
               locale: widget.letters.locale,
               onResult: (r) {
                 if (r.shapeOk) _onTraced();
               },
-              finish: FilledButton(
+              finish: FilledButton.icon(
                 key: const Key('next_letter'),
+                style: FilledButton.styleFrom(
+                  backgroundColor: const Color(0xFF2E9D57),
+                  foregroundColor: Colors.white,
+                ),
                 onPressed: finished
                     ? () =>
                         _last ? Navigator.pop(context) : _go(widget.index + 1)
                     : null,
-                child: Text(
+                iconAlignment: IconAlignment.end,
+                icon: const Icon(Icons.arrow_forward_rounded, size: 20),
+                label: Text(
                   nextLabel,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -413,6 +421,18 @@ class _LetterScreenState extends State<LetterScreen> {
       ),
     );
   }
+}
+
+/// The picture word, with the letter it starts with picked out in colour.
+TextSpan _wordSpan(AlphabetLetter letter, Color color) {
+  final word = letter.word!;
+  if (!word.startsWith(letter.glyph)) return TextSpan(text: word);
+  return TextSpan(
+    children: [
+      TextSpan(text: letter.glyph, style: TextStyle(color: color)),
+      TextSpan(text: word.substring(letter.glyph.length)),
+    ],
+  );
 }
 
 class _ShowLetter extends StatelessWidget {
@@ -482,8 +502,8 @@ class _ShowLetter extends StatelessWidget {
               if (letter.word != null)
                 FittedBox(
                   fit: BoxFit.scaleDown,
-                  child: Text(
-                    letter.word!,
+                  child: Text.rich(
+                    _wordSpan(letter, color),
                     key: const Key('letter_word'),
                     style: scriptStyle(
                       letter.word!,

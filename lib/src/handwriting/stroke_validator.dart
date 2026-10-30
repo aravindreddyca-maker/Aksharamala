@@ -59,6 +59,7 @@ class StrokeValidator {
     this.independentTolerance = 0.16,
     this.maxFactor = 2.4,
     this.maxAspectChange = 1.7,
+    this.endpointTolerance = 0.2,
     this.minLengthRatio = 0.55,
     this.maxLengthRatio = 1.8,
     this.minStrokeLength = 0.06,
@@ -75,6 +76,10 @@ class StrokeValidator {
   /// Independent writing: how far the figure's width/height may differ from the
   /// template's.
   final double maxAspectChange;
+
+  /// How far a stroke's first and last point may be from the template's. This
+  /// stops a closed loop passing as an open arc (O as C) and the reverse.
+  final double endpointTolerance;
 
   final double minLengthRatio;
   final double maxLengthRatio;
@@ -140,7 +145,12 @@ class StrokeValidator {
     for (var i = 0; i < kr.length; i++) {
       final forward = _meanAndMax(kr[i], tr[i]);
       final lengthRatio = pathLength(kid[i]) / pathLength(tmpl[i]);
-      final fits = forward.mean <= tol && forward.max <= tol * maxFactor;
+      final endsFit = kr[i].first.distanceTo(tr[i].first) <=
+              endpointTolerance * (tol / guidedTolerance) &&
+          kr[i].last.distanceTo(tr[i].last) <=
+              endpointTolerance * (tol / guidedTolerance);
+      final fits =
+          forward.mean <= tol && forward.max <= tol * maxFactor && endsFit;
       if (fits) {
         if (lengthRatio < minLengthRatio || lengthRatio > maxLengthRatio) {
           return StrokeCheck(
