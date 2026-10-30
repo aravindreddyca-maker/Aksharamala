@@ -62,7 +62,7 @@ void main() {
   test('new production illustrations are compact WebP assets', () {
     final files =
         Directory('assets/images/age56').listSync().whereType<File>().toList();
-    expect(files, hasLength(4));
+    expect(files, hasLength(7));
     for (final file in files) {
       expect(file.path.endsWith('.webp'), isTrue, reason: file.path);
       expect(file.lengthSync(), lessThan(100 * 1024), reason: file.path);
@@ -131,5 +131,28 @@ void main() {
     expect(
         tester.widget<AnimatedSwitcher>(find.byType(AnimatedSwitcher)).duration,
         Duration.zero);
+  });
+
+  testWidgets('all referenced illustrations decode on a phone-sized screen',
+      (tester) async {
+    await tester.binding.setSurfaceSize(const Size(360, 640));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final paths = allAge56Lessons
+        .expand((lesson) => lesson.media.images.values)
+        .toSet()
+        .toList()
+      ..sort();
+    await tester.pumpWidget(_host(SingleChildScrollView(
+      child: Column(children: [
+        for (final path in paths)
+          SizedBox(
+            height: 120,
+            child: Image.asset(path, fit: BoxFit.contain, cacheWidth: 216),
+          ),
+      ]),
+    )));
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+    expect(find.byType(Image), findsNWidgets(paths.length));
   });
 }

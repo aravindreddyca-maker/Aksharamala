@@ -9,18 +9,25 @@ complete.
 
 | Module | Playable | Incomplete lessons | Missing topics | Visually complete | Visual art missing |
 |---|---:|---:|---|---:|---:|
-| English | 30 | 0 | None in supplied scope: CVC phonics, sight words, sentences and letter shapes are present | 21 | 9 |
-| Telugu | 26 | 0 | None in supplied scope: గుణింతాలు and simple reading are present | 6 | 20 |
-| Hindi | 26 | 0 | None in supplied scope: मात्राएँ and simple reading are present | 6 | 20 |
-| Tamil | 26 | 0 | None in supplied scope: உயிர்மெய்யெழுத்துகள் and simple reading are present | 6 | 20 |
+| English | 30 | 0 | None in supplied scope: CVC phonics, sight words, sentences and letter shapes are present | 25 | 5 |
+| Telugu | 26 | 0 | None in supplied scope: గుణింతాలు and simple reading are present | 8 | 18 |
+| Hindi | 26 | 0 | None in supplied scope: मात्राएँ and simple reading are present | 11 | 15 |
+| Tamil | 26 | 0 | None in supplied scope: உயிர்மெய்யெழுத்துகள் and simple reading are present | 11 | 15 |
 | Number Galaxy | 54 | 0 | None in supplied scope: place value, addition, subtraction, comparison, patterns, shapes and everyday maths are present | 47 | 7 |
-| **Total** | **162** | **0** | — | **86** | **76** |
+| **Total** | **162** | **0** | — | **102** | **60** |
 
 ## Asset inventory
 
 - Reused validated app art: cat, mango and Telugu cow.
 - Added optimized 512 px WebP cutouts: dog, fish, sun and tree. The reference
   goat was not shipped because the supplied JSON has no goat vocabulary lesson.
+- Added optimized 512 px WebP cutouts for pin, sit and pig. Consolidated
+  semantically identical concepts across languages and reused ten suitable
+  existing illustrations, improving visual completion from 86 to 102 lessons.
+- The baseline 76 missing lesson rows consolidate to 70 unique visual concepts:
+  13 are now integrated and verified; 57 remain in the production queue.
+- Full production requirements, multilingual word mapping, prompts, lesson
+  usage and review status are recorded in `AGE_5_6_PRODUCTION_ARTWORK_SPEC.md`.
 - Script combinations are rendered and animated as native Flutter text; marks
   are not baked into raster images.
 - Counting and arithmetic manipulatives are code-native, cache-free visuals.

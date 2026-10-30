@@ -53,9 +53,25 @@ String activityFor(String topic, String skill) {
 const conceptImages = <String, String>{
   'cat': 'assets/images/quiz/cat.png',
   'dog': 'assets/images/age56/dog.webp',
+  'कुत्ता': 'assets/images/age56/dog.webp',
+  'కుక్క': 'assets/images/age56/dog.webp',
   'fish': 'assets/images/age56/fish.webp',
+  'pin': 'assets/images/age56/pin.webp',
+  'pig': 'assets/images/age56/pig.webp',
+  'sit': 'assets/images/age56/sit.webp',
   'tree': 'assets/images/age56/tree.webp',
+  'மரம்': 'assets/images/age56/tree.webp',
   'sun': 'assets/images/age56/sun.webp',
+  'सूरज': 'assets/images/age56/sun.webp',
+  'pen': 'assets/images/quiz/te_pen.webp',
+  'नाव': 'assets/images/quiz/boat.png',
+  'गाय': 'assets/images/quiz/te_cow.webp',
+  'கல்': 'assets/images/quiz/ta_stone.webp',
+  'கிளி': 'assets/images/stories/parrot.webp',
+  'చిలుక': 'assets/images/stories/parrot.webp',
+  'हाथी': 'assets/images/quiz/te_elephant.webp',
+  'யானை': 'assets/images/quiz/te_elephant.webp',
+  'பூனை': 'assets/images/quiz/cat.png',
   'mango': 'assets/images/quiz/mango.png',
   'आम': 'assets/images/quiz/mango.png',
   'ఆవు': 'assets/images/quiz/te_cow.webp',
@@ -187,9 +203,17 @@ void main() {
               ? example
               : (example as Map<String, dynamic>)['word'] as String)
           .toList();
-      final examples = sourceExamples.isEmpty ? [answer] : sourceExamples;
+      final topic = lesson['topic'] as String;
+      final shapeConcept = module == 'numbers' && topic == 'shapes'
+          ? (lesson['title'] as String).replaceFirst('Shape:', '').trim()
+          : null;
+      final examples = sourceExamples.isNotEmpty
+          ? sourceExamples
+          : shapeConcept == null
+              ? [answer]
+              : [shapeConcept];
       final activity = activityFor(
-        lesson['topic'] as String,
+        topic,
         lesson['skill'] as String,
       );
       final concepts = <String>{
@@ -216,7 +240,7 @@ void main() {
         ..writeln('    difficultyLevel: ${difficultyFor(level)},')
         ..writeln('    learningObjective: ${q(lesson['objective'] as String)},')
         ..writeln('    prerequisites: ${list(effective)},')
-        ..writeln('    topic: ${q(lesson['topic'] as String)},')
+        ..writeln('    topic: ${q(topic)},')
         ..writeln('    skill: ${q(lesson['skill'] as String)},')
         ..writeln('    examples: ${list(examples)},')
         ..writeln('    educatorReviewVerified: false,')
