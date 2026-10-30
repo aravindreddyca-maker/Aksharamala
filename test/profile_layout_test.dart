@@ -1,5 +1,6 @@
 import 'package:aksharamala/src/app.dart';
 import 'package:aksharamala/src/app_controller.dart';
+import 'package:aksharamala/src/levels.dart';
 import 'package:aksharamala/src/models.dart';
 import 'package:aksharamala/src/screens/home_screen.dart';
 import 'package:aksharamala/src/screens/profile_screen.dart';
@@ -120,7 +121,13 @@ void main() {
         expect(rects.map((r) => r.top.round()).toSet().length, 1);
 
         // Level tiles are big enough for a thumb and all four are on screen.
-        for (final key in ['level_1', 'level_2', 'level_3', 'level_4']) {
+        for (final key in [
+          'level_1',
+          'level_2',
+          'level_3',
+          'level_4',
+          'level_5'
+        ]) {
           final r = tester.getRect(find.byKey(Key(key)));
           expect(r.width, greaterThanOrEqualTo(44), reason: key);
           expect(r.height, greaterThanOrEqualTo(44), reason: key);
@@ -133,7 +140,13 @@ void main() {
         final above = [
           ...rects,
           tester.getRect(find.byKey(const Key('profile_name'))),
-          for (final k in ['level_1', 'level_2', 'level_3', 'level_4'])
+          for (final k in [
+            'level_1',
+            'level_2',
+            'level_3',
+            'level_4',
+            'level_5'
+          ])
             tester.getRect(find.byKey(Key(k))),
         ];
         for (final r in above) {
@@ -152,18 +165,20 @@ void main() {
         await _show(tester, size, scale: scale);
         expect(tester.takeException(), isNull);
         for (final text in [
-          'Level 1 • ${_saved[0].stage.label}',
-          'Level 3 • ${_saved[1].stage.label}',
-          'Level 4 • ${_saved[2].stage.label}',
+          'Level 1 • ${levelInfo(_saved[0].level).tagline}',
+          'Level 3 • ${levelInfo(_saved[1].level).tagline}',
+          'Level 4 • ${levelInfo(_saved[2].level).tagline}',
         ]) {
           // The crew panel scrolls, so bring each tile into view first.
-          await tester.scrollUntilVisible(
-            find.text(text),
-            80,
-            scrollable: find.byType(Scrollable).first,
-          );
+          if (find.text(text).evaluate().isEmpty) {
+            await tester.scrollUntilVisible(
+              find.text(text),
+              80,
+              scrollable: find.byType(Scrollable).first,
+            );
+          }
           final paragraph = tester.renderObject<RenderParagraph>(
-            find.text(text),
+            find.text(text).first,
           );
           expect(
             paragraph.didExceedMaxLines,

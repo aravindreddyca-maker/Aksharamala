@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'levels.dart';
+
 enum ExperienceStage { explorer, creator, scholar, champion }
 
 extension ExperienceStageX on ExperienceStage {
@@ -25,14 +27,13 @@ extension ExperienceStageX on ExperienceStage {
       };
 }
 
-/// A level is the way a stage is shown to families: Level 1 is ages 3-4 and so
-/// on. It adds no new data; a profile still stores one age, and changing level
-/// stores that level's usual age.
+/// The four older age bands are the same as Levels 1 to 4.
 extension ExperienceStageLevel on ExperienceStage {
   int get level => index + 1;
   String get levelLabel => 'Level $level';
 
-  /// The age saved when a level is chosen directly.
+  /// An age that lands in this band, used only to make saves for tests and the
+  /// older constructor. Nothing shows or asks for an age.
   int get representativeAge => switch (this) {
         ExperienceStage.explorer => 4,
         ExperienceStage.creator => 6,
@@ -58,29 +59,42 @@ class ChildProfile {
     required this.age,
     required this.avatar,
     this.stars = 0,
-  });
+    int? level,
+  }) : _level = level;
 
   final String id;
   final String name;
+
+  /// Kept only so older saves keep loading. Nothing reads it for navigation: a
+  /// child's level is [level].
   final int age;
   final String avatar;
   final int stars;
-  ExperienceStage get stage => stageForAge(age);
+  final int? _level;
 
-  int get level => stage.level;
+  /// The level the child is learning at, 1 to 5. Saves made before levels
+  /// existed have none stored, so they get the level their old age band
+  /// became.
+  int get level => clampLevel(_level ?? levelForLegacyAge(age));
 
-  ChildProfile copyWith({int? stars, int? age}) => ChildProfile(
+  /// The older four-way grouping, kept for lessons still tagged by it. Level 5
+  /// is held to the last band.
+  ExperienceStage get stage => stageForLevel(level);
+
+  ChildProfile copyWith({int? stars, int? age, int? level}) => ChildProfile(
         id: id,
         name: name,
         age: age ?? this.age,
         avatar: avatar,
         stars: stars ?? this.stars,
+        level: level ?? this.level,
       );
 
   Map<String, Object> toJson() => {
         'id': id,
         'name': name,
         'age': age,
+        'level': level,
         'avatar': avatar,
         'stars': stars,
       };
@@ -88,7 +102,8 @@ class ChildProfile {
   factory ChildProfile.fromJson(Map<String, dynamic> json) => ChildProfile(
         id: json['id'] as String,
         name: json['name'] as String,
-        age: json['age'] as int,
+        age: json['age'] as int? ?? 4,
+        level: json['level'] as int?,
         avatar: json['avatar'] as String,
         stars: json['stars'] as int? ?? 0,
       );
@@ -163,6 +178,7 @@ class Lesson {
     this.story = const [],
     this.pictures = const {},
     this.cover,
+    this.levelSet,
   });
 
   final String id;
@@ -182,7 +198,16 @@ class Lesson {
   final LessonMedia media;
   final List<String> story;
 
-  bool supportsStage(ExperienceStage stage) => ageBands.contains(stage);
+  /// Set when a lesson belongs to levels the four old bands cannot name (Level
+  /// 5). Otherwise the levels come from [ageBands].
+  final Set<int>? levelSet;
+
+  /// The levels this lesson belongs to.
+  Set<int> get levels => levelSet ?? {for (final b in ageBands) b.level};
+
+  bool supportsLevel(int level) => levels.contains(level);
+
+  bool supportsStage(ExperienceStage stage) => supportsLevel(stage.level);
 
   /// Optional bundled picture per answer option. When present the quiz shows
   /// big picture answers (the word is written by the app, never baked in).
@@ -213,6 +238,19 @@ class LearningWorld {
   final String description;
   final List<Lesson> lessons;
 
+  /// The same world with only the lessons of [level].
+  LearningWorld forLevel(int level) => LearningWorld(
+        id: id,
+        name: name,
+        emoji: emoji,
+        assetPath: assetPath,
+        color: color,
+        darkColor: darkColor,
+        description: description,
+        lessons:
+            lessons.where((lesson) => lesson.supportsLevel(level)).toList(),
+      );
+
   LearningWorld forStage(ExperienceStage stage) => LearningWorld(
         id: id,
         name: name,
@@ -239,6 +277,8 @@ class ProgressRecord {
     required this.lastPlayed,
     required this.earnedBadges,
     this.questStars = const {},
+    this.levelAttempts = const {},
+    this.levelCorrect = const {},
   });
 
   factory ProgressRecord.empty() => const ProgressRecord(
@@ -270,6 +310,13 @@ class ProgressRecord {
   /// [starsPerQuest]). Saves made before this field existed have none, so a
   /// finished quest from such a save counts as fully paid (see [starsPaidBy]).
   final Map<String, int> questStars;
+
+  /// Answers given and answers right, **per level and world** (key
+  /// `level|world`, see [levelWorldKey]). They start counting from the version
+  /// that introduced levels; the older per-world totals above are kept as they
+  /// were.
+  final Map<String, int> levelAttempts;
+  final Map<String, int> levelCorrect;
 
   /// Stars [lessonId] has already paid. A finished quest with no record is
   /// treated as fully paid, so old saves cannot be replayed for more stars.
@@ -303,6 +350,8 @@ class ProgressRecord {
         'lastPlayed': lastPlayed,
         'earnedBadges': earnedBadges.toList(),
         'questStars': questStars,
+        'levelAttempts': levelAttempts,
+        'levelCorrect': levelCorrect,
       };
 
   factory ProgressRecord.fromJson(Map<String, dynamic> json) => ProgressRecord(
@@ -320,6 +369,12 @@ class ProgressRecord {
         },
         questStars: Map<String, int>.from(
           json['questStars'] as Map? ?? const {},
+        ),
+        levelAttempts: Map<String, int>.from(
+          json['levelAttempts'] as Map? ?? const {},
+        ),
+        levelCorrect: Map<String, int>.from(
+          json['levelCorrect'] as Map? ?? const {},
         ),
       );
 }

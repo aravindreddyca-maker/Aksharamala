@@ -49,7 +49,6 @@ void main() {
     controller = AppController(store: _NoDiskStore());
     await controller.initialise();
     await controller.addProfile('Meena', 4, 'lion');
-    await controller.setNewLessons(true);
     final world = controller.worlds.firstWhere((w) => w.id == worldId);
     final lesson = (worldId == 'telugu' ? teluguBatch : numbersBatch)[index];
     await tester.pumpWidget(

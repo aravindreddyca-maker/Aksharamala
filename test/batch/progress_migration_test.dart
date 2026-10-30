@@ -71,8 +71,6 @@ void main() {
       expect(c.activeProgress.completedLessons, {'te-a', 'en-a'});
       expect(c.activeProgress.attempts['telugu'], 3);
       expect(c.activeProgress.earnedBadges, contains('all-world-hero'));
-      expect(c.newLessonsEnabled, isTrue,
-          reason: 'all lessons are shown unless a parent turns them off');
     });
 
     test('loading never writes the aliases into the save', () async {
@@ -80,22 +78,6 @@ void main() {
       expect(c.activeProgress.completedLessons, {'te-a'});
       expect(c.activeProgress.toJson()['completedLessons'], ['te-a']);
       expect(c.activeProgress.questStars, {'te-a': 3});
-    });
-
-    test('a save from before the flag existed loads and saves cleanly',
-        () async {
-      final c = await open(oldSave(done: {'te-a'}, stars: {'te-a': 3}));
-      await c.setNewLessons(false);
-      final onDisk =
-          jsonDecode(await file.readAsString()) as Map<String, dynamic>;
-      expect((onDisk['settings'] as Map)['newLessons'], isFalse);
-      expect((onDisk['profiles'] as List).single['name'], 'Meena');
-      final reopened = AppController(store: LocalStore(fileOverride: file));
-      await reopened.initialise();
-      expect(reopened.newLessonsEnabled, isFalse,
-          reason: 'a parent who turned it off stays off');
-      expect(reopened.activeProgress.completedLessons, {'te-a'});
-      expect(reopened.profiles.single.stars, 0 + c.profiles.single.stars);
     });
   });
 
@@ -117,7 +99,6 @@ void main() {
         stars: {'te-a': 3},
         profileStars: 3,
       ));
-      await c.setNewLessons(true);
       final world = c.worlds.firstWhere((w) => w.id == 'telugu');
       final gained =
           await c.recordResult(world: world, lesson: t1, correct: true);
@@ -163,58 +144,173 @@ void main() {
     });
   });
 
-  group('the feature flag', () {
-    test('off: the child sees exactly the old worlds', () async {
+  group('levels and the save format', () {
+    test('an old save without levels gets the level its age band became',
+        () async {
+      for (final (age, level) in [
+        (3, 1),
+        (4, 1),
+        (5, 2),
+        (6, 2),
+        (7, 3),
+        (9, 3),
+        (10, 4),
+        (12, 4)
+      ]) {
+        final c = await open(oldSave(age: age));
+        expect(c.activeProfile!.level, level, reason: 'age $age');
+      }
+    });
+
+    test('saving writes version 2 with the level and keeps the old age',
+        () async {
+      final c = await open(oldSave(done: {'te-a'}, stars: {'te-a': 3}, age: 8));
+      await c.setLevel(5);
+      final onDisk =
+          jsonDecode(await file.readAsString()) as Map<String, dynamic>;
+      expect(onDisk['version'], 2);
+      final profile = (onDisk['profiles'] as List).single as Map;
+      expect(profile['level'], 5);
+      expect(profile['age'], 8, reason: 'the old age is kept, not rewritten');
+      expect(profile['name'], 'Meena');
+      expect(onDisk.containsKey('settings'), isFalse);
+    });
+
+    test('the original file is copied once, untouched, before the first save',
+        () async {
+      final original = oldSave(done: {'te-a'}, stars: {'te-a': 3});
+      final c = await open(original);
+      final backup = File('${file.path}.v1.bak');
+      expect(backup.existsSync(), isTrue);
+      expect(jsonDecode(backup.readAsStringSync()), original);
+      await c.setLevel(3);
+      await c.setLevel(2);
+      // A later save never replaces that first copy.
+      expect(jsonDecode(backup.readAsStringSync()), original);
+    });
+
+    test('a version 2 save loads exactly and makes no version 1 backup',
+        () async {
       final c = await open(oldSave());
-      await c.setNewLessons(false);
-      for (final world in curriculum) {
-        expect(
-          c.worlds.firstWhere((item) => item.id == world.id).lessons,
-          world.forStage(ExperienceStage.creator).lessons,
-        );
-      }
+      await c.setLevel(4);
+      File('${file.path}.v1.bak').deleteSync();
+      final again = AppController(store: LocalStore(fileOverride: file));
+      await again.initialise();
+      expect(again.activeProfile!.level, 4);
+      expect(File('${file.path}.v1.bak').existsSync(), isFalse);
     });
 
-    test('on (the default): the worlds gain the newer lessons', () async {
-      final c = await open(oldSave(age: 3));
-      expect(c.newLessonsEnabled, isTrue);
-      int count(String id) =>
-          c.worlds.firstWhere((w) => w.id == id).lessons.length;
-      expect(count('telugu'), greaterThan(1));
-      expect(count('numbers'), greaterThan(1));
-      expect(count('english'), greaterThan(0));
-      expect(count('hindi'), greaterThan(0));
-      expect(count('tamil'), greaterThan(0));
-      for (final world in c.worlds) {
-        expect(
-          world.lessons.every(
-            (lesson) => lesson.supportsStage(ExperienceStage.explorer),
-          ),
-          isTrue,
-          reason: world.id,
-        );
-      }
+    test('an unreadable file is kept and the last good save is used', () async {
+      final c = await open(oldSave(done: {'te-a'}, stars: {'te-a': 3}));
+      // A save leaves the previous good file beside it as progress.json.bak.
+      await c.setLevel(3);
+      await file.writeAsString('{ this is not json');
+      final again = AppController(store: LocalStore(fileOverride: file));
+      await again.initialise();
+      expect(again.profiles, isNotEmpty, reason: 'recovered from the copy');
+      expect(again.activeProgress.completedLessons, {'te-a'});
+      final kept = temp
+          .listSync()
+          .whereType<File>()
+          .where((f) => f.path.contains('.unreadable.'));
+      expect(kept, isNotEmpty, reason: 'the damaged file is not thrown away');
     });
+  });
 
-    test('turning it on and off changes nobody\'s progress', () async {
+  group('switching levels', () {
+    test('never changes finished lessons, stars, badges or avatar', () async {
       final c = await open(oldSave(
         done: {'te-a', 'en-a'},
         stars: {'te-a': 3, 'en-a': 3},
         profileStars: 6,
       ));
       final before = jsonEncode(c.activeProgress.toJson());
-      await c.setNewLessons(true);
-      await c.setNewLessons(false);
+      for (final level in [5, 1, 4, 2, 3, 5, 1]) {
+        await c.setLevel(level);
+        expect(c.activeProfile!.level, level);
+      }
       expect(jsonEncode(c.activeProgress.toJson()), before);
-      expect(c.profiles.single.stars, 6);
+      expect(c.activeProfile!.stars, 6);
+      expect(c.activeProfile!.avatar, 'lion');
+      expect(c.activeProfile!.name, 'Meena');
     });
 
-    test('it is stored in settings, not in any child\'s data', () async {
+    test('keeps each level\'s answer statistics apart', () async {
+      final c = await open(oldSave(age: 4));
+      final world1 = c.worlds.firstWhere((w) => w.id == 'english');
+      await c.recordResult(
+          world: world1, lesson: world1.lessons.first, correct: true);
+      await c.setLevel(2);
+      final world2 = c.worlds.firstWhere((w) => w.id == 'english');
+      await c.recordResult(
+          world: world2, lesson: world2.lessons.first, correct: false);
+      expect(c.accuracyAtLevel(1, 'english'), 1.0);
+      expect(c.accuracyAtLevel(2, 'english'), 0.0);
+      expect(c.activeProgress.levelAttempts, {'1|english': 1, '2|english': 1});
+      expect(c.activeProgress.levelCorrect, {'1|english': 1});
+      // They survive a save and reload.
+      final again = AppController(store: LocalStore(fileOverride: file));
+      await again.initialise();
+      expect(
+          again.activeProgress.levelAttempts, {'1|english': 1, '2|english': 1});
+    });
+
+    test('Level 5 opens with nothing broken, in every world', () async {
       final c = await open(oldSave());
-      await c.setNewLessons(false);
-      final onDisk =
-          jsonDecode(await file.readAsString()) as Map<String, dynamic>;
-      expect(onDisk['settings'], {'newLessons': false});
+      await c.setLevel(5);
+      expect(c.worlds.length, 5);
+      for (final w in c.worlds) {
+        expect(w.lessons, isEmpty, reason: 'no Level 5 lesson exists yet');
+      }
+      expect(c.activeProfile!.level, 5);
+      // Going back finds everything where it was.
+      await c.setLevel(1);
+      expect(c.worlds.any((w) => w.lessons.isNotEmpty), isTrue);
+    });
+
+    test('a level outside 1-5 is held to the nearest', () async {
+      final c = await open(oldSave());
+      await c.setLevel(9);
+      expect(c.activeProfile!.level, 5);
+      await c.setLevel(0);
+      expect(c.activeProfile!.level, 1);
+    });
+
+    test('a new child can start at any level', () async {
+      final c = AppController(store: LocalStore(fileOverride: file));
+      await c.initialise();
+      await c.createProfile(name: 'Asha', level: 5, avatar: 'panda');
+      expect(c.activeProfile!.level, 5);
+      expect(c.activeProgress.completedLessons, isEmpty);
+    });
+
+    test('recommending in an empty world is refused, not silently wrong',
+        () async {
+      final c = await open(oldSave());
+      await c.setLevel(5);
+      expect(() => c.recommendedLesson(c.worlds.first), throwsStateError);
+    });
+  });
+
+  group('every lesson belongs to a level', () {
+    test('each of the 360 lessons is in at least one of Levels 1-4', () {
+      final c = AppController(store: LocalStore(fileOverride: file));
+      var count = 0;
+      for (final w in c.allWorlds) {
+        for (final l in w.lessons) {
+          expect(l.levels, isNotEmpty, reason: l.id);
+          expect(l.levels.every((n) => n >= 1 && n <= 4), isTrue, reason: l.id);
+          count++;
+        }
+      }
+      expect(count, greaterThan(300));
+    });
+
+    test('no lesson is shown in Level 5 yet', () {
+      final c = AppController(store: LocalStore(fileOverride: file));
+      expect(
+          c.allWorlds.expand((w) => w.lessons).where((l) => l.supportsLevel(5)),
+          isEmpty);
     });
   });
 
@@ -222,7 +318,6 @@ void main() {
     test('right first time pays 3, a mistake pays 1, never more than 3',
         () async {
       final c = await open(oldSave());
-      await c.setNewLessons(true);
       final world = c.worlds.firstWhere((w) => w.id == 'numbers');
       final n3 = numbersBatch[3];
       expect(await c.recordResult(world: world, lesson: n3, correct: false), 1);
@@ -238,7 +333,6 @@ void main() {
         done: {'te-word', 'te-trace', 'te-story'},
         stars: {'te-word': 3, 'te-trace': 3, 'te-story': 3},
       ));
-      await c.setNewLessons(true);
       final world = c.worlds.firstWhere((w) => w.id == 'telugu');
       expect(c.recommendedLesson(world).id, 'te-a');
       await c.recordResult(

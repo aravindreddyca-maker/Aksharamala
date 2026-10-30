@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app.dart';
 import '../app_controller.dart';
+import '../levels.dart';
 import '../models.dart';
 import '../widgets/common.dart';
 import '../widgets/level_picker.dart';
@@ -45,10 +46,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
       return;
     }
     setState(() => _adding = true);
-    await AppScope.of(context).addProfile(
-      _name.text,
-      stageForLevel(_level).representativeAge,
-      _avatar,
+    await AppScope.of(context).createProfile(
+      name: _name.text,
+      level: _level,
+      avatar: _avatar,
     );
     if (!mounted) return;
     Navigator.of(context).pushReplacement(
@@ -275,7 +276,7 @@ class _LearnerTile extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              '${profile.stage.levelLabel} • ${profile.stage.label}',
+                              '${levelInfo(profile.level).label} • ${levelInfo(profile.level).tagline}',
                               maxLines: 3,
                               style: const TextStyle(fontSize: 13, height: 1.2),
                             ),
@@ -324,7 +325,7 @@ class _ProfileForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final stage = stageForLevel(level);
+    final info = levelInfo(level);
     final nameField = TextField(
       key: const Key('profile_name'),
       controller: name,
@@ -337,7 +338,7 @@ class _ProfileForm extends StatelessWidget {
       ),
     );
     final hint = Text(
-      '${stage.levelLabel} • ${stage.ageLabel} • ${stage.focus}',
+      '${info.label} • ${info.tagline}',
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
       style: const TextStyle(fontSize: 13, height: 1.2),

@@ -33,7 +33,7 @@ void main() {
     );
     await tester.pump();
     expect(find.textContaining('Asha'), findsWidgets);
-    expect(find.textContaining('Trace • Spell'), findsOneWidget);
+    expect(find.textContaining('Level '), findsWidgets);
     for (final id in ['english', 'telugu', 'hindi', 'tamil']) {
       expect(find.byKey(Key('world_$id')), findsOneWidget);
       expect(

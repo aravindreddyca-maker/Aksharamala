@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'batch/batch_content.dart';
 import 'batch/batch_lesson.dart';
 import 'curriculum.dart';
+import 'levels.dart';
 import 'models.dart';
 import 'services/local_store.dart';
 
@@ -15,43 +16,40 @@ class AppController extends ChangeNotifier {
   ChildProfile? activeProfile;
   bool loaded = false;
 
-  /// Feature flag (a parent setting, off by default): when on, the first batch
-  /// of curriculum-pack lessons is added to the Telugu and Number Galaxy worlds.
-  bool newLessonsEnabled = false;
+  /// Every lesson there is, across all levels. Which of them a child sees is
+  /// decided by the child's level (see [worlds]).
+  List<LearningWorld> get allWorlds =>
+      worldsWithBatch(worldsWithAge56(curriculum));
 
-  /// The worlds the child sees: the existing curriculum, plus the new lessons
-  /// when the flag is on. Existing quests are never changed or removed.
+  /// The worlds the child sees: the lessons of the active child's level (Level
+  /// 1 when no child is chosen yet). A world with no lessons at that level is
+  /// still listed, empty: the screens show it as "coming soon".
   List<LearningWorld> get worlds {
-    final all = newLessonsEnabled
-        ? worldsWithBatch(worldsWithAge56(curriculum))
-        : curriculum;
-    final stage = activeProfile?.stage;
-    if (stage == null) return all;
-    return [for (final world in all) world.forStage(stage)];
-  }
-
-  Future<void> setNewLessons(bool value) async {
-    if (value == newLessonsEnabled) return;
-    newLessonsEnabled = value;
-    await _persist();
-    notifyListeners();
+    final level = activeProfile?.level ?? firstLevel;
+    return [for (final world in allWorlds) world.forLevel(level)];
   }
 
   Future<void> initialise() async {
     final snapshot = await _store.load();
     profiles = List<ChildProfile>.of(snapshot.profiles);
     progress = Map<String, ProgressRecord>.of(snapshot.progress);
-    newLessonsEnabled = snapshot.newLessons;
     if (profiles.isNotEmpty) activeProfile = profiles.first;
     loaded = true;
     notifyListeners();
   }
 
-  Future<void> addProfile(String name, int age, String avatar) async {
+  /// Adds a child who starts at [level] (1 to 5).
+  Future<void> createProfile({
+    required String name,
+    required int level,
+    required String avatar,
+  }) async {
     final profile = ChildProfile(
       id: DateTime.now().microsecondsSinceEpoch.toString(),
       name: name.trim(),
-      age: age,
+      // Kept only for the save format; nothing reads or shows it.
+      age: stageForLevel(level).representativeAge,
+      level: clampLevel(level),
       avatar: avatar,
     );
     profiles = [...profiles, profile];
@@ -61,8 +59,16 @@ class AppController extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Anyone can pick any level at any time. It only changes which quests are
-  /// shown (through the saved age); nothing earned is touched.
+  /// Older shape of [createProfile], from when a child was entered by age. The
+  /// age only picks the level that age band became.
+  Future<void> addProfile(String name, int age, String avatar) => createProfile(
+        name: name,
+        level: levelForLegacyAge(age),
+        avatar: avatar,
+      );
+
+  /// Anyone can pick any level at any time. It only changes which lessons are
+  /// shown; nothing earned (stars, finished lessons, badges) is touched.
   Future<void> setLevel(int level) async {
     final profile = activeProfile;
     if (profile != null) await setLevelFor(profile.id, level);
@@ -73,9 +79,9 @@ class AppController extends ChangeNotifier {
     final index = profiles.indexWhere((p) => p.id == profileId);
     if (index < 0) return;
     final profile = profiles[index];
-    final target = stageForLevel(level);
-    if (stageForAge(profile.age) == target) return;
-    final updated = profile.copyWith(age: target.representativeAge);
+    final target = clampLevel(level);
+    if (profile.level == target) return;
+    final updated = profile.copyWith(level: target);
     profiles = [...profiles]..[index] = updated;
     if (activeProfile?.id == profileId) activeProfile = updated;
     await _persist();
@@ -101,11 +107,21 @@ class AppController extends ChangeNotifier {
     return attempts == 0 ? 0 : (record.correct[worldId] ?? 0) / attempts;
   }
 
+  /// Answers right out of answers given for [worldId] at [level], counted from
+  /// the version that introduced levels. 0 when nothing has been answered.
+  double accuracyAtLevel(int level, String worldId) {
+    final key = levelWorldKey(level, worldId);
+    final given = activeProgress.levelAttempts[key] ?? 0;
+    return given == 0 ? 0 : (activeProgress.levelCorrect[key] ?? 0) / given;
+  }
+
   Lesson recommendedLesson(LearningWorld world) {
-    // [worlds] already returns the active profile's age-filtered worlds. Keep
-    // this scoped to the world it receives so deliberate subsets are not
-    // silently filtered a second time.
+    // [worlds] already returns the active child's level. Keep this scoped to
+    // the world it receives so deliberate subsets are not filtered again.
     final candidates = world.lessons;
+    if (candidates.isEmpty) {
+      throw StateError('${world.id} has no lessons to recommend at this level');
+    }
     final done = activeProgress.completedWithLegacy;
     final unfinished = candidates.where(
         (lesson) => !done.contains(lesson.id) && isLessonUnlocked(lesson));
@@ -124,7 +140,6 @@ class AppController extends ChangeNotifier {
 
   String get adaptiveMessage {
     if (activeProfile == null) return '';
-    final stage = activeProfile!.stage;
     final weakWorld = curriculum.reduce(
       (a, b) => accuracyFor(a.id) <= accuracyFor(b.id) ? a : b,
     );
@@ -132,7 +147,7 @@ class AppController extends ChangeNotifier {
         accuracyFor(weakWorld.id) < .7) {
       return 'Practice pick: ${weakWorld.name} — a gentle review is ready.';
     }
-    return '${stage.focus}. Your next adventure is ready!';
+    return 'Your next adventure is ready!';
   }
 
   Future<int> recordResult({
@@ -149,6 +164,12 @@ class AppController extends ChangeNotifier {
     final correctMap = {...old.correct};
     attempts[world.id] = (attempts[world.id] ?? 0) + 1;
     if (correct) correctMap[world.id] = (correctMap[world.id] ?? 0) + 1;
+    // The same answer, counted for the level the child is working at.
+    final levelKey = levelWorldKey(profile.level, world.id);
+    final levelAttempts = {...old.levelAttempts};
+    final levelCorrect = {...old.levelCorrect};
+    levelAttempts[levelKey] = (levelAttempts[levelKey] ?? 0) + 1;
+    if (correct) levelCorrect[levelKey] = (levelCorrect[levelKey] ?? 0) + 1;
     final badges = {...old.earnedBadges};
     if (completed.isNotEmpty) badges.add('first-step');
     if (completed.length >= 4) badges.add('world-walker');
@@ -173,6 +194,8 @@ class AppController extends ChangeNotifier {
       lastPlayed: {...old.lastPlayed, world.id: lesson.id},
       earnedBadges: badges,
       questStars: {...old.questStars, lesson.id: paid + gained},
+      levelAttempts: levelAttempts,
+      levelCorrect: levelCorrect,
     );
     final updated = profile.copyWith(stars: profile.stars + gained);
     profiles =
@@ -183,11 +206,6 @@ class AppController extends ChangeNotifier {
     return gained;
   }
 
-  Future<void> _persist() => _store.save(
-        LocalSnapshot(
-          profiles: profiles,
-          progress: progress,
-          newLessons: newLessonsEnabled,
-        ),
-      );
+  Future<void> _persist() =>
+      _store.save(LocalSnapshot(profiles: profiles, progress: progress));
 }

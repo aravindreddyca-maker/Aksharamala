@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../app.dart';
-import '../models.dart';
+import '../levels.dart';
 import '../widgets/common.dart';
 
 class ParentDashboard extends StatelessWidget {
@@ -38,7 +38,7 @@ class ParentDashboard extends StatelessWidget {
                           style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         Text(
-                          '${profile.stage.levelLabel} • ${profile.stage.ageLabel} • ${profile.stage.focus}',
+                          '${levelInfo(profile.level).label} • ${levelInfo(profile.level).tagline}',
                         ),
                       ],
                     ),
@@ -73,21 +73,6 @@ class ParentDashboard extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-              const SizedBox(height: 10),
-              Card(
-                child: SwitchListTile(
-                  key: const Key('new_lessons_switch'),
-                  title: const Text('Show all lessons'),
-                  subtitle: const Text(
-                    'Every level (1 to 4), including the newer Telugu letter '
-                    'lessons, Number Galaxy 0–10 and the ages 5–6 lessons. '
-                    'Stars and progress already earned are always kept. '
-                    'Turn it off to see only the original quests.',
-                  ),
-                  value: controller.newLessonsEnabled,
-                  onChanged: controller.setNewLessons,
-                ),
               ),
               const SectionTitle('Progress by world'),
               GridView.builder(

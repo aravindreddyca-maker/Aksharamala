@@ -122,7 +122,6 @@ void main() {
         const ChildProfile(id: 'k', name: 'K', age: 4, avatar: 'lion')
       ];
       c.activeProfile = c.profiles.first;
-      expect(c.newLessonsEnabled, isTrue, reason: 'on by default');
       final seen = <int, int>{};
       for (final level in [4, 2, 1, 3]) {
         await c.setLevel(level);
@@ -190,7 +189,7 @@ void main() {
       ),
     );
     await tester.pump();
-    expect(find.textContaining('Level 1 • Little Explorer'), findsOneWidget);
+    expect(find.textContaining('Level 1 • Foundations'), findsWidgets);
     await tester.tap(find.byKey(const Key('level_of_p')));
     await tester.pumpAndSettle();
     expect(find.text('Choose a level'), findsOneWidget);
@@ -200,7 +199,7 @@ void main() {
     ));
     await tester.pumpAndSettle();
     expect(c.profiles.single.level, 3);
-    expect(find.textContaining('Level 3 • Curious Scholar'), findsOneWidget);
+    expect(find.textContaining('Level 3 • Intermediate'), findsOneWidget);
     // Choosing a level did not open the profile.
     expect(find.byType(ProfileScreen), findsOneWidget);
   });

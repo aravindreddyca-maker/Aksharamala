@@ -29,7 +29,6 @@ AppController _controller() {
     ..profiles = const [profile]
     ..progress = {'p': ProgressRecord.empty()}
     ..activeProfile = profile
-    ..newLessonsEnabled = true
     ..loaded = true;
 }
 

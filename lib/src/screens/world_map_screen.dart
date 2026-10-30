@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 import '../app.dart';
 import '../batch/batch_content.dart' show batchQuestArt;
 import '../batch/batch_lesson.dart';
+import '../levels.dart';
 import '../models.dart';
 import '../quest_art.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/level_picker.dart';
 import '../alphabet/alphabet_data.dart';
 import 'alphabet_screen.dart';
 import 'batch_lesson_screen.dart';
@@ -27,6 +29,7 @@ class WorldMapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = AppScope.of(context);
     final progress = controller.activeProgress;
+    if (world.lessons.isEmpty) return _ComingSoon(world: world);
     final recommended = controller.recommendedLesson(world);
     return Scaffold(
       appBar: AppBar(
@@ -90,6 +93,82 @@ class WorldMapScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// A world with no lessons at the child's level yet (Level 5 today, and the
+/// worlds whose later levels are still being written). It says so plainly and
+/// shows the way to a level that has lessons; nothing is locked.
+class _ComingSoon extends StatelessWidget {
+  const _ComingSoon({required this.world});
+  final LearningWorld world;
+
+  @override
+  Widget build(BuildContext context) {
+    final level = AppScope.of(context).activeProfile?.level ?? firstLevel;
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(world.name),
+        backgroundColor: const Color(0xCC13213A),
+        foregroundColor: Colors.white,
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              world.color.withValues(alpha: .35),
+              const Color(0xFFFFFBF4)
+            ],
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 520),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.hourglass_top_rounded,
+                      size: 56, color: world.darkColor),
+                  const SizedBox(height: 12),
+                  Text(
+                    '${levelInfo(level).label} lessons for ${world.name} are '
+                    'coming soon.',
+                    key: const Key('coming_soon'),
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'You can choose another level to keep learning. Your stars '
+                    'and finished quests are kept.',
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 16),
+                  FilledButton.icon(
+                    key: const Key('choose_level'),
+                    onPressed: () => showLevelDialog(
+                      context,
+                      current: level,
+                      onPicked: AppScope.of(context).setLevel,
+                    ),
+                    icon: const Icon(Icons.stairs_rounded),
+                    label: const Text('Choose a level'),
+                    style: FilledButton.styleFrom(
+                      minimumSize: const Size(48, 48),
+                      backgroundColor: world.darkColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -313,8 +392,7 @@ class _QuestTrailState extends State<_QuestTrail> {
   Widget build(BuildContext context) {
     final lessons = widget.world.lessons;
     // Writing (tracing every letter) belongs to Level 1 only.
-    final atLevelOne =
-        AppScope.of(context).activeProfile?.stage == ExperienceStage.explorer;
+    final atLevelOne = AppScope.of(context).activeProfile?.level == firstLevel;
     final letters = atLevelOne ? alphabets[widget.world.id] : null;
     // The first card is "All letters" (for the languages that have a script).
     final lead = letters == null ? 0 : 1;

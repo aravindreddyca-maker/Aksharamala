@@ -6,6 +6,7 @@ import 'package:flutter/services.dart' show HapticFeedback;
 import '../app.dart';
 import '../services/speech_service.dart';
 import '../greeting.dart';
+import '../levels.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
@@ -322,7 +323,7 @@ class _LevelButton extends StatelessWidget {
             onPicked: AppScope.of(context).setLevel,
           ),
           icon: const Icon(Icons.stairs_rounded),
-          label: Text(profile.stage.levelLabel),
+          label: Text(levelInfo(profile.level).label),
           style: FilledButton.styleFrom(
             minimumSize: const Size(GameTokens.minTouch, 48),
             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -537,7 +538,7 @@ class _WorldCard extends StatelessWidget {
     final controller = AppScope.of(context);
     final done = controller.completedInWorld(world);
     final total = world.lessons.length;
-    final progress = done / total;
+    final progress = total == 0 ? 0.0 : done / total;
     final emblem = _emblemAssets[world.id];
     final mascot = _worldMascots[world.id];
     // Panel tinted from the world's own colour, dark enough for white text.
@@ -545,8 +546,10 @@ class _WorldCard extends StatelessWidget {
     final panelBottom = Color.lerp(world.darkColor, Colors.black, .52)!;
     return Semantics(
       button: true,
-      label: 'Open ${world.name}, $done of $total quests done, '
-          '${(progress * 100).round()} percent',
+      label: total == 0
+          ? 'Open ${world.name}, lessons for this level are coming soon'
+          : 'Open ${world.name}, $done of $total quests done, '
+              '${(progress * 100).round()} percent',
       excludeSemantics: true,
       child: Material(
         color: Colors.transparent,
@@ -682,7 +685,9 @@ class _WorldCard extends StatelessWidget {
                                                 ),
                                                 const SizedBox(height: 4),
                                                 Text(
-                                                  '$done/$total quests',
+                                                  total == 0
+                                                      ? 'Coming soon'
+                                                      : '$done/$total quests',
                                                   maxLines: 1,
                                                   style: const TextStyle(
                                                     color: Colors.white,

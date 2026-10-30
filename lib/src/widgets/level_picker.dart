@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../models.dart';
+import '../levels.dart';
 import '../theme.dart';
 
-/// Four levels side by side. Anyone may pick any of them, at any time: a level
+/// Five levels side by side. Anyone may pick any of them, at any time: a level
 /// is a starting point for what the child sees, never a lock.
 class LevelPicker extends StatelessWidget {
   const LevelPicker({
@@ -13,7 +13,7 @@ class LevelPicker extends StatelessWidget {
     this.dense = false,
   });
 
-  /// 1 to 4.
+  /// 1 to 5.
   final int selected;
   final ValueChanged<int> onChanged;
   final bool dense;
@@ -21,14 +21,14 @@ class LevelPicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
         children: [
-          for (final stage in ExperienceStage.values) ...[
-            if (stage != ExperienceStage.explorer) const SizedBox(width: 8),
+          for (final info in levelInfos) ...[
+            if (info.number != firstLevel) const SizedBox(width: 6),
             Expanded(
               child: _LevelTile(
-                stage: stage,
-                selected: stage.level == selected,
+                info: info,
+                selected: info.number == selected,
                 dense: dense,
-                onTap: () => onChanged(stage.level),
+                onTap: () => onChanged(info.number),
               ),
             ),
           ],
@@ -38,13 +38,13 @@ class LevelPicker extends StatelessWidget {
 
 class _LevelTile extends StatelessWidget {
   const _LevelTile({
-    required this.stage,
+    required this.info,
     required this.selected,
     required this.dense,
     required this.onTap,
   });
 
-  final ExperienceStage stage;
+  final LevelInfo info;
   final bool selected;
   final bool dense;
   final VoidCallback onTap;
@@ -55,7 +55,7 @@ class _LevelTile extends StatelessWidget {
   Widget build(BuildContext context) => Semantics(
         button: true,
         selected: selected,
-        label: '${stage.levelLabel}, ${stage.ageLabel.toLowerCase()}',
+        label: '${info.label}, ${info.tagline}',
         excludeSemantics: true,
         child: Material(
           color: selected ? const Color(0xFFEDE9FF) : Colors.white,
@@ -67,7 +67,7 @@ class _LevelTile extends StatelessWidget {
             ),
           ),
           child: InkWell(
-            key: Key('level_${stage.level}'),
+            key: Key('level_${info.number}'),
             borderRadius: BorderRadius.circular(16),
             onTap: onTap,
             child: ConstrainedBox(
@@ -96,7 +96,7 @@ class _LevelTile extends StatelessWidget {
                               ),
                             ),
                           Text(
-                            stage.levelLabel,
+                            info.label,
                             maxLines: 1,
                             style: const TextStyle(
                               fontSize: 16,
@@ -110,7 +110,7 @@ class _LevelTile extends StatelessWidget {
                     FittedBox(
                       fit: BoxFit.scaleDown,
                       child: Text(
-                        stage.ageLabel,
+                        info.tagline,
                         maxLines: 1,
                         style: const TextStyle(
                           fontSize: 12,

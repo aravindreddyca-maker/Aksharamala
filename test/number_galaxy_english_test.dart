@@ -22,7 +22,6 @@ void main() {
   Future<List<Lesson>> allNumberLessons() async {
     final c = AppController(store: _S());
     await c.initialise();
-    await c.setNewLessons(true);
     return [
       for (final stage in ExperienceStage.values)
         ...() {
