@@ -1,8 +1,11 @@
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show HapticFeedback;
 
 import '../app.dart';
+import '../services/speech_service.dart';
+import '../greeting.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
@@ -144,7 +147,7 @@ Future<void> _parentGate(BuildContext context) async {
 
 /// One row: greeting banner with the child's avatar overlapping it, then
 /// Rewards, Parents and the star count. Frees height for the world cards.
-class _HomeHeader extends StatelessWidget {
+class _HomeHeader extends StatefulWidget {
   const _HomeHeader({
     required this.profile,
     required this.message,
@@ -155,6 +158,46 @@ class _HomeHeader extends StatelessWidget {
   final String message;
   final bool compact;
   final double pad;
+
+  @override
+  State<_HomeHeader> createState() => _HomeHeaderState();
+}
+
+class _HomeHeaderState extends State<_HomeHeader>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _bounce = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 520),
+  );
+  final _speech = const SpeechService();
+  int _line = 0;
+
+  ChildProfile get profile => widget.profile;
+  String get message => widget.message;
+  bool get compact => widget.compact;
+  double get pad => widget.pad;
+
+  @override
+  void dispose() {
+    _bounce.dispose();
+    _speech.stop();
+    super.dispose();
+  }
+
+  List<String> get _lines => greetingLines(
+        name: profile.name,
+        stars: profile.stars,
+        now: DateTime.now(),
+      );
+
+  /// Tap the banner or the friend: they bounce, say something new, and read it
+  /// out loud.
+  void _sayHello() {
+    HapticFeedback.lightImpact();
+    setState(() => _line = (_line + 1) % _lines.length);
+    _bounce.forward(from: 0);
+    _speech.speak(_lines[_line], 'en-US');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -180,6 +223,8 @@ class _HomeHeader extends StatelessWidget {
                     height: bannerHeight,
                     child: _GreetingBanner(
                       name: profile.name,
+                      line: _lines[_line % _lines.length],
+                      onTap: _sayHello,
                       message: message,
                       compact: compact,
                       leftInset: avatarSize * .5,
@@ -200,9 +245,23 @@ class _HomeHeader extends StatelessWidget {
                           ),
                         ),
                         borderRadius: BorderRadius.circular(avatarSize),
-                        child: GameAvatar(
-                          value: profile.avatar,
-                          size: avatarSize,
+                        child: ScaleTransition(
+                          scale: TweenSequence<double>([
+                            TweenSequenceItem(
+                              tween: Tween(begin: 1.0, end: 1.22)
+                                  .chain(CurveTween(curve: Curves.easeOut)),
+                              weight: 30,
+                            ),
+                            TweenSequenceItem(
+                              tween: Tween(begin: 1.22, end: 1.0)
+                                  .chain(CurveTween(curve: Curves.elasticOut)),
+                              weight: 70,
+                            ),
+                          ]).animate(_bounce),
+                          child: GameAvatar(
+                            value: profile.avatar,
+                            size: avatarSize,
+                          ),
                         ),
                       ),
                     ),
@@ -275,11 +334,17 @@ class _LevelButton extends StatelessWidget {
 class _GreetingBanner extends StatelessWidget {
   const _GreetingBanner({
     required this.name,
+    required this.line,
+    required this.onTap,
     required this.message,
     required this.compact,
     required this.leftInset,
   });
   final String name;
+
+  /// The hello being shown; tapping the banner asks for the next one.
+  final String line;
+  final VoidCallback onTap;
   final String message;
   final bool compact;
   final double leftInset;
@@ -290,58 +355,92 @@ class _GreetingBanner extends StatelessWidget {
       // the rest of the screen still follows the system text size.
       MediaQuery.withClampedTextScaling(maxScaleFactor: 1.25, child: _body());
 
-  Widget _body() => Container(
-        padding: EdgeInsets.fromLTRB(leftInset + 12, 4, 16, 4),
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [Color(0xFF5D4DD4), Color(0xFF9A5DE2)],
-          ),
-          borderRadius: BorderRadius.circular(30),
-          boxShadow: const [
-            BoxShadow(
-              color: Color(0x55000000),
-              blurRadius: 12,
-              offset: Offset(0, 5),
-            ),
-          ],
+  /// The line with the child's name picked out in gold.
+  TextSpan _span() {
+    final at = line.indexOf(name);
+    if (name.isEmpty || at < 0) return TextSpan(text: line);
+    return TextSpan(
+      children: [
+        TextSpan(text: line.substring(0, at)),
+        TextSpan(
+          text: name,
+          style: const TextStyle(color: GameTokens.gold),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              alignment: Alignment.centerLeft,
-              child: Text.rich(
-                TextSpan(
-                  children: [
-                    const TextSpan(text: 'Namaste, '),
-                    TextSpan(
-                      text: '$name!',
-                      style: const TextStyle(color: GameTokens.gold),
+        TextSpan(text: line.substring(at + name.length)),
+      ],
+    );
+  }
+
+  Widget _body() => Semantics(
+        button: true,
+        hint: 'Tap for a new hello',
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            key: const Key('greeting_banner'),
+            borderRadius: BorderRadius.circular(30),
+            onTap: onTap,
+            child: Ink(
+              padding: EdgeInsets.fromLTRB(leftInset + 12, 4, 16, 4),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF5D4DD4), Color(0xFF9A5DE2)],
+                ),
+                borderRadius: BorderRadius.circular(30),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color(0x55000000),
+                    blurRadius: 12,
+                    offset: Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 260),
+                    transitionBuilder: (child, animation) => FadeTransition(
+                      opacity: animation,
+                      child: SlideTransition(
+                        position: Tween(
+                          begin: const Offset(0, .35),
+                          end: Offset.zero,
+                        ).animate(animation),
+                        child: child,
+                      ),
                     ),
-                  ],
-                ),
-                maxLines: 1,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: compact ? 18 : 23,
-                  fontWeight: FontWeight.w900,
-                  height: 1.1,
-                ),
+                    child: FittedBox(
+                      key: ValueKey(line),
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.centerLeft,
+                      child: Text.rich(
+                        _span(),
+                        maxLines: 1,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: compact ? 18 : 23,
+                          fontWeight: FontWeight.w900,
+                          height: 1.1,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Text(
+                    message,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: compact ? 12 : 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
             ),
-            Text(
-              message,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: compact ? 12 : 14,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
+          ),
         ),
       );
 }

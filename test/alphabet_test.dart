@@ -1,4 +1,4 @@
-﻿import 'dart:io';
+import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:aksharamala/src/alphabet/alphabet_data.dart';
@@ -331,6 +331,37 @@ void main() {
         expect(find.byKey(const Key('alphabet_progress_text')), findsOneWidget);
       });
     }
+
+    testWidgets('All letters is the first card of the trail, before quest 1',
+        (tester) async {
+      tester.view
+        ..devicePixelRatio = 1
+        ..physicalSize = const Size(960, 540);
+      addTearDown(tester.view.reset);
+      final c = _controller();
+      final w = curriculum.firstWhere((w) => w.id == 'english');
+      await tester.pumpWidget(
+        AppScope(
+          controller: c,
+          child:
+              MaterialApp(theme: buildTheme(), home: WorldMapScreen(world: w)),
+        ),
+      );
+      await tester.pumpAndSettle();
+      final card = tester.getRect(find.byKey(const Key('all_letters')));
+      final quest =
+          tester.getRect(find.byKey(Key('lesson_${w.lessons.first.id}')));
+      expect(card.left, lessThan(quest.left));
+      expect(find.text('0 of 26 traced'), findsOneWidget);
+      // It is part of the trail, not a button in the header.
+      expect(
+        find.descendant(
+          of: find.byKey(const Key('quest_trail')),
+          matching: find.byKey(const Key('all_letters')),
+        ),
+        findsOneWidget,
+      );
+    });
 
     testWidgets('Number Galaxy has none: numbers are not an alphabet',
         (tester) async {

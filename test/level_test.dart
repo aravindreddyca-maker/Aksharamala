@@ -1,6 +1,7 @@
 import 'package:aksharamala/src/app.dart';
 import 'package:aksharamala/src/app_controller.dart';
 import 'package:aksharamala/src/models.dart';
+import 'package:aksharamala/src/greeting.dart';
 import 'package:aksharamala/src/screens/home_screen.dart';
 import 'package:aksharamala/src/screens/profile_screen.dart';
 import 'package:aksharamala/src/services/local_store.dart';
@@ -165,6 +166,77 @@ void main() {
     expect(find.textContaining('Level 3 • Curious Scholar'), findsOneWidget);
     // Choosing a level did not open the profile.
     expect(find.byType(ProfileScreen), findsOneWidget);
+  });
+
+  group('the greeting', () {
+    test('starts with the time of day and always names the child', () {
+      for (final (hour, word) in [
+        (6, 'Good morning'),
+        (11, 'Good morning'),
+        (12, 'Good afternoon'),
+        (16, 'Good afternoon'),
+        (17, 'Good evening'),
+        (22, 'Good evening'),
+      ]) {
+        final lines = greetingLines(
+          name: 'Meena',
+          stars: 5,
+          now: DateTime(2026, 10, 30, hour),
+        );
+        expect(lines.first, '$word, Meena!', reason: 'hour $hour');
+        expect(lines.length, greaterThanOrEqualTo(4));
+        expect(lines.every((l) => l.isNotEmpty), isTrue);
+      }
+    });
+
+    test('mentions the stars, and invites a first one when there are none', () {
+      final some = greetingLines(name: 'Ravi', stars: 12, now: DateTime(2026));
+      expect(some.any((l) => l.contains('12 stars')), isTrue);
+      final one = greetingLines(name: 'Ravi', stars: 1, now: DateTime(2026));
+      expect(one.any((l) => l.contains('1 star!')), isTrue);
+      final none = greetingLines(name: 'Ravi', stars: 0, now: DateTime(2026));
+      expect(none.any((l) => l.contains('first star')), isTrue);
+      expect(none.any((l) => l.contains('0 stars')), isFalse);
+    });
+
+    test('Namaste is gone', () {
+      for (final l in greetingLines(name: 'A', stars: 3, now: DateTime(2026))) {
+        expect(l.toLowerCase().contains('namaste'), isFalse);
+      }
+    });
+
+    testWidgets('tapping the banner changes the hello and bounces the friend',
+        (tester) async {
+      tester.view
+        ..devicePixelRatio = 1
+        ..physicalSize = const Size(960, 540);
+      addTearDown(tester.view.reset);
+      await tester.pumpWidget(
+        AppScope(
+          controller: _controller(),
+          child: MaterialApp(theme: buildTheme(), home: const HomeScreen()),
+        ),
+      );
+      await tester.pump();
+      final first = greetingLines(
+        name: 'Meena',
+        stars: 0,
+        now: DateTime.now(),
+      );
+      expect(find.textContaining(first[0]), findsOneWidget);
+      await tester.tap(find.byKey(const Key('greeting_banner')));
+      await tester.pump(const Duration(milliseconds: 100));
+      await tester.pumpAndSettle();
+      expect(find.textContaining(first[0]), findsNothing);
+      expect(find.textContaining(first[1]), findsOneWidget);
+      expect(tester.takeException(), isNull);
+      // It cycles all the way round.
+      for (var i = 2; i <= first.length; i++) {
+        await tester.tap(find.byKey(const Key('greeting_banner')));
+        await tester.pumpAndSettle();
+      }
+      expect(find.textContaining(first[0]), findsOneWidget);
+    });
   });
 
   testWidgets('the home screen shows the level and anyone can change it',

@@ -1,4 +1,4 @@
-import 'dart:ui' show PointerDeviceKind;
+﻿import 'dart:ui' show PointerDeviceKind;
 
 import 'package:flutter/material.dart';
 
@@ -175,30 +175,6 @@ class _Header extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 10),
-              // Every letter of the language on one page: learn from scratch,
-              // trace each one, then move on to the next.
-              if (alphabets[world.id] != null) ...[
-                FilledButton.icon(
-                  key: const Key('all_letters'),
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute<void>(
-                      builder: (_) => AlphabetScreen(
-                        world: world,
-                        letters: alphabets[world.id]!,
-                      ),
-                    ),
-                  ),
-                  icon: const Icon(Icons.abc_rounded),
-                  label: const Text('All letters'),
-                  style: FilledButton.styleFrom(
-                    minimumSize: const Size(48, 48),
-                    backgroundColor: const Color(0xFFFFE36E),
-                    foregroundColor: const Color(0xFF13213A),
-                  ),
-                ),
-                const SizedBox(width: 10),
-              ],
               StarPill(stars),
             ],
           ),
@@ -318,8 +294,13 @@ class _QuestTrailState extends State<_QuestTrail> {
   }
 
   /// Opens with the recommended quest in view (it can be quest 4 of 4).
-  void _revealRecommended(double viewport, double cardWidth, int index) {
-    if (_positioned || index <= 0) return;
+  void _revealRecommended(
+    double viewport,
+    double cardWidth,
+    int index,
+    int lead,
+  ) {
+    if (_positioned || index <= lead) return;
     _positioned = true;
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted || !_ready) return;
@@ -331,6 +312,9 @@ class _QuestTrailState extends State<_QuestTrail> {
   @override
   Widget build(BuildContext context) {
     final lessons = widget.world.lessons;
+    final letters = alphabets[widget.world.id];
+    // The first card is "All letters" (for the languages that have a script).
+    final lead = letters == null ? 0 : 1;
     return LayoutBuilder(
       builder: (context, constraints) {
         const dotsHeight = 34.0;
@@ -348,11 +332,13 @@ class _QuestTrailState extends State<_QuestTrail> {
         _revealRecommended(
           constraints.maxWidth,
           cardWidth,
-          lessons.indexWhere((l) => l.id == widget.recommended.id),
+          lead + lessons.indexWhere((l) => l.id == widget.recommended.id),
+          lead,
         );
         final canLeft = _offset > 2;
         final canRight = _ready && _offset < _max - 2;
-        final current = (_offset / _step).round().clamp(0, lessons.length - 1);
+        final current =
+            (_offset / _step).round().clamp(0, lessons.length + lead - 1);
         return Column(
           children: [
             Expanded(
@@ -392,9 +378,32 @@ class _QuestTrailState extends State<_QuestTrail> {
                           widget.pad,
                           4,
                         ),
-                        itemCount: lessons.length,
+                        itemCount: lessons.length + lead,
                         separatorBuilder: (_, __) => const SizedBox(width: gap),
-                        itemBuilder: (context, index) {
+                        itemBuilder: (context, position) {
+                          if (letters != null && position == 0) {
+                            return Align(
+                              alignment: Alignment.center,
+                              child: SizedBox(
+                                width: cardWidth,
+                                height: cardHeight,
+                                child: _AlphabetCard(
+                                  world: widget.world,
+                                  letters: letters,
+                                  done: [
+                                    for (var i = 0;
+                                        i < letters.letters.length;
+                                        i++)
+                                      if (widget.completed
+                                          .contains(letters.lessonId(i)))
+                                        i,
+                                  ].length,
+                                  horizontal: horizontal,
+                                ),
+                              ),
+                            );
+                          }
+                          final index = position - lead;
                           final lesson = lessons[index];
                           return Align(
                             alignment: Alignment.center,
@@ -454,9 +463,14 @@ class _QuestTrailState extends State<_QuestTrail> {
               height: dotsHeight,
               child: _Dots(
                 key: const Key('trail_dots'),
-                count: lessons.length,
+                count: lessons.length + lead,
                 current: current,
                 done: [
+                  if (letters != null)
+                    [
+                      for (var i = 0; i < letters.letters.length; i++)
+                        widget.completed.contains(letters.lessonId(i))
+                    ].every((d) => d),
                   for (final l in lessons) widget.completed.contains(l.id)
                 ],
                 color: widget.world.color,
@@ -561,6 +575,179 @@ class _Dots extends StatelessWidget {
                     ),
             ),
           ),
+        ),
+      );
+}
+
+/// The first card of a language's trail: every letter on one page.
+class _AlphabetCard extends StatelessWidget {
+  const _AlphabetCard({
+    required this.world,
+    required this.letters,
+    required this.done,
+    required this.horizontal,
+  });
+
+  final LearningWorld world;
+  final AlphabetSet letters;
+  final int done;
+  final bool horizontal;
+
+  @override
+  Widget build(BuildContext context) {
+    final total = letters.letters.length;
+    final sample = letters.letters.take(3).map((l) => l.glyph).join('  ');
+    final finished = done >= total;
+    final art = ClipRRect(
+      borderRadius: BorderRadius.circular(horizontal ? 16 : 18),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [world.darkColor, world.color],
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                sample,
+                maxLines: 1,
+                style: scriptStyle(
+                  sample,
+                  const TextStyle(
+                    fontSize: 54,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                    height: 1.1,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    final text = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'All letters',
+          maxLines: 1,
+          style: TextStyle(
+            color: world.darkColor,
+            fontSize: horizontal ? 18 : 20,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
+        Text(
+          'See, hear and trace every letter, one after another.',
+          maxLines: 3,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(
+            color: Color(0xFF3A2A33),
+            fontSize: 14,
+            height: 1.25,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          finished ? 'All $total traced' : '$done of $total traced',
+          key: const Key('all_letters_progress'),
+          style: TextStyle(
+            color: world.darkColor,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+      ],
+    );
+    final button = FilledButton.icon(
+      onPressed: () => _open(context),
+      icon: const Icon(Icons.abc_rounded),
+      label: Text(done == 0
+          ? 'Start'
+          : finished
+              ? 'Open'
+              : 'Continue'),
+      style: FilledButton.styleFrom(
+        backgroundColor: world.darkColor,
+        minimumSize: const Size.fromHeight(48),
+      ),
+    );
+    return Semantics(
+      button: true,
+      excludeSemantics: true,
+      label: 'All letters. $done of $total traced',
+      child: Material(
+        color: const Color(0xFFFFF6E5),
+        elevation: 6,
+        shadowColor: const Color(0x99000000),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(26),
+          side: BorderSide(color: world.darkColor, width: 4),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          key: const Key('all_letters'),
+          onTap: () => _open(context),
+          child: Padding(
+            padding: const EdgeInsets.all(10),
+            child: MediaQuery.withClampedTextScaling(
+              maxScaleFactor: 1.3,
+              child: horizontal
+                  ? Row(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        SizedBox(width: 118, child: art),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Expanded(
+                                  child: SingleChildScrollView(child: text)),
+                              const SizedBox(height: 6),
+                              button,
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
+                  : Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Expanded(flex: 5, child: art),
+                        const SizedBox(height: 8),
+                        Expanded(flex: 4, child: _fitTop(text)),
+                        const SizedBox(height: 6),
+                        button,
+                      ],
+                    ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// Shrinks the text to fit the space it is given, rather than scrolling
+  /// inside the card (the trail itself is the only thing that scrolls).
+  Widget _fitTop(Widget child) => LayoutBuilder(
+        builder: (context, box) => FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.topLeft,
+          child: SizedBox(width: box.maxWidth, child: child),
+        ),
+      );
+
+  void _open(BuildContext context) => Navigator.push(
+        context,
+        MaterialPageRoute<void>(
+          builder: (_) => AlphabetScreen(world: world, letters: letters),
         ),
       );
 }

@@ -70,7 +70,7 @@ void main() {
         await tester.pumpAndSettle();
         expect(tester.takeException(), isNull);
         expect(find.byKey(const Key('home_scroll')), findsOneWidget);
-        expect(find.text('Namaste, Ananya!'), findsOneWidget);
+        expect(find.textContaining('Ananya'), findsWidgets);
         await tester.drag(
           find.byKey(const Key('home_scroll')),
           const Offset(0, -800),
@@ -166,7 +166,7 @@ void main() {
     );
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
-    expect(find.text('Namaste, Ananya!'), findsOneWidget);
+    expect(find.textContaining('Ananya'), findsWidgets);
     for (final world in curriculum) {
       expect(find.byKey(Key('world_${world.id}')), findsOneWidget);
     }

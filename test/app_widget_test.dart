@@ -32,7 +32,7 @@ void main() {
       ),
     );
     await tester.pump();
-    expect(find.text('Namaste, Asha!'), findsOneWidget);
+    expect(find.textContaining('Asha'), findsWidgets);
     expect(find.textContaining('Trace • Spell'), findsOneWidget);
     for (final id in ['english', 'telugu', 'hindi', 'tamil']) {
       expect(find.byKey(Key('world_$id')), findsOneWidget);

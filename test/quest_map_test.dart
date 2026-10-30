@@ -27,7 +27,9 @@ const _sizes = <Size>[
 
 final _tamilSource = curriculum.firstWhere((w) => w.id == 'tamil');
 final _tamil = LearningWorld(
-  id: _tamilSource.id,
+  // Not 'tamil': that world has an All letters card first, which is tested in
+  // alphabet_test.dart. This file tests the plain four-card carousel.
+  id: 'tamil-carousel',
   name: _tamilSource.name,
   emoji: _tamilSource.emoji,
   assetPath: _tamilSource.assetPath,
