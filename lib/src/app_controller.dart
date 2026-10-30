@@ -61,6 +61,20 @@ class AppController extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Anyone can pick any level at any time. It only changes which quests are
+  /// shown (through the saved age); nothing earned is touched.
+  Future<void> setLevel(int level) async {
+    final profile = activeProfile;
+    if (profile == null) return;
+    final age = stageForLevel(level).representativeAge;
+    if (stageForAge(profile.age) == stageForLevel(level)) return;
+    final updated = profile.copyWith(age: age);
+    profiles = [for (final p in profiles) p.id == profile.id ? updated : p];
+    activeProfile = updated;
+    await _persist();
+    notifyListeners();
+  }
+
   void selectProfile(ChildProfile profile) {
     activeProfile = profile;
     notifyListeners();

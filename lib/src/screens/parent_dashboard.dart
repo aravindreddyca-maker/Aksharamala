@@ -38,7 +38,7 @@ class ParentDashboard extends StatelessWidget {
                           style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         Text(
-                          '${profile.stage.ageLabel} • ${profile.stage.focus}',
+                          '${profile.stage.levelLabel} • ${profile.stage.ageLabel} • ${profile.stage.focus}',
                         ),
                       ],
                     ),

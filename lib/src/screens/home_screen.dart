@@ -6,6 +6,7 @@ import '../app.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/level_picker.dart';
 import 'achievements_screen.dart';
 import 'parent_dashboard.dart';
 import 'profile_screen.dart';
@@ -211,6 +212,8 @@ class _HomeHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 10),
+          _LevelButton(profile: profile),
+          const SizedBox(width: 8),
           _ActionButton(
             icon: Image.asset(
               'assets/images/rewards/trophy.png',
@@ -242,6 +245,31 @@ class _HomeHeader extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Shows the current level; anyone can tap it to pick a different one.
+class _LevelButton extends StatelessWidget {
+  const _LevelButton({required this.profile});
+  final ChildProfile profile;
+
+  @override
+  Widget build(BuildContext context) => Tooltip(
+        message: 'Change level',
+        child: FilledButton.tonalIcon(
+          key: const Key('level_button'),
+          onPressed: () => showLevelDialog(
+            context,
+            current: profile.level,
+            onPicked: AppScope.of(context).setLevel,
+          ),
+          icon: const Icon(Icons.stairs_rounded),
+          label: Text(profile.stage.levelLabel),
+          style: FilledButton.styleFrom(
+            minimumSize: const Size(GameTokens.minTouch, 48),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+          ),
+        ),
+      );
 }
 
 class _GreetingBanner extends StatelessWidget {

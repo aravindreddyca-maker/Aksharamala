@@ -25,6 +25,25 @@ extension ExperienceStageX on ExperienceStage {
       };
 }
 
+/// A level is the way a stage is shown to families: Level 1 is ages 3-4 and so
+/// on. It adds no new data; a profile still stores one age, and changing level
+/// stores that level's usual age.
+extension ExperienceStageLevel on ExperienceStage {
+  int get level => index + 1;
+  String get levelLabel => 'Level $level';
+
+  /// The age saved when a level is chosen directly.
+  int get representativeAge => switch (this) {
+        ExperienceStage.explorer => 4,
+        ExperienceStage.creator => 6,
+        ExperienceStage.scholar => 8,
+        ExperienceStage.champion => 11,
+      };
+}
+
+ExperienceStage stageForLevel(int level) => ExperienceStage
+    .values[(level - 1).clamp(0, ExperienceStage.values.length - 1)];
+
 ExperienceStage stageForAge(int age) {
   if (age <= 4) return ExperienceStage.explorer;
   if (age <= 6) return ExperienceStage.creator;
@@ -48,10 +67,12 @@ class ChildProfile {
   final int stars;
   ExperienceStage get stage => stageForAge(age);
 
-  ChildProfile copyWith({int? stars}) => ChildProfile(
+  int get level => stage.level;
+
+  ChildProfile copyWith({int? stars, int? age}) => ChildProfile(
         id: id,
         name: name,
-        age: age,
+        age: age ?? this.age,
         avatar: avatar,
         stars: stars ?? this.stars,
       );

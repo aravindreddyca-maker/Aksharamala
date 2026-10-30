@@ -4,6 +4,7 @@ import '../app.dart';
 import '../app_controller.dart';
 import '../models.dart';
 import '../widgets/common.dart';
+import '../widgets/level_picker.dart';
 import 'home_screen.dart';
 
 /// Below this usable width (portrait phones) the two panels stack. Landscape
@@ -24,7 +25,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final _name = TextEditingController();
-  int _age = 5;
+  int _level = 1;
   String _avatar = 'lion';
   bool _adding = false;
 
@@ -44,7 +45,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
       return;
     }
     setState(() => _adding = true);
-    await AppScope.of(context).addProfile(_name.text, _age, _avatar);
+    await AppScope.of(context).addProfile(
+      _name.text,
+      stageForLevel(_level).representativeAge,
+      _avatar,
+    );
     if (!mounted) return;
     Navigator.of(context).pushReplacement(
       MaterialPageRoute<void>(builder: (_) => const HomeScreen()),
@@ -73,12 +78,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
           );
           final creator = _ProfileForm(
             name: _name,
-            age: _age,
+            level: _level,
             avatar: _avatar,
             adding: _adding,
             scrollable: !stacked,
             dense: dense,
-            onAgeChanged: (value) => setState(() => _age = value),
+            onLevelChanged: (value) => setState(() => _level = value),
             onAvatarChanged: (value) => setState(() => _avatar = value),
             onCreate: _create,
           );
@@ -256,7 +261,7 @@ class _LearnerTile extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 4),
                     child: Text(
-                      'Age ${profile.age} • ${profile.stage.label}',
+                      '${profile.stage.levelLabel} • ${profile.stage.label}',
                       maxLines: 3,
                       style: const TextStyle(fontSize: 13, height: 1.2),
                     ),
@@ -272,35 +277,35 @@ class _LearnerTile extends StatelessWidget {
 class _ProfileForm extends StatelessWidget {
   const _ProfileForm({
     required this.name,
-    required this.age,
+    required this.level,
     required this.avatar,
     required this.adding,
     required this.scrollable,
     required this.dense,
-    required this.onAgeChanged,
+    required this.onLevelChanged,
     required this.onAvatarChanged,
     required this.onCreate,
   });
   final bool dense;
   final TextEditingController name;
-  final int age;
+  final int level;
   final String avatar;
   final bool adding;
 
   /// True when the card has a bounded height: the fields scroll if they must,
   /// and Create & Play stays pinned and visible underneath them.
   final bool scrollable;
-  final ValueChanged<int> onAgeChanged;
+  final ValueChanged<int> onLevelChanged;
   final ValueChanged<String> onAvatarChanged;
   final VoidCallback onCreate;
 
   /// Below this card height (a 360 dp landscape phone) the name and the age
   /// share one row so everything fits above the pinned button.
-  static const _shortHeight = 330.0;
+  static const _shortHeight = 380.0;
 
   @override
   Widget build(BuildContext context) {
-    final stage = stageForAge(age);
+    final stage = stageForLevel(level);
     final nameField = TextField(
       key: const Key('profile_name'),
       controller: name,
@@ -313,7 +318,7 @@ class _ProfileForm extends StatelessWidget {
       ),
     );
     final hint = Text(
-      '${stage.ageLabel} • ${stage.focus}',
+      '${stage.levelLabel} • ${stage.ageLabel} • ${stage.focus}',
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
       style: const TextStyle(fontSize: 13, height: 1.2),
@@ -328,34 +333,32 @@ class _ProfileForm extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
-              'Create a child profile',
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge
-                  ?.copyWith(fontSize: short ? 18 : 20),
-            ),
-            SizedBox(height: short ? 4 : 8),
+            // The screen already asks who is learning; on a short screen the
+            // card's own heading is dropped to leave room for the level tiles.
+            if (!short) ...[
+              Text(
+                'Create a child profile',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(fontSize: short ? 18 : 20),
+              ),
+              SizedBox(height: short ? 4 : 8),
+            ],
             _AvatarPicker(selected: avatar, onChanged: onAvatarChanged),
             SizedBox(height: short ? 6 : 8),
-            if (short)
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Expanded(child: nameField),
-                  const SizedBox(width: 6),
-                  _AgeStepper(age: age, onChanged: onAgeChanged),
-                ],
-              )
-            else ...[
-              nameField,
-              const SizedBox(height: 6),
-              _AgeRow(age: age, onChanged: onAgeChanged),
-            ],
-            SizedBox(height: short ? 2 : 0),
-            hint,
+            nameField,
+            SizedBox(height: short ? 4 : 6),
+            LevelPicker(
+              selected: level,
+              onChanged: onLevelChanged,
+              dense: true,
+            ),
+            // On a short screen the tiles already show the level and ages, so
+            // the extra line is dropped to keep everything above Create & Play.
+            if (!short) ...[const SizedBox(height: 0), hint],
           ],
         );
     return Card(
@@ -390,45 +393,6 @@ class _ProfileForm extends StatelessWidget {
       ),
     );
   }
-}
-
-/// A compact − [Age 5] + control for short screens.
-class _AgeStepper extends StatelessWidget {
-  const _AgeStepper({required this.age, required this.onChanged});
-  final int age;
-  final ValueChanged<int> onChanged;
-
-  @override
-  Widget build(BuildContext context) => Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          IconButton.filledTonal(
-            key: const Key('age_down'),
-            tooltip: 'Younger',
-            onPressed: age > 3 ? () => onChanged(age - 1) : null,
-            icon: const Icon(Icons.remove_rounded),
-            constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
-          ),
-          SizedBox(
-            width: 58,
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                'Age $age',
-                maxLines: 1,
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-            ),
-          ),
-          IconButton.filledTonal(
-            key: const Key('age_up'),
-            tooltip: 'Older',
-            onPressed: age < 12 ? () => onChanged(age + 1) : null,
-            icon: const Icon(Icons.add_rounded),
-            constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
-          ),
-        ],
-      );
 }
 
 /// All six avatars on one row. Each fills an equal share of the width, so the
@@ -531,55 +495,5 @@ class _AvatarChoice extends StatelessWidget {
             ),
           ),
         ),
-      );
-}
-
-/// Age with big − and + buttons around the slider, so a parent never has to
-/// drag precisely to change it by one year.
-class _AgeRow extends StatelessWidget {
-  const _AgeRow({required this.age, required this.onChanged});
-  final int age;
-  final ValueChanged<int> onChanged;
-
-  @override
-  Widget build(BuildContext context) => Row(
-        children: [
-          SizedBox(
-            width: 64,
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Age $age',
-                maxLines: 1,
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-            ),
-          ),
-          IconButton.filledTonal(
-            key: const Key('age_down'),
-            tooltip: 'Younger',
-            onPressed: age > 3 ? () => onChanged(age - 1) : null,
-            icon: const Icon(Icons.remove_rounded),
-            constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
-          ),
-          Expanded(
-            child: Slider(
-              value: age.toDouble(),
-              min: 3,
-              max: 12,
-              divisions: 9,
-              label: '$age',
-              onChanged: (value) => onChanged(value.round()),
-            ),
-          ),
-          IconButton.filledTonal(
-            key: const Key('age_up'),
-            tooltip: 'Older',
-            onPressed: age < 12 ? () => onChanged(age + 1) : null,
-            icon: const Icon(Icons.add_rounded),
-            constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
-          ),
-        ],
       );
 }

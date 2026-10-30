@@ -81,6 +81,12 @@ Future<void> _show(
   await tester.pumpAndSettle();
 }
 
+/// The tick inside a level tile: shows which level is chosen.
+Finder _ticked(String key) => find.descendant(
+      of: find.byKey(Key(key)),
+      matching: find.byIcon(Icons.check_circle_rounded),
+    );
+
 void main() {
   for (final size in _sizes) {
     for (final scale in [1.0, 1.3]) {
@@ -113,12 +119,13 @@ void main() {
         }
         expect(rects.map((r) => r.top.round()).toSet().length, 1);
 
-        // Age buttons are big enough for a parent's thumb.
-        for (final key in ['age_down', 'age_up']) {
+        // Level tiles are big enough for a thumb and all four are on screen.
+        for (final key in ['level_1', 'level_2', 'level_3', 'level_4']) {
           final r = tester.getRect(find.byKey(Key(key)));
-          expect(r.width, greaterThanOrEqualTo(48));
-          expect(r.height, greaterThanOrEqualTo(48));
+          expect(r.width, greaterThanOrEqualTo(44), reason: key);
+          expect(r.height, greaterThanOrEqualTo(44), reason: key);
           expect(r.bottom, lessThanOrEqualTo(size.height));
+          expect(r.right, lessThanOrEqualTo(size.width));
         }
 
         // Nothing is hidden behind (or scrolled under) Create & Play: every
@@ -126,16 +133,17 @@ void main() {
         final above = [
           ...rects,
           tester.getRect(find.byKey(const Key('profile_name'))),
-          tester.getRect(find.byKey(const Key('age_down'))),
-          tester.getRect(find.byKey(const Key('age_up'))),
+          for (final k in ['level_1', 'level_2', 'level_3', 'level_4'])
+            tester.getRect(find.byKey(Key(k))),
         ];
         for (final r in above) {
-          expect(r.bottom, lessThanOrEqualTo(create.top + 0.5));
+          expect(r.bottom, lessThanOrEqualTo(create.top + 0.5),
+              reason: 'field $r above Create');
         }
         // And a tap at the middle of each really reaches it.
-        await tester.tap(find.byKey(const Key('age_up')));
+        await tester.tap(find.byKey(const Key('level_2')));
         await tester.pump();
-        expect(find.text('Age 6'), findsOneWidget);
+        expect(_ticked('level_2'), findsOneWidget);
       });
 
       testWidgets('saved-profile descriptions are not cut off at $tag', (
@@ -144,9 +152,9 @@ void main() {
         await _show(tester, size, scale: scale);
         expect(tester.takeException(), isNull);
         for (final text in [
-          'Age 4 • ${_saved[0].stage.label}',
-          'Age 7 • ${_saved[1].stage.label}',
-          'Age 11 • ${_saved[2].stage.label}',
+          'Level 1 • ${_saved[0].stage.label}',
+          'Level 3 • ${_saved[1].stage.label}',
+          'Level 4 • ${_saved[2].stage.label}',
         ]) {
           // The crew panel scrolls, so bring each tile into view first.
           await tester.scrollUntilVisible(
@@ -257,30 +265,22 @@ void main() {
     handle.dispose();
   });
 
-  testWidgets('age buttons step by one and stop at 3 and 12', (tester) async {
+  testWidgets('any level can be chosen, in any order, with no lock', (
+    tester,
+  ) async {
     await _show(tester, const Size(800, 360));
-    expect(find.text('Age 5'), findsOneWidget);
-    await tester.tap(find.byKey(const Key('age_up')));
-    await tester.pump();
-    expect(find.text('Age 6'), findsOneWidget);
-    for (var i = 0; i < 10; i++) {
-      await tester.tap(find.byKey(const Key('age_up')), warnIfMissed: false);
+    // Level 1 (ages 3-4) is the starting choice.
+    expect(_ticked('level_1'), findsOneWidget);
+    for (final level in [4, 2, 3, 1]) {
+      await tester.tap(find.byKey(Key('level_$level')));
       await tester.pump();
+      expect(_ticked('level_$level'), findsOneWidget);
+      // Only one level is chosen at a time.
+      expect(find.byIcon(Icons.check_circle_rounded), findsOneWidget);
     }
-    expect(find.text('Age 12'), findsOneWidget);
-    expect(
-      tester.widget<IconButton>(find.byKey(const Key('age_up'))).onPressed,
-      isNull,
-    );
-    for (var i = 0; i < 12; i++) {
-      await tester.tap(find.byKey(const Key('age_down')), warnIfMissed: false);
-      await tester.pump();
-    }
-    expect(find.text('Age 3'), findsOneWidget);
-    expect(
-      tester.widget<IconButton>(find.byKey(const Key('age_down'))).onPressed,
-      isNull,
-    );
+    // There is no age control any more.
+    expect(find.byKey(const Key('age_up')), findsNothing);
+    expect(find.byKey(const Key('age_down')), findsNothing);
   });
 
   testWidgets('creating a profile still saves it and opens the home screen', (
@@ -289,7 +289,7 @@ void main() {
     final controller = _controller();
     await _show(tester, const Size(800, 360), controller: controller);
     await tester.tap(find.byKey(const Key('avatar_tiger')));
-    await tester.tap(find.byKey(const Key('age_up')));
+    await tester.tap(find.byKey(const Key('level_2')));
     await tester.enterText(find.byKey(const Key('profile_name')), 'Meera');
     await tester.pump();
     await tester.tap(find.byKey(const Key('create_profile')));
