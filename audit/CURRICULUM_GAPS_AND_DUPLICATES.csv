@@ -1,0 +1,428 @@
+﻿kind,level,world,lesson_id,title,detail
+near_duplicate,3,numbers,proposed-l3-num-008,Multiplication facts 3 4,"similar to proposed-l3-num-007 (title 0.86, objective 0.14)"
+near_duplicate,3,telugu,proposed-l3-te-004,మూడు అక్షరాల పదాలు,"similar to proposed-l3-te-003 (title 0.86, objective 0.55)"
+needs_speech_or_parent_judgement,3,english,proposed-l3-en-014,Write connected sentences,'Arrange and type or speak 3 sentences': cannot be marked automatically; practice or parent-reviewed only
+needs_speech_or_parent_judgement,4,hindi,proposed-l4-hi-001,Reading fluency,'Read a short passage aloud': cannot be marked automatically; practice or parent-reviewed only
+needs_speech_or_parent_judgement,4,tamil,proposed-l4-ta-001,Reading fluency,'Read a short passage aloud': cannot be marked automatically; practice or parent-reviewed only
+needs_speech_or_parent_judgement,4,telugu,proposed-l4-te-001,Reading fluency,'Read a short passage aloud': cannot be marked automatically; practice or parent-reviewed only
+prerequisite_crosses_level,2,english,en-word,Word Builder,needs en-a (level 1); would lock a level the child chose freely
+prerequisite_crosses_level,2,hindi,hi-word,शब्द बनाओ,needs hi-a (level 1); would lock a level the child chose freely
+prerequisite_crosses_level,2,numbers,num-add,Rocket Addition,needs num-count (level 1); would lock a level the child chose freely
+prerequisite_crosses_level,2,tamil,ta-word,சொல் தோட்டம்,needs ta-a (level 1); would lock a level the child chose freely
+prerequisite_crosses_level,2,telugu,te-word,పదాల తోట,needs te-a (level 1); would lock a level the child chose freely
+prerequisite_crosses_level,3,english,en-story,Mina and the Mango,needs en-word (level 2); would lock a level the child chose freely
+prerequisite_crosses_level,3,hindi,hi-story,नीली पतंग,needs hi-word (level 2); would lock a level the child chose freely
+prerequisite_crosses_level,3,numbers,num-multiply,Array Multiplication,needs num-subtract (level 2); would lock a level the child chose freely
+prerequisite_crosses_level,3,tamil,ta-story,வண்ணத்துப்பூச்சி,needs ta-word (level 2); would lock a level the child chose freely
+prerequisite_crosses_level,3,telugu,te-story,చిన్ని చిలుక,needs te-word (level 2); would lock a level the child chose freely
+prerequisite_crosses_level,4,english,english-story-002,The Blue Kite,needs en-story (level 3); would lock a level the child chose freely
+prerequisite_crosses_level,4,hindi,hindi-story-002,छोटा पौधा,needs hi-story (level 3); would lock a level the child chose freely
+prerequisite_crosses_level,4,numbers,num-fraction,Fractions of a Set,needs num-divide (level 3); would lock a level the child chose freely
+prerequisite_crosses_level,4,tamil,tamil-story-002,சிறிய பூனை,needs ta-story (level 3); would lock a level the child chose freely
+prerequisite_crosses_level,4,telugu,telugu-story-001,అమ్మ మరియు పండు,needs te-story (level 3); would lock a level the child chose freely
+prerequisite_crosses_level,5,english,proposed-l5-en-001,Author purpose and audience,needs proposed-l4-en-015 (level 4); would lock a level the child chose freely
+prerequisite_crosses_level,5,hindi,proposed-l5-hi-001,Independent passage reading,needs proposed-l4-hi-015 (level 4); would lock a level the child chose freely
+prerequisite_crosses_level,5,numbers,proposed-l5-num-001,Integers and number line,needs proposed-l4-num-015 (level 4); would lock a level the child chose freely
+prerequisite_crosses_level,5,tamil,proposed-l5-ta-001,Independent passage reading,needs proposed-l4-ta-015 (level 4); would lock a level the child chose freely
+prerequisite_crosses_level,5,telugu,proposed-l5-te-001,Independent passage reading,needs proposed-l4-te-015 (level 4); would lock a level the child chose freely
+regional_content_in_english_only,4,hindi,proposed-l4-hi-001,Reading fluency,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-002,Vocabulary in context,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-003,Synonyms and antonyms,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-004,Word formation,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-005,Nouns and pronouns,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-006,Verbs and time,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-007,Describing words,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-008,Sentence building,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-009,Paragraph reading,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-010,Story sequencing,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-011,Cause and effect,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-012,Listening comprehension,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-013,Guided paragraph writing,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-014,Everyday communication,no native-script text; needs localisation
+regional_content_in_english_only,4,hindi,proposed-l4-hi-015,Level review,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-001,Reading fluency,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-002,Vocabulary in context,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-003,Synonyms and antonyms,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-004,Word formation,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-005,Nouns and pronouns,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-006,Verbs and time,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-007,Describing words,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-008,Sentence building,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-009,Paragraph reading,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-010,Story sequencing,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-011,Cause and effect,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-012,Listening comprehension,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-013,Guided paragraph writing,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-014,Everyday communication,no native-script text; needs localisation
+regional_content_in_english_only,4,tamil,proposed-l4-ta-015,Level review,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-001,Reading fluency,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-002,Vocabulary in context,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-003,Synonyms and antonyms,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-004,Word formation,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-005,Nouns and pronouns,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-006,Verbs and time,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-007,Describing words,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-008,Sentence building,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-009,Paragraph reading,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-010,Story sequencing,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-011,Cause and effect,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-012,Listening comprehension,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-013,Guided paragraph writing,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-014,Everyday communication,no native-script text; needs localisation
+regional_content_in_english_only,4,telugu,proposed-l4-te-015,Level review,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-001,Independent passage reading,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-002,Main idea and summary,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-003,Inference with evidence,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-004,Proverbs and expressions,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-005,Word roots and formation,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-006,Sentence types,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-007,Tense and agreement,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-008,Connecting ideas,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-009,Dialogue and narration,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-010,Compare two texts,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-011,Narrative composition,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-012,Informational writing,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-013,Opinion writing,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-014,Listening and presentation,no native-script text; needs localisation
+regional_content_in_english_only,5,hindi,proposed-l5-hi-015,Integrated language project,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-001,Independent passage reading,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-002,Main idea and summary,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-003,Inference with evidence,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-004,Proverbs and expressions,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-005,Word roots and formation,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-006,Sentence types,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-007,Tense and agreement,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-008,Connecting ideas,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-009,Dialogue and narration,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-010,Compare two texts,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-011,Narrative composition,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-012,Informational writing,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-013,Opinion writing,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-014,Listening and presentation,no native-script text; needs localisation
+regional_content_in_english_only,5,tamil,proposed-l5-ta-015,Integrated language project,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-001,Independent passage reading,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-002,Main idea and summary,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-003,Inference with evidence,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-004,Proverbs and expressions,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-005,Word roots and formation,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-006,Sentence types,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-007,Tense and agreement,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-008,Connecting ideas,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-009,Dialogue and narration,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-010,Compare two texts,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-011,Narrative composition,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-012,Informational writing,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-013,Opinion writing,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-014,Listening and presentation,no native-script text; needs localisation
+regional_content_in_english_only,5,telugu,proposed-l5-te-015,Integrated language project,no native-script text; needs localisation
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-003,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-004,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-005,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-006,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-007,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-008,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-009,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-010,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-011,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-012,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-013,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-014,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-015,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-016,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-017,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-018,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-019,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-020,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-021,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-022,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-023,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-024,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-025,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-026,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-027,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-028,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-029,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-030,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-031,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-032,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-033,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-034,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-035,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-036,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-037,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-038,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-039,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-040,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-041,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-042,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-043,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-044,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-045,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,hindi,hi-letter-046,यह कौन सा अक्षर है?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as hi-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-003,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-004,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-005,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-006,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-007,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-008,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-009,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-010,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-011,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-012,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-013,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-014,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-015,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-016,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-017,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-018,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-019,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-020,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-021,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-022,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-023,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-024,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-025,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-026,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-027,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-028,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-029,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,tamil,ta-letter-030,இது எந்த எழுத்து?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as ta-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-003,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-004,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-005,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-006,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-007,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-008,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-009,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-010,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-011,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-012,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-013,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-014,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-015,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-016,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-017,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-018,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-019,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-020,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-021,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-022,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-023,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-024,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-025,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-026,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-027,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-028,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-029,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-030,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-031,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-032,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-033,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-034,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-035,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-036,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-037,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-038,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-039,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-040,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-041,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-042,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-043,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-044,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-045,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-046,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-047,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-048,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-049,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-050,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+repeated_generic_title_level1_letter_quest,1,telugu,te-letter-051,ఈ అక్షరం ఏది?,"every letter quest has the same title, so a child cannot tell them apart on the map; same title as te-letter-002 (level 1)"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-001,Reading fluency,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-002,Vocabulary in context,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-003,Synonyms and antonyms,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-004,Word formation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-005,Nouns and pronouns,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-006,Verbs and time,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-007,Describing words,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-008,Sentence building,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-009,Paragraph reading,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-010,Story sequencing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-011,Cause and effect,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-012,Listening comprehension,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-013,Guided paragraph writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-014,Everyday communication,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,hindi,proposed-l4-hi-015,Level review,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-001,Reading fluency,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-002,Vocabulary in context,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-003,Synonyms and antonyms,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-004,Word formation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-005,Nouns and pronouns,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-006,Verbs and time,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-007,Describing words,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-008,Sentence building,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-009,Paragraph reading,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-010,Story sequencing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-011,Cause and effect,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-012,Listening comprehension,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-013,Guided paragraph writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-014,Everyday communication,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,tamil,proposed-l4-ta-015,Level review,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-001,Reading fluency,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-002,Vocabulary in context,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-003,Synonyms and antonyms,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-004,Word formation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-005,Nouns and pronouns,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-006,Verbs and time,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-007,Describing words,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-008,Sentence building,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-009,Paragraph reading,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-010,Story sequencing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-011,Cause and effect,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-012,Listening comprehension,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-013,Guided paragraph writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-014,Everyday communication,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,4,telugu,proposed-l4-te-015,Level review,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-001,Independent passage reading,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-002,Main idea and summary,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-003,Inference with evidence,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-004,Proverbs and expressions,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-005,Word roots and formation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-006,Sentence types,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-007,Tense and agreement,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-008,Connecting ideas,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-009,Dialogue and narration,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-010,Compare two texts,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-011,Narrative composition,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-012,Informational writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-013,Opinion writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-014,Listening and presentation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,hindi,proposed-l5-hi-015,Integrated language project,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-001,Independent passage reading,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-002,Main idea and summary,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-003,Inference with evidence,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-004,Proverbs and expressions,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-005,Word roots and formation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-006,Sentence types,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-007,Tense and agreement,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-008,Connecting ideas,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-009,Dialogue and narration,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-010,Compare two texts,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-011,Narrative composition,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-012,Informational writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-013,Opinion writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-014,Listening and presentation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,tamil,proposed-l5-ta-015,Integrated language project,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-001,Independent passage reading,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-002,Main idea and summary,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-003,Inference with evidence,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-004,Proverbs and expressions,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-005,Word roots and formation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-006,Sentence types,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-007,Tense and agreement,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-008,Connecting ideas,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-009,Dialogue and narration,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-010,Compare two texts,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-011,Narrative composition,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-012,Informational writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-013,Opinion writing,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-014,Listening and presentation,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+same_english_title_in_three_languages,5,telugu,proposed-l5-te-015,Integrated language project,"identical English description for Telugu, Hindi and Tamil: language-specific content not yet written"
+writing_activity_practice_only,3,english,proposed-l3-en-001,Long vowels with silent e,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-002,Consonant blends,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-003,Digraphs sh ch th,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-004,Vowel teams,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-005,Two-syllable words,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-006,Sight words in sentences,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-007,Sentence punctuation,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-008,Nouns and pronouns,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-009,Verbs and tense,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-010,Adjectives and opposites,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-011,Read a short paragraph,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-012,Story sequence,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-013,Make an inference,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-014,Write connected sentences,Practice only
+writing_activity_practice_only,3,english,proposed-l3-en-015,Read and retell,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-001,मात्राओं का अभ्यास,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-002,संयुक्त अक्षर,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-003,दो-अक्षर शब्द,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-004,तीन-अक्षर शब्द,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-005,शब्द और अर्थ,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-006,विलोम शब्द,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-007,वाक्य पढ़ना,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-008,वाक्य क्रम,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-009,संज्ञा,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-010,क्रिया,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-011,छोटा अनुच्छेद,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-012,कहानी का क्रम,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-013,सुनकर समझना,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-014,तीन वाक्य लिखना,Practice only
+writing_activity_practice_only,3,hindi,proposed-l3-hi-015,कहानी सुनाना,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-001,Place value to 1000,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-002,Compare three-digit numbers,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-003,Addition with regrouping,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-004,Subtraction with regrouping,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-005,Skip counting and patterns,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-006,Equal groups and arrays,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-007,Multiplication facts 2 5 10,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-008,Multiplication facts 3 4,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-009,Division as sharing,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-010,Division and multiplication,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-011,Halves quarters and thirds,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-012,Money and change,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-013,Time to five minutes,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-014,Length and mass,Practice only
+writing_activity_practice_only,3,numbers,proposed-l3-num-015,Word problems and reasoning,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-001,உயிர்மெய் மீள்பார்வை,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-002,மெய்யெழுத்துச் சேர்க்கை,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-003,எளிய சொற்கள்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-004,சொல் உருவாக்கம்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-005,சொல்லும் பொருளும்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-006,எதிர்ச்சொற்கள்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-007,வாக்கியம் வாசித்தல்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-008,வாக்கிய வரிசை,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-009,பெயர்ச்சொல்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-010,வினைச்சொல்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-011,சிறு பத்தி,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-012,கதை வரிசை,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-013,கேட்டுப் புரிதல்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-014,மூன்று வாக்கியங்கள்,Practice only
+writing_activity_practice_only,3,tamil,proposed-l3-ta-015,கதை மறுகூறல்,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-001,గుణింతాల పునశ్చరణ,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-002,వత్తుల పరిచయం,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-003,రెండు అక్షరాల పదాలు,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-004,మూడు అక్షరాల పదాలు,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-005,పదం–చిత్రం జత,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-006,విరుద్ధ పదాలు,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-007,వాక్యం చదవడం,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-008,వాక్య క్రమం,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-009,నామవాచకాలు,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-010,క్రియ పదాలు,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-011,చిన్న పేరా,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-012,కథా క్రమం,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-013,వినికిడి అవగాహన,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-014,మూడు వాక్యాలు,Practice only
+writing_activity_practice_only,3,telugu,proposed-l3-te-015,కథ చెప్పడం,Practice only
+writing_activity_practice_only,4,english,proposed-l4-en-008,Compound sentences,Practice only
+writing_activity_practice_only,4,english,proposed-l4-en-009,Paragraph organization,Practice only
+writing_activity_practice_only,4,english,proposed-l4-en-014,Writing an invitation,Practice only
+writing_activity_practice_only,4,hindi,proposed-l4-hi-013,Guided paragraph writing,Practice only
+writing_activity_practice_only,4,hindi,proposed-l4-hi-014,Everyday communication,Practice only
+writing_activity_practice_only,4,tamil,proposed-l4-ta-013,Guided paragraph writing,Practice only
+writing_activity_practice_only,4,tamil,proposed-l4-ta-014,Everyday communication,Practice only
+writing_activity_practice_only,4,telugu,proposed-l4-te-013,Guided paragraph writing,Practice only
+writing_activity_practice_only,4,telugu,proposed-l4-te-014,Everyday communication,Practice only
+writing_activity_practice_only,5,english,proposed-l5-en-009,Narrative writing,Practice only
+writing_activity_practice_only,5,english,proposed-l5-en-010,Expository writing,Practice only
+writing_activity_practice_only,5,english,proposed-l5-en-011,Persuasive writing,Practice only
+writing_activity_practice_only,5,english,proposed-l5-en-013,Editing for clarity,Practice only
+writing_activity_practice_only,5,hindi,proposed-l5-hi-009,Dialogue and narration,Practice only
+writing_activity_practice_only,5,hindi,proposed-l5-hi-011,Narrative composition,Practice only
+writing_activity_practice_only,5,hindi,proposed-l5-hi-012,Informational writing,Practice only
+writing_activity_practice_only,5,hindi,proposed-l5-hi-013,Opinion writing,Practice only
+writing_activity_practice_only,5,tamil,proposed-l5-ta-009,Dialogue and narration,Practice only
+writing_activity_practice_only,5,tamil,proposed-l5-ta-011,Narrative composition,Practice only
+writing_activity_practice_only,5,tamil,proposed-l5-ta-012,Informational writing,Practice only
+writing_activity_practice_only,5,tamil,proposed-l5-ta-013,Opinion writing,Practice only
+writing_activity_practice_only,5,telugu,proposed-l5-te-009,Dialogue and narration,Practice only
+writing_activity_practice_only,5,telugu,proposed-l5-te-011,Narrative composition,Practice only
+writing_activity_practice_only,5,telugu,proposed-l5-te-012,Informational writing,Practice only
+writing_activity_practice_only,5,telugu,proposed-l5-te-013,Opinion writing,Practice only
