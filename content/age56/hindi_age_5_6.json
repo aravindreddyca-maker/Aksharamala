@@ -1,0 +1,1128 @@
+{
+  "schema_version": "1.0",
+  "module": "hindi",
+  "age_band": "5-6",
+  "status": "draft_requires_educator_review",
+  "lessons": [
+    {
+      "id": "hindi-56-001",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ा = का",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ा की मात्रा लगाकर का बनता है। शब्द सुनिए: काला।",
+          "speech": "क में ा की मात्रा लगाकर का बनता है। शब्द सुनिए: काला।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ा = ?",
+          "options": [
+            "का",
+            "क",
+            "कू"
+          ],
+          "answer": "का",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "काला"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-002",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ि = कि",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ि की मात्रा लगाकर कि बनता है। शब्द सुनिए: किताब।",
+          "speech": "क में ि की मात्रा लगाकर कि बनता है। शब्द सुनिए: किताब।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ि = ?",
+          "options": [
+            "कि",
+            "क",
+            "कू"
+          ],
+          "answer": "कि",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "किताब"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-003",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ी = की",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ी की मात्रा लगाकर की बनता है। शब्द सुनिए: कीड़ा।",
+          "speech": "क में ी की मात्रा लगाकर की बनता है। शब्द सुनिए: कीड़ा।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ी = ?",
+          "options": [
+            "की",
+            "क",
+            "कू"
+          ],
+          "answer": "की",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "कीड़ा"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-004",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ु = कु",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ु की मात्रा लगाकर कु बनता है। शब्द सुनिए: कुत्ता।",
+          "speech": "क में ु की मात्रा लगाकर कु बनता है। शब्द सुनिए: कुत्ता।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ु = ?",
+          "options": [
+            "कु",
+            "क",
+            "कू"
+          ],
+          "answer": "कु",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "कुत्ता"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-005",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ू = कू",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ू की मात्रा लगाकर कू बनता है। शब्द सुनिए: कूड़ा।",
+          "speech": "क में ू की मात्रा लगाकर कू बनता है। शब्द सुनिए: कूड़ा।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ू = ?",
+          "options": [
+            "कू",
+            "क",
+            "का"
+          ],
+          "answer": "कू",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "कूड़ा"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-006",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + े = के",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में े की मात्रा लगाकर के बनता है। शब्द सुनिए: केला।",
+          "speech": "क में े की मात्रा लगाकर के बनता है। शब्द सुनिए: केला।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + े = ?",
+          "options": [
+            "के",
+            "क",
+            "कू"
+          ],
+          "answer": "के",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "केला"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-007",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ै = कै",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ै की मात्रा लगाकर कै बनता है। शब्द सुनिए: कैसा।",
+          "speech": "क में ै की मात्रा लगाकर कै बनता है। शब्द सुनिए: कैसा।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ै = ?",
+          "options": [
+            "कै",
+            "क",
+            "कू"
+          ],
+          "answer": "कै",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "कैसा"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-008",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ो = को",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ो की मात्रा लगाकर को बनता है। शब्द सुनिए: कोयल।",
+          "speech": "क में ो की मात्रा लगाकर को बनता है। शब्द सुनिए: कोयल।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ो = ?",
+          "options": [
+            "को",
+            "क",
+            "कू"
+          ],
+          "answer": "को",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "कोयल"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-009",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ौ = कौ",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ौ की मात्रा लगाकर कौ बनता है। शब्द सुनिए: कौआ।",
+          "speech": "क में ौ की मात्रा लगाकर कौ बनता है। शब्द सुनिए: कौआ।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ौ = ?",
+          "options": [
+            "कौ",
+            "क",
+            "कू"
+          ],
+          "answer": "कौ",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "कौआ"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-010",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "क + ं = कं",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "क में ं की मात्रा लगाकर कं बनता है। शब्द सुनिए: कंघी।",
+          "speech": "क में ं की मात्रा लगाकर कं बनता है। शब्द सुनिए: कंघी।"
+        },
+        {
+          "type": "practice",
+          "prompt": "क + ं = ?",
+          "options": [
+            "कं",
+            "क",
+            "कू"
+          ],
+          "answer": "कं",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "कंघी"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-011",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "म + ा = मा",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "म में ा की मात्रा लगाकर मा बनता है। शब्द सुनिए: माला।",
+          "speech": "म में ा की मात्रा लगाकर मा बनता है। शब्द सुनिए: माला।"
+        },
+        {
+          "type": "practice",
+          "prompt": "म + ा = ?",
+          "options": [
+            "मा",
+            "म",
+            "कू"
+          ],
+          "answer": "मा",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "माला"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-012",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "प + ा = पा",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "प में ा की मात्रा लगाकर पा बनता है। शब्द सुनिए: पानी।",
+          "speech": "प में ा की मात्रा लगाकर पा बनता है। शब्द सुनिए: पानी।"
+        },
+        {
+          "type": "practice",
+          "prompt": "प + ा = ?",
+          "options": [
+            "पा",
+            "प",
+            "कू"
+          ],
+          "answer": "पा",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "पानी"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-013",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "न + ा = ना",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "न में ा की मात्रा लगाकर ना बनता है। शब्द सुनिए: नाव।",
+          "speech": "न में ा की मात्रा लगाकर ना बनता है। शब्द सुनिए: नाव।"
+        },
+        {
+          "type": "practice",
+          "prompt": "न + ा = ?",
+          "options": [
+            "ना",
+            "न",
+            "कू"
+          ],
+          "answer": "ना",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "नाव"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-014",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "ग + ा = गा",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ग में ा की मात्रा लगाकर गा बनता है। शब्द सुनिए: गाय।",
+          "speech": "ग में ा की मात्रा लगाकर गा बनता है। शब्द सुनिए: गाय।"
+        },
+        {
+          "type": "practice",
+          "prompt": "ग + ा = ?",
+          "options": [
+            "गा",
+            "ग",
+            "कू"
+          ],
+          "answer": "गा",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "गाय"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-015",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "ब + ा = बा",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ब में ा की मात्रा लगाकर बा बनता है। शब्द सुनिए: बादल।",
+          "speech": "ब में ा की मात्रा लगाकर बा बनता है। शब्द सुनिए: बादल।"
+        },
+        {
+          "type": "practice",
+          "prompt": "ब + ा = ?",
+          "options": [
+            "बा",
+            "ब",
+            "कू"
+          ],
+          "answer": "बा",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "बादल"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-016",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "स + ू = सू",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "स में ू की मात्रा लगाकर सू बनता है। शब्द सुनिए: सूरज।",
+          "speech": "स में ू की मात्रा लगाकर सू बनता है। शब्द सुनिए: सूरज।"
+        },
+        {
+          "type": "practice",
+          "prompt": "स + ू = ?",
+          "options": [
+            "सू",
+            "स",
+            "कू"
+          ],
+          "answer": "सू",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "सूरज"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-017",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "च + ा = चा",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "च में ा की मात्रा लगाकर चा बनता है। शब्द सुनिए: चाचा।",
+          "speech": "च में ा की मात्रा लगाकर चा बनता है। शब्द सुनिए: चाचा।"
+        },
+        {
+          "type": "practice",
+          "prompt": "च + ा = ?",
+          "options": [
+            "चा",
+            "च",
+            "कू"
+          ],
+          "answer": "चा",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "चाचा"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-018",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "त + ी = ती",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "त में ी की मात्रा लगाकर ती बनता है। शब्द सुनिए: तीन।",
+          "speech": "त में ी की मात्रा लगाकर ती बनता है। शब्द सुनिए: तीन।"
+        },
+        {
+          "type": "practice",
+          "prompt": "त + ी = ?",
+          "options": [
+            "ती",
+            "त",
+            "कू"
+          ],
+          "answer": "ती",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "तीन"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-019",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "र + ा = रा",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "र में ा की मात्रा लगाकर रा बनता है। शब्द सुनिए: राजा।",
+          "speech": "र में ा की मात्रा लगाकर रा बनता है। शब्द सुनिए: राजा।"
+        },
+        {
+          "type": "practice",
+          "prompt": "र + ा = ?",
+          "options": [
+            "रा",
+            "र",
+            "कू"
+          ],
+          "answer": "रा",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "राजा"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-020",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_matra",
+      "topic": "matras",
+      "title": "ह + ा = हा",
+      "objective": "Learner can combine matra in matras.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ह में ा की मात्रा लगाकर हा बनता है। शब्द सुनिए: हाथी।",
+          "speech": "ह में ा की मात्रा लगाकर हा बनता है। शब्द सुनिए: हाथी।"
+        },
+        {
+          "type": "practice",
+          "prompt": "ह + ा = ?",
+          "options": [
+            "हा",
+            "ह",
+            "कू"
+          ],
+          "answer": "हा",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "हाथी"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-021",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "गाय घास खाती है।",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "गाय घास खाती है।",
+          "speech": "गाय घास खाती है।"
+        },
+        {
+          "type": "practice",
+          "prompt": "घास कौन खाती है?",
+          "options": [
+            "गाय",
+            "मछली",
+            "चिड़िया"
+          ],
+          "answer": "गाय",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-022",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "बादल से पानी बरसा।",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "बादल से पानी बरसा।",
+          "speech": "बादल से पानी बरसा।"
+        },
+        {
+          "type": "practice",
+          "prompt": "पानी कहाँ से बरसा?",
+          "options": [
+            "बादल",
+            "किताब",
+            "घर"
+          ],
+          "answer": "बादल",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-023",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "कौआ पेड़ पर बैठा।",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "कौआ पेड़ पर बैठा।",
+          "speech": "कौआ पेड़ पर बैठा।"
+        },
+        {
+          "type": "practice",
+          "prompt": "पेड़ पर कौन बैठा?",
+          "options": [
+            "कौआ",
+            "गाय",
+            "कुत्ता"
+          ],
+          "answer": "कौआ",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-024",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "राजा के पास मुकुट है।",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "राजा के पास मुकुट है।",
+          "speech": "राजा के पास मुकुट है।"
+        },
+        {
+          "type": "practice",
+          "prompt": "राजा के पास क्या है?",
+          "options": [
+            "मुकुट",
+            "नाव",
+            "केला"
+          ],
+          "answer": "मुकुट",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-025",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "चाचा घर आए।",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "चाचा घर आए।",
+          "speech": "चाचा घर आए।"
+        },
+        {
+          "type": "practice",
+          "prompt": "घर कौन आए?",
+          "options": [
+            "चाचा",
+            "कौआ",
+            "गाय"
+          ],
+          "answer": "चाचा",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "hindi-56-026",
+      "module": "hindi",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "तीन केले रखे हैं।",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "सुनिए और सीखिए",
+        "choose": "सही उत्तर चुनिए",
+        "retry": "फिर प्रयास कीजिए"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "तीन केले रखे हैं।",
+          "speech": "तीन केले रखे हैं।"
+        },
+        {
+          "type": "practice",
+          "prompt": "कितने केले हैं?",
+          "options": [
+            "तीन",
+            "दो",
+            "चार"
+          ],
+          "answer": "तीन",
+          "shuffle_options": true,
+          "feedback_correct": "बहुत अच्छा!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    }
+  ]
+}

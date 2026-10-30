@@ -381,6 +381,8 @@ class _QuestTrailState extends State<_QuestTrail> {
                                 number: index + 1,
                                 complete: widget.completed.contains(lesson.id),
                                 recommended: lesson.id == widget.recommended.id,
+                                unlocked: AppScope.of(context)
+                                    .isLessonUnlocked(lesson),
                                 horizontal: horizontal,
                               ),
                             ),
@@ -544,6 +546,7 @@ class _QuestCard extends StatelessWidget {
     required this.number,
     required this.complete,
     required this.recommended,
+    required this.unlocked,
     required this.horizontal,
   });
   final LearningWorld world;
@@ -551,6 +554,7 @@ class _QuestCard extends StatelessWidget {
   final int number;
   final bool complete;
   final bool recommended;
+  final bool unlocked;
 
   /// Short screens: picture on the left, text on the right.
   final bool horizontal;
@@ -641,12 +645,14 @@ class _QuestCard extends StatelessWidget {
         ),
       ),
     );
-    final play = _PlayButton(world: world, complete: complete);
+    final play =
+        _PlayButton(world: world, complete: complete, unlocked: unlocked);
     return Semantics(
       button: true,
       excludeSemantics: true,
       label: 'Quest $number, ${lesson.title}. ${lesson.subtitle}'
           '${complete ? ', completed' : ''}'
+          '${unlocked ? '' : ', locked'}'
           '${recommended ? ', next adventure' : ''}',
       child: Material(
         color: _cream,
@@ -662,14 +668,16 @@ class _QuestCard extends StatelessWidget {
         clipBehavior: Clip.antiAlias,
         child: InkWell(
           key: Key('lesson_${lesson.id}'),
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute<void>(
-              builder: (_) => item is BatchLesson
-                  ? BatchLessonScreen(world: world, lesson: item)
-                  : LessonScreen(world: world, lesson: lesson),
-            ),
-          ),
+          onTap: unlocked
+              ? () => Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (_) => item is BatchLesson
+                          ? BatchLessonScreen(world: world, lesson: item)
+                          : LessonScreen(world: world, lesson: lesson),
+                    ),
+                  )
+              : null,
           child: Padding(
             padding: const EdgeInsets.all(10),
             // Card text follows the system size up to 130%; beyond that the
@@ -935,26 +943,35 @@ class _NextChip extends StatelessWidget {
 
 /// The big play target. It looks like a button; the whole card is what taps.
 class _PlayButton extends StatelessWidget {
-  const _PlayButton({required this.world, required this.complete});
+  const _PlayButton({
+    required this.world,
+    required this.complete,
+    required this.unlocked,
+  });
   final LearningWorld world;
   final bool complete;
+  final bool unlocked;
 
   @override
   Widget build(BuildContext context) => Container(
         height: 48,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: world.darkColor,
+          color: unlocked ? world.darkColor : Colors.grey.shade600,
           borderRadius: BorderRadius.circular(24),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.play_arrow_rounded, color: Colors.white, size: 30),
+            Icon(
+              unlocked ? Icons.play_arrow_rounded : Icons.lock_rounded,
+              color: Colors.white,
+              size: 30,
+            ),
             const SizedBox(width: 4),
             Flexible(
               child: Text(
-                complete ? 'Play again' : 'Play',
+                unlocked ? (complete ? 'Play again' : 'Play') : 'Locked',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(

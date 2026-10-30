@@ -77,6 +77,46 @@ enum LessonKind { alphabet, words, numbers, story, tracing, game }
 
 enum LessonDifficulty { foundation, beginner, intermediate, advanced }
 
+enum LearningVisualActivity {
+  none,
+  pictureWordMatch,
+  phonicsBlend,
+  letterCombination,
+  wordBuilding,
+  counting,
+  dragArithmetic,
+  guidedTracing,
+}
+
+class LessonMedia {
+  const LessonMedia({
+    this.activity = LearningVisualActivity.none,
+    this.images = const {},
+    this.audio = const [],
+    this.animations = const [],
+    this.requiredImages = const [],
+    this.pronunciationVerified = false,
+  });
+
+  final LearningVisualActivity activity;
+  final Map<String, String> images;
+  final List<String> audio;
+  final List<String> animations;
+
+  /// Concepts that require production illustrations. A lesson is not visually
+  /// complete until every item has a matching image reference.
+  final List<String> requiredImages;
+
+  /// Recorded/TTS pronunciation must be reviewed by a native educator before
+  /// this can become true.
+  final bool pronunciationVerified;
+
+  List<String> get missingImages =>
+      requiredImages.where((concept) => !images.containsKey(concept)).toList();
+
+  bool get isVisuallyComplete => missingImages.isEmpty;
+}
+
 class Lesson {
   const Lesson({
     required this.id,
@@ -98,6 +138,7 @@ class Lesson {
     this.difficultyLevel = LessonDifficulty.foundation,
     this.learningObjective = 'Complete the lesson activity.',
     this.prerequisites = const [],
+    this.media = const LessonMedia(),
     this.story = const [],
     this.pictures = const {},
     this.cover,
@@ -117,6 +158,7 @@ class Lesson {
   final LessonDifficulty difficultyLevel;
   final String learningObjective;
   final List<String> prerequisites;
+  final LessonMedia media;
   final List<String> story;
 
   bool supportsStage(ExperienceStage stage) => ageBands.contains(stage);

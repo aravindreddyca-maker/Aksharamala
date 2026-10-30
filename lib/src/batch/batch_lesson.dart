@@ -27,6 +27,9 @@ enum StepKind {
   /// Pick the bigger or smaller of two numbers.
   compare,
 
+  /// Pick one text answer for a general curriculum question.
+  choice,
+
   /// Write the letter or number on the pad.
   write,
 }
@@ -101,15 +104,20 @@ class BatchLesson extends Lesson {
     required this.steps,
     required this.sourceRecords,
     super.prerequisites = const [],
+    super.difficultyLevel = LessonDifficulty.foundation,
+    super.learningObjective = 'Complete the guided lesson sequence.',
+    super.media = const LessonMedia(),
     this.ageBand = '3-4',
+    this.topic = '',
+    this.skill = '',
+    this.examples = const [],
+    this.educatorReviewVerified = false,
   }) : super(
           speech: steps.first.speech,
           challenge: steps.firstWhere((s) => s.kind.isQuestion).prompt,
           options: const [],
           answer: '',
           ageBands: {_stageForAgeBand(ageBand)},
-          difficultyLevel: LessonDifficulty.foundation,
-          learningObjective: 'Complete the guided ${kind.name} sequence.',
         );
 
   final List<BatchStep> steps;
@@ -118,6 +126,15 @@ class BatchLesson extends Lesson {
   final List<String> sourceRecords;
 
   final String ageBand;
+
+  /// Source curriculum taxonomy and examples, retained for auditability and
+  /// displayed during the teaching step.
+  final String topic;
+  final String skill;
+  final List<String> examples;
+
+  /// False until a qualified educator has reviewed language/pronunciation.
+  final bool educatorReviewVerified;
 
   List<BatchStep> get questions =>
       steps.where((s) => s.kind.isQuestion).toList();

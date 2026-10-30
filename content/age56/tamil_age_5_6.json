@@ -1,0 +1,1128 @@
+{
+  "schema_version": "1.0",
+  "module": "tamil",
+  "age_band": "5-6",
+  "status": "draft_requires_educator_review",
+  "lessons": [
+    {
+      "id": "tamil-56-001",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + அ = க",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் அ உயிர் சேர்ந்தால் க எழுத்து உருவாகும். கல் என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் அ உயிர் சேர்ந்தால் க எழுத்து உருவாகும். கல் என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + அ = ?",
+          "options": [
+            "க",
+            "க்",
+            "கூ"
+          ],
+          "answer": "க",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கல்"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-002",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + ஆ = கா",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் ஆ உயிர் சேர்ந்தால் கா எழுத்து உருவாகும். காடு என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் ஆ உயிர் சேர்ந்தால் கா எழுத்து உருவாகும். காடு என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + ஆ = ?",
+          "options": [
+            "கா",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கா",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "காடு"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-003",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + இ = கி",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் இ உயிர் சேர்ந்தால் கி எழுத்து உருவாகும். கிளி என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் இ உயிர் சேர்ந்தால் கி எழுத்து உருவாகும். கிளி என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + இ = ?",
+          "options": [
+            "கி",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கி",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கிளி"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-004",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + ஈ = கீ",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் ஈ உயிர் சேர்ந்தால் கீ எழுத்து உருவாகும். கீரை என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் ஈ உயிர் சேர்ந்தால் கீ எழுத்து உருவாகும். கீரை என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + ஈ = ?",
+          "options": [
+            "கீ",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கீ",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கீரை"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-005",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + உ = கு",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் உ உயிர் சேர்ந்தால் கு எழுத்து உருவாகும். குடம் என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் உ உயிர் சேர்ந்தால் கு எழுத்து உருவாகும். குடம் என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + உ = ?",
+          "options": [
+            "கு",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கு",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "குடம்"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-006",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + ஊ = கூ",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் ஊ உயிர் சேர்ந்தால் கூ எழுத்து உருவாகும். கூடு என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் ஊ உயிர் சேர்ந்தால் கூ எழுத்து உருவாகும். கூடு என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + ஊ = ?",
+          "options": [
+            "கூ",
+            "க்",
+            "கா"
+          ],
+          "answer": "கூ",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கூடு"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-007",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + எ = கெ",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் எ உயிர் சேர்ந்தால் கெ எழுத்து உருவாகும். கெண்டை என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் எ உயிர் சேர்ந்தால் கெ எழுத்து உருவாகும். கெண்டை என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + எ = ?",
+          "options": [
+            "கெ",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கெ",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கெண்டை"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-008",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + ஏ = கே",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் ஏ உயிர் சேர்ந்தால் கே எழுத்து உருவாகும். கேணி என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் ஏ உயிர் சேர்ந்தால் கே எழுத்து உருவாகும். கேணி என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + ஏ = ?",
+          "options": [
+            "கே",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கே",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கேணி"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-009",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + ஐ = கை",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் ஐ உயிர் சேர்ந்தால் கை எழுத்து உருவாகும். கை என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் ஐ உயிர் சேர்ந்தால் கை எழுத்து உருவாகும். கை என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + ஐ = ?",
+          "options": [
+            "கை",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கை",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கை"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-010",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + ஒ = கொ",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் ஒ உயிர் சேர்ந்தால் கொ எழுத்து உருவாகும். கொடி என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் ஒ உயிர் சேர்ந்தால் கொ எழுத்து உருவாகும். கொடி என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + ஒ = ?",
+          "options": [
+            "கொ",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கொ",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கொடி"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-011",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + ஓ = கோ",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் ஓ உயிர் சேர்ந்தால் கோ எழுத்து உருவாகும். கோழி என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் ஓ உயிர் சேர்ந்தால் கோ எழுத்து உருவாகும். கோழி என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + ஓ = ?",
+          "options": [
+            "கோ",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கோ",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கோழி"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-012",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "க் + ஔ = கௌ",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "க் உடன் ஔ உயிர் சேர்ந்தால் கௌ எழுத்து உருவாகும். கௌரி என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "க் உடன் ஔ உயிர் சேர்ந்தால் கௌ எழுத்து உருவாகும். கௌரி என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "க் + ஔ = ?",
+          "options": [
+            "கௌ",
+            "க்",
+            "கூ"
+          ],
+          "answer": "கௌ",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "கௌரி"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-013",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "ச் + அ = ச",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ச் உடன் அ உயிர் சேர்ந்தால் ச எழுத்து உருவாகும். சங்கு என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "ச் உடன் அ உயிர் சேர்ந்தால் ச எழுத்து உருவாகும். சங்கு என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "ச் + அ = ?",
+          "options": [
+            "ச",
+            "ச்",
+            "கூ"
+          ],
+          "answer": "ச",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "சங்கு"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-014",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "த் + அ = த",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "த் உடன் அ உயிர் சேர்ந்தால் த எழுத்து உருவாகும். தலை என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "த் உடன் அ உயிர் சேர்ந்தால் த எழுத்து உருவாகும். தலை என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "த் + அ = ?",
+          "options": [
+            "த",
+            "த்",
+            "கூ"
+          ],
+          "answer": "த",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "தலை"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-015",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "ந் + அ = ந",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ந் உடன் அ உயிர் சேர்ந்தால் ந எழுத்து உருவாகும். நரி என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "ந் உடன் அ உயிர் சேர்ந்தால் ந எழுத்து உருவாகும். நரி என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "ந் + அ = ?",
+          "options": [
+            "ந",
+            "ந்",
+            "கூ"
+          ],
+          "answer": "ந",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "நரி"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-016",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "ப் + அ = ப",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ப் உடன் அ உயிர் சேர்ந்தால் ப எழுத்து உருவாகும். பல் என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "ப் உடன் அ உயிர் சேர்ந்தால் ப எழுத்து உருவாகும். பல் என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "ப் + அ = ?",
+          "options": [
+            "ப",
+            "ப்",
+            "கூ"
+          ],
+          "answer": "ப",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "பல்"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-017",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "ம் + அ = ம",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ம் உடன் அ உயிர் சேர்ந்தால் ம எழுத்து உருவாகும். மரம் என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "ம் உடன் அ உயிர் சேர்ந்தால் ம எழுத்து உருவாகும். மரம் என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "ம் + அ = ?",
+          "options": [
+            "ம",
+            "ம்",
+            "கூ"
+          ],
+          "answer": "ம",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "மரம்"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-018",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "ய் + ஆ = யா",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ய் உடன் ஆ உயிர் சேர்ந்தால் யா எழுத்து உருவாகும். யானை என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "ய் உடன் ஆ உயிர் சேர்ந்தால் யா எழுத்து உருவாகும். யானை என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "ய் + ஆ = ?",
+          "options": [
+            "யா",
+            "ய்",
+            "கூ"
+          ],
+          "answer": "யா",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "யானை"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-019",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "வ் + ஆ = வா",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "வ் உடன் ஆ உயிர் சேர்ந்தால் வா எழுத்து உருவாகும். வானம் என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "வ் உடன் ஆ உயிர் சேர்ந்தால் வா எழுத்து உருவாகும். வானம் என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "வ் + ஆ = ?",
+          "options": [
+            "வா",
+            "வ்",
+            "கூ"
+          ],
+          "answer": "வா",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "வானம்"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-020",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "form_uyirmei",
+      "topic": "uyirmei",
+      "title": "ப் + ஊ = பூ",
+      "objective": "Learner can form uyirmei in uyirmei.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ப் உடன் ஊ உயிர் சேர்ந்தால் பூ எழுத்து உருவாகும். பூனை என்ற சொல்லைக் கேளுங்கள்.",
+          "speech": "ப் உடன் ஊ உயிர் சேர்ந்தால் பூ எழுத்து உருவாகும். பூனை என்ற சொல்லைக் கேளுங்கள்."
+        },
+        {
+          "type": "practice",
+          "prompt": "ப் + ஊ = ?",
+          "options": [
+            "பூ",
+            "ப்",
+            "கூ"
+          ],
+          "answer": "பூ",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "பூனை"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-021",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "பூனை பால் குடித்தது.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "பூனை பால் குடித்தது.",
+          "speech": "பூனை பால் குடித்தது."
+        },
+        {
+          "type": "practice",
+          "prompt": "பால் குடித்தது எது?",
+          "options": [
+            "பூனை",
+            "மரம்",
+            "மழை"
+          ],
+          "answer": "பூனை",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-022",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "கிளி பச்சை நிறம்.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "கிளி பச்சை நிறம்.",
+          "speech": "கிளி பச்சை நிறம்."
+        },
+        {
+          "type": "practice",
+          "prompt": "கிளியின் நிறம் என்ன?",
+          "options": [
+            "பச்சை",
+            "சிவப்பு",
+            "கருப்பு"
+          ],
+          "answer": "பச்சை",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-023",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "மழை பெய்கிறது.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "மழை பெய்கிறது.",
+          "speech": "மழை பெய்கிறது."
+        },
+        {
+          "type": "practice",
+          "prompt": "எது பெய்கிறது?",
+          "options": [
+            "மழை",
+            "பூ",
+            "பால்"
+          ],
+          "answer": "மழை",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-024",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "அம்மா பழம் தந்தார்.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "அம்மா பழம் தந்தார்.",
+          "speech": "அம்மா பழம் தந்தார்."
+        },
+        {
+          "type": "practice",
+          "prompt": "அம்மா என்ன தந்தார்?",
+          "options": [
+            "பழம்",
+            "கல்",
+            "பால்"
+          ],
+          "answer": "பழம்",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-025",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "யானை பெரிய விலங்கு.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "யானை பெரிய விலங்கு.",
+          "speech": "யானை பெரிய விலங்கு."
+        },
+        {
+          "type": "practice",
+          "prompt": "பெரிய விலங்கு எது?",
+          "options": [
+            "யானை",
+            "எலி",
+            "ஈ"
+          ],
+          "answer": "யானை",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "tamil-56-026",
+      "module": "tamil",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "கோழி முட்டை இட்டது.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "கேட்டு கற்றுக்கொள்ளுங்கள்",
+        "choose": "சரியான விடையைத் தேர்ந்தெடுக்கவும்",
+        "retry": "மீண்டும் முயற்சி செய்யவும்"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "கோழி முட்டை இட்டது.",
+          "speech": "கோழி முட்டை இட்டது."
+        },
+        {
+          "type": "practice",
+          "prompt": "முட்டை இட்டது எது?",
+          "options": [
+            "கோழி",
+            "பூனை",
+            "மரம்"
+          ],
+          "answer": "கோழி",
+          "shuffle_options": true,
+          "feedback_correct": "மிக நன்று!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    }
+  ]
+}

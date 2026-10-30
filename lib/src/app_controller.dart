@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import 'batch/batch_content.dart';
+import 'batch/batch_lesson.dart';
 import 'curriculum.dart';
 import 'models.dart';
 import 'services/local_store.dart';
@@ -21,7 +22,9 @@ class AppController extends ChangeNotifier {
   /// The worlds the child sees: the existing curriculum, plus the new lessons
   /// when the flag is on. Existing quests are never changed or removed.
   List<LearningWorld> get worlds {
-    final all = newLessonsEnabled ? worldsWithBatch(curriculum) : curriculum;
+    final all = newLessonsEnabled
+        ? worldsWithBatch(worldsWithAge56(curriculum))
+        : curriculum;
     final stage = activeProfile?.stage;
     if (stage == null) return all;
     return [for (final world in all) world.forStage(stage)];
@@ -84,13 +87,19 @@ class AppController extends ChangeNotifier {
     final candidates = world.lessons;
     final done = activeProgress.completedWithLegacy;
     final unfinished = candidates.where(
-      (lesson) => !done.contains(lesson.id),
-    );
+        (lesson) => !done.contains(lesson.id) && isLessonUnlocked(lesson));
     if (unfinished.isNotEmpty) return unfinished.first;
     // Adaptive review: replay a varied item after mastery.
     final index = (activeProgress.attempts[world.id] ?? 0) % candidates.length;
     return candidates[index];
   }
+
+  /// Core legacy quests remain open as before. Batch lessons use their real
+  /// prerequisite graph and unlock only after every prerequisite is complete.
+  bool isLessonUnlocked(Lesson lesson) =>
+      lesson is! BatchLesson ||
+      !lesson.id.contains('-56-') ||
+      lesson.prerequisites.every(activeProgress.completedWithLegacy.contains);
 
   String get adaptiveMessage {
     if (activeProfile == null) return '';
@@ -112,6 +121,7 @@ class AppController extends ChangeNotifier {
   }) async {
     final profile = activeProfile;
     if (profile == null) return 0;
+    if (!isLessonUnlocked(lesson)) return 0;
     final old = activeProgress;
     final completed = {...old.completedLessons, if (correct) lesson.id};
     final attempts = {...old.attempts};

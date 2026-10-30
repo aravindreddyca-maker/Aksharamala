@@ -14,6 +14,7 @@ import '../result_text.dart';
 import '../services/speech_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/learning_visuals.dart';
 import '../widgets/writing_pad.dart';
 import 'lesson_screen.dart' show LessonResultDialog;
 
@@ -327,6 +328,22 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
     final glyph = step.glyph;
     final isNumbers = widget.lesson.kind == LessonKind.numbers;
     final showStars = step.kind == StepKind.listen && isNumbers;
+    if (widget.lesson.media.activity != LearningVisualActivity.none &&
+        step.kind != StepKind.write) {
+      return Card(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Center(
+            child: LearningVisualPanel(
+              lesson: widget.lesson,
+              step: step,
+              color: _color,
+            ),
+          ),
+        ),
+      );
+    }
     if (step.kind == StepKind.count) {
       return Card(
         color: Colors.white,
@@ -343,6 +360,19 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
           child: step.kind == StepKind.pickQuantity
               ? _bigGlyph(glyph ?? '')
               : const Icon(Icons.compare_arrows_rounded, size: 72),
+        ),
+      );
+    }
+    if (step.kind == StepKind.choice) {
+      return Card(
+        color: Colors.white,
+        child: Center(
+          child: Icon(
+            Icons.quiz_rounded,
+            size: 88,
+            color: _color,
+            semanticLabel: 'Practice question',
+          ),
         ),
       );
     }
@@ -527,14 +557,36 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
             padding: const EdgeInsets.all(16),
             // What the Listen button says, so the letter and its word are
             // read as well as heard.
-            child: Text(
-              step.speech,
-              key: const Key('listen_line'),
-              textAlign: TextAlign.center,
-              style: scriptStyle(
-                step.speech,
-                const TextStyle(fontSize: 34, fontWeight: FontWeight.w800),
-              ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  step.speech,
+                  key: const Key('listen_line'),
+                  textAlign: TextAlign.center,
+                  style: scriptStyle(
+                    step.speech,
+                    const TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
+                  ),
+                ),
+                if (widget.lesson.examples.isNotEmpty) ...[
+                  const SizedBox(height: 12),
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      for (final example in widget.lesson.examples)
+                        Chip(
+                          label: Text(
+                            example,
+                            style: scriptStyle(example, const TextStyle()),
+                          ),
+                        ),
+                    ],
+                  ),
+                ],
+              ],
             ),
           ),
         );
@@ -609,18 +661,22 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
     final glyph = step.glyph ?? '';
     final template = templateFor(glyph);
     final padSize = MediaQuery.sizeOf(context).height < 480 ? 230.0 : 300.0;
-    Widget pad(GlyphMask? mask) => SizedBox(
-          height: padSize,
-          child: WritingPad(
-            key: ValueKey('pad_${_index}_$_writeRound'),
-            glyph: glyph,
-            mode: step.writeMode,
-            text: _text,
-            color: _color,
-            template: template,
-            mask: mask,
-            locale: widget.lesson.locale,
-            onResult: (r) => setState(() => _wroteOk = r.shapeOk),
+    Widget pad(GlyphMask? mask) => GuidedTracingVisual(
+          glyph: glyph,
+          color: _color,
+          child: SizedBox(
+            height: padSize,
+            child: WritingPad(
+              key: ValueKey('pad_${_index}_$_writeRound'),
+              glyph: glyph,
+              mode: step.writeMode,
+              text: _text,
+              color: _color,
+              template: template,
+              mask: mask,
+              locale: widget.lesson.locale,
+              onResult: (r) => setState(() => _wroteOk = r.shapeOk),
+            ),
           ),
         );
     return Card(

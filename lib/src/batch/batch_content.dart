@@ -12,6 +12,7 @@
 library;
 
 import '../models.dart';
+import 'age56_content.dart';
 import 'batch_lesson.dart';
 
 /// Bundled pictures that already exist, by Telugu word. Any other word is shown
@@ -474,6 +475,24 @@ final Map<String, List<BatchLesson>> batchByWorld = {
 
 /// Every new lesson.
 List<BatchLesson> get allBatchLessons => [...teluguBatch, ...numbersBatch];
+
+/// The supplied Age 5–6 batch is part of the normal curriculum. It stays in
+/// the same [BatchLesson] engine as the earlier preview batch.
+List<LearningWorld> worldsWithAge56(List<LearningWorld> base) => [
+      for (final w in base)
+        age56ByWorld.containsKey(w.id)
+            ? LearningWorld(
+                id: w.id,
+                name: w.name,
+                emoji: w.emoji,
+                assetPath: w.assetPath,
+                color: w.color,
+                darkColor: w.darkColor,
+                description: w.description,
+                lessons: [...w.lessons, ...age56ByWorld[w.id]!],
+              )
+            : w,
+    ];
 
 /// The lesson as the quest map shows it: card picture and label.
 const batchQuestArt = <String, String>{

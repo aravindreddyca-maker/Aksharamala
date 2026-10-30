@@ -1,0 +1,2060 @@
+{
+  "schema_version": "1.0",
+  "module": "numbers",
+  "age_band": "5-6",
+  "status": "draft_requires_educator_review",
+  "lessons": [
+    {
+      "id": "numbers-56-001",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "13: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "13 = 1 tens and 3 ones. Ten ones make one ten.",
+          "speech": "13 = 1 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 13?",
+          "options": [
+            "1",
+            "2",
+            "0"
+          ],
+          "answer": "1",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-002",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "23: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "23 = 2 tens and 3 ones. Ten ones make one ten.",
+          "speech": "23 = 2 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 23?",
+          "options": [
+            "2",
+            "3",
+            "1"
+          ],
+          "answer": "2",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-003",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "33: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "33 = 3 tens and 3 ones. Ten ones make one ten.",
+          "speech": "33 = 3 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 33?",
+          "options": [
+            "3",
+            "4",
+            "2"
+          ],
+          "answer": "3",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-004",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "43: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "43 = 4 tens and 3 ones. Ten ones make one ten.",
+          "speech": "43 = 4 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 43?",
+          "options": [
+            "4",
+            "5",
+            "3"
+          ],
+          "answer": "4",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-005",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "53: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "53 = 5 tens and 3 ones. Ten ones make one ten.",
+          "speech": "53 = 5 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 53?",
+          "options": [
+            "5",
+            "6",
+            "4"
+          ],
+          "answer": "5",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-006",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "63: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "63 = 6 tens and 3 ones. Ten ones make one ten.",
+          "speech": "63 = 6 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 63?",
+          "options": [
+            "6",
+            "7",
+            "5"
+          ],
+          "answer": "6",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-007",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "73: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "73 = 7 tens and 3 ones. Ten ones make one ten.",
+          "speech": "73 = 7 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 73?",
+          "options": [
+            "7",
+            "8",
+            "6"
+          ],
+          "answer": "7",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-008",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "83: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "83 = 8 tens and 3 ones. Ten ones make one ten.",
+          "speech": "83 = 8 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 83?",
+          "options": [
+            "8",
+            "9",
+            "7"
+          ],
+          "answer": "8",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-009",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_tens",
+      "topic": "place_value",
+      "title": "93: tens and ones",
+      "objective": "Learner can identify tens in place_value.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "93 = 9 tens and 3 ones. Ten ones make one ten.",
+          "speech": "93 = 9 tens and 3 ones. Ten ones make one ten."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many tens are in 93?",
+          "options": [
+            "9",
+            "10",
+            "8"
+          ],
+          "answer": "9",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-010",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 4 + 6",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 4. Count on 6 more. 4 + 6 = 10.",
+          "speech": "Start at 4. Count on 6 more. 4 + 6 = 10."
+        },
+        {
+          "type": "practice",
+          "prompt": "4 + 6 = ?",
+          "options": [
+            "10",
+            "11",
+            "9"
+          ],
+          "answer": "10",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-011",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 7 + 8",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 7. Count on 8 more. 7 + 8 = 15.",
+          "speech": "Start at 7. Count on 8 more. 7 + 8 = 15."
+        },
+        {
+          "type": "practice",
+          "prompt": "7 + 8 = ?",
+          "options": [
+            "15",
+            "16",
+            "14"
+          ],
+          "answer": "15",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-012",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 9 + 5",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 9. Count on 5 more. 9 + 5 = 14.",
+          "speech": "Start at 9. Count on 5 more. 9 + 5 = 14."
+        },
+        {
+          "type": "practice",
+          "prompt": "9 + 5 = ?",
+          "options": [
+            "14",
+            "15",
+            "13"
+          ],
+          "answer": "14",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-013",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 12 + 7",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 12. Count on 7 more. 12 + 7 = 19.",
+          "speech": "Start at 12. Count on 7 more. 12 + 7 = 19."
+        },
+        {
+          "type": "practice",
+          "prompt": "12 + 7 = ?",
+          "options": [
+            "19",
+            "20",
+            "18"
+          ],
+          "answer": "19",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-014",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 14 + 5",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 14. Count on 5 more. 14 + 5 = 19.",
+          "speech": "Start at 14. Count on 5 more. 14 + 5 = 19."
+        },
+        {
+          "type": "practice",
+          "prompt": "14 + 5 = ?",
+          "options": [
+            "19",
+            "20",
+            "18"
+          ],
+          "answer": "19",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-015",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 11 + 9",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 11. Count on 9 more. 11 + 9 = 20.",
+          "speech": "Start at 11. Count on 9 more. 11 + 9 = 20."
+        },
+        {
+          "type": "practice",
+          "prompt": "11 + 9 = ?",
+          "options": [
+            "20",
+            "21",
+            "19"
+          ],
+          "answer": "20",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-016",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 8 + 8",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 8. Count on 8 more. 8 + 8 = 16.",
+          "speech": "Start at 8. Count on 8 more. 8 + 8 = 16."
+        },
+        {
+          "type": "practice",
+          "prompt": "8 + 8 = ?",
+          "options": [
+            "16",
+            "17",
+            "15"
+          ],
+          "answer": "16",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-017",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 13 + 6",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 13. Count on 6 more. 13 + 6 = 19.",
+          "speech": "Start at 13. Count on 6 more. 13 + 6 = 19."
+        },
+        {
+          "type": "practice",
+          "prompt": "13 + 6 = ?",
+          "options": [
+            "19",
+            "20",
+            "18"
+          ],
+          "answer": "19",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-018",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 16 + 3",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 16. Count on 3 more. 16 + 3 = 19.",
+          "speech": "Start at 16. Count on 3 more. 16 + 3 = 19."
+        },
+        {
+          "type": "practice",
+          "prompt": "16 + 3 = ?",
+          "options": [
+            "19",
+            "20",
+            "18"
+          ],
+          "answer": "19",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-019",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 10 + 9",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 10. Count on 9 more. 10 + 9 = 19.",
+          "speech": "Start at 10. Count on 9 more. 10 + 9 = 19."
+        },
+        {
+          "type": "practice",
+          "prompt": "10 + 9 = ?",
+          "options": [
+            "19",
+            "20",
+            "18"
+          ],
+          "answer": "19",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-020",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 15 + 4",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 15. Count on 4 more. 15 + 4 = 19.",
+          "speech": "Start at 15. Count on 4 more. 15 + 4 = 19."
+        },
+        {
+          "type": "practice",
+          "prompt": "15 + 4 = ?",
+          "options": [
+            "19",
+            "20",
+            "18"
+          ],
+          "answer": "19",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-021",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "add_within_20",
+      "topic": "addition_within_20",
+      "title": "Add 6 + 7",
+      "objective": "Learner can add within 20 in addition_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start at 6. Count on 7 more. 6 + 7 = 13.",
+          "speech": "Start at 6. Count on 7 more. 6 + 7 = 13."
+        },
+        {
+          "type": "practice",
+          "prompt": "6 + 7 = ?",
+          "options": [
+            "13",
+            "14",
+            "12"
+          ],
+          "answer": "13",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-022",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 12 − 5",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 12 counters. Take away 5. 7 remain.",
+          "speech": "Start with 12 counters. Take away 5. 7 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "12 − 5 = ?",
+          "options": [
+            "7",
+            "8",
+            "6"
+          ],
+          "answer": "7",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-023",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 15 − 7",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 15 counters. Take away 7. 8 remain.",
+          "speech": "Start with 15 counters. Take away 7. 8 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "15 − 7 = ?",
+          "options": [
+            "8",
+            "9",
+            "7"
+          ],
+          "answer": "8",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-024",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 10 − 4",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 10 counters. Take away 4. 6 remain.",
+          "speech": "Start with 10 counters. Take away 4. 6 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "10 − 4 = ?",
+          "options": [
+            "6",
+            "7",
+            "5"
+          ],
+          "answer": "6",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-025",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 18 − 9",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 18 counters. Take away 9. 9 remain.",
+          "speech": "Start with 18 counters. Take away 9. 9 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "18 − 9 = ?",
+          "options": [
+            "9",
+            "10",
+            "8"
+          ],
+          "answer": "9",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-026",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 16 − 8",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 16 counters. Take away 8. 8 remain.",
+          "speech": "Start with 16 counters. Take away 8. 8 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "16 − 8 = ?",
+          "options": [
+            "8",
+            "9",
+            "7"
+          ],
+          "answer": "8",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-027",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 11 − 3",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 11 counters. Take away 3. 8 remain.",
+          "speech": "Start with 11 counters. Take away 3. 8 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "11 − 3 = ?",
+          "options": [
+            "8",
+            "9",
+            "7"
+          ],
+          "answer": "8",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-028",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 19 − 6",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 19 counters. Take away 6. 13 remain.",
+          "speech": "Start with 19 counters. Take away 6. 13 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "19 − 6 = ?",
+          "options": [
+            "13",
+            "14",
+            "12"
+          ],
+          "answer": "13",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-029",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 14 − 7",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 14 counters. Take away 7. 7 remain.",
+          "speech": "Start with 14 counters. Take away 7. 7 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "14 − 7 = ?",
+          "options": [
+            "7",
+            "8",
+            "6"
+          ],
+          "answer": "7",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-030",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 13 − 5",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 13 counters. Take away 5. 8 remain.",
+          "speech": "Start with 13 counters. Take away 5. 8 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "13 − 5 = ?",
+          "options": [
+            "8",
+            "9",
+            "7"
+          ],
+          "answer": "8",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-031",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 17 − 9",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 17 counters. Take away 9. 8 remain.",
+          "speech": "Start with 17 counters. Take away 9. 8 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "17 − 9 = ?",
+          "options": [
+            "8",
+            "9",
+            "7"
+          ],
+          "answer": "8",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-032",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 20 − 8",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 20 counters. Take away 8. 12 remain.",
+          "speech": "Start with 20 counters. Take away 8. 12 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "20 − 8 = ?",
+          "options": [
+            "12",
+            "13",
+            "11"
+          ],
+          "answer": "12",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-033",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "subtract_within_20",
+      "topic": "subtraction_within_20",
+      "title": "Subtract 9 − 6",
+      "objective": "Learner can subtract within 20 in subtraction_within_20.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Start with 9 counters. Take away 6. 3 remain.",
+          "speech": "Start with 9 counters. Take away 6. 3 remain."
+        },
+        {
+          "type": "practice",
+          "prompt": "9 − 6 = ?",
+          "options": [
+            "3",
+            "4",
+            "2"
+          ],
+          "answer": "3",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-034",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "compare_two_digit_numbers",
+      "topic": "compare_numbers",
+      "title": "Compare 12 and 15",
+      "objective": "Learner can compare two digit numbers in compare_numbers.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Compare tens first, then ones. 12 < 15.",
+          "speech": "Compare tens first, then ones. 12 < 15."
+        },
+        {
+          "type": "practice",
+          "prompt": "Choose the sign: 12 __ 15.",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": "<",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-035",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "compare_two_digit_numbers",
+      "topic": "compare_numbers",
+      "title": "Compare 20 and 17",
+      "objective": "Learner can compare two digit numbers in compare_numbers.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Compare tens first, then ones. 20 > 17.",
+          "speech": "Compare tens first, then ones. 20 > 17."
+        },
+        {
+          "type": "practice",
+          "prompt": "Choose the sign: 20 __ 17.",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": ">",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-036",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "compare_two_digit_numbers",
+      "topic": "compare_numbers",
+      "title": "Compare 34 and 43",
+      "objective": "Learner can compare two digit numbers in compare_numbers.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Compare tens first, then ones. 34 < 43.",
+          "speech": "Compare tens first, then ones. 34 < 43."
+        },
+        {
+          "type": "practice",
+          "prompt": "Choose the sign: 34 __ 43.",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": "<",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-037",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "compare_two_digit_numbers",
+      "topic": "compare_numbers",
+      "title": "Compare 28 and 28",
+      "objective": "Learner can compare two digit numbers in compare_numbers.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Compare tens first, then ones. 28 = 28.",
+          "speech": "Compare tens first, then ones. 28 = 28."
+        },
+        {
+          "type": "practice",
+          "prompt": "Choose the sign: 28 __ 28.",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": "=",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-038",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "compare_two_digit_numbers",
+      "topic": "compare_numbers",
+      "title": "Compare 51 and 49",
+      "objective": "Learner can compare two digit numbers in compare_numbers.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Compare tens first, then ones. 51 > 49.",
+          "speech": "Compare tens first, then ones. 51 > 49."
+        },
+        {
+          "type": "practice",
+          "prompt": "Choose the sign: 51 __ 49.",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": ">",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-039",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "compare_two_digit_numbers",
+      "topic": "compare_numbers",
+      "title": "Compare 69 and 70",
+      "objective": "Learner can compare two digit numbers in compare_numbers.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Compare tens first, then ones. 69 < 70.",
+          "speech": "Compare tens first, then ones. 69 < 70."
+        },
+        {
+          "type": "practice",
+          "prompt": "Choose the sign: 69 __ 70.",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": "<",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-040",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "compare_two_digit_numbers",
+      "topic": "compare_numbers",
+      "title": "Compare 80 and 79",
+      "objective": "Learner can compare two digit numbers in compare_numbers.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Compare tens first, then ones. 80 > 79.",
+          "speech": "Compare tens first, then ones. 80 > 79."
+        },
+        {
+          "type": "practice",
+          "prompt": "Choose the sign: 80 __ 79.",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": ">",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-041",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "compare_two_digit_numbers",
+      "topic": "compare_numbers",
+      "title": "Compare 17 and 23",
+      "objective": "Learner can compare two digit numbers in compare_numbers.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Compare tens first, then ones. 17 < 23.",
+          "speech": "Compare tens first, then ones. 17 < 23."
+        },
+        {
+          "type": "practice",
+          "prompt": "Choose the sign: 17 __ 23.",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": "<",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-042",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "continue_number_pattern",
+      "topic": "patterns",
+      "title": "Continue [2, 4, 6]",
+      "objective": "Learner can continue number pattern in patterns.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at how the numbers change: 2, 4, 6. The next number is 8.",
+          "speech": "Look at how the numbers change: 2, 4, 6. The next number is 8."
+        },
+        {
+          "type": "practice",
+          "prompt": "What comes next: 2, 4, 6, __ ?",
+          "options": [
+            "8",
+            "9",
+            "10"
+          ],
+          "answer": "8",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-043",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "continue_number_pattern",
+      "topic": "patterns",
+      "title": "Continue [5, 10, 15]",
+      "objective": "Learner can continue number pattern in patterns.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at how the numbers change: 5, 10, 15. The next number is 20.",
+          "speech": "Look at how the numbers change: 5, 10, 15. The next number is 20."
+        },
+        {
+          "type": "practice",
+          "prompt": "What comes next: 5, 10, 15, __ ?",
+          "options": [
+            "20",
+            "21",
+            "22"
+          ],
+          "answer": "20",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-044",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "continue_number_pattern",
+      "topic": "patterns",
+      "title": "Continue [10, 20, 30]",
+      "objective": "Learner can continue number pattern in patterns.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at how the numbers change: 10, 20, 30. The next number is 40.",
+          "speech": "Look at how the numbers change: 10, 20, 30. The next number is 40."
+        },
+        {
+          "type": "practice",
+          "prompt": "What comes next: 10, 20, 30, __ ?",
+          "options": [
+            "40",
+            "41",
+            "42"
+          ],
+          "answer": "40",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-045",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "continue_number_pattern",
+      "topic": "patterns",
+      "title": "Continue [1, 3, 5]",
+      "objective": "Learner can continue number pattern in patterns.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at how the numbers change: 1, 3, 5. The next number is 7.",
+          "speech": "Look at how the numbers change: 1, 3, 5. The next number is 7."
+        },
+        {
+          "type": "practice",
+          "prompt": "What comes next: 1, 3, 5, __ ?",
+          "options": [
+            "7",
+            "8",
+            "9"
+          ],
+          "answer": "7",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-046",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "continue_number_pattern",
+      "topic": "patterns",
+      "title": "Continue [20, 18, 16]",
+      "objective": "Learner can continue number pattern in patterns.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at how the numbers change: 20, 18, 16. The next number is 14.",
+          "speech": "Look at how the numbers change: 20, 18, 16. The next number is 14."
+        },
+        {
+          "type": "practice",
+          "prompt": "What comes next: 20, 18, 16, __ ?",
+          "options": [
+            "14",
+            "15",
+            "16"
+          ],
+          "answer": "14",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-047",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "continue_number_pattern",
+      "topic": "patterns",
+      "title": "Continue [3, 6, 9]",
+      "objective": "Learner can continue number pattern in patterns.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at how the numbers change: 3, 6, 9. The next number is 12.",
+          "speech": "Look at how the numbers change: 3, 6, 9. The next number is 12."
+        },
+        {
+          "type": "practice",
+          "prompt": "What comes next: 3, 6, 9, __ ?",
+          "options": [
+            "12",
+            "13",
+            "14"
+          ],
+          "answer": "12",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-048",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_shape_properties",
+      "topic": "shapes",
+      "title": "Shape: triangle",
+      "objective": "Learner can identify shape properties in shapes.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "A triangle has 3 sides. Look for this shape around you.",
+          "speech": "A triangle has 3 sides. Look for this shape around you."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many straight sides does a triangle have?",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "3",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-049",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_shape_properties",
+      "topic": "shapes",
+      "title": "Shape: square",
+      "objective": "Learner can identify shape properties in shapes.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "A square has 4 equal sides. Look for this shape around you.",
+          "speech": "A square has 4 equal sides. Look for this shape around you."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many straight sides does a square have?",
+          "options": [
+            "4",
+            "3",
+            "5"
+          ],
+          "answer": "4",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-050",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_shape_properties",
+      "topic": "shapes",
+      "title": "Shape: rectangle",
+      "objective": "Learner can identify shape properties in shapes.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "A rectangle has 4 sides. Look for this shape around you.",
+          "speech": "A rectangle has 4 sides. Look for this shape around you."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many straight sides does a rectangle have?",
+          "options": [
+            "4",
+            "2",
+            "6"
+          ],
+          "answer": "4",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-051",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "identify_shape_properties",
+      "topic": "shapes",
+      "title": "Shape: circle",
+      "objective": "Learner can identify shape properties in shapes.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "A circle has 0 straight sides. Look for this shape around you.",
+          "speech": "A circle has 0 straight sides. Look for this shape around you."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many straight sides does a circle have?",
+          "options": [
+            "0",
+            "2",
+            "4"
+          ],
+          "answer": "0",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-052",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "understand_everyday_math",
+      "topic": "everyday_math",
+      "title": "morning",
+      "objective": "Learner can understand everyday math in everyday_math.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "We eat breakfast in the morning.",
+          "speech": "We eat breakfast in the morning."
+        },
+        {
+          "type": "practice",
+          "prompt": "When do we usually eat breakfast?",
+          "options": [
+            "morning",
+            "midnight",
+            "evening"
+          ],
+          "answer": "morning",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-053",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "understand_everyday_math",
+      "topic": "everyday_math",
+      "title": "longer",
+      "objective": "Learner can understand everyday math in everyday_math.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "A pencil can be longer than an eraser. Compare by placing their ends together.",
+          "speech": "A pencil can be longer than an eraser. Compare by placing their ends together."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word means more length?",
+          "options": [
+            "longer",
+            "shorter",
+            "lighter"
+          ],
+          "answer": "longer",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "numbers-56-054",
+      "module": "numbers",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "understand_everyday_math",
+      "topic": "everyday_math",
+      "title": "rupees",
+      "objective": "Learner can understand everyday math in everyday_math.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "In India, coins and notes are used to pay for things.",
+          "speech": "In India, coins and notes are used to pay for things."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which unit is used for money in India?",
+          "options": [
+            "rupees",
+            "metres",
+            "litres"
+          ],
+          "answer": "rupees",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    }
+  ]
+}

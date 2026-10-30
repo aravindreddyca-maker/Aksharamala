@@ -1,0 +1,1230 @@
+{
+  "schema_version": "1.0",
+  "module": "english",
+  "age_band": "5-6",
+  "status": "draft_requires_educator_review",
+  "lessons": [
+    {
+      "id": "english-56-001",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -at words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: c + a + t = cat. Words in this family: cat, bat, hat, sat.",
+          "speech": "Say the sounds and blend them: c + a + t = cat. Words in this family: cat, bat, hat, sat."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -at family?",
+          "options": [
+            "bat",
+            "fish",
+            "tree"
+          ],
+          "answer": "bat",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "cat",
+        "bat",
+        "hat",
+        "sat"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-002",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -an words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-001"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: m + a + n = man. Words in this family: man, pan, fan, can.",
+          "speech": "Say the sounds and blend them: m + a + n = man. Words in this family: man, pan, fan, can."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -an family?",
+          "options": [
+            "pan",
+            "fish",
+            "tree"
+          ],
+          "answer": "pan",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "man",
+        "pan",
+        "fan",
+        "can"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-003",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -ap words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-002"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: c + a + p = cap. Words in this family: cap, map, tap, nap.",
+          "speech": "Say the sounds and blend them: c + a + p = cap. Words in this family: cap, map, tap, nap."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -ap family?",
+          "options": [
+            "map",
+            "fish",
+            "tree"
+          ],
+          "answer": "map",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "cap",
+        "map",
+        "tap",
+        "nap"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-004",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -en words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-003"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: p + e + n = pen. Words in this family: pen, hen, ten, men.",
+          "speech": "Say the sounds and blend them: p + e + n = pen. Words in this family: pen, hen, ten, men."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -en family?",
+          "options": [
+            "hen",
+            "fish",
+            "tree"
+          ],
+          "answer": "hen",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "pen",
+        "hen",
+        "ten",
+        "men"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-005",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -et words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-004"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: p + e + t = pet. Words in this family: pet, net, wet, jet.",
+          "speech": "Say the sounds and blend them: p + e + t = pet. Words in this family: pet, net, wet, jet."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -et family?",
+          "options": [
+            "net",
+            "fish",
+            "tree"
+          ],
+          "answer": "net",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "pet",
+        "net",
+        "wet",
+        "jet"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-006",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -in words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-005"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: p + i + n = pin. Words in this family: pin, bin, fin, win.",
+          "speech": "Say the sounds and blend them: p + i + n = pin. Words in this family: pin, bin, fin, win."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -in family?",
+          "options": [
+            "bin",
+            "fish",
+            "tree"
+          ],
+          "answer": "bin",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "pin",
+        "bin",
+        "fin",
+        "win"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-007",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -it words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-006"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: s + i + t = sit. Words in this family: sit, hit, fit, bit.",
+          "speech": "Say the sounds and blend them: s + i + t = sit. Words in this family: sit, hit, fit, bit."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -it family?",
+          "options": [
+            "hit",
+            "fish",
+            "tree"
+          ],
+          "answer": "hit",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "sit",
+        "hit",
+        "fit",
+        "bit"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-008",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -ig words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-007"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: p + i + g = pig. Words in this family: pig, big, dig, wig.",
+          "speech": "Say the sounds and blend them: p + i + g = pig. Words in this family: pig, big, dig, wig."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -ig family?",
+          "options": [
+            "big",
+            "fish",
+            "tree"
+          ],
+          "answer": "big",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "pig",
+        "big",
+        "dig",
+        "wig"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-009",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -og words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-008"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: d + o + g = dog. Words in this family: dog, log, fog, hog.",
+          "speech": "Say the sounds and blend them: d + o + g = dog. Words in this family: dog, log, fog, hog."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -og family?",
+          "options": [
+            "log",
+            "fish",
+            "tree"
+          ],
+          "answer": "log",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "dog",
+        "log",
+        "fog",
+        "hog"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-010",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -op words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-009"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: t + o + p = top. Words in this family: top, hop, mop, pop.",
+          "speech": "Say the sounds and blend them: t + o + p = top. Words in this family: top, hop, mop, pop."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -op family?",
+          "options": [
+            "hop",
+            "fish",
+            "tree"
+          ],
+          "answer": "hop",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "top",
+        "hop",
+        "mop",
+        "pop"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-011",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -un words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-010"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: s + u + n = sun. Words in this family: sun, run, fun, bun.",
+          "speech": "Say the sounds and blend them: s + u + n = sun. Words in this family: sun, run, fun, bun."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -un family?",
+          "options": [
+            "run",
+            "fish",
+            "tree"
+          ],
+          "answer": "run",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "sun",
+        "run",
+        "fun",
+        "bun"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-012",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "blend_cvc",
+      "topic": "phonics",
+      "title": "Read -ug words",
+      "objective": "Learner can blend cvc in phonics.",
+      "prerequisites": [
+        "english-56-011"
+      ],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Say the sounds and blend them: b + u + g = bug. Words in this family: bug, rug, mug, hug.",
+          "speech": "Say the sounds and blend them: b + u + g = bug. Words in this family: bug, rug, mug, hug."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which word belongs to the -ug family?",
+          "options": [
+            "rug",
+            "fish",
+            "tree"
+          ],
+          "answer": "rug",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [
+        "bug",
+        "rug",
+        "mug",
+        "hug"
+      ],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-013",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "recognize_sight_word",
+      "topic": "sight_words",
+      "title": "Read the",
+      "objective": "Learner can recognize sight word in sight_words.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "This word is the. Look, say, cover, and read it again.",
+          "speech": "This word is the. Look, say, cover, and read it again."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which spelling is correct for the word the?",
+          "options": [
+            "the",
+            "tha",
+            "teh"
+          ],
+          "answer": "the",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-014",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "recognize_sight_word",
+      "topic": "sight_words",
+      "title": "Read and",
+      "objective": "Learner can recognize sight word in sight_words.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "This word is and. Look, say, cover, and read it again.",
+          "speech": "This word is and. Look, say, cover, and read it again."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which spelling is correct for the word and?",
+          "options": [
+            "and",
+            "adn",
+            "end"
+          ],
+          "answer": "and",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-015",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "recognize_sight_word",
+      "topic": "sight_words",
+      "title": "Read is",
+      "objective": "Learner can recognize sight word in sight_words.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "This word is is. Look, say, cover, and read it again.",
+          "speech": "This word is is. Look, say, cover, and read it again."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which spelling is correct for the word is?",
+          "options": [
+            "is",
+            "si",
+            "as"
+          ],
+          "answer": "is",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-016",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "recognize_sight_word",
+      "topic": "sight_words",
+      "title": "Read you",
+      "objective": "Learner can recognize sight word in sight_words.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "This word is you. Look, say, cover, and read it again.",
+          "speech": "This word is you. Look, say, cover, and read it again."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which spelling is correct for the word you?",
+          "options": [
+            "you",
+            "yuo",
+            "yo"
+          ],
+          "answer": "you",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-017",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "recognize_sight_word",
+      "topic": "sight_words",
+      "title": "Read my",
+      "objective": "Learner can recognize sight word in sight_words.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "This word is my. Look, say, cover, and read it again.",
+          "speech": "This word is my. Look, say, cover, and read it again."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which spelling is correct for the word my?",
+          "options": [
+            "my",
+            "ym",
+            "me"
+          ],
+          "answer": "my",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-018",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "recognize_sight_word",
+      "topic": "sight_words",
+      "title": "Read we",
+      "objective": "Learner can recognize sight word in sight_words.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "This word is we. Look, say, cover, and read it again.",
+          "speech": "This word is we. Look, say, cover, and read it again."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which spelling is correct for the word we?",
+          "options": [
+            "we",
+            "ew",
+            "wa"
+          ],
+          "answer": "we",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-019",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "recognize_sight_word",
+      "topic": "sight_words",
+      "title": "Read see",
+      "objective": "Learner can recognize sight word in sight_words.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "This word is see. Look, say, cover, and read it again.",
+          "speech": "This word is see. Look, say, cover, and read it again."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which spelling is correct for the word see?",
+          "options": [
+            "see",
+            "sea",
+            "se"
+          ],
+          "answer": "see",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-020",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 2,
+      "skill": "recognize_sight_word",
+      "topic": "sight_words",
+      "title": "Read like",
+      "objective": "Learner can recognize sight word in sight_words.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "This word is like. Look, say, cover, and read it again.",
+          "speech": "This word is like. Look, say, cover, and read it again."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which spelling is correct for the word like?",
+          "options": [
+            "like",
+            "liek",
+            "lick"
+          ],
+          "answer": "like",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-021",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_simple_sentence",
+      "topic": "sentences",
+      "title": "Read: The cat is on the mat.",
+      "objective": "Learner can read simple sentence in sentences.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "The cat is on the mat.",
+          "speech": "The cat is on the mat."
+        },
+        {
+          "type": "practice",
+          "prompt": "Where is the cat?",
+          "options": [
+            "on the mat",
+            "in the tree",
+            "under the bed"
+          ],
+          "answer": "on the mat",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-022",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_simple_sentence",
+      "topic": "sentences",
+      "title": "Read: I see a red hen.",
+      "objective": "Learner can read simple sentence in sentences.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "I see a red hen.",
+          "speech": "I see a red hen."
+        },
+        {
+          "type": "practice",
+          "prompt": "What colour is the hen?",
+          "options": [
+            "red",
+            "blue",
+            "green"
+          ],
+          "answer": "red",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-023",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_simple_sentence",
+      "topic": "sentences",
+      "title": "Read: The dog can run.",
+      "objective": "Learner can read simple sentence in sentences.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "The dog can run.",
+          "speech": "The dog can run."
+        },
+        {
+          "type": "practice",
+          "prompt": "What can the dog do?",
+          "options": [
+            "run",
+            "fly",
+            "swim"
+          ],
+          "answer": "run",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-024",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_simple_sentence",
+      "topic": "sentences",
+      "title": "Read: We have two pens.",
+      "objective": "Learner can read simple sentence in sentences.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "We have two pens.",
+          "speech": "We have two pens."
+        },
+        {
+          "type": "practice",
+          "prompt": "How many pens?",
+          "options": [
+            "two",
+            "one",
+            "five"
+          ],
+          "answer": "two",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-025",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_simple_sentence",
+      "topic": "sentences",
+      "title": "Read: The sun is hot.",
+      "objective": "Learner can read simple sentence in sentences.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "The sun is hot.",
+          "speech": "The sun is hot."
+        },
+        {
+          "type": "practice",
+          "prompt": "What is hot?",
+          "options": [
+            "the sun",
+            "the moon",
+            "the rain"
+          ],
+          "answer": "the sun",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-026",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_simple_sentence",
+      "topic": "sentences",
+      "title": "Read: A big pig is in the mud.",
+      "objective": "Learner can read simple sentence in sentences.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "A big pig is in the mud.",
+          "speech": "A big pig is in the mud."
+        },
+        {
+          "type": "practice",
+          "prompt": "Where is the pig?",
+          "options": [
+            "in the mud",
+            "in the sky",
+            "on the roof"
+          ],
+          "answer": "in the mud",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-027",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "distinguish_letter_shapes",
+      "topic": "letter_shapes",
+      "title": "Look closely: b",
+      "objective": "Learner can distinguish letter shapes in letter_shapes.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at the shape and direction of lowercase b. Say its sound, then trace it slowly.",
+          "speech": "Look at the shape and direction of lowercase b. Say its sound, then trace it slowly."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which is lowercase b?",
+          "options": [
+            "b",
+            "d",
+            "p"
+          ],
+          "answer": "b",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-028",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "distinguish_letter_shapes",
+      "topic": "letter_shapes",
+      "title": "Look closely: d",
+      "objective": "Learner can distinguish letter shapes in letter_shapes.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at the shape and direction of lowercase d. Say its sound, then trace it slowly.",
+          "speech": "Look at the shape and direction of lowercase d. Say its sound, then trace it slowly."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which is lowercase d?",
+          "options": [
+            "d",
+            "b",
+            "q"
+          ],
+          "answer": "d",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-029",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "distinguish_letter_shapes",
+      "topic": "letter_shapes",
+      "title": "Look closely: p",
+      "objective": "Learner can distinguish letter shapes in letter_shapes.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at the shape and direction of lowercase p. Say its sound, then trace it slowly.",
+          "speech": "Look at the shape and direction of lowercase p. Say its sound, then trace it slowly."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which is lowercase p?",
+          "options": [
+            "p",
+            "q",
+            "b"
+          ],
+          "answer": "p",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "english-56-030",
+      "module": "english",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "distinguish_letter_shapes",
+      "topic": "letter_shapes",
+      "title": "Look closely: q",
+      "objective": "Learner can distinguish letter shapes in letter_shapes.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "Listen and learn",
+        "choose": "Choose the correct answer",
+        "retry": "Try again"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "Look at the shape and direction of lowercase q. Say its sound, then trace it slowly.",
+          "speech": "Look at the shape and direction of lowercase q. Say its sound, then trace it slowly."
+        },
+        {
+          "type": "practice",
+          "prompt": "Which is lowercase q?",
+          "options": [
+            "q",
+            "p",
+            "g"
+          ],
+          "answer": "q",
+          "shuffle_options": true,
+          "feedback_correct": "Correct!"
+        }
+      ],
+      "examples": [],
+      "requires": [],
+      "status": "draft_ready_for_technical_integration"
+    }
+  ]
+}

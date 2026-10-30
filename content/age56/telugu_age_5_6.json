@@ -1,0 +1,1148 @@
+{
+  "schema_version": "1.0",
+  "module": "telugu",
+  "age_band": "5-6",
+  "status": "draft_requires_educator_review",
+  "lessons": [
+    {
+      "id": "telugu-56-001",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ా = కా",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ా గుర్తు కలిపితే కా అవుతుంది. కాకి అనే పదాన్ని వినండి.",
+          "speech": "క కు ా గుర్తు కలిపితే కా అవుతుంది. కాకి అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ా = ?",
+          "options": [
+            "కా",
+            "క",
+            "కూ"
+          ],
+          "answer": "కా",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కాకి",
+          "meaning": "crow"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-002",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ి = కి",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ి గుర్తు కలిపితే కి అవుతుంది. కిరణం అనే పదాన్ని వినండి.",
+          "speech": "క కు ి గుర్తు కలిపితే కి అవుతుంది. కిరణం అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ి = ?",
+          "options": [
+            "కి",
+            "క",
+            "కూ"
+          ],
+          "answer": "కి",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కిరణం",
+          "meaning": "ray"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-003",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ీ = కీ",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ీ గుర్తు కలిపితే కీ అవుతుంది. కీటకం అనే పదాన్ని వినండి.",
+          "speech": "క కు ీ గుర్తు కలిపితే కీ అవుతుంది. కీటకం అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ీ = ?",
+          "options": [
+            "కీ",
+            "క",
+            "కూ"
+          ],
+          "answer": "కీ",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కీటకం",
+          "meaning": "insect"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-004",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ు = కు",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ు గుర్తు కలిపితే కు అవుతుంది. కుక్క అనే పదాన్ని వినండి.",
+          "speech": "క కు ు గుర్తు కలిపితే కు అవుతుంది. కుక్క అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ు = ?",
+          "options": [
+            "కు",
+            "క",
+            "కూ"
+          ],
+          "answer": "కు",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కుక్క",
+          "meaning": "dog"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-005",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ూ = కూ",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ూ గుర్తు కలిపితే కూ అవుతుంది. కూర అనే పదాన్ని వినండి.",
+          "speech": "క కు ూ గుర్తు కలిపితే కూ అవుతుంది. కూర అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ూ = ?",
+          "options": [
+            "కూ",
+            "క",
+            "కా"
+          ],
+          "answer": "కూ",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కూర",
+          "meaning": "vegetables"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-006",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ె = కె",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ె గుర్తు కలిపితే కె అవుతుంది. కెరటం అనే పదాన్ని వినండి.",
+          "speech": "క కు ె గుర్తు కలిపితే కె అవుతుంది. కెరటం అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ె = ?",
+          "options": [
+            "కె",
+            "క",
+            "కూ"
+          ],
+          "answer": "కె",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కెరటం",
+          "meaning": "wave"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-007",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ే = కే",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ే గుర్తు కలిపితే కే అవుతుంది. కేక అనే పదాన్ని వినండి.",
+          "speech": "క కు ే గుర్తు కలిపితే కే అవుతుంది. కేక అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ే = ?",
+          "options": [
+            "కే",
+            "క",
+            "కూ"
+          ],
+          "answer": "కే",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కేక",
+          "meaning": "cake"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-008",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ై = కై",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ై గుర్తు కలిపితే కై అవుతుంది. కైంకర్యం అనే పదాన్ని వినండి.",
+          "speech": "క కు ై గుర్తు కలిపితే కై అవుతుంది. కైంకర్యం అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ై = ?",
+          "options": [
+            "కై",
+            "క",
+            "కూ"
+          ],
+          "answer": "కై",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కైంకర్యం",
+          "meaning": "service"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-009",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ొ = కొ",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ొ గుర్తు కలిపితే కొ అవుతుంది. కొంగ అనే పదాన్ని వినండి.",
+          "speech": "క కు ొ గుర్తు కలిపితే కొ అవుతుంది. కొంగ అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ొ = ?",
+          "options": [
+            "కొ",
+            "క",
+            "కూ"
+          ],
+          "answer": "కొ",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కొంగ",
+          "meaning": "crane"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-010",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ో = కో",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ో గుర్తు కలిపితే కో అవుతుంది. కోతి అనే పదాన్ని వినండి.",
+          "speech": "క కు ో గుర్తు కలిపితే కో అవుతుంది. కోతి అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ో = ?",
+          "options": [
+            "కో",
+            "క",
+            "కూ"
+          ],
+          "answer": "కో",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కోతి",
+          "meaning": "monkey"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-011",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "క + ౌ = కౌ",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "క కు ౌ గుర్తు కలిపితే కౌ అవుతుంది. కౌగిలి అనే పదాన్ని వినండి.",
+          "speech": "క కు ౌ గుర్తు కలిపితే కౌ అవుతుంది. కౌగిలి అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "క + ౌ = ?",
+          "options": [
+            "కౌ",
+            "క",
+            "కూ"
+          ],
+          "answer": "కౌ",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "కౌగిలి",
+          "meaning": "hug"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-012",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "మ + ా = మా",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "మ కు ా గుర్తు కలిపితే మా అవుతుంది. మామ అనే పదాన్ని వినండి.",
+          "speech": "మ కు ా గుర్తు కలిపితే మా అవుతుంది. మామ అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "మ + ా = ?",
+          "options": [
+            "మా",
+            "మ",
+            "కూ"
+          ],
+          "answer": "మా",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "మామ",
+          "meaning": "uncle"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-013",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "ప + ా = పా",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ప కు ా గుర్తు కలిపితే పా అవుతుంది. పాలు అనే పదాన్ని వినండి.",
+          "speech": "ప కు ా గుర్తు కలిపితే పా అవుతుంది. పాలు అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "ప + ా = ?",
+          "options": [
+            "పా",
+            "ప",
+            "కూ"
+          ],
+          "answer": "పా",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "పాలు",
+          "meaning": "milk"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-014",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "న + ా = నా",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "న కు ా గుర్తు కలిపితే నా అవుతుంది. నాన్న అనే పదాన్ని వినండి.",
+          "speech": "న కు ా గుర్తు కలిపితే నా అవుతుంది. నాన్న అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "న + ా = ?",
+          "options": [
+            "నా",
+            "న",
+            "కూ"
+          ],
+          "answer": "నా",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "నాన్న",
+          "meaning": "father"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-015",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "చ + ి = చి",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "చ కు ి గుర్తు కలిపితే చి అవుతుంది. చిలుక అనే పదాన్ని వినండి.",
+          "speech": "చ కు ి గుర్తు కలిపితే చి అవుతుంది. చిలుక అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "చ + ి = ?",
+          "options": [
+            "చి",
+            "చ",
+            "కూ"
+          ],
+          "answer": "చి",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "చిలుక",
+          "meaning": "parrot"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-016",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "త + ా = తా",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "త కు ా గుర్తు కలిపితే తా అవుతుంది. తాత అనే పదాన్ని వినండి.",
+          "speech": "త కు ా గుర్తు కలిపితే తా అవుతుంది. తాత అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "త + ా = ?",
+          "options": [
+            "తా",
+            "త",
+            "కూ"
+          ],
+          "answer": "తా",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "తాత",
+          "meaning": "grandfather"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-017",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "బ + ొ = బొ",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "బ కు ొ గుర్తు కలిపితే బొ అవుతుంది. బొమ్మ అనే పదాన్ని వినండి.",
+          "speech": "బ కు ొ గుర్తు కలిపితే బొ అవుతుంది. బొమ్మ అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "బ + ొ = ?",
+          "options": [
+            "బొ",
+            "బ",
+            "కూ"
+          ],
+          "answer": "బొ",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "బొమ్మ",
+          "meaning": "toy"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-018",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "వ + ా = వా",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "వ కు ా గుర్తు కలిపితే వా అవుతుంది. వాన అనే పదాన్ని వినండి.",
+          "speech": "వ కు ా గుర్తు కలిపితే వా అవుతుంది. వాన అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "వ + ా = ?",
+          "options": [
+            "వా",
+            "వ",
+            "కూ"
+          ],
+          "answer": "వా",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "వాన",
+          "meaning": "rain"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-019",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "ల + ా = లా",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ల కు ా గుర్తు కలిపితే లా అవుతుంది. లాలీ అనే పదాన్ని వినండి.",
+          "speech": "ల కు ా గుర్తు కలిపితే లా అవుతుంది. లాలీ అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "ల + ా = ?",
+          "options": [
+            "లా",
+            "ల",
+            "కూ"
+          ],
+          "answer": "లా",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "లాలీ",
+          "meaning": "lullaby"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-020",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 1,
+      "skill": "combine_vowel_sign",
+      "topic": "gunintalu",
+      "title": "స + ీ = సీ",
+      "objective": "Learner can combine vowel sign in gunintalu.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "స కు ీ గుర్తు కలిపితే సీ అవుతుంది. సీత అనే పదాన్ని వినండి.",
+          "speech": "స కు ీ గుర్తు కలిపితే సీ అవుతుంది. సీత అనే పదాన్ని వినండి."
+        },
+        {
+          "type": "practice",
+          "prompt": "స + ీ = ?",
+          "options": [
+            "సీ",
+            "స",
+            "కూ"
+          ],
+          "answer": "సీ",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [
+        {
+          "word": "సీత",
+          "meaning": "Sita"
+        }
+      ],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-021",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "ఆవు పాలు ఇస్తుంది.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "ఆవు పాలు ఇస్తుంది.",
+          "speech": "ఆవు పాలు ఇస్తుంది."
+        },
+        {
+          "type": "practice",
+          "prompt": "పాలు ఇచ్చేది ఏది?",
+          "options": [
+            "ఆవు",
+            "కోతి",
+            "కాకి"
+          ],
+          "answer": "ఆవు",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-022",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "కోతి చెట్టు ఎక్కింది.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "కోతి చెట్టు ఎక్కింది.",
+          "speech": "కోతి చెట్టు ఎక్కింది."
+        },
+        {
+          "type": "practice",
+          "prompt": "చెట్టు ఎక్కింది ఏది?",
+          "options": [
+            "కోతి",
+            "ఆవు",
+            "చేప"
+          ],
+          "answer": "కోతి",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-023",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "నాన్న బడికి వచ్చారు.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "నాన్న బడికి వచ్చారు.",
+          "speech": "నాన్న బడికి వచ్చారు."
+        },
+        {
+          "type": "practice",
+          "prompt": "బడికి ఎవరు వచ్చారు?",
+          "options": [
+            "నాన్న",
+            "కాకి",
+            "పిల్లి"
+          ],
+          "answer": "నాన్న",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-024",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "చిలుక పచ్చగా ఉంది.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "చిలుక పచ్చగా ఉంది.",
+          "speech": "చిలుక పచ్చగా ఉంది."
+        },
+        {
+          "type": "practice",
+          "prompt": "చిలుక రంగు ఏమిటి?",
+          "options": [
+            "పచ్చ",
+            "నీలం",
+            "ఎరుపు"
+          ],
+          "answer": "పచ్చ",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-025",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "వాన పడుతోంది.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "వాన పడుతోంది.",
+          "speech": "వాన పడుతోంది."
+        },
+        {
+          "type": "practice",
+          "prompt": "ఏమి పడుతోంది?",
+          "options": [
+            "వాన",
+            "పాలు",
+            "పండు"
+          ],
+          "answer": "వాన",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    },
+    {
+      "id": "telugu-56-026",
+      "module": "telugu",
+      "age_band": "5-6",
+      "level": 3,
+      "skill": "read_short_sentence",
+      "topic": "reading",
+      "title": "అమ్మ బొమ్మ ఇచ్చింది.",
+      "objective": "Learner can read short sentence in reading.",
+      "prerequisites": [],
+      "instructions": {
+        "listen": "విని నేర్చుకోండి",
+        "choose": "సరైన సమాధానాన్ని ఎంచుకోండి",
+        "retry": "మళ్లీ ప్రయత్నించండి"
+      },
+      "steps": [
+        {
+          "type": "teach",
+          "text": "అమ్మ బొమ్మ ఇచ్చింది.",
+          "speech": "అమ్మ బొమ్మ ఇచ్చింది."
+        },
+        {
+          "type": "practice",
+          "prompt": "అమ్మ ఏమి ఇచ్చింది?",
+          "options": [
+            "బొమ్మ",
+            "చెట్టు",
+            "పాలు"
+          ],
+          "answer": "బొమ్మ",
+          "shuffle_options": true,
+          "feedback_correct": "బాగా చేశారు!"
+        }
+      ],
+      "examples": [],
+      "requires": [
+        "native_educator_review"
+      ],
+      "status": "draft_ready_for_technical_integration"
+    }
+  ]
+}
