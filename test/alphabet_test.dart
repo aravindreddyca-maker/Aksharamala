@@ -121,6 +121,17 @@ void main() {
       }
     });
 
+    test('Hindi and Tamil picture words all have a picture except ஔ', () {
+      for (final set in [hindiAlphabet, tamilAlphabet]) {
+        final without = [
+          for (final l in set.letters)
+            if (l.word != null && l.picture == null) l.glyph,
+        ];
+        expect(without, set == hindiAlphabet ? isEmpty : ['ஔ'],
+            reason: 'ஔவை is a person\'s name and cannot be drawn');
+      }
+    });
+
     test('lesson ids are unique and never collide with real quests', () {
       final real = {for (final w in curriculum) ...w.lessons.map((l) => l.id)};
       final ids = [
@@ -348,6 +359,14 @@ void main() {
     });
   });
 
+  test('the tracing quests belong to Level 1 only', () {
+    for (final id in ['en-trace', 'te-trace', 'hi-trace', 'ta-trace']) {
+      final lesson = [for (final w in curriculum) ...w.lessons]
+          .firstWhere((l) => l.id == id);
+      expect(lesson.ageBands, {ExperienceStage.explorer}, reason: id);
+    }
+  });
+
   group('the world map', () {
     for (final id in ['english', 'telugu', 'hindi', 'tamil']) {
       testWidgets('$id has an All letters button', (tester) async {
@@ -428,6 +447,40 @@ void main() {
       final card = tester.getRect(find.byKey(const Key('all_letters')));
       expect(card.left, greaterThanOrEqualTo(0));
       expect(card.right, lessThanOrEqualTo(960));
+    });
+
+    testWidgets('writing is Level 1 only: no All letters card at Levels 2-4',
+        (tester) async {
+      tester.view
+        ..devicePixelRatio = 1
+        ..physicalSize = const Size(960, 540);
+      addTearDown(tester.view.reset);
+      final w = curriculum.firstWhere((w) => w.id == 'english');
+      for (final level in [2, 3, 4]) {
+        final c = _controller();
+        await c.setLevel(level);
+        await tester.pumpWidget(
+          AppScope(
+            controller: c,
+            child: MaterialApp(
+                theme: buildTheme(),
+                home: WorldMapScreen(world: c.worlds.first)),
+          ),
+        );
+        await tester.pumpAndSettle();
+        expect(find.byKey(const Key('all_letters')), findsNothing,
+            reason: 'level $level');
+      }
+      // ...but it is there at Level 1.
+      await tester.pumpWidget(
+        AppScope(
+          controller: _controller(),
+          child:
+              MaterialApp(theme: buildTheme(), home: WorldMapScreen(world: w)),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('all_letters')), findsOneWidget);
     });
 
     testWidgets('Number Galaxy has none: numbers are not an alphabet',

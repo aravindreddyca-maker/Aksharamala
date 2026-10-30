@@ -230,7 +230,6 @@ void main() {
     test('each lesson text is in its own script (no strays)', () {
       final stray = <String>[];
       for (final r in _all) {
-        if (r.lesson.id == 'num-names') continue; // trilingual by design
         final ok = _scriptOf(r.world.id);
         for (final t in _texts(r.lesson)) {
           for (final rune in t.runes) {
@@ -342,16 +341,12 @@ void main() {
       }
     });
 
-    test('number-name options agree with the number-name table', () {
+    test('number-name options agree with the number-name table (English)', () {
       final lesson = _all.firstWhere((r) => r.lesson.id == 'num-names').lesson;
-      String triple(int n) {
-        final names = numberNames[n]!;
-        return '${names['te']} / ${names['hi']} / ${names['ta']}';
-      }
-
-      expect(lesson.answer, triple(5));
-      expect(lesson.options, contains(triple(3)));
-      expect(lesson.options, contains(triple(7)));
+      String en(int n) => numberNames[n]!['en']!.toLowerCase();
+      expect(lesson.answer, en(5));
+      expect(lesson.options, contains(en(3)));
+      expect(lesson.options, contains(en(7)));
       for (var n = 1; n <= 10; n++) {
         for (final lang in ['en', 'te', 'hi', 'ta']) {
           expect(numberNames[n]![lang]!.trim(), isNotEmpty, reason: '$n $lang');

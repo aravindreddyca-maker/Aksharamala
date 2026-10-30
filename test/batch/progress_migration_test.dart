@@ -71,7 +71,8 @@ void main() {
       expect(c.activeProgress.completedLessons, {'te-a', 'en-a'});
       expect(c.activeProgress.attempts['telugu'], 3);
       expect(c.activeProgress.earnedBadges, contains('all-world-hero'));
-      expect(c.newLessonsEnabled, isFalse, reason: 'the flag defaults off');
+      expect(c.newLessonsEnabled, isTrue,
+          reason: 'all lessons are shown unless a parent turns them off');
     });
 
     test('loading never writes the aliases into the save', () async {
@@ -84,14 +85,15 @@ void main() {
     test('a save from before the flag existed loads and saves cleanly',
         () async {
       final c = await open(oldSave(done: {'te-a'}, stars: {'te-a': 3}));
-      await c.setNewLessons(true);
+      await c.setNewLessons(false);
       final onDisk =
           jsonDecode(await file.readAsString()) as Map<String, dynamic>;
-      expect((onDisk['settings'] as Map)['newLessons'], isTrue);
+      expect((onDisk['settings'] as Map)['newLessons'], isFalse);
       expect((onDisk['profiles'] as List).single['name'], 'Meena');
       final reopened = AppController(store: LocalStore(fileOverride: file));
       await reopened.initialise();
-      expect(reopened.newLessonsEnabled, isTrue);
+      expect(reopened.newLessonsEnabled, isFalse,
+          reason: 'a parent who turned it off stays off');
       expect(reopened.activeProgress.completedLessons, {'te-a'});
       expect(reopened.profiles.single.stars, 0 + c.profiles.single.stars);
     });
@@ -164,6 +166,7 @@ void main() {
   group('the feature flag', () {
     test('off: the child sees exactly the old worlds', () async {
       final c = await open(oldSave());
+      await c.setNewLessons(false);
       for (final world in curriculum) {
         expect(
           c.worlds.firstWhere((item) => item.id == world.id).lessons,
@@ -172,10 +175,9 @@ void main() {
       }
     });
 
-    test('on: the Telugu and Number worlds gain lessons, others do not',
-        () async {
+    test('on (the default): the worlds gain the newer lessons', () async {
       final c = await open(oldSave(age: 3));
-      await c.setNewLessons(true);
+      expect(c.newLessonsEnabled, isTrue);
       int count(String id) =>
           c.worlds.firstWhere((w) => w.id == id).lessons.length;
       expect(count('telugu'), greaterThan(1));
@@ -209,10 +211,10 @@ void main() {
 
     test('it is stored in settings, not in any child\'s data', () async {
       final c = await open(oldSave());
-      await c.setNewLessons(true);
+      await c.setNewLessons(false);
       final onDisk =
           jsonDecode(await file.readAsString()) as Map<String, dynamic>;
-      expect(onDisk['settings'], {'newLessons': true});
+      expect(onDisk['settings'], {'newLessons': false});
     });
   });
 

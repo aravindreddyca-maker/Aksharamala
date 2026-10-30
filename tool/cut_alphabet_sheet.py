@@ -1,6 +1,6 @@
-"""Cut the English "A for Apple" picture sheet into production WebPs.
+"""Cut an "A for Apple" picture sheet into production WebPs.
 
-    python tool/cut_alphabet_sheet.py <sheet image>
+    python tool/cut_alphabet_sheet.py <english|indic> <sheet image>
 
 The sheet is one white-background image holding many pictures. Each picture is
 cut out by its own box (the sheet's tiles are not a clean grid), the background
@@ -23,21 +23,59 @@ from rembg import new_session, remove
 from scipy import ndimage as ndi
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CUTS = os.path.join(ROOT, '.tmp_cutouts', 'alphabet_en')
+CUTS = os.path.join(ROOT, '.tmp_cutouts', 'alphabet_sheets')
 ASSETS = os.path.join(ROOT, 'assets', 'images', 'quiz')
 
-# where each picture sits on the supplied sheet: (x0, y0, x1, y1)
-BOX = {
-    'egg': (30, 20, 270, 322), 'goat': (296, 0, 535, 332), 'hat': (588, 28, 945, 278),
-    'ink': (965, 35, 1205, 300), 'jam': (1268, 8, 1500, 326),
-    'lion': (4, 330, 272, 662), 'orange': (300, 372, 604, 672),
-    'queen': (626, 296, 912, 700), 'rabbit': (950, 330, 1160, 672),
-    'umbrella': (1222, 354, 1536, 658),
-    'van': (4, 700, 436, 972), 'xylophone': (440, 730, 818, 985),
-    'yak': (822, 684, 1196, 1018), 'zebra': (1200, 662, 1500, 1018),
+# where each picture sits on a supplied sheet: (x0, y0, x1, y1), and the file
+# prefix. "english" is the first sheet (E-Z pictures); "indic" is the Hindi and
+# Tamil sheet.
+SHEETS = {
+    'english': {
+        'prefix': 'en_',
+        'box': {
+            'egg': (30, 20, 270, 322), 'goat': (296, 0, 535, 332),
+            'hat': (588, 28, 945, 278), 'ink': (965, 35, 1205, 300),
+            'jam': (1268, 8, 1500, 326), 'lion': (4, 330, 272, 662),
+            'orange': (300, 372, 604, 672), 'queen': (626, 296, 912, 700),
+            'rabbit': (950, 330, 1160, 672), 'umbrella': (1222, 354, 1536, 658),
+            'van': (4, 700, 436, 972), 'xylophone': (440, 730, 818, 985),
+            'yak': (822, 684, 1196, 1018), 'zebra': (1200, 662, 1500, 1018),
+        },
+        # the supplied queen is cropped at the hem (no feet): not shipped
+        'skip': {'queen'},
+        'names': {},
+    },
+    'indic': {
+        'prefix': '',
+        'box': {
+            'tamarind': (4, 4, 340, 345), 'sugarcane': (316, 0, 640, 345),
+            'owl': (625, 8, 890, 345), 'wool': (900, 20, 1225, 345),
+            'sage': (1225, 0, 1536, 345),
+            'apple': (4, 345, 292, 660), 'spectacles': (305, 430, 645, 625),
+            'dew': (640, 350, 918, 665), 'woman': (920, 345, 1205, 690),
+            'goat': (1245, 335, 1490, 690),
+            'clothes': (4, 650, 385, 1000), 'mouse': (385, 660, 652, 1000),
+            'ladder': (730, 655, 920, 1000), 'stream': (960, 680, 1536, 1010),
+        },
+        # the Tamil goat is the English goat picture (already shipped)
+        'skip': {'goat'},
+        'names': {
+            'tamarind': 'hi_tamarind', 'sugarcane': 'hi_sugarcane',
+            'owl': 'hi_owl', 'wool': 'hi_wool', 'sage': 'hi_sage',
+            'apple': 'hi_one', 'spectacles': 'hi_spectacles', 'dew': 'hi_dew',
+            'woman': 'hi_woman', 'clothes': 'ta_clothes', 'mouse': 'ta_mouse',
+            'ladder': 'ta_ladder', 'stream': 'ta_stream',
+        },
+    },
 }
-# queen: the sheet crops her at the hem (no feet), so she is not shipped.
-SKIP = {'queen'}
+
+# Pictures the background remover gets wrong, fixed by colour instead:
+#  - COLOUR_KEY: pale subjects (water) the remover treats as background; the
+#    subject is everything that is not near-white on the sheet.
+#  - CLEAR_WHITE: opaque white left inside or under the subject (spectacle
+#    lenses; the white strip under the woman, where the sheet crops her).
+COLOUR_KEY = {'stream': 22}
+CLEAR_WHITE = {'spectacles': (None, 215), 'woman': (0.78, 236)}
 
 SIZE, FIT, MAX_KB = 512, 448, 95
 
@@ -60,7 +98,9 @@ def compose(cut):
     return canvas
 
 
-def main(sheet):
+def main(which, sheet):
+    conf = SHEETS[which]
+    BOX, SKIP = conf['box'], conf['skip']
     os.makedirs(CUTS, exist_ok=True)
     im = Image.open(sheet).convert('RGB')
     sess = new_session('isnet-general-use')
@@ -73,15 +113,33 @@ def main(sheet):
         if n > 1:  # keep the main subject with its parts (cup, spoon, mallets)
             sizes = ndi.sum(a, lab, range(1, n + 1))
             arr[..., 3] = np.where(lab == 1 + int(np.argmax(sizes)), arr[..., 3], 0)
+        if name in COLOUR_KEY:
+            rgb = np.asarray(tile).astype(int)
+            far = (255 - rgb.min(2)) > COLOUR_KEY[name]
+            far = ndi.binary_closing(far, iterations=3)
+            far = ndi.binary_fill_holes(far)
+            lab2, n2 = ndi.label(ndi.binary_dilation(far, iterations=10))
+            if n2 > 1:
+                sz = ndi.sum(far, lab2, range(1, n2 + 1))
+                far = far & (lab2 == 1 + int(np.argmax(sz)))
+            soft = ndi.gaussian_filter(far.astype(np.float32), 1.2)
+            arr = np.dstack([rgb.astype(np.uint8), np.clip(soft * 255, 0, 255).astype(np.uint8)])
+        if name in CLEAR_WHITE:
+            top, thr = CLEAR_WHITE[name]
+            white = np.asarray(tile).min(2) > thr
+            if top is not None:
+                white[: int(white.shape[0] * top), :] = False
+            arr[..., 3] = np.where(white, 0, arr[..., 3])
         cut = Image.fromarray(arr, 'RGBA')
         cut.save(os.path.join(CUTS, name + '.png'))
         if name in SKIP:
             print(f'{name}: cut for the record, not shipped')
             continue
-        out = os.path.join(ASSETS, f'en_{name}.webp')
+        fname = conf['names'].get(name, conf['prefix'] + name)
+        out = os.path.join(ASSETS, fname + '.webp')
         q = save_webp(compose(cut), out)
-        print(f'en_{name}.webp  quality {q}  {os.path.getsize(out) // 1024} KB')
+        print(f'{fname}.webp  quality {q}  {os.path.getsize(out) // 1024} KB')
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2])

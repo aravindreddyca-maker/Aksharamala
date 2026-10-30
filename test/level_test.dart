@@ -114,6 +114,43 @@ void main() {
     });
   });
 
+  group('every level can be chosen and shows its lessons', () {
+    test('all four levels have lessons in every world by default', () async {
+      final c = AppController(store: _NoDiskStore());
+      await c.initialise();
+      c.profiles = [
+        const ChildProfile(id: 'k', name: 'K', age: 4, avatar: 'lion')
+      ];
+      c.activeProfile = c.profiles.first;
+      expect(c.newLessonsEnabled, isTrue, reason: 'on by default');
+      final seen = <int, int>{};
+      for (final level in [4, 2, 1, 3]) {
+        await c.setLevel(level);
+        var total = 0;
+        for (final w in c.worlds) {
+          expect(w.lessons, isNotEmpty, reason: 'level $level ${w.id}');
+          total += w.lessons.length;
+        }
+        seen[level] = total;
+      }
+      // Level 1 and Level 2 are full; 3 and 4 hold what the pack has so far.
+      expect(seen[1]!, greaterThan(100));
+      expect(seen[2]!, greaterThan(100));
+      expect(seen[3]!, greaterThanOrEqualTo(5));
+      expect(seen[4]!, greaterThanOrEqualTo(5));
+    });
+
+    test('choosing a level needs no grown-up and no finished quest', () async {
+      final c = _controller();
+      c.progress['p'] = ProgressRecord.empty();
+      await c.setLevel(4);
+      expect(c.activeProfile!.level, 4);
+      await c.setLevel(2);
+      expect(c.activeProfile!.level, 2);
+      expect(c.activeProgress.completedLessons, isEmpty);
+    });
+  });
+
   group('changing the level of a saved profile', () {
     test('works for a profile that is not the one playing', () async {
       final c = _controller();

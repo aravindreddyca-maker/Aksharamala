@@ -9,13 +9,14 @@ class LocalSnapshot {
   const LocalSnapshot({
     required this.profiles,
     required this.progress,
-    this.newLessons = false,
+    this.newLessons = true,
   });
 
   final List<ChildProfile> profiles;
   final Map<String, ProgressRecord> progress;
 
-  /// Parent setting: show the new curriculum-pack lessons (feature flag).
+  /// Parent setting: show all lessons, including the newer curriculum-pack ones
+  /// (on by default; a parent can turn it off).
   final bool newLessons;
 }
 
@@ -65,7 +66,8 @@ class LocalStore {
       return LocalSnapshot(
         profiles: profiles,
         progress: progress,
-        newLessons: settings is Map && settings['newLessons'] == true,
+        // On unless a parent has turned it off.
+        newLessons: settings is Map ? settings['newLessons'] != false : true,
       );
     } on Object {
       return const LocalSnapshot(profiles: [], progress: {});

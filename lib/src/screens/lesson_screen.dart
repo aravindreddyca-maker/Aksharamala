@@ -84,8 +84,8 @@ class _LessonScreenState extends State<LessonScreen> {
   bool get _isStory => widget.lesson.kind == LessonKind.story;
 
   /// Counting and sums in Number Galaxy: one picture, one question, three big
-  /// answers, English only. "Number Names" keeps the multilingual layout
-  /// because matching the Telugu/Hindi/Tamil words is its whole point.
+  /// answers, English only. "Number Names" keeps the choose-then-check layout
+  /// (it is a word quiz) but is English too: Number Galaxy is English only.
   bool get _isMath =>
       widget.world.id == 'numbers' &&
       widget.lesson.id != 'num-names' &&

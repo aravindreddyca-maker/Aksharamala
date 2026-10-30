@@ -78,11 +78,12 @@ class ParentDashboard extends StatelessWidget {
               Card(
                 child: SwitchListTile(
                   key: const Key('new_lessons_switch'),
-                  title: const Text('Try the new lessons (preview)'),
+                  title: const Text('Show all lessons'),
                   subtitle: const Text(
-                    '10 Telugu letter lessons and Number Galaxy 0–10, with '
-                    'counting, comparing and writing practice. Stars and '
-                    'progress already earned are kept; turn it off any time.',
+                    'Every level (1 to 4), including the newer Telugu letter '
+                    'lessons, Number Galaxy 0–10 and the ages 5–6 lessons. '
+                    'Stars and progress already earned are always kept. '
+                    'Turn it off to see only the original quests.',
                   ),
                   value: controller.newLessonsEnabled,
                   onChanged: controller.setNewLessons,

@@ -204,7 +204,10 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
         builder: (context, box) {
           final wide = box.maxWidth >= 600;
           final pad = box.maxHeight < 400 ? 10.0 : 16.0;
-          final prompt = _promptCard();
+          // On a short screen the prompt is set smaller, and scrolls if a long
+          // sentence still does not fit, so nothing can overflow.
+          final short = box.maxHeight < 420;
+          final prompt = _promptCard(compact: short);
           final visual = _visual();
           final activity = _activity();
           if (!wide) {
@@ -235,9 +238,18 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      prompt,
-                      const SizedBox(height: 10),
-                      Expanded(child: visual),
+                      if (short) ...[
+                        Flexible(
+                          flex: 3,
+                          child: SingleChildScrollView(child: prompt),
+                        ),
+                        const SizedBox(height: 8),
+                        Expanded(flex: 2, child: visual),
+                      ] else ...[
+                        prompt,
+                        const SizedBox(height: 10),
+                        Expanded(child: visual),
+                      ],
                     ],
                   ),
                 ),
@@ -272,12 +284,13 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
 
   // -- prompt ---------------------------------------------------------------
 
-  Widget _promptCard() {
+  Widget _promptCard({bool compact = false}) {
     final step = _step;
     final total = widget.lesson.steps.length;
     return Card(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
+        padding:
+            EdgeInsets.fromLTRB(14, compact ? 6 : 10, 14, compact ? 6 : 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -297,7 +310,7 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                   ),
               ],
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: compact ? 6 : 10),
             Semantics(
               header: true,
               child: Text(
@@ -309,11 +322,12 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                   Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontWeight: FontWeight.w800,
                         color: GameTokens.ink,
+                        fontSize: compact ? 16 : null,
                       ),
                 ),
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: compact ? 4 : 8),
             Center(
               child: FilledButton.tonalIcon(
                 key: const Key('speak_button'),
@@ -345,11 +359,24 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(12),
-          child: Center(
-            child: LearningVisualPanel(
-              lesson: widget.lesson,
-              step: step,
-              color: _color,
+          // Shrinks to fit rather than overflowing: on a short screen this
+          // card can be far smaller than the tiles it holds.
+          child: LayoutBuilder(
+            builder: (context, box) => Center(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minWidth: box.maxWidth,
+                    maxWidth: box.maxWidth,
+                  ),
+                  child: LearningVisualPanel(
+                    lesson: widget.lesson,
+                    step: step,
+                    color: _color,
+                  ),
+                ),
+              ),
             ),
           ),
         ),

@@ -1,4 +1,4 @@
-﻿import 'dart:ui' show PointerDeviceKind;
+import 'dart:ui' show PointerDeviceKind;
 
 import 'package:flutter/material.dart';
 
@@ -312,7 +312,10 @@ class _QuestTrailState extends State<_QuestTrail> {
   @override
   Widget build(BuildContext context) {
     final lessons = widget.world.lessons;
-    final letters = alphabets[widget.world.id];
+    // Writing (tracing every letter) belongs to Level 1 only.
+    final atLevelOne =
+        AppScope.of(context).activeProfile?.stage == ExperienceStage.explorer;
+    final letters = atLevelOne ? alphabets[widget.world.id] : null;
     // The first card is "All letters" (for the languages that have a script).
     final lead = letters == null ? 0 : 1;
     return LayoutBuilder(

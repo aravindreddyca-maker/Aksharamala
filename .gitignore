@@ -14,3 +14,6 @@ outputs/
 
 # Excel lock files
 ~$*
+
+# Python caches
+__pycache__/

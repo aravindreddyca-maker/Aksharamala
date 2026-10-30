@@ -537,7 +537,8 @@ void main() {
     expect(find.byType(Image), findsNothing);
   });
 
-  testWidgets('Number Names keeps its multilingual choices', (tester) async {
+  testWidgets('Number Names is English only and keeps check-answer',
+      (tester) async {
     await setViewport(tester, const Size(960, 540), 1.0);
     final lesson = numbers.lessons.firstWhere((l) => l.id == 'num-names');
     await tester.pumpWidget(
@@ -552,7 +553,9 @@ void main() {
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
     expect(find.byKey(const Key('check_answer')), findsOneWidget);
-    expect(find.textContaining('ஐந்து'), findsWidgets);
+    expect(find.text('five'), findsWidgets);
+    expect(find.textContaining('ஐந்து'), findsNothing);
+    expect(find.textContaining('పాంచ'), findsNothing);
   });
 
   // The home cards now show English names only; the scripts appear on each
