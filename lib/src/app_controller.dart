@@ -65,12 +65,19 @@ class AppController extends ChangeNotifier {
   /// shown (through the saved age); nothing earned is touched.
   Future<void> setLevel(int level) async {
     final profile = activeProfile;
-    if (profile == null) return;
-    final age = stageForLevel(level).representativeAge;
-    if (stageForAge(profile.age) == stageForLevel(level)) return;
-    final updated = profile.copyWith(age: age);
-    profiles = [for (final p in profiles) p.id == profile.id ? updated : p];
-    activeProfile = updated;
+    if (profile != null) await setLevelFor(profile.id, level);
+  }
+
+  /// The same for any saved profile, whether or not it is the one playing.
+  Future<void> setLevelFor(String profileId, int level) async {
+    final index = profiles.indexWhere((p) => p.id == profileId);
+    if (index < 0) return;
+    final profile = profiles[index];
+    final target = stageForLevel(level);
+    if (stageForAge(profile.age) == target) return;
+    final updated = profile.copyWith(age: target.representativeAge);
+    profiles = [...profiles]..[index] = updated;
+    if (activeProfile?.id == profileId) activeProfile = updated;
     await _persist();
     notifyListeners();
   }

@@ -195,6 +195,29 @@ void main() {
     });
   });
 
+  group('the right / wrong line stays visible', () {
+    testWidgets('above the answers and clear of the Next button at 640x360',
+        (tester) async {
+      await open(tester, 'telugu', 0);
+      tester.view.physicalSize = const Size(1280, 720);
+      await tester.pump();
+      await next(tester);
+      await tapAnswer(tester, 'ఇ'); // wrong
+      final wrong = tester.getRect(find.byKey(const Key('feedback_message')));
+      final button = tester.getRect(find.byKey(const Key('batch_next')));
+      expect(wrong.top, greaterThanOrEqualTo(0));
+      expect(wrong.bottom, lessThanOrEqualTo(button.top));
+      expect(find.byIcon(Icons.cancel_rounded), findsWidgets);
+      await tapAnswer(tester, 'అ');
+      final right = tester.getRect(find.byKey(const Key('feedback_message')));
+      expect(right.bottom, lessThanOrEqualTo(button.top));
+      expect(find.text('శభాష్!'), findsOneWidget);
+      // ...and it is above the first answer, not under the last one.
+      final firstAnswer = tester.getRect(find.byKey(const Key('answer_అ')));
+      expect(right.top, lessThan(firstAnswer.top));
+    });
+  });
+
   group('a Number Galaxy lesson', () {
     testWidgets('quantity, counting, comparing and writing 3', (tester) async {
       await open(tester, 'numbers', 3);

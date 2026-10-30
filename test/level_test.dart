@@ -2,6 +2,7 @@ import 'package:aksharamala/src/app.dart';
 import 'package:aksharamala/src/app_controller.dart';
 import 'package:aksharamala/src/models.dart';
 import 'package:aksharamala/src/screens/home_screen.dart';
+import 'package:aksharamala/src/screens/profile_screen.dart';
 import 'package:aksharamala/src/services/local_store.dart';
 import 'package:aksharamala/src/theme.dart';
 import 'package:flutter/material.dart';
@@ -110,6 +111,60 @@ void main() {
       final high = c.worlds.fold<int>(0, (n, w) => n + w.lessons.length);
       expect(low, isNot(high));
     });
+  });
+
+  group('changing the level of a saved profile', () {
+    test('works for a profile that is not the one playing', () async {
+      final c = _controller();
+      const other =
+          ChildProfile(id: 'q', name: 'Ravi', age: 11, avatar: 'panda');
+      c.profiles = [...c.profiles, other];
+      await c.setLevelFor('q', 1);
+      expect(c.profiles.firstWhere((p) => p.id == 'q').level, 1);
+      expect(c.activeProfile!.id, 'p', reason: 'the playing profile stays');
+      expect(c.activeProfile!.level, 1);
+      await c.setLevelFor('p', 3);
+      expect(c.activeProfile!.level, 3);
+      expect(c.profiles.firstWhere((p) => p.id == 'q').level, 1);
+    });
+
+    test('an unknown profile is ignored', () async {
+      final c = _controller();
+      await c.setLevelFor('nobody', 4);
+      expect(c.activeProfile!.level, 1);
+    });
+  });
+
+  testWidgets('the saved-profile list lets anyone change a level',
+      (tester) async {
+    tester.view
+      ..devicePixelRatio = 1
+      ..physicalSize = const Size(960, 540);
+    addTearDown(tester.view.reset);
+    final c = _controller();
+    await tester.pumpWidget(
+      AppScope(
+        controller: c,
+        child: MaterialApp(
+          theme: buildTheme(),
+          home: const ProfileScreen(allowSkip: true),
+        ),
+      ),
+    );
+    await tester.pump();
+    expect(find.textContaining('Level 1 • Little Explorer'), findsOneWidget);
+    await tester.tap(find.byKey(const Key('level_of_p')));
+    await tester.pumpAndSettle();
+    expect(find.text('Choose a level'), findsOneWidget);
+    await tester.tap(find.descendant(
+      of: find.byType(AlertDialog),
+      matching: find.byKey(const Key('level_3')),
+    ));
+    await tester.pumpAndSettle();
+    expect(c.profiles.single.level, 3);
+    expect(find.textContaining('Level 3 • Curious Scholar'), findsOneWidget);
+    // Choosing a level did not open the profile.
+    expect(find.byType(ProfileScreen), findsOneWidget);
   });
 
   testWidgets('the home screen shows the level and anyone can change it',

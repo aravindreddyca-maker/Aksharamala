@@ -257,13 +257,32 @@ class _LearnerTile extends StatelessWidget {
                       const Icon(Icons.play_circle_fill_rounded, size: 30),
                     ],
                   ),
-                  // Full tile width, so the age and stage are never cut off.
-                  Padding(
-                    padding: const EdgeInsets.only(top: 4),
-                    child: Text(
-                      '${profile.stage.levelLabel} • ${profile.stage.label}',
-                      maxLines: 3,
-                      style: const TextStyle(fontSize: 13, height: 1.2),
+                  // Full tile width, so the level and stage are never cut off.
+                  // Tapping it lets anyone pick a different level for this
+                  // learner without opening the profile.
+                  InkWell(
+                    key: Key('level_of_${profile.id}'),
+                    borderRadius: BorderRadius.circular(10),
+                    onTap: () => showLevelDialog(
+                      context,
+                      current: profile.level,
+                      onPicked: (level) =>
+                          AppScope.of(context).setLevelFor(profile.id, level),
+                    ),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(minHeight: 44),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '${profile.stage.levelLabel} • ${profile.stage.label}',
+                              maxLines: 3,
+                              style: const TextStyle(fontSize: 13, height: 1.2),
+                            ),
+                          ),
+                          const Icon(Icons.expand_more_rounded, size: 22),
+                        ],
+                      ),
                     ),
                   ),
                 ],

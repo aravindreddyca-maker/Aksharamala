@@ -613,6 +613,50 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // At the top, so it is always on screen: it used to sit under the
+            // answers and slid behind the Next / Finish button.
+            SizedBox(
+              height: 34,
+              child: message == null
+                  ? null
+                  : Semantics(
+                      liveRegion: true,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            _right != null
+                                ? Icons.check_circle_rounded
+                                : Icons.cancel_rounded,
+                            size: 24,
+                            color: _right != null
+                                ? const Color(0xFF1B7A41)
+                                : const Color(0xFF9C2C20),
+                          ),
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: Text(
+                              message,
+                              key: const Key('feedback_message'),
+                              textAlign: TextAlign.center,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: scriptStyle(
+                                message,
+                                TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w900,
+                                  color: _right != null
+                                      ? const Color(0xFF1B7A41)
+                                      : const Color(0xFF9C2C20),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+            ),
             for (final option in options)
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
@@ -631,29 +675,6 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                   onTap: () => _pick(option),
                 ),
               ),
-            SizedBox(
-              height: 26,
-              child: message == null
-                  ? null
-                  : Semantics(
-                      liveRegion: true,
-                      child: Text(
-                        message,
-                        key: const Key('feedback_message'),
-                        textAlign: TextAlign.center,
-                        style: scriptStyle(
-                          message,
-                          TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w900,
-                            color: _right != null
-                                ? const Color(0xFF1B7A41)
-                                : const Color(0xFF9C2C20),
-                          ),
-                        ),
-                      ),
-                    ),
-            ),
           ],
         ),
       ),

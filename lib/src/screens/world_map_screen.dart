@@ -9,6 +9,8 @@ import '../models.dart';
 import '../quest_art.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../alphabet/alphabet_data.dart';
+import 'alphabet_screen.dart';
 import 'batch_lesson_screen.dart';
 import 'lesson_screen.dart';
 
@@ -173,6 +175,30 @@ class _Header extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 10),
+              // Every letter of the language on one page: learn from scratch,
+              // trace each one, then move on to the next.
+              if (alphabets[world.id] != null) ...[
+                FilledButton.icon(
+                  key: const Key('all_letters'),
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (_) => AlphabetScreen(
+                        world: world,
+                        letters: alphabets[world.id]!,
+                      ),
+                    ),
+                  ),
+                  icon: const Icon(Icons.abc_rounded),
+                  label: const Text('All letters'),
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size(48, 48),
+                    backgroundColor: const Color(0xFFFFE36E),
+                    foregroundColor: const Color(0xFF13213A),
+                  ),
+                ),
+                const SizedBox(width: 10),
+              ],
               StarPill(stars),
             ],
           ),
