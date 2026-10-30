@@ -33,8 +33,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: c + a + t = cat. Words in this family: cat, bat, hat, sat.',
-        speech: 'Say the sounds and blend them: c + a + t = cat. Words in this family: cat, bat, hat, sat.',
+        prompt:
+            'Say the sounds and blend them: c + a + t = cat. Words in this family: cat, bat, hat, sat.',
+        speech:
+            'Say the sounds and blend them: c + a + t = cat. Words in this family: cat, bat, hat, sat.',
         glyph: 'cat',
         sourceRecord: 'english-56-001',
       ),
@@ -82,8 +84,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: m + a + n = man. Words in this family: man, pan, fan, can.',
-        speech: 'Say the sounds and blend them: m + a + n = man. Words in this family: man, pan, fan, can.',
+        prompt:
+            'Say the sounds and blend them: m + a + n = man. Words in this family: man, pan, fan, can.',
+        speech:
+            'Say the sounds and blend them: m + a + n = man. Words in this family: man, pan, fan, can.',
         glyph: 'man',
         sourceRecord: 'english-56-002',
       ),
@@ -131,8 +135,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: c + a + p = cap. Words in this family: cap, map, tap, nap.',
-        speech: 'Say the sounds and blend them: c + a + p = cap. Words in this family: cap, map, tap, nap.',
+        prompt:
+            'Say the sounds and blend them: c + a + p = cap. Words in this family: cap, map, tap, nap.',
+        speech:
+            'Say the sounds and blend them: c + a + p = cap. Words in this family: cap, map, tap, nap.',
         glyph: 'cap',
         sourceRecord: 'english-56-003',
       ),
@@ -180,8 +186,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: p + e + n = pen. Words in this family: pen, hen, ten, men.',
-        speech: 'Say the sounds and blend them: p + e + n = pen. Words in this family: pen, hen, ten, men.',
+        prompt:
+            'Say the sounds and blend them: p + e + n = pen. Words in this family: pen, hen, ten, men.',
+        speech:
+            'Say the sounds and blend them: p + e + n = pen. Words in this family: pen, hen, ten, men.',
         glyph: 'pen',
         sourceRecord: 'english-56-004',
       ),
@@ -229,8 +237,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: p + e + t = pet. Words in this family: pet, net, wet, jet.',
-        speech: 'Say the sounds and blend them: p + e + t = pet. Words in this family: pet, net, wet, jet.',
+        prompt:
+            'Say the sounds and blend them: p + e + t = pet. Words in this family: pet, net, wet, jet.',
+        speech:
+            'Say the sounds and blend them: p + e + t = pet. Words in this family: pet, net, wet, jet.',
         glyph: 'pet',
         sourceRecord: 'english-56-005',
       ),
@@ -278,8 +288,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: p + i + n = pin. Words in this family: pin, bin, fin, win.',
-        speech: 'Say the sounds and blend them: p + i + n = pin. Words in this family: pin, bin, fin, win.',
+        prompt:
+            'Say the sounds and blend them: p + i + n = pin. Words in this family: pin, bin, fin, win.',
+        speech:
+            'Say the sounds and blend them: p + i + n = pin. Words in this family: pin, bin, fin, win.',
         glyph: 'pin',
         sourceRecord: 'english-56-006',
       ),
@@ -327,8 +339,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: s + i + t = sit. Words in this family: sit, hit, fit, bit.',
-        speech: 'Say the sounds and blend them: s + i + t = sit. Words in this family: sit, hit, fit, bit.',
+        prompt:
+            'Say the sounds and blend them: s + i + t = sit. Words in this family: sit, hit, fit, bit.',
+        speech:
+            'Say the sounds and blend them: s + i + t = sit. Words in this family: sit, hit, fit, bit.',
         glyph: 'sit',
         sourceRecord: 'english-56-007',
       ),
@@ -376,8 +390,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: p + i + g = pig. Words in this family: pig, big, dig, wig.',
-        speech: 'Say the sounds and blend them: p + i + g = pig. Words in this family: pig, big, dig, wig.',
+        prompt:
+            'Say the sounds and blend them: p + i + g = pig. Words in this family: pig, big, dig, wig.',
+        speech:
+            'Say the sounds and blend them: p + i + g = pig. Words in this family: pig, big, dig, wig.',
         glyph: 'pig',
         sourceRecord: 'english-56-008',
       ),
@@ -425,8 +441,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: d + o + g = dog. Words in this family: dog, log, fog, hog.',
-        speech: 'Say the sounds and blend them: d + o + g = dog. Words in this family: dog, log, fog, hog.',
+        prompt:
+            'Say the sounds and blend them: d + o + g = dog. Words in this family: dog, log, fog, hog.',
+        speech:
+            'Say the sounds and blend them: d + o + g = dog. Words in this family: dog, log, fog, hog.',
         glyph: 'dog',
         sourceRecord: 'english-56-009',
       ),
@@ -474,8 +492,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: t + o + p = top. Words in this family: top, hop, mop, pop.',
-        speech: 'Say the sounds and blend them: t + o + p = top. Words in this family: top, hop, mop, pop.',
+        prompt:
+            'Say the sounds and blend them: t + o + p = top. Words in this family: top, hop, mop, pop.',
+        speech:
+            'Say the sounds and blend them: t + o + p = top. Words in this family: top, hop, mop, pop.',
         glyph: 'top',
         sourceRecord: 'english-56-010',
       ),
@@ -523,8 +543,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: s + u + n = sun. Words in this family: sun, run, fun, bun.',
-        speech: 'Say the sounds and blend them: s + u + n = sun. Words in this family: sun, run, fun, bun.',
+        prompt:
+            'Say the sounds and blend them: s + u + n = sun. Words in this family: sun, run, fun, bun.',
+        speech:
+            'Say the sounds and blend them: s + u + n = sun. Words in this family: sun, run, fun, bun.',
         glyph: 'sun',
         sourceRecord: 'english-56-011',
       ),
@@ -572,8 +594,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Say the sounds and blend them: b + u + g = bug. Words in this family: bug, rug, mug, hug.',
-        speech: 'Say the sounds and blend them: b + u + g = bug. Words in this family: bug, rug, mug, hug.',
+        prompt:
+            'Say the sounds and blend them: b + u + g = bug. Words in this family: bug, rug, mug, hug.',
+        speech:
+            'Say the sounds and blend them: b + u + g = bug. Words in this family: bug, rug, mug, hug.',
         glyph: 'bug',
         sourceRecord: 'english-56-012',
       ),
@@ -609,8 +633,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -629,8 +652,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which spelling is correct for the word the?',
         options: ['the', 'tha', 'teh'],
         answer: 'the',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-013',
       ),
     ],
@@ -652,8 +674,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -672,8 +693,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which spelling is correct for the word and?',
         options: ['and', 'adn', 'end'],
         answer: 'and',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-014',
       ),
     ],
@@ -695,8 +715,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -715,8 +734,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which spelling is correct for the word is?',
         options: ['is', 'si', 'as'],
         answer: 'is',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-015',
       ),
     ],
@@ -738,8 +756,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -758,8 +775,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which spelling is correct for the word you?',
         options: ['you', 'yuo', 'yo'],
         answer: 'you',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-016',
       ),
     ],
@@ -781,8 +797,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -801,8 +816,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which spelling is correct for the word my?',
         options: ['my', 'ym', 'me'],
         answer: 'my',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-017',
       ),
     ],
@@ -824,8 +838,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -844,8 +857,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which spelling is correct for the word we?',
         options: ['we', 'ew', 'wa'],
         answer: 'we',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-018',
       ),
     ],
@@ -867,8 +879,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -887,8 +898,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which spelling is correct for the word see?',
         options: ['see', 'sea', 'se'],
         answer: 'see',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-019',
       ),
     ],
@@ -910,8 +920,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -930,8 +939,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which spelling is correct for the word like?',
         options: ['like', 'liek', 'lick'],
         answer: 'like',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-020',
       ),
     ],
@@ -953,8 +961,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -973,8 +980,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Where is the cat?',
         options: ['on the mat', 'in the tree', 'under the bed'],
         answer: 'on the mat',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-021',
       ),
     ],
@@ -996,8 +1002,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1016,8 +1021,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'What colour is the hen?',
         options: ['red', 'blue', 'green'],
         answer: 'red',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-022',
       ),
     ],
@@ -1039,8 +1043,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1059,8 +1062,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'What can the dog do?',
         options: ['run', 'fly', 'swim'],
         answer: 'run',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-023',
       ),
     ],
@@ -1082,8 +1084,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1102,8 +1103,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'How many pens?',
         options: ['two', 'one', 'five'],
         answer: 'two',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-024',
       ),
     ],
@@ -1125,8 +1125,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1145,8 +1144,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'What is hot?',
         options: ['the sun', 'the moon', 'the rain'],
         answer: 'the sun',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-025',
       ),
     ],
@@ -1168,8 +1166,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1188,8 +1185,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Where is the pig?',
         options: ['in the mud', 'in the sky', 'on the roof'],
         answer: 'in the mud',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-026',
       ),
     ],
@@ -1203,7 +1199,8 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     locale: 'en-US',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can distinguish letter shapes in letter_shapes.',
+    learningObjective:
+        'Learner can distinguish letter shapes in letter_shapes.',
     prerequisites: ['english-56-026'],
     topic: 'letter_shapes',
     skill: 'distinguish_letter_shapes',
@@ -1211,8 +1208,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.guidedTracing,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1220,8 +1216,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at the shape and direction of lowercase b. Say its sound, then trace it slowly.',
-        speech: 'Look at the shape and direction of lowercase b. Say its sound, then trace it slowly.',
+        prompt:
+            'Look at the shape and direction of lowercase b. Say its sound, then trace it slowly.',
+        speech:
+            'Look at the shape and direction of lowercase b. Say its sound, then trace it slowly.',
         glyph: 'b',
         sourceRecord: 'english-56-027',
       ),
@@ -1231,8 +1229,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which is lowercase b?',
         options: ['b', 'd', 'p'],
         answer: 'b',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-027',
       ),
     ],
@@ -1246,7 +1243,8 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     locale: 'en-US',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can distinguish letter shapes in letter_shapes.',
+    learningObjective:
+        'Learner can distinguish letter shapes in letter_shapes.',
     prerequisites: ['english-56-027'],
     topic: 'letter_shapes',
     skill: 'distinguish_letter_shapes',
@@ -1254,8 +1252,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.guidedTracing,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1263,8 +1260,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at the shape and direction of lowercase d. Say its sound, then trace it slowly.',
-        speech: 'Look at the shape and direction of lowercase d. Say its sound, then trace it slowly.',
+        prompt:
+            'Look at the shape and direction of lowercase d. Say its sound, then trace it slowly.',
+        speech:
+            'Look at the shape and direction of lowercase d. Say its sound, then trace it slowly.',
         glyph: 'd',
         sourceRecord: 'english-56-028',
       ),
@@ -1274,8 +1273,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which is lowercase d?',
         options: ['d', 'b', 'q'],
         answer: 'd',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-028',
       ),
     ],
@@ -1289,7 +1287,8 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     locale: 'en-US',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can distinguish letter shapes in letter_shapes.',
+    learningObjective:
+        'Learner can distinguish letter shapes in letter_shapes.',
     prerequisites: ['english-56-028'],
     topic: 'letter_shapes',
     skill: 'distinguish_letter_shapes',
@@ -1297,8 +1296,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.guidedTracing,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1306,8 +1304,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at the shape and direction of lowercase p. Say its sound, then trace it slowly.',
-        speech: 'Look at the shape and direction of lowercase p. Say its sound, then trace it slowly.',
+        prompt:
+            'Look at the shape and direction of lowercase p. Say its sound, then trace it slowly.',
+        speech:
+            'Look at the shape and direction of lowercase p. Say its sound, then trace it slowly.',
         glyph: 'p',
         sourceRecord: 'english-56-029',
       ),
@@ -1317,8 +1317,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which is lowercase p?',
         options: ['p', 'q', 'b'],
         answer: 'p',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-029',
       ),
     ],
@@ -1332,7 +1331,8 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     locale: 'en-US',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can distinguish letter shapes in letter_shapes.',
+    learningObjective:
+        'Learner can distinguish letter shapes in letter_shapes.',
     prerequisites: ['english-56-029'],
     topic: 'letter_shapes',
     skill: 'distinguish_letter_shapes',
@@ -1340,8 +1340,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.guidedTracing,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -1349,8 +1348,10 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at the shape and direction of lowercase q. Say its sound, then trace it slowly.',
-        speech: 'Look at the shape and direction of lowercase q. Say its sound, then trace it slowly.',
+        prompt:
+            'Look at the shape and direction of lowercase q. Say its sound, then trace it slowly.',
+        speech:
+            'Look at the shape and direction of lowercase q. Say its sound, then trace it slowly.',
         glyph: 'q',
         sourceRecord: 'english-56-030',
       ),
@@ -1360,8 +1361,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         speech: 'Which is lowercase q?',
         options: ['q', 'p', 'g'],
         answer: 'q',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'english-56-030',
       ),
     ],
@@ -2571,8 +2571,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2591,8 +2590,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 13?',
         options: ['1', '2', '0'],
         answer: '1',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-001',
       ),
     ],
@@ -2614,8 +2612,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2634,8 +2631,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 23?',
         options: ['2', '3', '1'],
         answer: '2',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-002',
       ),
     ],
@@ -2657,8 +2653,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2677,8 +2672,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 33?',
         options: ['3', '4', '2'],
         answer: '3',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-003',
       ),
     ],
@@ -2700,8 +2694,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2720,8 +2713,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 43?',
         options: ['4', '5', '3'],
         answer: '4',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-004',
       ),
     ],
@@ -2743,8 +2735,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2763,8 +2754,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 53?',
         options: ['5', '6', '4'],
         answer: '5',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-005',
       ),
     ],
@@ -2786,8 +2776,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2806,8 +2795,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 63?',
         options: ['6', '7', '5'],
         answer: '6',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-006',
       ),
     ],
@@ -2829,8 +2817,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2849,8 +2836,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 73?',
         options: ['7', '8', '6'],
         answer: '7',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-007',
       ),
     ],
@@ -2872,8 +2858,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2892,8 +2877,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 83?',
         options: ['8', '9', '7'],
         answer: '8',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-008',
       ),
     ],
@@ -2915,8 +2899,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2935,8 +2918,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'How many tens are in 93?',
         options: ['9', '10', '8'],
         answer: '9',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-009',
       ),
     ],
@@ -2958,8 +2940,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -2978,8 +2959,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '4 + 6 = ?',
         options: ['10', '11', '9'],
         answer: '10',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-010',
       ),
     ],
@@ -3001,8 +2981,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3021,8 +3000,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '7 + 8 = ?',
         options: ['15', '16', '14'],
         answer: '15',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-011',
       ),
     ],
@@ -3044,8 +3022,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3064,8 +3041,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '9 + 5 = ?',
         options: ['14', '15', '13'],
         answer: '14',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-012',
       ),
     ],
@@ -3087,8 +3063,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3107,8 +3082,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '12 + 7 = ?',
         options: ['19', '20', '18'],
         answer: '19',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-013',
       ),
     ],
@@ -3130,8 +3104,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3150,8 +3123,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '14 + 5 = ?',
         options: ['19', '20', '18'],
         answer: '19',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-014',
       ),
     ],
@@ -3173,8 +3145,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3193,8 +3164,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '11 + 9 = ?',
         options: ['20', '21', '19'],
         answer: '20',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-015',
       ),
     ],
@@ -3216,8 +3186,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3236,8 +3205,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '8 + 8 = ?',
         options: ['16', '17', '15'],
         answer: '16',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-016',
       ),
     ],
@@ -3259,8 +3227,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3279,8 +3246,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '13 + 6 = ?',
         options: ['19', '20', '18'],
         answer: '19',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-017',
       ),
     ],
@@ -3302,8 +3268,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3322,8 +3287,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '16 + 3 = ?',
         options: ['19', '20', '18'],
         answer: '19',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-018',
       ),
     ],
@@ -3345,8 +3309,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3365,8 +3328,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '10 + 9 = ?',
         options: ['19', '20', '18'],
         answer: '19',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-019',
       ),
     ],
@@ -3388,8 +3350,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3408,8 +3369,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '15 + 4 = ?',
         options: ['19', '20', '18'],
         answer: '19',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-020',
       ),
     ],
@@ -3431,8 +3391,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3451,8 +3410,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '6 + 7 = ?',
         options: ['13', '14', '12'],
         answer: '13',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-021',
       ),
     ],
@@ -3466,7 +3424,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-021'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3474,8 +3433,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3494,8 +3452,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '12 − 5 = ?',
         options: ['7', '8', '6'],
         answer: '7',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-022',
       ),
     ],
@@ -3509,7 +3466,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-022'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3517,8 +3475,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3537,8 +3494,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '15 − 7 = ?',
         options: ['8', '9', '7'],
         answer: '8',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-023',
       ),
     ],
@@ -3552,7 +3508,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-023'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3560,8 +3517,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3580,8 +3536,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '10 − 4 = ?',
         options: ['6', '7', '5'],
         answer: '6',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-024',
       ),
     ],
@@ -3595,7 +3550,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-024'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3603,8 +3559,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3623,8 +3578,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '18 − 9 = ?',
         options: ['9', '10', '8'],
         answer: '9',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-025',
       ),
     ],
@@ -3638,7 +3592,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-025'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3646,8 +3601,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3666,8 +3620,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '16 − 8 = ?',
         options: ['8', '9', '7'],
         answer: '8',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-026',
       ),
     ],
@@ -3681,7 +3634,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-026'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3689,8 +3643,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3709,8 +3662,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '11 − 3 = ?',
         options: ['8', '9', '7'],
         answer: '8',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-027',
       ),
     ],
@@ -3724,7 +3676,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-027'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3732,8 +3685,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3752,8 +3704,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '19 − 6 = ?',
         options: ['13', '14', '12'],
         answer: '13',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-028',
       ),
     ],
@@ -3767,7 +3718,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-028'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3775,8 +3727,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3795,8 +3746,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '14 − 7 = ?',
         options: ['7', '8', '6'],
         answer: '7',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-029',
       ),
     ],
@@ -3810,7 +3760,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-029'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3818,8 +3769,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3838,8 +3788,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '13 − 5 = ?',
         options: ['8', '9', '7'],
         answer: '8',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-030',
       ),
     ],
@@ -3853,7 +3802,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-030'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3861,8 +3811,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3881,8 +3830,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '17 − 9 = ?',
         options: ['8', '9', '7'],
         answer: '8',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-031',
       ),
     ],
@@ -3896,7 +3844,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-031'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3904,8 +3853,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3924,8 +3872,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '20 − 8 = ?',
         options: ['12', '13', '11'],
         answer: '12',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-032',
       ),
     ],
@@ -3939,7 +3886,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can subtract within 20 in subtraction_within_20.',
+    learningObjective:
+        'Learner can subtract within 20 in subtraction_within_20.',
     prerequisites: ['numbers-56-032'],
     topic: 'subtraction_within_20',
     skill: 'subtract_within_20',
@@ -3947,8 +3895,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.dragArithmetic,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -3967,8 +3914,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: '9 − 6 = ?',
         options: ['3', '4', '2'],
         answer: '3',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-033',
       ),
     ],
@@ -3982,7 +3928,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can compare two digit numbers in compare_numbers.',
+    learningObjective:
+        'Learner can compare two digit numbers in compare_numbers.',
     prerequisites: ['numbers-56-033'],
     topic: 'compare_numbers',
     skill: 'compare_two_digit_numbers',
@@ -3990,8 +3937,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4010,8 +3956,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'Choose the sign: 12 __ 15.',
         options: ['<', '>', '='],
         answer: '<',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-034',
       ),
     ],
@@ -4025,7 +3970,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can compare two digit numbers in compare_numbers.',
+    learningObjective:
+        'Learner can compare two digit numbers in compare_numbers.',
     prerequisites: ['numbers-56-034'],
     topic: 'compare_numbers',
     skill: 'compare_two_digit_numbers',
@@ -4033,8 +3979,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4053,8 +3998,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'Choose the sign: 20 __ 17.',
         options: ['<', '>', '='],
         answer: '>',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-035',
       ),
     ],
@@ -4068,7 +4012,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can compare two digit numbers in compare_numbers.',
+    learningObjective:
+        'Learner can compare two digit numbers in compare_numbers.',
     prerequisites: ['numbers-56-035'],
     topic: 'compare_numbers',
     skill: 'compare_two_digit_numbers',
@@ -4076,8 +4021,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4096,8 +4040,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'Choose the sign: 34 __ 43.',
         options: ['<', '>', '='],
         answer: '<',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-036',
       ),
     ],
@@ -4111,7 +4054,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can compare two digit numbers in compare_numbers.',
+    learningObjective:
+        'Learner can compare two digit numbers in compare_numbers.',
     prerequisites: ['numbers-56-036'],
     topic: 'compare_numbers',
     skill: 'compare_two_digit_numbers',
@@ -4119,8 +4063,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4139,8 +4082,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'Choose the sign: 28 __ 28.',
         options: ['<', '>', '='],
         answer: '=',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-037',
       ),
     ],
@@ -4154,7 +4096,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can compare two digit numbers in compare_numbers.',
+    learningObjective:
+        'Learner can compare two digit numbers in compare_numbers.',
     prerequisites: ['numbers-56-037'],
     topic: 'compare_numbers',
     skill: 'compare_two_digit_numbers',
@@ -4162,8 +4105,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4182,8 +4124,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'Choose the sign: 51 __ 49.',
         options: ['<', '>', '='],
         answer: '>',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-038',
       ),
     ],
@@ -4197,7 +4138,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can compare two digit numbers in compare_numbers.',
+    learningObjective:
+        'Learner can compare two digit numbers in compare_numbers.',
     prerequisites: ['numbers-56-038'],
     topic: 'compare_numbers',
     skill: 'compare_two_digit_numbers',
@@ -4205,8 +4147,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4225,8 +4166,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'Choose the sign: 69 __ 70.',
         options: ['<', '>', '='],
         answer: '<',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-039',
       ),
     ],
@@ -4240,7 +4180,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can compare two digit numbers in compare_numbers.',
+    learningObjective:
+        'Learner can compare two digit numbers in compare_numbers.',
     prerequisites: ['numbers-56-039'],
     topic: 'compare_numbers',
     skill: 'compare_two_digit_numbers',
@@ -4248,8 +4189,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4268,8 +4208,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'Choose the sign: 80 __ 79.',
         options: ['<', '>', '='],
         answer: '>',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-040',
       ),
     ],
@@ -4283,7 +4222,8 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     locale: 'en-IN',
     ageBand: '5-6',
     difficultyLevel: LessonDifficulty.beginner,
-    learningObjective: 'Learner can compare two digit numbers in compare_numbers.',
+    learningObjective:
+        'Learner can compare two digit numbers in compare_numbers.',
     prerequisites: ['numbers-56-040'],
     topic: 'compare_numbers',
     skill: 'compare_two_digit_numbers',
@@ -4291,8 +4231,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4311,8 +4250,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'Choose the sign: 17 __ 23.',
         options: ['<', '>', '='],
         answer: '<',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-041',
       ),
     ],
@@ -4334,8 +4272,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4343,8 +4280,10 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at how the numbers change: 2, 4, 6. The next number is 8.',
-        speech: 'Look at how the numbers change: 2, 4, 6. The next number is 8.',
+        prompt:
+            'Look at how the numbers change: 2, 4, 6. The next number is 8.',
+        speech:
+            'Look at how the numbers change: 2, 4, 6. The next number is 8.',
         glyph: '8',
         sourceRecord: 'numbers-56-042',
       ),
@@ -4354,8 +4293,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'What comes next: 2, 4, 6, __ ?',
         options: ['8', '9', '10'],
         answer: '8',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-042',
       ),
     ],
@@ -4377,8 +4315,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4386,8 +4323,10 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at how the numbers change: 5, 10, 15. The next number is 20.',
-        speech: 'Look at how the numbers change: 5, 10, 15. The next number is 20.',
+        prompt:
+            'Look at how the numbers change: 5, 10, 15. The next number is 20.',
+        speech:
+            'Look at how the numbers change: 5, 10, 15. The next number is 20.',
         glyph: '20',
         sourceRecord: 'numbers-56-043',
       ),
@@ -4397,8 +4336,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'What comes next: 5, 10, 15, __ ?',
         options: ['20', '21', '22'],
         answer: '20',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-043',
       ),
     ],
@@ -4420,8 +4358,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4429,8 +4366,10 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at how the numbers change: 10, 20, 30. The next number is 40.',
-        speech: 'Look at how the numbers change: 10, 20, 30. The next number is 40.',
+        prompt:
+            'Look at how the numbers change: 10, 20, 30. The next number is 40.',
+        speech:
+            'Look at how the numbers change: 10, 20, 30. The next number is 40.',
         glyph: '40',
         sourceRecord: 'numbers-56-044',
       ),
@@ -4440,8 +4379,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'What comes next: 10, 20, 30, __ ?',
         options: ['40', '41', '42'],
         answer: '40',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-044',
       ),
     ],
@@ -4463,8 +4401,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4472,8 +4409,10 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at how the numbers change: 1, 3, 5. The next number is 7.',
-        speech: 'Look at how the numbers change: 1, 3, 5. The next number is 7.',
+        prompt:
+            'Look at how the numbers change: 1, 3, 5. The next number is 7.',
+        speech:
+            'Look at how the numbers change: 1, 3, 5. The next number is 7.',
         glyph: '7',
         sourceRecord: 'numbers-56-045',
       ),
@@ -4483,8 +4422,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'What comes next: 1, 3, 5, __ ?',
         options: ['7', '8', '9'],
         answer: '7',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-045',
       ),
     ],
@@ -4506,8 +4444,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4515,8 +4452,10 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at how the numbers change: 20, 18, 16. The next number is 14.',
-        speech: 'Look at how the numbers change: 20, 18, 16. The next number is 14.',
+        prompt:
+            'Look at how the numbers change: 20, 18, 16. The next number is 14.',
+        speech:
+            'Look at how the numbers change: 20, 18, 16. The next number is 14.',
         glyph: '14',
         sourceRecord: 'numbers-56-046',
       ),
@@ -4526,8 +4465,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'What comes next: 20, 18, 16, __ ?',
         options: ['14', '15', '16'],
         answer: '14',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-046',
       ),
     ],
@@ -4549,8 +4487,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.counting,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -4558,8 +4495,10 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'Look at how the numbers change: 3, 6, 9. The next number is 12.',
-        speech: 'Look at how the numbers change: 3, 6, 9. The next number is 12.',
+        prompt:
+            'Look at how the numbers change: 3, 6, 9. The next number is 12.',
+        speech:
+            'Look at how the numbers change: 3, 6, 9. The next number is 12.',
         glyph: '12',
         sourceRecord: 'numbers-56-047',
       ),
@@ -4569,8 +4508,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         speech: 'What comes next: 3, 6, 9, __ ?',
         options: ['12', '13', '14'],
         answer: '12',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'numbers-56-047',
       ),
     ],
@@ -4737,8 +4675,10 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'A circle has 0 straight sides. Look for this shape around you.',
-        speech: 'A circle has 0 straight sides. Look for this shape around you.',
+        prompt:
+            'A circle has 0 straight sides. Look for this shape around you.',
+        speech:
+            'A circle has 0 straight sides. Look for this shape around you.',
         glyph: 'circle',
         sourceRecord: 'numbers-56-051',
       ),
@@ -4827,8 +4767,10 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'A pencil can be longer than an eraser. Compare by placing their ends together.',
-        speech: 'A pencil can be longer than an eraser. Compare by placing their ends together.',
+        prompt:
+            'A pencil can be longer than an eraser. Compare by placing their ends together.',
+        speech:
+            'A pencil can be longer than an eraser. Compare by placing their ends together.',
         glyph: 'longer',
         sourceRecord: 'numbers-56-053',
       ),
@@ -4920,8 +4862,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் அ உயிர் சேர்ந்தால் க எழுத்து உருவாகும். கல் என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் அ உயிர் சேர்ந்தால் க எழுத்து உருவாகும். கல் என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் அ உயிர் சேர்ந்தால் க எழுத்து உருவாகும். கல் என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் அ உயிர் சேர்ந்தால் க எழுத்து உருவாகும். கல் என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கல்',
         sourceRecord: 'tamil-56-001',
       ),
@@ -4965,8 +4909,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் ஆ உயிர் சேர்ந்தால் கா எழுத்து உருவாகும். காடு என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் ஆ உயிர் சேர்ந்தால் கா எழுத்து உருவாகும். காடு என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் ஆ உயிர் சேர்ந்தால் கா எழுத்து உருவாகும். காடு என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் ஆ உயிர் சேர்ந்தால் கா எழுத்து உருவாகும். காடு என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'காடு',
         sourceRecord: 'tamil-56-002',
       ),
@@ -5010,8 +4956,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் இ உயிர் சேர்ந்தால் கி எழுத்து உருவாகும். கிளி என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் இ உயிர் சேர்ந்தால் கி எழுத்து உருவாகும். கிளி என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் இ உயிர் சேர்ந்தால் கி எழுத்து உருவாகும். கிளி என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் இ உயிர் சேர்ந்தால் கி எழுத்து உருவாகும். கிளி என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கிளி',
         sourceRecord: 'tamil-56-003',
       ),
@@ -5055,8 +5003,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் ஈ உயிர் சேர்ந்தால் கீ எழுத்து உருவாகும். கீரை என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் ஈ உயிர் சேர்ந்தால் கீ எழுத்து உருவாகும். கீரை என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் ஈ உயிர் சேர்ந்தால் கீ எழுத்து உருவாகும். கீரை என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் ஈ உயிர் சேர்ந்தால் கீ எழுத்து உருவாகும். கீரை என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கீரை',
         sourceRecord: 'tamil-56-004',
       ),
@@ -5100,8 +5050,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் உ உயிர் சேர்ந்தால் கு எழுத்து உருவாகும். குடம் என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் உ உயிர் சேர்ந்தால் கு எழுத்து உருவாகும். குடம் என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் உ உயிர் சேர்ந்தால் கு எழுத்து உருவாகும். குடம் என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் உ உயிர் சேர்ந்தால் கு எழுத்து உருவாகும். குடம் என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'குடம்',
         sourceRecord: 'tamil-56-005',
       ),
@@ -5145,8 +5097,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் ஊ உயிர் சேர்ந்தால் கூ எழுத்து உருவாகும். கூடு என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் ஊ உயிர் சேர்ந்தால் கூ எழுத்து உருவாகும். கூடு என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் ஊ உயிர் சேர்ந்தால் கூ எழுத்து உருவாகும். கூடு என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் ஊ உயிர் சேர்ந்தால் கூ எழுத்து உருவாகும். கூடு என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கூடு',
         sourceRecord: 'tamil-56-006',
       ),
@@ -5190,8 +5144,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் எ உயிர் சேர்ந்தால் கெ எழுத்து உருவாகும். கெண்டை என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் எ உயிர் சேர்ந்தால் கெ எழுத்து உருவாகும். கெண்டை என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் எ உயிர் சேர்ந்தால் கெ எழுத்து உருவாகும். கெண்டை என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் எ உயிர் சேர்ந்தால் கெ எழுத்து உருவாகும். கெண்டை என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கெண்டை',
         sourceRecord: 'tamil-56-007',
       ),
@@ -5235,8 +5191,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் ஏ உயிர் சேர்ந்தால் கே எழுத்து உருவாகும். கேணி என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் ஏ உயிர் சேர்ந்தால் கே எழுத்து உருவாகும். கேணி என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் ஏ உயிர் சேர்ந்தால் கே எழுத்து உருவாகும். கேணி என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் ஏ உயிர் சேர்ந்தால் கே எழுத்து உருவாகும். கேணி என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கேணி',
         sourceRecord: 'tamil-56-008',
       ),
@@ -5280,8 +5238,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் ஐ உயிர் சேர்ந்தால் கை எழுத்து உருவாகும். கை என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் ஐ உயிர் சேர்ந்தால் கை எழுத்து உருவாகும். கை என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் ஐ உயிர் சேர்ந்தால் கை எழுத்து உருவாகும். கை என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் ஐ உயிர் சேர்ந்தால் கை எழுத்து உருவாகும். கை என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கை',
         sourceRecord: 'tamil-56-009',
       ),
@@ -5325,8 +5285,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் ஒ உயிர் சேர்ந்தால் கொ எழுத்து உருவாகும். கொடி என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் ஒ உயிர் சேர்ந்தால் கொ எழுத்து உருவாகும். கொடி என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் ஒ உயிர் சேர்ந்தால் கொ எழுத்து உருவாகும். கொடி என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் ஒ உயிர் சேர்ந்தால் கொ எழுத்து உருவாகும். கொடி என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கொடி',
         sourceRecord: 'tamil-56-010',
       ),
@@ -5370,8 +5332,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் ஓ உயிர் சேர்ந்தால் கோ எழுத்து உருவாகும். கோழி என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் ஓ உயிர் சேர்ந்தால் கோ எழுத்து உருவாகும். கோழி என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் ஓ உயிர் சேர்ந்தால் கோ எழுத்து உருவாகும். கோழி என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் ஓ உயிர் சேர்ந்தால் கோ எழுத்து உருவாகும். கோழி என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கோழி',
         sourceRecord: 'tamil-56-011',
       ),
@@ -5405,8 +5369,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['கௌரி'],
       pronunciationVerified: false,
     ),
@@ -5414,8 +5377,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'க் உடன் ஔ உயிர் சேர்ந்தால் கௌ எழுத்து உருவாகும். கௌரி என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'க் உடன் ஔ உயிர் சேர்ந்தால் கௌ எழுத்து உருவாகும். கௌரி என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'க் உடன் ஔ உயிர் சேர்ந்தால் கௌ எழுத்து உருவாகும். கௌரி என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'க் உடன் ஔ உயிர் சேர்ந்தால் கௌ எழுத்து உருவாகும். கௌரி என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'கௌரி',
         sourceRecord: 'tamil-56-012',
       ),
@@ -5425,8 +5390,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         speech: 'க் + ஔ = ?',
         options: ['கௌ', 'க்', 'கூ'],
         answer: 'கௌ',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'tamil-56-012',
       ),
     ],
@@ -5458,8 +5422,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'ச் உடன் அ உயிர் சேர்ந்தால் ச எழுத்து உருவாகும். சங்கு என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'ச் உடன் அ உயிர் சேர்ந்தால் ச எழுத்து உருவாகும். சங்கு என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'ச் உடன் அ உயிர் சேர்ந்தால் ச எழுத்து உருவாகும். சங்கு என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'ச் உடன் அ உயிர் சேர்ந்தால் ச எழுத்து உருவாகும். சங்கு என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'சங்கு',
         sourceRecord: 'tamil-56-013',
       ),
@@ -5503,8 +5469,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'த் உடன் அ உயிர் சேர்ந்தால் த எழுத்து உருவாகும். தலை என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'த் உடன் அ உயிர் சேர்ந்தால் த எழுத்து உருவாகும். தலை என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'த் உடன் அ உயிர் சேர்ந்தால் த எழுத்து உருவாகும். தலை என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'த் உடன் அ உயிர் சேர்ந்தால் த எழுத்து உருவாகும். தலை என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'தலை',
         sourceRecord: 'tamil-56-014',
       ),
@@ -5548,8 +5516,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'ந் உடன் அ உயிர் சேர்ந்தால் ந எழுத்து உருவாகும். நரி என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'ந் உடன் அ உயிர் சேர்ந்தால் ந எழுத்து உருவாகும். நரி என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'ந் உடன் அ உயிர் சேர்ந்தால் ந எழுத்து உருவாகும். நரி என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'ந் உடன் அ உயிர் சேர்ந்தால் ந எழுத்து உருவாகும். நரி என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'நரி',
         sourceRecord: 'tamil-56-015',
       ),
@@ -5593,8 +5563,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'ப் உடன் அ உயிர் சேர்ந்தால் ப எழுத்து உருவாகும். பல் என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'ப் உடன் அ உயிர் சேர்ந்தால் ப எழுத்து உருவாகும். பல் என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'ப் உடன் அ உயிர் சேர்ந்தால் ப எழுத்து உருவாகும். பல் என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'ப் உடன் அ உயிர் சேர்ந்தால் ப எழுத்து உருவாகும். பல் என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'பல்',
         sourceRecord: 'tamil-56-016',
       ),
@@ -5638,8 +5610,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'ம் உடன் அ உயிர் சேர்ந்தால் ம எழுத்து உருவாகும். மரம் என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'ம் உடன் அ உயிர் சேர்ந்தால் ம எழுத்து உருவாகும். மரம் என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'ம் உடன் அ உயிர் சேர்ந்தால் ம எழுத்து உருவாகும். மரம் என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'ம் உடன் அ உயிர் சேர்ந்தால் ம எழுத்து உருவாகும். மரம் என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'மரம்',
         sourceRecord: 'tamil-56-017',
       ),
@@ -5683,8 +5657,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'ய் உடன் ஆ உயிர் சேர்ந்தால் யா எழுத்து உருவாகும். யானை என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'ய் உடன் ஆ உயிர் சேர்ந்தால் யா எழுத்து உருவாகும். யானை என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'ய் உடன் ஆ உயிர் சேர்ந்தால் யா எழுத்து உருவாகும். யானை என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'ய் உடன் ஆ உயிர் சேர்ந்தால் யா எழுத்து உருவாகும். யானை என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'யானை',
         sourceRecord: 'tamil-56-018',
       ),
@@ -5728,8 +5704,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'வ் உடன் ஆ உயிர் சேர்ந்தால் வா எழுத்து உருவாகும். வானம் என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'வ் உடன் ஆ உயிர் சேர்ந்தால் வா எழுத்து உருவாகும். வானம் என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'வ் உடன் ஆ உயிர் சேர்ந்தால் வா எழுத்து உருவாகும். வானம் என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'வ் உடன் ஆ உயிர் சேர்ந்தால் வா எழுத்து உருவாகும். வானம் என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'வானம்',
         sourceRecord: 'tamil-56-019',
       ),
@@ -5773,8 +5751,10 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'ப் உடன் ஊ உயிர் சேர்ந்தால் பூ எழுத்து உருவாகும். பூனை என்ற சொல்லைக் கேளுங்கள்.',
-        speech: 'ப் உடன் ஊ உயிர் சேர்ந்தால் பூ எழுத்து உருவாகும். பூனை என்ற சொல்லைக் கேளுங்கள்.',
+        prompt:
+            'ப் உடன் ஊ உயிர் சேர்ந்தால் பூ எழுத்து உருவாகும். பூனை என்ற சொல்லைக் கேளுங்கள்.',
+        speech:
+            'ப் உடன் ஊ உயிர் சேர்ந்தால் பூ எழுத்து உருவாகும். பூனை என்ற சொல்லைக் கேளுங்கள்.',
         glyph: 'பூனை',
         sourceRecord: 'tamil-56-020',
       ),
@@ -5855,8 +5835,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -5875,8 +5854,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         speech: 'கிளியின் நிறம் என்ன?',
         options: ['பச்சை', 'சிவப்பு', 'கருப்பு'],
         answer: 'பச்சை',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'tamil-56-022',
       ),
     ],
@@ -5898,8 +5876,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -5918,8 +5895,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         speech: 'எது பெய்கிறது?',
         options: ['மழை', 'பூ', 'பால்'],
         answer: 'மழை',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'tamil-56-023',
       ),
     ],
@@ -6398,8 +6374,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['కైంకర్యం'],
       pronunciationVerified: false,
     ),
@@ -6407,8 +6382,10 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     steps: [
       BatchStep(
         kind: StepKind.listen,
-        prompt: 'క కు ై గుర్తు కలిపితే కై అవుతుంది. కైంకర్యం అనే పదాన్ని వినండి.',
-        speech: 'క కు ై గుర్తు కలిపితే కై అవుతుంది. కైంకర్యం అనే పదాన్ని వినండి.',
+        prompt:
+            'క కు ై గుర్తు కలిపితే కై అవుతుంది. కైంకర్యం అనే పదాన్ని వినండి.',
+        speech:
+            'క కు ై గుర్తు కలిపితే కై అవుతుంది. కైంకర్యం అనే పదాన్ని వినండి.',
         glyph: 'కైంకర్యం',
         sourceRecord: 'telugu-56-008',
       ),
@@ -6418,8 +6395,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'క + ై = ?',
         options: ['కై', 'క', 'కూ'],
         answer: 'కై',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-008',
       ),
     ],
@@ -6531,8 +6507,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['కౌగిలి'],
       pronunciationVerified: false,
     ),
@@ -6551,8 +6526,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'క + ౌ = ?',
         options: ['కౌ', 'క', 'కూ'],
         answer: 'కౌ',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-011',
       ),
     ],
@@ -6574,8 +6548,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['మామ'],
       pronunciationVerified: false,
     ),
@@ -6594,8 +6567,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'మ + ా = ?',
         options: ['మా', 'మ', 'కూ'],
         answer: 'మా',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-012',
       ),
     ],
@@ -6662,8 +6634,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['నాన్న'],
       pronunciationVerified: false,
     ),
@@ -6682,8 +6653,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'న + ా = ?',
         options: ['నా', 'న', 'కూ'],
         answer: 'నా',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-014',
       ),
     ],
@@ -6750,8 +6720,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['తాత'],
       pronunciationVerified: false,
     ),
@@ -6770,8 +6739,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'త + ా = ?',
         options: ['తా', 'త', 'కూ'],
         answer: 'తా',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-016',
       ),
     ],
@@ -6793,8 +6761,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['బొమ్మ'],
       pronunciationVerified: false,
     ),
@@ -6813,8 +6780,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'బ + ొ = ?',
         options: ['బొ', 'బ', 'కూ'],
         answer: 'బొ',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-017',
       ),
     ],
@@ -6836,8 +6802,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['వాన'],
       pronunciationVerified: false,
     ),
@@ -6856,8 +6821,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'వ + ా = ?',
         options: ['వా', 'వ', 'కూ'],
         answer: 'వా',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-018',
       ),
     ],
@@ -6879,8 +6843,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['లాలీ'],
       pronunciationVerified: false,
     ),
@@ -6899,8 +6862,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'ల + ా = ?',
         options: ['లా', 'ల', 'కూ'],
         answer: 'లా',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-019',
       ),
     ],
@@ -6922,8 +6884,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-      },
+      images: {},
       requiredImages: ['సీత'],
       pronunciationVerified: false,
     ),
@@ -6942,8 +6903,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'స + ీ = ?',
         options: ['సీ', 'స', 'కూ'],
         answer: 'సీ',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-020',
       ),
     ],
@@ -7106,8 +7066,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
-      images: {
-      },
+      images: {},
       requiredImages: [],
       pronunciationVerified: false,
     ),
@@ -7126,8 +7085,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         speech: 'చిలుక రంగు ఏమిటి?',
         options: ['పచ్చ', 'నీలం', 'ఎరుపు'],
         answer: 'పచ్చ',
-        pictures: {
-        },
+        pictures: {},
         sourceRecord: 'telugu-56-024',
       ),
     ],
@@ -7233,7 +7191,7 @@ final Map<String, List<BatchLesson>> age56ByWorld = {
 };
 
 List<BatchLesson> get allAge56Lessons => [
-  for (final lessons in age56ByWorld.values) ...lessons,
-];
+      for (final lessons in age56ByWorld.values) ...lessons,
+    ];
 
 const age56GeneratedLessonCount = 162;
