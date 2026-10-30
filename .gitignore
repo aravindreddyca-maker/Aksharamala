@@ -11,3 +11,6 @@ android/key.properties
 .tooling/
 node_modules/
 outputs/
+
+# Excel lock files
+~$*
