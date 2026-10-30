@@ -71,6 +71,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.phonicsBlend,
       images: {
+        'man': 'assets/images/age56/man.webp',
         'fish': 'assets/images/age56/fish.webp',
         'tree': 'assets/images/age56/tree.webp',
       },
@@ -93,6 +94,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         options: ['pan', 'fish', 'tree'],
         answer: 'pan',
         pictures: {
+          'man': 'assets/images/age56/man.webp',
           'fish': 'assets/images/age56/fish.webp',
           'tree': 'assets/images/age56/tree.webp',
         },
@@ -118,6 +120,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.phonicsBlend,
       images: {
+        'cap': 'assets/images/age56/cap.webp',
         'fish': 'assets/images/age56/fish.webp',
         'tree': 'assets/images/age56/tree.webp',
       },
@@ -140,6 +143,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         options: ['map', 'fish', 'tree'],
         answer: 'map',
         pictures: {
+          'cap': 'assets/images/age56/cap.webp',
           'fish': 'assets/images/age56/fish.webp',
           'tree': 'assets/images/age56/tree.webp',
         },
@@ -214,6 +218,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.phonicsBlend,
       images: {
+        'pet': 'assets/images/age56/pet.webp',
         'fish': 'assets/images/age56/fish.webp',
         'tree': 'assets/images/age56/tree.webp',
       },
@@ -236,6 +241,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         options: ['net', 'fish', 'tree'],
         answer: 'net',
         pictures: {
+          'pet': 'assets/images/age56/pet.webp',
           'fish': 'assets/images/age56/fish.webp',
           'tree': 'assets/images/age56/tree.webp',
         },
@@ -457,6 +463,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.phonicsBlend,
       images: {
+        'top': 'assets/images/age56/top.webp',
         'fish': 'assets/images/age56/fish.webp',
         'tree': 'assets/images/age56/tree.webp',
       },
@@ -479,6 +486,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         options: ['hop', 'fish', 'tree'],
         answer: 'hop',
         pictures: {
+          'top': 'assets/images/age56/top.webp',
           'fish': 'assets/images/age56/fish.webp',
           'tree': 'assets/images/age56/tree.webp',
         },
@@ -553,6 +561,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.phonicsBlend,
       images: {
+        'bug': 'assets/images/age56/insect.webp',
         'fish': 'assets/images/age56/fish.webp',
         'tree': 'assets/images/age56/tree.webp',
       },
@@ -575,6 +584,7 @@ final List<BatchLesson> englishAge56Lessons = List.unmodifiable([
         options: ['rug', 'fish', 'tree'],
         answer: 'rug',
         pictures: {
+          'bug': 'assets/images/age56/insect.webp',
           'fish': 'assets/images/age56/fish.webp',
           'tree': 'assets/images/age56/tree.webp',
         },
@@ -1377,6 +1387,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'काला': 'assets/images/age56/black.webp',
       },
       requiredImages: ['काला'],
       pronunciationVerified: false,
@@ -1397,6 +1408,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['का', 'क', 'कू'],
         answer: 'का',
         pictures: {
+          'काला': 'assets/images/age56/black.webp',
         },
         sourceRecord: 'hindi-56-001',
       ),
@@ -1420,6 +1432,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'किताब': 'assets/images/age56/book.webp',
       },
       requiredImages: ['किताब'],
       pronunciationVerified: false,
@@ -1440,6 +1453,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['कि', 'क', 'कू'],
         answer: 'कि',
         pictures: {
+          'किताब': 'assets/images/age56/book.webp',
         },
         sourceRecord: 'hindi-56-002',
       ),
@@ -1463,6 +1477,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'कीड़ा': 'assets/images/age56/insect.webp',
       },
       requiredImages: ['कीड़ा'],
       pronunciationVerified: false,
@@ -1483,6 +1498,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['की', 'क', 'कू'],
         answer: 'की',
         pictures: {
+          'कीड़ा': 'assets/images/age56/insect.webp',
         },
         sourceRecord: 'hindi-56-003',
       ),
@@ -1551,6 +1567,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'कूड़ा': 'assets/images/age56/garbage.webp',
       },
       requiredImages: ['कूड़ा'],
       pronunciationVerified: false,
@@ -1571,6 +1588,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['कू', 'क', 'का'],
         answer: 'कू',
         pictures: {
+          'कूड़ा': 'assets/images/age56/garbage.webp',
         },
         sourceRecord: 'hindi-56-005',
       ),
@@ -1594,6 +1612,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'केला': 'assets/images/age56/banana.webp',
       },
       requiredImages: ['केला'],
       pronunciationVerified: false,
@@ -1614,6 +1633,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['के', 'क', 'कू'],
         answer: 'के',
         pictures: {
+          'केला': 'assets/images/age56/banana.webp',
         },
         sourceRecord: 'hindi-56-006',
       ),
@@ -1637,6 +1657,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'कैसा': 'assets/images/age56/how.webp',
       },
       requiredImages: ['कैसा'],
       pronunciationVerified: false,
@@ -1657,6 +1678,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['कै', 'क', 'कू'],
         answer: 'कै',
         pictures: {
+          'कैसा': 'assets/images/age56/how.webp',
         },
         sourceRecord: 'hindi-56-007',
       ),
@@ -1680,6 +1702,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'कोयल': 'assets/images/age56/cuckoo.webp',
       },
       requiredImages: ['कोयल'],
       pronunciationVerified: false,
@@ -1700,6 +1723,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['को', 'क', 'कू'],
         answer: 'को',
         pictures: {
+          'कोयल': 'assets/images/age56/cuckoo.webp',
         },
         sourceRecord: 'hindi-56-008',
       ),
@@ -1723,6 +1747,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'कौआ': 'assets/images/age56/crow.webp',
       },
       requiredImages: ['कौआ'],
       pronunciationVerified: false,
@@ -1743,6 +1768,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['कौ', 'क', 'कू'],
         answer: 'कौ',
         pictures: {
+          'कौआ': 'assets/images/age56/crow.webp',
         },
         sourceRecord: 'hindi-56-009',
       ),
@@ -1766,6 +1792,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'कंघी': 'assets/images/age56/comb.webp',
       },
       requiredImages: ['कंघी'],
       pronunciationVerified: false,
@@ -1786,6 +1813,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['कं', 'क', 'कू'],
         answer: 'कं',
         pictures: {
+          'कंघी': 'assets/images/age56/comb.webp',
         },
         sourceRecord: 'hindi-56-010',
       ),
@@ -1809,6 +1837,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'माला': 'assets/images/age56/garland.webp',
       },
       requiredImages: ['माला'],
       pronunciationVerified: false,
@@ -1829,6 +1858,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['मा', 'म', 'कू'],
         answer: 'मा',
         pictures: {
+          'माला': 'assets/images/age56/garland.webp',
         },
         sourceRecord: 'hindi-56-011',
       ),
@@ -1852,6 +1882,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'पानी': 'assets/images/age56/water.webp',
       },
       requiredImages: ['पानी'],
       pronunciationVerified: false,
@@ -1872,6 +1903,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['पा', 'प', 'कू'],
         answer: 'पा',
         pictures: {
+          'पानी': 'assets/images/age56/water.webp',
         },
         sourceRecord: 'hindi-56-012',
       ),
@@ -1985,6 +2017,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'बादल': 'assets/images/age56/cloud.webp',
       },
       requiredImages: ['बादल'],
       pronunciationVerified: false,
@@ -2005,6 +2038,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['बा', 'ब', 'कू'],
         answer: 'बा',
         pictures: {
+          'बादल': 'assets/images/age56/cloud.webp',
         },
         sourceRecord: 'hindi-56-015',
       ),
@@ -2073,6 +2107,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'चाचा': 'assets/images/age56/paternal_uncle.webp',
       },
       requiredImages: ['चाचा'],
       pronunciationVerified: false,
@@ -2093,6 +2128,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['चा', 'च', 'कू'],
         answer: 'चा',
         pictures: {
+          'चाचा': 'assets/images/age56/paternal_uncle.webp',
         },
         sourceRecord: 'hindi-56-017',
       ),
@@ -2116,6 +2152,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'तीन': 'assets/images/age56/three.webp',
       },
       requiredImages: ['तीन'],
       pronunciationVerified: false,
@@ -2136,6 +2173,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['ती', 'त', 'कू'],
         answer: 'ती',
         pictures: {
+          'तीन': 'assets/images/age56/three.webp',
         },
         sourceRecord: 'hindi-56-018',
       ),
@@ -2159,6 +2197,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'राजा': 'assets/images/age56/king.webp',
       },
       requiredImages: ['राजा'],
       pronunciationVerified: false,
@@ -2179,6 +2218,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['रा', 'र', 'कू'],
         answer: 'रा',
         pictures: {
+          'राजा': 'assets/images/age56/king.webp',
         },
         sourceRecord: 'hindi-56-019',
       ),
@@ -2292,6 +2332,8 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'बादल': 'assets/images/age56/cloud.webp',
+        'किताब': 'assets/images/age56/book.webp',
       },
       requiredImages: [],
       pronunciationVerified: false,
@@ -2312,6 +2354,8 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['बादल', 'किताब', 'घर'],
         answer: 'बादल',
         pictures: {
+          'बादल': 'assets/images/age56/cloud.webp',
+          'किताब': 'assets/images/age56/book.webp',
         },
         sourceRecord: 'hindi-56-022',
       ),
@@ -2335,6 +2379,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'कौआ': 'assets/images/age56/crow.webp',
         'गाय': 'assets/images/quiz/te_cow.webp',
         'कुत्ता': 'assets/images/age56/dog.webp',
       },
@@ -2357,6 +2402,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['कौआ', 'गाय', 'कुत्ता'],
         answer: 'कौआ',
         pictures: {
+          'कौआ': 'assets/images/age56/crow.webp',
           'गाय': 'assets/images/quiz/te_cow.webp',
           'कुत्ता': 'assets/images/age56/dog.webp',
         },
@@ -2383,6 +2429,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
       activity: LearningVisualActivity.wordBuilding,
       images: {
         'नाव': 'assets/images/quiz/boat.png',
+        'केला': 'assets/images/age56/banana.webp',
       },
       requiredImages: [],
       pronunciationVerified: false,
@@ -2404,6 +2451,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         answer: 'मुकुट',
         pictures: {
           'नाव': 'assets/images/quiz/boat.png',
+          'केला': 'assets/images/age56/banana.webp',
         },
         sourceRecord: 'hindi-56-024',
       ),
@@ -2427,6 +2475,8 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'चाचा': 'assets/images/age56/paternal_uncle.webp',
+        'कौआ': 'assets/images/age56/crow.webp',
         'गाय': 'assets/images/quiz/te_cow.webp',
       },
       requiredImages: [],
@@ -2448,6 +2498,8 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['चाचा', 'कौआ', 'गाय'],
         answer: 'चाचा',
         pictures: {
+          'चाचा': 'assets/images/age56/paternal_uncle.webp',
+          'कौआ': 'assets/images/age56/crow.webp',
           'गाय': 'assets/images/quiz/te_cow.webp',
         },
         sourceRecord: 'hindi-56-025',
@@ -2472,6 +2524,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'तीन': 'assets/images/age56/three.webp',
       },
       requiredImages: [],
       pronunciationVerified: false,
@@ -2492,6 +2545,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['तीन', 'दो', 'चार'],
         answer: 'तीन',
         pictures: {
+          'तीन': 'assets/images/age56/three.webp',
         },
         sourceRecord: 'hindi-56-026',
       ),
@@ -4719,6 +4773,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.pictureWordMatch,
       images: {
+        'morning': 'assets/images/age56/morning.webp',
       },
       requiredImages: ['morning'],
       pronunciationVerified: false,
@@ -4739,6 +4794,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         options: ['morning', 'midnight', 'evening'],
         answer: 'morning',
         pictures: {
+          'morning': 'assets/images/age56/morning.webp',
         },
         sourceRecord: 'numbers-56-052',
       ),
@@ -4762,6 +4818,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.pictureWordMatch,
       images: {
+        'longer': 'assets/images/age56/longer.webp',
       },
       requiredImages: ['longer'],
       pronunciationVerified: false,
@@ -4782,6 +4839,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         options: ['longer', 'shorter', 'lighter'],
         answer: 'longer',
         pictures: {
+          'longer': 'assets/images/age56/longer.webp',
         },
         sourceRecord: 'numbers-56-053',
       ),
@@ -4805,6 +4863,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.pictureWordMatch,
       images: {
+        'rupees': 'assets/images/age56/rupees.webp',
       },
       requiredImages: ['rupees'],
       pronunciationVerified: false,
@@ -4825,6 +4884,7 @@ final List<BatchLesson> numbersAge56Lessons = List.unmodifiable([
         options: ['rupees', 'metres', 'litres'],
         answer: 'rupees',
         pictures: {
+          'rupees': 'assets/images/age56/rupees.webp',
         },
         sourceRecord: 'numbers-56-054',
       ),
@@ -4896,6 +4956,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'காடு': 'assets/images/age56/forest.webp',
       },
       requiredImages: ['காடு'],
       pronunciationVerified: false,
@@ -4916,6 +4977,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கா', 'க்', 'கூ'],
         answer: 'கா',
         pictures: {
+          'காடு': 'assets/images/age56/forest.webp',
         },
         sourceRecord: 'tamil-56-002',
       ),
@@ -4984,6 +5046,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'கீரை': 'assets/images/age56/leafy_greens.webp',
       },
       requiredImages: ['கீரை'],
       pronunciationVerified: false,
@@ -5004,6 +5067,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கீ', 'க்', 'கூ'],
         answer: 'கீ',
         pictures: {
+          'கீரை': 'assets/images/age56/leafy_greens.webp',
         },
         sourceRecord: 'tamil-56-004',
       ),
@@ -5027,6 +5091,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'குடம்': 'assets/images/age56/water_pot.webp',
       },
       requiredImages: ['குடம்'],
       pronunciationVerified: false,
@@ -5047,6 +5112,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கு', 'க்', 'கூ'],
         answer: 'கு',
         pictures: {
+          'குடம்': 'assets/images/age56/water_pot.webp',
         },
         sourceRecord: 'tamil-56-005',
       ),
@@ -5070,6 +5136,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'கூடு': 'assets/images/age56/nest.webp',
       },
       requiredImages: ['கூடு'],
       pronunciationVerified: false,
@@ -5090,6 +5157,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கூ', 'க்', 'கா'],
         answer: 'கூ',
         pictures: {
+          'கூடு': 'assets/images/age56/nest.webp',
         },
         sourceRecord: 'tamil-56-006',
       ),
@@ -5113,6 +5181,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'கெண்டை': 'assets/images/age56/catfish.webp',
       },
       requiredImages: ['கெண்டை'],
       pronunciationVerified: false,
@@ -5133,6 +5202,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கெ', 'க்', 'கூ'],
         answer: 'கெ',
         pictures: {
+          'கெண்டை': 'assets/images/age56/catfish.webp',
         },
         sourceRecord: 'tamil-56-007',
       ),
@@ -5156,6 +5226,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'கேணி': 'assets/images/age56/well.webp',
       },
       requiredImages: ['கேணி'],
       pronunciationVerified: false,
@@ -5176,6 +5247,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கே', 'க்', 'கூ'],
         answer: 'கே',
         pictures: {
+          'கேணி': 'assets/images/age56/well.webp',
         },
         sourceRecord: 'tamil-56-008',
       ),
@@ -5199,6 +5271,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'கை': 'assets/images/age56/hand.webp',
       },
       requiredImages: ['கை'],
       pronunciationVerified: false,
@@ -5219,6 +5292,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கை', 'க்', 'கூ'],
         answer: 'கை',
         pictures: {
+          'கை': 'assets/images/age56/hand.webp',
         },
         sourceRecord: 'tamil-56-009',
       ),
@@ -5242,6 +5316,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'கொடி': 'assets/images/age56/flag.webp',
       },
       requiredImages: ['கொடி'],
       pronunciationVerified: false,
@@ -5262,6 +5337,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கொ', 'க்', 'கூ'],
         answer: 'கொ',
         pictures: {
+          'கொடி': 'assets/images/age56/flag.webp',
         },
         sourceRecord: 'tamil-56-010',
       ),
@@ -5285,6 +5361,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'கோழி': 'assets/images/age56/chicken.webp',
       },
       requiredImages: ['கோழி'],
       pronunciationVerified: false,
@@ -5305,6 +5382,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கோ', 'க்', 'கூ'],
         answer: 'கோ',
         pictures: {
+          'கோழி': 'assets/images/age56/chicken.webp',
         },
         sourceRecord: 'tamil-56-011',
       ),
@@ -5371,6 +5449,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'சங்கு': 'assets/images/age56/conch.webp',
       },
       requiredImages: ['சங்கு'],
       pronunciationVerified: false,
@@ -5391,6 +5470,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['ச', 'ச்', 'கூ'],
         answer: 'ச',
         pictures: {
+          'சங்கு': 'assets/images/age56/conch.webp',
         },
         sourceRecord: 'tamil-56-013',
       ),
@@ -5414,6 +5494,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'தலை': 'assets/images/age56/head.webp',
       },
       requiredImages: ['தலை'],
       pronunciationVerified: false,
@@ -5434,6 +5515,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['த', 'த்', 'கூ'],
         answer: 'த',
         pictures: {
+          'தலை': 'assets/images/age56/head.webp',
         },
         sourceRecord: 'tamil-56-014',
       ),
@@ -5457,6 +5539,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'நரி': 'assets/images/age56/fox.webp',
       },
       requiredImages: ['நரி'],
       pronunciationVerified: false,
@@ -5477,6 +5560,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['ந', 'ந்', 'கூ'],
         answer: 'ந',
         pictures: {
+          'நரி': 'assets/images/age56/fox.webp',
         },
         sourceRecord: 'tamil-56-015',
       ),
@@ -5500,6 +5584,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'பல்': 'assets/images/age56/tooth.webp',
       },
       requiredImages: ['பல்'],
       pronunciationVerified: false,
@@ -5520,6 +5605,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['ப', 'ப்', 'கூ'],
         answer: 'ப',
         pictures: {
+          'பல்': 'assets/images/age56/tooth.webp',
         },
         sourceRecord: 'tamil-56-016',
       ),
@@ -5633,6 +5719,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'வானம்': 'assets/images/age56/sky.webp',
       },
       requiredImages: ['வானம்'],
       pronunciationVerified: false,
@@ -5653,6 +5740,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['வா', 'வ்', 'கூ'],
         answer: 'வா',
         pictures: {
+          'வானம்': 'assets/images/age56/sky.webp',
         },
         sourceRecord: 'tamil-56-019',
       ),
@@ -5944,6 +6032,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'கோழி': 'assets/images/age56/chicken.webp',
         'பூனை': 'assets/images/quiz/cat.png',
         'மரம்': 'assets/images/age56/tree.webp',
       },
@@ -5966,6 +6055,7 @@ final List<BatchLesson> tamilAge56Lessons = List.unmodifiable([
         options: ['கோழி', 'பூனை', 'மரம்'],
         answer: 'கோழி',
         pictures: {
+          'கோழி': 'assets/images/age56/chicken.webp',
           'பூனை': 'assets/images/quiz/cat.png',
           'மரம்': 'assets/images/age56/tree.webp',
         },
@@ -5994,6 +6084,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'కాకి': 'assets/images/age56/crow.webp',
       },
       requiredImages: ['కాకి'],
       pronunciationVerified: false,
@@ -6014,6 +6105,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కా', 'క', 'కూ'],
         answer: 'కా',
         pictures: {
+          'కాకి': 'assets/images/age56/crow.webp',
         },
         sourceRecord: 'telugu-56-001',
       ),
@@ -6037,6 +6129,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'కిరణం': 'assets/images/age56/ray.webp',
       },
       requiredImages: ['కిరణం'],
       pronunciationVerified: false,
@@ -6057,6 +6150,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కి', 'క', 'కూ'],
         answer: 'కి',
         pictures: {
+          'కిరణం': 'assets/images/age56/ray.webp',
         },
         sourceRecord: 'telugu-56-002',
       ),
@@ -6080,6 +6174,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'కీటకం': 'assets/images/age56/insect.webp',
       },
       requiredImages: ['కీటకం'],
       pronunciationVerified: false,
@@ -6100,6 +6195,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కీ', 'క', 'కూ'],
         answer: 'కీ',
         pictures: {
+          'కీటకం': 'assets/images/age56/insect.webp',
         },
         sourceRecord: 'telugu-56-003',
       ),
@@ -6168,6 +6264,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'కూర': 'assets/images/age56/vegetables.webp',
       },
       requiredImages: ['కూర'],
       pronunciationVerified: false,
@@ -6188,6 +6285,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కూ', 'క', 'కా'],
         answer: 'కూ',
         pictures: {
+          'కూర': 'assets/images/age56/vegetables.webp',
         },
         sourceRecord: 'telugu-56-005',
       ),
@@ -6211,6 +6309,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'కెరటం': 'assets/images/age56/wave.webp',
       },
       requiredImages: ['కెరటం'],
       pronunciationVerified: false,
@@ -6231,6 +6330,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కె', 'క', 'కూ'],
         answer: 'కె',
         pictures: {
+          'కెరటం': 'assets/images/age56/wave.webp',
         },
         sourceRecord: 'telugu-56-006',
       ),
@@ -6254,6 +6354,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'కేక': 'assets/images/age56/cake.webp',
       },
       requiredImages: ['కేక'],
       pronunciationVerified: false,
@@ -6274,6 +6375,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కే', 'క', 'కూ'],
         answer: 'కే',
         pictures: {
+          'కేక': 'assets/images/age56/cake.webp',
         },
         sourceRecord: 'telugu-56-007',
       ),
@@ -6340,6 +6442,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'కొంగ': 'assets/images/age56/crane.webp',
       },
       requiredImages: ['కొంగ'],
       pronunciationVerified: false,
@@ -6360,6 +6463,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కొ', 'క', 'కూ'],
         answer: 'కొ',
         pictures: {
+          'కొంగ': 'assets/images/age56/crane.webp',
         },
         sourceRecord: 'telugu-56-009',
       ),
@@ -6383,6 +6487,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'కోతి': 'assets/images/age56/monkey.webp',
       },
       requiredImages: ['కోతి'],
       pronunciationVerified: false,
@@ -6403,6 +6508,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కో', 'క', 'కూ'],
         answer: 'కో',
         pictures: {
+          'కోతి': 'assets/images/age56/monkey.webp',
         },
         sourceRecord: 'telugu-56-010',
       ),
@@ -6512,6 +6618,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
       images: {
+        'పాలు': 'assets/images/age56/milk.webp',
       },
       requiredImages: ['పాలు'],
       pronunciationVerified: false,
@@ -6532,6 +6639,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['పా', 'ప', 'కూ'],
         answer: 'పా',
         pictures: {
+          'పాలు': 'assets/images/age56/milk.webp',
         },
         sourceRecord: 'telugu-56-013',
       ),
@@ -6859,6 +6967,8 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
       activity: LearningVisualActivity.wordBuilding,
       images: {
         'ఆవు': 'assets/images/quiz/te_cow.webp',
+        'కోతి': 'assets/images/age56/monkey.webp',
+        'కాకి': 'assets/images/age56/crow.webp',
       },
       requiredImages: [],
       pronunciationVerified: false,
@@ -6880,6 +6990,8 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         answer: 'ఆవు',
         pictures: {
           'ఆవు': 'assets/images/quiz/te_cow.webp',
+          'కోతి': 'assets/images/age56/monkey.webp',
+          'కాకి': 'assets/images/age56/crow.webp',
         },
         sourceRecord: 'telugu-56-021',
       ),
@@ -6903,6 +7015,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'కోతి': 'assets/images/age56/monkey.webp',
         'ఆవు': 'assets/images/quiz/te_cow.webp',
       },
       requiredImages: [],
@@ -6924,6 +7037,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['కోతి', 'ఆవు', 'చేప'],
         answer: 'కోతి',
         pictures: {
+          'కోతి': 'assets/images/age56/monkey.webp',
           'ఆవు': 'assets/images/quiz/te_cow.webp',
         },
         sourceRecord: 'telugu-56-022',
@@ -6948,6 +7062,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'కాకి': 'assets/images/age56/crow.webp',
       },
       requiredImages: [],
       pronunciationVerified: false,
@@ -6968,6 +7083,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['నాన్న', 'కాకి', 'పిల్లి'],
         answer: 'నాన్న',
         pictures: {
+          'కాకి': 'assets/images/age56/crow.webp',
         },
         sourceRecord: 'telugu-56-023',
       ),
@@ -7034,6 +7150,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'పాలు': 'assets/images/age56/milk.webp',
       },
       requiredImages: [],
       pronunciationVerified: false,
@@ -7054,6 +7171,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['వాన', 'పాలు', 'పండు'],
         answer: 'వాన',
         pictures: {
+          'పాలు': 'assets/images/age56/milk.webp',
         },
         sourceRecord: 'telugu-56-025',
       ),
@@ -7077,6 +7195,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
+        'పాలు': 'assets/images/age56/milk.webp',
       },
       requiredImages: [],
       pronunciationVerified: false,
@@ -7097,6 +7216,7 @@ final List<BatchLesson> teluguAge56Lessons = List.unmodifiable([
         options: ['బొమ్మ', 'చెట్టు', 'పాలు'],
         answer: 'బొమ్మ',
         pictures: {
+          'పాలు': 'assets/images/age56/milk.webp',
         },
         sourceRecord: 'telugu-56-026',
       ),
