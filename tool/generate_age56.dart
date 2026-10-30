@@ -110,9 +110,11 @@ const conceptImages = <String, String>{
   'కోతి': 'assets/images/age56/monkey.webp',
   'పాలు': 'assets/images/age56/milk.webp',
   'काला': 'assets/images/age56/black.webp',
-  'कैसा': 'assets/images/age56/how.webp',
+  // 'कैसा' (how / what kind) has no picture yet: the first candidate showed a
+  // boy building a toy car, which does not convey the concept.
   'कोयल': 'assets/images/age56/cuckoo.webp',
-  'चाचा': 'assets/images/age56/paternal_uncle.webp',
+  // 'चाचा' (paternal uncle) has no picture yet: the first candidate showed a
+  // father with his son, which teaches the wrong relationship.
   'pen': 'assets/images/quiz/te_pen.webp',
   'नाव': 'assets/images/quiz/boat.png',
   'गाय': 'assets/images/quiz/te_cow.webp',

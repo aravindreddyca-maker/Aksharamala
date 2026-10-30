@@ -1656,9 +1656,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-        'कैसा': 'assets/images/age56/how.webp',
-      },
+      images: {},
       requiredImages: ['कैसा'],
       pronunciationVerified: false,
     ),
@@ -1677,9 +1675,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         speech: 'क + ै = ?',
         options: ['कै', 'क', 'कू'],
         answer: 'कै',
-        pictures: {
-          'कैसा': 'assets/images/age56/how.webp',
-        },
+        pictures: {},
         sourceRecord: 'hindi-56-007',
       ),
     ],
@@ -2106,9 +2102,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     educatorReviewVerified: false,
     media: LessonMedia(
       activity: LearningVisualActivity.letterCombination,
-      images: {
-        'चाचा': 'assets/images/age56/paternal_uncle.webp',
-      },
+      images: {},
       requiredImages: ['चाचा'],
       pronunciationVerified: false,
     ),
@@ -2127,9 +2121,7 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         speech: 'च + ा = ?',
         options: ['चा', 'च', 'कू'],
         answer: 'चा',
-        pictures: {
-          'चाचा': 'assets/images/age56/paternal_uncle.webp',
-        },
+        pictures: {},
         sourceRecord: 'hindi-56-017',
       ),
     ],
@@ -2475,7 +2467,6 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
     media: LessonMedia(
       activity: LearningVisualActivity.wordBuilding,
       images: {
-        'चाचा': 'assets/images/age56/paternal_uncle.webp',
         'कौआ': 'assets/images/age56/crow.webp',
         'गाय': 'assets/images/quiz/te_cow.webp',
       },
@@ -2498,7 +2489,6 @@ final List<BatchLesson> hindiAge56Lessons = List.unmodifiable([
         options: ['चाचा', 'कौआ', 'गाय'],
         answer: 'चाचा',
         pictures: {
-          'चाचा': 'assets/images/age56/paternal_uncle.webp',
           'कौआ': 'assets/images/age56/crow.webp',
           'गाय': 'assets/images/quiz/te_cow.webp',
         },

@@ -39,6 +39,14 @@ minimum meaningful scene. Each focus is appended verbatim to the shared prompt.
 | `shape-rectangle` / `rectangle.webp` | దీర్ఘచతురస్రం / செவ்வகம் / आयत / rectangle | One wide solid colorful rectangle, clearly not a square. | numbers-56-050 | Pack WebP; geometry, transparency and phone legibility verified |
 | `shape-circle` / `circle.webp` | వృత్తం / வட்டம் / वृत्त / circle | One solid colorful perfect circle. | numbers-56-051 | Pack WebP; geometry, transparency and phone legibility verified |
 
+## Review update, 30 October 2026
+
+The "Not generated" statuses in the queue below are out of date: 43 of its 53
+concepts now have a picture. Their real status (accepted, provisional or
+rejected) is in `AGE_5_6_ARTWORK_REVIEW_LEDGER.csv`. Still without any picture:
+gowri, service, hug, maternal_uncle, father, grandfather, toy, rain, lullaby,
+sita, and the two rejected ones (how, paternal_uncle).
+
 ## Remaining production queue
 
 Every row below is 512 × 512 px and currently `not generated`. It must remain

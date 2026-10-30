@@ -217,6 +217,7 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                   const SizedBox(height: 10),
                   SizedBox(height: 170, child: visual),
                   const SizedBox(height: 10),
+                  _feedback(),
                   activity,
                   const SizedBox(height: 10),
                   _nextButton(),
@@ -247,7 +248,14 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Expanded(
-                        child: SingleChildScrollView(child: activity),
+                        child: Column(
+                          children: [
+                            _feedback(),
+                            Expanded(
+                              child: SingleChildScrollView(child: activity),
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 8),
                       _nextButton(),
@@ -600,63 +608,63 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
     }
   }
 
-  Widget _answers(BatchStep step) {
-    final options = _optionsFor(_index);
+  /// The right / wrong line. It sits outside the scrolling answers, so it is
+  /// always on screen, whatever the answers do.
+  Widget _feedback() {
+    if (!_step.kind.isQuestion) return const SizedBox.shrink();
     final message = _right != null
         ? _text.rightMessage
         : _wrong.isNotEmpty
             ? _text.tryAgainMessage
             : null;
+    final ok = _right != null;
+    final tone = ok ? const Color(0xFF1B7A41) : const Color(0xFF9C2C20);
+    return SizedBox(
+      height: 36,
+      child: message == null
+          ? null
+          : Semantics(
+              liveRegion: true,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    ok ? Icons.check_circle_rounded : Icons.cancel_rounded,
+                    size: 24,
+                    color: tone,
+                  ),
+                  const SizedBox(width: 8),
+                  Flexible(
+                    child: Text(
+                      message,
+                      key: const Key('feedback_message'),
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: scriptStyle(
+                        message,
+                        TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w900,
+                          color: tone,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+    );
+  }
+
+  Widget _answers(BatchStep step) {
+    final options = _optionsFor(_index);
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // At the top, so it is always on screen: it used to sit under the
-            // answers and slid behind the Next / Finish button.
-            SizedBox(
-              height: 34,
-              child: message == null
-                  ? null
-                  : Semantics(
-                      liveRegion: true,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            _right != null
-                                ? Icons.check_circle_rounded
-                                : Icons.cancel_rounded,
-                            size: 24,
-                            color: _right != null
-                                ? const Color(0xFF1B7A41)
-                                : const Color(0xFF9C2C20),
-                          ),
-                          const SizedBox(width: 8),
-                          Flexible(
-                            child: Text(
-                              message,
-                              key: const Key('feedback_message'),
-                              textAlign: TextAlign.center,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: scriptStyle(
-                                message,
-                                TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w900,
-                                  color: _right != null
-                                      ? const Color(0xFF1B7A41)
-                                      : const Color(0xFF9C2C20),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-            ),
             for (final option in options)
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),

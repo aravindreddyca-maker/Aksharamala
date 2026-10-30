@@ -1,5 +1,22 @@
 # Age 5–6 curriculum and visual coverage
 
+## Status update, 30 October 2026
+
+The table and notes below are the original baseline. Current figures:
+
+- 162 of 162 lessons are playable; **150 are visually complete** and 12 are not
+  (152 before this review).
+- Of the 70 unique artwork concepts, 60 now have a picture file and 10 still
+  have none (gowri, service, hug, maternal_uncle, father, grandfather, toy,
+  rain, lullaby, sita).
+- Two supplied pictures were rejected and removed (`how`, `paternal_uncle`);
+  three are provisional (`sky`, `ray`, `wave`). See
+  `AGE_5_6_CANDIDATE_ARTWORK_INVENTORY.md` and
+  `AGE_5_6_ARTWORK_REVIEW_LEDGER.csv`.
+- All 52 shipped pictures are 512 x 512 transparent WebP, checked by test.
+- "Visually complete" means a picture file resolves. It does not mean the
+  picture is approved; the ledger records that separately.
+
 Generated from the five supplied JSON files and `audit/AGE_5_6_ASSET_MANIFEST.csv`.
 All 162 records use the existing `BatchLesson` engine. “Playable” means the
 lesson has teaching content, a valid practice answer and a resolvable unlock

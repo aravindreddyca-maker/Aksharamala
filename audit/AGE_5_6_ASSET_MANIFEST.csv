@@ -35,7 +35,7 @@ hindi-56-003,hindi,letterCombination,"कीड़ा","कीड़ा","","","
 hindi-56-004,hindi,letterCombination,"कुत्ता","कुत्ता","","","code-native",true
 hindi-56-005,hindi,letterCombination,"कूड़ा","कूड़ा","","","code-native",true
 hindi-56-006,hindi,letterCombination,"केला","केला","","","code-native",true
-hindi-56-007,hindi,letterCombination,"कैसा","कैसा","","","code-native",true
+hindi-56-007,hindi,letterCombination,"कैसा","","कैसा","","code-native",false
 hindi-56-008,hindi,letterCombination,"कोयल","कोयल","","","code-native",true
 hindi-56-009,hindi,letterCombination,"कौआ","कौआ","","","code-native",true
 hindi-56-010,hindi,letterCombination,"कंघी","कंघी","","","code-native",true
@@ -45,7 +45,7 @@ hindi-56-013,hindi,letterCombination,"नाव","नाव","","","code-native"
 hindi-56-014,hindi,letterCombination,"गाय","गाय","","","code-native",true
 hindi-56-015,hindi,letterCombination,"बादल","बादल","","","code-native",true
 hindi-56-016,hindi,letterCombination,"सूरज","सूरज","","","code-native",true
-hindi-56-017,hindi,letterCombination,"चाचा","चाचा","","","code-native",true
+hindi-56-017,hindi,letterCombination,"चाचा","","चाचा","","code-native",false
 hindi-56-018,hindi,letterCombination,"तीन","तीन","","","code-native",true
 hindi-56-019,hindi,letterCombination,"राजा","राजा","","","code-native",true
 hindi-56-020,hindi,letterCombination,"हाथी","हाथी","","","code-native",true
@@ -53,7 +53,7 @@ hindi-56-021,hindi,wordBuilding,"","गाय","","","code-native",true
 hindi-56-022,hindi,wordBuilding,"","बादल|किताब","","","code-native",true
 hindi-56-023,hindi,wordBuilding,"","कौआ|गाय|कुत्ता","","","code-native",true
 hindi-56-024,hindi,wordBuilding,"","नाव|केला","","","code-native",true
-hindi-56-025,hindi,wordBuilding,"","चाचा|कौआ|गाय","","","code-native",true
+hindi-56-025,hindi,wordBuilding,"","कौआ|गाय","","","code-native",true
 hindi-56-026,hindi,wordBuilding,"","तीन","","","code-native",true
 numbers-56-001,numbers,counting,"","","","","code-native",true
 numbers-56-002,numbers,counting,"","","","","code-native",true

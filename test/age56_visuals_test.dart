@@ -59,10 +59,48 @@ void main() {
     }
   });
 
+  test('every production illustration is a 512 x 512 WebP with real alpha', () {
+    for (final file
+        in Directory('assets/images/age56').listSync().whereType<File>()) {
+      final b = file.readAsBytesSync();
+      expect(String.fromCharCodes(b.sublist(8, 12)), 'WEBP', reason: file.path);
+      final kind = String.fromCharCodes(b.sublist(12, 16));
+      int width;
+      int height;
+      bool alpha;
+      if (kind == 'VP8X') {
+        // Extended header: alpha flag, then the canvas size (24 bits each).
+        alpha = b[20] & 0x10 != 0;
+        width = 1 + (b[24] | b[25] << 8 | b[26] << 16);
+        height = 1 + (b[27] | b[28] << 8 | b[29] << 16);
+      } else if (kind == 'VP8L') {
+        // Lossless header: 14-bit width and height, then an alpha bit.
+        width = 1 + (b[21] | (b[22] & 0x3F) << 8);
+        height = 1 + ((b[22] >> 6) | b[23] << 2 | (b[24] & 0x0F) << 10);
+        alpha = b[24] & 0x10 != 0;
+      } else {
+        fail('${file.path} is a plain lossy WebP (no alpha possible)');
+      }
+      expect(alpha, isTrue, reason: '${file.path} has no alpha');
+      expect([width, height], [512, 512], reason: file.path);
+    }
+  });
+
+  test('pictures that failed review are not shipped or mapped', () {
+    for (final name in ['how', 'paternal_uncle']) {
+      expect(File('assets/images/age56/$name.webp').existsSync(), isFalse);
+    }
+    final source = File('lib/src/batch/age56_content.dart').readAsStringSync();
+    expect(source.contains('how.webp'), isFalse);
+    expect(source.contains('paternal_uncle.webp'), isFalse);
+  });
+
   test('new production illustrations are compact WebP assets', () {
     final files =
         Directory('assets/images/age56').listSync().whereType<File>().toList();
-    expect(files, hasLength(54));
+    // 54 minus the two candidates that failed review (how, paternal_uncle):
+    // see audit/AGE_5_6_ARTWORK_REVIEW_LEDGER.csv.
+    expect(files, hasLength(52));
     for (final file in files) {
       expect(file.path.endsWith('.webp'), isTrue, reason: file.path);
       expect(file.lengthSync(), lessThan(100 * 1024), reason: file.path);
