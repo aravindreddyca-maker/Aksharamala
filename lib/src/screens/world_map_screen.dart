@@ -1,4 +1,4 @@
-import 'dart:ui' show PointerDeviceKind;
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
@@ -13,8 +13,7 @@ import '../widgets/common.dart';
 import '../widgets/level_picker.dart';
 import '../alphabet/alphabet_data.dart';
 import 'alphabet_screen.dart';
-import 'batch_lesson_screen.dart';
-import 'lesson_screen.dart';
+import 'lesson_navigation.dart';
 
 /// Warm cream for quest cards: dark text on it clears 7:1, and it reads as
 /// paper against the garden art behind.
@@ -263,54 +262,8 @@ class _Header extends StatelessWidget {
   }
 }
 
-/// Settles on a card boundary after a fling, so cards line up under the left
-/// margin instead of stopping half cut off. The final stop is the last card
-/// flush with the right margin.
-class _CardSnapPhysics extends ScrollPhysics {
-  const _CardSnapPhysics({required this.step, super.parent});
-  final double step;
-
-  @override
-  _CardSnapPhysics applyTo(ScrollPhysics? ancestor) =>
-      _CardSnapPhysics(step: step, parent: buildParent(ancestor));
-
-  @override
-  Simulation? createBallisticSimulation(
-    ScrollMetrics position,
-    double velocity,
-  ) {
-    // Out of range (overscroll): let the default physics spring it back.
-    if ((velocity <= 0 && position.pixels <= position.minScrollExtent) ||
-        (velocity >= 0 && position.pixels >= position.maxScrollExtent)) {
-      return super.createBallisticSimulation(position, velocity);
-    }
-    final tolerance = toleranceFor(position);
-    final projected = position.pixels + velocity * .2;
-    // Stops are every card edge plus the true end of the list, so the last
-    // card is always reachable even when the overhang is under half a card.
-    final onCard = ((projected / step).round() * step).clamp(
-      position.minScrollExtent,
-      position.maxScrollExtent,
-    );
-    final end = position.maxScrollExtent;
-    final target =
-        (end - projected).abs() < (onCard - projected).abs() ? end : onCard;
-    if ((target - position.pixels).abs() < tolerance.distance) return null;
-    return ScrollSpringSimulation(
-      spring,
-      position.pixels,
-      target,
-      velocity,
-      tolerance: tolerance,
-    );
-  }
-
-  @override
-  bool get allowImplicitScrolling => false;
-}
-
-/// The horizontally scrolling quest list, with previous/next arrows and a dot
-/// per quest so it is always clear there is more to the right.
+/// The quest list, a page of cards at a time: as many as the screen holds,
+/// with arrows (or a swipe) to turn the page and a dot per page.
 class _QuestTrail extends StatefulWidget {
   const _QuestTrail({
     required this.world,
@@ -328,65 +281,13 @@ class _QuestTrail extends StatefulWidget {
 }
 
 class _QuestTrailState extends State<_QuestTrail> {
-  final _controller = ScrollController();
-  double _step = 1;
-  bool _positioned = false;
+  /// The page being shown. Null until the first layout, which opens on the
+  /// page that holds the recommended quest.
+  int? _page;
+  double _dragged = 0;
 
-  @override
-  void initState() {
-    super.initState();
-    _controller.addListener(() => setState(() {}));
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  bool get _ready =>
-      _controller.hasClients && _controller.position.hasContentDimensions;
-
-  double get _offset => _ready ? _controller.offset : 0;
-  double get _max => _ready ? _controller.position.maxScrollExtent : 0;
-
-  /// Moves to the next (or previous) whole-card stop, never to a position that
-  /// leaves a card half cut off. The last stop is the true end of the list.
-  void _scrollBy(int direction) {
-    if (!_ready) return;
-    const slack = 2.0;
-    final stops = <double>[
-      for (var i = 0; i * _step < _max - slack; i++) i * _step,
-      _max,
-    ];
-    final double target;
-    if (direction > 0) {
-      target = stops.firstWhere((s) => s > _offset + slack, orElse: () => _max);
-    } else {
-      target = stops.lastWhere((s) => s < _offset - slack, orElse: () => 0);
-    }
-    _controller.animateTo(
-      target,
-      duration: const Duration(milliseconds: 320),
-      curve: Curves.easeOutCubic,
-    );
-  }
-
-  /// Opens with the recommended quest in view (it can be quest 4 of 4).
-  void _revealRecommended(
-    double viewport,
-    double cardWidth,
-    int index,
-    int lead,
-  ) {
-    if (_positioned || index <= lead) return;
-    _positioned = true;
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!mounted || !_ready) return;
-      final centred = index * _step - (viewport - cardWidth) / 2 + widget.pad;
-      _controller.jumpTo(centred.clamp(0.0, _max));
-    });
-  }
+  void _go(int page, int pages) =>
+      setState(() => _page = page.clamp(0, pages - 1));
 
   @override
   Widget build(BuildContext context) {
@@ -396,20 +297,37 @@ class _QuestTrailState extends State<_QuestTrail> {
     final letters = atLevelOne ? alphabets[widget.world.id] : null;
     // The first card is "All letters" (for the languages that have a script).
     final lead = letters == null ? 0 : 1;
+    final total = lessons.length + lead;
     return LayoutBuilder(
       builder: (context, constraints) {
         const dotsHeight = 34.0;
         const gap = 14.0;
+        const arrowSlot = 58.0;
         // Room under the dots (on top of any system inset the SafeArea took)
         // and between the cards and the dots, so nothing hugs the edge.
         final bottomGap = constraints.maxHeight < 390 ? 12.0 : 18.0;
         final areaHeight = constraints.maxHeight - dotsHeight - bottomGap - 14;
         final cardHeight = areaHeight.clamp(120.0, 440.0);
         final horizontal = cardHeight < 270;
-        final cardWidth =
-            (horizontal ? 330.0 : (cardHeight * .66).clamp(230.0, 310.0))
-                .clamp(0.0, constraints.maxWidth - 2 * widget.pad);
-        _step = cardWidth + gap;
+        final minCard = horizontal ? 300.0 : 230.0;
+        final maxCard = horizontal ? 460.0 : 320.0;
+        int fits(double room) =>
+            math.max(1, ((room + gap) / (minCard + gap)).floor());
+
+        // Quests are shown a page at a time, as many cards as the screen holds,
+        // with arrows to turn the page. Nothing scrolls.
+        var room = constraints.maxWidth - 2 * widget.pad;
+        var perPage = fits(room);
+        var pages = (total / perPage).ceil();
+        if (pages > 1) {
+          room -= 2 * arrowSlot;
+          perPage = fits(room);
+          pages = (total / perPage).ceil();
+        }
+        final cardWidth = ((room - gap * (perPage - 1)) / perPage)
+            .clamp(0.0, maxCard)
+            .toDouble();
+
         // While letters are still being learned, open on the All letters card
         // (the first option) instead of jumping on to a later quest.
         final lettersDone = letters == null ||
@@ -417,149 +335,123 @@ class _QuestTrailState extends State<_QuestTrail> {
               for (var i = 0; i < letters.letters.length; i++)
                 widget.completed.contains(letters.lessonId(i)),
             ].every((d) => d);
-        _revealRecommended(
-          constraints.maxWidth,
-          cardWidth,
-          lead + lessons.indexWhere((l) => l.id == widget.recommended.id),
-          lettersDone ? lead : 1 << 30,
-        );
-        final canLeft = _offset > 2;
-        final canRight = _ready && _offset < _max - 2;
-        final current =
-            (_offset / _step).round().clamp(0, lessons.length + lead - 1);
+        final recommendedAt =
+            lead + lessons.indexWhere((l) => l.id == widget.recommended.id);
+        final openOn = lettersDone && recommendedAt >= 0 ? recommendedAt : 0;
+        final page = (_page ?? openOn ~/ perPage).clamp(0, pages - 1);
+        final first = page * perPage;
+        final last = math.min(total, first + perPage);
+
+        Widget card(int position) {
+          if (letters != null && position == 0) {
+            return _AlphabetCard(
+              world: widget.world,
+              letters: letters,
+              done: [
+                for (var i = 0; i < letters.letters.length; i++)
+                  if (widget.completed.contains(letters.lessonId(i))) i,
+              ].length,
+              horizontal: horizontal,
+            );
+          }
+          final index = position - lead;
+          final lesson = lessons[index];
+          return _QuestCard(
+            world: widget.world,
+            lesson: lesson,
+            number: index + 1,
+            complete: widget.completed.contains(lesson.id),
+            recommended: lesson.id == widget.recommended.id,
+            unlocked: AppScope.of(context).isLessonUnlocked(lesson),
+            horizontal: horizontal,
+          );
+        }
+
+        Widget arrow(bool show, bool forward) => SizedBox(
+              width: arrowSlot,
+              child: show
+                  ? Center(
+                      child: _ArrowButton(
+                        key: Key(forward ? 'trail_next' : 'trail_prev'),
+                        icon: forward
+                            ? Icons.chevron_right_rounded
+                            : Icons.chevron_left_rounded,
+                        label: forward ? 'Later quests' : 'Earlier quests',
+                        color: widget.world.darkColor,
+                        onTap: () => _go(page + (forward ? 1 : -1), pages),
+                      ),
+                    )
+                  : null,
+            );
+
         return Column(
           children: [
             Expanded(
-              child: Stack(
-                children: [
-                  NotificationListener<ScrollMetricsNotification>(
-                    // The scroll extent is only known after layout (and changes
-                    // on rotation or text size), so refresh the arrows and dots
-                    // once it is.
-                    onNotification: (_) {
-                      WidgetsBinding.instance.addPostFrameCallback((_) {
-                        if (mounted) setState(() {});
-                      });
-                      return false;
-                    },
-                    child: ScrollConfiguration(
-                      behavior: ScrollConfiguration.of(context).copyWith(
-                        // Touch, plus mouse and stylus so tablets and desktop
-                        // emulators drag the same way.
-                        dragDevices: {
-                          PointerDeviceKind.touch,
-                          PointerDeviceKind.mouse,
-                          PointerDeviceKind.stylus,
-                          PointerDeviceKind.trackpad,
-                        },
-                        scrollbars: false,
-                      ),
-                      child: ListView.separated(
-                        key: const Key('quest_trail'),
-                        controller: _controller,
-                        scrollDirection: Axis.horizontal,
-                        physics: _CardSnapPhysics(step: _step),
-                        clipBehavior: Clip.none,
-                        padding: EdgeInsets.fromLTRB(
-                          widget.pad,
-                          4,
-                          widget.pad,
-                          4,
-                        ),
-                        itemCount: lessons.length + lead,
-                        separatorBuilder: (_, __) => const SizedBox(width: gap),
-                        itemBuilder: (context, position) {
-                          if (letters != null && position == 0) {
-                            return Align(
-                              alignment: Alignment.center,
-                              child: SizedBox(
-                                width: cardWidth,
-                                height: cardHeight,
-                                child: _AlphabetCard(
-                                  world: widget.world,
-                                  letters: letters,
-                                  done: [
-                                    for (var i = 0;
-                                        i < letters.letters.length;
-                                        i++)
-                                      if (widget.completed
-                                          .contains(letters.lessonId(i)))
-                                        i,
-                                  ].length,
-                                  horizontal: horizontal,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(
+                  widget.pad,
+                  4,
+                  widget.pad,
+                  4,
+                ),
+                // A swipe turns the page too.
+                child: GestureDetector(
+                  behavior: HitTestBehavior.translucent,
+                  onHorizontalDragStart: (_) => _dragged = 0,
+                  onHorizontalDragUpdate: (d) => _dragged += d.delta.dx,
+                  onHorizontalDragEnd: (d) {
+                    // A long enough pull, or a quick flick, turns the page.
+                    final v = d.primaryVelocity ?? 0;
+                    if (_dragged < -60 || v < -300) _go(page + 1, pages);
+                    if (_dragged > 60 || v > 300) _go(page - 1, pages);
+                  },
+                  child: Row(
+                    children: [
+                      if (pages > 1) arrow(page > 0, false),
+                      Expanded(
+                        child: Center(
+                          child: Row(
+                            key: const Key('quest_trail'),
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              for (var p = first; p < last; p++) ...[
+                                if (p > first) const SizedBox(width: gap),
+                                SizedBox(
+                                  width: cardWidth,
+                                  height: cardHeight,
+                                  child: card(p),
                                 ),
-                              ),
-                            );
-                          }
-                          final index = position - lead;
-                          final lesson = lessons[index];
-                          return Align(
-                            alignment: Alignment.center,
-                            child: SizedBox(
-                              width: cardWidth,
-                              height: cardHeight,
-                              child: _QuestCard(
-                                world: widget.world,
-                                lesson: lesson,
-                                number: index + 1,
-                                complete: widget.completed.contains(lesson.id),
-                                recommended: lesson.id == widget.recommended.id,
-                                unlocked: AppScope.of(context)
-                                    .isLessonUnlocked(lesson),
-                                horizontal: horizontal,
-                              ),
-                            ),
-                          );
-                        },
+                              ],
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
+                      if (pages > 1) arrow(page < pages - 1, true),
+                    ],
                   ),
-                  if (canLeft)
-                    Positioned(
-                      left: 4,
-                      top: 0,
-                      bottom: 0,
-                      child: Center(
-                        child: _ArrowButton(
-                          key: const Key('trail_prev'),
-                          icon: Icons.chevron_left_rounded,
-                          label: 'Earlier quests',
-                          color: widget.world.darkColor,
-                          onTap: () => _scrollBy(-1),
-                        ),
-                      ),
-                    ),
-                  if (canRight)
-                    Positioned(
-                      right: 4,
-                      top: 0,
-                      bottom: 0,
-                      child: Center(
-                        child: _ArrowButton(
-                          key: const Key('trail_next'),
-                          icon: Icons.chevron_right_rounded,
-                          label: 'Later quests',
-                          color: widget.world.darkColor,
-                          onTap: () => _scrollBy(1),
-                        ),
-                      ),
-                    ),
-                ],
+                ),
               ),
             ),
             SizedBox(
               height: dotsHeight,
               child: _Dots(
                 key: const Key('trail_dots'),
-                count: lessons.length + lead,
-                current: current,
+                count: pages,
+                current: page,
                 done: [
-                  if (letters != null)
+                  for (var p = 0; p < pages; p++)
                     [
-                      for (var i = 0; i < letters.letters.length; i++)
-                        widget.completed.contains(letters.lessonId(i))
+                      for (var i = p * perPage;
+                          i < math.min(total, (p + 1) * perPage);
+                          i++)
+                        if (letters != null && i == 0)
+                          [
+                            for (var k = 0; k < letters.letters.length; k++)
+                              widget.completed.contains(letters.lessonId(k))
+                          ].every((d) => d)
+                        else
+                          widget.completed.contains(lessons[i - lead].id),
                     ].every((d) => d),
-                  for (final l in lessons) widget.completed.contains(l.id)
                 ],
                 color: widget.world.color,
               ),
@@ -625,7 +517,7 @@ class _Dots extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Center(
         child: Semantics(
-          label: 'Quest ${current + 1} of $count',
+          label: 'Page ${current + 1} of $count',
           child: DecoratedBox(
             decoration: BoxDecoration(
               color: const Color(0xB313213A),
@@ -970,14 +862,18 @@ class _QuestCard extends StatelessWidget {
         child: InkWell(
           key: Key('lesson_${lesson.id}'),
           onTap: unlocked
-              ? () => Navigator.push(
+              ? () {
+                  // A lesson with a teaching plan is taught step by step;
+                  // every other lesson keeps its existing screen.
+                  final controller = AppScope.of(context);
+                  Navigator.push(
                     context,
                     MaterialPageRoute<void>(
-                      builder: (_) => item is BatchLesson
-                          ? BatchLessonScreen(world: world, lesson: item)
-                          : LessonScreen(world: world, lesson: lesson),
+                      builder: (_) =>
+                          lessonScreenFor(controller, world, lesson),
                     ),
-                  )
+                  );
+                }
               : null,
           child: Padding(
             padding: const EdgeInsets.all(10),

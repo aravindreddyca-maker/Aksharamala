@@ -8,6 +8,7 @@ library;
 import 'glyph_mask.dart';
 import 'stroke_template.dart';
 import 'stroke_validator.dart';
+import 'trace_validator.dart';
 
 enum WritingOutcome {
   /// Nothing usable was drawn.
@@ -42,8 +43,10 @@ class HandwritingPolicy {
   const HandwritingPolicy({
     this.strokes = const StrokeValidator(),
     this.masks = const MaskValidator(),
+    this.trace = const TraceValidator(),
   });
 
+  final TraceValidator trace;
   final StrokeValidator strokes;
   final MaskValidator masks;
 
@@ -57,13 +60,16 @@ class HandwritingPolicy {
     WritingMode mode = WritingMode.guided,
   }) {
     if (template != null && template.isUsable) {
-      final r = strokes.check(template, drawn, mode: mode);
+      final r = mode == WritingMode.trace
+          ? trace.check(template, drawn)
+          : strokes.check(template, drawn, mode: mode);
       if (r.problem == StrokeProblem.nothing) {
         return WritingResult(WritingOutcome.nothing, stroke: r);
       }
       if (!r.passed) return WritingResult(WritingOutcome.tryAgain, stroke: r);
+      // Free tracing never proves stroke order, so it is never mastery.
       return WritingResult(
-        template.strokeOrderVerified
+        template.strokeOrderVerified && mode != WritingMode.trace
             ? WritingOutcome.mastered
             : WritingOutcome.goodShape,
         stroke: r,

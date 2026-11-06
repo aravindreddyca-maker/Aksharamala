@@ -10,11 +10,15 @@ import 'glyph_mask.dart';
 
 /// Where and how big a glyph is drawn inside the writing pad. The same numbers
 /// are used to paint the guide on screen, so the mask and the guide agree.
-const double glyphBoxFraction = 0.78;
+const double glyphBoxFraction = 0.72;
+
+/// The glyph sits a little below the middle (a share of the pad's height), so
+/// tall marks above a letter are not cut off.
+const double glyphDrop = 0.07;
 
 TextStyle glyphStyle(double fontSize) => TextStyle(
       fontSize: fontSize,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w400,
       height: 1.0,
       color: const Color(0xFF000000),
     );
@@ -34,7 +38,8 @@ Future<GlyphMask> rasteriseGlyph(
   )..layout();
   painter.paint(
     canvas,
-    Offset((side - painter.width) / 2, (side - painter.height) / 2),
+    Offset((side - painter.width) / 2,
+        (side - painter.height) / 2 + side * glyphDrop),
   );
   final image =
       await recorder.endRecording().toImage(side.round(), side.round());

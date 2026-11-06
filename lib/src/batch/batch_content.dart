@@ -14,6 +14,27 @@ library;
 import '../models.dart';
 import 'age56_content.dart';
 import 'batch_lesson.dart';
+import 'level3_english.dart';
+import 'level6_english.dart';
+import 'level6_numbers.dart';
+import 'level7_english.dart';
+import 'level7_numbers.dart';
+import 'level8_english.dart';
+import 'level8_numbers.dart';
+import 'level4_hindi.dart';
+import 'level4_tamil.dart';
+import 'level4_telugu.dart';
+import 'level5_english.dart';
+import 'level5_hindi.dart';
+import 'level5_numbers.dart';
+import 'level5_tamil.dart';
+import 'level5_telugu.dart';
+import 'level4_english.dart';
+import 'level4_numbers.dart';
+import 'level3_hindi.dart';
+import 'level3_numbers.dart';
+import 'level3_tamil.dart';
+import 'level3_telugu.dart';
 
 /// Bundled pictures that already exist, by Telugu word. Any other word is shown
 /// as text until its picture is added (listed in the asset manifest).
@@ -228,6 +249,27 @@ class BatchText {
     orderHint: 'Draw the strokes in number order',
     strokesHint: 'Check how many strokes the number needs',
   );
+
+  /// English wording for a letter (not a number).
+  static const englishLetter = BatchText(
+    rightMessage: 'Great!',
+    tryAgainMessage: 'Try again',
+    goodWriting: 'Well written!',
+    writeAgain: 'Try again',
+    strokeHint: 'Follow the shape of the letter',
+    directionHint: 'Start at the green dot',
+    orderHint: 'Draw the strokes in number order',
+    strokesHint: 'Check how many strokes the letter needs',
+  );
+
+  /// The wording for [glyph] in [locale]: letter wording for English letters,
+  /// number wording only for digits. Other scripts already say "letter".
+  static BatchText forGlyph(String locale, String glyph) {
+    final text = forLocale(locale);
+    return identical(text, english) && int.tryParse(glyph) == null
+        ? englishLetter
+        : text;
+  }
 
   /// Drafts for a native Hindi educator to approve.
   static const hindi = BatchText(
@@ -493,6 +535,59 @@ List<LearningWorld> worldsWithAge56(List<LearningWorld> base) => [
               )
             : w,
     ];
+
+/// The Level 3 lessons written for the app (English and Number Galaxy), added
+/// after each world's existing quests.
+List<LearningWorld> worldsWithLevel3(List<LearningWorld> base) {
+  final extra = <String, List<BatchLesson>>{
+    'english': [
+      ...englishLevel3Lessons,
+      ...englishLevel4Lessons,
+      ...englishLevel5Lessons,
+      ...englishLevel6Lessons,
+      ...englishLevel7Lessons,
+      ...englishLevel8Lessons,
+    ],
+    'numbers': [
+      ...numbersLevel3Lessons,
+      ...numbersLevel4Lessons,
+      ...numbersLevel5Lessons,
+      ...numbersLevel6Lessons,
+      ...numbersLevel7Lessons,
+      ...numbersLevel8Lessons,
+    ],
+    'telugu': [
+      ...teluguLevel3Lessons,
+      ...teluguLevel4Lessons,
+      ...teluguLevel5Lessons,
+    ],
+    'hindi': [
+      ...hindiLevel3Lessons,
+      ...hindiLevel4Lessons,
+      ...hindiLevel5Lessons,
+    ],
+    'tamil': [
+      ...tamilLevel3Lessons,
+      ...tamilLevel4Lessons,
+      ...tamilLevel5Lessons,
+    ],
+  };
+  return [
+    for (final w in base)
+      extra[w.id]?.isNotEmpty ?? false
+          ? LearningWorld(
+              id: w.id,
+              name: w.name,
+              emoji: w.emoji,
+              assetPath: w.assetPath,
+              color: w.color,
+              darkColor: w.darkColor,
+              description: w.description,
+              lessons: [...w.lessons, ...extra[w.id]!],
+            )
+          : w,
+  ];
+}
 
 /// The lesson as the quest map shows it: card picture and label.
 const batchQuestArt = <String, String>{

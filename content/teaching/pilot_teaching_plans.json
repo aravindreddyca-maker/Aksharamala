@@ -1,0 +1,2966 @@
+{
+  "schema_version": 1,
+  "status": "pilot_unverified",
+  "lessons": [
+    {
+      "lesson_id": "en-a",
+      "world": "english",
+      "level": 1,
+      "locale": "en-US",
+      "title": "A is for Apple",
+      "objective": "Recognise uppercase and lowercase A, and tell that Apple is the picture word that begins with A.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "introduce": [
+        {
+          "id": "en-a.introduce.1",
+          "text": "This is the letter A. It has a big A and a small a.",
+          "speech": "This is the letter A. It has a big A and a small a.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "A a"
+          }
+        },
+        {
+          "id": "en-a.introduce.2",
+          "text": "A is for Apple.",
+          "speech": "A. Apple.",
+          "visual": {
+            "type": "letterWord",
+            "glyph": "A",
+            "word": "Apple",
+            "asset": "assets/images/quiz/apple.png"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "en-a.demonstrate.1",
+          "text": "This is big A. It is the capital letter.",
+          "speech": "This is big A. It is the capital letter.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "A"
+          }
+        },
+        {
+          "id": "en-a.demonstrate.2",
+          "text": "This is small a. Big A and small a are the same letter.",
+          "speech": "This is small a. Big A and small a are the same letter.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "a"
+          }
+        },
+        {
+          "id": "en-a.demonstrate.3",
+          "text": "Apple begins with A.",
+          "speech": "Apple begins with A.",
+          "visual": {
+            "type": "letterWord",
+            "glyph": "A",
+            "word": "Apple",
+            "asset": "assets/images/quiz/apple.png"
+          }
+        },
+        {
+          "id": "en-a.demonstrate.4",
+          "text": "Ball does not begin with A. It is a different letter.",
+          "speech": "Ball does not begin with A. It is a different letter.",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/ball.png",
+            "caption": "Ball"
+          }
+        },
+        {
+          "id": "en-a.demonstrate.5",
+          "text": "A puzzle: which word does NOT begin with A? Apple does begin with A. Cat does not. Cat is the odd one out.",
+          "speech": "A puzzle: which word does NOT begin with A? Apple does begin with A. Cat does not. Cat is the odd one out.",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/cat.png",
+            "caption": "Cat"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "en-a.guided.1",
+          "task": "pick_word",
+          "prompt": "Which word begins with A?",
+          "speech": "Which word begins with A?",
+          "options": [
+            "Ball",
+            "Apple",
+            "Cat"
+          ],
+          "answer": "Apple",
+          "visual": {
+            "type": "glyph",
+            "glyph": "A"
+          },
+          "hints": [
+            "Say the words slowly. Listen to the first sound.",
+            "Apple begins with A. A says a, like in Apple."
+          ],
+          "wrong_feedback": {
+            "Ball": "Ball begins with a different letter. Look at another word.",
+            "Cat": "Cat begins with a different letter. Look at another word."
+          },
+          "explanation": "Apple begins with A.",
+          "difficulty": 1,
+          "optionPictures": {
+            "Ball": "assets/images/quiz/ball.png",
+            "Apple": "assets/images/quiz/apple.png",
+            "Cat": "assets/images/quiz/cat.png"
+          }
+        },
+        {
+          "id": "en-a.guided.2",
+          "task": "letter_id",
+          "prompt": "Which big letter is the same as this small letter?",
+          "speech": "Which big letter is the same as this small letter?",
+          "options": [
+            "B",
+            "A",
+            "C"
+          ],
+          "answer": "A",
+          "visual": {
+            "type": "glyph",
+            "glyph": "a"
+          },
+          "hints": [
+            "Look at the small letter. Which big letter is its partner?",
+            "Say the first sound of Apple. Which big letter makes it?"
+          ],
+          "wrong_feedback": {
+            "B": "That is a different letter. Look closely at the letter.",
+            "C": "That is a different letter. Look closely at the letter."
+          },
+          "explanation": "Big A and small a are the same letter.",
+          "difficulty": 1
+        },
+        {
+          "id": "en-a.guided.3",
+          "task": "not_word",
+          "prompt": "Which word does NOT begin with A?",
+          "speech": "Which word does NOT begin with A?",
+          "options": [
+            "Apple",
+            "Ball"
+          ],
+          "answer": "Ball",
+          "visual": {
+            "type": "glyph",
+            "glyph": "A"
+          },
+          "hints": [
+            "Say the words slowly. Listen to the first sound.",
+            "Apple begins with A. A says a, like in Apple."
+          ],
+          "wrong_feedback": {
+            "Apple": "Say Apple slowly. Listen to its first sound. Try again!"
+          },
+          "explanation": "Ball does not begin with A. It is a different letter.",
+          "difficulty": 2,
+          "optionPictures": {
+            "Apple": "assets/images/quiz/apple.png",
+            "Ball": "assets/images/quiz/ball.png"
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "en-a.practice.1",
+          "task": "word_to_letter",
+          "prompt": "Which letter does this word begin with?",
+          "speech": "Which letter does this word begin with?",
+          "options": [
+            "B",
+            "A",
+            "C"
+          ],
+          "answer": "A",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/apple.png",
+            "caption": ""
+          },
+          "hints": [
+            "Look at the picture. Say its name slowly.",
+            "Say the words slowly. Listen to the first sound."
+          ],
+          "wrong_feedback": {
+            "B": "That is a different letter. Look closely at the letter.",
+            "C": "That is a different letter. Look closely at the letter."
+          },
+          "explanation": "Apple begins with A.",
+          "difficulty": 1
+        },
+        {
+          "id": "en-a.practice.2",
+          "task": "name_picture",
+          "prompt": "What is this picture?",
+          "speech": "What is this picture?",
+          "options": [
+            "Apple",
+            "Cat",
+            "Ball"
+          ],
+          "answer": "Ball",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/ball.png",
+            "caption": ""
+          },
+          "hints": [
+            "Look at the picture. Say its name slowly.",
+            "Say the words slowly. Listen to the first sound."
+          ],
+          "wrong_feedback": {
+            "Apple": "That is a different picture. Look again.",
+            "Cat": "That is a different picture. Look again."
+          },
+          "explanation": "This picture is Ball.",
+          "difficulty": 1
+        },
+        {
+          "id": "en-a.practice.3",
+          "task": "hear_pick",
+          "prompt": "Listen. Which picture is it?",
+          "speech": "Listen. Which picture is it? Cat.",
+          "options": [
+            "Ball",
+            "Cat",
+            "Apple"
+          ],
+          "answer": "Cat",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Listen again, then look at each picture.",
+            "Say each name. Which one starts with the same sound?"
+          ],
+          "wrong_feedback": {
+            "Ball": "That is not what you heard. Listen again.",
+            "Apple": "That is not what you heard. Listen again."
+          },
+          "explanation": "You heard Cat.",
+          "difficulty": 2,
+          "optionPictures": {
+            "Ball": "assets/images/quiz/ball.png",
+            "Cat": "assets/images/quiz/cat.png",
+            "Apple": "assets/images/quiz/apple.png"
+          }
+        },
+        {
+          "id": "en-a.practice.4",
+          "task": "pick_word",
+          "prompt": "Listen to the letter. Which word begins with it?",
+          "speech": "Listen to the letter. Which word begins with it? A.",
+          "options": [
+            "Cat",
+            "Apple",
+            "Ball"
+          ],
+          "answer": "Apple",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Listen again, then look at each picture.",
+            "Say each name. Which one starts with the same sound?"
+          ],
+          "wrong_feedback": {
+            "Cat": "Cat begins with a different letter. Look at another word.",
+            "Ball": "Ball begins with a different letter. Look at another word."
+          },
+          "explanation": "Apple begins with A.",
+          "difficulty": 3,
+          "optionPictures": {
+            "Cat": "assets/images/quiz/cat.png",
+            "Apple": "assets/images/quiz/apple.png",
+            "Ball": "assets/images/quiz/ball.png"
+          }
+        },
+        {
+          "id": "en-a.practice.5",
+          "task": "not_word",
+          "prompt": "Which word does NOT begin with A?",
+          "speech": "Which word does NOT begin with A?",
+          "options": [
+            "Cat",
+            "Apple"
+          ],
+          "answer": "Cat",
+          "visual": {
+            "type": "glyph",
+            "glyph": "A"
+          },
+          "hints": [
+            "Say the words slowly. Listen to the first sound.",
+            "Say each name. Which one starts with the same sound?"
+          ],
+          "wrong_feedback": {
+            "Apple": "Say Apple slowly. Listen to its first sound. Try again!"
+          },
+          "explanation": "Cat does not begin with A. It is a different letter.",
+          "difficulty": 3,
+          "optionPictures": {
+            "Cat": "assets/images/quiz/cat.png",
+            "Apple": "assets/images/quiz/apple.png"
+          }
+        }
+      ],
+      "check": [
+        {
+          "id": "en-a.check.1",
+          "task": "word_to_letter",
+          "prompt": "Listen to the word. Which small letter does it begin with?",
+          "speech": "Listen to the word. Which small letter does it begin with? Apple.",
+          "options": [
+            "c",
+            "a",
+            "b"
+          ],
+          "answer": "a",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "c": "That is a different letter. Look closely at the letter.",
+            "b": "That is a different letter. Look closely at the letter."
+          },
+          "explanation": "Apple begins with small a.",
+          "difficulty": 2
+        },
+        {
+          "id": "en-a.check.2",
+          "task": "pick_word",
+          "prompt": "Find the word that begins with A.",
+          "speech": "Find the word that begins with A.",
+          "options": [
+            "Cat",
+            "Apple",
+            "Ball"
+          ],
+          "answer": "Apple",
+          "visual": {
+            "type": "glyph",
+            "glyph": "A"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Cat": "Cat begins with a different letter. Look at another word.",
+            "Ball": "Ball begins with a different letter. Look at another word."
+          },
+          "explanation": "Apple begins with A.",
+          "difficulty": 2
+        },
+        {
+          "id": "en-a.check.3",
+          "task": "name_picture",
+          "prompt": "What is this picture?",
+          "speech": "What is this picture?",
+          "options": [
+            "Ball",
+            "Cat",
+            "Apple"
+          ],
+          "answer": "Cat",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/cat.png",
+            "caption": ""
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Ball": "That is a different picture. Look again.",
+            "Apple": "That is a different picture. Look again."
+          },
+          "explanation": "This picture is Cat.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "en-a.remediation_explain.1",
+            "text": "Close your eyes. Listen: Apple. The first sound is the sound of A.",
+            "speech": "Close your eyes. Listen: Apple. The first sound is the sound of A.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/apple.png",
+              "caption": ""
+            }
+          },
+          {
+            "id": "en-a.remediation_explain.2",
+            "text": "Listen: Ball. Does it start with the sound of A? No. It starts with a different sound.",
+            "speech": "Listen: Ball. Does it start with the sound of A? No. It starts with a different sound.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/ball.png",
+              "caption": ""
+            }
+          },
+          {
+            "id": "en-a.remediation_explain.3",
+            "text": "When you hear the sound of A first, think of Apple.",
+            "speech": "When you hear the sound of A first, think of Apple.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/apple.png",
+              "caption": "Apple"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "en-a.remediation_guided.1",
+            "task": "not_word",
+            "prompt": "Which word does NOT begin with A?",
+            "speech": "Which word does NOT begin with A?",
+            "options": [
+              "Apple",
+              "Ball"
+            ],
+            "answer": "Ball",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Say the words slowly. Listen to the first sound.",
+              "Apple begins with A. A says a, like in Apple."
+            ],
+            "wrong_feedback": {
+              "Apple": "Say Apple slowly. Listen to its first sound. Try again!"
+            },
+            "explanation": "Ball does not begin with A. It is a different letter.",
+            "difficulty": 2,
+            "optionPictures": {
+              "Apple": "assets/images/quiz/apple.png",
+              "Ball": "assets/images/quiz/ball.png"
+            }
+          },
+          {
+            "id": "en-a.remediation_guided.2",
+            "task": "hear_pick",
+            "prompt": "Listen. Which word did you hear?",
+            "speech": "Listen. Which word did you hear? Apple.",
+            "options": [
+              "Cat",
+              "Apple",
+              "Ball"
+            ],
+            "answer": "Apple",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Listen again, then look at each picture.",
+              "Apple begins with A. A says a, like in Apple."
+            ],
+            "wrong_feedback": {
+              "Cat": "That is not what you heard. Listen again.",
+              "Ball": "That is not what you heard. Listen again."
+            },
+            "explanation": "You heard Apple.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "en-a.remediation_check.1",
+            "task": "pick_word",
+            "prompt": "Which word begins with A?",
+            "speech": "Which word begins with A?",
+            "options": [
+              "Ball",
+              "Cat",
+              "Apple"
+            ],
+            "answer": "Apple",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Ball": "Ball begins with a different letter. Look at another word.",
+              "Cat": "Cat begins with a different letter. Look at another word."
+            },
+            "explanation": "Apple begins with A.",
+            "difficulty": 2
+          },
+          {
+            "id": "en-a.remediation_check.2",
+            "task": "hear_pick",
+            "prompt": "Listen. Which picture is it?",
+            "speech": "Listen. Which picture is it? Ball.",
+            "options": [
+              "Apple",
+              "Ball",
+              "Cat"
+            ],
+            "answer": "Ball",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Apple": "That is not what you heard. Listen again.",
+              "Cat": "That is not what you heard. Listen again."
+            },
+            "explanation": "You heard Ball.",
+            "difficulty": 2,
+            "optionPictures": {
+              "Apple": "assets/images/quiz/apple.png",
+              "Ball": "assets/images/quiz/ball.png",
+              "Cat": "assets/images/quiz/cat.png"
+            }
+          },
+          {
+            "id": "en-a.remediation_check.3",
+            "task": "letter_id",
+            "prompt": "Listen. Which letter is it?",
+            "speech": "Listen. Which letter is it? A.",
+            "options": [
+              "C",
+              "A",
+              "B"
+            ],
+            "answer": "A",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "C": "That is a different letter. Look closely at the letter.",
+              "B": "That is a different letter. Look closely at the letter."
+            },
+            "explanation": "This letter is A.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of wording, item mix and the three-word limitation.",
+          "en-US TTS reading of the bare letter 'A.', 'A says a' and the words (EN-6).",
+          "English: check item 1 asks for the SMALL letter a (listening) and practice item 1 asks the partner of small a, so both cases are tested; the letter name A versus the sound 'a' as spoken by en-US TTS is unverified."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "TASK ORDER: the 'which word does NOT begin with the letter' puzzle is taught in demonstrate step 5, practised in guided 3 and practice 5, and used again only in remediation guided 1. It is NOT used in the check: with three words two words never begin with the letter, so a three-option version has two right answers and a two-option version is a 50% guess.",
+          "GUESS RATE: every check and remediation-check item has 3 options (a blind guess is 33%; passing 2 of 3 by guessing alone is about 26%). The thresholds are data fields; with only three words the guess rate cannot be lowered further in this pilot.",
+          "PILOT LIMITATION: only three picture words exist for this letter, so check and remediation items reuse the same three words. Items differ by task type (listen-to-word to letter, which word does NOT begin with the letter, picture naming without a caption, listen-to-letter to picture), option sets and distractor letters, but a child can still learn the three words by memory. More human-approved picture words are required before rollout.",
+          "Question pictures carry an empty caption so the answer is never printed on screen; teaching steps keep captions.",
+          "Audio-only items (visual none) need a replay button and a visual fallback if text-to-speech fails (UI decision).",
+          "No tracing / stroke order is taught.",
+          "After a failed check the child gets remediation (different explanation, 2 guided, 3 alternate check items), at most max_remediation_cycles times; then the UI marks the concept 'needs support' (after_limit offer_parent_support) and lets the child continue."
+        ]
+      }
+    },
+    {
+      "lesson_id": "te-a",
+      "world": "telugu",
+      "level": 1,
+      "locale": "te-IN",
+      "title": "అ – అమ్మ",
+      "objective": "అ అక్షరాన్ని గుర్తించండి. (Recognise the Telugu letter అ and that అమ్మ begins with it.)",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "introduce": [
+        {
+          "id": "te-a.introduce.1",
+          "text": "ఇది అ అక్షరం.",
+          "speech": "ఇది అ అక్షరం.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "అ"
+          }
+        },
+        {
+          "id": "te-a.introduce.2",
+          "text": "అ – అమ్మ. అమ్మ అనే పదం అ తో మొదలవుతుంది.",
+          "speech": "అ. అమ్మ.",
+          "visual": {
+            "type": "letterWord",
+            "glyph": "అ",
+            "word": "అమ్మ",
+            "asset": "assets/images/quiz/te_amma.webp"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "te-a.demonstrate.1",
+          "text": "అ అక్షరాన్ని చూడండి. నాతో చెప్పండి: అ.",
+          "speech": "అ అక్షరాన్ని చూడండి. నాతో చెప్పండి: అ.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "అ"
+          }
+        },
+        {
+          "id": "te-a.demonstrate.2",
+          "text": "అమ్మ అ తో మొదలవుతుంది.",
+          "speech": "అమ్మ అ తో మొదలవుతుంది.",
+          "visual": {
+            "type": "letterWord",
+            "glyph": "అ",
+            "word": "అమ్మ",
+            "asset": "assets/images/quiz/te_amma.webp"
+          }
+        },
+        {
+          "id": "te-a.demonstrate.3",
+          "text": "ఇల్లు అ తో మొదలవదు. ఇది వేరే అక్షరం.",
+          "speech": "ఇల్లు అ తో మొదలవదు. ఇది వేరే అక్షరం.",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/te_house.webp",
+            "caption": "ఇల్లు"
+          }
+        },
+        {
+          "id": "te-a.demonstrate.4",
+          "text": "ఏనుగు అ తో మొదలవదు. ఇది వేరే అక్షరం.",
+          "speech": "ఏనుగు అ తో మొదలవదు. ఇది వేరే అక్షరం.",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/te_elephant.webp",
+            "caption": "ఏనుగు"
+          }
+        },
+        {
+          "id": "te-a.demonstrate.5",
+          "text": "పజిల్: అ తో మొదలవని పదం ఏది? అమ్మ అ తో మొదలవుతుంది. ఏనుగు మొదలవదు. కాబట్టి ఏనుగు వేరుగా ఉంది.",
+          "speech": "పజిల్: అ తో మొదలవని పదం ఏది? అమ్మ అ తో మొదలవుతుంది. ఏనుగు మొదలవదు. కాబట్టి ఏనుగు వేరుగా ఉంది.",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/te_elephant.webp",
+            "caption": "ఏనుగు"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "te-a.guided.1",
+          "task": "pick_word",
+          "prompt": "అ తో మొదలయ్యే పదం ఏది?",
+          "speech": "అ తో మొదలయ్యే పదం ఏది?",
+          "options": [
+            "ఇల్లు",
+            "అమ్మ",
+            "ఏనుగు"
+          ],
+          "answer": "అమ్మ",
+          "visual": {
+            "type": "glyph",
+            "glyph": "అ"
+          },
+          "hints": [
+            "పదాన్ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి.",
+            "అమ్మ అ తో మొదలవుతుంది."
+          ],
+          "wrong_feedback": {
+            "ఇల్లు": "ఇల్లు వేరే అక్షరంతో మొదలవుతుంది. మరొక పదాన్ని చూడండి.",
+            "ఏనుగు": "ఏనుగు వేరే అక్షరంతో మొదలవుతుంది. మరొక పదాన్ని చూడండి."
+          },
+          "explanation": "అమ్మ అ తో మొదలవుతుంది.",
+          "difficulty": 1,
+          "optionPictures": {
+            "ఇల్లు": "assets/images/quiz/te_house.webp",
+            "అమ్మ": "assets/images/quiz/te_amma.webp",
+            "ఏనుగు": "assets/images/quiz/te_elephant.webp"
+          }
+        },
+        {
+          "id": "te-a.guided.2",
+          "task": "letter_id",
+          "prompt": "ఈ అక్షరం ఏది?",
+          "speech": "ఈ అక్షరం ఏది?",
+          "options": [
+            "ఏ",
+            "ఇ",
+            "అ"
+          ],
+          "answer": "అ",
+          "visual": {
+            "type": "glyph",
+            "glyph": "అ"
+          },
+          "hints": [
+            "ఈ అక్షరంలా ఉన్న అక్షరాన్ని వెతకండి.",
+            "ఇది అ అక్షరం."
+          ],
+          "wrong_feedback": {
+            "ఏ": "అది వేరే అక్షరం. అక్షరాన్ని జాగ్రత్తగా చూడండి.",
+            "ఇ": "అది వేరే అక్షరం. అక్షరాన్ని జాగ్రత్తగా చూడండి."
+          },
+          "explanation": "ఇది అ అక్షరం.",
+          "difficulty": 1
+        },
+        {
+          "id": "te-a.guided.3",
+          "task": "not_word",
+          "prompt": "అ తో మొదలవని పదం ఏది?",
+          "speech": "అ తో మొదలవని పదం ఏది?",
+          "options": [
+            "అమ్మ",
+            "ఇల్లు"
+          ],
+          "answer": "ఇల్లు",
+          "visual": {
+            "type": "glyph",
+            "glyph": "అ"
+          },
+          "hints": [
+            "పదాన్ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి.",
+            "అమ్మ అ తో మొదలవుతుంది."
+          ],
+          "wrong_feedback": {
+            "అమ్మ": "అమ్మ ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి. మళ్లీ ప్రయత్నించండి!"
+          },
+          "explanation": "ఇల్లు అ తో మొదలవదు. ఇది వేరే అక్షరం.",
+          "difficulty": 2,
+          "optionPictures": {
+            "అమ్మ": "assets/images/quiz/te_amma.webp",
+            "ఇల్లు": "assets/images/quiz/te_house.webp"
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "te-a.practice.1",
+          "task": "word_to_letter",
+          "prompt": "ఈ పదం ఏ అక్షరంతో మొదలవుతుంది?",
+          "speech": "ఈ పదం ఏ అక్షరంతో మొదలవుతుంది?",
+          "options": [
+            "ఇ",
+            "అ",
+            "ఏ"
+          ],
+          "answer": "అ",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/te_amma.webp",
+            "caption": ""
+          },
+          "hints": [
+            "బొమ్మను చూడండి. దాని పేరు నెమ్మదిగా చెప్పండి.",
+            "పదాన్ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి."
+          ],
+          "wrong_feedback": {
+            "ఇ": "అది వేరే అక్షరం. అక్షరాన్ని జాగ్రత్తగా చూడండి.",
+            "ఏ": "అది వేరే అక్షరం. అక్షరాన్ని జాగ్రత్తగా చూడండి."
+          },
+          "explanation": "అమ్మ అ తో మొదలవుతుంది.",
+          "difficulty": 1
+        },
+        {
+          "id": "te-a.practice.2",
+          "task": "name_picture",
+          "prompt": "ఈ బొమ్మ ఏమిటి?",
+          "speech": "ఈ బొమ్మ ఏమిటి?",
+          "options": [
+            "అమ్మ",
+            "ఏనుగు",
+            "ఇల్లు"
+          ],
+          "answer": "ఇల్లు",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/te_house.webp",
+            "caption": ""
+          },
+          "hints": [
+            "బొమ్మను చూడండి. దాని పేరు నెమ్మదిగా చెప్పండి.",
+            "పదాన్ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి."
+          ],
+          "wrong_feedback": {
+            "అమ్మ": "అది వేరే బొమ్మ. మళ్లీ చూడండి.",
+            "ఏనుగు": "అది వేరే బొమ్మ. మళ్లీ చూడండి."
+          },
+          "explanation": "ఇది ఇల్లు.",
+          "difficulty": 1
+        },
+        {
+          "id": "te-a.practice.3",
+          "task": "hear_pick",
+          "prompt": "వినండి. ఏ బొమ్మ?",
+          "speech": "వినండి. ఏ బొమ్మ? ఏనుగు.",
+          "options": [
+            "ఇల్లు",
+            "ఏనుగు",
+            "అమ్మ"
+          ],
+          "answer": "ఏనుగు",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "మళ్లీ వినండి, తర్వాత ప్రతి బొమ్మను చూడండి.",
+            "ప్రతి బొమ్మ పేరు చెప్పండి. ఏది అదే శబ్దంతో మొదలవుతుంది?"
+          ],
+          "wrong_feedback": {
+            "ఇల్లు": "అది మీరు విన్నది కాదు. మళ్లీ వినండి.",
+            "అమ్మ": "అది మీరు విన్నది కాదు. మళ్లీ వినండి."
+          },
+          "explanation": "మీరు ఏనుగు విన్నారు.",
+          "difficulty": 2,
+          "optionPictures": {
+            "ఇల్లు": "assets/images/quiz/te_house.webp",
+            "ఏనుగు": "assets/images/quiz/te_elephant.webp",
+            "అమ్మ": "assets/images/quiz/te_amma.webp"
+          }
+        },
+        {
+          "id": "te-a.practice.4",
+          "task": "pick_word",
+          "prompt": "అక్షరాన్ని వినండి. దానితో మొదలయ్యే పదం ఏది?",
+          "speech": "అక్షరాన్ని వినండి. దానితో మొదలయ్యే పదం ఏది? అ.",
+          "options": [
+            "ఏనుగు",
+            "అమ్మ",
+            "ఇల్లు"
+          ],
+          "answer": "అమ్మ",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "మళ్లీ వినండి, తర్వాత ప్రతి బొమ్మను చూడండి.",
+            "ప్రతి బొమ్మ పేరు చెప్పండి. ఏది అదే శబ్దంతో మొదలవుతుంది?"
+          ],
+          "wrong_feedback": {
+            "ఏనుగు": "ఏనుగు వేరే అక్షరంతో మొదలవుతుంది. మరొక పదాన్ని చూడండి.",
+            "ఇల్లు": "ఇల్లు వేరే అక్షరంతో మొదలవుతుంది. మరొక పదాన్ని చూడండి."
+          },
+          "explanation": "అమ్మ అ తో మొదలవుతుంది.",
+          "difficulty": 3,
+          "optionPictures": {
+            "ఏనుగు": "assets/images/quiz/te_elephant.webp",
+            "అమ్మ": "assets/images/quiz/te_amma.webp",
+            "ఇల్లు": "assets/images/quiz/te_house.webp"
+          }
+        },
+        {
+          "id": "te-a.practice.5",
+          "task": "not_word",
+          "prompt": "అ తో మొదలవని పదం ఏది?",
+          "speech": "అ తో మొదలవని పదం ఏది?",
+          "options": [
+            "ఏనుగు",
+            "అమ్మ"
+          ],
+          "answer": "ఏనుగు",
+          "visual": {
+            "type": "glyph",
+            "glyph": "అ"
+          },
+          "hints": [
+            "పదాన్ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి.",
+            "ప్రతి బొమ్మ పేరు చెప్పండి. ఏది అదే శబ్దంతో మొదలవుతుంది?"
+          ],
+          "wrong_feedback": {
+            "అమ్మ": "అమ్మ ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి. మళ్లీ ప్రయత్నించండి!"
+          },
+          "explanation": "ఏనుగు అ తో మొదలవదు. ఇది వేరే అక్షరం.",
+          "difficulty": 3,
+          "optionPictures": {
+            "ఏనుగు": "assets/images/quiz/te_elephant.webp",
+            "అమ్మ": "assets/images/quiz/te_amma.webp"
+          }
+        }
+      ],
+      "check": [
+        {
+          "id": "te-a.check.1",
+          "task": "word_to_letter",
+          "prompt": "పదాన్ని వినండి. ఇది ఏ అక్షరంతో మొదలవుతుంది?",
+          "speech": "పదాన్ని వినండి. ఇది ఏ అక్షరంతో మొదలవుతుంది? అమ్మ.",
+          "options": [
+            "ఏ",
+            "ఇ",
+            "అ"
+          ],
+          "answer": "అ",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "ఏ": "అది వేరే అక్షరం. అక్షరాన్ని జాగ్రత్తగా చూడండి.",
+            "ఇ": "అది వేరే అక్షరం. అక్షరాన్ని జాగ్రత్తగా చూడండి."
+          },
+          "explanation": "అమ్మ అ తో మొదలవుతుంది.",
+          "difficulty": 2
+        },
+        {
+          "id": "te-a.check.2",
+          "task": "pick_word",
+          "prompt": "అ తో మొదలయ్యే పదాన్ని కనుగొనండి.",
+          "speech": "అ తో మొదలయ్యే పదాన్ని కనుగొనండి.",
+          "options": [
+            "ఏనుగు",
+            "అమ్మ",
+            "ఇల్లు"
+          ],
+          "answer": "అమ్మ",
+          "visual": {
+            "type": "glyph",
+            "glyph": "అ"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "ఏనుగు": "ఏనుగు వేరే అక్షరంతో మొదలవుతుంది. మరొక పదాన్ని చూడండి.",
+            "ఇల్లు": "ఇల్లు వేరే అక్షరంతో మొదలవుతుంది. మరొక పదాన్ని చూడండి."
+          },
+          "explanation": "అమ్మ అ తో మొదలవుతుంది.",
+          "difficulty": 2
+        },
+        {
+          "id": "te-a.check.3",
+          "task": "name_picture",
+          "prompt": "ఈ బొమ్మ ఏమిటి?",
+          "speech": "ఈ బొమ్మ ఏమిటి?",
+          "options": [
+            "ఇల్లు",
+            "ఏనుగు",
+            "అమ్మ"
+          ],
+          "answer": "ఏనుగు",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/te_elephant.webp",
+            "caption": ""
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "ఇల్లు": "అది వేరే బొమ్మ. మళ్లీ చూడండి.",
+            "అమ్మ": "అది వేరే బొమ్మ. మళ్లీ చూడండి."
+          },
+          "explanation": "ఇది ఏనుగు.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "te-a.remediation_explain.1",
+            "text": "కళ్ళు మూసుకోండి. వినండి: అమ్మ. మొదటి శబ్దం అ శబ్దం.",
+            "speech": "కళ్ళు మూసుకోండి. వినండి: అమ్మ. మొదటి శబ్దం అ శబ్దం.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/te_amma.webp",
+              "caption": ""
+            }
+          },
+          {
+            "id": "te-a.remediation_explain.2",
+            "text": "వినండి: ఇల్లు. ఇది అ శబ్దంతో మొదలవుతుందా? లేదు, వేరే శబ్దంతో మొదలవుతుంది.",
+            "speech": "వినండి: ఇల్లు. ఇది అ శబ్దంతో మొదలవుతుందా? లేదు, వేరే శబ్దంతో మొదలవుతుంది.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/te_house.webp",
+              "caption": ""
+            }
+          },
+          {
+            "id": "te-a.remediation_explain.3",
+            "text": "మొదట అ శబ్దం వినిపిస్తే, అమ్మ అని గుర్తుంచుకోండి.",
+            "speech": "మొదట అ శబ్దం వినిపిస్తే, అమ్మ అని గుర్తుంచుకోండి.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/te_amma.webp",
+              "caption": "అమ్మ"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "te-a.remediation_guided.1",
+            "task": "not_word",
+            "prompt": "అ తో మొదలవని పదం ఏది?",
+            "speech": "అ తో మొదలవని పదం ఏది?",
+            "options": [
+              "అమ్మ",
+              "ఇల్లు"
+            ],
+            "answer": "ఇల్లు",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "పదాన్ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి.",
+              "అమ్మ అ తో మొదలవుతుంది."
+            ],
+            "wrong_feedback": {
+              "అమ్మ": "అమ్మ ని నెమ్మదిగా చెప్పండి. మొదటి శబ్దాన్ని వినండి. మళ్లీ ప్రయత్నించండి!"
+            },
+            "explanation": "ఇల్లు అ తో మొదలవదు. ఇది వేరే అక్షరం.",
+            "difficulty": 2,
+            "optionPictures": {
+              "అమ్మ": "assets/images/quiz/te_amma.webp",
+              "ఇల్లు": "assets/images/quiz/te_house.webp"
+            }
+          },
+          {
+            "id": "te-a.remediation_guided.2",
+            "task": "hear_pick",
+            "prompt": "వినండి. మీరు ఏ పదం విన్నారు?",
+            "speech": "వినండి. మీరు ఏ పదం విన్నారు? అమ్మ.",
+            "options": [
+              "ఏనుగు",
+              "అమ్మ",
+              "ఇల్లు"
+            ],
+            "answer": "అమ్మ",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "మళ్లీ వినండి, తర్వాత ప్రతి బొమ్మను చూడండి.",
+              "అమ్మ అ తో మొదలవుతుంది."
+            ],
+            "wrong_feedback": {
+              "ఏనుగు": "అది మీరు విన్నది కాదు. మళ్లీ వినండి.",
+              "ఇల్లు": "అది మీరు విన్నది కాదు. మళ్లీ వినండి."
+            },
+            "explanation": "మీరు అమ్మ విన్నారు.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "te-a.remediation_check.1",
+            "task": "pick_word",
+            "prompt": "అ తో మొదలయ్యే పదం ఏది?",
+            "speech": "అ తో మొదలయ్యే పదం ఏది?",
+            "options": [
+              "ఇల్లు",
+              "ఏనుగు",
+              "అమ్మ"
+            ],
+            "answer": "అమ్మ",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "ఇల్లు": "ఇల్లు వేరే అక్షరంతో మొదలవుతుంది. మరొక పదాన్ని చూడండి.",
+              "ఏనుగు": "ఏనుగు వేరే అక్షరంతో మొదలవుతుంది. మరొక పదాన్ని చూడండి."
+            },
+            "explanation": "అమ్మ అ తో మొదలవుతుంది.",
+            "difficulty": 2
+          },
+          {
+            "id": "te-a.remediation_check.2",
+            "task": "hear_pick",
+            "prompt": "వినండి. ఏ బొమ్మ?",
+            "speech": "వినండి. ఏ బొమ్మ? ఇల్లు.",
+            "options": [
+              "అమ్మ",
+              "ఇల్లు",
+              "ఏనుగు"
+            ],
+            "answer": "ఇల్లు",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "అమ్మ": "అది మీరు విన్నది కాదు. మళ్లీ వినండి.",
+              "ఏనుగు": "అది మీరు విన్నది కాదు. మళ్లీ వినండి."
+            },
+            "explanation": "మీరు ఇల్లు విన్నారు.",
+            "difficulty": 2,
+            "optionPictures": {
+              "అమ్మ": "assets/images/quiz/te_amma.webp",
+              "ఇల్లు": "assets/images/quiz/te_house.webp",
+              "ఏనుగు": "assets/images/quiz/te_elephant.webp"
+            }
+          },
+          {
+            "id": "te-a.remediation_check.3",
+            "task": "letter_id",
+            "prompt": "వినండి. ఇది ఏ అక్షరం?",
+            "speech": "వినండి. ఇది ఏ అక్షరం? అ.",
+            "options": [
+              "ఏ",
+              "అ",
+              "ఇ"
+            ],
+            "answer": "అ",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "ఏ": "అది వేరే అక్షరం. అక్షరాన్ని జాగ్రత్తగా చూడండి.",
+              "ఇ": "అది వేరే అక్షరం. అక్షరాన్ని జాగ్రత్తగా చూడండి."
+            },
+            "explanation": "ఇది అ అక్షరం.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "Every sentence (text, speech, prompts, hints, feedback, explanations) is AI-written and UNVERIFIED by a native speaker: grammar, naturalness, register and age suitability.",
+          "Text-to-speech in the lesson locale was not heard: how a lone letter is read (letter name versus sound, vowel length), and every sentence.",
+          "The word used for 'picture' in prompts is not an existing picture-word vocabulary item; confirm it is acceptable.",
+          "Negative prompt ('which word does NOT begin with the letter') is a difficulty-3 item: educator and native speaker to confirm the wording is clear for a young child and the task is suitable.",
+          "Sound-first remediation sentences ('close your eyes and listen', 'the first sound is the sound of the letter') need native checking of phrasing and of what 'sound of the letter' should be called.",
+          "The letter distractors in letter-choice items are the first letters of the other two picture words; confirm they are acceptable distractors.",
+          "Whether each picture file clearly shows its word (te_amma and ta_mother show two people; a child may name them differently).",
+          "Telugu points for the reviewer: మొదలవుతుంది / మొదలవదు / మొదలవని, 'నాతో చెప్పండి', బొమ్మ for picture, శబ్దం for sound, 'కళ్ళు మూసుకోండి', register for a 3-4 year old.",
+          "ID decision: te-a (curriculum.dart) is the lesson planned; batch lesson telugu-recognise-001 with options అమ్మ/ఉడుత/ఓడ is a different lesson and was not planned."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "TASK ORDER: the 'which word does NOT begin with the letter' puzzle is taught in demonstrate step 5, practised in guided 3 and practice 5, and used again only in remediation guided 1. It is NOT used in the check: with three words two words never begin with the letter, so a three-option version has two right answers and a two-option version is a 50% guess.",
+          "GUESS RATE: every check and remediation-check item has 3 options (a blind guess is 33%; passing 2 of 3 by guessing alone is about 26%). The thresholds are data fields; with only three words the guess rate cannot be lowered further in this pilot.",
+          "PILOT LIMITATION: only three picture words exist for this letter, so check and remediation items reuse the same three words. Items differ by task type (listen-to-word to letter, which word does NOT begin with the letter, picture naming without a caption, listen-to-letter to picture), option sets and distractor letters, but a child can still learn the three words by memory. More human-approved picture words are required before rollout.",
+          "Question pictures carry an empty caption so the answer is never printed on screen; teaching steps keep captions.",
+          "Audio-only items (visual none) need a replay button and a visual fallback if text-to-speech fails (UI decision).",
+          "No tracing / stroke order is taught.",
+          "After a failed check the child gets remediation (different explanation, 2 guided, 3 alternate check items), at most max_remediation_cycles times; then the UI marks the concept 'needs support' (after_limit offer_parent_support) and lets the child continue."
+        ]
+      }
+    },
+    {
+      "lesson_id": "hi-a",
+      "world": "hindi",
+      "level": 1,
+      "locale": "hi-IN",
+      "title": "अ – अनार",
+      "objective": "अ अक्षर पहचानें। (Recognise the Hindi letter अ and that अनार begins with it.)",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "introduce": [
+        {
+          "id": "hi-a.introduce.1",
+          "text": "यह अक्षर अ है।",
+          "speech": "यह अक्षर अ है।",
+          "visual": {
+            "type": "glyph",
+            "glyph": "अ"
+          }
+        },
+        {
+          "id": "hi-a.introduce.2",
+          "text": "अ से अनार। अनार शब्द अ से शुरू होता है।",
+          "speech": "अ। अनार।",
+          "visual": {
+            "type": "letterWord",
+            "glyph": "अ",
+            "word": "अनार",
+            "asset": "assets/images/quiz/hi_pomegranate.webp"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "hi-a.demonstrate.1",
+          "text": "अक्षर अ को देखो। मेरे साथ बोलो: अ।",
+          "speech": "अक्षर अ को देखो। मेरे साथ बोलो: अ।",
+          "visual": {
+            "type": "glyph",
+            "glyph": "अ"
+          }
+        },
+        {
+          "id": "hi-a.demonstrate.2",
+          "text": "अनार अ से शुरू होता है।",
+          "speech": "अनार अ से शुरू होता है।",
+          "visual": {
+            "type": "letterWord",
+            "glyph": "अ",
+            "word": "अनार",
+            "asset": "assets/images/quiz/hi_pomegranate.webp"
+          }
+        },
+        {
+          "id": "hi-a.demonstrate.3",
+          "text": "कमल अ से शुरू नहीं होता। यह दूसरा अक्षर है।",
+          "speech": "कमल अ से शुरू नहीं होता। यह दूसरा अक्षर है।",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/hi_lotus.webp",
+            "caption": "कमल"
+          }
+        },
+        {
+          "id": "hi-a.demonstrate.4",
+          "text": "घर अ से शुरू नहीं होता। यह दूसरा अक्षर है।",
+          "speech": "घर अ से शुरू नहीं होता। यह दूसरा अक्षर है।",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/hi_house.webp",
+            "caption": "घर"
+          }
+        },
+        {
+          "id": "hi-a.demonstrate.5",
+          "text": "पहेली: अ से कौन सा शब्द शुरू नहीं होता? अनार अ से शुरू होता है। घर नहीं होता। इसलिए घर अलग है।",
+          "speech": "पहेली: अ से कौन सा शब्द शुरू नहीं होता? अनार अ से शुरू होता है। घर नहीं होता। इसलिए घर अलग है।",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/hi_house.webp",
+            "caption": "घर"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "hi-a.guided.1",
+          "task": "pick_word",
+          "prompt": "अ से कौन सा शब्द शुरू होता है?",
+          "speech": "अ से कौन सा शब्द शुरू होता है?",
+          "options": [
+            "कमल",
+            "अनार",
+            "घर"
+          ],
+          "answer": "अनार",
+          "visual": {
+            "type": "glyph",
+            "glyph": "अ"
+          },
+          "hints": [
+            "शब्द को धीरे-धीरे बोलो। पहली आवाज़ सुनो।",
+            "अनार अ से शुरू होता है।"
+          ],
+          "wrong_feedback": {
+            "कमल": "कमल दूसरे अक्षर से शुरू होता है। कोई और शब्द देखो।",
+            "घर": "घर दूसरे अक्षर से शुरू होता है। कोई और शब्द देखो।"
+          },
+          "explanation": "अनार अ से शुरू होता है।",
+          "difficulty": 1,
+          "optionPictures": {
+            "कमल": "assets/images/quiz/hi_lotus.webp",
+            "अनार": "assets/images/quiz/hi_pomegranate.webp",
+            "घर": "assets/images/quiz/hi_house.webp"
+          }
+        },
+        {
+          "id": "hi-a.guided.2",
+          "task": "letter_id",
+          "prompt": "यह कौन सा अक्षर है?",
+          "speech": "यह कौन सा अक्षर है?",
+          "options": [
+            "घ",
+            "क",
+            "अ"
+          ],
+          "answer": "अ",
+          "visual": {
+            "type": "glyph",
+            "glyph": "अ"
+          },
+          "hints": [
+            "ऐसा ही दिखने वाला अक्षर ढूँढो।",
+            "यह अक्षर अ है।"
+          ],
+          "wrong_feedback": {
+            "घ": "वह दूसरा अक्षर है। अक्षर को ध्यान से देखो।",
+            "क": "वह दूसरा अक्षर है। अक्षर को ध्यान से देखो।"
+          },
+          "explanation": "यह अक्षर अ है।",
+          "difficulty": 1
+        },
+        {
+          "id": "hi-a.guided.3",
+          "task": "not_word",
+          "prompt": "अ से कौन सा शब्द शुरू नहीं होता?",
+          "speech": "अ से कौन सा शब्द शुरू नहीं होता?",
+          "options": [
+            "अनार",
+            "कमल"
+          ],
+          "answer": "कमल",
+          "visual": {
+            "type": "glyph",
+            "glyph": "अ"
+          },
+          "hints": [
+            "शब्द को धीरे-धीरे बोलो। पहली आवाज़ सुनो।",
+            "अनार अ से शुरू होता है।"
+          ],
+          "wrong_feedback": {
+            "अनार": "अनार को धीरे-धीरे बोलो। पहली आवाज़ सुनो। फिर कोशिश करो!"
+          },
+          "explanation": "कमल अ से शुरू नहीं होता। यह दूसरा अक्षर है।",
+          "difficulty": 2,
+          "optionPictures": {
+            "अनार": "assets/images/quiz/hi_pomegranate.webp",
+            "कमल": "assets/images/quiz/hi_lotus.webp"
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "hi-a.practice.1",
+          "task": "word_to_letter",
+          "prompt": "इस चित्र का शब्द किस अक्षर से शुरू होता है?",
+          "speech": "इस चित्र का शब्द किस अक्षर से शुरू होता है?",
+          "options": [
+            "क",
+            "अ",
+            "घ"
+          ],
+          "answer": "अ",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/hi_pomegranate.webp",
+            "caption": ""
+          },
+          "hints": [
+            "चित्र को देखो। उसका नाम धीरे-धीरे बोलो।",
+            "शब्द को धीरे-धीरे बोलो। पहली आवाज़ सुनो।"
+          ],
+          "wrong_feedback": {
+            "क": "वह दूसरा अक्षर है। अक्षर को ध्यान से देखो।",
+            "घ": "वह दूसरा अक्षर है। अक्षर को ध्यान से देखो।"
+          },
+          "explanation": "अनार अ से शुरू होता है।",
+          "difficulty": 1
+        },
+        {
+          "id": "hi-a.practice.2",
+          "task": "name_picture",
+          "prompt": "इस चित्र में क्या है?",
+          "speech": "इस चित्र में क्या है?",
+          "options": [
+            "अनार",
+            "घर",
+            "कमल"
+          ],
+          "answer": "कमल",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/hi_lotus.webp",
+            "caption": ""
+          },
+          "hints": [
+            "चित्र को देखो। उसका नाम धीरे-धीरे बोलो।",
+            "शब्द को धीरे-धीरे बोलो। पहली आवाज़ सुनो।"
+          ],
+          "wrong_feedback": {
+            "अनार": "वह दूसरा चित्र है। फिर से देखो।",
+            "घर": "वह दूसरा चित्र है। फिर से देखो।"
+          },
+          "explanation": "यह कमल है।",
+          "difficulty": 1
+        },
+        {
+          "id": "hi-a.practice.3",
+          "task": "hear_pick",
+          "prompt": "सुनो। कौन सा चित्र है?",
+          "speech": "सुनो। कौन सा चित्र है? घर।",
+          "options": [
+            "कमल",
+            "घर",
+            "अनार"
+          ],
+          "answer": "घर",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "फिर से सुनो, फिर हर चित्र को देखो।",
+            "हर चित्र का नाम बोलो। कौन सा उसी आवाज़ से शुरू होता है?"
+          ],
+          "wrong_feedback": {
+            "कमल": "यह वह नहीं है जो तुमने सुना। फिर से सुनो।",
+            "अनार": "यह वह नहीं है जो तुमने सुना। फिर से सुनो।"
+          },
+          "explanation": "तुमने घर सुना।",
+          "difficulty": 2,
+          "optionPictures": {
+            "कमल": "assets/images/quiz/hi_lotus.webp",
+            "घर": "assets/images/quiz/hi_house.webp",
+            "अनार": "assets/images/quiz/hi_pomegranate.webp"
+          }
+        },
+        {
+          "id": "hi-a.practice.4",
+          "task": "pick_word",
+          "prompt": "अक्षर सुनो। इससे शुरू होने वाला शब्द कौन सा है?",
+          "speech": "अक्षर सुनो। इससे शुरू होने वाला शब्द कौन सा है? अ।",
+          "options": [
+            "घर",
+            "अनार",
+            "कमल"
+          ],
+          "answer": "अनार",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "फिर से सुनो, फिर हर चित्र को देखो।",
+            "हर चित्र का नाम बोलो। कौन सा उसी आवाज़ से शुरू होता है?"
+          ],
+          "wrong_feedback": {
+            "घर": "घर दूसरे अक्षर से शुरू होता है। कोई और शब्द देखो।",
+            "कमल": "कमल दूसरे अक्षर से शुरू होता है। कोई और शब्द देखो।"
+          },
+          "explanation": "अनार अ से शुरू होता है।",
+          "difficulty": 3,
+          "optionPictures": {
+            "घर": "assets/images/quiz/hi_house.webp",
+            "अनार": "assets/images/quiz/hi_pomegranate.webp",
+            "कमल": "assets/images/quiz/hi_lotus.webp"
+          }
+        },
+        {
+          "id": "hi-a.practice.5",
+          "task": "not_word",
+          "prompt": "अ से कौन सा शब्द शुरू नहीं होता?",
+          "speech": "अ से कौन सा शब्द शुरू नहीं होता?",
+          "options": [
+            "घर",
+            "अनार"
+          ],
+          "answer": "घर",
+          "visual": {
+            "type": "glyph",
+            "glyph": "अ"
+          },
+          "hints": [
+            "शब्द को धीरे-धीरे बोलो। पहली आवाज़ सुनो।",
+            "हर चित्र का नाम बोलो। कौन सा उसी आवाज़ से शुरू होता है?"
+          ],
+          "wrong_feedback": {
+            "अनार": "अनार को धीरे-धीरे बोलो। पहली आवाज़ सुनो। फिर कोशिश करो!"
+          },
+          "explanation": "घर अ से शुरू नहीं होता। यह दूसरा अक्षर है।",
+          "difficulty": 3,
+          "optionPictures": {
+            "घर": "assets/images/quiz/hi_house.webp",
+            "अनार": "assets/images/quiz/hi_pomegranate.webp"
+          }
+        }
+      ],
+      "check": [
+        {
+          "id": "hi-a.check.1",
+          "task": "word_to_letter",
+          "prompt": "शब्द सुनो। यह किस अक्षर से शुरू होता है?",
+          "speech": "शब्द सुनो। यह किस अक्षर से शुरू होता है? अनार।",
+          "options": [
+            "घ",
+            "क",
+            "अ"
+          ],
+          "answer": "अ",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "घ": "वह दूसरा अक्षर है। अक्षर को ध्यान से देखो।",
+            "क": "वह दूसरा अक्षर है। अक्षर को ध्यान से देखो।"
+          },
+          "explanation": "अनार अ से शुरू होता है।",
+          "difficulty": 2
+        },
+        {
+          "id": "hi-a.check.2",
+          "task": "pick_word",
+          "prompt": "अ से शुरू होने वाला शब्द ढूँढो।",
+          "speech": "अ से शुरू होने वाला शब्द ढूँढो।",
+          "options": [
+            "घर",
+            "अनार",
+            "कमल"
+          ],
+          "answer": "अनार",
+          "visual": {
+            "type": "glyph",
+            "glyph": "अ"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "घर": "घर दूसरे अक्षर से शुरू होता है। कोई और शब्द देखो।",
+            "कमल": "कमल दूसरे अक्षर से शुरू होता है। कोई और शब्द देखो।"
+          },
+          "explanation": "अनार अ से शुरू होता है।",
+          "difficulty": 2
+        },
+        {
+          "id": "hi-a.check.3",
+          "task": "name_picture",
+          "prompt": "इस चित्र में क्या है?",
+          "speech": "इस चित्र में क्या है?",
+          "options": [
+            "कमल",
+            "घर",
+            "अनार"
+          ],
+          "answer": "घर",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/hi_house.webp",
+            "caption": ""
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "कमल": "वह दूसरा चित्र है। फिर से देखो।",
+            "अनार": "वह दूसरा चित्र है। फिर से देखो।"
+          },
+          "explanation": "यह घर है।",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "hi-a.remediation_explain.1",
+            "text": "आँखें बंद करो। सुनो: अनार। पहली आवाज़ अ की आवाज़ है।",
+            "speech": "आँखें बंद करो। सुनो: अनार। पहली आवाज़ अ की आवाज़ है।",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/hi_pomegranate.webp",
+              "caption": ""
+            }
+          },
+          {
+            "id": "hi-a.remediation_explain.2",
+            "text": "सुनो: कमल। क्या यह अ की आवाज़ से शुरू होता है? नहीं, यह दूसरी आवाज़ से शुरू होता है।",
+            "speech": "सुनो: कमल। क्या यह अ की आवाज़ से शुरू होता है? नहीं, यह दूसरी आवाज़ से शुरू होता है।",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/hi_lotus.webp",
+              "caption": ""
+            }
+          },
+          {
+            "id": "hi-a.remediation_explain.3",
+            "text": "जब सबसे पहले अ की आवाज़ सुनाई दे, तो अनार याद करो।",
+            "speech": "जब सबसे पहले अ की आवाज़ सुनाई दे, तो अनार याद करो।",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/hi_pomegranate.webp",
+              "caption": "अनार"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "hi-a.remediation_guided.1",
+            "task": "not_word",
+            "prompt": "अ से कौन सा शब्द शुरू नहीं होता?",
+            "speech": "अ से कौन सा शब्द शुरू नहीं होता?",
+            "options": [
+              "अनार",
+              "कमल"
+            ],
+            "answer": "कमल",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "शब्द को धीरे-धीरे बोलो। पहली आवाज़ सुनो।",
+              "अनार अ से शुरू होता है।"
+            ],
+            "wrong_feedback": {
+              "अनार": "अनार को धीरे-धीरे बोलो। पहली आवाज़ सुनो। फिर कोशिश करो!"
+            },
+            "explanation": "कमल अ से शुरू नहीं होता। यह दूसरा अक्षर है।",
+            "difficulty": 2,
+            "optionPictures": {
+              "अनार": "assets/images/quiz/hi_pomegranate.webp",
+              "कमल": "assets/images/quiz/hi_lotus.webp"
+            }
+          },
+          {
+            "id": "hi-a.remediation_guided.2",
+            "task": "hear_pick",
+            "prompt": "सुनो। तुमने कौन सा शब्द सुना?",
+            "speech": "सुनो। तुमने कौन सा शब्द सुना? अनार।",
+            "options": [
+              "घर",
+              "अनार",
+              "कमल"
+            ],
+            "answer": "अनार",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "फिर से सुनो, फिर हर चित्र को देखो।",
+              "अनार अ से शुरू होता है।"
+            ],
+            "wrong_feedback": {
+              "घर": "यह वह नहीं है जो तुमने सुना। फिर से सुनो।",
+              "कमल": "यह वह नहीं है जो तुमने सुना। फिर से सुनो।"
+            },
+            "explanation": "तुमने अनार सुना।",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "hi-a.remediation_check.1",
+            "task": "pick_word",
+            "prompt": "अ से कौन सा शब्द शुरू होता है?",
+            "speech": "अ से कौन सा शब्द शुरू होता है?",
+            "options": [
+              "कमल",
+              "घर",
+              "अनार"
+            ],
+            "answer": "अनार",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "कमल": "कमल दूसरे अक्षर से शुरू होता है। कोई और शब्द देखो।",
+              "घर": "घर दूसरे अक्षर से शुरू होता है। कोई और शब्द देखो।"
+            },
+            "explanation": "अनार अ से शुरू होता है।",
+            "difficulty": 2
+          },
+          {
+            "id": "hi-a.remediation_check.2",
+            "task": "hear_pick",
+            "prompt": "सुनो। कौन सा चित्र है?",
+            "speech": "सुनो। कौन सा चित्र है? कमल।",
+            "options": [
+              "अनार",
+              "कमल",
+              "घर"
+            ],
+            "answer": "कमल",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "अनार": "यह वह नहीं है जो तुमने सुना। फिर से सुनो।",
+              "घर": "यह वह नहीं है जो तुमने सुना। फिर से सुनो।"
+            },
+            "explanation": "तुमने कमल सुना।",
+            "difficulty": 2,
+            "optionPictures": {
+              "अनार": "assets/images/quiz/hi_pomegranate.webp",
+              "कमल": "assets/images/quiz/hi_lotus.webp",
+              "घर": "assets/images/quiz/hi_house.webp"
+            }
+          },
+          {
+            "id": "hi-a.remediation_check.3",
+            "task": "letter_id",
+            "prompt": "सुनो। यह कौन सा अक्षर है?",
+            "speech": "सुनो। यह कौन सा अक्षर है? अ।",
+            "options": [
+              "घ",
+              "अ",
+              "क"
+            ],
+            "answer": "अ",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "घ": "वह दूसरा अक्षर है। अक्षर को ध्यान से देखो।",
+              "क": "वह दूसरा अक्षर है। अक्षर को ध्यान से देखो।"
+            },
+            "explanation": "यह अक्षर अ है।",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "Every sentence (text, speech, prompts, hints, feedback, explanations) is AI-written and UNVERIFIED by a native speaker: grammar, naturalness, register and age suitability.",
+          "Text-to-speech in the lesson locale was not heard: how a lone letter is read (letter name versus sound, vowel length), and every sentence.",
+          "The word used for 'picture' in prompts is not an existing picture-word vocabulary item; confirm it is acceptable.",
+          "Negative prompt ('which word does NOT begin with the letter') is a difficulty-3 item: educator and native speaker to confirm the wording is clear for a young child and the task is suitable.",
+          "Sound-first remediation sentences ('close your eyes and listen', 'the first sound is the sound of the letter') need native checking of phrasing and of what 'sound of the letter' should be called.",
+          "The letter distractors in letter-choice items are the first letters of the other two picture words; confirm they are acceptable distractors.",
+          "Whether each picture file clearly shows its word (te_amma and ta_mother show two people; a child may name them differently).",
+          "Hindi: 'whose picture' wording replaced by 'इस चित्र में क्या है?' (still needs native confirmation); 'पहली आवाज़ सुनो', 'दूसरी आवाज़', 'सबसे पहले ... की आवाज़ सुनाई दे', danda/spacing in speech strings."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "TASK ORDER: the 'which word does NOT begin with the letter' puzzle is taught in demonstrate step 5, practised in guided 3 and practice 5, and used again only in remediation guided 1. It is NOT used in the check: with three words two words never begin with the letter, so a three-option version has two right answers and a two-option version is a 50% guess.",
+          "GUESS RATE: every check and remediation-check item has 3 options (a blind guess is 33%; passing 2 of 3 by guessing alone is about 26%). The thresholds are data fields; with only three words the guess rate cannot be lowered further in this pilot.",
+          "PILOT LIMITATION: only three picture words exist for this letter, so check and remediation items reuse the same three words. Items differ by task type (listen-to-word to letter, which word does NOT begin with the letter, picture naming without a caption, listen-to-letter to picture), option sets and distractor letters, but a child can still learn the three words by memory. More human-approved picture words are required before rollout.",
+          "Question pictures carry an empty caption so the answer is never printed on screen; teaching steps keep captions.",
+          "Audio-only items (visual none) need a replay button and a visual fallback if text-to-speech fails (UI decision).",
+          "No tracing / stroke order is taught.",
+          "After a failed check the child gets remediation (different explanation, 2 guided, 3 alternate check items), at most max_remediation_cycles times; then the UI marks the concept 'needs support' (after_limit offer_parent_support) and lets the child continue."
+        ]
+      }
+    },
+    {
+      "lesson_id": "ta-a",
+      "world": "tamil",
+      "level": 1,
+      "locale": "ta-IN",
+      "title": "அ – அம்மா",
+      "objective": "அ எழுத்தை அடையாளம் காணுங்கள். (Recognise the Tamil letter அ and that அம்மா begins with it.)",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "introduce": [
+        {
+          "id": "ta-a.introduce.1",
+          "text": "இது அ என்ற எழுத்து.",
+          "speech": "இது அ என்ற எழுத்து.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "அ"
+          }
+        },
+        {
+          "id": "ta-a.introduce.2",
+          "text": "அ – அம்மா. அம்மா என்ற சொல் அ என்ற எழுத்தில் தொடங்குகிறது.",
+          "speech": "அ. அம்மா.",
+          "visual": {
+            "type": "letterWord",
+            "glyph": "அ",
+            "word": "அம்மா",
+            "asset": "assets/images/quiz/ta_mother.webp"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "ta-a.demonstrate.1",
+          "text": "அ என்ற எழுத்தைப் பாருங்கள். என்னோடு சொல்லுங்கள்: அ.",
+          "speech": "அ என்ற எழுத்தைப் பாருங்கள். என்னோடு சொல்லுங்கள்: அ.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "அ"
+          }
+        },
+        {
+          "id": "ta-a.demonstrate.2",
+          "text": "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது.",
+          "speech": "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது.",
+          "visual": {
+            "type": "letterWord",
+            "glyph": "அ",
+            "word": "அம்மா",
+            "asset": "assets/images/quiz/ta_mother.webp"
+          }
+        },
+        {
+          "id": "ta-a.demonstrate.3",
+          "text": "இலை அ என்ற எழுத்தில் தொடங்கவில்லை. இது வேறு எழுத்து.",
+          "speech": "இலை அ என்ற எழுத்தில் தொடங்கவில்லை. இது வேறு எழுத்து.",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/ta_leaf.webp",
+            "caption": "இலை"
+          }
+        },
+        {
+          "id": "ta-a.demonstrate.4",
+          "text": "ஊஞ்சல் அ என்ற எழுத்தில் தொடங்கவில்லை. இது வேறு எழுத்து.",
+          "speech": "ஊஞ்சல் அ என்ற எழுத்தில் தொடங்கவில்லை. இது வேறு எழுத்து.",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/ta_swing.webp",
+            "caption": "ஊஞ்சல்"
+          }
+        },
+        {
+          "id": "ta-a.demonstrate.5",
+          "text": "புதிர்: அ என்ற எழுத்தில் தொடங்காத சொல் எது? அம்மா அ என்ற எழுத்தில் தொடங்குகிறது. ஊஞ்சல் தொடங்கவில்லை. எனவே ஊஞ்சல் வேறுபட்டது.",
+          "speech": "புதிர்: அ என்ற எழுத்தில் தொடங்காத சொல் எது? அம்மா அ என்ற எழுத்தில் தொடங்குகிறது. ஊஞ்சல் தொடங்கவில்லை. எனவே ஊஞ்சல் வேறுபட்டது.",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/ta_swing.webp",
+            "caption": "ஊஞ்சல்"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "ta-a.guided.1",
+          "task": "pick_word",
+          "prompt": "அ என்ற எழுத்தில் தொடங்கும் சொல் எது?",
+          "speech": "அ என்ற எழுத்தில் தொடங்கும் சொல் எது?",
+          "options": [
+            "இலை",
+            "அம்மா",
+            "ஊஞ்சல்"
+          ],
+          "answer": "அம்மா",
+          "visual": {
+            "type": "glyph",
+            "glyph": "அ"
+          },
+          "hints": [
+            "சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள்.",
+            "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது."
+          ],
+          "wrong_feedback": {
+            "இலை": "இலை வேறு எழுத்தில் தொடங்குகிறது. வேறொரு சொல்லைப் பாருங்கள்.",
+            "ஊஞ்சல்": "ஊஞ்சல் வேறு எழுத்தில் தொடங்குகிறது. வேறொரு சொல்லைப் பாருங்கள்."
+          },
+          "explanation": "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது.",
+          "difficulty": 1,
+          "optionPictures": {
+            "இலை": "assets/images/quiz/ta_leaf.webp",
+            "அம்மா": "assets/images/quiz/ta_mother.webp",
+            "ஊஞ்சல்": "assets/images/quiz/ta_swing.webp"
+          }
+        },
+        {
+          "id": "ta-a.guided.2",
+          "task": "letter_id",
+          "prompt": "இது எந்த எழுத்து?",
+          "speech": "இது எந்த எழுத்து?",
+          "options": [
+            "ஊ",
+            "இ",
+            "அ"
+          ],
+          "answer": "அ",
+          "visual": {
+            "type": "glyph",
+            "glyph": "அ"
+          },
+          "hints": [
+            "இதே போல் தெரியும் எழுத்தைத் தேடுங்கள்.",
+            "இது அ எழுத்து."
+          ],
+          "wrong_feedback": {
+            "ஊ": "அது வேறு எழுத்து. எழுத்தைக் கவனமாகப் பாருங்கள்.",
+            "இ": "அது வேறு எழுத்து. எழுத்தைக் கவனமாகப் பாருங்கள்."
+          },
+          "explanation": "இது அ எழுத்து.",
+          "difficulty": 1
+        },
+        {
+          "id": "ta-a.guided.3",
+          "task": "not_word",
+          "prompt": "அ என்ற எழுத்தில் தொடங்காத சொல் எது?",
+          "speech": "அ என்ற எழுத்தில் தொடங்காத சொல் எது?",
+          "options": [
+            "அம்மா",
+            "இலை"
+          ],
+          "answer": "இலை",
+          "visual": {
+            "type": "glyph",
+            "glyph": "அ"
+          },
+          "hints": [
+            "சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள்.",
+            "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது."
+          ],
+          "wrong_feedback": {
+            "அம்மா": "அம்மா என்ற சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள். மீண்டும் முயற்சி செய்யுங்கள்!"
+          },
+          "explanation": "இலை அ என்ற எழுத்தில் தொடங்கவில்லை. இது வேறு எழுத்து.",
+          "difficulty": 2,
+          "optionPictures": {
+            "அம்மா": "assets/images/quiz/ta_mother.webp",
+            "இலை": "assets/images/quiz/ta_leaf.webp"
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "ta-a.practice.1",
+          "task": "word_to_letter",
+          "prompt": "இந்தச் சொல் எந்த எழுத்தில் தொடங்குகிறது?",
+          "speech": "இந்தச் சொல் எந்த எழுத்தில் தொடங்குகிறது?",
+          "options": [
+            "இ",
+            "அ",
+            "ஊ"
+          ],
+          "answer": "அ",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/ta_mother.webp",
+            "caption": ""
+          },
+          "hints": [
+            "படத்தைப் பாருங்கள். அதன் பெயரை மெதுவாகச் சொல்லுங்கள்.",
+            "சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள்."
+          ],
+          "wrong_feedback": {
+            "இ": "அது வேறு எழுத்து. எழுத்தைக் கவனமாகப் பாருங்கள்.",
+            "ஊ": "அது வேறு எழுத்து. எழுத்தைக் கவனமாகப் பாருங்கள்."
+          },
+          "explanation": "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது.",
+          "difficulty": 1
+        },
+        {
+          "id": "ta-a.practice.2",
+          "task": "name_picture",
+          "prompt": "இது என்ன படம்?",
+          "speech": "இது என்ன படம்?",
+          "options": [
+            "அம்மா",
+            "ஊஞ்சல்",
+            "இலை"
+          ],
+          "answer": "இலை",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/ta_leaf.webp",
+            "caption": ""
+          },
+          "hints": [
+            "படத்தைப் பாருங்கள். அதன் பெயரை மெதுவாகச் சொல்லுங்கள்.",
+            "சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள்."
+          ],
+          "wrong_feedback": {
+            "அம்மா": "அது வேறு படம். மீண்டும் பாருங்கள்.",
+            "ஊஞ்சல்": "அது வேறு படம். மீண்டும் பாருங்கள்."
+          },
+          "explanation": "இது இலை.",
+          "difficulty": 1
+        },
+        {
+          "id": "ta-a.practice.3",
+          "task": "hear_pick",
+          "prompt": "கேளுங்கள். எந்தப் படம்?",
+          "speech": "கேளுங்கள். எந்தப் படம்? ஊஞ்சல்.",
+          "options": [
+            "இலை",
+            "ஊஞ்சல்",
+            "அம்மா"
+          ],
+          "answer": "ஊஞ்சல்",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "மீண்டும் கேளுங்கள், பிறகு ஒவ்வொரு படத்தையும் பாருங்கள்.",
+            "ஒவ்வொரு படத்தின் பெயரையும் சொல்லுங்கள். எது அதே ஒலியில் தொடங்குகிறது?"
+          ],
+          "wrong_feedback": {
+            "இலை": "அது நீங்கள் கேட்டது அல்ல. மீண்டும் கேளுங்கள்.",
+            "அம்மா": "அது நீங்கள் கேட்டது அல்ல. மீண்டும் கேளுங்கள்."
+          },
+          "explanation": "நீங்கள் ஊஞ்சல் என்ற சொல்லைக் கேட்டீர்கள்.",
+          "difficulty": 2,
+          "optionPictures": {
+            "இலை": "assets/images/quiz/ta_leaf.webp",
+            "ஊஞ்சல்": "assets/images/quiz/ta_swing.webp",
+            "அம்மா": "assets/images/quiz/ta_mother.webp"
+          }
+        },
+        {
+          "id": "ta-a.practice.4",
+          "task": "pick_word",
+          "prompt": "எழுத்தைக் கேளுங்கள். அதில் தொடங்கும் சொல் எது?",
+          "speech": "எழுத்தைக் கேளுங்கள். அதில் தொடங்கும் சொல் எது? அ.",
+          "options": [
+            "ஊஞ்சல்",
+            "அம்மா",
+            "இலை"
+          ],
+          "answer": "அம்மா",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "மீண்டும் கேளுங்கள், பிறகு ஒவ்வொரு படத்தையும் பாருங்கள்.",
+            "ஒவ்வொரு படத்தின் பெயரையும் சொல்லுங்கள். எது அதே ஒலியில் தொடங்குகிறது?"
+          ],
+          "wrong_feedback": {
+            "ஊஞ்சல்": "ஊஞ்சல் வேறு எழுத்தில் தொடங்குகிறது. வேறொரு சொல்லைப் பாருங்கள்.",
+            "இலை": "இலை வேறு எழுத்தில் தொடங்குகிறது. வேறொரு சொல்லைப் பாருங்கள்."
+          },
+          "explanation": "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது.",
+          "difficulty": 3,
+          "optionPictures": {
+            "ஊஞ்சல்": "assets/images/quiz/ta_swing.webp",
+            "அம்மா": "assets/images/quiz/ta_mother.webp",
+            "இலை": "assets/images/quiz/ta_leaf.webp"
+          }
+        },
+        {
+          "id": "ta-a.practice.5",
+          "task": "not_word",
+          "prompt": "அ என்ற எழுத்தில் தொடங்காத சொல் எது?",
+          "speech": "அ என்ற எழுத்தில் தொடங்காத சொல் எது?",
+          "options": [
+            "ஊஞ்சல்",
+            "அம்மா"
+          ],
+          "answer": "ஊஞ்சல்",
+          "visual": {
+            "type": "glyph",
+            "glyph": "அ"
+          },
+          "hints": [
+            "சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள்.",
+            "ஒவ்வொரு படத்தின் பெயரையும் சொல்லுங்கள். எது அதே ஒலியில் தொடங்குகிறது?"
+          ],
+          "wrong_feedback": {
+            "அம்மா": "அம்மா என்ற சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள். மீண்டும் முயற்சி செய்யுங்கள்!"
+          },
+          "explanation": "ஊஞ்சல் அ என்ற எழுத்தில் தொடங்கவில்லை. இது வேறு எழுத்து.",
+          "difficulty": 3,
+          "optionPictures": {
+            "ஊஞ்சல்": "assets/images/quiz/ta_swing.webp",
+            "அம்மா": "assets/images/quiz/ta_mother.webp"
+          }
+        }
+      ],
+      "check": [
+        {
+          "id": "ta-a.check.1",
+          "task": "word_to_letter",
+          "prompt": "சொல்லைக் கேளுங்கள். அது எந்த எழுத்தில் தொடங்குகிறது?",
+          "speech": "சொல்லைக் கேளுங்கள். அது எந்த எழுத்தில் தொடங்குகிறது? அம்மா.",
+          "options": [
+            "ஊ",
+            "இ",
+            "அ"
+          ],
+          "answer": "அ",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "ஊ": "அது வேறு எழுத்து. எழுத்தைக் கவனமாகப் பாருங்கள்.",
+            "இ": "அது வேறு எழுத்து. எழுத்தைக் கவனமாகப் பாருங்கள்."
+          },
+          "explanation": "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது.",
+          "difficulty": 2
+        },
+        {
+          "id": "ta-a.check.2",
+          "task": "pick_word",
+          "prompt": "அ என்ற எழுத்தில் தொடங்கும் சொல்லைக் கண்டுபிடியுங்கள்.",
+          "speech": "அ என்ற எழுத்தில் தொடங்கும் சொல்லைக் கண்டுபிடியுங்கள்.",
+          "options": [
+            "ஊஞ்சல்",
+            "அம்மா",
+            "இலை"
+          ],
+          "answer": "அம்மா",
+          "visual": {
+            "type": "glyph",
+            "glyph": "அ"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "ஊஞ்சல்": "ஊஞ்சல் வேறு எழுத்தில் தொடங்குகிறது. வேறொரு சொல்லைப் பாருங்கள்.",
+            "இலை": "இலை வேறு எழுத்தில் தொடங்குகிறது. வேறொரு சொல்லைப் பாருங்கள்."
+          },
+          "explanation": "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது.",
+          "difficulty": 2
+        },
+        {
+          "id": "ta-a.check.3",
+          "task": "name_picture",
+          "prompt": "இது என்ன படம்?",
+          "speech": "இது என்ன படம்?",
+          "options": [
+            "இலை",
+            "ஊஞ்சல்",
+            "அம்மா"
+          ],
+          "answer": "ஊஞ்சல்",
+          "visual": {
+            "type": "picture",
+            "asset": "assets/images/quiz/ta_swing.webp",
+            "caption": ""
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "இலை": "அது வேறு படம். மீண்டும் பாருங்கள்.",
+            "அம்மா": "அது வேறு படம். மீண்டும் பாருங்கள்."
+          },
+          "explanation": "இது ஊஞ்சல்.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "ta-a.remediation_explain.1",
+            "text": "கண்களை மூடுங்கள். கேளுங்கள்: அம்மா. முதல் ஒலி அ ஒலி.",
+            "speech": "கண்களை மூடுங்கள். கேளுங்கள்: அம்மா. முதல் ஒலி அ ஒலி.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/ta_mother.webp",
+              "caption": ""
+            }
+          },
+          {
+            "id": "ta-a.remediation_explain.2",
+            "text": "கேளுங்கள்: இலை. இது அ ஒலியில் தொடங்குகிறதா? இல்லை, இது வேறு ஒலியில் தொடங்குகிறது.",
+            "speech": "கேளுங்கள்: இலை. இது அ ஒலியில் தொடங்குகிறதா? இல்லை, இது வேறு ஒலியில் தொடங்குகிறது.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/ta_leaf.webp",
+              "caption": ""
+            }
+          },
+          {
+            "id": "ta-a.remediation_explain.3",
+            "text": "முதலில் அ ஒலி கேட்டால், அம்மா என்று நினைவில் வைத்துக்கொள்ளுங்கள்.",
+            "speech": "முதலில் அ ஒலி கேட்டால், அம்மா என்று நினைவில் வைத்துக்கொள்ளுங்கள்.",
+            "visual": {
+              "type": "picture",
+              "asset": "assets/images/quiz/ta_mother.webp",
+              "caption": "அம்மா"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "ta-a.remediation_guided.1",
+            "task": "not_word",
+            "prompt": "அ என்ற எழுத்தில் தொடங்காத சொல் எது?",
+            "speech": "அ என்ற எழுத்தில் தொடங்காத சொல் எது?",
+            "options": [
+              "அம்மா",
+              "இலை"
+            ],
+            "answer": "இலை",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள்.",
+              "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது."
+            ],
+            "wrong_feedback": {
+              "அம்மா": "அம்மா என்ற சொல்லை மெதுவாகச் சொல்லுங்கள். முதல் ஒலியைக் கேளுங்கள். மீண்டும் முயற்சி செய்யுங்கள்!"
+            },
+            "explanation": "இலை அ என்ற எழுத்தில் தொடங்கவில்லை. இது வேறு எழுத்து.",
+            "difficulty": 2,
+            "optionPictures": {
+              "அம்மா": "assets/images/quiz/ta_mother.webp",
+              "இலை": "assets/images/quiz/ta_leaf.webp"
+            }
+          },
+          {
+            "id": "ta-a.remediation_guided.2",
+            "task": "hear_pick",
+            "prompt": "கேளுங்கள். நீங்கள் எந்தச் சொல்லைக் கேட்டீர்கள்?",
+            "speech": "கேளுங்கள். நீங்கள் எந்தச் சொல்லைக் கேட்டீர்கள்? அம்மா.",
+            "options": [
+              "ஊஞ்சல்",
+              "அம்மா",
+              "இலை"
+            ],
+            "answer": "அம்மா",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "மீண்டும் கேளுங்கள், பிறகு ஒவ்வொரு படத்தையும் பாருங்கள்.",
+              "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது."
+            ],
+            "wrong_feedback": {
+              "ஊஞ்சல்": "அது நீங்கள் கேட்டது அல்ல. மீண்டும் கேளுங்கள்.",
+              "இலை": "அது நீங்கள் கேட்டது அல்ல. மீண்டும் கேளுங்கள்."
+            },
+            "explanation": "நீங்கள் அம்மா என்ற சொல்லைக் கேட்டீர்கள்.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "ta-a.remediation_check.1",
+            "task": "pick_word",
+            "prompt": "அ என்ற எழுத்தில் தொடங்கும் சொல் எது?",
+            "speech": "அ என்ற எழுத்தில் தொடங்கும் சொல் எது?",
+            "options": [
+              "இலை",
+              "ஊஞ்சல்",
+              "அம்மா"
+            ],
+            "answer": "அம்மா",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "இலை": "இலை வேறு எழுத்தில் தொடங்குகிறது. வேறொரு சொல்லைப் பாருங்கள்.",
+              "ஊஞ்சல்": "ஊஞ்சல் வேறு எழுத்தில் தொடங்குகிறது. வேறொரு சொல்லைப் பாருங்கள்."
+            },
+            "explanation": "அம்மா அ என்ற எழுத்தில் தொடங்குகிறது.",
+            "difficulty": 2
+          },
+          {
+            "id": "ta-a.remediation_check.2",
+            "task": "hear_pick",
+            "prompt": "கேளுங்கள். எந்தப் படம்?",
+            "speech": "கேளுங்கள். எந்தப் படம்? இலை.",
+            "options": [
+              "அம்மா",
+              "இலை",
+              "ஊஞ்சல்"
+            ],
+            "answer": "இலை",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "அம்மா": "அது நீங்கள் கேட்டது அல்ல. மீண்டும் கேளுங்கள்.",
+              "ஊஞ்சல்": "அது நீங்கள் கேட்டது அல்ல. மீண்டும் கேளுங்கள்."
+            },
+            "explanation": "நீங்கள் இலை என்ற சொல்லைக் கேட்டீர்கள்.",
+            "difficulty": 2,
+            "optionPictures": {
+              "அம்மா": "assets/images/quiz/ta_mother.webp",
+              "இலை": "assets/images/quiz/ta_leaf.webp",
+              "ஊஞ்சல்": "assets/images/quiz/ta_swing.webp"
+            }
+          },
+          {
+            "id": "ta-a.remediation_check.3",
+            "task": "letter_id",
+            "prompt": "கேளுங்கள். இது எந்த எழுத்து?",
+            "speech": "கேளுங்கள். இது எந்த எழுத்து? அ.",
+            "options": [
+              "ஊ",
+              "அ",
+              "இ"
+            ],
+            "answer": "அ",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "ஊ": "அது வேறு எழுத்து. எழுத்தைக் கவனமாகப் பாருங்கள்.",
+              "இ": "அது வேறு எழுத்து. எழுத்தைக் கவனமாகப் பாருங்கள்."
+            },
+            "explanation": "இது அ எழுத்து.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "Every sentence (text, speech, prompts, hints, feedback, explanations) is AI-written and UNVERIFIED by a native speaker: grammar, naturalness, register and age suitability.",
+          "Text-to-speech in the lesson locale was not heard: how a lone letter is read (letter name versus sound, vowel length), and every sentence.",
+          "The word used for 'picture' in prompts is not an existing picture-word vocabulary item; confirm it is acceptable.",
+          "Negative prompt ('which word does NOT begin with the letter') is a difficulty-3 item: educator and native speaker to confirm the wording is clear for a young child and the task is suitable.",
+          "Sound-first remediation sentences ('close your eyes and listen', 'the first sound is the sound of the letter') need native checking of phrasing and of what 'sound of the letter' should be called.",
+          "The letter distractors in letter-choice items are the first letters of the other two picture words; confirm they are acceptable distractors.",
+          "Whether each picture file clearly shows its word (te_amma and ta_mother show two people; a child may name them differently).",
+          "Tamil: sandhi fixed in 'எழுத்தைக் கவனமாகப்' and in 'நீங்கள் ... என்ற சொல்லைக் கேட்டீர்கள்' (the verifier's findings) - fixes are still unverified; also 'ஒலி' for sound, 'தொடங்காத', 'நினைவில் வைத்துக்கொள்ளுங்கள்', register."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "TASK ORDER: the 'which word does NOT begin with the letter' puzzle is taught in demonstrate step 5, practised in guided 3 and practice 5, and used again only in remediation guided 1. It is NOT used in the check: with three words two words never begin with the letter, so a three-option version has two right answers and a two-option version is a 50% guess.",
+          "GUESS RATE: every check and remediation-check item has 3 options (a blind guess is 33%; passing 2 of 3 by guessing alone is about 26%). The thresholds are data fields; with only three words the guess rate cannot be lowered further in this pilot.",
+          "PILOT LIMITATION: only three picture words exist for this letter, so check and remediation items reuse the same three words. Items differ by task type (listen-to-word to letter, which word does NOT begin with the letter, picture naming without a caption, listen-to-letter to picture), option sets and distractor letters, but a child can still learn the three words by memory. More human-approved picture words are required before rollout.",
+          "Question pictures carry an empty caption so the answer is never printed on screen; teaching steps keep captions.",
+          "Audio-only items (visual none) need a replay button and a visual fallback if text-to-speech fails (UI decision).",
+          "No tracing / stroke order is taught.",
+          "After a failed check the child gets remediation (different explanation, 2 guided, 3 alternate check items), at most max_remediation_cycles times; then the UI marks the concept 'needs support' (after_limit offer_parent_support) and lets the child continue."
+        ]
+      }
+    },
+    {
+      "lesson_id": "num-add",
+      "world": "numbers",
+      "level": 2,
+      "locale": "en-IN",
+      "title": "Rocket Addition",
+      "objective": "Add two quantities within ten",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "num-count"
+      ],
+      "introduce": [
+        {
+          "id": "num-add.introduce.1",
+          "text": "Welcome to Rocket Addition! Our rocket needs fuel crystals. Let us count them: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+          "speech": "Welcome to Rocket Addition! Our rocket needs fuel crystals. Let us count them. One, two, three, four, five, six, seven, eight, nine, ten.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "💎",
+                "count": 10
+              }
+            ],
+            "operator": "+",
+            "revealCount": 1,
+            "countAll": true
+          }
+        },
+        {
+          "id": "num-add.introduce.2",
+          "text": "A number line shows the numbers in order, from 0 to 10. We move to the right to go up.",
+          "speech": "A number line shows the numbers in order, from zero to ten. We move to the right to go up.",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 10,
+            "start": 0,
+            "jump": 1,
+            "showHops": false
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "num-add.demonstrate.1",
+          "text": "Here are 2 fuel crystals.",
+          "speech": "Here are two fuel crystals.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "💎",
+                "count": 2
+              },
+              {
+                "emoji": "💎",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 1,
+            "countAll": false
+          }
+        },
+        {
+          "id": "num-add.demonstrate.2",
+          "text": "Now we add 3 more crystals. The + sign means: add more.",
+          "speech": "Now we add three more crystals. The plus sign means, add more.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "💎",
+                "count": 2
+              },
+              {
+                "emoji": "💎",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false
+          }
+        },
+        {
+          "id": "num-add.demonstrate.3",
+          "text": "Count them all together: 1, 2, 3, 4, 5.",
+          "speech": "Count them all together. One, two, three, four, five.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "💎",
+                "count": 2
+              },
+              {
+                "emoji": "💎",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": true
+          }
+        },
+        {
+          "id": "num-add.demonstrate.4",
+          "text": "There are 5 crystals. 2 + 3 = 5. The = sign means: makes, or is the same as.",
+          "speech": "There are five crystals. Two plus three equals five. The equals sign means, makes, or is the same as.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "💎",
+                "count": 2
+              },
+              {
+                "emoji": "💎",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "result": 5,
+            "showResult": true
+          }
+        },
+        {
+          "id": "num-add.demonstrate.5",
+          "text": "On the number line, we count on. Start at 4. Count on 2 steps: 5, 6. So 4 + 2 = 6.",
+          "speech": "On the number line, we count on. Start at four. Count on two steps. Five, six. So four plus two equals six.",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 10,
+            "start": 4,
+            "jump": 2,
+            "showHops": true
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "num-add.guided.1",
+          "prompt": "How many altogether?",
+          "speech": "Three plus one. How many altogether?",
+          "options": [
+            "6",
+            "3",
+            "4"
+          ],
+          "answer": "4",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "💎",
+                "count": 3
+              },
+              {
+                "emoji": "💎",
+                "count": 1
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Count the first group. Then count the second group.",
+            "Say 3, then count on 1 more: 4."
+          ],
+          "wrong_feedback": {
+            "6": "Not quite. Try counting on from the first number, one step at a time.",
+            "3": "3 is one of the numbers you started with. We want the total of both."
+          },
+          "explanation": "3 and 1 more makes 4 altogether, so 3 + 1 = 4.",
+          "difficulty": 1
+        },
+        {
+          "id": "num-add.guided.2",
+          "prompt": "5 + 2 = ?",
+          "speech": "Five plus two. Use the number line. What number is it?",
+          "options": [
+            "8",
+            "5",
+            "7"
+          ],
+          "answer": "7",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 10,
+            "start": 5,
+            "jump": 2,
+            "showHops": true
+          },
+          "hints": [
+            "Put your finger on 5. Count on 2 steps to the right, one at a time.",
+            "Count on from 5: 6, 7."
+          ],
+          "wrong_feedback": {
+            "8": "Careful, that is one step too far. Stop when you have counted all the steps.",
+            "5": "5 is one of the numbers you started with. We want the total of both."
+          },
+          "explanation": "Start at 5, count on 2 steps and you land on 7, so 5 + 2 = 7.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "num-add.practice.1",
+          "prompt": "How many altogether?",
+          "speech": "One plus two. How many altogether?",
+          "options": [
+            "2",
+            "5",
+            "3"
+          ],
+          "answer": "3",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 1
+              },
+              {
+                "emoji": "⭐",
+                "count": 2
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Count the first group. Then count the second group.",
+            "Say 1, then count on 2 more: 2, 3."
+          ],
+          "wrong_feedback": {
+            "2": "2 is one of the numbers you started with. We want the total of both.",
+            "5": "Not quite. Try counting on from the first number, one step at a time."
+          },
+          "explanation": "1 and 2 more makes 3 altogether, so 1 + 2 = 3.",
+          "difficulty": 1
+        },
+        {
+          "id": "num-add.practice.2",
+          "prompt": "How many altogether?",
+          "speech": "Three plus three. How many altogether?",
+          "options": [
+            "9",
+            "6",
+            "4"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🌟",
+                "count": 3
+              },
+              {
+                "emoji": "🌟",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Count the first group. Then count the second group.",
+            "Say 3, then count on 3 more: 4, 5, 6."
+          ],
+          "wrong_feedback": {
+            "9": "Not quite. Try counting on from the first number, one step at a time.",
+            "4": "Not quite. Try counting on from the first number, one step at a time."
+          },
+          "explanation": "3 and 3 more makes 6 altogether, so 3 + 3 = 6.",
+          "difficulty": 2
+        },
+        {
+          "id": "num-add.practice.3",
+          "prompt": "3 + 4 = ?",
+          "speech": "Three plus four. Use the number line. What number is it?",
+          "options": [
+            "5",
+            "7",
+            "4"
+          ],
+          "answer": "7",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 10,
+            "start": 3,
+            "jump": 4,
+            "showHops": false
+          },
+          "hints": [
+            "Put your finger on 3. Count on 4 steps to the right, one at a time.",
+            "Count on from 3: 4, 5, 6, 7."
+          ],
+          "wrong_feedback": {
+            "5": "Not quite. Try counting on from the first number, one step at a time.",
+            "4": "4 is one of the numbers you started with. We want the total of both."
+          },
+          "explanation": "Start at 3, count on 4 steps and you land on 7, so 3 + 4 = 7.",
+          "difficulty": 2
+        },
+        {
+          "id": "num-add.practice.4",
+          "prompt": "5 + 4 = ?",
+          "speech": "Five plus four equals what?",
+          "options": [
+            "8",
+            "9",
+            "4"
+          ],
+          "answer": "9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Say 5 in your head. Now count on 4 more.",
+            "Count on from 5: 6, 7, 8, 9."
+          ],
+          "wrong_feedback": {
+            "8": "Close! Count on again from the first number, one step at a time.",
+            "4": "4 is one of the numbers you started with. We want the total of both."
+          },
+          "explanation": "5 + 4 = 9.",
+          "difficulty": 3
+        }
+      ],
+      "check": [
+        {
+          "id": "num-add.check.1",
+          "prompt": "How many altogether?",
+          "speech": "Five plus three. How many altogether?",
+          "options": [
+            "6",
+            "8",
+            "3"
+          ],
+          "answer": "8",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🚀",
+                "count": 5
+              },
+              {
+                "emoji": "🚀",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "6": "Not quite. Try counting on from the first number, one step at a time.",
+            "3": "3 is one of the numbers you started with. We want the total of both."
+          },
+          "explanation": "5 and 3 more makes 8 altogether, so 5 + 3 = 8.",
+          "difficulty": 2
+        },
+        {
+          "id": "num-add.check.2",
+          "prompt": "6 + 3 = ?",
+          "speech": "Six plus three. Use the number line. What number is it?",
+          "options": [
+            "9",
+            "6",
+            "8"
+          ],
+          "answer": "9",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 10,
+            "start": 6,
+            "jump": 3,
+            "showHops": false
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "6": "6 is one of the numbers you started with. We want the total of both.",
+            "8": "Close! The number you start on is not a step. Count the steps after it."
+          },
+          "explanation": "Start at 6, count on 3 steps and you land on 9, so 6 + 3 = 9.",
+          "difficulty": 2
+        },
+        {
+          "id": "num-add.check.3",
+          "prompt": "7 + 2 = ?",
+          "speech": "Seven plus two equals what?",
+          "options": [
+            "10",
+            "2",
+            "9"
+          ],
+          "answer": "9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "10": "Close! Count on again from the first number, one step at a time.",
+            "2": "2 is one of the numbers you started with. We want the total of both."
+          },
+          "explanation": "7 + 2 = 9.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "num-add.remediation_explain.1",
+            "text": "Let us try a faster way. Here are 6 apples. We do not need to count them again. Just say 6.",
+            "speech": "Let us try a faster way. Here are six apples. We do not need to count them again. Just say six.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🍎",
+                  "count": 6
+                },
+                {
+                  "emoji": "🍎",
+                  "count": 2
+                }
+              ],
+              "operator": "+",
+              "revealCount": 1,
+              "countAll": false
+            }
+          },
+          {
+            "id": "num-add.remediation_explain.2",
+            "text": "Now 2 more apples. Keep 6 in your head and count on: 7, 8.",
+            "speech": "Now two more apples. Keep six in your head and count on. Seven, eight.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🍎",
+                  "count": 6
+                },
+                {
+                  "emoji": "🍎",
+                  "count": 2
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false
+            }
+          },
+          {
+            "id": "num-add.remediation_explain.3",
+            "text": "On the number line: start at 6, count on 2, and land on 8. So 6 + 2 = 8.",
+            "speech": "On the number line, start at six, count on two, and land on eight. So six plus two equals eight.",
+            "visual": {
+              "type": "numberLine",
+              "from": 0,
+              "to": 10,
+              "start": 6,
+              "jump": 2,
+              "showHops": true
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "num-add.remediation_guided.1",
+            "prompt": "How many altogether?",
+            "speech": "Two plus two. How many altogether?",
+            "options": [
+              "5",
+              "2",
+              "4"
+            ],
+            "answer": "4",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🍓",
+                  "count": 2
+                },
+                {
+                  "emoji": "🍓",
+                  "count": 2
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [
+              "Count the first group. Then count the second group.",
+              "Say 2, then count on 2 more: 3, 4."
+            ],
+            "wrong_feedback": {
+              "5": "Careful, that is a bit too many. Count each one only once.",
+              "2": "2 is one of the numbers you started with. We want the total of both."
+            },
+            "explanation": "2 and 2 more makes 4 altogether, so 2 + 2 = 4.",
+            "difficulty": 1
+          },
+          {
+            "id": "num-add.remediation_guided.2",
+            "prompt": "8 + 1 = ?",
+            "speech": "Eight plus one. Use the number line. What number is it?",
+            "options": [
+              "10",
+              "9",
+              "1"
+            ],
+            "answer": "9",
+            "visual": {
+              "type": "numberLine",
+              "from": 0,
+              "to": 10,
+              "start": 8,
+              "jump": 1,
+              "showHops": true
+            },
+            "hints": [
+              "Put your finger on 8. Count on 1 step to the right, one at a time.",
+              "Count on from 8: 9."
+            ],
+            "wrong_feedback": {
+              "10": "Careful, that is one step too far. Stop when you have counted all the steps.",
+              "1": "1 is one of the numbers you started with. We want the total of both."
+            },
+            "explanation": "Start at 8, count on 1 step and you land on 9, so 8 + 1 = 9.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "num-add.remediation_check.1",
+            "prompt": "How many altogether?",
+            "speech": "Six plus one. How many altogether?",
+            "options": [
+              "9",
+              "1",
+              "7"
+            ],
+            "answer": "7",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🌙",
+                  "count": 6
+                },
+                {
+                  "emoji": "🌙",
+                  "count": 1
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "9": "Not quite. Try counting on from the first number, one step at a time.",
+              "1": "1 is one of the numbers you started with. We want the total of both."
+            },
+            "explanation": "6 and 1 more makes 7 altogether, so 6 + 1 = 7.",
+            "difficulty": 2
+          },
+          {
+            "id": "num-add.remediation_check.2",
+            "prompt": "4 + 4 = ?",
+            "speech": "Four plus four. Use the number line. What number is it?",
+            "options": [
+              "6",
+              "8",
+              "4"
+            ],
+            "answer": "8",
+            "visual": {
+              "type": "numberLine",
+              "from": 0,
+              "to": 10,
+              "start": 4,
+              "jump": 4,
+              "showHops": false
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "6": "Not quite. Try counting on from the first number, one step at a time.",
+              "4": "4 is one of the numbers you started with. We want the total of both."
+            },
+            "explanation": "Start at 4, count on 4 steps and you land on 8, so 4 + 4 = 8.",
+            "difficulty": 2
+          },
+          {
+            "id": "num-add.remediation_check.3",
+            "prompt": "7 + 1 = ?",
+            "speech": "Seven plus one equals what?",
+            "options": [
+              "8",
+              "5",
+              "7"
+            ],
+            "answer": "8",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "5": "Not quite. Try counting on from the first number, one step at a time.",
+              "7": "7 is one of the numbers you started with. We want the total of both."
+            },
+            "explanation": "7 + 1 = 8.",
+            "difficulty": 3
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "PREREQUISITE REVIEW: num-count (curriculum.dart) only counts three stars, but num-add needs counting to 10, reading a 0-10 number line, the + and = signs and counting on. This lesson teaches those inside (introduce 1-2, demonstrate 2, 4, 5) rather than assuming them; an educator should decide whether the prerequisite should change or this inline teaching is enough.",
+          "Educator review of the concrete -> pictorial -> symbolic progression, the count-on strategy, pass marks, and whether symbolic items 5+4, 7+2, 7+1 are sufficiently scaffolded by the equation step and hint ladder.",
+          "en-IN TTS reading of number words, 'plus', 'equals', 'count on'.",
+          "Emoji rendering (💎 ⭐ 🌟 🚀 🍎 🍓 🌙) on the target device; the intro crystal artwork (num_crystal.webp) is no longer used, objects are emoji.",
+          "New visual fields showHops / showResult are not implemented anywhere yet (see content/teaching/SCHEMA.md).",
+          "Make-ten facts (8+2, 6+4) were REMOVED because they were never taught; all sums here are solved by counting on."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers independently computed; every distractor is wrong; distractor patterns vary (a starting number, a near miss, a distant number) and the key is not always in the same position. Options are stored in a mixed order; the UI may shuffle.",
+          "Check and remediation-check number-line items set showHops false and objects items showResult false, so the answer is not drawn; guided number-line items show the hops (scaffold).",
+          "After a failed check: remediation (count-on explanation, 2 guided, 3 alternate check items), at most max_remediation_cycles times, then 'needs support' (offer_parent_support); the child can continue.",
+          "Each operand pair is used once (either order) across the whole lesson."
+        ]
+      }
+    }
+  ]
+}

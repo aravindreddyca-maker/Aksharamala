@@ -23,7 +23,7 @@ void main() {
     final world = curriculum.first;
     await first.recordResult(
       world: world,
-      lesson: world.lessons.first,
+      lesson: world.lessons.firstWhere((l) => l.id == 'en-a'),
       correct: true,
     );
 

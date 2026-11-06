@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ import '../widgets/level_picker.dart';
 import 'achievements_screen.dart';
 import 'parent_dashboard.dart';
 import 'profile_screen.dart';
+import 'rhymes_list_screen.dart';
 import 'world_map_screen.dart';
 
 const _emblemAssets = <String, String>{
@@ -203,106 +205,173 @@ class _HomeHeaderState extends State<_HomeHeader>
   @override
   Widget build(BuildContext context) {
     // Labelled buttons only when there is room; icon-only keeps 640dp safe.
-    final labelled = MediaQuery.sizeOf(context).width >= 900 &&
+    final labelled = MediaQuery.sizeOf(context).width >= 1100 &&
         MediaQuery.textScalerOf(context).scale(1) <= 1.3;
     final bannerHeight = compact ? 54.0 : 66.0;
     final avatarSize = bannerHeight + 12;
+    final narrow = MediaQuery.sizeOf(context).width < 560;
+    final banner = SizedBox(
+      height: avatarSize,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Positioned(
+            left: avatarSize * .55,
+            right: 0,
+            top: 6,
+            height: bannerHeight,
+            child: _GreetingBanner(
+              name: profile.name,
+              line: _lines[_line % _lines.length],
+              onTap: _sayHello,
+              message: message,
+              compact: compact,
+              leftInset: avatarSize * .5,
+            ),
+          ),
+          Positioned(
+            left: 0,
+            top: 0,
+            child: Semantics(
+              button: true,
+              label: 'Change learner',
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (_) => const ProfileScreen(allowSkip: true),
+                  ),
+                ),
+                borderRadius: BorderRadius.circular(avatarSize),
+                child: ScaleTransition(
+                  scale: TweenSequence<double>([
+                    TweenSequenceItem(
+                      tween: Tween(begin: 1.0, end: 1.22)
+                          .chain(CurveTween(curve: Curves.easeOut)),
+                      weight: 30,
+                    ),
+                    TweenSequenceItem(
+                      tween: Tween(begin: 1.22, end: 1.0)
+                          .chain(CurveTween(curve: Curves.elasticOut)),
+                      weight: 70,
+                    ),
+                  ]).animate(_bounce),
+                  child: GameAvatar(
+                    value: profile.avatar,
+                    size: avatarSize,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
     return Padding(
       padding: EdgeInsets.fromLTRB(pad, 10, pad, 6),
-      child: Row(
-        children: [
-          Expanded(
-            child: SizedBox(
-              height: avatarSize,
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                    left: avatarSize * .55,
-                    right: 0,
-                    top: 6,
-                    height: bannerHeight,
-                    child: _GreetingBanner(
-                      name: profile.name,
-                      line: _lines[_line % _lines.length],
-                      onTap: _sayHello,
-                      message: message,
-                      compact: compact,
-                      leftInset: avatarSize * .5,
-                    ),
-                  ),
-                  Positioned(
-                    left: 0,
-                    top: 0,
-                    child: Semantics(
-                      button: true,
-                      label: 'Change learner',
-                      child: InkWell(
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute<void>(
-                            builder: (_) =>
-                                const ProfileScreen(allowSkip: true),
-                          ),
-                        ),
-                        borderRadius: BorderRadius.circular(avatarSize),
-                        child: ScaleTransition(
-                          scale: TweenSequence<double>([
-                            TweenSequenceItem(
-                              tween: Tween(begin: 1.0, end: 1.22)
-                                  .chain(CurveTween(curve: Curves.easeOut)),
-                              weight: 30,
-                            ),
-                            TweenSequenceItem(
-                              tween: Tween(begin: 1.22, end: 1.0)
-                                  .chain(CurveTween(curve: Curves.elasticOut)),
-                              weight: 70,
-                            ),
-                          ]).animate(_bounce),
-                          child: GameAvatar(
-                            value: profile.avatar,
-                            size: avatarSize,
-                          ),
+      child: narrow
+          ? Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                banner,
+                const SizedBox(height: 6),
+                // Wraps (never shrinks) so every button keeps its full size.
+                Wrap(
+                  alignment: WrapAlignment.end,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  spacing: 8,
+                  runSpacing: 6,
+                  children: [
+                    _LevelButton(profile: profile),
+                    _ActionButton(
+                      key: const Key('rhymes_button'),
+                      icon: const Icon(Icons.music_note_rounded),
+                      label: 'Rhymes',
+                      showLabel: labelled,
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (_) => const RhymesListScreen(),
                         ),
                       ),
                     ),
+                    _ActionButton(
+                      icon: Image.asset(
+                        'assets/images/rewards/trophy.png',
+                        width: 26,
+                        height: 26,
+                        excludeFromSemantics: true,
+                        errorBuilder: (_, __, ___) =>
+                            const Icon(Icons.emoji_events_rounded),
+                      ),
+                      label: 'Rewards',
+                      showLabel: labelled,
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (_) => const AchievementsScreen(),
+                        ),
+                      ),
+                    ),
+                    _ActionButton(
+                      icon: const Icon(Icons.family_restroom_rounded),
+                      label: 'Parents',
+                      showLabel: labelled,
+                      onTap: () => _parentGate(context),
+                    ),
+                    StarPill(profile.stars),
+                  ],
+                ),
+              ],
+            )
+          : Row(
+              children: [
+                Expanded(child: banner),
+                const SizedBox(width: 10),
+                _LevelButton(profile: profile),
+                const SizedBox(width: 8),
+                _ActionButton(
+                  key: const Key('rhymes_button'),
+                  icon: const Icon(Icons.music_note_rounded),
+                  label: 'Rhymes',
+                  showLabel: labelled,
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (_) => const RhymesListScreen(),
+                    ),
                   ),
-                ],
-              ),
+                ),
+                const SizedBox(width: 8),
+                _ActionButton(
+                  icon: Image.asset(
+                    'assets/images/rewards/trophy.png',
+                    width: 26,
+                    height: 26,
+                    excludeFromSemantics: true,
+                    errorBuilder: (_, __, ___) =>
+                        const Icon(Icons.emoji_events_rounded),
+                  ),
+                  label: 'Rewards',
+                  showLabel: labelled,
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (_) => const AchievementsScreen(),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                _ActionButton(
+                  icon: const Icon(Icons.family_restroom_rounded),
+                  label: 'Parents',
+                  showLabel: labelled,
+                  onTap: () => _parentGate(context),
+                ),
+                const SizedBox(width: 10),
+                StarPill(profile.stars),
+              ],
             ),
-          ),
-          const SizedBox(width: 10),
-          _LevelButton(profile: profile),
-          const SizedBox(width: 8),
-          _ActionButton(
-            icon: Image.asset(
-              'assets/images/rewards/trophy.png',
-              width: 26,
-              height: 26,
-              excludeFromSemantics: true,
-              errorBuilder: (_, __, ___) =>
-                  const Icon(Icons.emoji_events_rounded),
-            ),
-            label: 'Rewards',
-            showLabel: labelled,
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute<void>(
-                builder: (_) => const AchievementsScreen(),
-              ),
-            ),
-          ),
-          const SizedBox(width: 8),
-          _ActionButton(
-            icon: const Icon(Icons.family_restroom_rounded),
-            label: 'Parents',
-            showLabel: labelled,
-            onTap: () => _parentGate(context),
-          ),
-          const SizedBox(width: 10),
-          StarPill(profile.stars),
-        ],
-      ),
     );
   }
 }
@@ -448,6 +517,7 @@ class _GreetingBanner extends StatelessWidget {
 
 class _ActionButton extends StatelessWidget {
   const _ActionButton({
+    super.key,
     required this.icon,
     required this.label,
     required this.showLabel,
@@ -467,9 +537,9 @@ class _ActionButton extends StatelessWidget {
                 icon: icon,
                 label: Text(label),
                 style: FilledButton.styleFrom(
-                  minimumSize: const Size(GameTokens.minTouch, 44),
+                  // 48dp high (the compact density used to cut it to 40).
+                  minimumSize: const Size(GameTokens.minTouch, 48),
                   padding: const EdgeInsets.symmetric(horizontal: 14),
-                  visualDensity: VisualDensity.compact,
                 ),
               )
             : IconButton.filledTonal(
@@ -489,7 +559,6 @@ class _WorldStrip extends StatelessWidget {
   final bool compact;
 
   static const _gap = 12.0;
-  static const _minTile = 132.0;
 
   @override
   Widget build(BuildContext context) => LayoutBuilder(
@@ -497,33 +566,58 @@ class _WorldStrip extends StatelessWidget {
           final available = constraints.maxWidth - pad * 2;
           final worlds = AppScope.of(context).worlds;
           final count = worlds.length;
-          final fit = (available - _gap * (count - 1)) / count;
-          final tileWidth = fit < _minTile ? _minTile : fit;
           final bottom = compact ? 12.0 : 20.0;
-          return CustomScrollView(
-            key: const Key('home_scroll'),
-            scrollDirection: Axis.horizontal,
-            slivers: [
-              SliverPadding(
-                padding: EdgeInsets.fromLTRB(pad, 6, pad, bottom),
-                sliver: SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: constraints.maxHeight - 6 - bottom,
+          // Every world is on screen at once, no scrolling: one row when the
+          // screen is wide, otherwise two rows (3 + 2, or 2 + 2 + 1 when very
+          // narrow) that share the height.
+          final columns = available >= 560
+              ? count
+              : available >= 330
+                  ? 3
+                  : 2;
+          final rows = (count / columns).ceil();
+          return Padding(
+            key: const Key('home_worlds'),
+            padding: EdgeInsets.fromLTRB(pad, 6, pad, bottom),
+            child: Column(
+              children: [
+                for (var r = 0; r < rows; r++) ...[
+                  if (r > 0) const SizedBox(height: _gap),
+                  Expanded(
                     child: Row(
                       children: [
-                        for (var i = 0; i < count; i++) ...[
-                          if (i > 0) const SizedBox(width: _gap),
-                          SizedBox(
-                            width: tileWidth,
-                            child: _WorldCard(world: worlds[i]),
+                        // A short last row is centred, with tiles the same
+                        // size as the rows above it.
+                        () {
+                          final inRow = math.min(columns, count - r * columns);
+                          final missing = columns - inRow;
+                          return Expanded(
+                            flex: missing,
+                            child: const SizedBox.shrink(),
+                          );
+                        }(),
+                        for (var c = 0;
+                            c < math.min(columns, count - r * columns);
+                            c++) ...[
+                          if (c > 0) const SizedBox(width: _gap),
+                          Expanded(
+                            flex: 2,
+                            child: _WorldCard(world: worlds[r * columns + c]),
                           ),
                         ],
+                        () {
+                          final inRow = math.min(columns, count - r * columns);
+                          return Expanded(
+                            flex: columns - inRow,
+                            child: const SizedBox.shrink(),
+                          );
+                        }(),
                       ],
                     ),
                   ),
-                ),
-              ),
-            ],
+                ],
+              ],
+            ),
           );
         },
       );

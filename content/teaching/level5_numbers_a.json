@@ -1,0 +1,3275 @@
+{
+  "schema_version": 1,
+  "status": "draft_unverified",
+  "lessons": [
+    {
+      "lesson_id": "numbers-l5-001",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Integers and the number line",
+      "objective": "Compare and add negative and positive numbers.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l5-001.introduce.1",
+          "text": "Numbers can be below zero. They are called negative numbers: -1, -2, -3 and so on. On the number line they sit to the left of 0, and the ones to the right are positive.",
+          "speech": "Numbers can be below zero. They are called negative numbers: negative 1, negative 2, negative 3 and so on. On the number line they sit to the left of 0, and the ones to the right are positive.",
+          "visual": {
+            "type": "numberLine",
+            "from": -10,
+            "to": 10,
+            "start": 0,
+            "jump": 0,
+            "showHops": false
+          }
+        },
+        {
+          "id": "numbers-l5-001.introduce.2",
+          "text": "Numbers further to the right are greater. So 3 is greater than -2, and -2 is greater than -8. Temperatures work the same way: -8 degrees is colder than -2 degrees.",
+          "speech": "Numbers further to the right are greater. So 3 is greater than negative 2, and negative 2 is greater than negative 8. Temperatures work the same way: negative 8 degrees is colder than negative 2 degrees.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "-8  <  -2  <  3"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-001.demonstrate.1",
+          "text": "To add a positive number, move right. Take -7 + 3: start at -7 and move 3 steps right. You land on -4.",
+          "speech": "To add a positive number, move right. Take negative 7 plus 3: start at negative 7 and move 3 steps right. You land on negative 4.",
+          "visual": {
+            "type": "numberLine",
+            "from": -12,
+            "to": 12,
+            "start": -7,
+            "jump": 3,
+            "showHops": true
+          }
+        },
+        {
+          "id": "numbers-l5-001.demonstrate.2",
+          "text": "To subtract a positive number, move left. Take 2 - 5: start at 2 and move 5 steps left. You pass 0 and land on -3.",
+          "speech": "To subtract a positive number, move left. Take 2 minus 5: start at 2 and move 5 steps left. You pass 0 and land on negative 3.",
+          "visual": {
+            "type": "numberLine",
+            "from": -12,
+            "to": 12,
+            "start": 2,
+            "jump": -5,
+            "showHops": true
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-001.guided.1",
+          "prompt": "Which is the smallest: -2, 5 or -9?",
+          "speech": "Which is the smallest: negative 2, 5 or negative 9?",
+          "options": [
+            "-2",
+            "-9",
+            "5"
+          ],
+          "answer": "-9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Mark the three numbers on a number line. The smallest is furthest to the left.",
+            "The numbers in order are -9, -2, 5. The one furthest left is -9."
+          ],
+          "wrong_feedback": {
+            "-2": "-2 is closest to 0, so it is not the smallest. Negatives get smaller as the size grows.",
+            "5": "5 is positive. Every negative number is smaller than every positive number."
+          },
+          "explanation": "-9 is the smallest, because it is furthest left on the number line.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-001.guided.2",
+          "prompt": "What is -4 + 7?",
+          "speech": "What is negative 4 plus 7?",
+          "options": [
+            "-3",
+            "11",
+            "3"
+          ],
+          "answer": "3",
+          "visual": {
+            "type": "numberLine",
+            "from": -12,
+            "to": 12,
+            "start": -4,
+            "jump": 7,
+            "showHops": true
+          },
+          "hints": [
+            "Start at the first number on the number line. Adding moves you right.",
+            "Start at -4 and move 7 steps right. You land on 3."
+          ],
+          "wrong_feedback": {
+            "-3": "The size is right but the sign is wrong. Check which side of 0 you finish on.",
+            "11": "You added the sizes and ignored the signs. A negative number moves you the other way."
+          },
+          "explanation": "-4 + 7 = 3. Start at -4 and move 7 steps right.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-001.practice.1",
+          "prompt": "Which sign fits: -6 ? -2",
+          "speech": "Which sign fits: negative 6 ? negative 2",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": "<",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Picture both on the number line. The number further to the right is greater.",
+            "-2 is further right than -6, so -6 < -2."
+          ],
+          "wrong_feedback": {
+            ">": "That compares the sizes only. For negatives the bigger size is further left, so -6 is the smaller number.",
+            "=": "-6 and -2 are different points on the number line, so they are not equal."
+          },
+          "explanation": "-6 < -2, because -2 is further right on the number line.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-001.practice.2",
+          "prompt": "What is 5 - 8?",
+          "speech": "What is 5 minus 8?",
+          "options": [
+            "3",
+            "-3",
+            "13"
+          ],
+          "answer": "-3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Start at the first number on the number line. Subtracting moves you left.",
+            "Start at 5 and move 8 steps left. You land on -3."
+          ],
+          "wrong_feedback": {
+            "3": "The size is right but the sign is wrong. Check which side of 0 you finish on.",
+            "13": "Subtracting means moving left on the number line, not right."
+          },
+          "explanation": "5 - 8 = -3. Start at 5 and move 8 steps left.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-001.practice.3",
+          "prompt": "At night the temperature is -3 degrees. It rises by 8 degrees. What is the temperature now?",
+          "speech": "At night the temperature is negative 3 degrees. It rises by 8 degrees. What is the temperature now?",
+          "options": [
+            "-5",
+            "11",
+            "5"
+          ],
+          "answer": "5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think of a thermometer. Start at the night temperature and move up.",
+            "Start at -3 and move 8 degrees up. You reach 5."
+          ],
+          "wrong_feedback": {
+            "-5": "The size is right but the sign is wrong. Check which side of 0 the temperature ends up.",
+            "11": "You added the sizes and ignored that the start is below 0. Rising moves you up the scale from the start."
+          },
+          "explanation": "-3 + 8 = 5 degrees.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-001.check.1",
+          "prompt": "Which sign fits: -9 ? -5",
+          "speech": "Which sign fits: negative 9 ? negative 5",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": "<",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            ">": "That compares the sizes only. For negatives the bigger size is further left, so -9 is the smaller number.",
+            "=": "-9 and -5 are different points on the number line, so they are not equal."
+          },
+          "explanation": "-9 < -5, because -5 is further right on the number line.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-001.check.2",
+          "prompt": "What is -8 + 3?",
+          "speech": "What is negative 8 plus 3?",
+          "options": [
+            "5",
+            "-5",
+            "11"
+          ],
+          "answer": "-5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "5": "The size is right but the sign is wrong. Check which side of 0 you finish on.",
+            "11": "You added the sizes and ignored the signs. A negative number moves you the other way."
+          },
+          "explanation": "-8 + 3 = -5. Start at -8 and move 3 steps right.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-001.check.3",
+          "prompt": "At night the temperature is 2 degrees. It falls by 6 degrees. What is the temperature now?",
+          "speech": "At night the temperature is 2 degrees. It falls by 6 degrees. What is the temperature now?",
+          "options": [
+            "4",
+            "8",
+            "-4"
+          ],
+          "answer": "-4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "4": "The size is right but the sign is wrong. Check which side of 0 the temperature ends up.",
+            "8": "Falling means going down, to the left on the number line, not up."
+          },
+          "explanation": "2 - 6 = -4 degrees.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-001.remediation_explain.1",
+            "text": "Another way: think of a lift. Ground floor is 0, floors above are positive, floors in the basement are negative. Basement 2 is the same place as -2.",
+            "speech": "Another way: think of a lift. Ground floor is 0, floors above are positive, floors in the basement are negative. Basement 2 is the same place as negative 2.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "-2  -1  0  1  2"
+            }
+          },
+          {
+            "id": "numbers-l5-001.remediation_explain.2",
+            "text": "Going up adds, going down subtracts. Start in basement 4 (-4) and go up 6 floors. -4 + 6 = 2, which is floor 2.",
+            "speech": "Going up adds, going down subtracts. Start in basement 4 (negative 4) and go up 6 floors. negative 4 plus 6 equals 2, which is floor 2.",
+            "visual": {
+              "type": "numberLine",
+              "from": -12,
+              "to": 12,
+              "start": -4,
+              "jump": 6,
+              "showHops": true
+            }
+          },
+          {
+            "id": "numbers-l5-001.remediation_explain.3",
+            "text": "The smaller number is the one lower down. Basement 9 (-9) is lower than basement 3 (-3), so -9 < -3. A deeper basement means a smaller number.",
+            "speech": "The smaller number is the one lower down. Basement 9 (negative 9) is lower than basement 3 (negative 3), so negative 9 is less than negative 3. A deeper basement means a smaller number.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "-9 < -3"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-001.remediation_guided.1",
+            "prompt": "Which is the smallest: -6, -1 or -10?",
+            "speech": "Which is the smallest: negative 6, negative 1 or negative 10?",
+            "options": [
+              "-10",
+              "-1",
+              "-6"
+            ],
+            "answer": "-10",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Mark the three numbers on a number line. The smallest is furthest to the left.",
+              "The numbers in order are -10, -6, -1. The one furthest left is -10."
+            ],
+            "wrong_feedback": {
+              "-1": "-1 is closest to 0, so it is not the smallest. Negatives get smaller as the size grows.",
+              "-6": "-6 is not the furthest left. Find the number nearest the left end of the line."
+            },
+            "explanation": "-10 is the smallest, because it is furthest left on the number line.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-001.remediation_guided.2",
+            "prompt": "How far is -3 from 5 on the number line?",
+            "speech": "How far is negative 3 from 5 on the number line?",
+            "options": [
+              "2",
+              "8",
+              "9"
+            ],
+            "answer": "8",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Find how far each number is from 0, then think about whether they are on the same side of 0.",
+              "3 steps from -3 up to 0, then 5 more steps up to 5: 3 + 5 = 8."
+            ],
+            "wrong_feedback": {
+              "2": "You took the sizes away from each other. When one number is below 0 you must count across 0.",
+              "9": "You are one step out. Count the gap to 0 on each side, then add the two gaps."
+            },
+            "explanation": "The distance is 8: 3 steps to 0 and then 5 more.",
+            "difficulty": 3
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-001.remediation_check.1",
+            "prompt": "What is -2 - 5?",
+            "speech": "What is negative 2 minus 5?",
+            "options": [
+              "7",
+              "3",
+              "-7"
+            ],
+            "answer": "-7",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "7": "The size is right but the sign is wrong. Check which side of 0 you finish on.",
+              "3": "Subtracting means moving left on the number line, not right."
+            },
+            "explanation": "-2 - 5 = -7. Start at -2 and move 5 steps left.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-001.remediation_check.2",
+            "prompt": "Which sign fits: 0 ? -4",
+            "speech": "Which sign fits: 0 ? negative 4",
+            "options": [
+              ">",
+              "<",
+              "="
+            ],
+            "answer": ">",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "<": "That sign points the wrong way. On the number line 0 is to the right of -4, so it is greater.",
+              "=": "0 and -4 are different points on the number line, so they are not equal."
+            },
+            "explanation": "0 > -4, because 0 is further right on the number line.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-001.remediation_check.3",
+            "prompt": "How far is -6 from 2 on the number line?",
+            "speech": "How far is negative 6 from 2 on the number line?",
+            "options": [
+              "4",
+              "8",
+              "9"
+            ],
+            "answer": "8",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "4": "You took the sizes away from each other. When one number is below 0 you must count across 0.",
+              "9": "You are one step out. Count the gap to 0 on each side, then add the two gaps."
+            },
+            "explanation": "The distance is 8: 6 steps to 0 and then 2 more.",
+            "difficulty": 3
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, negative numbers, percent and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l5a.py) with exact integer maths; decimals are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-002",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Order of operations",
+      "objective": "Evaluate expressions in the correct order.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l5-002.introduce.1",
+          "text": "When a sum has more than one operation, the order matters. Take 6 + 4 x 3. If you go left to right you get 30, but the correct answer is 18.",
+          "speech": "When a sum has more than one operation, the order matters. Take 6 plus 4 times 3. If you go left to right you get 30, but the correct answer is 18.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "6 + 4 x 3 = 18"
+          }
+        },
+        {
+          "id": "numbers-l5-002.introduce.2",
+          "text": "The rule: brackets first, then x and ÷, then + and -. In 6 + 4 x 3 the multiplication goes first: 4 x 3 = 12, then 6 + 12 = 18.",
+          "speech": "The rule: brackets first, then times and ÷, then plus and -. In 6 plus 4 times 3 the multiplication goes first: 4 times 3 equals 12, then 6 plus 12 equals 18.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "( )  then  x ÷  then  + -"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-002.demonstrate.1",
+          "text": "Brackets change the order. In (8 + 4) x 3 do the bracket first: 8 + 4 = 12. Then 12 x 3 = 36. Without the brackets, 8 + 4 x 3 would be 20.",
+          "speech": "Brackets change the order. In (8 plus 4) times 3 do the bracket first: 8 plus 4 equals 12. Then 12 times 3 equals 36. Without the brackets, 8 plus 4 times 3 would be 20.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "(8 + 4) x 3 = 36"
+          }
+        },
+        {
+          "id": "numbers-l5-002.demonstrate.2",
+          "text": "Try 20 - 12 ÷ 4. Division goes before subtraction: 12 ÷ 4 = 3. Then 20 - 3 = 17. Doing 20 - 12 first would wrongly give 2.",
+          "speech": "Try 20 minus 12 divided by 4. Division goes before subtraction: 12 divided by 4 equals 3. Then 20 minus 3 equals 17. Doing 20 minus 12 first would wrongly give 2.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "20 - 12 ÷ 4 = 17"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-002.guided.1",
+          "prompt": "Which part do you work out first in 9 - 2 x 3?",
+          "speech": "Which part do you work out first in 9 minus 2 times 3?",
+          "options": [
+            "2 x 3",
+            "9 - 2",
+            "Any part, the order does not matter"
+          ],
+          "answer": "2 x 3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look for brackets, then for x and ÷, before + and -.",
+            "x and ÷ are worked out before + and -. So 2 x 3 comes first."
+          ],
+          "wrong_feedback": {
+            "9 - 2": "That is just the first pair from the left. x and ÷ rank above + and -, so they go first.",
+            "Any part, the order does not matter": "The order does matter. 6 + 4 x 3 is 18, but working left to right would give 30."
+          },
+          "explanation": "In 9 - 2 x 3 you work out 2 x 3 first. x and ÷ are worked out before + and -.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-002.guided.2",
+          "prompt": "What is 7 + 3 x 5?",
+          "speech": "What is 7 plus 3 times 5?",
+          "options": [
+            "50",
+            "22",
+            "24"
+          ],
+          "answer": "22",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look for x or ÷ first. They are done before + or -.",
+            "Do the x or ÷ part first, then the + or -: 7 + 3 x 5 = 22."
+          ],
+          "wrong_feedback": {
+            "50": "You worked from left to right. Multiply and divide must come before add and subtract.",
+            "24": "The order is right but a calculation slipped. Check each step again."
+          },
+          "explanation": "7 + 3 x 5 = 22, working in the correct order.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-002.practice.1",
+          "prompt": "What is (8 + 4) x 3?",
+          "speech": "What is (8 plus 4) times 3?",
+          "options": [
+            "20",
+            "38",
+            "36"
+          ],
+          "answer": "36",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Brackets come first. Work out the part inside them before anything else.",
+            "Do the brackets first, then the rest: (8 + 4) x 3 = 36."
+          ],
+          "wrong_feedback": {
+            "20": "You ignored the brackets. Work out what is inside the brackets first.",
+            "38": "The order is right but a calculation slipped. Check each step again."
+          },
+          "explanation": "(8 + 4) x 3 = 36, working in the correct order.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-002.practice.2",
+          "prompt": "What is 20 - 12 ÷ 4?",
+          "speech": "What is 20 minus 12 divided by 4?",
+          "options": [
+            "17",
+            "2",
+            "19"
+          ],
+          "answer": "17",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look for x or ÷ first. They are done before + or -.",
+            "Do the x or ÷ part first, then the + or -: 20 - 12 ÷ 4 = 17."
+          ],
+          "wrong_feedback": {
+            "2": "You worked from left to right. Multiply and divide must come before add and subtract.",
+            "19": "The order is right but a calculation slipped. Check each step again."
+          },
+          "explanation": "20 - 12 ÷ 4 = 17, working in the correct order.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-002.practice.3",
+          "prompt": "What is 5 x 6 - 2 x 4?",
+          "speech": "What is 5 times 6 minus 2 times 4?",
+          "options": [
+            "112",
+            "22",
+            "80"
+          ],
+          "answer": "22",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look for x or ÷ first. They are done before + or -.",
+            "Do the x or ÷ part first, then the + or -: 5 x 6 - 2 x 4 = 22."
+          ],
+          "wrong_feedback": {
+            "112": "You worked from left to right. Multiply and divide must come before add and subtract.",
+            "80": "You did the add or subtract first. Multiply and divide come first."
+          },
+          "explanation": "5 x 6 - 2 x 4 = 22, working in the correct order.",
+          "difficulty": 3
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-002.check.1",
+          "prompt": "What is (15 - 6) x 4?",
+          "speech": "What is (15 minus 6) times 4?",
+          "options": [
+            "38",
+            "34",
+            "36"
+          ],
+          "answer": "36",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "38": "The order is right but a calculation slipped. Check each step again.",
+            "34": "One of your steps is wrong. Write each step on its own line and check it."
+          },
+          "explanation": "(15 - 6) x 4 = 36, working in the correct order.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-002.check.2",
+          "prompt": "What is 18 + 24 ÷ 6?",
+          "speech": "What is 18 plus 24 divided by 6?",
+          "options": [
+            "22",
+            "7",
+            "24"
+          ],
+          "answer": "22",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "7": "You worked from left to right. Multiply and divide must come before add and subtract.",
+            "24": "The order is right but a calculation slipped. Check each step again."
+          },
+          "explanation": "18 + 24 ÷ 6 = 22, working in the correct order.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-002.check.3",
+          "prompt": "Which part do you work out first in (7 + 5) x 2?",
+          "speech": "Which part do you work out first in (7 plus 5) times 2?",
+          "options": [
+            "5 x 2",
+            "7 + 5",
+            "Any part, the order does not matter"
+          ],
+          "answer": "7 + 5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "5 x 2": "That skips the brackets. Whatever is inside brackets is always worked out first.",
+            "Any part, the order does not matter": "The order does matter. 6 + 4 x 3 is 18, but working left to right would give 30."
+          },
+          "explanation": "In (7 + 5) x 2 you work out 7 + 5 first. Brackets are always worked out first.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-002.remediation_explain.1",
+            "text": "Think of a shopping bill. 5 + 3 x 2 means 5 rupees plus three things at 2 rupees each. The three things cost 3 x 2 = 6, then 5 + 6 = 11 rupees.",
+            "speech": "Think of a shopping bill. 5 plus 3 times 2 means 5 rupees plus three things at 2 rupees each. The three things cost 3 times 2 equals 6, then 5 plus 6 equals 11 rupees.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "5 + 3 x 2 = 11"
+            }
+          },
+          {
+            "id": "numbers-l5-002.remediation_explain.2",
+            "text": "Brackets work like a bag you must open first. In 4 x (2 + 3) open the bag: 2 + 3 = 5. Then 4 x 5 = 20.",
+            "speech": "Brackets work like a bag you must open first. In 4 times (2 plus 3) open the bag: 2 plus 3 equals 5. Then 4 times 5 equals 20.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "4 x (2 + 3) = 20"
+            }
+          },
+          {
+            "id": "numbers-l5-002.remediation_explain.3",
+            "text": "When x and ÷ both appear, or + and - both appear, go left to right. 24 ÷ 4 x 2: 24 ÷ 4 = 6, then 6 x 2 = 12.",
+            "speech": "When times and divided by both appear, or plus and minus both appear, go left to right. 24 divided by 4 times 2: 24 divided by 4 equals 6, then 6 times 2 equals 12.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "24 ÷ 4 x 2 = 12"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-002.remediation_guided.1",
+            "prompt": "What is 4 + 6 x 2?",
+            "speech": "What is 4 plus 6 times 2?",
+            "options": [
+              "20",
+              "18",
+              "16"
+            ],
+            "answer": "16",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Look for x or ÷ first. They are done before + or -.",
+              "Do the x or ÷ part first, then the + or -: 4 + 6 x 2 = 16."
+            ],
+            "wrong_feedback": {
+              "20": "You worked from left to right. Multiply and divide must come before add and subtract.",
+              "18": "The order is right but a calculation slipped. Check each step again."
+            },
+            "explanation": "4 + 6 x 2 = 16, working in the correct order.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-002.remediation_guided.2",
+            "prompt": "What is 3 x (9 - 4)?",
+            "speech": "What is 3 times (9 minus 4)?",
+            "options": [
+              "15",
+              "23",
+              "17"
+            ],
+            "answer": "15",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Brackets come first. Work out the part inside them before anything else.",
+              "Do the brackets first, then the rest: 3 x (9 - 4) = 15."
+            ],
+            "wrong_feedback": {
+              "23": "You ignored the brackets. Work out what is inside the brackets first.",
+              "17": "The order is right but a calculation slipped. Check each step again."
+            },
+            "explanation": "3 x (9 - 4) = 15, working in the correct order.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-002.remediation_check.1",
+            "prompt": "What is 30 - 4 x 5?",
+            "speech": "What is 30 minus 4 times 5?",
+            "options": [
+              "130",
+              "10",
+              "12"
+            ],
+            "answer": "10",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "130": "You worked from left to right. Multiply and divide must come before add and subtract.",
+              "12": "The order is right but a calculation slipped. Check each step again."
+            },
+            "explanation": "30 - 4 x 5 = 10, working in the correct order.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-002.remediation_check.2",
+            "prompt": "What is (12 + 8) ÷ 4?",
+            "speech": "What is (12 plus 8) divided by 4?",
+            "options": [
+              "14",
+              "7",
+              "5"
+            ],
+            "answer": "5",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "14": "You ignored the brackets. Work out what is inside the brackets first.",
+              "7": "The order is right but a calculation slipped. Check each step again."
+            },
+            "explanation": "(12 + 8) ÷ 4 = 5, working in the correct order.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-002.remediation_check.3",
+            "prompt": "What is 2 x 7 + 3 x 4?",
+            "speech": "What is 2 times 7 plus 3 times 4?",
+            "options": [
+              "26",
+              "68",
+              "80"
+            ],
+            "answer": "26",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "68": "You worked from left to right. Multiply and divide must come before add and subtract.",
+              "80": "You did the add or subtract first. Multiply and divide come first."
+            },
+            "explanation": "2 x 7 + 3 x 4 = 26, working in the correct order.",
+            "difficulty": 3
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, negative numbers, percent and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l5a.py) with exact integer maths; decimals are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-003",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Fractions with unlike denominators",
+      "objective": "Add and subtract fractions with different bottoms.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l5-003.introduce.1",
+          "text": "You can only add fractions when the pieces are the same size. 1/2 and 1/3 have different bottoms, so the pieces are different sizes. First we make the bottoms equal.",
+          "speech": "You can only add fractions when the pieces are the same size. 1/2 and 1/3 have different bottoms, so the pieces are different sizes. First we make the bottoms equal.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "1/2 + 1/3"
+          }
+        },
+        {
+          "id": "numbers-l5-003.introduce.2",
+          "text": "The common bottom of 2 and 3 is 6. 1/2 = 3/6 and 1/3 = 2/6. Now both are sixths, so we can add the tops.",
+          "speech": "The common bottom of 2 and 3 is 6. 1/2 equals 3/6 and 1/3 equals 2/6. Now both are sixths, so we can add the tops.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3/6 + 2/6"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-003.demonstrate.1",
+          "text": "Add: 1/2 + 1/3 = 3/6 + 2/6 = 5/6. Only the tops are added. The bottom stays 6, because the pieces are still sixths.",
+          "speech": "Add: 1/2 plus 1/3 equals 3/6 plus 2/6 equals 5/6. Only the tops are added. The bottom stays 6, because the pieces are still sixths.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "1/2 + 1/3 = 5/6"
+          }
+        },
+        {
+          "id": "numbers-l5-003.demonstrate.2",
+          "text": "Subtract the same way: 3/4 - 1/6. The smallest common bottom is 12. 3/4 = 9/12 and 1/6 = 2/12. So 9/12 - 2/12 = 7/12.",
+          "speech": "Subtract the same way: 3/4 minus 1/6. The smallest common bottom is 12. 3/4 equals 9/12 and 1/6 equals 2/12. So 9/12 minus 2/12 equals 7/12.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3/4 - 1/6 = 7/12"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-003.guided.1",
+          "prompt": "What is 1/2 + 1/3?",
+          "speech": "What is 1/2 plus 1/3?",
+          "options": [
+            "2/5",
+            "1/3",
+            "5/6"
+          ],
+          "answer": "5/6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Make the bottoms equal first. Then add only the tops.",
+            "1/2 = 3/6 and 1/3 = 2/6. Then 3 + 2 = 5 over 6, and simplify."
+          ],
+          "wrong_feedback": {
+            "2/5": "You added the tops and added the bottoms. The bottoms must be made equal first.",
+            "1/3": "You added the tops but did not change them when the bottoms changed. Convert both fractions first."
+          },
+          "explanation": "1/2 + 1/3 = 5/6, after making both bottoms 6.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-003.guided.2",
+          "prompt": "Which is the smallest common denominator of 4 and 6?",
+          "speech": "Which is the smallest common denominator of 4 and 6?",
+          "options": [
+            "12",
+            "24",
+            "6"
+          ],
+          "answer": "12",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "List the multiples of each number. Look for the first one they share.",
+            "Multiples of 4 and of 6: the first one in both lists is 12."
+          ],
+          "wrong_feedback": {
+            "24": "24 works, but it is not the smallest. Look for a smaller number that both 4 and 6 divide into.",
+            "6": "6 is not a multiple of both 4 and 6."
+          },
+          "explanation": "The smallest common denominator of 4 and 6 is 12, their lowest common multiple.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-003.practice.1",
+          "prompt": "What is 3/4 - 1/6?",
+          "speech": "What is 3/4 minus 1/6?",
+          "options": [
+            "1/12",
+            "7/12",
+            "11/12"
+          ],
+          "answer": "7/12",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Make the bottoms equal first. Then subtract only the tops.",
+            "3/4 = 9/12 and 1/6 = 2/12. Then 9 - 2 = 7 over 12, and simplify."
+          ],
+          "wrong_feedback": {
+            "1/12": "You subtracted the tops but did not change them when the bottoms changed. Convert both fractions first.",
+            "11/12": "You added instead of subtracting."
+          },
+          "explanation": "3/4 - 1/6 = 7/12, after making both bottoms 12.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-003.practice.2",
+          "prompt": "What is 2/5 + 1/3?",
+          "speech": "What is 2/5 plus 1/3?",
+          "options": [
+            "3/8",
+            "1/5",
+            "11/15"
+          ],
+          "answer": "11/15",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Make the bottoms equal first. Then add only the tops.",
+            "2/5 = 6/15 and 1/3 = 5/15. Then 6 + 5 = 11 over 15, and simplify."
+          ],
+          "wrong_feedback": {
+            "3/8": "You added the tops and added the bottoms. The bottoms must be made equal first.",
+            "1/5": "You added the tops but did not change them when the bottoms changed. Convert both fractions first."
+          },
+          "explanation": "2/5 + 1/3 = 11/15, after making both bottoms 15.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-003.practice.3",
+          "prompt": "Riya drank 1/4 litre of juice and Sam drank 1/6 litre. How much juice did they drink altogether?",
+          "speech": "Riya drank 1/4 litre of juice and Sam drank 1/6 litre. How much juice did they drink altogether?",
+          "options": [
+            "5/12",
+            "1/5",
+            "1/12"
+          ],
+          "answer": "5/12",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Make the bottoms equal first. Then add only the tops.",
+            "1/4 = 3/12 and 1/6 = 2/12. Then 3 + 2 = 5 over 12, and simplify."
+          ],
+          "wrong_feedback": {
+            "1/5": "You added the tops and added the bottoms. The bottoms must be made equal first.",
+            "1/12": "You added the tops but did not change them when the bottoms changed. Convert both fractions first."
+          },
+          "explanation": "1/4 + 1/6 = 5/12, after making both bottoms 12.",
+          "difficulty": 3
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-003.check.1",
+          "prompt": "What is 5/6 - 3/8?",
+          "speech": "What is 5/6 minus 3/8?",
+          "options": [
+            "1/24",
+            "11/24",
+            "29/24"
+          ],
+          "answer": "11/24",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "1/24": "You subtracted the tops but did not change them when the bottoms changed. Convert both fractions first.",
+            "29/24": "You added instead of subtracting."
+          },
+          "explanation": "5/6 - 3/8 = 11/24, after making both bottoms 24.",
+          "difficulty": 3
+        },
+        {
+          "id": "numbers-l5-003.check.2",
+          "prompt": "What is 1/4 + 3/10?",
+          "speech": "What is 1/4 plus 3/10?",
+          "options": [
+            "2/7",
+            "1/10",
+            "11/20"
+          ],
+          "answer": "11/20",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "2/7": "You added the tops and added the bottoms. The bottoms must be made equal first.",
+            "1/10": "You added the tops but did not change them when the bottoms changed. Convert both fractions first."
+          },
+          "explanation": "1/4 + 3/10 = 11/20, after making both bottoms 20.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-003.check.3",
+          "prompt": "A jug has 3/5 litre of milk. Anu pours out 1/4 litre. How much milk is left?",
+          "speech": "A jug has 3/5 litre of milk. Anu pours out 1/4 litre. How much milk is left?",
+          "options": [
+            "7/20",
+            "1/10",
+            "17/20"
+          ],
+          "answer": "7/20",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "1/10": "You subtracted the tops but did not change them when the bottoms changed. Convert both fractions first.",
+            "17/20": "You added instead of subtracting."
+          },
+          "explanation": "3/5 - 1/4 = 7/20, after making both bottoms 20.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-003.remediation_explain.1",
+            "text": "Another way: think of two pizzas cut differently. One is cut in halves and one in thirds. To compare pieces, cut both into sixths. Then half is 3 slices and a third is 2 slices.",
+            "speech": "Another way: think of two pizzas cut differently. One is cut in halves and one in thirds. To compare pieces, cut both into sixths. Then half is 3 slices and a third is 2 slices.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3 slices + 2 slices"
+            }
+          },
+          {
+            "id": "numbers-l5-003.remediation_explain.2",
+            "text": "The common bottom is a number both bottoms go into. For 4 and 6, the multiples of 4 are 4, 8, 12 and of 6 are 6, 12. The first match is 12, so use 12.",
+            "speech": "The common bottom is a number both bottoms go into. For 4 and 6, the multiples of 4 are 4, 8, 12 and of 6 are 6, 12. The first match is 12, so use 12.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "4 and 6  ->  12"
+            }
+          },
+          {
+            "id": "numbers-l5-003.remediation_explain.3",
+            "text": "After you add or subtract, check if the fraction can be made simpler. 1/6 + 1/3 = 1/6 + 2/6 = 3/6, and 3/6 simplifies to 1/2.",
+            "speech": "After you add or subtract, check if the fraction can be made simpler. 1/6 plus 1/3 equals 1/6 plus 2/6 equals 3/6, and 3/6 simplifies to 1/2.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3/6 = 1/2"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-003.remediation_guided.1",
+            "prompt": "What is 1/3 + 1/4?",
+            "speech": "What is 1/3 plus 1/4?",
+            "options": [
+              "2/7",
+              "7/12",
+              "1/6"
+            ],
+            "answer": "7/12",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Make the bottoms equal first. Then add only the tops.",
+              "1/3 = 4/12 and 1/4 = 3/12. Then 4 + 3 = 7 over 12, and simplify."
+            ],
+            "wrong_feedback": {
+              "2/7": "You added the tops and added the bottoms. The bottoms must be made equal first.",
+              "1/6": "You added the tops but did not change them when the bottoms changed. Convert both fractions first."
+            },
+            "explanation": "1/3 + 1/4 = 7/12, after making both bottoms 12.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-003.remediation_guided.2",
+            "prompt": "Which is the smallest common denominator of 6 and 8?",
+            "speech": "Which is the smallest common denominator of 6 and 8?",
+            "options": [
+              "48",
+              "8",
+              "24"
+            ],
+            "answer": "24",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "List the multiples of each number. Look for the first one they share.",
+              "Multiples of 6 and of 8: the first one in both lists is 24."
+            ],
+            "wrong_feedback": {
+              "48": "48 works, but it is not the smallest. Look for a smaller number that both 6 and 8 divide into.",
+              "8": "8 is not a multiple of both 6 and 8."
+            },
+            "explanation": "The smallest common denominator of 6 and 8 is 24, their lowest common multiple.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-003.remediation_check.1",
+            "prompt": "What is 2/3 - 1/5?",
+            "speech": "What is 2/3 minus 1/5?",
+            "options": [
+              "7/15",
+              "1/15",
+              "13/15"
+            ],
+            "answer": "7/15",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "1/15": "You subtracted the tops but did not change them when the bottoms changed. Convert both fractions first.",
+              "13/15": "You added instead of subtracting."
+            },
+            "explanation": "2/3 - 1/5 = 7/15, after making both bottoms 15.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-003.remediation_check.2",
+            "prompt": "What is 1/6 + 2/9?",
+            "speech": "What is 1/6 plus 2/9?",
+            "options": [
+              "1/5",
+              "7/18",
+              "1/18"
+            ],
+            "answer": "7/18",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "1/5": "You added the tops and added the bottoms. The bottoms must be made equal first.",
+              "1/18": "You added the tops but did not change them when the bottoms changed. Convert both fractions first."
+            },
+            "explanation": "1/6 + 2/9 = 7/18, after making both bottoms 18.",
+            "difficulty": 3
+          },
+          {
+            "id": "numbers-l5-003.remediation_check.3",
+            "prompt": "What is 3/4 - 2/7?",
+            "speech": "What is 3/4 minus 2/7?",
+            "options": [
+              "1/28",
+              "29/28",
+              "13/28"
+            ],
+            "answer": "13/28",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "1/28": "You subtracted the tops but did not change them when the bottoms changed. Convert both fractions first.",
+              "29/28": "You added instead of subtracting."
+            },
+            "explanation": "3/4 - 2/7 = 13/28, after making both bottoms 28.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, negative numbers, percent and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l5a.py) with exact integer maths; decimals are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-004",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Fraction multiplication",
+      "objective": "Multiply fractions: a part of a part.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l5-004.introduce.1",
+          "text": "Multiplying fractions means taking a part of a part. 2/3 of 3/4 asks: if you have 3/4 of a bar, how much is 2/3 of that piece?",
+          "speech": "Multiplying fractions means taking a part of a part. 2/3 of 3/4 asks: if you have 3/4 of a bar, how much is 2/3 of that piece?",
+          "visual": {
+            "type": "glyph",
+            "glyph": "2/3 x 3/4"
+          }
+        },
+        {
+          "id": "numbers-l5-004.introduce.2",
+          "text": "The rule is simple. Multiply the tops, multiply the bottoms, then simplify. 2 x 3 = 6 and 3 x 4 = 12, so the answer is 6/12.",
+          "speech": "The rule is simple. Multiply the tops, multiply the bottoms, then simplify. 2 times 3 equals 6 and 3 times 4 equals 12, so the answer is 6/12.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "6/12 = 1/2"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-004.demonstrate.1",
+          "text": "Do it again: 3/4 x 2/5. Tops: 3 x 2 = 6. Bottoms: 4 x 5 = 20. So 6/20, which simplifies to 3/10 (divide both by 2).",
+          "speech": "Do it again: 3/4 times 2/5. Tops: 3 times 2 equals 6. Bottoms: 4 times 5 equals 20. So 6/20, which simplifies to 3/10 (divide both by 2).",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3/4 x 2/5 = 3/10"
+          }
+        },
+        {
+          "id": "numbers-l5-004.demonstrate.2",
+          "text": "For a fraction of a whole number, divide by the bottom, then multiply by the top. 3/4 of 24: 24 ÷ 4 = 6, and 6 x 3 = 18.",
+          "speech": "For a fraction of a whole number, divide by the bottom, then multiply by the top. 3/4 of 24: 24 divided by 4 equals 6, and 6 times 3 equals 18.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3/4 of 24 = 18"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-004.guided.1",
+          "prompt": "What is 2/3 x 3/4?",
+          "speech": "What is 2/3 times 3/4?",
+          "options": [
+            "5/12",
+            "1/2",
+            "6/7"
+          ],
+          "answer": "1/2",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Multiply the two tops, then multiply the two bottoms, then simplify.",
+            "2 x 3 = 6 and 3 x 4 = 12, so 6/12, which simplifies to 1/2."
+          ],
+          "wrong_feedback": {
+            "5/12": "You added the tops. To multiply, multiply the tops.",
+            "6/7": "You added the bottoms. To multiply, multiply the bottoms."
+          },
+          "explanation": "2/3 x 3/4 = 6/12 = 1/2.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-004.guided.2",
+          "prompt": "What is 3/4 of 24?",
+          "speech": "What is 3/4 of 24?",
+          "options": [
+            "6",
+            "72",
+            "18"
+          ],
+          "answer": "18",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Divide by the bottom number first, then multiply by the top number.",
+            "24 ÷ 4 = 6, and 6 x 3 = 18."
+          ],
+          "wrong_feedback": {
+            "6": "That is only 1/4 of 24. You still need to multiply by 3.",
+            "72": "You multiplied by the top but did not divide by the bottom."
+          },
+          "explanation": "3/4 of 24 = 24 ÷ 4 x 3 = 18.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-004.practice.1",
+          "prompt": "What is 3/4 x 2/5?",
+          "speech": "What is 3/4 times 2/5?",
+          "options": [
+            "3/10",
+            "3/2",
+            "1/4"
+          ],
+          "answer": "3/10",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Multiply the two tops, then multiply the two bottoms, then simplify.",
+            "3 x 2 = 6 and 4 x 5 = 20, so 6/20, which simplifies to 3/10."
+          ],
+          "wrong_feedback": {
+            "3/2": "You multiplied the tops but kept only one bottom. Multiply the bottoms too.",
+            "1/4": "You added the tops. To multiply, multiply the tops."
+          },
+          "explanation": "3/4 x 2/5 = 6/20 = 3/10.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-004.practice.2",
+          "prompt": "A recipe needs 5/6 cup of sugar. Meena makes 3/4 of the recipe. How many cups of sugar does she need?",
+          "speech": "A recipe needs 5/6 cup of sugar. Meena makes 3/4 of the recipe. How many cups of sugar does she need?",
+          "options": [
+            "5/2",
+            "5/8",
+            "1/3"
+          ],
+          "answer": "5/8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Making a part of the recipe means multiplying the amounts. Multiply tops, then bottoms.",
+            "5 x 3 = 15 and 6 x 4 = 24, so 15/24, which simplifies to 5/8."
+          ],
+          "wrong_feedback": {
+            "5/2": "You multiplied the tops but kept only one bottom. Multiply the bottoms too.",
+            "1/3": "You added the tops. To multiply, multiply the tops."
+          },
+          "explanation": "5/6 x 3/4 = 15/24 = 5/8.",
+          "difficulty": 3
+        },
+        {
+          "id": "numbers-l5-004.practice.3",
+          "prompt": "What is 2/5 of 30?",
+          "speech": "What is 2/5 of 30?",
+          "options": [
+            "6",
+            "60",
+            "12"
+          ],
+          "answer": "12",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Divide by the bottom number first, then multiply by the top number.",
+            "30 ÷ 5 = 6, and 6 x 2 = 12."
+          ],
+          "wrong_feedback": {
+            "6": "That is only 1/5 of 30. You still need to multiply by 2.",
+            "60": "You multiplied by the top but did not divide by the bottom."
+          },
+          "explanation": "2/5 of 30 = 30 ÷ 5 x 2 = 12.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-004.check.1",
+          "prompt": "What is 4/7 x 2/5?",
+          "speech": "What is 4/7 times 2/5?",
+          "options": [
+            "8/35",
+            "8/7",
+            "6/35"
+          ],
+          "answer": "8/35",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "8/7": "You multiplied the tops but kept only one bottom. Multiply the bottoms too.",
+            "6/35": "You added the tops. To multiply, multiply the tops."
+          },
+          "explanation": "4/7 x 2/5 = 8/35 = 8/35.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-004.check.2",
+          "prompt": "A recipe needs 3/4 cup of sugar. Meena makes 2/5 of the recipe. How many cups of sugar does she need?",
+          "speech": "A recipe needs 3/4 cup of sugar. Meena makes 2/5 of the recipe. How many cups of sugar does she need?",
+          "options": [
+            "3/2",
+            "3/10",
+            "1/4"
+          ],
+          "answer": "3/10",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "3/2": "You multiplied the tops but kept only one bottom. Multiply the bottoms too.",
+            "1/4": "You added the tops. To multiply, multiply the tops."
+          },
+          "explanation": "3/4 x 2/5 = 6/20 = 3/10.",
+          "difficulty": 3
+        },
+        {
+          "id": "numbers-l5-004.check.3",
+          "prompt": "What is 5/6 of 48?",
+          "speech": "What is 5/6 of 48?",
+          "options": [
+            "8",
+            "240",
+            "40"
+          ],
+          "answer": "40",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "8": "That is only 1/6 of 48. You still need to multiply by 5.",
+            "240": "You multiplied by the top but did not divide by the bottom."
+          },
+          "explanation": "5/6 of 48 = 48 ÷ 6 x 5 = 40.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-004.remediation_explain.1",
+            "text": "Another way: draw a rectangle. Cut it into 4 columns and shade 3. Cut it into 5 rows and shade 2. The doubly shaded part is 3 x 2 = 6 boxes out of 4 x 5 = 20.",
+            "speech": "Another way: draw a rectangle. Cut it into 4 columns and shade 3. Cut it into 5 rows and shade 2. The doubly shaded part is 3 times 2 equals 6 boxes out of 4 times 5 equals 20.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "6 out of 20 boxes"
+            }
+          },
+          {
+            "id": "numbers-l5-004.remediation_explain.2",
+            "text": "Multiplying by a fraction smaller than 1 makes the answer smaller. 1/2 x 1/2 = 1/4, which is smaller than both numbers.",
+            "speech": "Multiplying by a fraction smaller than 1 makes the answer smaller. 1/2 times 1/2 equals 1/4, which is smaller than both numbers.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "1/2 x 1/2 = 1/4"
+            }
+          },
+          {
+            "id": "numbers-l5-004.remediation_explain.3",
+            "text": "You can simplify before multiplying. In 2/3 x 3/4, the 3 on the bottom and the 3 on the top cancel. That leaves 2/4, which is 1/2.",
+            "speech": "You can simplify before multiplying. In 2/3 times 3/4, the 3 on the bottom and the 3 on the top cancel. That leaves 2/4, which is 1/2.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2/3 x 3/4 = 2/4 = 1/2"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-004.remediation_guided.1",
+            "prompt": "What is 1/2 x 3/5?",
+            "speech": "What is 1/2 times 3/5?",
+            "options": [
+              "3/10",
+              "3/2",
+              "2/5"
+            ],
+            "answer": "3/10",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Multiply the two tops, then multiply the two bottoms, then simplify.",
+              "1 x 3 = 3 and 2 x 5 = 10, so 3/10, which simplifies to 3/10."
+            ],
+            "wrong_feedback": {
+              "3/2": "You multiplied the tops but kept only one bottom. Multiply the bottoms too.",
+              "2/5": "You added the tops. To multiply, multiply the tops."
+            },
+            "explanation": "1/2 x 3/5 = 3/10 = 3/10.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-004.remediation_guided.2",
+            "prompt": "What is 3/8 of 40?",
+            "speech": "What is 3/8 of 40?",
+            "options": [
+              "5",
+              "15",
+              "120"
+            ],
+            "answer": "15",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Divide by the bottom number first, then multiply by the top number.",
+              "40 ÷ 8 = 5, and 5 x 3 = 15."
+            ],
+            "wrong_feedback": {
+              "5": "That is only 1/8 of 40. You still need to multiply by 3.",
+              "120": "You multiplied by the top but did not divide by the bottom."
+            },
+            "explanation": "3/8 of 40 = 40 ÷ 8 x 3 = 15.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-004.remediation_check.1",
+            "prompt": "What is 2/5 x 3/7?",
+            "speech": "What is 2/5 times 3/7?",
+            "options": [
+              "6/5",
+              "1/7",
+              "6/35"
+            ],
+            "answer": "6/35",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "6/5": "You multiplied the tops but kept only one bottom. Multiply the bottoms too.",
+              "1/7": "You added the tops. To multiply, multiply the tops."
+            },
+            "explanation": "2/5 x 3/7 = 6/35 = 6/35.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-004.remediation_check.2",
+            "prompt": "A recipe needs 2/3 cup of sugar. Meena makes 3/8 of the recipe. How many cups of sugar does she need?",
+            "speech": "A recipe needs 2/3 cup of sugar. Meena makes 3/8 of the recipe. How many cups of sugar does she need?",
+            "options": [
+              "1/4",
+              "5/24",
+              "6/11"
+            ],
+            "answer": "1/4",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "5/24": "You added the tops. To multiply, multiply the tops.",
+              "6/11": "You added the bottoms. To multiply, multiply the bottoms."
+            },
+            "explanation": "2/3 x 3/8 = 6/24 = 1/4.",
+            "difficulty": 3
+          },
+          {
+            "id": "numbers-l5-004.remediation_check.3",
+            "prompt": "What is 4/9 of 36?",
+            "speech": "What is 4/9 of 36?",
+            "options": [
+              "4",
+              "16",
+              "144"
+            ],
+            "answer": "16",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "4": "That is only 1/9 of 36. You still need to multiply by 4.",
+              "144": "You multiplied by the top but did not divide by the bottom."
+            },
+            "explanation": "4/9 of 36 = 36 ÷ 9 x 4 = 16.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, negative numbers, percent and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l5a.py) with exact integer maths; decimals are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-005",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Decimal multiplication",
+      "objective": "Multiply decimals and place the point correctly.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l5-005.introduce.1",
+          "text": "To multiply decimals, forget the points for a moment. Multiply 1.2 x 0.5 as 12 x 5 = 60. Then put the point back in.",
+          "speech": "To multiply decimals, forget the points for a moment. Multiply 1.2 times 0.5 as 12 times 5 equals 60. Then put the point back in.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "1.2 x 0.5"
+          }
+        },
+        {
+          "id": "numbers-l5-005.introduce.2",
+          "text": "Count the decimal places in the question: 1.2 has 1 and 0.5 has 1, so 2 in all. The answer needs 2 places: 60 becomes 0.60, which is 0.6.",
+          "speech": "Count the decimal places in the question: 1.2 has 1 and 0.5 has 1, so 2 in all. The answer needs 2 places: 60 becomes 0.60, which is 0.6.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "12 x 5 = 60  ->  0.60"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-005.demonstrate.1",
+          "text": "Try 3.2 x 0.6. Whole numbers: 32 x 6 = 192. Places: 1 + 1 = 2. So the answer is 1.92.",
+          "speech": "Try 3.2 times 0.6. Whole numbers: 32 times 6 equals 192. Places: 1 plus 1 equals 2. So the answer is 1.92.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3.2 x 0.6 = 1.92"
+          }
+        },
+        {
+          "id": "numbers-l5-005.demonstrate.2",
+          "text": "Try 0.25 x 12. Whole numbers: 25 x 12 = 300. Places: 2 + 0 = 2. So 3.00, which is just 3.",
+          "speech": "Try 0.25 times 12. Whole numbers: 25 times 12 equals 300. Places: 2 plus 0 equals 2. So 3.00, which is just 3.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "0.25 x 12 = 3"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-005.guided.1",
+          "prompt": "What is 1.2 x 0.5?",
+          "speech": "What is 1.2 times 0.5?",
+          "options": [
+            "0.6",
+            "0.06",
+            "6"
+          ],
+          "answer": "0.6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Ignore the points and multiply as whole numbers. Then count the decimal places in both numbers.",
+            "12 x 5 = 60. The numbers have 2 decimal places in all, so the answer has 2: 0.6."
+          ],
+          "wrong_feedback": {
+            "0.06": "The point is one place too far left. Together the numbers have 2 decimal places.",
+            "6": "The point is one place too far right. Together the numbers have 2 decimal places."
+          },
+          "explanation": "1.2 x 0.5 = 0.6, because 12 x 5 = 60 and the answer needs 2 decimal places.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-005.guided.2",
+          "prompt": "How many digits come after the point in the answer to 0.3 x 0.04?",
+          "speech": "How many digits come after the point in the answer to 0.3 times 0.04?",
+          "options": [
+            "2",
+            "3",
+            "4"
+          ],
+          "answer": "3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Count the digits after the point in each number, then add the two counts.",
+            "0.3 has 1 and 0.04 has 2, so the answer has 1 + 2 = 3."
+          ],
+          "wrong_feedback": {
+            "2": "You counted only the larger number of places. Add the places from both numbers.",
+            "4": "That is one place too many. Add the places in the two numbers exactly."
+          },
+          "explanation": "The answer has 1 + 2 = 3 digits after the point.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-005.practice.1",
+          "prompt": "What is 3.2 x 0.6?",
+          "speech": "What is 3.2 times 0.6?",
+          "options": [
+            "0.192",
+            "19.2",
+            "1.92"
+          ],
+          "answer": "1.92",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Ignore the points and multiply as whole numbers. Then count the decimal places in both numbers.",
+            "32 x 6 = 192. The numbers have 2 decimal places in all, so the answer has 2: 1.92."
+          ],
+          "wrong_feedback": {
+            "0.192": "The point is one place too far left. Together the numbers have 2 decimal places.",
+            "19.2": "The point is one place too far right. Together the numbers have 2 decimal places."
+          },
+          "explanation": "3.2 x 0.6 = 1.92, because 32 x 6 = 192 and the answer needs 2 decimal places.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-005.practice.2",
+          "prompt": "What is 0.7 x 0.8?",
+          "speech": "What is 0.7 times 0.8?",
+          "options": [
+            "0.56",
+            "0.056",
+            "5.6"
+          ],
+          "answer": "0.56",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Ignore the points and multiply as whole numbers. Then count the decimal places in both numbers.",
+            "7 x 8 = 56. The numbers have 2 decimal places in all, so the answer has 2: 0.56."
+          ],
+          "wrong_feedback": {
+            "0.056": "The point is one place too far left. Together the numbers have 2 decimal places.",
+            "5.6": "The point is one place too far right. Together the numbers have 2 decimal places."
+          },
+          "explanation": "0.7 x 0.8 = 0.56, because 7 x 8 = 56 and the answer needs 2 decimal places.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-005.practice.3",
+          "prompt": "A bottle holds 1.5 litres. How many litres do 4 bottles hold?",
+          "speech": "A bottle holds 1.5 litres. How many litres do 4 bottles hold?",
+          "options": [
+            "0.6",
+            "6",
+            "60"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Several bottles means multiplying. Multiply as whole numbers first, then place the point.",
+            "15 x 4 = 60. The numbers have 1 decimal places in all, so the answer has 1: 6."
+          ],
+          "wrong_feedback": {
+            "0.6": "The point is one place too far left. Together the numbers have 1 decimal places.",
+            "60": "The point is one place too far right. Together the numbers have 1 decimal places."
+          },
+          "explanation": "1.5 x 4 = 6, because 15 x 4 = 60 and the answer needs 1 decimal places.",
+          "difficulty": 3
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-005.check.1",
+          "prompt": "What is 0.25 x 12?",
+          "speech": "What is 0.25 times 12?",
+          "options": [
+            "0.3",
+            "30",
+            "3"
+          ],
+          "answer": "3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "0.3": "The point is one place too far left. Together the numbers have 2 decimal places.",
+            "30": "The point is one place too far right. Together the numbers have 2 decimal places."
+          },
+          "explanation": "0.25 x 12 = 3, because 25 x 12 = 300 and the answer needs 2 decimal places.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-005.check.2",
+          "prompt": "What is 4.5 x 0.2?",
+          "speech": "What is 4.5 times 0.2?",
+          "options": [
+            "0.9",
+            "0.09",
+            "9"
+          ],
+          "answer": "0.9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "0.09": "The point is one place too far left. Together the numbers have 2 decimal places.",
+            "9": "The point is one place too far right. Together the numbers have 2 decimal places."
+          },
+          "explanation": "4.5 x 0.2 = 0.9, because 45 x 2 = 90 and the answer needs 2 decimal places.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-005.check.3",
+          "prompt": "A rope is 3.6 metres long. Ravi uses 0.5 of it. How many metres does he use?",
+          "speech": "A rope is 3.6 metres long. Ravi uses 0.5 of it. How many metres does he use?",
+          "options": [
+            "0.18",
+            "1.8",
+            "18"
+          ],
+          "answer": "1.8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "0.18": "The point is one place too far left. Together the numbers have 2 decimal places.",
+            "18": "The point is one place too far right. Together the numbers have 2 decimal places."
+          },
+          "explanation": "3.6 x 0.5 = 1.8, because 36 x 5 = 180 and the answer needs 2 decimal places.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-005.remediation_explain.1",
+            "text": "Another way: use fractions. 0.5 is 5/10 and 0.3 is 3/10. Multiplying gives 15/100, which is 0.15. Two places in the question show up as hundredths.",
+            "speech": "Another way: use fractions. 0.5 is 5/10 and 0.3 is 3/10. Multiplying gives 15/100, which is 0.15. Two places in the question show up as hundredths.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "5/10 x 3/10 = 15/100"
+            }
+          },
+          {
+            "id": "numbers-l5-005.remediation_explain.2",
+            "text": "Check by estimating. 3.2 x 0.6 is about 3 x 0.6, which is a little under 2. So 1.92 is sensible, but 19.2 and 0.192 are not.",
+            "speech": "Check by estimating. 3.2 times 0.6 is about 3 times 0.6, which is a little under 2. So 1.92 is sensible, but 19.2 and 0.192 are not.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "about 2"
+            }
+          },
+          {
+            "id": "numbers-l5-005.remediation_explain.3",
+            "text": "Multiplying by a number less than 1 makes the answer smaller. 0.7 x 0.8 = 0.56, which is smaller than 0.7. Always check the size of your answer.",
+            "speech": "Multiplying by a number less than 1 makes the answer smaller. 0.7 times 0.8 equals 0.56, which is smaller than 0.7. Always check the size of your answer.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "0.7 x 0.8 = 0.56"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-005.remediation_guided.1",
+            "prompt": "What is 1.4 x 0.3?",
+            "speech": "What is 1.4 times 0.3?",
+            "options": [
+              "0.042",
+              "4.2",
+              "0.42"
+            ],
+            "answer": "0.42",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Ignore the points and multiply as whole numbers. Then count the decimal places in both numbers.",
+              "14 x 3 = 42. The numbers have 2 decimal places in all, so the answer has 2: 0.42."
+            ],
+            "wrong_feedback": {
+              "0.042": "The point is one place too far left. Together the numbers have 2 decimal places.",
+              "4.2": "The point is one place too far right. Together the numbers have 2 decimal places."
+            },
+            "explanation": "1.4 x 0.3 = 0.42, because 14 x 3 = 42 and the answer needs 2 decimal places.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-005.remediation_guided.2",
+            "prompt": "How many digits come after the point in the answer to 1.3 x 0.15?",
+            "speech": "How many digits come after the point in the answer to 1.3 times 0.15?",
+            "options": [
+              "3",
+              "2",
+              "4"
+            ],
+            "answer": "3",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Count the digits after the point in each number, then add the two counts.",
+              "1.3 has 1 and 0.15 has 2, so the answer has 1 + 2 = 3."
+            ],
+            "wrong_feedback": {
+              "2": "You counted only the larger number of places. Add the places from both numbers.",
+              "4": "That is one place too many. Add the places in the two numbers exactly."
+            },
+            "explanation": "The answer has 1 + 2 = 3 digits after the point.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-005.remediation_check.1",
+            "prompt": "What is 2.4 x 0.5?",
+            "speech": "What is 2.4 times 0.5?",
+            "options": [
+              "0.12",
+              "1.2",
+              "12"
+            ],
+            "answer": "1.2",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "0.12": "The point is one place too far left. Together the numbers have 2 decimal places.",
+              "12": "The point is one place too far right. Together the numbers have 2 decimal places."
+            },
+            "explanation": "2.4 x 0.5 = 1.2, because 24 x 5 = 120 and the answer needs 2 decimal places.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-005.remediation_check.2",
+            "prompt": "What is 0.6 x 0.9?",
+            "speech": "What is 0.6 times 0.9?",
+            "options": [
+              "0.054",
+              "5.4",
+              "0.54"
+            ],
+            "answer": "0.54",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "0.054": "The point is one place too far left. Together the numbers have 2 decimal places.",
+              "5.4": "The point is one place too far right. Together the numbers have 2 decimal places."
+            },
+            "explanation": "0.6 x 0.9 = 0.54, because 6 x 9 = 54 and the answer needs 2 decimal places.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-005.remediation_check.3",
+            "prompt": "A bottle holds 2.5 litres. How many litres do 6 bottles hold?",
+            "speech": "A bottle holds 2.5 litres. How many litres do 6 bottles hold?",
+            "options": [
+              "15",
+              "1.5",
+              "150"
+            ],
+            "answer": "15",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "1.5": "The point is one place too far left. Together the numbers have 1 decimal places.",
+              "150": "The point is one place too far right. Together the numbers have 1 decimal places."
+            },
+            "explanation": "2.5 x 6 = 15, because 25 x 6 = 150 and the answer needs 1 decimal places.",
+            "difficulty": 3
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, negative numbers, percent and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l5a.py) with exact integer maths; decimals are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-006",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Percent of a quantity",
+      "objective": "Find a percentage of an amount.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l5-006.introduce.1",
+          "text": "Percent means out of 100. 50% is 50 out of 100, which is half. 25% is a quarter. 10% is 10 out of 100, which is one tenth.",
+          "speech": "Percent means out of 100. 50 percent is 50 out of 100, which is half. 25 percent is a quarter. 10 percent is 10 out of 100, which is one tenth.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "10% = 10/100 = 1/10"
+          }
+        },
+        {
+          "id": "numbers-l5-006.introduce.2",
+          "text": "To find a percent of an amount, find 10% first. 10% of 150 is 150 ÷ 10 = 15. Then scale: 20% is two lots of 10%, so 30.",
+          "speech": "To find a percent of an amount, find 10 percent first. 10 percent of 150 is 150 divided by 10 equals 15. Then scale: 20 percent is two lots of 10 percent, so 30.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "20% of 150 = 30"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-006.demonstrate.1",
+          "text": "Find 35% of 240. 10% is 24. 30% is 3 x 24 = 72. 5% is half of 10%, which is 12. So 35% = 72 + 12 = 84.",
+          "speech": "Find 35 percent of 240. 10 percent is 24. 30 percent is 3 times 24 equals 72. 5 percent is half of 10 percent, which is 12. So 35 percent equals 72 plus 12 equals 84.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "35% of 240 = 84"
+          }
+        },
+        {
+          "id": "numbers-l5-006.demonstrate.2",
+          "text": "A discount: a bag costs ₹800 and the discount is 25%. 25% is a quarter, so the discount is 200. The sale price is 800 - 200 = ₹600.",
+          "speech": "A discount: a bag costs ₹800 and the discount is 25 percent. 25 percent is a quarter, so the discount is 200. The sale price is 800 minus 200 equals ₹600.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "800 - 200 = 600"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-006.guided.1",
+          "prompt": "What is 20% of 150?",
+          "speech": "What is 20 percent of 150?",
+          "options": [
+            "120",
+            "300",
+            "30"
+          ],
+          "answer": "30",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Percent means out of 100. Find 10% of the amount first, then scale up or down.",
+            "10% of 150 is 15, so 20% of 150 is 30."
+          ],
+          "wrong_feedback": {
+            "120": "That is what is left after taking the percent off, not the percent itself.",
+            "300": "The point has slipped one place. Check what 10% of the amount is, then scale up."
+          },
+          "explanation": "20% of 150 = 150 x 20 ÷ 100 = 30.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-006.guided.2",
+          "prompt": "A shirt costs ₹800. The discount is 25%. What is the sale price in rupees?",
+          "speech": "A shirt costs ₹800. The discount is 25 percent. What is the sale price in rupees?",
+          "options": [
+            "600",
+            "200",
+            "1000"
+          ],
+          "answer": "600",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First find the 25% discount. Then take it away from the price.",
+            "25% of 800 = 200, and 800 - 200 = 600."
+          ],
+          "wrong_feedback": {
+            "200": "That is the discount itself. The sale price is the price after taking the discount off.",
+            "1000": "The discount makes the price smaller, so take it away. Do not add it."
+          },
+          "explanation": "The discount is 200 rupees, so the sale price is 800 - 200 = 600 rupees.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-006.practice.1",
+          "prompt": "What is 35% of 240?",
+          "speech": "What is 35 percent of 240?",
+          "options": [
+            "156",
+            "84",
+            "840"
+          ],
+          "answer": "84",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Percent means out of 100. Find 10% of the amount first, then scale up or down.",
+            "10% of 240 is 24, so 35% of 240 is 84."
+          ],
+          "wrong_feedback": {
+            "156": "That is what is left after taking the percent off, not the percent itself.",
+            "840": "The point has slipped one place. Check what 10% of the amount is, then scale up."
+          },
+          "explanation": "35% of 240 = 240 x 35 ÷ 100 = 84.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-006.practice.2",
+          "prompt": "What percent of 50 is 10?",
+          "speech": "What percent of 50 is 10?",
+          "options": [
+            "80%",
+            "10%",
+            "20%"
+          ],
+          "answer": "20%",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Write the part over the whole as a fraction, then change it to out of 100.",
+            "10/50 = 20/100, which is 20%."
+          ],
+          "wrong_feedback": {
+            "80%": "That is the percent that is left over. Find the percent that the part is.",
+            "10%": "10 is the part itself, not the percent. Divide by the whole and multiply by 100."
+          },
+          "explanation": "10 out of 50 is 20%, because 10/50 = 20/100.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-006.practice.3",
+          "prompt": "A school has 600 students. 45% of them are girls. How many girls are there?",
+          "speech": "A school has 600 students. 45 percent of them are girls. How many girls are there?",
+          "options": [
+            "270",
+            "330",
+            "2700"
+          ],
+          "answer": "270",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find 45% of the total number of students.",
+            "10% of 600 is 60, so 45% of 600 is 270."
+          ],
+          "wrong_feedback": {
+            "330": "That is what is left after taking the percent off, not the percent itself.",
+            "2700": "The point has slipped one place. Check what 10% of the amount is, then scale up."
+          },
+          "explanation": "45% of 600 = 270 girls.",
+          "difficulty": 3
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-006.check.1",
+          "prompt": "What is 15% of 200?",
+          "speech": "What is 15 percent of 200?",
+          "options": [
+            "170",
+            "30",
+            "300"
+          ],
+          "answer": "30",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "170": "That is what is left after taking the percent off, not the percent itself.",
+            "300": "The point has slipped one place. Check what 10% of the amount is, then scale up."
+          },
+          "explanation": "15% of 200 = 200 x 15 ÷ 100 = 30.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-006.check.2",
+          "prompt": "A bag costs ₹600. The discount is 30%. What is the sale price in rupees?",
+          "speech": "A bag costs ₹600. The discount is 30 percent. What is the sale price in rupees?",
+          "options": [
+            "180",
+            "780",
+            "420"
+          ],
+          "answer": "420",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "180": "That is the discount itself. The sale price is the price after taking the discount off.",
+            "780": "The discount makes the price smaller, so take it away. Do not add it."
+          },
+          "explanation": "The discount is 180 rupees, so the sale price is 600 - 180 = 420 rupees.",
+          "difficulty": 3
+        },
+        {
+          "id": "numbers-l5-006.check.3",
+          "prompt": "What percent of 60 is 18?",
+          "speech": "What percent of 60 is 18?",
+          "options": [
+            "30%",
+            "70%",
+            "18%"
+          ],
+          "answer": "30%",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "70%": "That is the percent that is left over. Find the percent that the part is.",
+            "18%": "18 is the part itself, not the percent. Divide by the whole and multiply by 100."
+          },
+          "explanation": "18 out of 60 is 30%, because 18/60 = 30/100.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-006.remediation_explain.1",
+            "text": "Another way: change the percent to a fraction. 20% = 20/100 = 1/5. So 20% of 150 is a fifth of 150, which is 30.",
+            "speech": "Another way: change the percent to a fraction. 20 percent equals 20/100 equals 1/5. So 20 percent of 150 is a fifth of 150, which is 30.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "20% = 1/5"
+            }
+          },
+          {
+            "id": "numbers-l5-006.remediation_explain.2",
+            "text": "To find what percent a part is, write it as a fraction of the whole and make the bottom 100. 10 out of 50 is 10/50 = 20/100 = 20%.",
+            "speech": "To find what percent a part is, write it as a fraction of the whole and make the bottom 100. 10 out of 50 is 10/50 equals 20/100 equals 20 percent.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "10/50 = 20/100"
+            }
+          },
+          {
+            "id": "numbers-l5-006.remediation_explain.3",
+            "text": "For a discount, find the discount first, then take it off. Never stop at the discount itself: that is only how much you save, not what you pay.",
+            "speech": "For a discount, find the discount first, then take it off. Never stop at the discount itself: that is only how much you save, not what you pay.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "price - discount = pay"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-006.remediation_guided.1",
+            "prompt": "What is 40% of 250?",
+            "speech": "What is 40 percent of 250?",
+            "options": [
+              "150",
+              "100",
+              "1000"
+            ],
+            "answer": "100",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Find 10% of the amount first.",
+              "10% of 250 is 25, so 40% of 250 is 100."
+            ],
+            "wrong_feedback": {
+              "150": "That is what is left after taking the percent off, not the percent itself.",
+              "1000": "The point has slipped one place. Check what 10% of the amount is, then scale up."
+            },
+            "explanation": "40% of 250 = 250 x 40 ÷ 100 = 100.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-006.remediation_guided.2",
+            "prompt": "What percent of 48 is 12?",
+            "speech": "What percent of 48 is 12?",
+            "options": [
+              "75%",
+              "12%",
+              "25%"
+            ],
+            "answer": "25%",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Write the part over the whole as a fraction, then change it to out of 100.",
+              "12/48 = 25/100, which is 25%."
+            ],
+            "wrong_feedback": {
+              "75%": "That is the percent that is left over. Find the percent that the part is.",
+              "12%": "12 is the part itself, not the percent. Divide by the whole and multiply by 100."
+            },
+            "explanation": "12 out of 48 is 25%, because 12/48 = 25/100.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-006.remediation_check.1",
+            "prompt": "What is 60% of 350?",
+            "speech": "What is 60 percent of 350?",
+            "options": [
+              "210",
+              "140",
+              "2100"
+            ],
+            "answer": "210",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "140": "That is what is left after taking the percent off, not the percent itself.",
+              "2100": "The point has slipped one place. Check what 10% of the amount is, then scale up."
+            },
+            "explanation": "60% of 350 = 350 x 60 ÷ 100 = 210.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-006.remediation_check.2",
+            "prompt": "A toy costs ₹400. The discount is 15%. What is the sale price in rupees?",
+            "speech": "A toy costs ₹400. The discount is 15 percent. What is the sale price in rupees?",
+            "options": [
+              "60",
+              "340",
+              "460"
+            ],
+            "answer": "340",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "60": "That is the discount itself. The sale price is the price after taking the discount off.",
+              "460": "The discount makes the price smaller, so take it away. Do not add it."
+            },
+            "explanation": "The discount is 60 rupees, so the sale price is 400 - 60 = 340 rupees.",
+            "difficulty": 3
+          },
+          {
+            "id": "numbers-l5-006.remediation_check.3",
+            "prompt": "A school has 800 students. 35% of them are girls. How many girls are there?",
+            "speech": "A school has 800 students. 35 percent of them are girls. How many girls are there?",
+            "options": [
+              "520",
+              "2800",
+              "280"
+            ],
+            "answer": "280",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "520": "That is what is left after taking the percent off, not the percent itself.",
+              "2800": "The point has slipped one place. Check what 10% of the amount is, then scale up."
+            },
+            "explanation": "35% of 800 = 280 girls.",
+            "difficulty": 3
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, negative numbers, percent and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l5a.py) with exact integer maths; decimals are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-007",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Ratio and proportion",
+      "objective": "Scale ratios and solve direct proportion.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l5-007.introduce.1",
+          "text": "A ratio compares two amounts. 2 : 3 means for every 2 of one thing there are 3 of the other. The same ratio can be written bigger: 2 : 3 = 4 : 6.",
+          "speech": "A ratio compares two amounts. 2 : 3 means for every 2 of one thing there are 3 of the other. The same ratio can be written bigger: 2 : 3 equals 4 : 6.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "2 : 3 = 4 : 6"
+          }
+        },
+        {
+          "id": "numbers-l5-007.introduce.2",
+          "text": "To make an equal ratio, multiply both parts by the same number. 2 x 2 = 4 and 3 x 2 = 6. Adding the same number to both parts does not keep the ratio.",
+          "speech": "To make an equal ratio, multiply both parts by the same number. 2 times 2 equals 4 and 3 times 2 equals 6. Adding the same number to both parts does not keep the ratio.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "2 : 3  x2  4 : 6"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-007.demonstrate.1",
+          "text": "Find the missing number in 3 : 5 = ? : 20. 5 x 4 = 20, so multiply 3 by 4 too: 3 x 4 = 12. So 3 : 5 = 12 : 20.",
+          "speech": "Find the missing number in 3 : 5 equals ? : 20. 5 times 4 equals 20, so multiply 3 by 4 too: 3 times 4 equals 12. So 3 : 5 equals 12 : 20.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3 : 5 = 12 : 20"
+          }
+        },
+        {
+          "id": "numbers-l5-007.demonstrate.2",
+          "text": "A price problem: 5 pens cost ₹40. First find one pen: 40 ÷ 5 = ₹8. Then 8 pens cost 8 x 8 = ₹64.",
+          "speech": "A price problem: 5 pens cost ₹40. First find one pen: 40 divided by 5 equals ₹8. Then 8 pens cost 8 times 8 equals ₹64.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "5 pens = 40,  1 pen = 8"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-007.guided.1",
+          "prompt": "Complete the ratio: 3 : 5 = ? : 20",
+          "speech": "Complete the ratio: 3 : 5 equals ? : 20",
+          "options": [
+            "18",
+            "12",
+            "15"
+          ],
+          "answer": "12",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find what number the known pair was multiplied by. Do the same to the missing part.",
+            "5 x 4 = 20, so multiply 3 by 4 too: 3 x 4 = 12."
+          ],
+          "wrong_feedback": {
+            "18": "You added the same amount to both parts. A ratio stays equal only when you multiply both parts by the same number.",
+            "15": "You multiplied by the wrong amount. Find what the known pair was multiplied by."
+          },
+          "explanation": "3 : 5 = 12 : 20.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-007.guided.2",
+          "prompt": "5 pens cost ₹40. How much do 8 pens cost, in rupees?",
+          "speech": "5 pens cost ₹40. How much do 8 pens cost, in rupees?",
+          "options": [
+            "43",
+            "320",
+            "64"
+          ],
+          "answer": "64",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find the price of one pen first.",
+            "40 ÷ 5 = 8 for one pen, and 8 x 8 = 64."
+          ],
+          "wrong_feedback": {
+            "43": "You added the extra pens to the price. Find the price of one pen first, then multiply.",
+            "320": "You multiplied the price by the number of pens. First find the price of one pen."
+          },
+          "explanation": "One pen costs 8, so 8 pens cost 64 rupees.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-007.practice.1",
+          "prompt": "Complete the ratio: 4 : 7 = 12 : ?",
+          "speech": "Complete the ratio: 4 : 7 equals 12 : ?",
+          "options": [
+            "21",
+            "15",
+            "28"
+          ],
+          "answer": "21",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find what number the known pair was multiplied by. Do the same to the missing part.",
+            "4 x 3 = 12, so multiply 7 by 3 too: 7 x 3 = 21."
+          ],
+          "wrong_feedback": {
+            "15": "You added the same amount to both parts. A ratio stays equal only when you multiply both parts by the same number.",
+            "28": "You multiplied by the wrong amount. Find what the known pair was multiplied by."
+          },
+          "explanation": "4 : 7 = 12 : 21.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-007.practice.2",
+          "prompt": "Write 18 : 24 in simplest form.",
+          "speech": "Write 18 : 24 in simplest form.",
+          "options": [
+            "9 : 12",
+            "3 : 4",
+            "4 : 3"
+          ],
+          "answer": "3 : 4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find the biggest number that divides both parts, then divide both parts by it.",
+            "The biggest number going into both 18 and 24 is 6. 18 ÷ 6 = 3 and 24 ÷ 6 = 4."
+          ],
+          "wrong_feedback": {
+            "9 : 12": "That can still be made smaller. Divide by the biggest number that goes into both parts.",
+            "4 : 3": "The order is swapped. The first part of the ratio must stay first."
+          },
+          "explanation": "18 : 24 = 3 : 4 in simplest form, dividing both by 6.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-007.practice.3",
+          "prompt": "A recipe uses 3 cups of rice for 4 people. How many cups of rice are needed for 12 people?",
+          "speech": "A recipe uses 3 cups of rice for 4 people. How many cups of rice are needed for 12 people?",
+          "options": [
+            "11",
+            "36",
+            "9"
+          ],
+          "answer": "9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find how many times bigger the new group is, then multiply the rice by that.",
+            "12 ÷ 4 = 3, so the rice is 3 x 3 = 9 cups."
+          ],
+          "wrong_feedback": {
+            "11": "You added the same extra to both. Proportion means multiplying both by the same number.",
+            "36": "You multiplied the cups by the number of people but did not divide by the first number of people."
+          },
+          "explanation": "12 people need 9 cups of rice.",
+          "difficulty": 3
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-007.check.1",
+          "prompt": "Complete the ratio: 5 : 3 = 20 : ?",
+          "speech": "Complete the ratio: 5 : 3 equals 20 : ?",
+          "options": [
+            "12",
+            "18",
+            "15"
+          ],
+          "answer": "12",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "18": "You added the same amount to both parts. A ratio stays equal only when you multiply both parts by the same number.",
+            "15": "You multiplied by the wrong amount. Find what the known pair was multiplied by."
+          },
+          "explanation": "5 : 3 = 20 : 12.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-007.check.2",
+          "prompt": "Write 30 : 45 in simplest form.",
+          "speech": "Write 30 : 45 in simplest form.",
+          "options": [
+            "10 : 15",
+            "2 : 3",
+            "3 : 2"
+          ],
+          "answer": "2 : 3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "10 : 15": "That can still be made smaller. Divide by the biggest number that goes into both parts.",
+            "3 : 2": "The order is swapped. The first part of the ratio must stay first."
+          },
+          "explanation": "30 : 45 = 2 : 3 in simplest form, dividing both by 15.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-007.check.3",
+          "prompt": "Share ₹60 in the ratio 2 : 3. What is the larger share in rupees?",
+          "speech": "Share ₹60 in the ratio 2 : 3. What is the larger share in rupees?",
+          "options": [
+            "24",
+            "20",
+            "36"
+          ],
+          "answer": "36",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "24": "That is the smaller share. Check which part of the ratio you need.",
+            "20": "You divided the total by one part of the ratio. Divide by the sum of the parts."
+          },
+          "explanation": "The larger share is 36 rupees; one part is 12 rupees.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-007.remediation_explain.1",
+            "text": "Another way: a recipe. 2 cups of rice feed 3 people. For 6 people, that is double the people, so double the rice: 4 cups.",
+            "speech": "Another way: a recipe. 2 cups of rice feed 3 people. For 6 people, that is double the people, so double the rice: 4 cups.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3 people -> 6 people: 2 cups -> 4 cups"
+            }
+          },
+          {
+            "id": "numbers-l5-007.remediation_explain.2",
+            "text": "To write a ratio in simplest form, divide both parts by the biggest number that goes into both. 12 : 18, divide by 6: 2 : 3.",
+            "speech": "To write a ratio in simplest form, divide both parts by the biggest number that goes into both. 12 : 18, divide by 6: 2 : 3.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "12 : 18 = 2 : 3"
+            }
+          },
+          {
+            "id": "numbers-l5-007.remediation_explain.3",
+            "text": "To share in a ratio, add the parts. Share ₹50 in the ratio 2 : 3. There are 5 parts, so one part is 10. The shares are 20 and 30.",
+            "speech": "To share in a ratio, add the parts. Share ₹50 in the ratio 2 : 3. There are 5 parts, so one part is 10. The shares are 20 and 30.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2 + 3 = 5 parts"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-007.remediation_guided.1",
+            "prompt": "Complete the ratio: 2 : 9 = 8 : ?",
+            "speech": "Complete the ratio: 2 : 9 equals 8 : ?",
+            "options": [
+              "36",
+              "15",
+              "45"
+            ],
+            "answer": "36",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Find what number the known pair was multiplied by. Do the same to the missing part.",
+              "2 x 4 = 8, so multiply 9 by 4 too: 9 x 4 = 36."
+            ],
+            "wrong_feedback": {
+              "15": "You added the same amount to both parts. A ratio stays equal only when you multiply both parts by the same number.",
+              "45": "You multiplied by the wrong amount. Find what the known pair was multiplied by."
+            },
+            "explanation": "2 : 9 = 8 : 36.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-007.remediation_guided.2",
+            "prompt": "Write 8 : 12 in simplest form.",
+            "speech": "Write 8 : 12 in simplest form.",
+            "options": [
+              "4 : 6",
+              "2 : 3",
+              "3 : 2"
+            ],
+            "answer": "2 : 3",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Find the biggest number that divides both parts, then divide both parts by it.",
+              "The biggest number going into both 8 and 12 is 4. 8 ÷ 4 = 2 and 12 ÷ 4 = 3."
+            ],
+            "wrong_feedback": {
+              "4 : 6": "That can still be made smaller. Divide by the biggest number that goes into both parts.",
+              "3 : 2": "The order is swapped. The first part of the ratio must stay first."
+            },
+            "explanation": "8 : 12 = 2 : 3 in simplest form, dividing both by 4.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-007.remediation_check.1",
+            "prompt": "Complete the ratio: 7 : 3 = ? : 21",
+            "speech": "Complete the ratio: 7 : 3 equals ? : 21",
+            "options": [
+              "25",
+              "56",
+              "49"
+            ],
+            "answer": "49",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "25": "You added the same amount to both parts. A ratio stays equal only when you multiply both parts by the same number.",
+              "56": "You multiplied by the wrong amount. Find what the known pair was multiplied by."
+            },
+            "explanation": "7 : 3 = 49 : 21.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-007.remediation_check.2",
+            "prompt": "4 pens cost ₹60. How much do 7 pens cost, in rupees?",
+            "speech": "4 pens cost ₹60. How much do 7 pens cost, in rupees?",
+            "options": [
+              "105",
+              "63",
+              "420"
+            ],
+            "answer": "105",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "63": "You added the extra pens to the price. Find the price of one pen first, then multiply.",
+              "420": "You multiplied the price by the number of pens. First find the price of one pen."
+            },
+            "explanation": "One pen costs 15, so 7 pens cost 105 rupees.",
+            "difficulty": 3
+          },
+          {
+            "id": "numbers-l5-007.remediation_check.3",
+            "prompt": "Share ₹72 in the ratio 5 : 4. What is the smaller share in rupees?",
+            "speech": "Share ₹72 in the ratio 5 : 4. What is the smaller share in rupees?",
+            "options": [
+              "40",
+              "32",
+              "18"
+            ],
+            "answer": "32",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "40": "That is the larger share. Check which part of the ratio you need.",
+              "18": "You divided the total by one part of the ratio. Divide by the sum of the parts."
+            },
+            "explanation": "The smaller share is 32 rupees; one part is 8 rupees.",
+            "difficulty": 3
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, negative numbers, percent and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l5a.py) with exact integer maths; decimals are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-008",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Introduction to variables",
+      "objective": "Write and evaluate simple expressions.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l5-008.introduce.1",
+          "text": "A letter can stand for a number we do not know yet. It is called a variable. x + 5 means 5 more than x. 3x means 3 times x.",
+          "speech": "A letter can stand for a number we do not know yet. It is called a variable. times plus 5 means 5 more than x. 3x means 3 times x.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "x + 5      3x"
+          }
+        },
+        {
+          "id": "numbers-l5-008.introduce.2",
+          "text": "If we know the number, we can work it out. If x = 4, then x + 5 = 4 + 5 = 9, and 3x = 3 x 4 = 12. Note that 3x does not mean 34.",
+          "speech": "If we know the number, we can work it out. If times equals 4, then times plus 5 equals 4 plus 5 equals 9, and 3x equals 3 times 4 equals 12. Note that 3x does not mean 34.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "x = 4:  x + 5 = 9"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-008.demonstrate.1",
+          "text": "Evaluate 3n + 2 when n = 4. Replace n with 4: 3 x 4 + 2. Multiply first: 12 + 2 = 14.",
+          "speech": "Evaluate 3n plus 2 when n equals 4. Replace n with 4: 3 times 4 plus 2. Multiply first: 12 plus 2 equals 14.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3n + 2 = 14"
+          }
+        },
+        {
+          "id": "numbers-l5-008.demonstrate.2",
+          "text": "Solve n + 7 = 15. What number plus 7 makes 15? Undo the + 7 by taking 7 from 15. n = 8.",
+          "speech": "Solve n plus 7 equals 15. What number plus 7 makes 15? Undo the plus 7 by taking 7 from 15. n equals 8.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "n = 15 - 7 = 8"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-008.guided.1",
+          "prompt": "Which expression means '5 more than x'?",
+          "speech": "Which expression means '5 more than x'?",
+          "options": [
+            "x + 5",
+            "5x",
+            "x - 5"
+          ],
+          "answer": "x + 5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Which operation means \"more than\"?",
+            "\"5 more than x\" is written as x + 5."
+          ],
+          "wrong_feedback": {
+            "5x": "That is 5 times x. \"More than\" means adding.",
+            "x - 5": "That takes 5 away. \"More than\" means adding."
+          },
+          "explanation": "5 more than x is written x + 5.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-008.guided.2",
+          "prompt": "If n = 4, what is 3n + 2?",
+          "speech": "If n equals 4, what is 3n plus 2?",
+          "options": [
+            "36",
+            "14",
+            "9"
+          ],
+          "answer": "14",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Replace the letter with its value. 3n means 3 times n.",
+            "3n = 3 x 4 = 12. Then 12 + 2 = 14."
+          ],
+          "wrong_feedback": {
+            "36": "3n means 3 times n, not the digits 3 and 4 written together.",
+            "9": "3n means 3 times n. You added instead of multiplying."
+          },
+          "explanation": "When n = 4, 3n + 2 = 14.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-008.practice.1",
+          "prompt": "Solve: n + 7 = 15",
+          "speech": "Solve: n plus 7 equals 15",
+          "options": [
+            "22",
+            "7",
+            "8"
+          ],
+          "answer": "8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think: what number plus 7 makes 15? Undo the + with the opposite.",
+            "To undo + 7, take 7 from both sides: 15 - 7 = 8."
+          ],
+          "wrong_feedback": {
+            "22": "You added. To undo \"+ 7\", take 7 away from 15.",
+            "7": "7 is the number in the equation, not the answer. Take 7 away from 15."
+          },
+          "explanation": "n + 7 = 15 gives n = 8.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-008.practice.2",
+          "prompt": "Which expression means '3 less than x'?",
+          "speech": "Which expression means '3 less than x'?",
+          "options": [
+            "x - 3",
+            "3 - x",
+            "x + 3"
+          ],
+          "answer": "x - 3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Which number does the taking away start from?",
+            "\"3 less than x\" is written as x - 3."
+          ],
+          "wrong_feedback": {
+            "3 - x": "That is the wrong way round: it starts with 3. \"3 less than x\" starts from x.",
+            "x + 3": "That adds 3. \"Less than\" means taking away."
+          },
+          "explanation": "3 less than x is written x - 3.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-008.practice.3",
+          "prompt": "A pack has p pencils. Which expression gives the number of pencils in 4 packs?",
+          "speech": "A pack has p pencils. Which expression gives the number of pencils in 4 packs?",
+          "options": [
+            "p + 4",
+            "4p",
+            "p ÷ 4"
+          ],
+          "answer": "4p",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Each pack has the same number. What operation puts equal groups together?",
+            "4 packs of p pencils is 4 x p, written 4p."
+          ],
+          "wrong_feedback": {
+            "p + 4": "That adds 4 to p. 4 packs of p pencils each means 4 times p.",
+            "p ÷ 4": "That shares p among 4. We need 4 packs, so multiply."
+          },
+          "explanation": "4 packs of p pencils is 4p.",
+          "difficulty": 3
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-008.check.1",
+          "prompt": "If k = 6, what is 5k - 4?",
+          "speech": "If k equals 6, what is 5k minus 4?",
+          "options": [
+            "52",
+            "7",
+            "26"
+          ],
+          "answer": "26",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "52": "5k means 5 times k, not the digits 5 and 6 written together.",
+            "7": "5k means 5 times k. You added instead of multiplying."
+          },
+          "explanation": "When k = 6, 5k - 4 = 26.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-008.check.2",
+          "prompt": "Which expression means 'x shared equally among 4'?",
+          "speech": "Which expression means 'x shared equally among 4'?",
+          "options": [
+            "x ÷ 4",
+            "4x",
+            "x - 4"
+          ],
+          "answer": "x ÷ 4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "4x": "That multiplies by 4. Sharing equally means dividing.",
+            "x - 4": "That takes 4 away. Sharing equally means dividing."
+          },
+          "explanation": "x shared equally among 4 is written x ÷ 4.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-008.check.3",
+          "prompt": "Solve: 3m = 21",
+          "speech": "Solve: 3m equals 21",
+          "options": [
+            "18",
+            "7",
+            "63"
+          ],
+          "answer": "7",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "18": "You subtracted. 3m means 3 times m; undo it by dividing.",
+            "63": "You multiplied. 3m means 3 times m; undo it by dividing."
+          },
+          "explanation": "3m = 21 gives m = 7.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-008.remediation_explain.1",
+            "text": "Another way: a letter is a box that holds a number. In the box 3b, the box is multiplied by 3. If b holds 5, then 3b = 15.",
+            "speech": "Another way: a letter is a box that holds a number. In the box 3b, the box is multiplied by 3. If b holds 5, then 3b equals 15.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "[ b ] = 5:  3b = 15"
+            }
+          },
+          {
+            "id": "numbers-l5-008.remediation_explain.2",
+            "text": "Words turn into expressions. '5 more than x' is x + 5. '5 less than x' is x - 5. '5 times x' is 5x. 'x shared among 5' is x ÷ 5.",
+            "speech": "Words turn into expressions. '5 more than x' is times plus 5. '5 less than x' is times minus 5. '5 times x' is 5x. 'x shared among 5' is times divided by 5.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "x + 5   x - 5   5x   x ÷ 5"
+            }
+          },
+          {
+            "id": "numbers-l5-008.remediation_explain.3",
+            "text": "An equation is a balance. Whatever you do to one side you must do to the other. In 3n = 21, divide both sides by 3: n = 7.",
+            "speech": "An equation is a balance. Whatever you do to one side you must do to the other. In 3n equals 21, divide both sides by 3: n equals 7.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3n = 21   n = 7"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-008.remediation_guided.1",
+            "prompt": "Which expression means '6 times x'?",
+            "speech": "Which expression means '6 times x'?",
+            "options": [
+              "x + 6",
+              "x ÷ 6",
+              "6x"
+            ],
+            "answer": "6x",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Which operation means \"times\"?",
+              "\"6 times x\" is written as 6x."
+            ],
+            "wrong_feedback": {
+              "x + 6": "That adds 6. \"Times\" means multiplying.",
+              "x ÷ 6": "That divides by 6. \"Times\" means multiplying."
+            },
+            "explanation": "6 times x is written 6x.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-008.remediation_guided.2",
+            "prompt": "Solve: n + 9 = 20",
+            "speech": "Solve: n plus 9 equals 20",
+            "options": [
+              "11",
+              "29",
+              "9"
+            ],
+            "answer": "11",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Think: what number plus 9 makes 20? Undo the + with the opposite.",
+              "To undo + 9, take 9 from both sides: 20 - 9 = 11."
+            ],
+            "wrong_feedback": {
+              "29": "You added. To undo \"+ 9\", take 9 away from 20.",
+              "9": "9 is the number in the equation, not the answer. Take 9 away from 20."
+            },
+            "explanation": "n + 9 = 20 gives n = 11.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-008.remediation_check.1",
+            "prompt": "What is the value of 4a + b when a = 3 and b = 5?",
+            "speech": "What is the value of 4a plus b when a equals 3 and b equals 5?",
+            "options": [
+              "48",
+              "17",
+              "12"
+            ],
+            "answer": "17",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "48": "4a means 4 times a, not the digits 4 and 3 side by side.",
+              "12": "4a means 4 times a. You added instead of multiplying."
+            },
+            "explanation": "4a + b = 4 x 3 + 5 = 17.",
+            "difficulty": 3
+          },
+          {
+            "id": "numbers-l5-008.remediation_check.2",
+            "prompt": "Which expression means '8 less than x'?",
+            "speech": "Which expression means '8 less than x'?",
+            "options": [
+              "8 - x",
+              "x + 8",
+              "x - 8"
+            ],
+            "answer": "x - 8",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "8 - x": "That is the wrong way round: it starts with 8. \"8 less than x\" starts from x.",
+              "x + 8": "That adds 8. \"Less than\" means taking away."
+            },
+            "explanation": "8 less than x is written x - 8.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-008.remediation_check.3",
+            "prompt": "Solve: p - 6 = 9",
+            "speech": "Solve: p minus 6 equals 9",
+            "options": [
+              "15",
+              "3",
+              "6"
+            ],
+            "answer": "15",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "3": "You subtracted again. To undo \"- 6\", add 6 to 9.",
+              "6": "6 is the number in the equation, not the answer. Add 6 to 9."
+            },
+            "explanation": "p - 6 = 9 gives p = 15.",
+            "difficulty": 3
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, negative numbers, percent and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l5a.py) with exact integer maths; decimals are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    }
+  ]
+}

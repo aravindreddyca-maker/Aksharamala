@@ -1,0 +1,877 @@
+{
+  "schema_version": 1,
+  "status": "rhymes_unverified",
+  "rhymes": [
+    {
+      "id": "rhyme-en-001",
+      "language": "english",
+      "locale": "en-US",
+      "level": 1,
+      "title": "Twinkle, Twinkle, Little Star",
+      "lines": [
+        {
+          "text": "Twinkle, twinkle, little star,",
+          "speech": "Twinkle, twinkle, little star,",
+          "meaning_en": "A little star shines brightly."
+        },
+        {
+          "text": "How I wonder what you are!",
+          "speech": "How I wonder what you are!",
+          "meaning_en": "I think about what the star really is."
+        },
+        {
+          "text": "Up above the world so high,",
+          "speech": "Up above the world so high,",
+          "meaning_en": "It is very high above the world."
+        },
+        {
+          "text": "Like a diamond in the sky.",
+          "speech": "Like a diamond in the sky.",
+          "meaning_en": "It sparkles like a diamond in the sky."
+        }
+      ],
+      "source": "Traditional nursery rhyme, first verse only. The words come from the poem 'The Star' by Jane Taylor, published 1806 (author known, long out of copyright, public domain). The tune is a traditional French melody and is NOT provided in the app.",
+      "picture": "",
+      "picture_concept": "A big friendly yellow star with a smiling glow in a dark blue night sky, small stars around, a tiny village or hill below.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 3,
+            "blank_word": "diamond",
+            "options": [
+              "diamond",
+              "flower",
+              "pencil"
+            ],
+            "answer": "diamond"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "TTS pronunciation on device",
+          "copyright status confidence: high, not legally verified"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-en-002",
+      "language": "english",
+      "locale": "en-US",
+      "level": 1,
+      "title": "Baa, Baa, Black Sheep",
+      "lines": [
+        {
+          "text": "Baa, baa, black sheep,",
+          "speech": "Baa, baa, black sheep,",
+          "meaning_en": "Someone speaks to a black sheep."
+        },
+        {
+          "text": "Have you any wool?",
+          "speech": "Have you any wool?",
+          "meaning_en": "Do you have any wool?"
+        },
+        {
+          "text": "Yes sir, yes sir,",
+          "speech": "Yes sir, yes sir,",
+          "meaning_en": "The sheep answers politely: yes."
+        },
+        {
+          "text": "Three bags full.",
+          "speech": "Three bags full.",
+          "meaning_en": "It has enough wool to fill three bags."
+        }
+      ],
+      "source": "Traditional English nursery rhyme, first four lines of the first verse (earliest printed version 1744, authorship unknown, public domain). Melody not provided.",
+      "picture": "",
+      "picture_concept": "A fluffy black sheep standing in a green field, smiling, with three bags of wool beside it.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 1,
+            "blank_word": "wool",
+            "options": [
+              "wool",
+              "milk",
+              "grass"
+            ],
+            "answer": "wool"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "TTS pronunciation on device",
+          "parents may prefer a different colour word; wording kept traditional"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-en-003",
+      "language": "english",
+      "locale": "en-US",
+      "level": 1,
+      "title": "Humpty Dumpty",
+      "lines": [
+        {
+          "text": "Humpty Dumpty sat on a wall,",
+          "speech": "Humpty Dumpty sat on a wall,",
+          "meaning_en": "Humpty Dumpty, an egg-shaped character, sat on a wall."
+        },
+        {
+          "text": "Humpty Dumpty had a great fall.",
+          "speech": "Humpty Dumpty had a great fall.",
+          "meaning_en": "He fell down badly."
+        },
+        {
+          "text": "All the king's horses and all the king's men",
+          "speech": "All the king's horses, and all the king's men,",
+          "meaning_en": "All of the king's horses and soldiers"
+        },
+        {
+          "text": "Couldn't put Humpty together again.",
+          "speech": "Couldn't put Humpty together again.",
+          "meaning_en": "could not fix him and put him back together."
+        }
+      ],
+      "source": "Traditional English nursery rhyme, first printed 1797, authorship unknown, public domain. Melody not provided.",
+      "picture": "",
+      "picture_concept": "A smiling egg character with little arms and legs sitting on a brick wall, a horse and a soldier looking on kindly (gentle, no distress).",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 0,
+            "blank_word": "wall",
+            "options": [
+              "wall",
+              "tree",
+              "boat"
+            ],
+            "answer": "wall"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "TTS pronunciation on device",
+          "picture must keep the fall gentle for young children"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-en-004",
+      "language": "english",
+      "locale": "en-US",
+      "level": 1,
+      "title": "Jack and Jill",
+      "lines": [
+        {
+          "text": "Jack and Jill went up the hill",
+          "speech": "Jack and Jill went up the hill",
+          "meaning_en": "Two children walked up a hill."
+        },
+        {
+          "text": "To fetch a pail of water.",
+          "speech": "To fetch a pail of water.",
+          "meaning_en": "They went to get a bucket of water."
+        },
+        {
+          "text": "Jack fell down and broke his crown,",
+          "speech": "Jack fell down and broke his crown,",
+          "meaning_en": "Jack fell and hurt his head ('crown' means the top of the head)."
+        },
+        {
+          "text": "And Jill came tumbling after.",
+          "speech": "And Jill came tumbling after.",
+          "meaning_en": "Jill fell down after him."
+        }
+      ],
+      "source": "Traditional English nursery rhyme, first verse only (known from the 1760s, authorship unknown, public domain). Melody not provided.",
+      "picture": "",
+      "picture_concept": "A boy and a girl climbing a green hill carrying a wooden pail, a well at the top, cheerful mood.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 1,
+            "blank_word": "water",
+            "options": [
+              "water",
+              "sand",
+              "paint"
+            ],
+            "answer": "water"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "TTS pronunciation on device",
+          "'crown' and 'pail' are old words; parent may need to explain"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-en-005",
+      "language": "english",
+      "locale": "en-US",
+      "level": 1,
+      "title": "Row, Row, Row Your Boat",
+      "lines": [
+        {
+          "text": "Row, row, row your boat,",
+          "speech": "Row, row, row your boat,",
+          "meaning_en": "Push your boat along with oars."
+        },
+        {
+          "text": "Gently down the stream.",
+          "speech": "Gently down the stream.",
+          "meaning_en": "Go softly down the river."
+        },
+        {
+          "text": "Merrily, merrily, merrily, merrily,",
+          "speech": "Merrily, merrily, merrily, merrily,",
+          "meaning_en": "Happily, happily, happily, happily,"
+        },
+        {
+          "text": "Life is but a dream.",
+          "speech": "Life is but a dream.",
+          "meaning_en": "Life is like a happy dream."
+        }
+      ],
+      "source": "Traditional children's song; words first published 1881 (credited to Eliphalet Oram Lyte in that publication; long out of copyright, public domain). Melody not provided.",
+      "picture": "assets/images/quiz/boat.png",
+      "picture_concept": "A small boat on a calm river with two oars, a child rowing, soft morning light.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 1,
+            "blank_word": "stream",
+            "options": [
+              "stream",
+              "road",
+              "hill"
+            ],
+            "answer": "stream"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "TTS pronunciation on device",
+          "existing boat.png fitness to be confirmed by a person looking at it"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-en-006",
+      "language": "english",
+      "locale": "en-US",
+      "level": 1,
+      "title": "Itsy Bitsy Spider",
+      "lines": [
+        {
+          "text": "The itsy bitsy spider climbed up the waterspout.",
+          "speech": "The itsy bitsy spider climbed up the waterspout.",
+          "meaning_en": "A tiny spider climbed up a water pipe."
+        },
+        {
+          "text": "Down came the rain and washed the spider out.",
+          "speech": "Down came the rain, and washed the spider out.",
+          "meaning_en": "Rain fell and washed the spider down."
+        },
+        {
+          "text": "Out came the sun and dried up all the rain,",
+          "speech": "Out came the sun, and dried up all the rain,",
+          "meaning_en": "The sun came out and dried the rain."
+        },
+        {
+          "text": "And the itsy bitsy spider climbed up the spout again.",
+          "speech": "And the itsy bitsy spider climbed up the spout again.",
+          "meaning_en": "The spider climbed up the pipe once more."
+        }
+      ],
+      "source": "Traditional children's song (American wording, 'itsy bitsy'; British 'incy wincy'), first verse only, in circulation since the early 1900s, authorship unknown, public domain. Wording has regional variants; this is the common US form. Melody not provided.",
+      "picture": "",
+      "picture_concept": "A tiny smiling spider climbing a red water pipe; rain on the left half of the picture, a bright sun on the right half.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 2,
+            "blank_word": "sun",
+            "options": [
+              "sun",
+              "moon",
+              "snow"
+            ],
+            "answer": "sun"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "TTS pronunciation on device",
+          "wording variant: 'waterspout' vs 'water spout'",
+          "copyright status confidence: high, not legally verified"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-te-001",
+      "language": "telugu",
+      "locale": "te-IN",
+      "level": 1,
+      "title": "చిట్టి చిలకమ్మ",
+      "lines": [
+        {
+          "text": "చిట్టి చిలకమ్మ అమ్మ కొట్టిందా",
+          "speech": "చిట్టి చిలకమ్మ, అమ్మ కొట్టిందా?",
+          "meaning_en": "Little parrot, did Mother hit you?"
+        },
+        {
+          "text": "తోటకెళ్ళావా పండు తెచ్చావా",
+          "speech": "తోటకెళ్ళావా, పండు తెచ్చావా?",
+          "meaning_en": "Did you go to the garden and bring a fruit?"
+        },
+        {
+          "text": "గూట్లో పెట్టావా గుటుక్కున మింగావా",
+          "speech": "గూట్లో పెట్టావా, గుటుక్కున మింగావా?",
+          "meaning_en": "Did you put it in the nest, or gulp it down?"
+        }
+      ],
+      "source": "Traditional Telugu folk children's rhyme, as commonly sung; no single author known to me. Exact wording has variants. Confidence that it is folk/public domain: medium-high (a film song with a similar opening may exist; not checked). Melody not provided.",
+      "picture": "",
+      "picture_concept": "A small green parrot with a red beak holding a fruit near a nest in a garden tree; a mother bird nearby.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 1,
+            "blank_word": "పండు",
+            "options": [
+              "పండు",
+              "బంతి",
+              "పుస్తకం"
+            ],
+            "answer": "పండు"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "exact traditional wording and spelling of all 3 lines",
+          "copyright / folk status",
+          "TTS pronunciation of te-IN voice",
+          "meaning_en",
+          "whether 'Mother hit you' tone suits young children"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-te-002",
+      "language": "telugu",
+      "locale": "te-IN",
+      "level": 1,
+      "title": "చందమామ రావే",
+      "lines": [
+        {
+          "text": "చందమామ రావే",
+          "speech": "చందమామ రావే,",
+          "meaning_en": "Moon, please come."
+        },
+        {
+          "text": "జాబిల్లి రావే",
+          "speech": "జాబిల్లి రావే,",
+          "meaning_en": "Little moon, please come."
+        },
+        {
+          "text": "కొండెక్కి రావే",
+          "speech": "కొండెక్కి రావే,",
+          "meaning_en": "Climb the hill and come."
+        },
+        {
+          "text": "గోగుపూలు తేవే",
+          "speech": "గోగుపూలు తేవే.",
+          "meaning_en": "Bring gogu (roselle) flowers."
+        }
+      ],
+      "source": "Traditional Telugu lullaby, authorship unknown, folk / public domain (widely known; many longer versions exist, only the opening four short lines used). Confidence in wording: medium-high. Melody not provided.",
+      "picture": "",
+      "picture_concept": "A big smiling full moon rising behind a hill, a mother and baby looking up, small flowers in the foreground.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 0,
+            "blank_word": "చందమామ",
+            "options": [
+              "చందమామ",
+              "కుర్చీ",
+              "చెప్పు"
+            ],
+            "answer": "చందమామ"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "exact traditional wording of the 4 lines",
+          "TTS pronunciation of te-IN voice",
+          "meaning_en",
+          "new blank చందమామ and distractors కుర్చీ / చెప్పు (revised after verifier REVISE)",
+          "word 'గోగుపూలు' in the last line may still be unfamiliar; native educator to confirm"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": true
+    },
+    {
+      "id": "rhyme-te-003",
+      "language": "telugu",
+      "locale": "te-IN",
+      "level": 1,
+      "title": "పిల్లి కుక్క",
+      "lines": [
+        {
+          "text": "పిల్లి పిల్లి మియావ్ మియావ్",
+          "speech": "పిల్లి పిల్లి, మియావ్ మియావ్,",
+          "meaning_en": "Cat, cat, meow meow,"
+        },
+        {
+          "text": "పాలు తాగి నిద్రపోయింది",
+          "speech": "పాలు తాగి నిద్రపోయింది.",
+          "meaning_en": "drank milk and went to sleep."
+        },
+        {
+          "text": "కుక్క కుక్క భౌ భౌ",
+          "speech": "కుక్క కుక్క, భౌ భౌ,",
+          "meaning_en": "Dog, dog, bow-wow,"
+        },
+        {
+          "text": "ఇంటికి కాపలా కాస్తోంది",
+          "speech": "ఇంటికి కాపలా కాస్తోంది.",
+          "meaning_en": "is guarding the house."
+        }
+      ],
+      "source": "original, written for Aksharamala (not a traditional rhyme). Written by the content-creator agent; has had no human or native review.",
+      "picture": "assets/images/quiz/cat.png",
+      "picture_concept": "A cat curled up asleep next to a bowl of milk, and a dog sitting at a house door on guard. (Existing cat.png covers only the cat; a dog should be added.)",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 1,
+            "blank_word": "పాలు",
+            "options": [
+              "పాలు",
+              "రాళ్ళు",
+              "పుస్తకం"
+            ],
+            "answer": "పాలు"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "grammar and natural flow of all 4 lines (original text)",
+          "spelling",
+          "TTS pronunciation of te-IN voice",
+          "meaning_en",
+          "cat.png fitness"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-hi-001",
+      "language": "hindi",
+      "locale": "hi-IN",
+      "level": 1,
+      "title": "चंदा मामा दूर के",
+      "lines": [
+        {
+          "text": "चंदा मामा दूर के",
+          "speech": "चंदा मामा दूर के,",
+          "meaning_en": "Uncle Moon, who lives far away,"
+        },
+        {
+          "text": "पुए पकाए बूर के",
+          "speech": "पुए पकाए बूर के,",
+          "meaning_en": "cooked sweet puas made with sugar,"
+        },
+        {
+          "text": "आप खाएं थाली में",
+          "speech": "आप खाएं थाली में,",
+          "meaning_en": "you eat from a plate,"
+        },
+        {
+          "text": "मुन्ने को दें प्याली में",
+          "speech": "मुन्ने को दें प्याली में,",
+          "meaning_en": "and give the baby his share in a small cup."
+        },
+        {
+          "text": "प्याली गई टूट",
+          "speech": "प्याली गई टूट,",
+          "meaning_en": "The cup broke,"
+        },
+        {
+          "text": "मुन्ना गया रूठ",
+          "speech": "मुन्ना गया रूठ।",
+          "meaning_en": "and the baby sulked."
+        }
+      ],
+      "source": "Traditional Hindi folk lullaby, authorship unknown, public domain as far as I know. Wording has variants ('बूर' is powdered sugar; some versions say 'भूर' or differ in later lines). Melody not provided.",
+      "picture": "",
+      "picture_concept": "A smiling moon uncle in the night sky holding a plate of puas, a baby below looking up with a small cup.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 2,
+            "blank_word": "थाली",
+            "options": [
+              "थाली",
+              "किताब",
+              "गाड़ी"
+            ],
+            "answer": "थाली"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "exact wording and spelling (बूर / भूर, मुन्ने / मुन्ना)",
+          "TTS pronunciation of hi-IN voice",
+          "meaning_en ('पुए', 'बूर' glossed)",
+          "copyright / folk status confidence: medium-high"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-hi-002",
+      "language": "hindi",
+      "locale": "hi-IN",
+      "level": 1,
+      "title": "आलू कचालू",
+      "lines": [
+        {
+          "text": "आलू कचालू बेटा कहाँ गए थे",
+          "speech": "आलू कचालू, बेटा कहाँ गए थे?",
+          "meaning_en": "Potato-boy, my child, where did you go?"
+        },
+        {
+          "text": "बैंगन की टोकरी में सो रहे थे",
+          "speech": "बैंगन की टोकरी में सो रहे थे।",
+          "meaning_en": "I was sleeping in the brinjal basket."
+        },
+        {
+          "text": "बैंगन ने लात मारी रो रहे थे",
+          "speech": "बैंगन ने लात मारी, रो रहे थे।",
+          "meaning_en": "The brinjal kicked me, so I was crying."
+        },
+        {
+          "text": "मम्मी ने प्यार किया हँस रहे थे",
+          "speech": "मम्मी ने प्यार किया, हँस रहे थे।",
+          "meaning_en": "Mummy gave me a hug and I was laughing."
+        }
+      ],
+      "source": "Traditional Hindi children's rhyme, authorship unknown, folk / public domain as far as I know. Wording has regional variants. Confidence in exact wording: medium. Melody not provided.",
+      "picture": "",
+      "picture_concept": "A cheerful little potato character leaving a basket of brinjals, a mother hugging a laughing child.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 1,
+            "blank_word": "टोकरी",
+            "options": [
+              "टोकरी",
+              "नदी",
+              "मेज़"
+            ],
+            "answer": "टोकरी"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "exact wording / which version is standard",
+          "'brinjal kicks, child cries' tone",
+          "TTS pronunciation of hi-IN voice",
+          "meaning_en",
+          "copyright / folk status confidence: medium"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-hi-003",
+      "language": "hindi",
+      "locale": "hi-IN",
+      "level": 1,
+      "title": "चिड़िया रानी",
+      "lines": [
+        {
+          "text": "चिड़िया रानी चूँ चूँ चूँ",
+          "speech": "चिड़िया रानी, चूँ चूँ चूँ,",
+          "meaning_en": "Queen bird, chirp chirp chirp,"
+        },
+        {
+          "text": "दाना खाती है",
+          "speech": "दाना खाती है,",
+          "meaning_en": "eats grain,"
+        },
+        {
+          "text": "पानी पीती है",
+          "speech": "पानी पीती है,",
+          "meaning_en": "drinks water,"
+        },
+        {
+          "text": "फुर्र से उड़ जाती है",
+          "speech": "फुर्र से उड़ जाती है।",
+          "meaning_en": "and flies away with a whoosh."
+        }
+      ],
+      "source": "original, written for Aksharamala (not a traditional rhyme). Written by the content-creator agent; has had no human or native review.",
+      "picture": "",
+      "picture_concept": "A small colourful bird eating grains, then drinking from a clay bowl, then flying up; three small panels.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 1,
+            "blank_word": "दाना",
+            "options": [
+              "दाना",
+              "पत्थर",
+              "कागज़"
+            ],
+            "answer": "दाना"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "grammar and natural flow (original text)",
+          "spelling",
+          "TTS pronunciation of hi-IN voice",
+          "meaning_en"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-ta-001",
+      "language": "tamil",
+      "locale": "ta-IN",
+      "level": 1,
+      "title": "நிலா நிலா ஓடி வா",
+      "lines": [
+        {
+          "text": "நிலா நிலா ஓடி வா",
+          "speech": "நிலா நிலா, ஓடி வா,",
+          "meaning_en": "Moon, moon, come running,"
+        },
+        {
+          "text": "நில்லாமல் ஓடி வா",
+          "speech": "நில்லாமல் ஓடி வா,",
+          "meaning_en": "come running without stopping,"
+        },
+        {
+          "text": "மலை மேலே ஏறி வா",
+          "speech": "மலை மேலே ஏறி வா,",
+          "meaning_en": "climb up the hill and come,"
+        },
+        {
+          "text": "மல்லிகைப் பூ கொண்டு வா",
+          "speech": "மல்லிகைப் பூ கொண்டு வா.",
+          "meaning_en": "bring jasmine flowers."
+        }
+      ],
+      "source": "Traditional Tamil children's rhyme as commonly taught. I believe it is folk, but I am NOT certain no named author is credited in some collections; wording has variants (e.g. 'மலை மேலே' / 'மலை மேல'). Confidence in copyright-free status: medium. Melody not provided.",
+      "picture": "",
+      "picture_concept": "A smiling round moon rolling down a hill toward a child holding a string of jasmine flowers.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 2,
+            "blank_word": "மலை",
+            "options": [
+              "மலை",
+              "கடல்",
+              "ஆறு"
+            ],
+            "answer": "மலை"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "exact traditional wording and spelling",
+          "authorship / copyright check (important)",
+          "TTS pronunciation of ta-IN voice",
+          "meaning_en"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-ta-002",
+      "language": "tamil",
+      "locale": "ta-IN",
+      "level": 1,
+      "title": "கை வீசம்மா கை வீசு",
+      "lines": [
+        {
+          "text": "கை வீசம்மா கை வீசு",
+          "speech": "கை வீசம்மா, கை வீசு,",
+          "meaning_en": "Swing your arms, swing your arms,"
+        },
+        {
+          "text": "கடைக்குப் போகலாம் கை வீசு",
+          "speech": "கடைக்குப் போகலாம், கை வீசு,",
+          "meaning_en": "we can go to the shop, swing your arms,"
+        },
+        {
+          "text": "மிட்டாய் வாங்கலாம் கை வீசு",
+          "speech": "மிட்டாய் வாங்கலாம், கை வீசு,",
+          "meaning_en": "we can buy sweets, swing your arms,"
+        },
+        {
+          "text": "மெதுவாய்த் தின்னலாம் கை வீசு",
+          "speech": "மெதுவாய்த் தின்னலாம், கை வீசு.",
+          "meaning_en": "we can eat them slowly, swing your arms."
+        }
+      ],
+      "source": "Traditional Tamil children's action rhyme, authorship unknown to me, folk / public domain as far as I know. Wording has variants. Confidence in wording: medium-high. Melody not provided.",
+      "picture": "",
+      "picture_concept": "A child walking happily with arms swinging toward a small village shop with jars of sweets.",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 2,
+            "blank_word": "மிட்டாய்",
+            "options": [
+              "மிட்டாய்",
+              "கல்",
+              "மழை"
+            ],
+            "answer": "மிட்டாய்"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "exact traditional wording and spelling",
+          "copyright / folk status",
+          "TTS pronunciation of ta-IN voice",
+          "meaning_en",
+          "distractor 'மழை' replaces 'புத்தகம்' (revised after verifier REVISE)"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    },
+    {
+      "id": "rhyme-ta-003",
+      "language": "tamil",
+      "locale": "ta-IN",
+      "level": 1,
+      "title": "பூனைக்குட்டி நாய்க்குட்டி",
+      "lines": [
+        {
+          "text": "பூனைக்குட்டி மியாவ் மியாவ்",
+          "speech": "பூனைக்குட்டி, மியாவ் மியாவ்,",
+          "meaning_en": "Kitten, meow meow,"
+        },
+        {
+          "text": "பாலைக் குடிக்கும் மியாவ் மியாவ்",
+          "speech": "பாலைக் குடிக்கும், மியாவ் மியாவ்.",
+          "meaning_en": "drinks the milk, meow meow."
+        },
+        {
+          "text": "நாய்க்குட்டி வள் வள்",
+          "speech": "நாய்க்குட்டி, வள் வள்,",
+          "meaning_en": "Puppy, bow-wow,"
+        },
+        {
+          "text": "வீட்டைக் காக்கும் வள் வள்",
+          "speech": "வீட்டைக் காக்கும், வள் வள்.",
+          "meaning_en": "guards the house, bow-wow."
+        }
+      ],
+      "source": "original, written for Aksharamala (not a traditional rhyme). Written by the content-creator agent; has had no human or native review.",
+      "picture": "assets/images/quiz/cat.png",
+      "picture_concept": "A kitten drinking milk from a bowl and a puppy sitting by a house door. (Existing cat.png covers only the cat; a puppy should be added.)",
+      "activity": {
+        "kind": "missing_word",
+        "items": [
+          {
+            "line_index": 1,
+            "blank_word": "பாலைக்",
+            "options": [
+              "பாலைக்",
+              "கல்லைக்",
+              "பையைக்"
+            ],
+            "answer": "பாலைக்"
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": true,
+        "items_to_review": [
+          "grammar and natural flow (original text)",
+          "spelling and sandhi (பாலைக் குடிக்கும்)",
+          "distractor grammar",
+          "TTS pronunciation of ta-IN voice",
+          "meaning_en",
+          "cat.png fitness"
+        ]
+      },
+      "meaning_hidden_during_activity": true,
+      "hide_title_during_activity": false
+    }
+  ]
+}

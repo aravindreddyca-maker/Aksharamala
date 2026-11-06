@@ -120,16 +120,11 @@ void main() {
         }
         expect(rects.map((r) => r.top.round()).toSet().length, 1);
 
-        // Level tiles are big enough for a thumb and all four are on screen.
-        for (final key in [
-          'level_1',
-          'level_2',
-          'level_3',
-          'level_4',
-          'level_5'
-        ]) {
+        // All eight level tiles are on screen in one row; each is tall enough
+        // for a thumb and at least 32 wide (eight numbers share one small form).
+        for (final key in [for (var l = 1; l <= 8; l++) 'level_$l']) {
           final r = tester.getRect(find.byKey(Key(key)));
-          expect(r.width, greaterThanOrEqualTo(44), reason: key);
+          expect(r.width, greaterThanOrEqualTo(32), reason: key);
           expect(r.height, greaterThanOrEqualTo(44), reason: key);
           expect(r.bottom, lessThanOrEqualTo(size.height));
           expect(r.right, lessThanOrEqualTo(size.width));

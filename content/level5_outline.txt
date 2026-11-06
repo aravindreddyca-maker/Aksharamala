@@ -1,0 +1,75 @@
+Eng | 1 | proposed-l5-en-001 | Author purpose and audience | Compare two texts with different purposes | Identify intended audience and persuasive intent | Notice versus opinion article
+Eng | 2 | proposed-l5-en-002 | Fact, opinion and evidence | Label claims and find support | Distinguish evidence from opinion | Claim and supporting detail
+Eng | 3 | proposed-l5-en-003 | Inference across paragraphs | Use evidence from two paragraphs | Justify an inference using multiple clues | Multi-paragraph narrative
+Eng | 4 | proposed-l5-en-004 | Figurative language | Match idioms and similes to meanings | Interpret common figurative expressions | as brave as a lion
+Eng | 5 | proposed-l5-en-005 | Advanced vocabulary | Infer meaning using roots and context | Use word roots and context together | transport, preview
+Eng | 6 | proposed-l5-en-006 | Direct and indirect speech | Convert dialogue into reported speech | Apply basic reported-speech conventions | She said, “I am ready.”
+Eng | 7 | proposed-l5-en-007 | Active and passive voice | Compare sentences with different focus | Recognize common active and passive constructions | The ball was kicked
+Eng | 8 | proposed-l5-en-008 | Complex sentences | Combine ideas with subordinate clauses | Write clear complex sentences | Although it rained, we played
+Eng | 9 | proposed-l5-en-009 | Narrative writing | Plan setting, conflict and resolution | Write a coherent short narrative | A lost library book
+Eng | 10 | proposed-l5-en-010 | Expository writing | Organize facts under a central topic | Write a structured explanatory paragraph | How recycling works
+Eng | 11 | proposed-l5-en-011 | Persuasive writing | State a position with two reasons | Write an age-appropriate persuasive paragraph | More trees at school
+Eng | 12 | proposed-l5-en-012 | Comparing sources | Compare two short sources on one topic | Identify agreement, differences and gaps | Two accounts of an event
+Eng | 13 | proposed-l5-en-013 | Editing for clarity | Revise wordy and unclear sentences | Improve clarity, punctuation and cohesion | Short draft paragraph
+Eng | 14 | proposed-l5-en-014 | Listening and note-taking | Listen to an informational passage and select notes | Extract and organize key points | Short recorded talk
+Eng | 15 | proposed-l5-en-015 | Integrated reading project | Read, summarize and present a short report | Apply comprehension, writing and reasoning | One-page topic report
+Tel | 1 | proposed-l5-te-001 | Independent passage reading | Read a multi-paragraph text | Identify key points and supporting details | Age-appropriate passage
+Tel | 2 | proposed-l5-te-002 | Main idea and summary | Summarize a short nonfiction passage | Retain central ideas without copying | Community topic
+Tel | 3 | proposed-l5-te-003 | Inference with evidence | Answer why/how questions using clues | Justify inferences from text | Short narrative
+Tel | 4 | proposed-l5-te-004 | Proverbs and expressions | Match common expressions to meanings | Interpret culturally appropriate expressions | Native-verified proverb
+Tel | 5 | proposed-l5-te-005 | Word roots and formation | Analyze meaningful word parts | Build and explain related words | Language-specific forms
+Tel | 6 | proposed-l5-te-006 | Sentence types | Classify sentence purposes | Use sentence punctuation and register | Question, request, statement
+Tel | 7 | proposed-l5-te-007 | Tense and agreement | Edit incorrect verb forms | Use language-appropriate agreement | Native-verified examples
+Tel | 8 | proposed-l5-te-008 | Connecting ideas | Join related sentences | Use appropriate conjunctions | Because, although
+Tel | 9 | proposed-l5-te-009 | Dialogue and narration | Convert dialogue into narrative | Report speech clearly | Short conversation
+Tel | 10 | proposed-l5-te-010 | Compare two texts | Identify similarities and differences | Compare viewpoints and details | Two short passages
+Tel | 11 | proposed-l5-te-011 | Narrative composition | Plan and write a short story | Organize characters, events and ending | A day at the fair
+Tel | 12 | proposed-l5-te-012 | Informational writing | Organize facts into a report | Write a clear explanatory paragraph | Local festival or animal
+Tel | 13 | proposed-l5-te-013 | Opinion writing | State a view with reasons | Support an opinion respectfully | Clean neighbourhood
+Tel | 14 | proposed-l5-te-014 | Listening and presentation | Listen, take notes and retell | Communicate key points orally | Short narrated report
+Tel | 15 | proposed-l5-te-015 | Integrated language project | Read, write and present a topic | Apply reading, grammar and writing together | Local culture report
+Hin | 1 | proposed-l5-hi-001 | Independent passage reading | Read a multi-paragraph text | Identify key points and supporting details | Age-appropriate passage
+Hin | 2 | proposed-l5-hi-002 | Main idea and summary | Summarize a short nonfiction passage | Retain central ideas without copying | Community topic
+Hin | 3 | proposed-l5-hi-003 | Inference with evidence | Answer why/how questions using clues | Justify inferences from text | Short narrative
+Hin | 4 | proposed-l5-hi-004 | Proverbs and expressions | Match common expressions to meanings | Interpret culturally appropriate expressions | Native-verified proverb
+Hin | 5 | proposed-l5-hi-005 | Word roots and formation | Analyze meaningful word parts | Build and explain related words | Language-specific forms
+Hin | 6 | proposed-l5-hi-006 | Sentence types | Classify sentence purposes | Use sentence punctuation and register | Question, request, statement
+Hin | 7 | proposed-l5-hi-007 | Tense and agreement | Edit incorrect verb forms | Use language-appropriate agreement | Native-verified examples
+Hin | 8 | proposed-l5-hi-008 | Connecting ideas | Join related sentences | Use appropriate conjunctions | Because, although
+Hin | 9 | proposed-l5-hi-009 | Dialogue and narration | Convert dialogue into narrative | Report speech clearly | Short conversation
+Hin | 10 | proposed-l5-hi-010 | Compare two texts | Identify similarities and differences | Compare viewpoints and details | Two short passages
+Hin | 11 | proposed-l5-hi-011 | Narrative composition | Plan and write a short story | Organize characters, events and ending | A day at the fair
+Hin | 12 | proposed-l5-hi-012 | Informational writing | Organize facts into a report | Write a clear explanatory paragraph | Local festival or animal
+Hin | 13 | proposed-l5-hi-013 | Opinion writing | State a view with reasons | Support an opinion respectfully | Clean neighbourhood
+Hin | 14 | proposed-l5-hi-014 | Listening and presentation | Listen, take notes and retell | Communicate key points orally | Short narrated report
+Hin | 15 | proposed-l5-hi-015 | Integrated language project | Read, write and present a topic | Apply reading, grammar and writing together | Local culture report
+Tam | 1 | proposed-l5-ta-001 | Independent passage reading | Read a multi-paragraph text | Identify key points and supporting details | Age-appropriate passage
+Tam | 2 | proposed-l5-ta-002 | Main idea and summary | Summarize a short nonfiction passage | Retain central ideas without copying | Community topic
+Tam | 3 | proposed-l5-ta-003 | Inference with evidence | Answer why/how questions using clues | Justify inferences from text | Short narrative
+Tam | 4 | proposed-l5-ta-004 | Proverbs and expressions | Match common expressions to meanings | Interpret culturally appropriate expressions | Native-verified proverb
+Tam | 5 | proposed-l5-ta-005 | Word roots and formation | Analyze meaningful word parts | Build and explain related words | Language-specific forms
+Tam | 6 | proposed-l5-ta-006 | Sentence types | Classify sentence purposes | Use sentence punctuation and register | Question, request, statement
+Tam | 7 | proposed-l5-ta-007 | Tense and agreement | Edit incorrect verb forms | Use language-appropriate agreement | Native-verified examples
+Tam | 8 | proposed-l5-ta-008 | Connecting ideas | Join related sentences | Use appropriate conjunctions | Because, although
+Tam | 9 | proposed-l5-ta-009 | Dialogue and narration | Convert dialogue into narrative | Report speech clearly | Short conversation
+Tam | 10 | proposed-l5-ta-010 | Compare two texts | Identify similarities and differences | Compare viewpoints and details | Two short passages
+Tam | 11 | proposed-l5-ta-011 | Narrative composition | Plan and write a short story | Organize characters, events and ending | A day at the fair
+Tam | 12 | proposed-l5-ta-012 | Informational writing | Organize facts into a report | Write a clear explanatory paragraph | Local festival or animal
+Tam | 13 | proposed-l5-ta-013 | Opinion writing | State a view with reasons | Support an opinion respectfully | Clean neighbourhood
+Tam | 14 | proposed-l5-ta-014 | Listening and presentation | Listen, take notes and retell | Communicate key points orally | Short narrated report
+Tam | 15 | proposed-l5-ta-015 | Integrated language project | Read, write and present a topic | Apply reading, grammar and writing together | Local culture report
+Num | 1 | proposed-l5-num-001 | Integers and number line | Compare negative and positive positions | Order integers and model simple operations | -4, 0, +6
+Num | 2 | proposed-l5-num-002 | Order of operations | Evaluate expressions using grouping | Apply basic operation order | (8+4)×3
+Num | 3 | proposed-l5-num-003 | Fractions with unlike denominators | Use visual models and common denominators | Add and subtract unlike fractions | 1/2 + 1/3
+Num | 4 | proposed-l5-num-004 | Fraction multiplication | Model part of a part | Multiply simple fractions | 2/3 of 3/4
+Num | 5 | proposed-l5-num-005 | Decimal multiplication | Solve place-value based products | Multiply decimals accurately | 1.2 × 0.5
+Num | 6 | proposed-l5-num-006 | Percent of a quantity | Use hundred grids and proportional reasoning | Calculate simple percentages of amounts | 20% of 150
+Num | 7 | proposed-l5-num-007 | Ratio and proportion | Scale recipes and compare ratios | Solve direct proportion examples | 2:3 scaled to 4:6
+Num | 8 | proposed-l5-num-008 | Introduction to variables | Translate word statements into expressions | Represent unknowns with variables | x + 5
+Num | 9 | proposed-l5-num-009 | One-step equations | Balance simple equations | Solve one-step linear equations | x + 7 = 15
+Num | 10 | proposed-l5-num-010 | Coordinate grid | Plot points in first quadrant | Read and plot ordered pairs | (3, 4)
+Num | 11 | proposed-l5-num-011 | Triangles and quadrilaterals | Sort shapes by properties | Classify common polygons | Isosceles, parallelogram
+Num | 12 | proposed-l5-num-012 | Volume of cuboids | Count unit cubes and apply formula | Find volume of rectangular prisms | 3×4×5 cubes
+Num | 13 | proposed-l5-num-013 | Mean, median and mode | Organize a small dataset | Calculate and interpret simple averages | 4, 6, 6, 8
+Num | 14 | proposed-l5-num-014 | Probability language | Classify outcomes by likelihood | Describe simple probability qualitatively | Likely or unlikely
+Num | 15 | proposed-l5-num-015 | Budget and financial literacy | Plan spending within a budget | Compare costs and calculate remaining money | ₹500 spending plan

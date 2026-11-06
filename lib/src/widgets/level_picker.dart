@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../levels.dart';
 import '../theme.dart';
 
-/// Five levels side by side. Anyone may pick any of them, at any time: a level
+/// Every level side by side (in two rows on a narrow screen). Anyone may pick any of them, at any time: a level
 /// is a starting point for what the child sees, never a lock.
 class LevelPicker extends StatelessWidget {
   const LevelPicker({
@@ -13,26 +13,47 @@ class LevelPicker extends StatelessWidget {
     this.dense = false,
   });
 
-  /// 1 to 5.
+  /// 1 to [lastLevel].
   final int selected;
   final ValueChanged<int> onChanged;
   final bool dense;
 
   @override
-  Widget build(BuildContext context) => Row(
-        children: [
-          for (final info in levelInfos) ...[
-            if (info.number != firstLevel) const SizedBox(width: 6),
-            Expanded(
-              child: _LevelTile(
-                info: info,
-                selected: info.number == selected,
-                dense: dense,
-                onTap: () => onChanged(info.number),
-              ),
-            ),
-          ],
-        ],
+  Widget build(BuildContext context) => LayoutBuilder(
+        builder: (context, box) {
+          // All the levels in one row when they fit, else in even rows.
+          final n = levelInfos.length;
+          // Compact (a small form): every level in one row, as a number.
+          final perRow = dense || box.maxWidth >= n * 84 ? n : (n / 2).ceil();
+          final rows = (n / perRow).ceil();
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              for (var r = 0; r < rows; r++) ...[
+                if (r > 0) const SizedBox(height: 6),
+                Row(
+                  children: [
+                    for (var c = 0; c < perRow; c++) ...[
+                      if (c > 0) const SizedBox(width: 6),
+                      Expanded(
+                        child: r * perRow + c < n
+                            ? _LevelTile(
+                                info: levelInfos[r * perRow + c],
+                                selected: levelInfos[r * perRow + c].number ==
+                                    selected,
+                                dense: dense,
+                                onTap: () => onChanged(
+                                    levelInfos[r * perRow + c].number),
+                              )
+                            : const SizedBox.shrink(),
+                      ),
+                    ],
+                  ],
+                ),
+              ],
+            ],
+          );
+        },
       );
 }
 
@@ -96,7 +117,7 @@ class _LevelTile extends StatelessWidget {
                               ),
                             ),
                           Text(
-                            info.label,
+                            dense ? '${info.number}' : info.label,
                             maxLines: 1,
                             style: const TextStyle(
                               fontSize: 16,
@@ -107,18 +128,19 @@ class _LevelTile extends StatelessWidget {
                         ],
                       ),
                     ),
-                    FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Text(
-                        info.tagline,
-                        maxLines: 1,
-                        style: const TextStyle(
-                          fontSize: 12,
-                          height: 1.2,
-                          color: GameTokens.ink,
+                    if (!dense)
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          info.tagline,
+                          maxLines: 1,
+                          style: const TextStyle(
+                            fontSize: 12,
+                            height: 1.2,
+                            color: GameTokens.ink,
+                          ),
                         ),
                       ),
-                    ),
                   ],
                 ),
               ),

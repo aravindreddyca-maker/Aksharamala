@@ -5,6 +5,7 @@ import '../app_controller.dart';
 import '../levels.dart';
 import '../models.dart';
 import '../widgets/common.dart';
+import '../widgets/fit_content.dart';
 import '../widgets/level_picker.dart';
 import 'home_screen.dart';
 
@@ -123,13 +124,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Expanded(
                 child: stacked
-                    ? ListView(
+                    ? Padding(
                         padding: EdgeInsets.fromLTRB(pad, 4, pad, 16),
-                        children: [
-                          learners,
-                          const SizedBox(height: 12),
-                          creator,
-                        ],
+                        child: FitOrScroll(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              learners,
+                              const SizedBox(height: 12),
+                              creator,
+                            ],
+                          ),
+                        ),
                       )
                     : Padding(
                         padding: EdgeInsets.fromLTRB(pad, 4, pad, 12),
@@ -206,7 +212,12 @@ class _LearnerPanel extends StatelessWidget {
         // The whole panel (heading included) scrolls when the screen is short
         // or the text is large, so nothing inside it can overflow.
         child: scrollable
-            ? ListView(padding: EdgeInsets.zero, children: children)
+            ? FitOrScroll(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: children,
+                ),
+              )
             : Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
@@ -390,7 +401,7 @@ class _ProfileForm extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Expanded(
-                      child: SingleChildScrollView(
+                      child: FitOrScroll(
                         child: fields(
                           short: constraints.maxHeight < _shortHeight,
                         ),

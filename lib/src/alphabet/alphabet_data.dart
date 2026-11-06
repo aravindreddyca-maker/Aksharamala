@@ -45,6 +45,19 @@ class AlphabetSet {
   /// existing "finished lesson" list; no new save format.
   String lessonId(int index) =>
       'alpha-$worldId-${(index + 1).toString().padLeft(3, '0')}';
+
+  /// Only English has a second, small-letter step after each big letter.
+  bool get hasLowercase => worldId == 'english';
+
+  /// The small letter for [index] ('a' for 'A'), or null when this alphabet has
+  /// no small letters.
+  String? lowerGlyph(int index) =>
+      hasLowercase ? letters[index].glyph.toLowerCase() : null;
+
+  /// The id saved when the small letter for [index] has been traced. The big
+  /// letter's [lessonId] is unchanged, so earlier saves and the big-letter
+  /// count keep their meaning.
+  String lowerLessonId(int index) => '${lessonId(index)}-lower';
 }
 
 const englishAlphabet = AlphabetSet(

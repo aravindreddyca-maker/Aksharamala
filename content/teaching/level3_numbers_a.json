@@ -1,0 +1,3976 @@
+{
+  "schema_version": 1,
+  "status": "draft_unverified",
+  "lessons": [
+    {
+      "lesson_id": "numbers-l3-001",
+      "world": "numbers",
+      "level": 3,
+      "locale": "en-IN",
+      "title": "Place value to 1000",
+      "objective": "Read a three-digit number as hundreds, tens and ones.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l3-001.introduce.1",
+          "text": "A three-digit number has hundreds, tens and ones. Look at 245.",
+          "speech": "A three-digit number has hundreds, tens and ones. Look at 245.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "245"
+          }
+        },
+        {
+          "id": "numbers-l3-001.introduce.2",
+          "text": "In 245, the 2 means 2 hundreds, the 4 means 4 tens and the 5 means 5 ones. So 245 = 200 + 40 + 5.",
+          "speech": "In 245, the 2 means 2 hundreds, the 4 means 4 tens and the 5 means 5 ones. So 245 equals 200 plus 40 plus 5.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "200 + 40 + 5"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l3-001.demonstrate.1",
+          "text": "First the tens and ones. 45 is 4 tens and 5 ones.",
+          "speech": "First the tens and ones. 45 is 4 tens and 5 ones.",
+          "visual": {
+            "type": "baseTen",
+            "tens": 4,
+            "ones": 5,
+            "showTotal": true
+          }
+        },
+        {
+          "id": "numbers-l3-001.demonstrate.2",
+          "text": "Now put 3 hundreds in front: 345 = 300 + 40 + 5. A zero holds a place, so 308 = 300 + 0 + 8: no tens.",
+          "speech": "Now put 3 hundreds in front: 345 equals 300 plus 40 plus 5. A zero holds a place, so 308 equals 300 plus 0 plus 8: no tens.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "308 = 300 + 0 + 8"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l3-001.guided.1",
+          "prompt": "3 hundreds, 5 tens and 2 ones make which number?",
+          "speech": "3 hundreds, 5 tens and 2 ones make which number?",
+          "options": [
+            "352",
+            "325",
+            "532"
+          ],
+          "answer": "352",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Write the hundreds digit first, then the tens digit, then the ones digit.",
+            "3 hundreds is 300, 5 tens is 50, 2 ones is 2. Put them together: 352."
+          ],
+          "wrong_feedback": {
+            "325": "The tens and ones are swapped. 5 tens is 50, and 2 ones is 2.",
+            "532": "The hundreds digit comes first. Match each number to its place."
+          },
+          "explanation": "3 hundreds, 5 tens and 2 ones make 352, because 300 + 50 + 2 = 352.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-001.guided.2",
+          "prompt": "In 482, what is the value of the 8?",
+          "speech": "In 482, what is the value of the 8?",
+          "options": [
+            "8",
+            "80",
+            "800"
+          ],
+          "answer": "80",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First find which place the digit is in: hundreds, tens or ones.",
+            "The 8 is in the tens place, so its value is 8 tens: 80."
+          ],
+          "wrong_feedback": {
+            "8": "8 is the digit. Its value depends on its place: here it is in the tens place.",
+            "800": "The 8 is not in the hundreds place here, so it is not worth 800."
+          },
+          "explanation": "In 482, the 8 is in the tens place, so it stands for 80.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l3-001.practice.1",
+          "prompt": "6 hundreds, 0 tens and 4 ones make which number?",
+          "speech": "6 hundreds, 0 tens and 4 ones make which number?",
+          "options": [
+            "64",
+            "640",
+            "604"
+          ],
+          "answer": "604",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Write the hundreds digit first, then the tens digit, then the ones digit.",
+            "6 hundreds is 600, 0 tens is 0, 4 ones is 4. Put them together: 604."
+          ],
+          "wrong_feedback": {
+            "64": "A zero is needed in the tens place to hold it. 0 tens still takes up a place.",
+            "640": "The 4 is ones, not tens. It goes in the last place."
+          },
+          "explanation": "6 hundreds, 0 tens and 4 ones make 604, because 600 + 0 + 4 = 604.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-001.practice.2",
+          "prompt": "In 573, what is the value of the 7?",
+          "speech": "In 573, what is the value of the 7?",
+          "options": [
+            "70",
+            "7",
+            "700"
+          ],
+          "answer": "70",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First find which place the digit is in: hundreds, tens or ones.",
+            "The 7 is in the tens place, so its value is 7 tens: 70."
+          ],
+          "wrong_feedback": {
+            "7": "7 is the digit. Its value depends on its place: here it is in the tens place.",
+            "700": "The 7 is not in the hundreds place here, so it is not worth 700."
+          },
+          "explanation": "In 573, the 7 is in the tens place, so it stands for 70.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-001.practice.3",
+          "prompt": "Count the tens and ones. Which number is shown?",
+          "speech": "Count the tens and ones. Which number is shown?",
+          "options": [
+            "46",
+            "64",
+            "10"
+          ],
+          "answer": "64",
+          "visual": {
+            "type": "baseTen",
+            "tens": 6,
+            "ones": 4,
+            "showTotal": false
+          },
+          "hints": [
+            "Each long bar is 1 ten. Count the bars, then count the single cubes.",
+            "There are 6 bars (6 tens = 60) and 4 cubes (4 ones). 60 + 4 = 64."
+          ],
+          "wrong_feedback": {
+            "46": "The tens come first: look at the bars for tens and the cubes for ones.",
+            "10": "That is just one ten. Count every bar and every cube."
+          },
+          "explanation": "6 tens and 4 ones make 64.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l3-001.check.1",
+          "prompt": "2 hundreds, 7 tens and 5 ones make which number?",
+          "speech": "2 hundreds, 7 tens and 5 ones make which number?",
+          "options": [
+            "257",
+            "725",
+            "275"
+          ],
+          "answer": "275",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "257": "The tens and ones are swapped. 7 tens is 70, and 5 ones is 5.",
+            "725": "The hundreds digit comes first. Match each number to its place."
+          },
+          "explanation": "2 hundreds, 7 tens and 5 ones make 275, because 200 + 70 + 5 = 275.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-001.check.2",
+          "prompt": "In 837, what is the value of the 3?",
+          "speech": "In 837, what is the value of the 3?",
+          "options": [
+            "30",
+            "3",
+            "300"
+          ],
+          "answer": "30",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "3": "3 is the digit. Its value depends on its place: here it is in the tens place.",
+            "300": "The 3 is not in the hundreds place here, so it is not worth 300."
+          },
+          "explanation": "In 837, the 3 is in the tens place, so it stands for 30.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-001.check.3",
+          "prompt": "What is 700 + 6?",
+          "speech": "What is 700 plus 6?",
+          "options": [
+            "76",
+            "706",
+            "760"
+          ],
+          "answer": "706",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "76": "The 6 is ones and 700 is 7 hundreds. Keep a zero for the empty tens place.",
+            "760": "6 is ones, not tens. The tens place is 0."
+          },
+          "explanation": "700 + 6 = 706: 7 hundreds, 0 tens, 6 ones.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l3-001.remediation_explain.1",
+            "text": "Another way: think of money. 3 hundred-rupee notes, 4 ten-rupee notes and 2 one-rupee coins.",
+            "speech": "Another way: think of money. 3 hundred-rupee notes, 4 ten-rupee notes and 2 one-rupee coins.",
+            "visual": {
+              "type": "baseTen",
+              "tens": 4,
+              "ones": 2,
+              "showTotal": false
+            }
+          },
+          {
+            "id": "numbers-l3-001.remediation_explain.2",
+            "text": "The notes are worth 300, 40 and 2 rupees. Each place has its own value.",
+            "speech": "The notes are worth 300, 40 and 2 rupees. Each place has its own value.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "300 + 40 + 2"
+            }
+          },
+          {
+            "id": "numbers-l3-001.remediation_explain.3",
+            "text": "Put them together: 300 + 40 + 2 = 342. The digit's place tells its value.",
+            "speech": "Put them together: 300 plus 40 plus 2 equals 342. The digit's place tells its value.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "342"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l3-001.remediation_guided.1",
+            "prompt": "5 hundreds, 1 tens and 8 ones make which number?",
+            "speech": "5 hundreds, 1 tens and 8 ones make which number?",
+            "options": [
+              "581",
+              "158",
+              "518"
+            ],
+            "answer": "518",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Write the hundreds digit first, then the tens digit, then the ones digit.",
+              "5 hundreds is 500, 1 tens is 10, 8 ones is 8. Put them together: 518."
+            ],
+            "wrong_feedback": {
+              "581": "The tens and ones are swapped. 1 tens is 10, and 8 ones is 8.",
+              "158": "The hundreds digit comes first. Match each number to its place."
+            },
+            "explanation": "5 hundreds, 1 tens and 8 ones make 518, because 500 + 10 + 8 = 518.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l3-001.remediation_guided.2",
+            "prompt": "In 624, what is the value of the 4?",
+            "speech": "In 624, what is the value of the 4?",
+            "options": [
+              "4",
+              "40",
+              "400"
+            ],
+            "answer": "4",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "First find which place the digit is in: hundreds, tens or ones.",
+              "The 4 is in the ones place, so its value is 4 ones: 4."
+            ],
+            "wrong_feedback": {
+              "40": "The 4 is not in the tens place here, so it is not worth 40.",
+              "400": "The 4 is not in the hundreds place here, so it is not worth 400."
+            },
+            "explanation": "In 624, the 4 is in the ones place, so it stands for 4.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l3-001.remediation_check.1",
+            "prompt": "4 hundreds, 6 tens and 3 ones make which number?",
+            "speech": "4 hundreds, 6 tens and 3 ones make which number?",
+            "options": [
+              "436",
+              "463",
+              "643"
+            ],
+            "answer": "463",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "436": "The tens and ones are swapped. 6 tens is 60, and 3 ones is 3.",
+              "643": "The hundreds digit comes first. Match each number to its place."
+            },
+            "explanation": "4 hundreds, 6 tens and 3 ones make 463, because 400 + 60 + 3 = 463.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-001.remediation_check.2",
+            "prompt": "In 951, what is the value of the 9?",
+            "speech": "In 951, what is the value of the 9?",
+            "options": [
+              "9",
+              "90",
+              "900"
+            ],
+            "answer": "900",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "9": "9 is the digit. Its value depends on its place: here it is in the hundreds place.",
+              "90": "The 9 is not in the tens place here, so it is not worth 90."
+            },
+            "explanation": "In 951, the 9 is in the hundreds place, so it stands for 900.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-001.remediation_check.3",
+            "prompt": "What is 500 + 20 + 9?",
+            "speech": "What is 500 plus 20 plus 9?",
+            "options": [
+              "529",
+              "592",
+              "5029"
+            ],
+            "answer": "529",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "592": "The 9 is ones and the 2 is tens. Put the digits in place order.",
+              "5029": "20 is just 2 tens, so it takes one place, not two."
+            },
+            "explanation": "500 + 20 + 9 = 529.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of the number words and 'plus', 'minus', 'times', 'equals' (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l3a.py); every distractor is wrong and the answer position rotates.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l3-002",
+      "world": "numbers",
+      "level": 3,
+      "locale": "en-IN",
+      "title": "Compare three-digit numbers",
+      "objective": "Compare three-digit numbers using hundreds, tens and ones.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l3-002.introduce.1",
+          "text": "To compare two numbers, look at the hundreds first. Which is bigger, 408 or 480?",
+          "speech": "To compare two numbers, look at the hundreds first. Which is bigger, 408 or 480?",
+          "visual": {
+            "type": "glyph",
+            "glyph": "408   480"
+          }
+        },
+        {
+          "id": "numbers-l3-002.introduce.2",
+          "text": "If the hundreds are the same, compare the tens. If those are the same too, compare the ones. 408 < 480 because 0 tens is less than 8 tens.",
+          "speech": "If the hundreds are the same, compare the tens. If those are the same too, compare the ones. 408 is less than 480 because 0 tens is less than 8 tens.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "408 < 480"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l3-002.demonstrate.1",
+          "text": "Compare 562 and 526. Hundreds: 5 and 5, the same. Tens: 6 and 2, and 6 is more. So 562 > 526.",
+          "speech": "Compare 562 and 526. Hundreds: 5 and 5, the same. Tens: 6 and 2, and 6 is more. So 562 is greater than 526.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "562 > 526"
+          }
+        },
+        {
+          "id": "numbers-l3-002.demonstrate.2",
+          "text": "Compare 347 and 735. Hundreds: 3 and 7, and 3 is less. We can stop there. So 347 < 735.",
+          "speech": "Compare 347 and 735. Hundreds: 3 and 7, and 3 is less. We can stop there. So 347 is less than 735.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "347 < 735"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l3-002.guided.1",
+          "prompt": "Which number is greater, 573 or 537?",
+          "speech": "Which number is greater, 573 or 537?",
+          "options": [
+            "573",
+            "537",
+            "They are the same"
+          ],
+          "answer": "573",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Start with the hundreds digits. If they match, go to the tens.",
+            "The places before it are the same. In the tens place the digits are 7 and 3, so 573 is greater."
+          ],
+          "wrong_feedback": {
+            "537": "Look at the tens digits: 7 and 3. The greater number has the bigger digit there.",
+            "They are the same": "573 and 537 are different numbers. Compare the tens digit."
+          },
+          "explanation": "573 is greater than 537.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-002.guided.2",
+          "prompt": "Which sign fits: 640 ? 604",
+          "speech": "Which sign fits: 640 ? 604",
+          "options": [
+            "<",
+            ">",
+            "="
+          ],
+          "answer": ">",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The sign opens towards the bigger number. Compare the hundreds first.",
+            "Find the first place that is different: the tens place, 4 against 0. So 640 > 604."
+          ],
+          "wrong_feedback": {
+            "<": "That sign points the wrong way. The tens digits are 4 and 0.",
+            "=": "640 and 604 are not equal: their tens digits are different."
+          },
+          "explanation": "640 > 604.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l3-002.practice.1",
+          "prompt": "Which is the smallest: 732, 372 or 723?",
+          "speech": "Which is the smallest: 732, 372 or 723?",
+          "options": [
+            "732",
+            "723",
+            "372"
+          ],
+          "answer": "372",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Compare the hundreds digits of all three. If two match, look at their tens.",
+            "Hundreds: 7, 3, 7. Use the first place that is different. The smallest is 372."
+          ],
+          "wrong_feedback": {
+            "732": "732 is not the smallest. Compare the hundreds first, then the tens.",
+            "723": "723 is not the smallest. Compare the hundreds first, then the tens."
+          },
+          "explanation": "372 is the smallest of the three.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-002.practice.2",
+          "prompt": "Which number is smaller, 219 or 291?",
+          "speech": "Which number is smaller, 219 or 291?",
+          "options": [
+            "219",
+            "291",
+            "They are the same"
+          ],
+          "answer": "219",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Start with the hundreds digits. If they match, go to the tens.",
+            "The places before it are the same. In the tens place the digits are 1 and 9, so 219 is smaller."
+          ],
+          "wrong_feedback": {
+            "291": "Look at the tens digits: 1 and 9. The smaller number has the smaller digit there.",
+            "They are the same": "219 and 291 are different numbers. Compare the tens digit."
+          },
+          "explanation": "219 is smaller than 291.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-002.practice.3",
+          "prompt": "Which list goes from smallest to greatest?",
+          "speech": "Which list goes from smallest to greatest?",
+          "options": [
+            "451, 415, 145",
+            "145, 415, 451",
+            "415, 145, 451"
+          ],
+          "answer": "145, 415, 451",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find the smallest of 415, 451 and 145 first, then the next one.",
+            "The smallest is 145, then 415, then 451."
+          ],
+          "wrong_feedback": {
+            "451, 415, 145": "That order goes from greatest to smallest. We want smallest first.",
+            "415, 145, 451": "The first two are the wrong way round. Compare them again."
+          },
+          "explanation": "From smallest to greatest: 145, 415, 451.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l3-002.check.1",
+          "prompt": "Which sign fits: 826 ? 862",
+          "speech": "Which sign fits: 826 ? 862",
+          "options": [
+            ">",
+            "=",
+            "<"
+          ],
+          "answer": "<",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            ">": "That sign points the wrong way. The tens digits are 2 and 6.",
+            "=": "826 and 862 are not equal: their tens digits are different."
+          },
+          "explanation": "826 < 862.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-002.check.2",
+          "prompt": "Which is the greatest: 504, 540 or 450?",
+          "speech": "Which is the greatest: 504, 540 or 450?",
+          "options": [
+            "540",
+            "504",
+            "450"
+          ],
+          "answer": "540",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "504": "504 is not the greatest. Compare the hundreds first, then the tens.",
+            "450": "450 is not the greatest. Compare the hundreds first, then the tens."
+          },
+          "explanation": "540 is the greatest of the three.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-002.check.3",
+          "prompt": "Which number is greater, 667 or 676?",
+          "speech": "Which number is greater, 667 or 676?",
+          "options": [
+            "667",
+            "676",
+            "They are the same"
+          ],
+          "answer": "676",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "667": "Look at the tens digits: 6 and 7. The greater number has the bigger digit there.",
+            "They are the same": "667 and 676 are different numbers. Compare the tens digit."
+          },
+          "explanation": "676 is greater than 667.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l3-002.remediation_explain.1",
+            "text": "Another way: think of a school with 3 floors of rooms. A number with more hundreds is a bigger building.",
+            "speech": "Another way: think of a school with 3 floors of rooms. A number with more hundreds is a bigger building.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3 digits: H  T  O"
+            }
+          },
+          {
+            "id": "numbers-l3-002.remediation_explain.2",
+            "text": "Put the two numbers one under the other. Look at the hundreds column first. Only if they match, move right to tens.",
+            "speech": "Put the two numbers one under the other. Look at the hundreds column first. Only if they match, move right to tens.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "418\n481"
+            }
+          },
+          {
+            "id": "numbers-l3-002.remediation_explain.3",
+            "text": "418 and 481: hundreds same (4), tens 1 and 8, so 418 < 481.",
+            "speech": "418 and 481: hundreds same (4), tens 1 and 8, so 418 is less than 481.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "418 < 481"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l3-002.remediation_guided.1",
+            "prompt": "Which number is smaller, 318 or 381?",
+            "speech": "Which number is smaller, 318 or 381?",
+            "options": [
+              "381",
+              "They are the same",
+              "318"
+            ],
+            "answer": "318",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Start with the hundreds digits. If they match, go to the tens.",
+              "The places before it are the same. In the tens place the digits are 1 and 8, so 318 is smaller."
+            ],
+            "wrong_feedback": {
+              "381": "Look at the tens digits: 1 and 8. The smaller number has the smaller digit there.",
+              "They are the same": "318 and 381 are different numbers. Compare the tens digit."
+            },
+            "explanation": "318 is smaller than 381.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l3-002.remediation_guided.2",
+            "prompt": "Which sign fits: 250 ? 205",
+            "speech": "Which sign fits: 250 ? 205",
+            "options": [
+              ">",
+              "<",
+              "="
+            ],
+            "answer": ">",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "The sign opens towards the bigger number. Compare the hundreds first.",
+              "Find the first place that is different: the tens place, 5 against 0. So 250 > 205."
+            ],
+            "wrong_feedback": {
+              "<": "That sign points the wrong way. The tens digits are 5 and 0.",
+              "=": "250 and 205 are not equal: their tens digits are different."
+            },
+            "explanation": "250 > 205.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l3-002.remediation_check.1",
+            "prompt": "Which is the greatest: 291, 921 or 219?",
+            "speech": "Which is the greatest: 291, 921 or 219?",
+            "options": [
+              "291",
+              "921",
+              "219"
+            ],
+            "answer": "921",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "291": "291 is not the greatest. Compare the hundreds first, then the tens.",
+              "219": "219 is not the greatest. Compare the hundreds first, then the tens."
+            },
+            "explanation": "921 is the greatest of the three.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-002.remediation_check.2",
+            "prompt": "Which sign fits: 713 ? 731",
+            "speech": "Which sign fits: 713 ? 731",
+            "options": [
+              ">",
+              "=",
+              "<"
+            ],
+            "answer": "<",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              ">": "That sign points the wrong way. The tens digits are 1 and 3.",
+              "=": "713 and 731 are not equal: their tens digits are different."
+            },
+            "explanation": "713 < 731.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-002.remediation_check.3",
+            "prompt": "Which list goes from smallest to greatest?",
+            "speech": "Which list goes from smallest to greatest?",
+            "options": [
+              "236, 326, 623",
+              "623, 326, 236",
+              "326, 236, 623"
+            ],
+            "answer": "236, 326, 623",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "623, 326, 236": "That order goes from greatest to smallest. We want smallest first.",
+              "326, 236, 623": "The first two are the wrong way round. Compare them again."
+            },
+            "explanation": "From smallest to greatest: 236, 326, 623.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of the number words and 'plus', 'minus', 'times', 'equals' (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l3a.py); every distractor is wrong and the answer position rotates.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l3-003",
+      "world": "numbers",
+      "level": 3,
+      "locale": "en-IN",
+      "title": "Addition with regrouping",
+      "objective": "Add two numbers when the ones make ten or more.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l3-003.introduce.1",
+          "text": "Add the ones first. 47 + 38: the ones are 7 and 8. Look at 47: 4 tens and 7 ones.",
+          "speech": "Add the ones first. 47 plus 38: the ones are 7 and 8. Look at 47: 4 tens and 7 ones.",
+          "visual": {
+            "type": "baseTen",
+            "tens": 4,
+            "ones": 7,
+            "showTotal": true
+          }
+        },
+        {
+          "id": "numbers-l3-003.introduce.2",
+          "text": "7 + 8 = 15 ones. That is 1 ten and 5 ones. We regroup: write 5 ones and carry 1 ten.",
+          "speech": "7 plus 8 equals 15 ones. That is 1 ten and 5 ones. We regroup: write 5 ones and carry 1 ten.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🟦",
+                "count": 7
+              },
+              {
+                "emoji": "🟦",
+                "count": 8
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": true,
+            "result": 15,
+            "showResult": true
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l3-003.demonstrate.1",
+          "text": "Now the tens: 4 tens + 3 tens + the 1 carried ten = 8 tens. So the answer to 47 + 38 is 85.",
+          "speech": "Now the tens: 4 tens plus 3 tens plus the 1 carried ten equals 8 tens. So the answer to 47 plus 38 is 85.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "47 + 38 = 85"
+          }
+        },
+        {
+          "id": "numbers-l3-003.demonstrate.2",
+          "text": "Try 36 + 28. Ones: 6 + 8 = 14, write 4 and carry 1. Tens: 3 + 2 + 1 = 6. So 36 + 28 = 64.",
+          "speech": "Try 36 plus 28. Ones: 6 plus 8 equals 14, write 4 and carry 1. Tens: 3 plus 2 plus 1 equals 6. So 36 plus 28 equals 64.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "36 + 28 = 64"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l3-003.guided.1",
+          "prompt": "25 + 39 = ?",
+          "speech": "25 plus 39 equals ?",
+          "options": [
+            "64",
+            "54",
+            "74"
+          ],
+          "answer": "64",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Add the ones first. Do they make 10 or more?",
+            "Ones: 5 + 9 = 14. Write 4 and carry 1 ten. Then add the tens and the carried ten."
+          ],
+          "wrong_feedback": {
+            "54": "You forgot the ten carried over from the ones. Add it to the tens.",
+            "74": "Too big: the carried ten was counted twice. Add it only once."
+          },
+          "explanation": "25 + 39 = 64.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-003.guided.2",
+          "prompt": "58 + 27 = ?",
+          "speech": "58 plus 27 equals ?",
+          "options": [
+            "75",
+            "85",
+            "95"
+          ],
+          "answer": "85",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Add the ones first. Do they make 10 or more?",
+            "Ones: 8 + 7 = 15. Write 5 and carry 1 ten. Then add the tens and the carried ten."
+          ],
+          "wrong_feedback": {
+            "75": "You forgot the ten carried over from the ones. Add it to the tens.",
+            "95": "Too big: the carried ten was counted twice. Add it only once."
+          },
+          "explanation": "58 + 27 = 85.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l3-003.practice.1",
+          "prompt": "46 + 37 = ?",
+          "speech": "46 plus 37 equals ?",
+          "options": [
+            "73",
+            "93",
+            "83"
+          ],
+          "answer": "83",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Add the ones first. Do they make 10 or more?",
+            "Ones: 6 + 7 = 13. Write 3 and carry 1 ten. Then add the tens and the carried ten."
+          ],
+          "wrong_feedback": {
+            "73": "You forgot the ten carried over from the ones. Add it to the tens.",
+            "93": "Too big: the carried ten was counted twice. Add it only once."
+          },
+          "explanation": "46 + 37 = 83.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-003.practice.2",
+          "prompt": "64 + 19 = ?",
+          "speech": "64 plus 19 equals ?",
+          "options": [
+            "83",
+            "73",
+            "93"
+          ],
+          "answer": "83",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Add the ones first. Do they make 10 or more?",
+            "Ones: 4 + 9 = 13. Write 3 and carry 1 ten. Then add the tens and the carried ten."
+          ],
+          "wrong_feedback": {
+            "73": "You forgot the ten carried over from the ones. Add it to the tens.",
+            "93": "Too big: the carried ten was counted twice. Add it only once."
+          },
+          "explanation": "64 + 19 = 83.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-003.practice.3",
+          "prompt": "135 + 28 = ?",
+          "speech": "135 plus 28 equals ?",
+          "options": [
+            "153",
+            "163",
+            "173"
+          ],
+          "answer": "163",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Add the ones first. Do they make 10 or more?",
+            "Ones: 5 + 8 = 13. Write 3 and carry 1 ten. Then add the tens and the carried ten."
+          ],
+          "wrong_feedback": {
+            "153": "You forgot the ten carried over from the ones. Add it to the tens.",
+            "173": "Too big: the carried ten was counted twice. Add it only once."
+          },
+          "explanation": "135 + 28 = 163.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l3-003.check.1",
+          "prompt": "57 + 26 = ?",
+          "speech": "57 plus 26 equals ?",
+          "options": [
+            "73",
+            "93",
+            "83"
+          ],
+          "answer": "83",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "73": "You forgot the ten carried over from the ones. Add it to the tens.",
+            "93": "Too big: the carried ten was counted twice. Add it only once."
+          },
+          "explanation": "57 + 26 = 83.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-003.check.2",
+          "prompt": "78 + 15 = ?",
+          "speech": "78 plus 15 equals ?",
+          "options": [
+            "93",
+            "83",
+            "103"
+          ],
+          "answer": "93",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "83": "You forgot the ten carried over from the ones. Add it to the tens.",
+            "103": "Too big: the carried ten was counted twice. Add it only once."
+          },
+          "explanation": "78 + 15 = 93.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-003.check.3",
+          "prompt": "249 + 34 = ?",
+          "speech": "249 plus 34 equals ?",
+          "options": [
+            "273",
+            "283",
+            "293"
+          ],
+          "answer": "283",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "273": "You forgot the ten carried over from the ones. Add it to the tens.",
+            "293": "Too big: the carried ten was counted twice. Add it only once."
+          },
+          "explanation": "249 + 34 = 283.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l3-003.remediation_explain.1",
+            "text": "Another way: make a ten. 8 and 7 ones: take 2 from the 7 to make 10 with the 8. That leaves 5.",
+            "speech": "Another way: make a ten. 8 and 7 ones: take 2 from the 7 to make 10 with the 8. That leaves 5.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🟦",
+                  "count": 8
+                },
+                {
+                  "emoji": "🟦",
+                  "count": 7
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": true,
+              "result": 15,
+              "showResult": true
+            }
+          },
+          {
+            "id": "numbers-l3-003.remediation_explain.2",
+            "text": "So 8 + 7 = 10 + 5 = 15. Ten ones become 1 ten, and 5 ones are left.",
+            "speech": "So 8 plus 7 equals 10 plus 5 equals 15. Ten ones become 1 ten, and 5 ones are left.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "8 + 7 = 15"
+            }
+          },
+          {
+            "id": "numbers-l3-003.remediation_explain.3",
+            "text": "Use it in 28 + 15: ones 8 + 5 = 13, write 3 and carry 1. Tens: 2 + 1 + 1 = 4. Answer 43.",
+            "speech": "Use it in 28 plus 15: ones 8 plus 5 equals 13, write 3 and carry 1. Tens: 2 plus 1 plus 1 equals 4. Answer 43.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "28 + 15 = 43"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l3-003.remediation_guided.1",
+            "prompt": "39 + 24 = ?",
+            "speech": "39 plus 24 equals ?",
+            "options": [
+              "53",
+              "73",
+              "63"
+            ],
+            "answer": "63",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Add the ones first. Do they make 10 or more?",
+              "Ones: 9 + 4 = 13. Write 3 and carry 1 ten. Then add the tens and the carried ten."
+            ],
+            "wrong_feedback": {
+              "53": "You forgot the ten carried over from the ones. Add it to the tens.",
+              "73": "Too big: the carried ten was counted twice. Add it only once."
+            },
+            "explanation": "39 + 24 = 63.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l3-003.remediation_guided.2",
+            "prompt": "27 + 46 = ?",
+            "speech": "27 plus 46 equals ?",
+            "options": [
+              "73",
+              "63",
+              "83"
+            ],
+            "answer": "73",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Add the ones first. Do they make 10 or more?",
+              "Ones: 7 + 6 = 13. Write 3 and carry 1 ten. Then add the tens and the carried ten."
+            ],
+            "wrong_feedback": {
+              "63": "You forgot the ten carried over from the ones. Add it to the tens.",
+              "83": "Too big: the carried ten was counted twice. Add it only once."
+            },
+            "explanation": "27 + 46 = 73.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l3-003.remediation_check.1",
+            "prompt": "18 + 25 = ?",
+            "speech": "18 plus 25 equals ?",
+            "options": [
+              "33",
+              "43",
+              "53"
+            ],
+            "answer": "43",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "33": "You forgot the ten carried over from the ones. Add it to the tens.",
+              "53": "Too big: the carried ten was counted twice. Add it only once."
+            },
+            "explanation": "18 + 25 = 43.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-003.remediation_check.2",
+            "prompt": "67 + 16 = ?",
+            "speech": "67 plus 16 equals ?",
+            "options": [
+              "73",
+              "93",
+              "83"
+            ],
+            "answer": "83",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "73": "You forgot the ten carried over from the ones. Add it to the tens.",
+              "93": "Too big: the carried ten was counted twice. Add it only once."
+            },
+            "explanation": "67 + 16 = 83.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-003.remediation_check.3",
+            "prompt": "145 + 38 = ?",
+            "speech": "145 plus 38 equals ?",
+            "options": [
+              "183",
+              "173",
+              "193"
+            ],
+            "answer": "183",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "173": "You forgot the ten carried over from the ones. Add it to the tens.",
+              "193": "Too big: the carried ten was counted twice. Add it only once."
+            },
+            "explanation": "145 + 38 = 183.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of the number words and 'plus', 'minus', 'times', 'equals' (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l3a.py); every distractor is wrong and the answer position rotates.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l3-004",
+      "world": "numbers",
+      "level": 3,
+      "locale": "en-IN",
+      "title": "Subtraction with regrouping",
+      "objective": "Subtract two numbers when the ones need to be regrouped.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l3-004.introduce.1",
+          "text": "82 - 46. We want to take 6 ones from 2 ones. There are not enough ones.",
+          "speech": "82 minus 46. We want to take 6 ones from 2 ones. There are not enough ones.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🟦",
+                "count": 12
+              }
+            ],
+            "operator": "-",
+            "revealCount": 1,
+            "countAll": false,
+            "takeAway": 0,
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l3-004.introduce.2",
+          "text": "Regroup: take 1 ten from the 8 tens and make 10 ones. Now we have 12 ones. 12 - 6 = 6 ones.",
+          "speech": "Regroup: take 1 ten from the 8 tens and make 10 ones. Now we have 12 ones. 12 minus 6 equals 6 ones.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🟦",
+                "count": 12
+              }
+            ],
+            "operator": "-",
+            "revealCount": 1,
+            "countAll": true,
+            "takeAway": 6,
+            "result": 6,
+            "showResult": true
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l3-004.demonstrate.1",
+          "text": "Tens: 8 tens - 1 lent = 7 tens. 7 tens - 4 tens = 3 tens. So 82 - 46 = 36.",
+          "speech": "Tens: 8 tens minus 1 lent equals 7 tens. 7 tens minus 4 tens equals 3 tens. So 82 minus 46 equals 36.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "82 - 46 = 36"
+          }
+        },
+        {
+          "id": "numbers-l3-004.demonstrate.2",
+          "text": "Try 63 - 28. 3 ones is not enough for 8. Regroup: 13 - 8 = 5. Tens: 5 - 2 = 3. So 63 - 28 = 35.",
+          "speech": "Try 63 minus 28. 3 ones is not enough for 8. Regroup: 13 minus 8 equals 5. Tens: 5 minus 2 equals 3. So 63 minus 28 equals 35.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "63 - 28 = 35"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l3-004.guided.1",
+          "prompt": "71 - 35 = ?",
+          "speech": "71 minus 35 equals ?",
+          "options": [
+            "36",
+            "46",
+            "44"
+          ],
+          "answer": "36",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look at the ones. Are there enough to take away?",
+            "Ones: 1 is less than 5, so regroup: 11 - 5 = 6. The tens go down by 1 first."
+          ],
+          "wrong_feedback": {
+            "46": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+            "44": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+          },
+          "explanation": "71 - 35 = 36.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-004.guided.2",
+          "prompt": "93 - 48 = ?",
+          "speech": "93 minus 48 equals ?",
+          "options": [
+            "55",
+            "45",
+            "35"
+          ],
+          "answer": "45",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look at the ones. Are there enough to take away?",
+            "Ones: 3 is less than 8, so regroup: 13 - 8 = 5. The tens go down by 1 first."
+          ],
+          "wrong_feedback": {
+            "55": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+            "35": "Too small: the lent ten was taken away twice."
+          },
+          "explanation": "93 - 48 = 45.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l3-004.practice.1",
+          "prompt": "64 - 27 = ?",
+          "speech": "64 minus 27 equals ?",
+          "options": [
+            "47",
+            "43",
+            "37"
+          ],
+          "answer": "37",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look at the ones. Are there enough to take away?",
+            "Ones: 4 is less than 7, so regroup: 14 - 7 = 7. The tens go down by 1 first."
+          ],
+          "wrong_feedback": {
+            "47": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+            "43": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+          },
+          "explanation": "64 - 27 = 37.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-004.practice.2",
+          "prompt": "80 - 34 = ?",
+          "speech": "80 minus 34 equals ?",
+          "options": [
+            "46",
+            "56",
+            "54"
+          ],
+          "answer": "46",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look at the ones. Are there enough to take away?",
+            "Ones: 0 is less than 4, so regroup: 10 - 4 = 6. The tens go down by 1 first."
+          ],
+          "wrong_feedback": {
+            "56": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+            "54": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+          },
+          "explanation": "80 - 34 = 46.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-004.practice.3",
+          "prompt": "453 - 36 = ?",
+          "speech": "453 minus 36 equals ?",
+          "options": [
+            "427",
+            "417",
+            "423"
+          ],
+          "answer": "417",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look at the ones. Are there enough to take away?",
+            "Ones: 3 is less than 6, so regroup: 13 - 6 = 7. The tens go down by 1 first."
+          ],
+          "wrong_feedback": {
+            "427": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+            "423": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+          },
+          "explanation": "453 - 36 = 417.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l3-004.check.1",
+          "prompt": "75 - 38 = ?",
+          "speech": "75 minus 38 equals ?",
+          "options": [
+            "47",
+            "43",
+            "37"
+          ],
+          "answer": "37",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "47": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+            "43": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+          },
+          "explanation": "75 - 38 = 37.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-004.check.2",
+          "prompt": "91 - 47 = ?",
+          "speech": "91 minus 47 equals ?",
+          "options": [
+            "44",
+            "54",
+            "56"
+          ],
+          "answer": "44",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "54": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+            "56": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+          },
+          "explanation": "91 - 47 = 44.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-004.check.3",
+          "prompt": "245 - 19 = ?",
+          "speech": "245 minus 19 equals ?",
+          "options": [
+            "236",
+            "226",
+            "234"
+          ],
+          "answer": "226",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "236": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+            "234": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+          },
+          "explanation": "245 - 19 = 226.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l3-004.remediation_explain.1",
+            "text": "Another way: 13 sweets, give away 6. Start with 13.",
+            "speech": "Another way: 13 sweets, give away 6. Start with 13.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🍬",
+                  "count": 13
+                }
+              ],
+              "operator": "-",
+              "revealCount": 1,
+              "countAll": true,
+              "takeAway": 0,
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l3-004.remediation_explain.2",
+            "text": "Give 6 away, 7 are left. When ones are short, a ten is broken into 10 ones to make this possible.",
+            "speech": "Give 6 away, 7 are left. When ones are short, a ten is broken into 10 ones to make this possible.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🍬",
+                  "count": 13
+                }
+              ],
+              "operator": "-",
+              "revealCount": 1,
+              "countAll": true,
+              "takeAway": 6,
+              "result": 7,
+              "showResult": true
+            }
+          },
+          {
+            "id": "numbers-l3-004.remediation_explain.3",
+            "text": "Use it in 52 - 27: 12 - 7 = 5 ones, 4 tens - 2 tens = 2 tens. So 52 - 27 = 25.",
+            "speech": "Use it in 52 minus 27: 12 minus 7 equals 5 ones, 4 tens minus 2 tens equals 2 tens. So 52 minus 27 equals 25.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "52 - 27 = 25"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l3-004.remediation_guided.1",
+            "prompt": "56 - 29 = ?",
+            "speech": "56 minus 29 equals ?",
+            "options": [
+              "37",
+              "33",
+              "27"
+            ],
+            "answer": "27",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Look at the ones. Are there enough to take away?",
+              "Ones: 6 is less than 9, so regroup: 16 - 9 = 7. The tens go down by 1 first."
+            ],
+            "wrong_feedback": {
+              "37": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+              "33": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+            },
+            "explanation": "56 - 29 = 27.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l3-004.remediation_guided.2",
+            "prompt": "73 - 45 = ?",
+            "speech": "73 minus 45 equals ?",
+            "options": [
+              "28",
+              "38",
+              "32"
+            ],
+            "answer": "28",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Look at the ones. Are there enough to take away?",
+              "Ones: 3 is less than 5, so regroup: 13 - 5 = 8. The tens go down by 1 first."
+            ],
+            "wrong_feedback": {
+              "38": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+              "32": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+            },
+            "explanation": "73 - 45 = 28.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l3-004.remediation_check.1",
+            "prompt": "62 - 28 = ?",
+            "speech": "62 minus 28 equals ?",
+            "options": [
+              "44",
+              "34",
+              "46"
+            ],
+            "answer": "34",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "44": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+              "46": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+            },
+            "explanation": "62 - 28 = 34.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-004.remediation_check.2",
+            "prompt": "94 - 57 = ?",
+            "speech": "94 minus 57 equals ?",
+            "options": [
+              "47",
+              "43",
+              "37"
+            ],
+            "answer": "37",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "47": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+              "43": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+            },
+            "explanation": "94 - 57 = 37.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-004.remediation_check.3",
+            "prompt": "534 - 46 = ?",
+            "speech": "534 minus 46 equals ?",
+            "options": [
+              "488",
+              "498",
+              "512"
+            ],
+            "answer": "488",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "498": "You forgot to take the 1 ten you lent. Reduce the tens by 1.",
+              "512": "You took the smaller digit from the bigger one in each place. Always start with the top number."
+            },
+            "explanation": "534 - 46 = 488.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of the number words and 'plus', 'minus', 'times', 'equals' (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l3a.py); every distractor is wrong and the answer position rotates.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l3-005",
+      "world": "numbers",
+      "level": 3,
+      "locale": "en-IN",
+      "title": "Skip counting and patterns",
+      "objective": "Find the next number in a skip-counting pattern.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l3-005.introduce.1",
+          "text": "Skip counting jumps by the same number every time. Here we start at 0 and jump by 3.",
+          "speech": "Skip counting jumps by the same number every time. Here we start at 0 and jump by 3.",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 30,
+            "start": 0,
+            "jump": 3,
+            "showHops": false
+          }
+        },
+        {
+          "id": "numbers-l3-005.introduce.2",
+          "text": "3, 6, 9, 12. Each number is 3 more than the one before. The next number is 15.",
+          "speech": "3, 6, 9, 12. Each number is 3 more than the one before. The next number is 15.",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 30,
+            "start": 12,
+            "jump": 3,
+            "showHops": true
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l3-005.demonstrate.1",
+          "text": "To find the jump, subtract two neighbours. In 10, 20, 30 the jump is 10. The next number is 40.",
+          "speech": "To find the jump, subtract two neighbours. In 10, 20, 30 the jump is 10. The next number is 40.",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 50,
+            "start": 30,
+            "jump": 10,
+            "showHops": true
+          }
+        },
+        {
+          "id": "numbers-l3-005.demonstrate.2",
+          "text": "Patterns can go down too. 50, 45, 40: each time we jump back 5. The next number is 35.",
+          "speech": "Patterns can go down too. 50, 45, 40: each time we jump back 5. The next number is 35.",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 50,
+            "start": 40,
+            "jump": -5,
+            "showHops": true
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l3-005.guided.1",
+          "prompt": "What comes next: 4, 8, 12, ?",
+          "speech": "What comes next: 4, 8, 12, ?",
+          "options": [
+            "16",
+            "13",
+            "17"
+          ],
+          "answer": "16",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 30,
+            "start": 8,
+            "jump": 4,
+            "showHops": true
+          },
+          "hints": [
+            "Find how much the numbers change from one to the next.",
+            "The jump is +4: 8 - 4 = 4. 12 + 4 = 16."
+          ],
+          "wrong_feedback": {
+            "13": "That counts by ones. This pattern jumps by 4 every time.",
+            "17": "Close, but the jump is exactly 4 every time."
+          },
+          "explanation": "The next number is 16.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-005.guided.2",
+          "prompt": "What comes next: 50, 45, 40, ?",
+          "speech": "What comes next: 50, 45, 40, ?",
+          "options": [
+            "39",
+            "35",
+            "36"
+          ],
+          "answer": "35",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 50,
+            "start": 40,
+            "jump": -5,
+            "showHops": true
+          },
+          "hints": [
+            "Find how much the numbers change from one to the next.",
+            "The jump is -5: 45 - 50 = -5. 40 - 5 = 35."
+          ],
+          "wrong_feedback": {
+            "39": "That counts by ones. This pattern jumps by 5 every time.",
+            "36": "Close, but the jump is exactly 5 every time."
+          },
+          "explanation": "The next number is 35.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l3-005.practice.1",
+          "prompt": "What comes next: 10, 20, 30, ?",
+          "speech": "What comes next: 10, 20, 30, ?",
+          "options": [
+            "31",
+            "41",
+            "40"
+          ],
+          "answer": "40",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find how much the numbers change from one to the next.",
+            "The jump is +10: 20 - 10 = 10. 30 + 10 = 40."
+          ],
+          "wrong_feedback": {
+            "31": "That counts by ones. This pattern jumps by 10 every time.",
+            "41": "Close, but the jump is exactly 10 every time."
+          },
+          "explanation": "The next number is 40.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-005.practice.2",
+          "prompt": "What comes next: 100, 90, 80, ?",
+          "speech": "What comes next: 100, 90, 80, ?",
+          "options": [
+            "70",
+            "79",
+            "71"
+          ],
+          "answer": "70",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find how much the numbers change from one to the next.",
+            "The jump is -10: 90 - 100 = -10. 80 - 10 = 70."
+          ],
+          "wrong_feedback": {
+            "79": "That counts by ones. This pattern jumps by 10 every time.",
+            "71": "Close, but the jump is exactly 10 every time."
+          },
+          "explanation": "The next number is 70.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-005.practice.3",
+          "prompt": "The marker is on 20. We jump 5. Where do we land after one jump?",
+          "speech": "The marker is on 20. We jump 5. Where do we land after one jump?",
+          "options": [
+            "15",
+            "25",
+            "30"
+          ],
+          "answer": "25",
+          "visual": {
+            "type": "numberLine",
+            "from": 0,
+            "to": 50,
+            "start": 20,
+            "jump": 5,
+            "showHops": false
+          },
+          "hints": [
+            "A jump of 5 means 5 more than where the marker is now.",
+            "Start at 20 and count on 5: 20 + 5 = 25."
+          ],
+          "wrong_feedback": {
+            "15": "A jump forward goes to a bigger number, not a smaller one.",
+            "30": "That is two jumps. Make only one jump of 5."
+          },
+          "explanation": "20 + 5 = 25.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l3-005.check.1",
+          "prompt": "What comes next: 2, 4, 6, ?",
+          "speech": "What comes next: 2, 4, 6, ?",
+          "options": [
+            "7",
+            "9",
+            "8"
+          ],
+          "answer": "8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "7": "That counts by ones. This pattern jumps by 2 every time.",
+            "9": "Close, but the jump is exactly 2 every time."
+          },
+          "explanation": "The next number is 8.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-005.check.2",
+          "prompt": "What comes next: 25, 30, 35, ?",
+          "speech": "What comes next: 25, 30, 35, ?",
+          "options": [
+            "40",
+            "36",
+            "41"
+          ],
+          "answer": "40",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "36": "That counts by ones. This pattern jumps by 5 every time.",
+            "41": "Close, but the jump is exactly 5 every time."
+          },
+          "explanation": "The next number is 40.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-005.check.3",
+          "prompt": "What comes next: 40, 36, 32, ?",
+          "speech": "What comes next: 40, 36, 32, ?",
+          "options": [
+            "31",
+            "28",
+            "29"
+          ],
+          "answer": "28",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "31": "That counts by ones. This pattern jumps by 4 every time.",
+            "29": "Close, but the jump is exactly 4 every time."
+          },
+          "explanation": "The next number is 28.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l3-005.remediation_explain.1",
+            "text": "Another way: groups of 5 stars. One group is 5, two groups are 10, three groups are 15.",
+            "speech": "Another way: groups of 5 stars. One group is 5, two groups are 10, three groups are 15.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                }
+              ],
+              "operator": "+",
+              "revealCount": 3,
+              "countAll": false,
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l3-005.remediation_explain.2",
+            "text": "Each new group adds 5. That is why we count 5, 10, 15, 20.",
+            "speech": "Each new group adds 5. That is why we count 5, 10, 15, 20.",
+            "visual": {
+              "type": "numberLine",
+              "from": 0,
+              "to": 20,
+              "start": 0,
+              "jump": 5,
+              "showHops": true
+            }
+          },
+          {
+            "id": "numbers-l3-005.remediation_explain.3",
+            "text": "A pattern always adds, or takes away, the same number. Find that jump first, then use it again.",
+            "speech": "A pattern always adds, or takes away, the same number. Find that jump first, then use it again.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "5, 10, 15, 20"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l3-005.remediation_guided.1",
+            "prompt": "What comes next: 3, 6, 9, ?",
+            "speech": "What comes next: 3, 6, 9, ?",
+            "options": [
+              "10",
+              "13",
+              "12"
+            ],
+            "answer": "12",
+            "visual": {
+              "type": "numberLine",
+              "from": 0,
+              "to": 30,
+              "start": 6,
+              "jump": 3,
+              "showHops": true
+            },
+            "hints": [
+              "Find how much the numbers change from one to the next.",
+              "The jump is +3: 6 - 3 = 3. 9 + 3 = 12."
+            ],
+            "wrong_feedback": {
+              "10": "That counts by ones. This pattern jumps by 3 every time.",
+              "13": "Close, but the jump is exactly 3 every time."
+            },
+            "explanation": "The next number is 12.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l3-005.remediation_guided.2",
+            "prompt": "Which number is missing: 8, 16, ?, 32",
+            "speech": "Which number is missing: 8, 16, ?, 32",
+            "options": [
+              "24",
+              "25",
+              "17"
+            ],
+            "answer": "24",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Find the jump from the first number to the second.",
+              "The jump is 8: 8 to 16. So the missing number is 16 + 8 = 24."
+            ],
+            "wrong_feedback": {
+              "25": "Close, but the jump is exactly 8 every time.",
+              "17": "That counts by ones from 16. This pattern jumps by 8."
+            },
+            "explanation": "The missing number is 24.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l3-005.remediation_check.1",
+            "prompt": "What comes next: 5, 10, 15, ?",
+            "speech": "What comes next: 5, 10, 15, ?",
+            "options": [
+              "16",
+              "20",
+              "21"
+            ],
+            "answer": "20",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "16": "That counts by ones. This pattern jumps by 5 every time.",
+              "21": "Close, but the jump is exactly 5 every time."
+            },
+            "explanation": "The next number is 20.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-005.remediation_check.2",
+            "prompt": "What comes next: 30, 27, 24, ?",
+            "speech": "What comes next: 30, 27, 24, ?",
+            "options": [
+              "23",
+              "22",
+              "21"
+            ],
+            "answer": "21",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "23": "That counts by ones. This pattern jumps by 3 every time.",
+              "22": "Close, but the jump is exactly 3 every time."
+            },
+            "explanation": "The next number is 21.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-005.remediation_check.3",
+            "prompt": "Which number is missing: 12, 16, ?, 24",
+            "speech": "Which number is missing: 12, 16, ?, 24",
+            "options": [
+              "20",
+              "21",
+              "17"
+            ],
+            "answer": "20",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "21": "Close, but the jump is exactly 4 every time.",
+              "17": "That counts by ones from 16. This pattern jumps by 4."
+            },
+            "explanation": "The missing number is 20.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of the number words and 'plus', 'minus', 'times', 'equals' (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l3a.py); every distractor is wrong and the answer position rotates.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l3-006",
+      "world": "numbers",
+      "level": 3,
+      "locale": "en-IN",
+      "title": "Equal groups and arrays",
+      "objective": "Find the total of equal groups and rows.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l3-006.introduce.1",
+          "text": "Equal groups have the same number of things in each group. Here are 4 groups of 3 mangoes.",
+          "speech": "Equal groups have the same number of things in each group. Here are 4 groups of 3 mangoes.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🥭",
+                "count": 3
+              },
+              {
+                "emoji": "🥭",
+                "count": 3
+              },
+              {
+                "emoji": "🥭",
+                "count": 3
+              },
+              {
+                "emoji": "🥭",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 4,
+            "countAll": false,
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l3-006.introduce.2",
+          "text": "Count them all: 3 + 3 + 3 + 3 = 12 mangoes. Adding the same number again and again is repeated addition.",
+          "speech": "Count them all: 3 plus 3 plus 3 plus 3 equals 12 mangoes. Adding the same number again and again is repeated addition.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🥭",
+                "count": 3
+              },
+              {
+                "emoji": "🥭",
+                "count": 3
+              },
+              {
+                "emoji": "🥭",
+                "count": 3
+              },
+              {
+                "emoji": "🥭",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 4,
+            "countAll": true,
+            "result": 12,
+            "showResult": true
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l3-006.demonstrate.1",
+          "text": "A row-and-column picture is called an array. 3 rows with 4 in each row is 4 + 4 + 4 = 12.",
+          "speech": "A row-and-column picture is called an array. 3 rows with 4 in each row is 4 plus 4 plus 4 equals 12.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🌸",
+                "count": 4
+              },
+              {
+                "emoji": "🌸",
+                "count": 4
+              },
+              {
+                "emoji": "🌸",
+                "count": 4
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": false,
+            "result": 12,
+            "showResult": true
+          }
+        },
+        {
+          "id": "numbers-l3-006.demonstrate.2",
+          "text": "2 groups of 5 flowers: 5 + 5 = 10. Equal groups: the same number in every group.",
+          "speech": "2 groups of 5 flowers: 5 plus 5 equals 10. Equal groups: the same number in every group.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🌸",
+                "count": 5
+              },
+              {
+                "emoji": "🌸",
+                "count": 5
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": true,
+            "result": 10,
+            "showResult": true
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l3-006.guided.1",
+          "prompt": "There are 3 bags. Each has 4 stars. How many stars are there altogether?",
+          "speech": "There are 3 bags. Each has 4 stars. How many stars are there altogether?",
+          "options": [
+            "12",
+            "7",
+            "16"
+          ],
+          "answer": "12",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 4
+              },
+              {
+                "emoji": "⭐",
+                "count": 4
+              },
+              {
+                "emoji": "⭐",
+                "count": 4
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Each group has 4. How many groups are there?",
+            "Add the groups: 4 + 4 + 4 = 12."
+          ],
+          "wrong_feedback": {
+            "7": "That is 3 + 4. We need 3 equal groups of 4: add 4 again and again.",
+            "16": "Close. Count the groups again: one group too many or too few."
+          },
+          "explanation": "3 groups of 4 make 12.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-006.guided.2",
+          "prompt": "Which addition shows 3 groups of 5?",
+          "speech": "Which addition shows 3 groups of 5?",
+          "options": [
+            "3 + 3 + 3 + 3 + 3",
+            "5 + 5 + 5",
+            "3 + 5"
+          ],
+          "answer": "5 + 5 + 5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Each group is one number in the addition. How many groups are there?",
+            "3 groups, so write 5 3 times: 5 + 5 + 5."
+          ],
+          "wrong_feedback": {
+            "3 + 3 + 3 + 3 + 3": "That is 5 groups of 3. We need 3 groups of 5.",
+            "3 + 5": "That is only two numbers. Write one number for each group."
+          },
+          "explanation": "5 + 5 + 5 shows 3 groups of 5.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l3-006.practice.1",
+          "prompt": "There are 5 rows. Each has 2 laddoos. How many laddoos are there altogether?",
+          "speech": "There are 5 rows. Each has 2 laddoos. How many laddoos are there altogether?",
+          "options": [
+            "7",
+            "12",
+            "10"
+          ],
+          "answer": "10",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🟠",
+                "count": 2
+              },
+              {
+                "emoji": "🟠",
+                "count": 2
+              },
+              {
+                "emoji": "🟠",
+                "count": 2
+              },
+              {
+                "emoji": "🟠",
+                "count": 2
+              },
+              {
+                "emoji": "🟠",
+                "count": 2
+              }
+            ],
+            "operator": "+",
+            "revealCount": 5,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Each group has 2. How many groups are there?",
+            "Add the groups: 2 + 2 + 2 + 2 + 2 = 10."
+          ],
+          "wrong_feedback": {
+            "7": "That is 5 + 2. We need 5 equal groups of 2: add 2 again and again.",
+            "12": "Close. Count the groups again: one group too many or too few."
+          },
+          "explanation": "5 groups of 2 make 10.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-006.practice.2",
+          "prompt": "There are 3 baskets. Each has 6 mangoes. How many mangoes are there altogether?",
+          "speech": "There are 3 baskets. Each has 6 mangoes. How many mangoes are there altogether?",
+          "options": [
+            "18",
+            "9",
+            "24"
+          ],
+          "answer": "18",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🥭",
+                "count": 6
+              },
+              {
+                "emoji": "🥭",
+                "count": 6
+              },
+              {
+                "emoji": "🥭",
+                "count": 6
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Each group has 6. How many groups are there?",
+            "Add the groups: 6 + 6 + 6 = 18."
+          ],
+          "wrong_feedback": {
+            "9": "That is 3 + 6. We need 3 equal groups of 6: add 6 again and again.",
+            "24": "Close. Count the groups again: one group too many or too few."
+          },
+          "explanation": "3 groups of 6 make 18.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-006.practice.3",
+          "prompt": "There are 4 bags. Each has 5 pencils. How many pencils are there altogether?",
+          "speech": "There are 4 bags. Each has 5 pencils. How many pencils are there altogether?",
+          "options": [
+            "9",
+            "20",
+            "25"
+          ],
+          "answer": "20",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "✏️",
+                "count": 5
+              },
+              {
+                "emoji": "✏️",
+                "count": 5
+              },
+              {
+                "emoji": "✏️",
+                "count": 5
+              },
+              {
+                "emoji": "✏️",
+                "count": 5
+              }
+            ],
+            "operator": "+",
+            "revealCount": 4,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Each group has 5. How many groups are there?",
+            "Add the groups: 5 + 5 + 5 + 5 = 20."
+          ],
+          "wrong_feedback": {
+            "9": "That is 4 + 5. We need 4 equal groups of 5: add 5 again and again.",
+            "25": "Close. Count the groups again: one group too many or too few."
+          },
+          "explanation": "4 groups of 5 make 20.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l3-006.check.1",
+          "prompt": "There are 6 rows. Each has 3 flowers. How many flowers are there altogether?",
+          "speech": "There are 6 rows. Each has 3 flowers. How many flowers are there altogether?",
+          "options": [
+            "9",
+            "21",
+            "18"
+          ],
+          "answer": "18",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🌸",
+                "count": 3
+              },
+              {
+                "emoji": "🌸",
+                "count": 3
+              },
+              {
+                "emoji": "🌸",
+                "count": 3
+              },
+              {
+                "emoji": "🌸",
+                "count": 3
+              },
+              {
+                "emoji": "🌸",
+                "count": 3
+              },
+              {
+                "emoji": "🌸",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 6,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "9": "That is 6 + 3. We need 6 equal groups of 3: add 3 again and again.",
+            "21": "Close. Count the groups again: one group too many or too few."
+          },
+          "explanation": "6 groups of 3 make 18.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-006.check.2",
+          "prompt": "There are 2 boxes. Each has 8 apples. How many apples are there altogether?",
+          "speech": "There are 2 boxes. Each has 8 apples. How many apples are there altogether?",
+          "options": [
+            "16",
+            "10",
+            "24"
+          ],
+          "answer": "16",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🍎",
+                "count": 8
+              },
+              {
+                "emoji": "🍎",
+                "count": 8
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "10": "That is 2 + 8. We need 2 equal groups of 8: add 8 again and again.",
+            "24": "Close. Count the groups again: one group too many or too few."
+          },
+          "explanation": "2 groups of 8 make 16.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-006.check.3",
+          "prompt": "Which addition shows 3 groups of 7?",
+          "speech": "Which addition shows 3 groups of 7?",
+          "options": [
+            "3 + 3 + 3 + 3 + 3 + 3 + 3",
+            "7 + 7 + 7",
+            "3 + 7"
+          ],
+          "answer": "7 + 7 + 7",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "3 + 3 + 3 + 3 + 3 + 3 + 3": "That is 7 groups of 3. We need 3 groups of 7.",
+            "3 + 7": "That is only two numbers. Write one number for each group."
+          },
+          "explanation": "7 + 7 + 7 shows 3 groups of 7.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l3-006.remediation_explain.1",
+            "text": "Another way: 3 plates with 2 bananas on each plate.",
+            "speech": "Another way: 3 plates with 2 bananas on each plate.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🍌",
+                  "count": 2
+                },
+                {
+                  "emoji": "🍌",
+                  "count": 2
+                },
+                {
+                  "emoji": "🍌",
+                  "count": 2
+                }
+              ],
+              "operator": "+",
+              "revealCount": 3,
+              "countAll": false,
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l3-006.remediation_explain.2",
+            "text": "Count plate by plate: 2, 4, 6. Or write 2 + 2 + 2 = 6.",
+            "speech": "Count plate by plate: 2, 4, 6. Or write 2 plus 2 plus 2 equals 6.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🍌",
+                  "count": 2
+                },
+                {
+                  "emoji": "🍌",
+                  "count": 2
+                },
+                {
+                  "emoji": "🍌",
+                  "count": 2
+                }
+              ],
+              "operator": "+",
+              "revealCount": 3,
+              "countAll": true,
+              "result": 6,
+              "showResult": true
+            }
+          },
+          {
+            "id": "numbers-l3-006.remediation_explain.3",
+            "text": "Equal groups: the same number on every plate. Repeated addition gives the total.",
+            "speech": "Equal groups: the same number on every plate. Repeated addition gives the total.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2 + 2 + 2 = 6"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l3-006.remediation_guided.1",
+            "prompt": "There are 2 plates. Each has 5 laddoos. How many laddoos are there altogether?",
+            "speech": "There are 2 plates. Each has 5 laddoos. How many laddoos are there altogether?",
+            "options": [
+              "7",
+              "15",
+              "10"
+            ],
+            "answer": "10",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🟠",
+                  "count": 5
+                },
+                {
+                  "emoji": "🟠",
+                  "count": 5
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [
+              "Each group has 5. How many groups are there?",
+              "Add the groups: 5 + 5 = 10."
+            ],
+            "wrong_feedback": {
+              "7": "That is 2 + 5. We need 2 equal groups of 5: add 5 again and again.",
+              "15": "Close. Count the groups again: one group too many or too few."
+            },
+            "explanation": "2 groups of 5 make 10.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l3-006.remediation_guided.2",
+            "prompt": "There are 4 boxes. Each has 3 pencils. How many pencils are there altogether?",
+            "speech": "There are 4 boxes. Each has 3 pencils. How many pencils are there altogether?",
+            "options": [
+              "12",
+              "7",
+              "15"
+            ],
+            "answer": "12",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "✏️",
+                  "count": 3
+                },
+                {
+                  "emoji": "✏️",
+                  "count": 3
+                },
+                {
+                  "emoji": "✏️",
+                  "count": 3
+                },
+                {
+                  "emoji": "✏️",
+                  "count": 3
+                }
+              ],
+              "operator": "+",
+              "revealCount": 4,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [
+              "Each group has 3. How many groups are there?",
+              "Add the groups: 3 + 3 + 3 + 3 = 12."
+            ],
+            "wrong_feedback": {
+              "7": "That is 4 + 3. We need 4 equal groups of 3: add 3 again and again.",
+              "15": "Close. Count the groups again: one group too many or too few."
+            },
+            "explanation": "4 groups of 3 make 12.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l3-006.remediation_check.1",
+            "prompt": "There are 5 rows. Each has 3 flowers. How many flowers are there altogether?",
+            "speech": "There are 5 rows. Each has 3 flowers. How many flowers are there altogether?",
+            "options": [
+              "8",
+              "15",
+              "18"
+            ],
+            "answer": "15",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🌸",
+                  "count": 3
+                },
+                {
+                  "emoji": "🌸",
+                  "count": 3
+                },
+                {
+                  "emoji": "🌸",
+                  "count": 3
+                },
+                {
+                  "emoji": "🌸",
+                  "count": 3
+                },
+                {
+                  "emoji": "🌸",
+                  "count": 3
+                }
+              ],
+              "operator": "+",
+              "revealCount": 5,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "8": "That is 5 + 3. We need 5 equal groups of 3: add 3 again and again.",
+              "18": "Close. Count the groups again: one group too many or too few."
+            },
+            "explanation": "5 groups of 3 make 15.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-006.remediation_check.2",
+            "prompt": "There are 2 bags. Each has 9 mangoes. How many mangoes are there altogether?",
+            "speech": "There are 2 bags. Each has 9 mangoes. How many mangoes are there altogether?",
+            "options": [
+              "11",
+              "27",
+              "18"
+            ],
+            "answer": "18",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🥭",
+                  "count": 9
+                },
+                {
+                  "emoji": "🥭",
+                  "count": 9
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "11": "That is 2 + 9. We need 2 equal groups of 9: add 9 again and again.",
+              "27": "Close. Count the groups again: one group too many or too few."
+            },
+            "explanation": "2 groups of 9 make 18.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-006.remediation_check.3",
+            "prompt": "Which addition shows 4 groups of 6?",
+            "speech": "Which addition shows 4 groups of 6?",
+            "options": [
+              "6 + 6 + 6 + 6",
+              "4 + 4 + 4 + 4 + 4 + 4",
+              "4 + 6"
+            ],
+            "answer": "6 + 6 + 6 + 6",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "4 + 4 + 4 + 4 + 4 + 4": "That is 6 groups of 4. We need 4 groups of 6.",
+              "4 + 6": "That is only two numbers. Write one number for each group."
+            },
+            "explanation": "6 + 6 + 6 + 6 shows 4 groups of 6.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of the number words and 'plus', 'minus', 'times', 'equals' (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l3a.py); every distractor is wrong and the answer position rotates.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l3-007",
+      "world": "numbers",
+      "level": 3,
+      "locale": "en-IN",
+      "title": "Multiplication facts 2, 5, 10",
+      "objective": "Recall the multiplication facts for 2, 5 and 10.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l3-007.introduce.1",
+          "text": "Facts of 2 are doubles, facts of 5 end in 0 or 5, and facts of 10 end in 0. Look at 5 x 4: 4 groups of 5.",
+          "speech": "Facts of 2 are doubles, facts of 5 end in 0 or 5, and facts of 10 end in 0. Look at 5 times 4: 4 groups of 5.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 5
+              },
+              {
+                "emoji": "⭐",
+                "count": 5
+              },
+              {
+                "emoji": "⭐",
+                "count": 5
+              },
+              {
+                "emoji": "⭐",
+                "count": 5
+              }
+            ],
+            "operator": "+",
+            "revealCount": 4,
+            "countAll": false,
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l3-007.introduce.2",
+          "text": "Count the stars in fives: 5, 10, 15, 20. So 5 x 4 = 20.",
+          "speech": "Count the stars in fives: 5, 10, 15, 20. So 5 times 4 equals 20.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 5
+              },
+              {
+                "emoji": "⭐",
+                "count": 5
+              },
+              {
+                "emoji": "⭐",
+                "count": 5
+              },
+              {
+                "emoji": "⭐",
+                "count": 5
+              }
+            ],
+            "operator": "+",
+            "revealCount": 4,
+            "countAll": true,
+            "result": 20,
+            "showResult": true
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l3-007.demonstrate.1",
+          "text": "Doubles: 2 x 7 means 7 + 7 = 14. Two groups of 7.",
+          "speech": "Doubles: 2 times 7 means 7 plus 7 equals 14. Two groups of 7.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 7
+              },
+              {
+                "emoji": "⭐",
+                "count": 7
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": true,
+            "result": 14,
+            "showResult": true
+          }
+        },
+        {
+          "id": "numbers-l3-007.demonstrate.2",
+          "text": "Tens: 10 x 3 means 3 tens, and 3 tens are 30. Fives: 5 x 6 is 5, 10, 15, 20, 25, 30.",
+          "speech": "Tens: 10 times 3 means 3 tens, and 3 tens are 30. Fives: 5 times 6 is 5, 10, 15, 20, 25, 30.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "10 x 3 = 30"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l3-007.guided.1",
+          "prompt": "2 x 6 = ?",
+          "speech": "2 times 6 equals ?",
+          "options": [
+            "12",
+            "8",
+            "18"
+          ],
+          "answer": "12",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 6
+              },
+              {
+                "emoji": "⭐",
+                "count": 6
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Think: 2 groups of 6. Skip count by 6.",
+            "Count in 6s, 2 times: 6, 12. The last number is 12."
+          ],
+          "wrong_feedback": {
+            "8": "That is adding. 2 x 6 means 2 groups of 6: add 6 again and again.",
+            "18": "Too big: that is one group of 6 too many. Count the 2 groups again."
+          },
+          "explanation": "2 x 6 = 12.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-007.guided.2",
+          "prompt": "5 x 3 = ?",
+          "speech": "5 times 3 equals ?",
+          "options": [
+            "8",
+            "15",
+            "18"
+          ],
+          "answer": "15",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 3
+              },
+              {
+                "emoji": "⭐",
+                "count": 3
+              },
+              {
+                "emoji": "⭐",
+                "count": 3
+              },
+              {
+                "emoji": "⭐",
+                "count": 3
+              },
+              {
+                "emoji": "⭐",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 5,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Think: 5 groups of 3. Skip count by 3.",
+            "Count in 3s, 5 times: 3, 6, 9, 12, 15. The last number is 15."
+          ],
+          "wrong_feedback": {
+            "8": "That is adding. 5 x 3 means 5 groups of 3: add 3 again and again.",
+            "18": "Too big: that is one group of 3 too many. Count the 5 groups again."
+          },
+          "explanation": "5 x 3 = 15.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l3-007.practice.1",
+          "prompt": "2 x 8 = ?",
+          "speech": "2 times 8 equals ?",
+          "options": [
+            "10",
+            "24",
+            "16"
+          ],
+          "answer": "16",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think: 2 groups of 8. Skip count by 8.",
+            "Count in 8s, 2 times: 8, 16. The last number is 16."
+          ],
+          "wrong_feedback": {
+            "10": "That is adding. 2 x 8 means 2 groups of 8: add 8 again and again.",
+            "24": "Too big: that is one group of 8 too many. Count the 2 groups again."
+          },
+          "explanation": "2 x 8 = 16.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-007.practice.2",
+          "prompt": "5 x 7 = ?",
+          "speech": "5 times 7 equals ?",
+          "options": [
+            "35",
+            "12",
+            "42"
+          ],
+          "answer": "35",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think: 5 groups of 7. Skip count by 7.",
+            "Count in 7s, 5 times: 7, 14, 21, 28, 35. The last number is 35."
+          ],
+          "wrong_feedback": {
+            "12": "That is adding. 5 x 7 means 5 groups of 7: add 7 again and again.",
+            "42": "Too big: that is one group of 7 too many. Count the 5 groups again."
+          },
+          "explanation": "5 x 7 = 35.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-007.practice.3",
+          "prompt": "10 x 6 = ?",
+          "speech": "10 times 6 equals ?",
+          "options": [
+            "16",
+            "60",
+            "66"
+          ],
+          "answer": "60",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think: 10 groups of 6. Skip count by 6.",
+            "Count in 6s, 10 times: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60. The last number is 60."
+          ],
+          "wrong_feedback": {
+            "16": "That is adding. 10 x 6 means 10 groups of 6: add 6 again and again.",
+            "66": "Too big: that is one group of 6 too many. Count the 10 groups again."
+          },
+          "explanation": "10 x 6 = 60.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l3-007.check.1",
+          "prompt": "2 x 9 = ?",
+          "speech": "2 times 9 equals ?",
+          "options": [
+            "11",
+            "27",
+            "18"
+          ],
+          "answer": "18",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "11": "That is adding. 2 x 9 means 2 groups of 9: add 9 again and again.",
+            "27": "Too big: that is one group of 9 too many. Count the 2 groups again."
+          },
+          "explanation": "2 x 9 = 18.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-007.check.2",
+          "prompt": "5 x 8 = ?",
+          "speech": "5 times 8 equals ?",
+          "options": [
+            "40",
+            "13",
+            "48"
+          ],
+          "answer": "40",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "13": "That is adding. 5 x 8 means 5 groups of 8: add 8 again and again.",
+            "48": "Too big: that is one group of 8 too many. Count the 5 groups again."
+          },
+          "explanation": "5 x 8 = 40.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-007.check.3",
+          "prompt": "10 x 4 = ?",
+          "speech": "10 times 4 equals ?",
+          "options": [
+            "14",
+            "40",
+            "44"
+          ],
+          "answer": "40",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "14": "That is adding. 10 x 4 means 10 groups of 4: add 4 again and again.",
+            "44": "Too big: that is one group of 4 too many. Count the 10 groups again."
+          },
+          "explanation": "10 x 4 = 40.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l3-007.remediation_explain.1",
+            "text": "Another way: skip count. For 5 x 3 count three jumps of 5.",
+            "speech": "Another way: skip count. For 5 times 3 count three jumps of 5.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "5, 10, 15"
+            }
+          },
+          {
+            "id": "numbers-l3-007.remediation_explain.2",
+            "text": "Three jumps of 5 land on 15. So 5 x 3 = 15.",
+            "speech": "Three jumps of 5 land on 15. So 5 times 3 equals 15.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                }
+              ],
+              "operator": "+",
+              "revealCount": 3,
+              "countAll": true,
+              "result": 15,
+              "showResult": true
+            }
+          },
+          {
+            "id": "numbers-l3-007.remediation_explain.3",
+            "text": "For 2 x 4 double 4: 4 + 4 = 8. For 10 x 2 the answer ends in 0: 20.",
+            "speech": "For 2 times 4 double 4: 4 plus 4 equals 8. For 10 times 2 the answer ends in 0: 20.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2 x 4 = 8"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l3-007.remediation_guided.1",
+            "prompt": "2 x 4 = ?",
+            "speech": "2 times 4 equals ?",
+            "options": [
+              "6",
+              "12",
+              "8"
+            ],
+            "answer": "8",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "⭐",
+                  "count": 4
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 4
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [
+              "Think: 2 groups of 4. Skip count by 4.",
+              "Count in 4s, 2 times: 4, 8. The last number is 8."
+            ],
+            "wrong_feedback": {
+              "6": "That is adding. 2 x 4 means 2 groups of 4: add 4 again and again.",
+              "12": "Too big: that is one group of 4 too many. Count the 2 groups again."
+            },
+            "explanation": "2 x 4 = 8.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l3-007.remediation_guided.2",
+            "prompt": "5 x 2 = ?",
+            "speech": "5 times 2 equals ?",
+            "options": [
+              "10",
+              "7",
+              "12"
+            ],
+            "answer": "10",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "⭐",
+                  "count": 2
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 2
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 2
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 2
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 2
+                }
+              ],
+              "operator": "+",
+              "revealCount": 5,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [
+              "Think: 5 groups of 2. Skip count by 2.",
+              "Count in 2s, 5 times: 2, 4, 6, 8, 10. The last number is 10."
+            ],
+            "wrong_feedback": {
+              "7": "That is adding. 5 x 2 means 5 groups of 2: add 2 again and again.",
+              "12": "Too big: that is one group of 2 too many. Count the 5 groups again."
+            },
+            "explanation": "5 x 2 = 10.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l3-007.remediation_check.1",
+            "prompt": "2 x 7 = ?",
+            "speech": "2 times 7 equals ?",
+            "options": [
+              "9",
+              "14",
+              "21"
+            ],
+            "answer": "14",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "9": "That is adding. 2 x 7 means 2 groups of 7: add 7 again and again.",
+              "21": "Too big: that is one group of 7 too many. Count the 2 groups again."
+            },
+            "explanation": "2 x 7 = 14.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-007.remediation_check.2",
+            "prompt": "5 x 9 = ?",
+            "speech": "5 times 9 equals ?",
+            "options": [
+              "14",
+              "54",
+              "45"
+            ],
+            "answer": "45",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "14": "That is adding. 5 x 9 means 5 groups of 9: add 9 again and again.",
+              "54": "Too big: that is one group of 9 too many. Count the 5 groups again."
+            },
+            "explanation": "5 x 9 = 45.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-007.remediation_check.3",
+            "prompt": "10 x 7 = ?",
+            "speech": "10 times 7 equals ?",
+            "options": [
+              "70",
+              "17",
+              "77"
+            ],
+            "answer": "70",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "17": "That is adding. 10 x 7 means 10 groups of 7: add 7 again and again.",
+              "77": "Too big: that is one group of 7 too many. Count the 10 groups again."
+            },
+            "explanation": "10 x 7 = 70.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of the number words and 'plus', 'minus', 'times', 'equals' (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l3a.py); every distractor is wrong and the answer position rotates.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l3-008",
+      "world": "numbers",
+      "level": 3,
+      "locale": "en-IN",
+      "title": "Multiplication facts 3, 4",
+      "objective": "Recall the multiplication facts for 3 and 4.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l3-008.introduce.1",
+          "text": "Facts of 3 count up by 3: 3, 6, 9, 12. Look at 3 x 4: 3 groups of 4.",
+          "speech": "Facts of 3 count up by 3: 3, 6, 9, 12. Look at 3 times 4: 3 groups of 4.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 4
+              },
+              {
+                "emoji": "⭐",
+                "count": 4
+              },
+              {
+                "emoji": "⭐",
+                "count": 4
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": false,
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l3-008.introduce.2",
+          "text": "Count the stars: 4, 8, 12. So 3 x 4 = 12.",
+          "speech": "Count the stars: 4, 8, 12. So 3 times 4 equals 12.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 4
+              },
+              {
+                "emoji": "⭐",
+                "count": 4
+              },
+              {
+                "emoji": "⭐",
+                "count": 4
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": true,
+            "result": 12,
+            "showResult": true
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l3-008.demonstrate.1",
+          "text": "Facts of 4 are double the double. For 4 x 5: double 5 is 10, double 10 is 20.",
+          "speech": "Facts of 4 are double the double. For 4 times 5: double 5 is 10, double 10 is 20.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4 x 5 = 20"
+          }
+        },
+        {
+          "id": "numbers-l3-008.demonstrate.2",
+          "text": "Try 4 x 6: double 6 is 12, double 12 is 24. So 4 x 6 = 24.",
+          "speech": "Try 4 times 6: double 6 is 12, double 12 is 24. So 4 times 6 equals 24.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4 x 6 = 24"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l3-008.guided.1",
+          "prompt": "3 x 5 = ?",
+          "speech": "3 times 5 equals ?",
+          "options": [
+            "15",
+            "8",
+            "20"
+          ],
+          "answer": "15",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 5
+              },
+              {
+                "emoji": "⭐",
+                "count": 5
+              },
+              {
+                "emoji": "⭐",
+                "count": 5
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Think: 3 groups of 5. Skip count by 5.",
+            "Count in 5s, 3 times: 5, 10, 15. The last number is 15."
+          ],
+          "wrong_feedback": {
+            "8": "That is adding. 3 x 5 means 3 groups of 5: add 5 again and again.",
+            "20": "Too big: that is one group of 5 too many. Count the 3 groups again."
+          },
+          "explanation": "3 x 5 = 15.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l3-008.guided.2",
+          "prompt": "4 x 3 = ?",
+          "speech": "4 times 3 equals ?",
+          "options": [
+            "7",
+            "12",
+            "15"
+          ],
+          "answer": "12",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "⭐",
+                "count": 3
+              },
+              {
+                "emoji": "⭐",
+                "count": 3
+              },
+              {
+                "emoji": "⭐",
+                "count": 3
+              },
+              {
+                "emoji": "⭐",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 4,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Think: 4 groups of 3. Skip count by 3.",
+            "Count in 3s, 4 times: 3, 6, 9, 12. The last number is 12."
+          ],
+          "wrong_feedback": {
+            "7": "That is adding. 4 x 3 means 4 groups of 3: add 3 again and again.",
+            "15": "Too big: that is one group of 3 too many. Count the 4 groups again."
+          },
+          "explanation": "4 x 3 = 12.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l3-008.practice.1",
+          "prompt": "3 x 8 = ?",
+          "speech": "3 times 8 equals ?",
+          "options": [
+            "11",
+            "32",
+            "24"
+          ],
+          "answer": "24",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think: 3 groups of 8. Skip count by 8.",
+            "Count in 8s, 3 times: 8, 16, 24. The last number is 24."
+          ],
+          "wrong_feedback": {
+            "11": "That is adding. 3 x 8 means 3 groups of 8: add 8 again and again.",
+            "32": "Too big: that is one group of 8 too many. Count the 3 groups again."
+          },
+          "explanation": "3 x 8 = 24.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-008.practice.2",
+          "prompt": "4 x 7 = ?",
+          "speech": "4 times 7 equals ?",
+          "options": [
+            "28",
+            "11",
+            "35"
+          ],
+          "answer": "28",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think: 4 groups of 7. Skip count by 7.",
+            "Count in 7s, 4 times: 7, 14, 21, 28. The last number is 28."
+          ],
+          "wrong_feedback": {
+            "11": "That is adding. 4 x 7 means 4 groups of 7: add 7 again and again.",
+            "35": "Too big: that is one group of 7 too many. Count the 4 groups again."
+          },
+          "explanation": "4 x 7 = 28.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-008.practice.3",
+          "prompt": "9 x 3 = ?",
+          "speech": "9 times 3 equals ?",
+          "options": [
+            "12",
+            "27",
+            "30"
+          ],
+          "answer": "27",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think: 9 groups of 3. Skip count by 3.",
+            "Count in 3s, 9 times: 3, 6, 9, 12, 15, 18, 21, 24, 27. The last number is 27."
+          ],
+          "wrong_feedback": {
+            "12": "That is adding. 9 x 3 means 9 groups of 3: add 3 again and again.",
+            "30": "Too big: that is one group of 3 too many. Count the 9 groups again."
+          },
+          "explanation": "9 x 3 = 27.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l3-008.check.1",
+          "prompt": "4 x 9 = ?",
+          "speech": "4 times 9 equals ?",
+          "options": [
+            "13",
+            "45",
+            "36"
+          ],
+          "answer": "36",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "13": "That is adding. 4 x 9 means 4 groups of 9: add 9 again and again.",
+            "45": "Too big: that is one group of 9 too many. Count the 4 groups again."
+          },
+          "explanation": "4 x 9 = 36.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-008.check.2",
+          "prompt": "3 x 6 = ?",
+          "speech": "3 times 6 equals ?",
+          "options": [
+            "18",
+            "9",
+            "24"
+          ],
+          "answer": "18",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "9": "That is adding. 3 x 6 means 3 groups of 6: add 6 again and again.",
+            "24": "Too big: that is one group of 6 too many. Count the 3 groups again."
+          },
+          "explanation": "3 x 6 = 18.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l3-008.check.3",
+          "prompt": "4 x 8 = ?",
+          "speech": "4 times 8 equals ?",
+          "options": [
+            "12",
+            "32",
+            "40"
+          ],
+          "answer": "32",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "12": "That is adding. 4 x 8 means 4 groups of 8: add 8 again and again.",
+            "40": "Too big: that is one group of 8 too many. Count the 4 groups again."
+          },
+          "explanation": "4 x 8 = 32.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l3-008.remediation_explain.1",
+            "text": "Another way for 3: do double and then one more group. 3 x 4 is 4 + 4 + 4.",
+            "speech": "Another way for 3: do double and then one more group. 3 times 4 is 4 plus 4 plus 4.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "⭐",
+                  "count": 4
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 4
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 4
+                }
+              ],
+              "operator": "+",
+              "revealCount": 3,
+              "countAll": true,
+              "result": 12,
+              "showResult": true
+            }
+          },
+          {
+            "id": "numbers-l3-008.remediation_explain.2",
+            "text": "For 3 x 6: double 6 is 12, one more 6 makes 18. So 3 x 6 = 18.",
+            "speech": "For 3 times 6: double 6 is 12, one more 6 makes 18. So 3 times 6 equals 18.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "6 + 6 + 6 = 18"
+            }
+          },
+          {
+            "id": "numbers-l3-008.remediation_explain.3",
+            "text": "For 4 x 3: double 3 is 6, double 6 is 12. So 4 x 3 = 12.",
+            "speech": "For 4 times 3: double 3 is 6, double 6 is 12. So 4 times 3 equals 12.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "4 x 3 = 12"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l3-008.remediation_guided.1",
+            "prompt": "4 x 5 = ?",
+            "speech": "4 times 5 equals ?",
+            "options": [
+              "9",
+              "25",
+              "20"
+            ],
+            "answer": "20",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 5
+                }
+              ],
+              "operator": "+",
+              "revealCount": 4,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [
+              "Think: 4 groups of 5. Skip count by 5.",
+              "Count in 5s, 4 times: 5, 10, 15, 20. The last number is 20."
+            ],
+            "wrong_feedback": {
+              "9": "That is adding. 4 x 5 means 4 groups of 5: add 5 again and again.",
+              "25": "Too big: that is one group of 5 too many. Count the 4 groups again."
+            },
+            "explanation": "4 x 5 = 20.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l3-008.remediation_guided.2",
+            "prompt": "3 x 3 = ?",
+            "speech": "3 times 3 equals ?",
+            "options": [
+              "9",
+              "6",
+              "12"
+            ],
+            "answer": "9",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "⭐",
+                  "count": 3
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 3
+                },
+                {
+                  "emoji": "⭐",
+                  "count": 3
+                }
+              ],
+              "operator": "+",
+              "revealCount": 3,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [
+              "Think: 3 groups of 3. Skip count by 3.",
+              "Count in 3s, 3 times: 3, 6, 9. The last number is 9."
+            ],
+            "wrong_feedback": {
+              "6": "That is adding. 3 x 3 means 3 groups of 3: add 3 again and again.",
+              "12": "Too big: that is one group of 3 too many. Count the 3 groups again."
+            },
+            "explanation": "3 x 3 = 9.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l3-008.remediation_check.1",
+            "prompt": "4 x 4 = ?",
+            "speech": "4 times 4 equals ?",
+            "options": [
+              "8",
+              "16",
+              "20"
+            ],
+            "answer": "16",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "8": "That is adding. 4 x 4 means 4 groups of 4: add 4 again and again.",
+              "20": "Too big: that is one group of 4 too many. Count the 4 groups again."
+            },
+            "explanation": "4 x 4 = 16.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-008.remediation_check.2",
+            "prompt": "3 x 10 = ?",
+            "speech": "3 times 10 equals ?",
+            "options": [
+              "13",
+              "40",
+              "30"
+            ],
+            "answer": "30",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "13": "That is adding. 3 x 10 means 3 groups of 10: add 10 again and again.",
+              "40": "Too big: that is one group of 10 too many. Count the 3 groups again."
+            },
+            "explanation": "3 x 10 = 30.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l3-008.remediation_check.3",
+            "prompt": "7 x 4 = ?",
+            "speech": "7 times 4 equals ?",
+            "options": [
+              "28",
+              "11",
+              "32"
+            ],
+            "answer": "28",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "11": "That is adding. 7 x 4 means 7 groups of 4: add 4 again and again.",
+              "32": "Too big: that is one group of 4 too many. Count the 7 groups again."
+            },
+            "explanation": "7 x 4 = 28.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of the number words and 'plus', 'minus', 'times', 'equals' (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l3a.py); every distractor is wrong and the answer position rotates.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    }
+  ]
+}

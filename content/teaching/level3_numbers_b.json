@@ -1,0 +1,3214 @@
+{
+ "schema_version": 1,
+ "status": "draft_unverified",
+ "lessons": [
+  {
+   "lesson_id": "numbers-l3-009",
+   "world": "numbers",
+   "level": 3,
+   "locale": "en-IN",
+   "title": "Division as sharing",
+   "objective": "Share a number of things equally.",
+   "mastery": {
+    "check_total": 3,
+    "check_pass": 2,
+    "remediation_pass": 2,
+    "max_remediation_cycles": 2,
+    "after_limit": "offer_parent_support"
+   },
+   "prerequisites": [
+    "numbers-l3-008"
+   ],
+   "introduce": [
+    {
+     "id": "numbers-l3-009.introduce.1",
+     "text": "Division means sharing equally. Here are 12 laddoos. Everyone must get the same number.",
+     "speech": "Division means sharing equally. Here are 12 laddoos. Everyone must get the same number.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥮",
+        "count": 12
+       }
+      ],
+      "operator": "+",
+      "revealCount": 1,
+      "countAll": false,
+      "showResult": false
+     }
+    },
+    {
+     "id": "numbers-l3-009.introduce.2",
+     "text": "We share 12 laddoos among 3 children. We write it as 12 ÷ 3. The sign ÷ means shared equally among.",
+     "speech": "We share 12 laddoos among 3 children. We write it as 12 divided by 3. The sign divided by means shared equally among.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "12 ÷ 3"
+     }
+    }
+   ],
+   "demonstrate": [
+    {
+     "id": "numbers-l3-009.demonstrate.1",
+     "text": "Give one laddoo at a time to each of the 3 children until all 12 are given. Each child gets 4.",
+     "speech": "Give one laddoo at a time to each of the 3 children until all 12 are given. Each child gets 4.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥮",
+        "count": 4
+       },
+       {
+        "emoji": "🥮",
+        "count": 4
+       },
+       {
+        "emoji": "🥮",
+        "count": 4
+       }
+      ],
+      "operator": "+",
+      "revealCount": 3,
+      "countAll": false,
+      "showResult": false
+     }
+    },
+    {
+     "id": "numbers-l3-009.demonstrate.2",
+     "text": "Each child has 4 laddoos, so 12 ÷ 3 = 4. Check: 3 x 4 = 12.",
+     "speech": "Each child has 4 laddoos, so 12 divided by 3 equals 4. Check: 3 times 4 equals 12.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥮",
+        "count": 4
+       },
+       {
+        "emoji": "🥮",
+        "count": 4
+       },
+       {
+        "emoji": "🥮",
+        "count": 4
+       }
+      ],
+      "operator": "+",
+      "revealCount": 1,
+      "countAll": false,
+      "result": 4,
+      "showResult": true
+     }
+    }
+   ],
+   "guided": [
+    {
+     "id": "numbers-l3-009.guided.1",
+     "prompt": "15 toffees are shared equally among 3 children. How many does each child get?",
+     "speech": "15 toffees are shared equally among 3 children. How many does each child get?",
+     "options": [
+      "5",
+      "12",
+      "3"
+     ],
+     "answer": "5",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🍬",
+        "count": 15
+       }
+      ],
+      "operator": "+",
+      "revealCount": 1,
+      "countAll": false,
+      "showResult": false
+     },
+     "hints": [
+      "Deal the things out one by one, so every child gets the same number.",
+      "Ask: 3 x what makes 15? Count in 3s up to 15."
+     ],
+     "wrong_feedback": {
+      "12": "12 is 15 - 3. Sharing is not taking away. Ask how many each one gets.",
+      "3": "3 is the number you share among, not what each one gets."
+     },
+     "explanation": "15 ÷ 3 = 5, because 3 x 5 = 15.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-009.guided.2",
+     "prompt": "16 mangoes are shared equally among 4 friends. How many does each friend get?",
+     "speech": "16 mangoes are shared equally among 4 friends. How many does each friend get?",
+     "options": [
+      "12",
+      "4",
+      "64"
+     ],
+     "answer": "4",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥭",
+        "count": 16
+       }
+      ],
+      "operator": "+",
+      "revealCount": 1,
+      "countAll": false,
+      "showResult": false
+     },
+     "hints": [
+      "Deal the things out one by one, so every child gets the same number.",
+      "Ask: 4 x what makes 16? Count in 4s up to 16."
+     ],
+     "wrong_feedback": {
+      "12": "12 is 16 - 4. Sharing is not taking away. Ask how many each one gets.",
+      "64": "64 is 16 x 4. Sharing makes the number smaller, not bigger."
+     },
+     "explanation": "16 ÷ 4 = 4, because 4 x 4 = 16.",
+     "difficulty": 1
+    }
+   ],
+   "practice": [
+    {
+     "id": "numbers-l3-009.practice.1",
+     "prompt": "24 pencils are shared equally among 6 children. How many does each child get?",
+     "speech": "24 pencils are shared equally among 6 children. How many does each child get?",
+     "options": [
+      "18",
+      "6",
+      "4"
+     ],
+     "answer": "4",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Deal the things out one by one, so every child gets the same number.",
+      "Ask: 6 x what makes 24? Count in 6s up to 24."
+     ],
+     "wrong_feedback": {
+      "18": "18 is 24 - 6. Sharing is not taking away. Ask how many each one gets.",
+      "6": "6 is the number you share among, not what each one gets."
+     },
+     "explanation": "24 ÷ 6 = 4, because 6 x 4 = 24.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-009.practice.2",
+     "prompt": "14 laddoos are shared equally between 2 sisters. How many does each sister get?",
+     "speech": "14 laddoos are shared equally between 2 sisters. How many does each sister get?",
+     "options": [
+      "7",
+      "12",
+      "2"
+     ],
+     "answer": "7",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥮",
+        "count": 14
+       }
+      ],
+      "operator": "+",
+      "revealCount": 1,
+      "countAll": false,
+      "showResult": false
+     },
+     "hints": [
+      "Deal the things out one by one, so every child gets the same number.",
+      "Ask: 2 x what makes 14? Count in 2s up to 14."
+     ],
+     "wrong_feedback": {
+      "12": "12 is 14 - 2. Sharing is not taking away. Ask how many each one gets.",
+      "2": "2 is the number you share among, not what each one gets."
+     },
+     "explanation": "14 ÷ 2 = 7, because 2 x 7 = 14.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-009.practice.3",
+     "prompt": "30 ÷ 5 = ?",
+     "speech": "30 divided by 5 equals ?",
+     "options": [
+      "25",
+      "6",
+      "5"
+     ],
+     "answer": "6",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Think of sharing equally into equal groups. Which multiplication fact helps?",
+      "Ask: 5 x what makes 30? Count in 5s up to 30."
+     ],
+     "wrong_feedback": {
+      "25": "25 is 30 - 5. Sharing is not taking away. Ask how many each one gets.",
+      "5": "5 is the number you share among, not what each one gets."
+     },
+     "explanation": "30 ÷ 5 = 6, because 5 x 6 = 30.",
+     "difficulty": 2
+    }
+   ],
+   "check": [
+    {
+     "id": "numbers-l3-009.check.1",
+     "prompt": "28 books are shared equally among 4 shelves. How many books go on each shelf?",
+     "speech": "28 books are shared equally among 4 shelves. How many books go on each shelf?",
+     "options": [
+      "7",
+      "24",
+      "4"
+     ],
+     "answer": "7",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "24": "24 is 28 - 4. Sharing is not taking away. Ask how many each one gets.",
+      "4": "4 is the number you share among, not what each one gets."
+     },
+     "explanation": "28 ÷ 4 = 7, because 4 x 7 = 28.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-009.check.2",
+     "prompt": "18 ÷ 3 = ?",
+     "speech": "18 divided by 3 equals ?",
+     "options": [
+      "15",
+      "6",
+      "3"
+     ],
+     "answer": "6",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "15": "15 is 18 - 3. Sharing is not taking away. Ask how many each one gets.",
+      "3": "3 is the number you share among, not what each one gets."
+     },
+     "explanation": "18 ÷ 3 = 6, because 3 x 6 = 18.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-009.check.3",
+     "prompt": "20 balloons are shared equally among 4 children. How many does each child get?",
+     "speech": "20 balloons are shared equally among 4 children. How many does each child get?",
+     "options": [
+      "16",
+      "4",
+      "5"
+     ],
+     "answer": "5",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🎈",
+        "count": 20
+       }
+      ],
+      "operator": "+",
+      "revealCount": 1,
+      "countAll": false,
+      "showResult": false
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "16": "16 is 20 - 4. Sharing is not taking away. Ask how many each one gets.",
+      "4": "4 is the number you share among, not what each one gets."
+     },
+     "explanation": "20 ÷ 4 = 5, because 4 x 5 = 20.",
+     "difficulty": 3
+    }
+   ],
+   "remediation": {
+    "explain": [
+     {
+      "id": "numbers-l3-009.remediation_explain.1",
+      "text": "Let us share again. Here are 6 sweets to share between 2 children. Each child gets 3.",
+      "speech": "Let us share again. Here are 6 sweets to share between 2 children. Each child gets 3.",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "🍬",
+         "count": 3
+        },
+        {
+         "emoji": "🍬",
+         "count": 3
+        }
+       ],
+       "operator": "+",
+       "revealCount": 2,
+       "countAll": false,
+       "showResult": false
+      }
+     },
+     {
+      "id": "numbers-l3-009.remediation_explain.2",
+      "text": "To check a sharing answer, multiply back. 2 children x 3 sweets each = 6 sweets, so 6 ÷ 2 = 3.",
+      "speech": "To check a sharing answer, multiply back. 2 children times 3 sweets each equals 6 sweets, so 6 divided by 2 equals 3.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "2 x 3 = 6   6 ÷ 2 = 3"
+      }
+     },
+     {
+      "id": "numbers-l3-009.remediation_explain.3",
+      "text": "Division is sharing into equal groups. The answer is how many each one gets.",
+      "speech": "Division is sharing into equal groups. The answer is how many each one gets.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "12 ÷ 3 = 4"
+      }
+     }
+    ],
+    "guided": [
+     {
+      "id": "numbers-l3-009.remediation_guided.1",
+      "prompt": "10 stickers are shared equally between 2 friends. How many does each friend get?",
+      "speech": "10 stickers are shared equally between 2 friends. How many does each friend get?",
+      "options": [
+       "8",
+       "2",
+       "5"
+      ],
+      "answer": "5",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "⭐",
+         "count": 10
+        }
+       ],
+       "operator": "+",
+       "revealCount": 1,
+       "countAll": false,
+       "showResult": false
+      },
+      "hints": [
+       "Deal the things out one by one, so every child gets the same number.",
+       "Ask: 2 x what makes 10? Count in 2s up to 10."
+      ],
+      "wrong_feedback": {
+       "8": "8 is 10 - 2. Sharing is not taking away. Ask how many each one gets.",
+       "2": "2 is the number you share among, not what each one gets."
+      },
+      "explanation": "10 ÷ 2 = 5, because 2 x 5 = 10.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-009.remediation_guided.2",
+      "prompt": "21 ÷ 3 = ?",
+      "speech": "21 divided by 3 equals ?",
+      "options": [
+       "7",
+       "18",
+       "3"
+      ],
+      "answer": "7",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "Think of sharing equally into equal groups. Which multiplication fact helps?",
+       "Ask: 3 x what makes 21? Count in 3s up to 21."
+      ],
+      "wrong_feedback": {
+       "18": "18 is 21 - 3. Sharing is not taking away. Ask how many each one gets.",
+       "3": "3 is the number you share among, not what each one gets."
+      },
+      "explanation": "21 ÷ 3 = 7, because 3 x 7 = 21.",
+      "difficulty": 1
+     }
+    ],
+    "check": [
+     {
+      "id": "numbers-l3-009.remediation_check.1",
+      "prompt": "18 marbles are shared equally between 2 boys. How many does each boy get?",
+      "speech": "18 marbles are shared equally between 2 boys. How many does each boy get?",
+      "options": [
+       "9",
+       "16",
+       "2"
+      ],
+      "answer": "9",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "🔵",
+         "count": 18
+        }
+       ],
+       "operator": "+",
+       "revealCount": 1,
+       "countAll": false,
+       "showResult": false
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "16": "16 is 18 - 2. Sharing is not taking away. Ask how many each one gets.",
+       "2": "2 is the number you share among, not what each one gets."
+      },
+      "explanation": "18 ÷ 2 = 9, because 2 x 9 = 18.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-009.remediation_check.2",
+      "prompt": "27 ÷ 3 = ?",
+      "speech": "27 divided by 3 equals ?",
+      "options": [
+       "24",
+       "9",
+       "3"
+      ],
+      "answer": "9",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "24": "24 is 27 - 3. Sharing is not taking away. Ask how many each one gets.",
+       "3": "3 is the number you share among, not what each one gets."
+      },
+      "explanation": "27 ÷ 3 = 9, because 3 x 9 = 27.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-009.remediation_check.3",
+      "prompt": "35 coins are shared equally among 5 children. How many coins does each get?",
+      "speech": "35 coins are shared equally among 5 children. How many coins does each get?",
+      "options": [
+       "30",
+       "5",
+       "7"
+      ],
+      "answer": "7",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "30": "30 is 35 - 5. Sharing is not taking away. Ask how many each one gets.",
+       "5": "5 is the number you share among, not what each one gets."
+      },
+      "explanation": "35 ÷ 5 = 7, because 5 x 7 = 35.",
+      "difficulty": 2
+     }
+    ]
+   },
+   "review": {
+    "native_review_needed": false,
+    "items_to_review": [
+     "Scope: sharing equally, divisors 2 to 6, dividends up to 35, no remainders.",
+     "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+     "en-IN TTS reading of number words and of rupee amounts (not heard)."
+    ],
+    "assets_missing": [],
+    "notes": [
+     "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong. Option order is mixed; the UI may shuffle.",
+     "Check and remediation-check items carry no hints and no visual that shows the answer."
+    ]
+   }
+  },
+  {
+   "lesson_id": "numbers-l3-010",
+   "world": "numbers",
+   "level": 3,
+   "locale": "en-IN",
+   "title": "Multiplication and division fact families",
+   "objective": "Use one multiplication fact to find a division fact.",
+   "mastery": {
+    "check_total": 3,
+    "check_pass": 2,
+    "remediation_pass": 2,
+    "max_remediation_cycles": 2,
+    "after_limit": "offer_parent_support"
+   },
+   "prerequisites": [
+    "numbers-l3-009"
+   ],
+   "introduce": [
+    {
+     "id": "numbers-l3-010.introduce.1",
+     "text": "One multiplication fact can give us division facts. Look at 3 groups of 4. That is 3 x 4 = 12.",
+     "speech": "One multiplication fact can give us division facts. Look at 3 groups of 4. That is 3 times 4 equals 12.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥭",
+        "count": 4
+       },
+       {
+        "emoji": "🥭",
+        "count": 4
+       },
+       {
+        "emoji": "🥭",
+        "count": 4
+       }
+      ],
+      "operator": "+",
+      "revealCount": 3,
+      "countAll": false,
+      "result": 12,
+      "showResult": true
+     }
+    },
+    {
+     "id": "numbers-l3-010.introduce.2",
+     "text": "The same three numbers make a fact family: 3 x 4 = 12, 4 x 3 = 12, 12 ÷ 4 = 3 and 12 ÷ 3 = 4.",
+     "speech": "The same three numbers make a fact family: 3 times 4 equals 12, 4 times 3 equals 12, 12 divided by 4 equals 3 and 12 divided by 3 equals 4.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "3 x 4 = 12   12 ÷ 4 = 3   12 ÷ 3 = 4"
+     }
+    }
+   ],
+   "demonstrate": [
+    {
+     "id": "numbers-l3-010.demonstrate.1",
+     "text": "Start with 12 mangoes in 3 rows of 4. Share them into rows of 4 and you get 3 rows. So 12 ÷ 4 = 3.",
+     "speech": "Start with 12 mangoes in 3 rows of 4. Share them into rows of 4 and you get 3 rows. So 12 divided by 4 equals 3.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥭",
+        "count": 4
+       },
+       {
+        "emoji": "🥭",
+        "count": 4
+       },
+       {
+        "emoji": "🥭",
+        "count": 4
+       }
+      ],
+      "operator": "+",
+      "revealCount": 3,
+      "countAll": false,
+      "showResult": false
+     }
+    },
+    {
+     "id": "numbers-l3-010.demonstrate.2",
+     "text": "Share the same 12 mangoes into 4 rows of 3 and you get 3 in each row. So 12 ÷ 3 = 4.",
+     "speech": "Share the same 12 mangoes into 4 rows of 3 and you get 3 in each row. So 12 divided by 3 equals 4.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥭",
+        "count": 3
+       },
+       {
+        "emoji": "🥭",
+        "count": 3
+       },
+       {
+        "emoji": "🥭",
+        "count": 3
+       },
+       {
+        "emoji": "🥭",
+        "count": 3
+       }
+      ],
+      "operator": "+",
+      "revealCount": 4,
+      "countAll": false,
+      "showResult": false
+     }
+    }
+   ],
+   "guided": [
+    {
+     "id": "numbers-l3-010.guided.1",
+     "prompt": "6 x 3 = 18, so 18 ÷ 3 = ?",
+     "speech": "6 times 3 equals 18, so 18 divided by 3 equals ?",
+     "options": [
+      "18",
+      "6",
+      "9"
+     ],
+     "answer": "6",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Division undoes multiplication. Look at the fact 6 x 3 = 18.",
+      "18 ÷ 3 asks: 3 times what makes 18? Use the fact above."
+     ],
+     "wrong_feedback": {
+      "18": "18 is the whole number we are dividing, not the answer.",
+      "9": "9 is 6 + 3. Division undoes multiplication, it does not add."
+     },
+     "explanation": "6 x 3 = 18, so 18 ÷ 3 = 6.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-010.guided.2",
+     "prompt": "4 x ? = 28",
+     "speech": "4 times what equals 28",
+     "options": [
+      "24",
+      "32",
+      "7"
+     ],
+     "answer": "7",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "This is a missing number. A division fact can find it: 28 ÷ 4.",
+      "Count in 4s until you reach 28. How many jumps?"
+     ],
+     "wrong_feedback": {
+      "24": "4 x 24 = 96, not 28.",
+      "32": "4 x 32 = 128, not 28."
+     },
+     "explanation": "7 x 4 = 28, so 28 ÷ 4 = 7.",
+     "difficulty": 1
+    }
+   ],
+   "practice": [
+    {
+     "id": "numbers-l3-010.practice.1",
+     "prompt": "5 x 4 = 20, so 20 ÷ 4 = ?",
+     "speech": "5 times 4 equals 20, so 20 divided by 4 equals ?",
+     "options": [
+      "5",
+      "20",
+      "9"
+     ],
+     "answer": "5",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Division undoes multiplication. Look at the fact 5 x 4 = 20.",
+      "20 ÷ 4 asks: 4 times what makes 20? Use the fact above."
+     ],
+     "wrong_feedback": {
+      "20": "20 is the whole number we are dividing, not the answer.",
+      "9": "9 is 5 + 4. Division undoes multiplication, it does not add."
+     },
+     "explanation": "5 x 4 = 20, so 20 ÷ 4 = 5.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-010.practice.2",
+     "prompt": "45 ÷ 5 = ?",
+     "speech": "45 divided by 5 equals ?",
+     "options": [
+      "45",
+      "9",
+      "40"
+     ],
+     "answer": "9",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Use the multiplication family. 5 times what makes 45?",
+      "Count in 5s up to 45 and count the jumps."
+     ],
+     "wrong_feedback": {
+      "45": "45 is the number we start with, not the answer.",
+      "40": "40 is 45 - 5. This is division, not subtraction."
+     },
+     "explanation": "9 x 5 = 45, so 45 ÷ 5 = 9.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-010.practice.3",
+     "prompt": "Which fact is in the same family as 8 x 3 = 24?",
+     "speech": "Which fact is in the same family as 8 times 3 equals 24?",
+     "options": [
+      "24 ÷ 8 = 8",
+      "24 ÷ 3 = 3",
+      "24 ÷ 3 = 8"
+     ],
+     "answer": "24 ÷ 3 = 8",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "A family fact uses the same three numbers. Try each one with the multiplication fact.",
+      "The numbers are 8, 3 and 24. The biggest number is divided by one of the others."
+     ],
+     "wrong_feedback": {
+      "24 ÷ 8 = 8": "24 ÷ 8 is 3, not 8.",
+      "24 ÷ 3 = 3": "24 ÷ 3 is 8, not 3."
+     },
+     "explanation": "24 ÷ 3 = 8 uses the same three numbers.",
+     "difficulty": 2
+    }
+   ],
+   "check": [
+    {
+     "id": "numbers-l3-010.check.1",
+     "prompt": "8 x 2 = 16, so 16 ÷ 2 = ?",
+     "speech": "8 times 2 equals 16, so 16 divided by 2 equals ?",
+     "options": [
+      "16",
+      "8",
+      "10"
+     ],
+     "answer": "8",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "16": "16 is the whole number we are dividing, not the answer.",
+      "10": "10 is 8 + 2. Division undoes multiplication, it does not add."
+     },
+     "explanation": "8 x 2 = 16, so 16 ÷ 2 = 8.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-010.check.2",
+     "prompt": "5 x ? = 30",
+     "speech": "5 times what equals 30",
+     "options": [
+      "25",
+      "35",
+      "6"
+     ],
+     "answer": "6",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "25": "5 x 25 = 125, not 30.",
+      "35": "5 x 35 = 175, not 30."
+     },
+     "explanation": "6 x 5 = 30, so 30 ÷ 5 = 6.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-010.check.3",
+     "prompt": "Which fact is in the same family as 7 x 3 = 21?",
+     "speech": "Which fact is in the same family as 7 times 3 equals 21?",
+     "options": [
+      "21 ÷ 3 = 7",
+      "21 ÷ 7 = 7",
+      "21 ÷ 3 = 3"
+     ],
+     "answer": "21 ÷ 3 = 7",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "21 ÷ 7 = 7": "21 ÷ 7 is 3, not 7.",
+      "21 ÷ 3 = 3": "21 ÷ 3 is 7, not 3."
+     },
+     "explanation": "21 ÷ 3 = 7 uses the same three numbers.",
+     "difficulty": 3
+    }
+   ],
+   "remediation": {
+    "explain": [
+     {
+      "id": "numbers-l3-010.remediation_explain.1",
+      "text": "Let us build a family from 2 x 5 = 10. Two groups of 5 make 10.",
+      "speech": "Let us build a family from 2 times 5 equals 10. Two groups of 5 make 10.",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "🌼",
+         "count": 5
+        },
+        {
+         "emoji": "🌼",
+         "count": 5
+        }
+       ],
+       "operator": "+",
+       "revealCount": 2,
+       "countAll": false,
+       "result": 10,
+       "showResult": true
+      }
+     },
+     {
+      "id": "numbers-l3-010.remediation_explain.2",
+      "text": "The family is 2 x 5 = 10, 5 x 2 = 10, 10 ÷ 5 = 2 and 10 ÷ 2 = 5.",
+      "speech": "The family is 2 times 5 equals 10, 5 times 2 equals 10, 10 divided by 5 equals 2 and 10 divided by 2 equals 5.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "2 x 5 = 10   10 ÷ 5 = 2   10 ÷ 2 = 5"
+      }
+     },
+     {
+      "id": "numbers-l3-010.remediation_explain.3",
+      "text": "To divide, ask: what times the small number makes the big number? 10 ÷ 5 asks 5 x ? = 10.",
+      "speech": "To divide, ask: what times the small number makes the big number? 10 divided by 5 asks 5 times what equals 10.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "10 ÷ 5 = ?  means  5 x ? = 10"
+      }
+     }
+    ],
+    "guided": [
+     {
+      "id": "numbers-l3-010.remediation_guided.1",
+      "prompt": "4 x 3 = 12, so 12 ÷ 3 = ?",
+      "speech": "4 times 3 equals 12, so 12 divided by 3 equals ?",
+      "options": [
+       "4",
+       "12",
+       "7"
+      ],
+      "answer": "4",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "Division undoes multiplication. Look at the fact 4 x 3 = 12.",
+       "12 ÷ 3 asks: 3 times what makes 12? Use the fact above."
+      ],
+      "wrong_feedback": {
+       "12": "12 is the whole number we are dividing, not the answer.",
+       "7": "7 is 4 + 3. Division undoes multiplication, it does not add."
+      },
+      "explanation": "4 x 3 = 12, so 12 ÷ 3 = 4.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-010.remediation_guided.2",
+      "prompt": "2 x ? = 10",
+      "speech": "2 times what equals 10",
+      "options": [
+       "8",
+       "5",
+       "12"
+      ],
+      "answer": "5",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "This is a missing number. A division fact can find it: 10 ÷ 2.",
+       "Count in 2s until you reach 10. How many jumps?"
+      ],
+      "wrong_feedback": {
+       "8": "2 x 8 = 16, not 10.",
+       "12": "2 x 12 = 24, not 10."
+      },
+      "explanation": "5 x 2 = 10, so 10 ÷ 2 = 5.",
+      "difficulty": 1
+     }
+    ],
+    "check": [
+     {
+      "id": "numbers-l3-010.remediation_check.1",
+      "prompt": "27 ÷ 3 = ?",
+      "speech": "27 divided by 3 equals ?",
+      "options": [
+       "27",
+       "9",
+       "24"
+      ],
+      "answer": "9",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "27": "27 is the number we start with, not the answer.",
+       "24": "24 is 27 - 3. This is division, not subtraction."
+      },
+      "explanation": "9 x 3 = 27, so 27 ÷ 3 = 9.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-010.remediation_check.2",
+      "prompt": "4 x ? = 24",
+      "speech": "4 times what equals 24",
+      "options": [
+       "20",
+       "28",
+       "6"
+      ],
+      "answer": "6",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "20": "4 x 20 = 80, not 24.",
+       "28": "4 x 28 = 112, not 24."
+      },
+      "explanation": "6 x 4 = 24, so 24 ÷ 4 = 6.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-010.remediation_check.3",
+      "prompt": "Which fact is in the same family as 9 x 4 = 36?",
+      "speech": "Which fact is in the same family as 9 times 4 equals 36?",
+      "options": [
+       "36 ÷ 4 = 9",
+       "36 ÷ 9 = 9",
+       "36 ÷ 4 = 4"
+      ],
+      "answer": "36 ÷ 4 = 9",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "36 ÷ 9 = 9": "36 ÷ 9 is 4, not 9.",
+       "36 ÷ 4 = 4": "36 ÷ 4 is 9, not 4."
+      },
+      "explanation": "36 ÷ 4 = 9 uses the same three numbers.",
+      "difficulty": 2
+     }
+    ]
+   },
+   "review": {
+    "native_review_needed": false,
+    "items_to_review": [
+     "Scope: families built from tables of 2 to 5, products up to 45.",
+     "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+     "en-IN TTS reading of number words and of rupee amounts (not heard)."
+    ],
+    "assets_missing": [],
+    "notes": [
+     "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong. Option order is mixed; the UI may shuffle.",
+     "Check and remediation-check items carry no hints and no visual that shows the answer."
+    ]
+   }
+  },
+  {
+   "lesson_id": "numbers-l3-011",
+   "world": "numbers",
+   "level": 3,
+   "locale": "en-IN",
+   "title": "Halves, quarters and thirds",
+   "objective": "Name equal parts of a whole as halves, quarters and thirds.",
+   "mastery": {
+    "check_total": 3,
+    "check_pass": 2,
+    "remediation_pass": 2,
+    "max_remediation_cycles": 2,
+    "after_limit": "offer_parent_support"
+   },
+   "prerequisites": [
+    "numbers-l3-010"
+   ],
+   "introduce": [
+    {
+     "id": "numbers-l3-011.introduce.1",
+     "text": "Equal parts are all the same size. A roti cut into 2 equal parts has 2 pieces that are the same size.",
+     "speech": "Equal parts are all the same size. A roti cut into 2 equal parts has 2 pieces that are the same size.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "½   ⅓   ¼"
+     }
+    },
+    {
+     "id": "numbers-l3-011.introduce.2",
+     "text": "2 equal parts are halves. 3 equal parts are thirds. 4 equal parts are quarters. One part is one half, one third or one quarter.",
+     "speech": "2 equal parts are halves. 3 equal parts are thirds. 4 equal parts are quarters. One part is one half, one third or one quarter.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "½ = 1 of 2 parts   ⅓ = 1 of 3   ¼ = 1 of 4"
+     }
+    }
+   ],
+   "demonstrate": [
+    {
+     "id": "numbers-l3-011.demonstrate.1",
+     "text": "Here are 8 mangoes shared into 2 equal groups of 4. Each group is one half of the mangoes. Half of 8 is 4.",
+     "speech": "Here are 8 mangoes shared into 2 equal groups of 4. Each group is one half of the mangoes. Half of 8 is 4.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥭",
+        "count": 4
+       },
+       {
+        "emoji": "🥭",
+        "count": 4
+       }
+      ],
+      "operator": "+",
+      "revealCount": 2,
+      "countAll": false,
+      "showResult": false
+     }
+    },
+    {
+     "id": "numbers-l3-011.demonstrate.2",
+     "text": "Share the 8 mangoes into 4 equal groups of 2. Each group is one quarter. A quarter of 8 is 2.",
+     "speech": "Share the 8 mangoes into 4 equal groups of 2. Each group is one quarter. A quarter of 8 is 2.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥭",
+        "count": 2
+       },
+       {
+        "emoji": "🥭",
+        "count": 2
+       },
+       {
+        "emoji": "🥭",
+        "count": 2
+       },
+       {
+        "emoji": "🥭",
+        "count": 2
+       }
+      ],
+      "operator": "+",
+      "revealCount": 4,
+      "countAll": false,
+      "showResult": false
+     }
+    }
+   ],
+   "guided": [
+    {
+     "id": "numbers-l3-011.guided.1",
+     "prompt": "A chapati is cut into 4 equal parts. What is each part called?",
+     "speech": "A chapati is cut into 4 equal parts. What is each part called?",
+     "options": [
+      "A half",
+      "A third",
+      "A quarter"
+     ],
+     "answer": "A quarter",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Count the equal parts. Each name goes with a number of parts.",
+      "4 equal parts: each part is a quarter."
+     ],
+     "wrong_feedback": {
+      "A half": "A half needs only 2 equal parts.",
+      "A third": "A third needs 3 equal parts."
+     },
+     "explanation": "4 equal parts are quarters.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-011.guided.2",
+     "prompt": "A ribbon is cut into 3 equal pieces. One piece is what fraction of the ribbon?",
+     "speech": "A ribbon is cut into 3 equal pieces. One piece is what fraction of the ribbon?",
+     "options": [
+      "One third",
+      "One half",
+      "One quarter"
+     ],
+     "answer": "One third",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Count the equal pieces first.",
+      "3 equal pieces: each piece is one third."
+     ],
+     "wrong_feedback": {
+      "One half": "One half needs only 2 equal pieces.",
+      "One quarter": "One quarter needs 4 equal pieces."
+     },
+     "explanation": "3 equal pieces are thirds.",
+     "difficulty": 1
+    }
+   ],
+   "practice": [
+    {
+     "id": "numbers-l3-011.practice.1",
+     "prompt": "Which cut shares a cake into halves?",
+     "speech": "Which cut shares a cake into halves?",
+     "options": [
+      "Cut into 3 equal parts",
+      "Cut into 2 equal parts",
+      "Cut into 4 equal parts"
+     ],
+     "answer": "Cut into 2 equal parts",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Halves have a special number of equal parts. Think of the word two.",
+      "Halves are made by cutting into 2 equal parts."
+     ],
+     "wrong_feedback": {
+      "Cut into 3 equal parts": "3 equal parts are thirds.",
+      "Cut into 4 equal parts": "4 equal parts are quarters."
+     },
+     "explanation": "Halves are 2 equal parts.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-011.practice.2",
+     "prompt": "Sita has 10 laddoos. She gives one half of them to her brother. How many laddoos does she give?",
+     "speech": "Sita has 10 laddoos. She gives one half of them to her brother. How many laddoos does she give?",
+     "options": [
+      "2",
+      "10",
+      "5"
+     ],
+     "answer": "5",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🥮",
+        "count": 10
+       }
+      ],
+      "operator": "+",
+      "revealCount": 1,
+      "countAll": false,
+      "showResult": false
+     },
+     "hints": [
+      "One half means sharing the laddoos into 2 equal groups.",
+      "Divide 10 by 2 to find one group."
+     ],
+     "wrong_feedback": {
+      "2": "2 is the number of parts, not the size of one part.",
+      "10": "10 is all the laddoos, the whole."
+     },
+     "explanation": "Half of 10 is 10 ÷ 2 = 5.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-011.practice.3",
+     "prompt": "Which is bigger on the same roti: one half or one third?",
+     "speech": "Which is bigger on the same roti: one half or one third?",
+     "options": [
+      "One half",
+      "One third",
+      "They are the same"
+     ],
+     "answer": "One half",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "More equal parts means smaller pieces.",
+      "A roti cut in 2 gives bigger pieces than a roti cut in 3."
+     ],
+     "wrong_feedback": {
+      "One third": "More equal parts means each part is smaller, so a third is smaller.",
+      "They are the same": "They are not the same size. 2 parts are bigger than 3 parts."
+     },
+     "explanation": "One half is bigger than one third.",
+     "difficulty": 2
+    }
+   ],
+   "check": [
+    {
+     "id": "numbers-l3-011.check.1",
+     "prompt": "A pizza is cut into 2 equal parts. What is each part called?",
+     "speech": "A pizza is cut into 2 equal parts. What is each part called?",
+     "options": [
+      "A quarter",
+      "A third",
+      "A half"
+     ],
+     "answer": "A half",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "A quarter": "A quarter needs 4 equal parts.",
+      "A third": "A third needs 3 equal parts."
+     },
+     "explanation": "2 equal parts are halves.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-011.check.2",
+     "prompt": "Which is the smallest piece of the same cake: one half, one third or one quarter?",
+     "speech": "Which is the smallest piece of the same cake: one half, one third or one quarter?",
+     "options": [
+      "One quarter",
+      "One half",
+      "One third"
+     ],
+     "answer": "One quarter",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "One half": "One half is the biggest, because the cake is cut into only 2 parts.",
+      "One third": "One third is bigger than a quarter."
+     },
+     "explanation": "More equal parts mean smaller pieces, so one quarter is the smallest.",
+     "difficulty": 3
+    },
+    {
+     "id": "numbers-l3-011.check.3",
+     "prompt": "Ravi has 12 stickers. He gives one quarter of them to a friend. How many stickers does he give?",
+     "speech": "Ravi has 12 stickers. He gives one quarter of them to a friend. How many stickers does he give?",
+     "options": [
+      "6",
+      "3",
+      "4"
+     ],
+     "answer": "3",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "6": "6 is one half of 12. A quarter is 12 ÷ 4.",
+      "4": "4 is one third of 12. A quarter is 12 ÷ 4."
+     },
+     "explanation": "One quarter of 12 is 12 ÷ 4 = 3.",
+     "difficulty": 3
+    }
+   ],
+   "remediation": {
+    "explain": [
+     {
+      "id": "numbers-l3-011.remediation_explain.1",
+      "text": "Fold a sheet of paper once, with the edges matching. You get 2 equal parts. Each part is one half.",
+      "speech": "Fold a sheet of paper once, with the edges matching. You get 2 equal parts. Each part is one half.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "½"
+      }
+     },
+     {
+      "id": "numbers-l3-011.remediation_explain.2",
+      "text": "Fold it again. Now there are 4 equal parts. Each part is one quarter. Quarters are smaller than halves.",
+      "speech": "Fold it again. Now there are 4 equal parts. Each part is one quarter. Quarters are smaller than halves.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "¼"
+      }
+     },
+     {
+      "id": "numbers-l3-011.remediation_explain.3",
+      "text": "Here are 12 things. Shared into 2 equal groups, each is a half: 6. Into 3 groups, each is a third: 4. Into 4 groups, each is a quarter: 3.",
+      "speech": "Here are 12 things. Shared into 2 equal groups, each is a half: 6. Into 3 groups, each is a third: 4. Into 4 groups, each is a quarter: 3.",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "🌼",
+         "count": 4
+        },
+        {
+         "emoji": "🌼",
+         "count": 4
+        },
+        {
+         "emoji": "🌼",
+         "count": 4
+        }
+       ],
+       "operator": "+",
+       "revealCount": 3,
+       "countAll": false,
+       "showResult": false
+      }
+     }
+    ],
+    "guided": [
+     {
+      "id": "numbers-l3-011.remediation_guided.1",
+      "prompt": "A paratha is cut into 2 equal parts. One part is eaten. What fraction is eaten?",
+      "speech": "A paratha is cut into 2 equal parts. One part is eaten. What fraction is eaten?",
+      "options": [
+       "One quarter",
+       "One half",
+       "One third"
+      ],
+      "answer": "One half",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "Count the equal parts the paratha is cut into.",
+       "2 equal parts: one part is one half."
+      ],
+      "wrong_feedback": {
+       "One quarter": "One quarter needs 4 equal parts.",
+       "One third": "One third needs 3 equal parts."
+      },
+      "explanation": "One of 2 equal parts is one half.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-011.remediation_guided.2",
+      "prompt": "Arun has 14 balloons. He gives one half of them away. How many balloons does he give?",
+      "speech": "Arun has 14 balloons. He gives one half of them away. How many balloons does he give?",
+      "options": [
+       "2",
+       "14",
+       "7"
+      ],
+      "answer": "7",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "🎈",
+         "count": 14
+        }
+       ],
+       "operator": "+",
+       "revealCount": 1,
+       "countAll": false,
+       "showResult": false
+      },
+      "hints": [
+       "One half means sharing into 2 equal groups.",
+       "Divide 14 by 2."
+      ],
+      "wrong_feedback": {
+       "2": "2 is the number of parts, not the size of one part.",
+       "14": "14 is all the balloons, the whole."
+      },
+      "explanation": "Half of 14 is 14 ÷ 2 = 7.",
+      "difficulty": 1
+     }
+    ],
+    "check": [
+     {
+      "id": "numbers-l3-011.remediation_check.1",
+      "prompt": "A cake is cut into 3 equal parts. What is each part called?",
+      "speech": "A cake is cut into 3 equal parts. What is each part called?",
+      "options": [
+       "A half",
+       "A quarter",
+       "A third"
+      ],
+      "answer": "A third",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "A half": "A half needs only 2 equal parts.",
+       "A quarter": "A quarter needs 4 equal parts."
+      },
+      "explanation": "3 equal parts are thirds.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-011.remediation_check.2",
+      "prompt": "Which is bigger on the same chapati: one half or one quarter?",
+      "speech": "Which is bigger on the same chapati: one half or one quarter?",
+      "options": [
+       "One half",
+       "One quarter",
+       "They are the same"
+      ],
+      "answer": "One half",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "One quarter": "A quarter is smaller, because the chapati is cut into more parts.",
+       "They are the same": "They are not the same size."
+      },
+      "explanation": "One half is bigger than one quarter.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-011.remediation_check.3",
+      "prompt": "Meena has 16 mangoes. She keeps one quarter of them. How many mangoes does she keep?",
+      "speech": "Meena has 16 mangoes. She keeps one quarter of them. How many mangoes does she keep?",
+      "options": [
+       "8",
+       "4",
+       "16"
+      ],
+      "answer": "4",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "8": "8 is one half of 16. A quarter is 16 ÷ 4.",
+       "16": "16 is all the mangoes, the whole."
+      },
+      "explanation": "One quarter of 16 is 16 ÷ 4 = 4.",
+      "difficulty": 3
+     }
+    ]
+   },
+   "review": {
+    "native_review_needed": false,
+    "items_to_review": [
+     "Scope: one half, one third and one quarter of a whole or of a set of up to 20 things.",
+     "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+     "en-IN TTS reading of number words and of rupee amounts (not heard).",
+     "Fractions are shown as text characters (½ ⅓ ¼) in teaching steps only; no picture assets exist, so questions use words."
+    ],
+    "assets_missing": [],
+    "notes": [
+     "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong. Option order is mixed; the UI may shuffle.",
+     "Check and remediation-check items carry no hints and no visual that shows the answer."
+    ]
+   }
+  },
+  {
+   "lesson_id": "numbers-l3-012",
+   "world": "numbers",
+   "level": 3,
+   "locale": "en-IN",
+   "title": "Money and change",
+   "objective": "Add prices and find change in rupees.",
+   "mastery": {
+    "check_total": 3,
+    "check_pass": 2,
+    "remediation_pass": 2,
+    "max_remediation_cycles": 2,
+    "after_limit": "offer_parent_support"
+   },
+   "prerequisites": [
+    "numbers-l3-004"
+   ],
+   "introduce": [
+    {
+     "id": "numbers-l3-012.introduce.1",
+     "text": "Change is the money you get back. You give more money than the price. The extra comes back to you.",
+     "speech": "Change is the money you get back. You give more money than the price. The extra comes back to you.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "₹20 given, ₹7 price, change = ?"
+     }
+    },
+    {
+     "id": "numbers-l3-012.introduce.2",
+     "text": "To find change, take the price away from the money you give. We use subtraction.",
+     "speech": "To find change, take the price away from the money you give. We use subtraction.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "change = money given - price"
+     }
+    }
+   ],
+   "demonstrate": [
+    {
+     "id": "numbers-l3-012.demonstrate.1",
+     "text": "Here are 20 coins to pay with. The price is 7, so take 7 coins away.",
+     "speech": "Here are 20 coins to pay with. The price is 7, so take 7 coins away.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🪙",
+        "count": 20
+       }
+      ],
+      "operator": "-",
+      "revealCount": 1,
+      "countAll": false,
+      "takeAway": 7,
+      "showResult": false
+     }
+    },
+    {
+     "id": "numbers-l3-012.demonstrate.2",
+     "text": "13 coins are left. So the change is 20 - 7 = ₹13.",
+     "speech": "13 coins are left. So the change is 20 minus 7 equals 13 rupees.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🪙",
+        "count": 20
+       }
+      ],
+      "operator": "-",
+      "revealCount": 1,
+      "countAll": false,
+      "takeAway": 7,
+      "result": 13,
+      "showResult": true
+     }
+    }
+   ],
+   "guided": [
+    {
+     "id": "numbers-l3-012.guided.1",
+     "prompt": "Meera pays ₹10 for a pencil that costs ₹4. How much change does she get?",
+     "speech": "Meera pays 10 rupees for a pencil that costs 4 rupees. How much change does she get?",
+     "options": [
+      "₹6",
+      "₹14",
+      "₹16"
+     ],
+     "answer": "₹6",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🪙",
+        "count": 10
+       }
+      ],
+      "operator": "-",
+      "revealCount": 1,
+      "countAll": false,
+      "takeAway": 0,
+      "showResult": false
+     },
+     "hints": [
+      "Change is the money left after you pay the price. Which operation is that?",
+      "Take away: 10 - 4. Regroup a ten if you need to."
+     ],
+     "wrong_feedback": {
+      "₹14": "₹14 is 10 + 4. Change is what is left, so take away.",
+      "₹16": "Off by ten. If the ones do not take away, regroup 1 ten as 10 ones."
+     },
+     "explanation": "Change = 10 - 4 = ₹6.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-012.guided.2",
+     "prompt": "₹30 - ₹12 = ?",
+     "speech": "30 rupees minus 12 rupees equals ?",
+     "options": [
+      "₹42",
+      "₹18",
+      "₹28"
+     ],
+     "answer": "₹18",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Subtract the ones first. If you need more ones, regroup 1 ten as 10 ones.",
+      "Try counting up from 12 to 30, or take away 12 from 30 in two steps."
+     ],
+     "wrong_feedback": {
+      "₹42": "₹42 is 30 + 12. This is a take-away.",
+      "₹28": "Off by ten. Remember to regroup when the ones are not enough."
+     },
+     "explanation": "₹30 - ₹12 = ₹18.",
+     "difficulty": 1
+    }
+   ],
+   "practice": [
+    {
+     "id": "numbers-l3-012.practice.1",
+     "prompt": "Meera pays ₹50 for a kite that costs ₹27. How much change does she get?",
+     "speech": "Meera pays 50 rupees for a kite that costs 27 rupees. How much change does she get?",
+     "options": [
+      "₹77",
+      "₹33",
+      "₹23"
+     ],
+     "answer": "₹23",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Change is the money left after you pay the price. Which operation is that?",
+      "Take away: 50 - 27. Regroup a ten if you need to."
+     ],
+     "wrong_feedback": {
+      "₹77": "₹77 is 50 + 27. Change is what is left, so take away.",
+      "₹33": "Off by ten. If the ones do not take away, regroup 1 ten as 10 ones."
+     },
+     "explanation": "Change = 50 - 27 = ₹23.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-012.practice.2",
+     "prompt": "A pencil costs ₹14 and a rubber costs ₹26. What is the total?",
+     "speech": "A pencil costs 14 rupees and a rubber costs 26 rupees. What is the total?",
+     "options": [
+      "₹40",
+      "₹12",
+      "₹50"
+     ],
+     "answer": "₹40",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Total means we put the two prices together. Which operation is that?",
+      "Add 14 + 26. Add the ones first, then the tens."
+     ],
+     "wrong_feedback": {
+      "₹12": "₹12 is the difference. Total means put together, so add.",
+      "₹50": "Off by ten. When the ones make 10 or more, carry only 1 ten."
+     },
+     "explanation": "Total = 14 + 26 = ₹40.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-012.practice.3",
+     "prompt": "₹40 - ₹15 = ?",
+     "speech": "40 rupees minus 15 rupees equals ?",
+     "options": [
+      "₹55",
+      "₹25",
+      "₹35"
+     ],
+     "answer": "₹25",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Subtract the ones first. If you need more ones, regroup 1 ten as 10 ones.",
+      "Try counting up from 15 to 40, or take away 15 from 40 in two steps."
+     ],
+     "wrong_feedback": {
+      "₹55": "₹55 is 40 + 15. This is a take-away.",
+      "₹35": "Off by ten. Remember to regroup when the ones are not enough."
+     },
+     "explanation": "₹40 - ₹15 = ₹25.",
+     "difficulty": 2
+    }
+   ],
+   "check": [
+    {
+     "id": "numbers-l3-012.check.1",
+     "prompt": "Meera pays ₹100 for a notebook that costs ₹64. How much change does she get?",
+     "speech": "Meera pays 100 rupees for a notebook that costs 64 rupees. How much change does she get?",
+     "options": [
+      "₹36",
+      "₹164",
+      "₹46"
+     ],
+     "answer": "₹36",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "₹164": "₹164 is 100 + 64. Change is what is left, so take away.",
+      "₹46": "Off by ten. If the ones do not take away, regroup 1 ten as 10 ones."
+     },
+     "explanation": "Change = 100 - 64 = ₹36.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-012.check.2",
+     "prompt": "A ball costs ₹18 and a comb costs ₹35. What is the total?",
+     "speech": "A ball costs 18 rupees and a comb costs 35 rupees. What is the total?",
+     "options": [
+      "₹17",
+      "₹53",
+      "₹63"
+     ],
+     "answer": "₹53",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "₹17": "₹17 is the difference. Total means put together, so add.",
+      "₹63": "Off by ten. When the ones make 10 or more, carry only 1 ten."
+     },
+     "explanation": "Total = 18 + 35 = ₹53.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-012.check.3",
+     "prompt": "₹60 - ₹24 = ?",
+     "speech": "60 rupees minus 24 rupees equals ?",
+     "options": [
+      "₹84",
+      "₹46",
+      "₹36"
+     ],
+     "answer": "₹36",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "₹84": "₹84 is 60 + 24. This is a take-away.",
+      "₹46": "Off by ten. Remember to regroup when the ones are not enough."
+     },
+     "explanation": "₹60 - ₹24 = ₹36.",
+     "difficulty": 3
+    }
+   ],
+   "remediation": {
+    "explain": [
+     {
+      "id": "numbers-l3-012.remediation_explain.1",
+      "text": "Start with the money given: 20 coins. The price is 8. Take 8 away and see what is left.",
+      "speech": "Start with the money given: 20 coins. The price is 8. Take 8 away and see what is left.",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "🪙",
+         "count": 20
+        }
+       ],
+       "operator": "-",
+       "revealCount": 1,
+       "countAll": false,
+       "takeAway": 8,
+       "showResult": false
+      }
+     },
+     {
+      "id": "numbers-l3-012.remediation_explain.2",
+      "text": "Count back or take away: 20 - 8 = 12. The change is ₹12.",
+      "speech": "Count back or take away: 20 minus 8 equals 12. The change is 12 rupees.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "₹20 - ₹8 = ₹12"
+      }
+     },
+     {
+      "id": "numbers-l3-012.remediation_explain.3",
+      "text": "To add prices, put them together. A rubber costs ₹5 and a pen costs ₹9: 5 + 9 = ₹14.",
+      "speech": "To add prices, put them together. A rubber costs 5 rupees and a pen costs 9 rupees: 5 plus 9 equals 14 rupees.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "₹5 + ₹9 = ₹14"
+      }
+     }
+    ],
+    "guided": [
+     {
+      "id": "numbers-l3-012.remediation_guided.1",
+      "prompt": "Meera pays ₹20 for a rubber that costs ₹6. How much change does she get?",
+      "speech": "Meera pays 20 rupees for a rubber that costs 6 rupees. How much change does she get?",
+      "options": [
+       "₹26",
+       "₹24",
+       "₹14"
+      ],
+      "answer": "₹14",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "🪙",
+         "count": 20
+        }
+       ],
+       "operator": "-",
+       "revealCount": 1,
+       "countAll": false,
+       "takeAway": 0,
+       "showResult": false
+      },
+      "hints": [
+       "Change is the money left after you pay the price. Which operation is that?",
+       "Take away: 20 - 6. Regroup a ten if you need to."
+      ],
+      "wrong_feedback": {
+       "₹26": "₹26 is 20 + 6. Change is what is left, so take away.",
+       "₹24": "Off by ten. If the ones do not take away, regroup 1 ten as 10 ones."
+      },
+      "explanation": "Change = 20 - 6 = ₹14.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-012.remediation_guided.2",
+      "prompt": "₹15 - ₹6 = ?",
+      "speech": "15 rupees minus 6 rupees equals ?",
+      "options": [
+       "₹9",
+       "₹21",
+       "₹19"
+      ],
+      "answer": "₹9",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "Subtract the ones first. If you need more ones, regroup 1 ten as 10 ones.",
+       "Try counting up from 6 to 15, or take away 6 from 15 in two steps."
+      ],
+      "wrong_feedback": {
+       "₹21": "₹21 is 15 + 6. This is a take-away.",
+       "₹19": "Off by ten. Remember to regroup when the ones are not enough."
+      },
+      "explanation": "₹15 - ₹6 = ₹9.",
+      "difficulty": 1
+     }
+    ],
+    "check": [
+     {
+      "id": "numbers-l3-012.remediation_check.1",
+      "prompt": "Meera pays ₹100 for a toy that costs ₹45. How much change does she get?",
+      "speech": "Meera pays 100 rupees for a toy that costs 45 rupees. How much change does she get?",
+      "options": [
+       "₹55",
+       "₹145",
+       "₹65"
+      ],
+      "answer": "₹55",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "₹145": "₹145 is 100 + 45. Change is what is left, so take away.",
+       "₹65": "Off by ten. If the ones do not take away, regroup 1 ten as 10 ones."
+      },
+      "explanation": "Change = 100 - 45 = ₹55.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-012.remediation_check.2",
+      "prompt": "A cake costs ₹22 and a juice costs ₹19. What is the total?",
+      "speech": "A cake costs 22 rupees and a juice costs 19 rupees. What is the total?",
+      "options": [
+       "₹3",
+       "₹41",
+       "₹51"
+      ],
+      "answer": "₹41",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "₹3": "₹3 is the difference. Total means put together, so add.",
+       "₹51": "Off by ten. When the ones make 10 or more, carry only 1 ten."
+      },
+      "explanation": "Total = 22 + 19 = ₹41.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-012.remediation_check.3",
+      "prompt": "₹80 - ₹30 = ?",
+      "speech": "80 rupees minus 30 rupees equals ?",
+      "options": [
+       "₹110",
+       "₹60",
+       "₹50"
+      ],
+      "answer": "₹50",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "₹110": "₹110 is 80 + 30. This is a take-away.",
+       "₹60": "Off by ten. Remember to regroup when the ones are not enough."
+      },
+      "explanation": "₹80 - ₹30 = ₹50.",
+      "difficulty": 2
+     }
+    ]
+   },
+   "review": {
+    "native_review_needed": false,
+    "items_to_review": [
+     "Scope: rupees only, amounts to ₹100, change by subtraction and totals by addition, no paise.",
+     "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+     "en-IN TTS reading of number words and of rupee amounts (not heard)."
+    ],
+    "assets_missing": [],
+    "notes": [
+     "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong. Option order is mixed; the UI may shuffle.",
+     "Check and remediation-check items carry no hints and no visual that shows the answer."
+    ]
+   }
+  },
+  {
+   "lesson_id": "numbers-l3-013",
+   "world": "numbers",
+   "level": 3,
+   "locale": "en-IN",
+   "title": "Time to five minutes",
+   "objective": "Tell the time to five minutes from a clock described in words.",
+   "mastery": {
+    "check_total": 3,
+    "check_pass": 2,
+    "remediation_pass": 2,
+    "max_remediation_cycles": 2,
+    "after_limit": "offer_parent_support"
+   },
+   "prerequisites": [
+    "numbers-l3-005"
+   ],
+   "introduce": [
+    {
+     "id": "numbers-l3-013.introduce.1",
+     "text": "A clock has a short hand and a long hand. The short hand shows the hour. The long hand shows the minutes.",
+     "speech": "A clock has a short hand and a long hand. The short hand shows the hour. The long hand shows the minutes.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "short hand = hour   long hand = minutes"
+     }
+    },
+    {
+     "id": "numbers-l3-013.introduce.2",
+     "text": "Each number on the clock is 5 minutes. When the long hand is on 1 it is 5 minutes, on 2 it is 10, on 3 it is 15 and on 6 it is 30. On 12 it is o'clock.",
+     "speech": "Each number on the clock is 5 minutes. When the long hand is on 1 it is 5 minutes, on 2 it is 10, on 3 it is 15 and on 6 it is 30. On 12 it is o'clock.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "1 = 5   2 = 10   3 = 15   6 = 30   12 = o'clock"
+     }
+    }
+   ],
+   "demonstrate": [
+    {
+     "id": "numbers-l3-013.demonstrate.1",
+     "text": "Count in fives round the clock to read the long hand: 5, 10, 15, 20, 25, 30.",
+     "speech": "Count in fives round the clock to read the long hand: 5, 10, 15, 20, 25, 30.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "5   10   15   20   25   30"
+     }
+    },
+    {
+     "id": "numbers-l3-013.demonstrate.2",
+     "text": "The short hand is just past 3 and the long hand points to 3. That is 15 minutes past 3, so the time is 3:15.",
+     "speech": "The short hand is just past 3 and the long hand points to 3. That is 15 minutes past 3, so the time is 3 15.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "3:15"
+     }
+    }
+   ],
+   "guided": [
+    {
+     "id": "numbers-l3-013.guided.1",
+     "prompt": "The minute hand points to 4. How many minutes past the hour is it?",
+     "speech": "The minute hand points to 4. How many minutes past the hour is it?",
+     "options": [
+      "4",
+      "20",
+      "40"
+     ],
+     "answer": "20",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Each number on the clock is 5 minutes. Count in fives to the 4.",
+      "Count 5, 10, 15, 20. The hand is on the fourth number."
+     ],
+     "wrong_feedback": {
+      "4": "4 is the number the hand points to. Each number is 5 minutes.",
+      "40": "40 is where the hand would be on 8."
+     },
+     "explanation": "4 fives is 20 minutes.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-013.guided.2",
+     "prompt": "The hour hand is exactly on 9 and the minute hand points to 12. What time is it?",
+     "speech": "The hour hand is exactly on 9 and the minute hand points to 12. What time is it?",
+     "options": [
+      "12:09",
+      "9:12",
+      "9:00"
+     ],
+     "answer": "9:00",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "The long hand on 12 means exactly on the hour.",
+      "The short hand is on 9 and no minutes have passed."
+     ],
+     "wrong_feedback": {
+      "12:09": "You swapped the hands. The short hand tells the hour.",
+      "9:12": "The long hand on 12 means 0 minutes, not 12."
+     },
+     "explanation": "It is 9 o'clock, 9:00.",
+     "difficulty": 1
+    }
+   ],
+   "practice": [
+    {
+     "id": "numbers-l3-013.practice.1",
+     "prompt": "The minute hand points to 2. How many minutes past the hour is it?",
+     "speech": "The minute hand points to 2. How many minutes past the hour is it?",
+     "options": [
+      "10",
+      "2",
+      "20"
+     ],
+     "answer": "10",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Each number on the clock is 5 minutes.",
+      "Count in fives: 5, 10."
+     ],
+     "wrong_feedback": {
+      "2": "2 is the number the hand points to. Each number is 5 minutes.",
+      "20": "20 is where the hand would be on 4."
+     },
+     "explanation": "2 fives is 10 minutes.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-013.practice.2",
+     "prompt": "The hour hand is just past 6 and the minute hand points to 3. What time is it?",
+     "speech": "The hour hand is just past 6 and the minute hand points to 3. What time is it?",
+     "options": [
+      "3:06",
+      "6:15",
+      "6:03"
+     ],
+     "answer": "6:15",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Read the hour from the short hand first. Then count in fives for the minutes.",
+      "The hour is 6. The long hand on 3 is 15 minutes."
+     ],
+     "wrong_feedback": {
+      "3:06": "You swapped the hands. The short hand tells the hour.",
+      "6:03": "The long hand on 3 means 15 minutes, not 3."
+     },
+     "explanation": "6 hours and 15 minutes is 6:15.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-013.practice.3",
+     "prompt": "Which time is the same as half past 2?",
+     "speech": "Which time is the same as half past 2?",
+     "options": [
+      "3:30",
+      "2:06",
+      "2:30"
+     ],
+     "answer": "2:30",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Half past means half an hour past the hour. How many minutes is half an hour?",
+      "Half an hour is 30 minutes. Add that to the hour 2."
+     ],
+     "wrong_feedback": {
+      "3:30": "Half past 2 is still in the hour of 2, not 3.",
+      "2:06": "Half past means 30 minutes, not 6."
+     },
+     "explanation": "Half past 2 is 2:30.",
+     "difficulty": 2
+    }
+   ],
+   "check": [
+    {
+     "id": "numbers-l3-013.check.1",
+     "prompt": "The hour hand is between 8 and 9 and the minute hand points to 6. What time is it?",
+     "speech": "The hour hand is between 8 and 9 and the minute hand points to 6. What time is it?",
+     "options": [
+      "9:30",
+      "8:30",
+      "6:08"
+     ],
+     "answer": "8:30",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "9:30": "The short hand has not reached 9, so the hour is still 8.",
+      "6:08": "You swapped the hands. The short hand tells the hour."
+     },
+     "explanation": "The hour hand has passed 8, so the hour is 8. The long hand on 6 is 30 minutes. It is 8:30.",
+     "difficulty": 3
+    },
+    {
+     "id": "numbers-l3-013.check.2",
+     "prompt": "The minute hand points to 9. How many minutes past the hour is it?",
+     "speech": "The minute hand points to 9. How many minutes past the hour is it?",
+     "options": [
+      "9",
+      "35",
+      "45"
+     ],
+     "answer": "45",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "9": "9 is the number the hand points to. Each number is 5 minutes.",
+      "35": "35 is where the hand would be on 7."
+     },
+     "explanation": "9 fives is 45 minutes.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-013.check.3",
+     "prompt": "Which time is the same as quarter past 11?",
+     "speech": "Which time is the same as quarter past 11?",
+     "options": [
+      "11:15",
+      "11:45",
+      "12:15"
+     ],
+     "answer": "11:15",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "11:45": "11:45 is quarter to 12, not quarter past 11.",
+      "12:15": "That is quarter past 12."
+     },
+     "explanation": "Quarter past 11 is 15 minutes after 11, so 11:15.",
+     "difficulty": 2
+    }
+   ],
+   "remediation": {
+    "explain": [
+     {
+      "id": "numbers-l3-013.remediation_explain.1",
+      "text": "Go round the clock in fives. The long hand on 1 is 5 minutes, then 10, 15, 20, 25 and on 6 it is 30.",
+      "speech": "Go round the clock in fives. The long hand on 1 is 5 minutes, then 10, 15, 20, 25 and on 6 it is 30.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "1 = 5   2 = 10   3 = 15   4 = 20   5 = 25   6 = 30"
+      }
+     },
+     {
+      "id": "numbers-l3-013.remediation_explain.2",
+      "text": "Special places: 12 is o'clock, 3 is quarter past, 6 is half past and 9 is quarter to the next hour.",
+      "speech": "Special places: 12 is o'clock, 3 is quarter past, 6 is half past and 9 is quarter to the next hour.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "12 o'clock   3 quarter past   6 half past   9 quarter to"
+      }
+     },
+     {
+      "id": "numbers-l3-013.remediation_explain.3",
+      "text": "To tell the time, say the hour first, then the minutes. Hour 4 and the long hand on 2 is 10 minutes, so 4:10.",
+      "speech": "To tell the time, say the hour first, then the minutes. Hour 4 and the long hand on 2 is 10 minutes, so 4 10.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "4:10"
+      }
+     }
+    ],
+    "guided": [
+     {
+      "id": "numbers-l3-013.remediation_guided.1",
+      "prompt": "The minute hand points to 1. How many minutes past the hour is it?",
+      "speech": "The minute hand points to 1. How many minutes past the hour is it?",
+      "options": [
+       "5",
+       "1",
+       "10"
+      ],
+      "answer": "5",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "Each number on the clock is 5 minutes.",
+       "The hand is on the first number, so count one five."
+      ],
+      "wrong_feedback": {
+       "1": "1 is the number the hand points to. Each number is 5 minutes.",
+       "10": "10 is where the hand would be on 2."
+      },
+      "explanation": "1 five is 5 minutes.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-013.remediation_guided.2",
+      "prompt": "The hour hand is just past 10 and the minute hand points to 6. What time is it?",
+      "speech": "The hour hand is just past 10 and the minute hand points to 6. What time is it?",
+      "options": [
+       "6:10",
+       "10:30",
+       "10:06"
+      ],
+      "answer": "10:30",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "The long hand on 6 is a special place. How many minutes is it?",
+       "Hour 10, and 30 minutes past it."
+      ],
+      "wrong_feedback": {
+       "6:10": "You swapped the hands. The short hand tells the hour.",
+       "10:06": "The long hand on 6 means 30 minutes, not 6."
+      },
+      "explanation": "10 hours and 30 minutes is 10:30.",
+      "difficulty": 1
+     }
+    ],
+    "check": [
+     {
+      "id": "numbers-l3-013.remediation_check.1",
+      "prompt": "The hour hand is exactly on 5 and the minute hand points to 12. What time is it?",
+      "speech": "The hour hand is exactly on 5 and the minute hand points to 12. What time is it?",
+      "options": [
+       "12:05",
+       "5:00",
+       "5:12"
+      ],
+      "answer": "5:00",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "12:05": "You swapped the hands. The short hand tells the hour.",
+       "5:12": "The long hand on 12 means 0 minutes, not 12."
+      },
+      "explanation": "The short hand is on 5 and the long hand on 12. It is 5 o'clock, 5:00.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-013.remediation_check.2",
+      "prompt": "The minute hand points to 7. How many minutes past the hour is it?",
+      "speech": "The minute hand points to 7. How many minutes past the hour is it?",
+      "options": [
+       "7",
+       "45",
+       "35"
+      ],
+      "answer": "35",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "7": "7 is the number the hand points to. Each number is 5 minutes.",
+       "45": "45 is where the hand would be on 9."
+      },
+      "explanation": "7 fives is 35 minutes.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-013.remediation_check.3",
+      "prompt": "Which time is the same as quarter to 4?",
+      "speech": "Which time is the same as quarter to 4?",
+      "options": [
+       "3:45",
+       "4:45",
+       "3:15"
+      ],
+      "answer": "3:45",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "4:45": "Quarter to 4 is before 4, so the hour is 3.",
+       "3:15": "3:15 is quarter past 3."
+      },
+      "explanation": "Quarter to 4 is 15 minutes before 4, so 3:45.",
+      "difficulty": 3
+     }
+    ]
+   },
+   "review": {
+    "native_review_needed": false,
+    "items_to_review": [
+     "Scope: reading the time to five minutes from hands described in words, o'clock, quarter past, half past and quarter to.",
+     "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+     "en-IN TTS reading of number words and of rupee amounts (not heard).",
+     "No clock picture exists: every item describes the clock in words. A teacher should check the wording of the hand positions."
+    ],
+    "assets_missing": [],
+    "notes": [
+     "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong. Option order is mixed; the UI may shuffle.",
+     "Check and remediation-check items carry no hints and no visual that shows the answer."
+    ]
+   }
+  },
+  {
+   "lesson_id": "numbers-l3-014",
+   "world": "numbers",
+   "level": 3,
+   "locale": "en-IN",
+   "title": "Length and mass",
+   "objective": "Choose a sensible unit and compare lengths and masses.",
+   "mastery": {
+    "check_total": 3,
+    "check_pass": 2,
+    "remediation_pass": 2,
+    "max_remediation_cycles": 2,
+    "after_limit": "offer_parent_support"
+   },
+   "prerequisites": [
+    "numbers-l3-013"
+   ],
+   "introduce": [
+    {
+     "id": "numbers-l3-014.introduce.1",
+     "text": "We measure length in centimetres (cm) for small things like a pencil, and in metres (m) for big things like a door or a room. 1 m = 100 cm.",
+     "speech": "We measure length in centimetres  for small things like a pencil, and in metres  for big things like a door or a room. 1 metres equals 100 centimetres.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "1 m = 100 cm"
+     }
+    },
+    {
+     "id": "numbers-l3-014.introduce.2",
+     "text": "We measure mass in grams (g) for light things like an egg, and in kilograms (kg) for heavy things like a bag of rice. 1 kg = 1000 g.",
+     "speech": "We measure mass in grams  for light things like an egg, and in kilograms  for heavy things like a bag of rice. 1 kilograms equals 1000 grams.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "1 kg = 1000 g"
+     }
+    }
+   ],
+   "demonstrate": [
+    {
+     "id": "numbers-l3-014.demonstrate.1",
+     "text": "A metre stick is 100 centimetres long. So 2 m is 200 cm and 3 m is 300 cm.",
+     "speech": "A metre stick is 100 centimetres long. So 2 metres is 200 centimetres and 3 metres is 300 centimetres.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "1 m = 100 cm   2 m = 200 cm   3 m = 300 cm"
+     }
+    },
+    {
+     "id": "numbers-l3-014.demonstrate.2",
+     "text": "A packet of sugar can be 1 kg, which is 1000 g. So 2 kg is 2000 g. To compare, change both to the same unit.",
+     "speech": "A packet of sugar can be 1 kilograms, which is 1000 grams. So 2 kilograms is 2000 grams. To compare, change both to the same unit.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "1 kg = 1000 g   2 kg = 2000 g"
+     }
+    }
+   ],
+   "guided": [
+    {
+     "id": "numbers-l3-014.guided.1",
+     "prompt": "Which unit is best to measure the length of a classroom?",
+     "speech": "Which unit is best to measure the length of a classroom?",
+     "options": [
+      "centimetres (cm)",
+      "grams (g)",
+      "metres (m)"
+     ],
+     "answer": "metres (m)",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "A classroom is big. Which unit is for big lengths?",
+      "Use metres for long distances."
+     ],
+     "wrong_feedback": {
+      "centimetres (cm)": "A classroom is very long, so centimetres would give a huge number.",
+      "grams (g)": "Grams measure mass, not length."
+     },
+     "explanation": "A classroom is measured in metres.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-014.guided.2",
+     "prompt": "Which unit is best to measure the mass of an egg?",
+     "speech": "Which unit is best to measure the mass of an egg?",
+     "options": [
+      "grams (g)",
+      "kilograms (kg)",
+      "metres (m)"
+     ],
+     "answer": "grams (g)",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "An egg is light. Which unit is for light things?",
+      "Use grams for light things."
+     ],
+     "wrong_feedback": {
+      "kilograms (kg)": "An egg is very light, so kilograms would be too big.",
+      "metres (m)": "Metres measure length, not mass."
+     },
+     "explanation": "An egg is measured in grams.",
+     "difficulty": 1
+    }
+   ],
+   "practice": [
+    {
+     "id": "numbers-l3-014.practice.1",
+     "prompt": "How many centimetres are in 1 metre?",
+     "speech": "How many centimetres are in 1 metre?",
+     "options": [
+      "10",
+      "100",
+      "1000"
+     ],
+     "answer": "100",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Think of a metre stick. How many centimetres does it have?",
+      "1 m = 100 cm."
+     ],
+     "wrong_feedback": {
+      "10": "10 is too few. 1 metre is 100 centimetres.",
+      "1000": "1000 is how many grams are in 1 kilogram."
+     },
+     "explanation": "1 metre is 100 centimetres.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-014.practice.2",
+     "prompt": "Which is the heaviest: 500 g, 1 kg or 750 g?",
+     "speech": "Which is the heaviest: 500 grams, 1 kilograms or 750 grams?",
+     "options": [
+      "750 g",
+      "500 g",
+      "1 kg"
+     ],
+     "answer": "1 kg",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Change all the masses to grams before you compare.",
+      "1 kg = 1000 g. Which of 500, 1000 and 750 is biggest?"
+     ],
+     "wrong_feedback": {
+      "750 g": "1 kg is 1000 g, which is more than 750 g.",
+      "500 g": "500 g is the lightest of the three."
+     },
+     "explanation": "1 kg = 1000 g, which is more than 750 g and 500 g.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-014.practice.3",
+     "prompt": "Which unit is best to measure the mass of a school bag?",
+     "speech": "Which unit is best to measure the mass of a school bag?",
+     "options": [
+      "kilograms (kg)",
+      "grams (g)",
+      "centimetres (cm)"
+     ],
+     "answer": "kilograms (kg)",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "A school bag is heavy. Which mass unit is for heavy things?",
+      "Use kilograms for heavy things."
+     ],
+     "wrong_feedback": {
+      "grams (g)": "A school bag is heavy, so in grams the number would be very big.",
+      "centimetres (cm)": "Centimetres measure length, not mass."
+     },
+     "explanation": "A school bag is measured in kilograms.",
+     "difficulty": 2
+    }
+   ],
+   "check": [
+    {
+     "id": "numbers-l3-014.check.1",
+     "prompt": "Which unit is best to measure the length of an eraser?",
+     "speech": "Which unit is best to measure the length of an eraser?",
+     "options": [
+      "metres (m)",
+      "kilograms (kg)",
+      "centimetres (cm)"
+     ],
+     "answer": "centimetres (cm)",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "metres (m)": "An eraser is very short, so metres would be too big.",
+      "kilograms (kg)": "Kilograms measure mass, not length."
+     },
+     "explanation": "An eraser is small, so we use centimetres.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-014.check.2",
+     "prompt": "How many grams are in 2 kilograms?",
+     "speech": "How many grams are in 2 kilograms?",
+     "options": [
+      "2000",
+      "200",
+      "1000"
+     ],
+     "answer": "2000",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "200": "200 is how many centimetres are in 2 metres.",
+      "1000": "1000 grams is only 1 kilogram."
+     },
+     "explanation": "1 kg = 1000 g, so 2 kg = 2000 g.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-014.check.3",
+     "prompt": "Which is the longest: 90 cm, 1 m or 80 cm?",
+     "speech": "Which is the longest: 90 centimetres, 1 metres or 80 centimetres?",
+     "options": [
+      "90 cm",
+      "1 m",
+      "80 cm"
+     ],
+     "answer": "1 m",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "90 cm": "1 m is 100 cm, which is more than 90 cm.",
+      "80 cm": "80 cm is the shortest of the three."
+     },
+     "explanation": "1 m = 100 cm, which is more than 90 cm and 80 cm.",
+     "difficulty": 3
+    }
+   ],
+   "remediation": {
+    "explain": [
+     {
+      "id": "numbers-l3-014.remediation_explain.1",
+      "text": "Small things use centimetres and grams. Big things use metres and kilograms. Choose the unit that gives a sensible number.",
+      "speech": "Small things use centimetres and grams. Big things use metres and kilograms. Choose the unit that gives a sensible number.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "small: cm, g      big: m, kg"
+      }
+     },
+     {
+      "id": "numbers-l3-014.remediation_explain.2",
+      "text": "Remember: 1 m = 100 cm and 1 kg = 1000 g. To compare, change to the same unit first.",
+      "speech": "Remember: 1 metres equals 100 centimetres and 1 kilograms equals 1000 grams. To compare, change to the same unit first.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "1 m = 100 cm   1 kg = 1000 g"
+      }
+     },
+     {
+      "id": "numbers-l3-014.remediation_explain.3",
+      "text": "Example: is 150 cm longer than 1 m? 1 m = 100 cm and 150 is more than 100, so 150 cm is longer. Is 2 m longer than 150 cm? 2 m = 200 cm, so yes.",
+      "speech": "Example: is 150 centimetres longer than 1 metres? 1 metres equals 100 centimetres and 150 is more than 100, so 150 centimetres is longer. Is 2 metres longer than 150 centimetres? 2 metres equals 200 centimetres, so yes.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "2 m = 200 cm  >  150 cm  >  100 cm"
+      }
+     }
+    ],
+    "guided": [
+     {
+      "id": "numbers-l3-014.remediation_guided.1",
+      "prompt": "Which unit is best to measure the height of a tree?",
+      "speech": "Which unit is best to measure the height of a tree?",
+      "options": [
+       "centimetres (cm)",
+       "metres (m)",
+       "kilograms (kg)"
+      ],
+      "answer": "metres (m)",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "A tree is tall. Which unit is for big lengths?",
+       "Use metres for tall things."
+      ],
+      "wrong_feedback": {
+       "centimetres (cm)": "A tree is very tall, so centimetres would give a huge number.",
+       "kilograms (kg)": "Kilograms measure mass, not length."
+      },
+      "explanation": "A tree is measured in metres.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-014.remediation_guided.2",
+      "prompt": "Which unit is best to measure the mass of a pencil?",
+      "speech": "Which unit is best to measure the mass of a pencil?",
+      "options": [
+       "kilograms (kg)",
+       "metres (m)",
+       "grams (g)"
+      ],
+      "answer": "grams (g)",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "A pencil is very light. Which unit is for light things?",
+       "Use grams for light things."
+      ],
+      "wrong_feedback": {
+       "kilograms (kg)": "A pencil is very light, so kilograms would be too big.",
+       "metres (m)": "Metres measure length, not mass."
+      },
+      "explanation": "A pencil is measured in grams.",
+      "difficulty": 1
+     }
+    ],
+    "check": [
+     {
+      "id": "numbers-l3-014.remediation_check.1",
+      "prompt": "How many centimetres are in 3 metres?",
+      "speech": "How many centimetres are in 3 metres?",
+      "options": [
+       "30",
+       "3000",
+       "300"
+      ],
+      "answer": "300",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "30": "30 is too few. 1 metre is 100 centimetres.",
+       "3000": "3000 is how many grams are in 3 kilograms."
+      },
+      "explanation": "1 m = 100 cm, so 3 m = 300 cm.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-014.remediation_check.2",
+      "prompt": "Which is the lightest: 2 kg, 1500 g or 1 kg?",
+      "speech": "Which is the lightest: 2 kilograms, 1500 grams or 1 kilograms?",
+      "options": [
+       "1 kg",
+       "1500 g",
+       "2 kg"
+      ],
+      "answer": "1 kg",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "1500 g": "1 kg is 1000 g, which is less than 1500 g.",
+       "2 kg": "2 kg is 2000 g, the heaviest of the three."
+      },
+      "explanation": "1 kg = 1000 g and 2 kg = 2000 g. 1000 is the smallest of 1000, 1500 and 2000.",
+      "difficulty": 3
+     },
+     {
+      "id": "numbers-l3-014.remediation_check.3",
+      "prompt": "Which unit is best to measure the mass of a watermelon?",
+      "speech": "Which unit is best to measure the mass of a watermelon?",
+      "options": [
+       "grams (g)",
+       "kilograms (kg)",
+       "metres (m)"
+      ],
+      "answer": "kilograms (kg)",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "grams (g)": "A watermelon is heavy, so in grams the number would be very big.",
+       "metres (m)": "Metres measure length, not mass."
+      },
+      "explanation": "A watermelon is heavy, so we use kilograms.",
+      "difficulty": 2
+     }
+    ]
+   },
+   "review": {
+    "native_review_needed": false,
+    "items_to_review": [
+     "Scope: choosing cm, m, g or kg for everyday things, 1 m = 100 cm, 1 kg = 1000 g, comparing in one unit.",
+     "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+     "en-IN TTS reading of number words and of rupee amounts (not heard).",
+     "Teacher: check the everyday objects chosen (egg, pencil, school bag, watermelon) suit the children's experience."
+    ],
+    "assets_missing": [],
+    "notes": [
+     "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong. Option order is mixed; the UI may shuffle.",
+     "Check and remediation-check items carry no hints and no visual that shows the answer."
+    ]
+   }
+  },
+  {
+   "lesson_id": "numbers-l3-015",
+   "world": "numbers",
+   "level": 3,
+   "locale": "en-IN",
+   "title": "Word problems and reasoning",
+   "objective": "Choose the right operation to solve a short story problem.",
+   "mastery": {
+    "check_total": 3,
+    "check_pass": 2,
+    "remediation_pass": 2,
+    "max_remediation_cycles": 2,
+    "after_limit": "offer_parent_support"
+   },
+   "prerequisites": [
+    "numbers-l3-012"
+   ],
+   "introduce": [
+    {
+     "id": "numbers-l3-015.introduce.1",
+     "text": "To solve a story, first decide what is happening. Put together means add. Take away means subtract.",
+     "speech": "To solve a story, first decide what is happening. Put together means add. Take away means subtract.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "put together +      take away -"
+     }
+    },
+    {
+     "id": "numbers-l3-015.introduce.2",
+     "text": "Equal groups means multiply. Sharing equally means divide. Read the story and pick the operation.",
+     "speech": "Equal groups means multiply. Sharing equally means divide. Read the story and pick the operation.",
+     "visual": {
+      "type": "glyph",
+      "glyph": "equal groups x      sharing ÷"
+     }
+    }
+   ],
+   "demonstrate": [
+    {
+     "id": "numbers-l3-015.demonstrate.1",
+     "text": "The story: 3 bags have 4 apples each. The bags are equal groups, so multiply: 3 x 4.",
+     "speech": "The story: 3 bags have 4 apples each. The bags are equal groups, so multiply: 3 times 4.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🍎",
+        "count": 4
+       },
+       {
+        "emoji": "🍎",
+        "count": 4
+       },
+       {
+        "emoji": "🍎",
+        "count": 4
+       }
+      ],
+      "operator": "+",
+      "revealCount": 3,
+      "countAll": false,
+      "showResult": false
+     }
+    },
+    {
+     "id": "numbers-l3-015.demonstrate.2",
+     "text": "3 x 4 = 12, so there are 12 apples in all.",
+     "speech": "3 times 4 equals 12, so there are 12 apples in all.",
+     "visual": {
+      "type": "objects",
+      "groups": [
+       {
+        "emoji": "🍎",
+        "count": 4
+       },
+       {
+        "emoji": "🍎",
+        "count": 4
+       },
+       {
+        "emoji": "🍎",
+        "count": 4
+       }
+      ],
+      "operator": "+",
+      "revealCount": 3,
+      "countAll": false,
+      "result": 12,
+      "showResult": true
+     }
+    }
+   ],
+   "guided": [
+    {
+     "id": "numbers-l3-015.guided.1",
+     "prompt": "24 sweets are shared equally among 6 children. Which sum finds how many each child gets?",
+     "speech": "24 sweets are shared equally among 6 children. Which sum finds how many each child gets?",
+     "options": [
+      "24 ÷ 6",
+      "24 x 6",
+      "24 + 6"
+     ],
+     "answer": "24 ÷ 6",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Read the story. Is it putting together, taking away, equal groups or sharing?",
+      "Add to put together, subtract to take away, multiply for equal groups, divide to share."
+     ],
+     "wrong_feedback": {
+      "24 x 6": "x is for equal groups being put together. Here we share.",
+      "24 + 6": "Adding puts things together. Here we share."
+     },
+     "explanation": "Sharing equally is division.",
+     "difficulty": 1
+    },
+    {
+     "id": "numbers-l3-015.guided.2",
+     "prompt": "4 bags have 5 apples each. How many apples are there in all?",
+     "speech": "4 bags have 5 apples each. How many apples are there in all?",
+     "options": [
+      "9",
+      "20",
+      "24"
+     ],
+     "answer": "20",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Each bag has the same number. Which operation is for equal groups?",
+      "Multiply the number of bags by the apples in one bag: 4 x 5."
+     ],
+     "wrong_feedback": {
+      "9": "9 is 4 + 5. Equal groups need multiplication.",
+      "24": "Close, but 4 x 5 is 20. Check your table."
+     },
+     "explanation": "4 x 5 = 20 apples.",
+     "difficulty": 1
+    }
+   ],
+   "practice": [
+    {
+     "id": "numbers-l3-015.practice.1",
+     "prompt": "Anil had 45 stickers. He gave 18 stickers to his friend. How many stickers are left?",
+     "speech": "Anil had 45 stickers. He gave 18 stickers to his friend. How many stickers are left?",
+     "options": [
+      "63",
+      "37",
+      "27"
+     ],
+     "answer": "27",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Gave away means some are taken away. Which operation is that?",
+      "Subtract: 45 - 18."
+     ],
+     "wrong_feedback": {
+      "63": "63 is 45 + 18. Gave away means take away.",
+      "37": "Off by ten. Regroup when the ones are not enough."
+     },
+     "explanation": "45 - 18 = 27 stickers left.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-015.practice.2",
+     "prompt": "20 eggs are packed equally into 4 boxes. How many eggs are in each box?",
+     "speech": "20 eggs are packed equally into 4 boxes. How many eggs are in each box?",
+     "options": [
+      "5",
+      "16",
+      "4"
+     ],
+     "answer": "5",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Packing equally into boxes is sharing. Which operation is that?",
+      "Divide: 20 ÷ 4. Think 4 x what = 20?"
+     ],
+     "wrong_feedback": {
+      "16": "16 is 20 - 4. Sharing equally needs division.",
+      "4": "4 is the number of boxes, not how many go in each box."
+     },
+     "explanation": "20 ÷ 4 = 5 eggs in each box.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-015.practice.3",
+     "prompt": "A shop had 40 pens and sold 15. Which sum finds how many pens are left?",
+     "speech": "A shop had 40 pens and sold 15. Which sum finds how many pens are left?",
+     "options": [
+      "40 + 15",
+      "40 - 15",
+      "40 ÷ 15"
+     ],
+     "answer": "40 - 15",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [
+      "Read the story. Is it putting together, taking away, equal groups or sharing?",
+      "Add to put together, subtract to take away, multiply for equal groups, divide to share."
+     ],
+     "wrong_feedback": {
+      "40 + 15": "Sold means some go away, so we do not add.",
+      "40 ÷ 15": "÷ is for sharing equally, not for taking away."
+     },
+     "explanation": "Sold means taken away, so subtract.",
+     "difficulty": 2
+    }
+   ],
+   "check": [
+    {
+     "id": "numbers-l3-015.check.1",
+     "prompt": "Sara has 36 marbles and Tom has 27 marbles. How many marbles do they have together?",
+     "speech": "Sara has 36 marbles and Tom has 27 marbles. How many marbles do they have together?",
+     "options": [
+      "63",
+      "9",
+      "73"
+     ],
+     "answer": "63",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "9": "9 is the difference. Together means add.",
+      "73": "Off by ten. Carry only 1 ten."
+     },
+     "explanation": "36 + 27 = 63 marbles.",
+     "difficulty": 2
+    },
+    {
+     "id": "numbers-l3-015.check.2",
+     "prompt": "Ravi has 10 pencils. He buys 8 more and then gives 5 pencils to his sister. How many pencils does Ravi have now?",
+     "speech": "Ravi has 10 pencils. He buys 8 more and then gives 5 pencils to his sister. How many pencils does Ravi have now?",
+     "options": [
+      "18",
+      "13",
+      "23"
+     ],
+     "answer": "13",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "18": "18 is only the first step. He also gives 5 away.",
+      "23": "23: giving away means take away, not add."
+     },
+     "explanation": "10 + 8 = 18, then 18 - 5 = 13.",
+     "difficulty": 3
+    },
+    {
+     "id": "numbers-l3-015.check.3",
+     "prompt": "There are 5 plates with 6 samosas on each plate. Which sum finds the number of samosas in all?",
+     "speech": "There are 5 plates with 6 samosas on each plate. Which sum finds the number of samosas in all?",
+     "options": [
+      "5 ÷ 6",
+      "5 - 6",
+      "5 x 6"
+     ],
+     "answer": "5 x 6",
+     "visual": {
+      "type": "none"
+     },
+     "hints": [],
+     "wrong_feedback": {
+      "5 ÷ 6": "÷ is for sharing. Here equal groups are put together.",
+      "5 - 6": "Taking away is not what happens here."
+     },
+     "explanation": "Equal groups put together is multiplication.",
+     "difficulty": 2
+    }
+   ],
+   "remediation": {
+    "explain": [
+     {
+      "id": "numbers-l3-015.remediation_explain.1",
+      "text": "Read the story slowly. 24 sweets are shared equally among 6 children. Sharing means divide: 24 ÷ 6.",
+      "speech": "Read the story slowly. 24 sweets are shared equally among 6 children. Sharing means divide: 24 divided by 6.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "24 ÷ 6 = 4"
+      }
+     },
+     {
+      "id": "numbers-l3-015.remediation_explain.2",
+      "text": "A shop had 40 pens and sold 15. Sold means taken away, so subtract: 40 - 15 = 25.",
+      "speech": "A shop had 40 pens and sold 15. Sold means taken away, so subtract: 40 minus 15 equals 25.",
+      "visual": {
+       "type": "glyph",
+       "glyph": "40 - 15 = 25"
+      }
+     },
+     {
+      "id": "numbers-l3-015.remediation_explain.3",
+      "text": "3 plates with 5 samosas each is equal groups, so multiply: 3 x 5 = 15.",
+      "speech": "3 plates with 5 samosas each is equal groups, so multiply: 3 times 5 equals 15.",
+      "visual": {
+       "type": "objects",
+       "groups": [
+        {
+         "emoji": "🥟",
+         "count": 5
+        },
+        {
+         "emoji": "🥟",
+         "count": 5
+        },
+        {
+         "emoji": "🥟",
+         "count": 5
+        }
+       ],
+       "operator": "+",
+       "revealCount": 3,
+       "countAll": false,
+       "showResult": false
+      }
+     }
+    ],
+    "guided": [
+     {
+      "id": "numbers-l3-015.remediation_guided.1",
+      "prompt": "28 flowers are put equally into 4 vases. Which sum finds how many flowers are in each vase?",
+      "speech": "28 flowers are put equally into 4 vases. Which sum finds how many flowers are in each vase?",
+      "options": [
+       "28 x 4",
+       "28 - 4",
+       "28 ÷ 4"
+      ],
+      "answer": "28 ÷ 4",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "Read the story. Is it putting together, taking away, equal groups or sharing?",
+       "Add to put together, subtract to take away, multiply for equal groups, divide to share."
+      ],
+      "wrong_feedback": {
+       "28 x 4": "Putting equally into vases is sharing, so we divide.",
+       "28 - 4": "Taking away is not what happens here."
+      },
+      "explanation": "Putting equally into vases is sharing, so divide.",
+      "difficulty": 1
+     },
+     {
+      "id": "numbers-l3-015.remediation_guided.2",
+      "prompt": "3 bags have 6 apples each. How many apples are there in all?",
+      "speech": "3 bags have 6 apples each. How many apples are there in all?",
+      "options": [
+       "18",
+       "9",
+       "21"
+      ],
+      "answer": "18",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [
+       "Each bag has the same number. Which operation is for equal groups?",
+       "Multiply the number of bags by the apples in one bag: 3 x 6."
+      ],
+      "wrong_feedback": {
+       "9": "9 is 3 + 6. Equal groups need multiplication.",
+       "21": "Close, but 3 x 6 is 18. Check your table."
+      },
+      "explanation": "3 x 6 = 18 apples.",
+      "difficulty": 1
+     }
+    ],
+    "check": [
+     {
+      "id": "numbers-l3-015.remediation_check.1",
+      "prompt": "Anil had 52 stickers. He gave 25 stickers to his friend. How many stickers are left?",
+      "speech": "Anil had 52 stickers. He gave 25 stickers to his friend. How many stickers are left?",
+      "options": [
+       "27",
+       "77",
+       "37"
+      ],
+      "answer": "27",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "77": "77 is 52 + 25. Gave away means take away.",
+       "37": "Off by ten. Regroup when the ones are not enough."
+      },
+      "explanation": "52 - 25 = 27 stickers left.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-015.remediation_check.2",
+      "prompt": "18 eggs are packed equally into 3 boxes. How many eggs are in each box?",
+      "speech": "18 eggs are packed equally into 3 boxes. How many eggs are in each box?",
+      "options": [
+       "15",
+       "6",
+       "3"
+      ],
+      "answer": "6",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "15": "15 is 18 - 3. Sharing equally needs division.",
+       "3": "3 is the number of boxes, not how many go in each box."
+      },
+      "explanation": "18 ÷ 3 = 6 eggs in each box.",
+      "difficulty": 2
+     },
+     {
+      "id": "numbers-l3-015.remediation_check.3",
+      "prompt": "Sara has 48 marbles and Tom has 35 marbles. How many marbles do they have together?",
+      "speech": "Sara has 48 marbles and Tom has 35 marbles. How many marbles do they have together?",
+      "options": [
+       "13",
+       "93",
+       "83"
+      ],
+      "answer": "83",
+      "visual": {
+       "type": "none"
+      },
+      "hints": [],
+      "wrong_feedback": {
+       "13": "13 is the difference. Together means add.",
+       "93": "Off by ten. Carry only 1 ten."
+      },
+      "explanation": "48 + 35 = 83 marbles.",
+      "difficulty": 2
+     }
+    ]
+   },
+   "review": {
+    "native_review_needed": false,
+    "items_to_review": [
+     "Scope: one-step stories with add, subtract, multiply and divide, and one two-step story. Numbers up to 100, no remainders.",
+     "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+     "en-IN TTS reading of number words and of rupee amounts (not heard)."
+    ],
+    "assets_missing": [],
+    "notes": [
+     "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong. Option order is mixed; the UI may shuffle.",
+     "Check and remediation-check items carry no hints and no visual that shows the answer."
+    ]
+   }
+  }
+ ]
+}

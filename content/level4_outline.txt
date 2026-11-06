@@ -1,0 +1,81 @@
+Eng | 1 | english-story-002 | The Blue Kite | Story + question | Read independently and retrieve an explicit detail. | None
+Eng | 2 | proposed-l4-en-001 | Paragraph main idea | Read a paragraph and select its main idea | Identify central idea and supporting details | Short informational paragraph
+Eng | 3 | proposed-l4-en-002 | Context clues | Infer unfamiliar word meaning from a sentence | Use context to infer vocabulary | Predict meaning from surrounding words
+Eng | 4 | proposed-l4-en-003 | Synonyms and antonyms | Match meaning pairs in sentences | Choose precise synonyms and antonyms | happy–joyful; brave–timid
+Eng | 5 | proposed-l4-en-004 | Prefixes and suffixes | Build words with common affixes | Explain how affixes change word meaning | un-, re-, -ful, -less
+Eng | 6 | proposed-l4-en-005 | Parts of speech | Classify words in sentences | Distinguish nouns, pronouns, verbs, adjectives and adverbs | A cheerful child runs quickly
+Eng | 7 | proposed-l4-en-006 | Verb tense consistency | Edit a short paragraph | Use consistent past, present and future tenses | Yesterday we walked home
+Eng | 8 | proposed-l4-en-007 | Sentence types | Sort and punctuate sentence types | Use statements, questions, commands and exclamations | Where is the kite?
+Eng | 9 | proposed-l4-en-008 | Compound sentences | Join two related clauses | Write clear sentences using conjunctions | I read and she drew
+Eng | 10 | proposed-l4-en-009 | Paragraph organization | Reorder topic, detail and closing sentences | Compose one coherent paragraph | My favourite festival
+Eng | 11 | proposed-l4-en-010 | Compare and contrast | Complete a two-column comparison | Identify similarities and differences | Two short stories
+Eng | 12 | proposed-l4-en-011 | Cause and effect | Link events with explanations | Explain causes and consequences | Rain caused the match to stop
+Eng | 13 | proposed-l4-en-012 | Character motivation | Read a story and justify a character choice | Infer motivation from evidence | Why did the child share?
+Eng | 14 | proposed-l4-en-013 | Summarizing nonfiction | Select key facts and produce a short summary | Summarize informational text accurately | How plants grow
+Eng | 15 | proposed-l4-en-014 | Writing an invitation | Arrange key information in an invitation | Write a clear invitation with audience and purpose | School exhibition invitation
+Eng | 16 | proposed-l4-en-015 | Independent reading review | Read a new passage and answer mixed questions | Demonstrate integrated reading and language skills | Unseen 200-word passage
+Tel | 1 | telugu-story-001 | అమ్మ మరియు పండు | Story + question | కథను స్వతంత్రంగా చదివి వివరాన్ని గుర్తించండి. | None
+Tel | 2 | proposed-l4-te-001 | Reading fluency | Read a short passage aloud | Read connected text with appropriate accuracy and expression | Native-language passage
+Tel | 3 | proposed-l4-te-002 | Vocabulary in context | Choose meanings from sentence clues | Infer unfamiliar word meanings | Everyday school vocabulary
+Tel | 4 | proposed-l4-te-003 | Synonyms and antonyms | Match meaning pairs | Use common synonyms and antonyms | Native-speaker verified pairs
+Tel | 5 | proposed-l4-te-004 | Word formation | Build words using language-specific morphology | Recognize common word-building patterns | Script-appropriate examples
+Tel | 6 | proposed-l4-te-005 | Nouns and pronouns | Identify words in a passage | Recognize nouns and pronouns in context | Short sentences
+Tel | 7 | proposed-l4-te-006 | Verbs and time | Sort actions by time reference | Use common verb forms accurately | Yesterday / today / tomorrow
+Tel | 8 | proposed-l4-te-007 | Describing words | Describe people, places and objects | Use adjectives appropriately | Market and classroom scenes
+Tel | 9 | proposed-l4-te-008 | Sentence building | Reorder phrases into complete sentences | Construct meaningful sentences | Five mixed-up phrases
+Tel | 10 | proposed-l4-te-009 | Paragraph reading | Read a short informational paragraph | Find main idea and supporting facts | Local plants or animals
+Tel | 11 | proposed-l4-te-010 | Story sequencing | Order story events | Explain beginning, middle and end | Four event cards
+Tel | 12 | proposed-l4-te-011 | Cause and effect | Match actions and outcomes | Explain simple causal relationships | Everyday situations
+Tel | 13 | proposed-l4-te-012 | Listening comprehension | Listen and answer factual questions | Recall important spoken information | Recorded story
+Tel | 14 | proposed-l4-te-013 | Guided paragraph writing | Use prompts to write a paragraph | Compose a coherent short paragraph | My school
+Tel | 15 | proposed-l4-te-014 | Everyday communication | Compose a short note or invitation | Use suitable register for familiar purposes | Family invitation
+Tel | 16 | proposed-l4-te-015 | Level review | Read, listen, write and answer questions | Demonstrate integrated language skills | Unseen short passage
+Hin | 1 | hindi-story-002 | छोटा पौधा | Story + question | कहानी स्वतंत्र रूप से पढ़कर स्पष्ट विवरण पहचानें। | None
+Hin | 2 | proposed-l4-hi-001 | Reading fluency | Read a short passage aloud | Read connected text with appropriate accuracy and expression | Native-language passage
+Hin | 3 | proposed-l4-hi-002 | Vocabulary in context | Choose meanings from sentence clues | Infer unfamiliar word meanings | Everyday school vocabulary
+Hin | 4 | proposed-l4-hi-003 | Synonyms and antonyms | Match meaning pairs | Use common synonyms and antonyms | Native-speaker verified pairs
+Hin | 5 | proposed-l4-hi-004 | Word formation | Build words using language-specific morphology | Recognize common word-building patterns | Script-appropriate examples
+Hin | 6 | proposed-l4-hi-005 | Nouns and pronouns | Identify words in a passage | Recognize nouns and pronouns in context | Short sentences
+Hin | 7 | proposed-l4-hi-006 | Verbs and time | Sort actions by time reference | Use common verb forms accurately | Yesterday / today / tomorrow
+Hin | 8 | proposed-l4-hi-007 | Describing words | Describe people, places and objects | Use adjectives appropriately | Market and classroom scenes
+Hin | 9 | proposed-l4-hi-008 | Sentence building | Reorder phrases into complete sentences | Construct meaningful sentences | Five mixed-up phrases
+Hin | 10 | proposed-l4-hi-009 | Paragraph reading | Read a short informational paragraph | Find main idea and supporting facts | Local plants or animals
+Hin | 11 | proposed-l4-hi-010 | Story sequencing | Order story events | Explain beginning, middle and end | Four event cards
+Hin | 12 | proposed-l4-hi-011 | Cause and effect | Match actions and outcomes | Explain simple causal relationships | Everyday situations
+Hin | 13 | proposed-l4-hi-012 | Listening comprehension | Listen and answer factual questions | Recall important spoken information | Recorded story
+Hin | 14 | proposed-l4-hi-013 | Guided paragraph writing | Use prompts to write a paragraph | Compose a coherent short paragraph | My school
+Hin | 15 | proposed-l4-hi-014 | Everyday communication | Compose a short note or invitation | Use suitable register for familiar purposes | Family invitation
+Hin | 16 | proposed-l4-hi-015 | Level review | Read, listen, write and answer questions | Demonstrate integrated language skills | Unseen short passage
+Tam | 1 | tamil-story-002 | சிறிய பூனை | Story + question | கதையைத் தனியாகப் படித்து வெளிப்படையான விவரத்தை அறியவும். | None
+Tam | 2 | proposed-l4-ta-001 | Reading fluency | Read a short passage aloud | Read connected text with appropriate accuracy and expression | Native-language passage
+Tam | 3 | proposed-l4-ta-002 | Vocabulary in context | Choose meanings from sentence clues | Infer unfamiliar word meanings | Everyday school vocabulary
+Tam | 4 | proposed-l4-ta-003 | Synonyms and antonyms | Match meaning pairs | Use common synonyms and antonyms | Native-speaker verified pairs
+Tam | 5 | proposed-l4-ta-004 | Word formation | Build words using language-specific morphology | Recognize common word-building patterns | Script-appropriate examples
+Tam | 6 | proposed-l4-ta-005 | Nouns and pronouns | Identify words in a passage | Recognize nouns and pronouns in context | Short sentences
+Tam | 7 | proposed-l4-ta-006 | Verbs and time | Sort actions by time reference | Use common verb forms accurately | Yesterday / today / tomorrow
+Tam | 8 | proposed-l4-ta-007 | Describing words | Describe people, places and objects | Use adjectives appropriately | Market and classroom scenes
+Tam | 9 | proposed-l4-ta-008 | Sentence building | Reorder phrases into complete sentences | Construct meaningful sentences | Five mixed-up phrases
+Tam | 10 | proposed-l4-ta-009 | Paragraph reading | Read a short informational paragraph | Find main idea and supporting facts | Local plants or animals
+Tam | 11 | proposed-l4-ta-010 | Story sequencing | Order story events | Explain beginning, middle and end | Four event cards
+Tam | 12 | proposed-l4-ta-011 | Cause and effect | Match actions and outcomes | Explain simple causal relationships | Everyday situations
+Tam | 13 | proposed-l4-ta-012 | Listening comprehension | Listen and answer factual questions | Recall important spoken information | Recorded story
+Tam | 14 | proposed-l4-ta-013 | Guided paragraph writing | Use prompts to write a paragraph | Compose a coherent short paragraph | My school
+Tam | 15 | proposed-l4-ta-014 | Everyday communication | Compose a short note or invitation | Use suitable register for familiar purposes | Family invitation
+Tam | 16 | proposed-l4-ta-015 | Level review | Read, listen, write and answer questions | Demonstrate integrated language skills | Unseen short passage
+Num | 1 | num-fraction | Fractions of a Set | Game | Calculate a unit fraction of a whole-number set. | None
+Num | 2 | num-percent | Percent Power | Game | Calculate a familiar percentage of a quantity. | None
+Num | 3 | proposed-l4-num-001 | Place value to millions | Build and compare large numbers | Read, order and round large whole numbers | 4,506,210
+Num | 4 | proposed-l4-num-002 | Multi-digit multiplication | Solve multiplication with models and algorithm | Multiply multi-digit whole numbers accurately | 326 × 24
+Num | 5 | proposed-l4-num-003 | Long division | Share and group using division steps | Divide larger whole numbers with remainders | 936 ÷ 12
+Num | 6 | proposed-l4-num-004 | Factors and multiples | Sort factor and multiple cards | Identify factors, multiples and prime numbers | Factors of 24
+Num | 7 | proposed-l4-num-005 | Equivalent fractions | Build fraction strips and compare | Generate equivalent fractions | 2/3 = 4/6
+Num | 8 | proposed-l4-num-006 | Fraction addition | Combine same and unlike denominators | Add and subtract simple fractions | 1/4 + 2/4
+Num | 9 | proposed-l4-num-007 | Decimals and place value | Place decimals on a number line | Read, compare and round decimals | 3.45 versus 3.5
+Num | 10 | proposed-l4-num-008 | Decimal operations | Solve money and measurement examples | Add and subtract decimals | ₹12.50 + ₹7.25
+Num | 11 | proposed-l4-num-009 | Percent as hundredths | Match shaded grids to percentages | Connect fractions, decimals and percentages | 25% = 1/4
+Num | 12 | proposed-l4-num-010 | Ratio introduction | Compare two quantities with counters | Represent simple part-to-part ratios | 2 red : 3 blue
+Num | 13 | proposed-l4-num-011 | Angles and measurement | Classify and measure angles | Identify acute, right and obtuse angles | 45°, 90°, 120°
+Num | 14 | proposed-l4-num-012 | Perimeter and area | Build rectangles on grids | Calculate perimeter and area of rectangles | 6 cm × 4 cm
+Num | 15 | proposed-l4-num-013 | Units and conversions | Match units and convert common measures | Convert within metric length and mass | 1 m = 100 cm
+Num | 16 | proposed-l4-num-014 | Tables and bar charts | Interpret and create a simple bar chart | Read and compare chart values | Favourite fruit survey
+Num | 17 | proposed-l4-num-015 | Multi-step word problems | Choose operations and explain reasoning | Solve two-step real-world problems | Shopping with change

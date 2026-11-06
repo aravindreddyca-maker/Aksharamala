@@ -69,14 +69,9 @@ void main() {
         );
         await tester.pumpAndSettle();
         expect(tester.takeException(), isNull);
-        expect(find.byKey(const Key('home_scroll')), findsOneWidget);
+        expect(find.byKey(const Key('home_worlds')), findsOneWidget);
         expect(find.textContaining('Ananya'), findsWidgets);
-        await tester.drag(
-          find.byKey(const Key('home_scroll')),
-          const Offset(0, -800),
-        );
-        await tester.pumpAndSettle();
-        expect(tester.takeException(), isNull);
+        // All five worlds are on screen at once: nothing to scroll to.
         expect(find.byKey(const Key('world_numbers')), findsOneWidget);
       },
     );
@@ -84,7 +79,7 @@ void main() {
 
   for (final size in sizes) {
     testWidgets(
-      'home never scrolls vertically and keeps tiles on screen at ${size.width.toInt()}x${size.height.toInt()}',
+      'home never scrolls and keeps every tile on screen at ${size.width.toInt()}x${size.height.toInt()}',
       (tester) async {
         await setViewport(tester, size, 1.0);
         await tester.pumpWidget(
@@ -95,24 +90,22 @@ void main() {
         );
         await tester.pumpAndSettle();
         expect(tester.takeException(), isNull);
-        final scrollable = tester.state<ScrollableState>(
-          find.descendant(
-            of: find.byKey(const Key('home_scroll')),
-            matching: find.byType(Scrollable),
-          ),
-        );
-        expect(scrollable.axisDirection, AxisDirection.right);
-        // Every tile is tall enough to read and sits inside the viewport
-        // vertically; at 800 wide and up all five also fit horizontally.
+        // Nothing on the home page scrolls, either way.
+        for (final s in tester.stateList<ScrollableState>(
+          find.byType(Scrollable),
+        )) {
+          expect(s.position.maxScrollExtent, lessThan(1));
+        }
+        // Every tile sits fully inside the viewport and is big enough to read
+        // and to tap.
         for (final world in curriculum) {
           final rect = tester.getRect(find.byKey(Key('world_${world.id}')));
           expect(rect.top, greaterThanOrEqualTo(0));
+          expect(rect.left, greaterThanOrEqualTo(0));
           expect(rect.bottom, lessThanOrEqualTo(size.height));
-          expect(rect.height, greaterThanOrEqualTo(150));
-          expect(rect.width, greaterThanOrEqualTo(120));
-          if (size.width >= 800) {
-            expect(rect.right, lessThanOrEqualTo(size.width));
-          }
+          expect(rect.right, lessThanOrEqualTo(size.width));
+          expect(rect.height, greaterThanOrEqualTo(100));
+          expect(rect.width, greaterThanOrEqualTo(100));
         }
         for (final path in [
           'assets/images/emblems/english.png',
@@ -258,7 +251,9 @@ void main() {
             controller: controller(),
             child: MaterialApp(
               theme: buildTheme(),
-              home: LessonScreen(world: world, lesson: world.lessons.first),
+              home: LessonScreen(
+                  world: world,
+                  lesson: world.lessons.firstWhere((l) => l.id == 'en-a')),
             ),
           ),
         );
@@ -267,7 +262,7 @@ void main() {
         expect(find.byKey(const Key('speak_button')), findsOneWidget);
         // Picture quiz: three picture answers on screen, no Check button.
         expect(find.byKey(const Key('check_answer')), findsNothing);
-        final lesson = world.lessons.first;
+        final lesson = world.lessons.firstWhere((l) => l.id == 'en-a');
         for (final option in lesson.options) {
           final rect = tester.getRect(find.byKey(Key('answer_$option')));
           expect(rect.height, greaterThanOrEqualTo(56));
@@ -296,7 +291,7 @@ void main() {
         (tester) async {
           await setViewport(tester, size, 1.3);
           final world = curriculum.first;
-          final lesson = world.lessons.first;
+          final lesson = world.lessons.firstWhere((l) => l.id == 'en-a');
           // Saving progress is real file IO, which never completes inside a
           // widget test, so use a store that keeps nothing.
           final saved = controller();

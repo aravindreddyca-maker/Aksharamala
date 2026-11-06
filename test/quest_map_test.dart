@@ -13,6 +13,8 @@ import 'package:aksharamala/src/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'helpers/quest_trail.dart';
+
 class _NoDiskStore extends LocalStore {
   @override
   Future<void> save(LocalSnapshot snapshot) async {}
@@ -199,7 +201,7 @@ void main() {
         expect(play.height, greaterThan(0));
 
         // Header, arrows and dots are all on screen. Arrows appear only when
-        // there is more to scroll to: at 1280 wide all four cards fit.
+        // there is another page: at 1280 wide all four cards fit on one.
         if (size.width >= 1280) {
           expect(find.byKey(const Key('trail_next')), findsNothing);
           for (final lesson in _tamil.lessons) {
@@ -214,7 +216,8 @@ void main() {
           of: find.byKey(const Key('trail_dots')),
           matching: find.byType(AnimatedContainer),
         );
-        expect(dots, findsNWidgets(_tamil.lessons.length));
+        // One dot per page of cards.
+        expect(dots, findsWidgets);
         expect(
           tester.getRect(find.byKey(const Key('trail_dots'))).bottom,
           lessThanOrEqualTo(size.height),
@@ -266,61 +269,67 @@ void main() {
     expect(find.byKey(const Key('trail_next')), findsOneWidget);
   });
 
-  testWidgets('each arrow press lands on the next whole card', (tester) async {
+  testWidgets('each arrow press shows the next page of whole cards',
+      (tester) async {
     for (final size in const [Size(640, 360), Size(800, 360), Size(960, 540)]) {
       await _show(tester, size);
-      final margin = size.width < 720 ? 14.0 : 24.0;
-      final lessons = _tamil.lessons;
-      for (var i = 1; i < lessons.length; i++) {
-        if (find.byKey(const Key('trail_next')).evaluate().isEmpty) break;
+      final seen = <String>{};
+      void collect() {
+        for (final l in _tamil.lessons) {
+          if (find.byKey(Key('lesson_${l.id}')).evaluate().isEmpty) continue;
+          seen.add(l.id);
+          // Every card on a page is whole, inside the screen.
+          final r = _card(tester, l.id);
+          expect(r.left, greaterThanOrEqualTo(0), reason: '$size ${l.id}');
+          expect(r.right, lessThanOrEqualTo(size.width + .5),
+              reason: '$size ${l.id}');
+          expect(r.bottom, lessThanOrEqualTo(size.height),
+              reason: '$size ${l.id}');
+        }
+      }
+
+      collect();
+      var pages = 1;
+      while (find.byKey(const Key('trail_next')).evaluate().isNotEmpty &&
+          pages < 10) {
         await tester.tap(find.byKey(const Key('trail_next')));
         await tester.pumpAndSettle();
-        // After pressing, either card i sits exactly at the left margin, or
-        // the list has reached its end with the last card fully visible.
-        final left = _card(tester, lessons[i].id).left;
-        final atEnd = find.byKey(const Key('trail_next')).evaluate().isEmpty;
-        expect(
-          (left - margin).abs() < 1.5 || atEnd,
-          isTrue,
-          reason: '$size press $i: card ${lessons[i].id} left=$left',
-        );
-        if (atEnd) {
-          final last = _card(tester, lessons.last.id);
-          expect(last.right, lessThanOrEqualTo(size.width + 0.5));
-          expect(last.left, greaterThanOrEqualTo(0));
-        }
-        // Whatever is at the margin is a complete card on screen.
-        final shown = _card(tester, lessons[i].id);
-        expect(shown.right, lessThanOrEqualTo(size.width + 0.5));
+        pages++;
+        collect();
       }
+      // Paging through reached every quest, with nothing scrolled.
+      expect(seen, {for (final l in _tamil.lessons) l.id}, reason: '$size');
+      expect(tester.takeException(), isNull, reason: '$size');
     }
   });
 
-  testWidgets('a quick flick moves on by a card, not a stray distance', (
-    tester,
-  ) async {
-    await _show(tester, const Size(800, 360));
-    await tester.fling(
-      find.byKey(const Key('quest_trail')),
-      const Offset(-300, 0),
-      1200,
-    );
-    await tester.pumpAndSettle();
-    // Only cards near the screen are built; measure those.
-    final lefts = [
-      for (final l in _tamil.lessons)
-        if (find.byKey(Key('lesson_${l.id}')).evaluate().isNotEmpty)
-          _card(tester, l.id).left,
-    ];
-    final atMargin = lefts.any((x) => (x - 24).abs() < 1.5);
-    final atEnd = find.byKey(const Key('trail_next')).evaluate().isEmpty;
-    expect(atMargin || atEnd, isTrue, reason: 'lefts $lefts');
-    // The first card has left the margin: the flick really moved the list.
-    expect(
-      find.byKey(const Key('lesson_ta-a')).evaluate().isEmpty ||
-          _card(tester, 'ta-a').left < 24,
-      isTrue,
-    );
+  testWidgets('a swipe turns the page, with a finger or a mouse',
+      (tester) async {
+    for (final kind in [PointerDeviceKind.touch, PointerDeviceKind.mouse]) {
+      await _show(tester, const Size(640, 360));
+      expect(find.byKey(const Key('lesson_ta-a')), findsOneWidget);
+      final g = await tester.startGesture(const Offset(320, 200), kind: kind);
+      for (var i = 0; i < 10; i++) {
+        await g.moveBy(const Offset(-40, 0));
+        await tester.pump(const Duration(milliseconds: 16));
+      }
+      await g.up();
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('lesson_ta-a')), findsNothing,
+          reason: '$kind: page turned');
+      expect(find.byKey(const Key('trail_prev')), findsOneWidget);
+      // And back.
+      final back =
+          await tester.startGesture(const Offset(320, 200), kind: kind);
+      for (var i = 0; i < 10; i++) {
+        await back.moveBy(const Offset(40, 0));
+        await tester.pump(const Duration(milliseconds: 16));
+      }
+      await back.up();
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('lesson_ta-a')), findsOneWidget,
+          reason: '$kind: back');
+    }
   });
 
   testWidgets('the dots and card bottoms keep clear of the lower edge', (
@@ -385,16 +394,7 @@ void main() {
     tester,
   ) async {
     await _show(tester, const Size(960, 540));
-    await tester.scrollUntilVisible(
-      find.byKey(const Key('lesson_ta-trace')),
-      200,
-      scrollable: find
-          .descendant(
-            of: find.byKey(const Key('quest_trail')),
-            matching: find.byType(Scrollable),
-          )
-          .first,
-    );
+    await showQuest(tester, const Key('lesson_ta-trace'));
     final glyph = tester.widget<Text>(
       find.descendant(
         of: find.byKey(const Key('lesson_ta-trace')),
@@ -433,47 +433,6 @@ void main() {
     );
   });
 
-  testWidgets('a finger drag moves the trail and settles on a card edge', (
-    tester,
-  ) async {
-    await _show(tester, const Size(800, 360));
-    final before = _card(tester, 'ta-a').left;
-    // More than half a card, so it moves on rather than snapping back.
-    await tester.drag(
-        find.byKey(const Key('quest_trail')), const Offset(-250, 0));
-    await tester.pumpAndSettle();
-    final after = _card(tester, 'ta-a').left;
-    expect(after, lessThan(before));
-    // Settled: some card sits exactly under the left margin (or the trail is
-    // at its end), never half way between two cards.
-    final lefts = [
-      for (final l in _tamil.lessons) _card(tester, l.id).left,
-    ];
-    final atMargin =
-        lefts.any((x) => (x - 14).abs() < 1.5 || (x - 24).abs() < 1.5);
-    final atEnd = find.byKey(const Key('trail_next')).evaluate().isEmpty;
-    expect(atMargin || atEnd, isTrue, reason: 'lefts: $lefts');
-  });
-
-  testWidgets('mouse drag works too (tablets and desktop emulators)', (
-    tester,
-  ) async {
-    await _show(tester, const Size(960, 540));
-    final before = _card(tester, 'ta-a').left;
-    final gesture = await tester.startGesture(
-      const Offset(480, 300),
-      kind: PointerDeviceKind.mouse,
-    );
-    // Move in steps: a single jump can land before the drag is recognised.
-    for (var i = 0; i < 10; i++) {
-      await gesture.moveBy(const Offset(-20, 0));
-      await tester.pump(const Duration(milliseconds: 16));
-    }
-    await gesture.up();
-    await tester.pumpAndSettle();
-    expect(_card(tester, 'ta-a').left, lessThan(before));
-  });
-
   testWidgets('progress and rules are kept: done, next, and nothing locked', (
     tester,
   ) async {
@@ -484,10 +443,12 @@ void main() {
     expect(find.text('NEXT ADVENTURE'), findsOneWidget);
     // Every quest still opens, in any order.
     for (final lesson in _tamil.lessons) {
+      await showQuest(tester, Key('lesson_${lesson.id}'));
       final tile =
           tester.widget<InkWell>(find.byKey(Key('lesson_${lesson.id}')));
       expect(tile.onTap, isNotNull, reason: lesson.id);
     }
+    await showQuest(tester, const Key('lesson_ta-trace'));
     await tester.tap(find.byKey(const Key('lesson_ta-trace')));
     await tester.pumpAndSettle();
     expect(find.byType(LessonScreen), findsOneWidget);
@@ -512,6 +473,7 @@ void main() {
   ) async {
     await _show(tester, const Size(960, 540));
     for (final lesson in _tamil.lessons) {
+      await showQuest(tester, Key('lesson_${lesson.id}'));
       final text = tester.widget<Text>(
         find.descendant(
           of: find.byKey(Key('lesson_${lesson.id}')),
@@ -529,17 +491,8 @@ void main() {
       await _show(tester, size, scale: 1.3);
       final lesson = _tamil.lessons.firstWhere((l) => l.id == 'ta-story');
       expect(lesson.title.contains(' '), isFalse);
-      // The list builds cards lazily, so bring the fourth one into view.
-      await tester.scrollUntilVisible(
-        find.byKey(const Key('lesson_ta-story')),
-        200,
-        scrollable: find
-            .descendant(
-              of: find.byKey(const Key('quest_trail')),
-              matching: find.byType(Scrollable),
-            )
-            .first,
-      );
+      // Cards come a page at a time: turn to the one with the fourth quest.
+      await showQuest(tester, const Key('lesson_ta-story'));
       final text = tester.widget<Text>(
         find.descendant(
           of: find.byKey(const Key('lesson_ta-story')),

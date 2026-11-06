@@ -29,4 +29,6 @@ flutter:
     - assets/images/stories/
     - assets/images/brand/
     - assets/images/age56/
+    - content/teaching/
+    - content/rhymes/
 

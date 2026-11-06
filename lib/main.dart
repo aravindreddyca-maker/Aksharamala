@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'src/app.dart';
+import 'src/app_controller.dart';
+import 'src/teaching/teaching_plan.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,5 +14,12 @@ Future<void> main() async {
   // Full-screen for children: status and navigation bars hide, and a swipe
   // from the edge brings them back briefly.
   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-  runApp(const AksharamalaApp());
+  runApp(
+    AksharamalaApp(
+      controller: AppController(
+        teachingPlanLoader: assetTeachingPlanLoader,
+        parseTeachingPlansInBackground: true,
+      ),
+    ),
+  );
 }

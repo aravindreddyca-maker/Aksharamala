@@ -1,0 +1,2957 @@
+{
+  "schema_version": 1,
+  "status": "draft_unverified",
+  "lessons": [
+    {
+      "lesson_id": "numbers-l5-009",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "One-step equations",
+      "objective": "Solve equations by balancing both sides.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l5-008"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l5-009.introduce.1",
+          "text": "An equation is like a balance: both sides are equal. In x + 7 = 15, x plus 7 balances 15. To find x, do the opposite to both sides.",
+          "speech": "An equation is like a balance: both sides are equal. In x plus 7 equals 15, x plus 7 balances 15. To find x, do the opposite to both sides.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "x + 7 = 15"
+          }
+        },
+        {
+          "id": "numbers-l5-009.introduce.2",
+          "text": "Opposites undo each other: + and - are opposites, × and ÷ are opposites. Whatever you do to one side, do to the other, so the balance stays level.",
+          "speech": "Opposites undo each other: plus and minus are opposites, times and divided by are opposites. Whatever you do to one side, do to the other, so the balance stays level.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "+ ↔ -     × ↔ ÷"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-009.demonstrate.1",
+          "text": "Solve x + 7 = 15. The 7 is added, so take 7 away from both sides. x = 15 - 7 = 8.",
+          "speech": "Solve x plus 7 equals 15. The 7 is added, so take 7 away from both sides. x equals 15 minus 7 equals 8.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔵",
+                "count": 15
+              }
+            ],
+            "operator": "-",
+            "revealCount": 1,
+            "countAll": true,
+            "takeAway": 7,
+            "result": 8,
+            "showResult": true
+          }
+        },
+        {
+          "id": "numbers-l5-009.demonstrate.2",
+          "text": "Solve 4n = 28. 4n means 4 times n, so divide both sides by 4: n = 28 ÷ 4 = 7. Check: 4 × 7 = 28.",
+          "speech": "Solve 4n equals 28. 4n means 4 times n, so divide both sides by 4: n equals 28 divided by 4 equals 7. Check: 4 times 7 equals 28.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4n = 28  →  n = 28 ÷ 4 = 7"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-009.guided.1",
+          "prompt": "Solve x + 6 = 14.",
+          "speech": "Solve x plus 6 equals 14.",
+          "options": [
+            "x = 8",
+            "x = 20",
+            "x = 14"
+          ],
+          "answer": "x = 8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The 6 is added to x. What is the opposite of adding 6?",
+            "Take 6 away from both sides: 14 - 6."
+          ],
+          "wrong_feedback": {
+            "x = 20": "You added 6 again. The 6 is already added to x, so undo it by taking 6 away from both sides.",
+            "x = 14": "14 is the whole right side, not x. x plus 6 makes 14, so x is smaller than 14."
+          },
+          "explanation": "x + 6 = 14, so x = 14 - 6 = 8.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-009.guided.2",
+          "prompt": "Solve 5n = 35.",
+          "speech": "Solve 5n equals 35.",
+          "options": [
+            "n = 30",
+            "n = 175",
+            "n = 7"
+          ],
+          "answer": "n = 7",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "5n means 5 times n. What is the opposite of times?",
+            "Divide both sides by 5: 35 ÷ 5."
+          ],
+          "wrong_feedback": {
+            "n = 30": "You subtracted. 5n means 5 times n, and the opposite of times is divide.",
+            "n = 175": "You multiplied again. 5n already means 5 times n, so divide both sides by 5."
+          },
+          "explanation": "5n = 35, so n = 35 ÷ 5 = 7.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-009.practice.1",
+          "prompt": "Solve y - 9 = 12.",
+          "speech": "Solve y minus 9 equals 12.",
+          "options": [
+            "y = 3",
+            "y = 21",
+            "y = 12"
+          ],
+          "answer": "y = 21",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "9 is taken away from y. What is the opposite of taking away?",
+            "Add 9 to both sides: 12 + 9."
+          ],
+          "wrong_feedback": {
+            "y = 3": "You took 9 away again. 9 was taken away from y, so put it back by adding 9 to both sides.",
+            "y = 12": "12 is what is left after taking 9 away. y was bigger than 12."
+          },
+          "explanation": "y - 9 = 12, so y = 12 + 9 = 21.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-009.practice.2",
+          "prompt": "Solve m ÷ 4 = 6.",
+          "speech": "Solve m divided by 4 equals 6.",
+          "options": [
+            "m = 24",
+            "m = 10",
+            "m = 2"
+          ],
+          "answer": "m = 24",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "m was divided by 4. What is the opposite of dividing?",
+            "Multiply both sides by 4: 6 × 4."
+          ],
+          "wrong_feedback": {
+            "m = 10": "You added. m was divided by 4, so undo it by multiplying both sides by 4.",
+            "m = 2": "You subtracted. The opposite of divide is multiply."
+          },
+          "explanation": "m ÷ 4 = 6, so m = 6 × 4 = 24.",
+          "difficulty": 3
+        },
+        {
+          "id": "numbers-l5-009.practice.3",
+          "prompt": "To solve x + 8 = 19, what do you do to both sides?",
+          "speech": "To solve x plus 8 equals 19, what do you do to both sides?",
+          "options": [
+            "Add 8",
+            "Multiply by 8",
+            "Take away 8"
+          ],
+          "answer": "Take away 8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "x has 8 added to it. Which operation is the opposite of adding?",
+            "The opposite of adding is taking away. Do it to both sides."
+          ],
+          "wrong_feedback": {
+            "Add 8": "Adding 8 gives x + 16 on the left, which moves x further from alone. Undo the addition by taking away.",
+            "Multiply by 8": "Multiplying does not undo an addition. The opposite of + is -."
+          },
+          "explanation": "The 8 is added, so take 8 away from both sides: x = 11.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-009.check.1",
+          "prompt": "Solve x + 14 = 30.",
+          "speech": "Solve x plus 14 equals 30.",
+          "options": [
+            "x = 44",
+            "x = 16",
+            "x = 30"
+          ],
+          "answer": "x = 16",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "x = 44": "You added 14 again. The 14 is already added to x, so undo it by taking 14 away from both sides.",
+            "x = 30": "30 is the whole right side, not x. x plus 14 makes 30, so x is smaller than 30."
+          },
+          "explanation": "x + 14 = 30, so x = 30 - 14 = 16.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-009.check.2",
+          "prompt": "Solve 6k = 54.",
+          "speech": "Solve 6k equals 54.",
+          "options": [
+            "k = 9",
+            "k = 48",
+            "k = 324"
+          ],
+          "answer": "k = 9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "k = 48": "You subtracted. 6k means 6 times k, and the opposite of times is divide.",
+            "k = 324": "You multiplied again. 6k already means 6 times k, so divide both sides by 6."
+          },
+          "explanation": "6k = 54, so k = 54 ÷ 6 = 9.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-009.check.3",
+          "prompt": "Solve n - 7 = 15.",
+          "speech": "Solve n minus 7 equals 15.",
+          "options": [
+            "n = 8",
+            "n = 15",
+            "n = 22"
+          ],
+          "answer": "n = 22",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "n = 8": "You took 7 away again. 7 was taken away from n, so put it back by adding 7 to both sides.",
+            "n = 15": "15 is what is left after taking 7 away. n was bigger than 15."
+          },
+          "explanation": "n - 7 = 15, so n = 15 + 7 = 22.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-009.remediation_explain.1",
+            "text": "Let us look again. x + 3 = 5 is a balance. To get x alone, undo the + 3 by taking 3 from both sides: x = 5 - 3 = 2.",
+            "speech": "Let us look again. x plus 3 equals 5 is a balance. To get x alone, undo the plus 3 by taking 3 from both sides: x equals 5 minus 3 equals 2.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "x + 3 = 5  →  x = 5 - 3 = 2"
+            }
+          },
+          {
+            "id": "numbers-l5-009.remediation_explain.2",
+            "text": "For x - 4 = 6, the 4 was taken away from x. Put it back by adding 4 to both sides: x = 6 + 4 = 10.",
+            "speech": "For x minus 4 equals 6, the 4 was taken away from x. Put it back by adding 4 to both sides: x equals 6 plus 4 equals 10.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "x - 4 = 6  →  x = 6 + 4 = 10"
+            }
+          },
+          {
+            "id": "numbers-l5-009.remediation_explain.3",
+            "text": "For 3n = 12 divide both sides by 3: n = 4. For n ÷ 2 = 5 multiply both sides by 2: n = 10. Always check by putting your answer back in.",
+            "speech": "For 3n equals 12 divide both sides by 3: n equals 4. For n divided by 2 equals 5 multiply both sides by 2: n equals 10. Always check by putting your answer back in.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3n = 12  →  n = 4"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-009.remediation_guided.1",
+            "prompt": "Solve x + 3 = 8.",
+            "speech": "Solve x plus 3 equals 8.",
+            "options": [
+              "x = 11",
+              "x = 5",
+              "x = 8"
+            ],
+            "answer": "x = 5",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "The 3 is added to x. What is the opposite of adding 3?",
+              "Take 3 away from both sides: 8 - 3."
+            ],
+            "wrong_feedback": {
+              "x = 11": "You added 3 again. The 3 is already added to x, so undo it by taking 3 away from both sides.",
+              "x = 8": "8 is the whole right side, not x. x plus 3 makes 8, so x is smaller than 8."
+            },
+            "explanation": "x + 3 = 8, so x = 8 - 3 = 5.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-009.remediation_guided.2",
+            "prompt": "Solve 2n = 12.",
+            "speech": "Solve 2n equals 12.",
+            "options": [
+              "n = 6",
+              "n = 10",
+              "n = 24"
+            ],
+            "answer": "n = 6",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "2n means 2 times n. What is the opposite of times?",
+              "Divide both sides by 2: 12 ÷ 2."
+            ],
+            "wrong_feedback": {
+              "n = 10": "You subtracted. 2n means 2 times n, and the opposite of times is divide.",
+              "n = 24": "You multiplied again. 2n already means 2 times n, so divide both sides by 2."
+            },
+            "explanation": "2n = 12, so n = 12 ÷ 2 = 6.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-009.remediation_check.1",
+            "prompt": "Solve x - 2 = 5.",
+            "speech": "Solve x minus 2 equals 5.",
+            "options": [
+              "x = 3",
+              "x = 5",
+              "x = 7"
+            ],
+            "answer": "x = 7",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "x = 3": "You took 2 away again. 2 was taken away from x, so put it back by adding 2 to both sides.",
+              "x = 5": "5 is what is left after taking 2 away. x was bigger than 5."
+            },
+            "explanation": "x - 2 = 5, so x = 5 + 2 = 7.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-009.remediation_check.2",
+            "prompt": "Solve y ÷ 3 = 4.",
+            "speech": "Solve y divided by 3 equals 4.",
+            "options": [
+              "y = 7",
+              "y = 12",
+              "y = 1"
+            ],
+            "answer": "y = 12",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "y = 7": "You added. y was divided by 3, so undo it by multiplying both sides by 3.",
+              "y = 1": "You subtracted. The opposite of divide is multiply."
+            },
+            "explanation": "y ÷ 3 = 4, so y = 4 × 3 = 12.",
+            "difficulty": 3
+          },
+          {
+            "id": "numbers-l5-009.remediation_check.3",
+            "prompt": "I think of a number, add 5 and get 12. What is my number?",
+            "speech": "I think of a number, add 5 and get 12. What is my number?",
+            "options": [
+              "7",
+              "17",
+              "12"
+            ],
+            "answer": "7",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "17": "You added 5 again. Work backwards: the opposite of adding 5 is taking 5 away.",
+              "12": "12 is the result after adding 5. The number I thought of is smaller."
+            },
+            "explanation": "n + 5 = 12, so n = 12 - 5 = 7.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: equations with one step: x + a = b, x - a = b, ax = b, x ÷ a = b, one word problem; whole-number answers only.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of equations, ordered pairs, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); shape-classification and probability-language items are hand-written. Every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-010",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "The coordinate grid",
+      "objective": "Read and write ordered pairs in the first quadrant.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l5-009"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l5-010.introduce.1",
+          "text": "A grid has two number lines: one going across and one going up. They meet at the origin, (0, 0).",
+          "speech": "A grid has two number lines: one going across and one going up. They meet at the origin, 0 comma 0.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "(0, 0)"
+          }
+        },
+        {
+          "id": "numbers-l5-010.introduce.2",
+          "text": "An ordered pair such as (3, 4) tells you where a point is. The first number is how far across, the second is how far up. Across first, then up.",
+          "speech": "An ordered pair such as 3 comma 4 tells you where a point is. The first number is how far across, the second is how far up. Across first, then up.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "(across, up)"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-010.demonstrate.1",
+          "text": "To plot (3, 4): start at (0, 0), walk 3 across, then 4 up. You are at (3, 4).",
+          "speech": "To plot 3 comma 4: start at 0 comma 0, walk 3 across, then 4 up. You are at 3 comma 4.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "(0, 0) → 3 across → 4 up → (3, 4)"
+          }
+        },
+        {
+          "id": "numbers-l5-010.demonstrate.2",
+          "text": "(3, 4) and (4, 3) are different points. (3, 4) is 3 across and 4 up. (4, 3) is 4 across and 3 up. The order matters.",
+          "speech": "3 comma 4 and 4 comma 3 are different points. 3 comma 4 is 3 across and 4 up. 4 comma 3 is 4 across and 3 up. The order matters.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "(3, 4) ≠ (4, 3)"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-010.guided.1",
+          "prompt": "Start at the origin (0, 0). Go 3 across and 5 up. Which point do you reach?",
+          "speech": "Start at the origin 0 comma 0. Go 3 across and 5 up. Which point do you reach?",
+          "options": [
+            "(5, 3)",
+            "(3, 5)",
+            "(8, 0)"
+          ],
+          "answer": "(3, 5)",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "An ordered pair is (across, up). Which number goes first?",
+            "Across is 3, up is 5. Write them in that order."
+          ],
+          "wrong_feedback": {
+            "(5, 3)": "You swapped them. Across comes first, so 3 across and 5 up is (3, 5).",
+            "(8, 0)": "You added the two numbers. They are two separate coordinates: across 3, up 5."
+          },
+          "explanation": "3 across and 5 up gives (3, 5).",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-010.guided.2",
+          "prompt": "In the point (6, 2), how far up is the point from the origin?",
+          "speech": "In the point 6 comma 2, how far up is the point from the origin?",
+          "options": [
+            "2",
+            "6",
+            "8"
+          ],
+          "answer": "2",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The first number is across and the second is up. Which one is asked?",
+            "Look at the second number."
+          ],
+          "wrong_feedback": {
+            "6": "6 is how far across, the other coordinate.",
+            "8": "You added both numbers. Each coordinate is separate."
+          },
+          "explanation": "In (6, 2), 6 is across and 2 is up, so up is 2.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-010.practice.1",
+          "prompt": "Which ordered pair shows a point 4 across and 7 up?",
+          "speech": "Which ordered pair shows a point 4 across and 7 up?",
+          "options": [
+            "(7, 4)",
+            "(4, 4)",
+            "(4, 7)"
+          ],
+          "answer": "(4, 7)",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The first number of a pair is across. What is the second?",
+            "Across 4 first, then up 7."
+          ],
+          "wrong_feedback": {
+            "(7, 4)": "You swapped them. The first number is across (4), the second is up (7).",
+            "(4, 4)": "You used 4 twice. The second number is how far UP: 7."
+          },
+          "explanation": "Across first, up second: (4, 7).",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-010.practice.2",
+          "prompt": "Point A is at (2, 5). Point B is 3 more across and the same height. What are the coordinates of B?",
+          "speech": "Point A is at 2 comma 5. Point B is 3 more across and the same height. What are the coordinates of B?",
+          "options": [
+            "(2, 8)",
+            "(5, 5)",
+            "(5, 8)"
+          ],
+          "answer": "(5, 5)",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Moving across changes which of the two numbers?",
+            "Add 3 to the across number only."
+          ],
+          "wrong_feedback": {
+            "(2, 8)": "You moved up instead of across. 'Across' changes the FIRST number.",
+            "(5, 8)": "You moved both ways. Only across changes; the height stays the same."
+          },
+          "explanation": "Only one number changes: B is (5, 5).",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-010.practice.3",
+          "prompt": "Which point is farthest across: (2, 9), (7, 1) or (5, 5)?",
+          "speech": "Which point is farthest across: 2 comma 9, 7 comma 1 or 5 comma 5?",
+          "options": [
+            "(7, 1)",
+            "(2, 9)",
+            "(5, 5)"
+          ],
+          "answer": "(7, 1)",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Across is the first number of each pair. Compare the three first numbers.",
+            "Which first number is the biggest?"
+          ],
+          "wrong_feedback": {
+            "(2, 9)": "9 is how far UP. Across is the first number, and 2 is the smallest.",
+            "(5, 5)": "Across is 5 here, but 7 is bigger."
+          },
+          "explanation": "The across numbers are 2, 7 and 5. The biggest is 7, so (7, 1).",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-010.check.1",
+          "prompt": "In the point (3, 8), how far across is the point from the origin?",
+          "speech": "In the point 3 comma 8, how far across is the point from the origin?",
+          "options": [
+            "8",
+            "11",
+            "3"
+          ],
+          "answer": "3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "8": "8 is how far up, the other coordinate.",
+            "11": "You added both numbers. Each coordinate is separate."
+          },
+          "explanation": "In (3, 8), 3 is across and 8 is up, so across is 3.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-010.check.2",
+          "prompt": "Point A is at (4, 1). Point B is 6 more up and the same distance across. What are the coordinates of B?",
+          "speech": "Point A is at 4 comma 1. Point B is 6 more up and the same distance across. What are the coordinates of B?",
+          "options": [
+            "(10, 1)",
+            "(4, 7)",
+            "(10, 7)"
+          ],
+          "answer": "(4, 7)",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "(10, 1)": "You moved across instead of up. 'Up' changes the SECOND number.",
+            "(10, 7)": "You moved both ways. Only up changes; the across number stays the same."
+          },
+          "explanation": "Only one number changes: B is (4, 7).",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-010.check.3",
+          "prompt": "P is at (1, 4) and Q is at (6, 4). How many units apart are they?",
+          "speech": "P is at 1 comma 4 and Q is at 6 comma 4. How many units apart are they?",
+          "options": [
+            "5",
+            "7",
+            "6"
+          ],
+          "answer": "5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "7": "You added the numbers that differ. Subtract the smaller from the larger instead.",
+            "6": "That is just the largest coordinate. Find the gap between the two points."
+          },
+          "explanation": "The gap is 5 units.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-010.remediation_explain.1",
+            "text": "Let us look again. The origin is (0, 0). A point 2 across and 1 up is (2, 1). The first number is across.",
+            "speech": "Let us look again. The origin is 0 comma 0. A point 2 across and 1 up is 2 comma 1. The first number is across.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2 across, 1 up = (2, 1)"
+            }
+          },
+          {
+            "id": "numbers-l5-010.remediation_explain.2",
+            "text": "A point 1 across and 2 up is (1, 2). Swapping the numbers gives a different point.",
+            "speech": "A point 1 across and 2 up is 1 comma 2. Swapping the numbers gives a different point.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "(1, 2) is not (2, 1)"
+            }
+          },
+          {
+            "id": "numbers-l5-010.remediation_explain.3",
+            "text": "To move a point across, change the first number. To move it up, change the second number.",
+            "speech": "To move a point across, change the first number. To move it up, change the second number.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "across: 1st number     up: 2nd number"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-010.remediation_guided.1",
+            "prompt": "Start at the origin (0, 0). Go 2 across and 4 up. Which point do you reach?",
+            "speech": "Start at the origin 0 comma 0. Go 2 across and 4 up. Which point do you reach?",
+            "options": [
+              "(4, 2)",
+              "(6, 0)",
+              "(2, 4)"
+            ],
+            "answer": "(2, 4)",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "An ordered pair is (across, up). Which number goes first?",
+              "Across is 2, up is 4. Write them in that order."
+            ],
+            "wrong_feedback": {
+              "(4, 2)": "You swapped them. Across comes first, so 2 across and 4 up is (2, 4).",
+              "(6, 0)": "You added the two numbers. They are two separate coordinates: across 2, up 4."
+            },
+            "explanation": "2 across and 4 up gives (2, 4).",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-010.remediation_guided.2",
+            "prompt": "In the point (5, 9), how far up is the point from the origin?",
+            "speech": "In the point 5 comma 9, how far up is the point from the origin?",
+            "options": [
+              "5",
+              "9",
+              "14"
+            ],
+            "answer": "9",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "The first number is across and the second is up. Which one is asked?",
+              "Look at the second number."
+            ],
+            "wrong_feedback": {
+              "5": "5 is how far across, the other coordinate.",
+              "14": "You added both numbers. Each coordinate is separate."
+            },
+            "explanation": "In (5, 9), 5 is across and 9 is up, so up is 9.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-010.remediation_check.1",
+            "prompt": "Which ordered pair shows a point 2 across and 6 up?",
+            "speech": "Which ordered pair shows a point 2 across and 6 up?",
+            "options": [
+              "(2, 6)",
+              "(6, 2)",
+              "(2, 2)"
+            ],
+            "answer": "(2, 6)",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "(6, 2)": "You swapped them. The first number is across (2), the second is up (6).",
+              "(2, 2)": "You used 2 twice. The second number is how far UP: 6."
+            },
+            "explanation": "Across first, up second: (2, 6).",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-010.remediation_check.2",
+            "prompt": "Which of these points is on the up line, where the across number is 0?",
+            "speech": "Which of these points is on the up line, where the across number is 0?",
+            "options": [
+              "(4, 0)",
+              "(4, 4)",
+              "(0, 4)"
+            ],
+            "answer": "(0, 4)",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "(4, 0)": "That point is 4 across and 0 up, so it sits on the across line, not the up line.",
+              "(4, 4)": "That point is 4 across, so it is not on the up line. The across number must be 0."
+            },
+            "explanation": "The up line is the points whose across number is 0: (0, 4).",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-010.remediation_check.3",
+            "prompt": "Point A is at (1, 3). Point B is 5 more across and the same height. What are the coordinates of B?",
+            "speech": "Point A is at 1 comma 3. Point B is 5 more across and the same height. What are the coordinates of B?",
+            "options": [
+              "(1, 8)",
+              "(6, 3)",
+              "(6, 8)"
+            ],
+            "answer": "(6, 3)",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "(1, 8)": "You moved up instead of across. 'Across' changes the FIRST number.",
+              "(6, 8)": "You moved both ways. Only across changes; the height stays the same."
+            },
+            "explanation": "Only one number changes: B is (6, 3).",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: ordered pairs (across, up) in the first quadrant: reading, writing, moving a point, distance along a row or column.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of equations, ordered pairs, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); shape-classification and probability-language items are hand-written. Every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-011",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Triangles and quadrilaterals",
+      "objective": "Classify shapes by their sides and parallel lines.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l5-010"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l5-011.introduce.1",
+          "text": "Triangles are named by their sides. Equilateral: all 3 sides equal. Isosceles: exactly 2 sides equal. Scalene: no sides equal.",
+          "speech": "Triangles are named by their sides. Equilateral: all 3 sides equal. Isosceles: exactly 2 sides equal. Scalene: no sides equal.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "Equilateral 3 · Isosceles 2 · Scalene 0"
+          }
+        },
+        {
+          "id": "numbers-l5-011.introduce.2",
+          "text": "Quadrilaterals have 4 sides. Square: 4 equal sides, 4 right angles. Rectangle: 4 right angles. Parallelogram: 2 pairs of parallel sides. Trapezium: exactly 1 pair of parallel sides.",
+          "speech": "Quadrilaterals have 4 sides. Square: 4 equal sides, 4 right angles. Rectangle: 4 right angles. Parallelogram: 2 pairs of parallel sides. Trapezium: exactly 1 pair of parallel sides.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "Square · Rectangle · Parallelogram · Trapezium"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-011.demonstrate.1",
+          "text": "A triangle has sides 5 cm, 5 cm and 8 cm. Two sides are equal, so it is isosceles.",
+          "speech": "A triangle has sides 5 centimetres, 5 centimetres and 8 centimetres. Two sides are equal, so it is isosceles.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "5 cm, 5 cm, 8 cm = isosceles"
+          }
+        },
+        {
+          "id": "numbers-l5-011.demonstrate.2",
+          "text": "A shape has 4 right angles and opposite sides equal, but a long pair and a short pair. It is a rectangle. If all 4 sides were equal it would be a square.",
+          "speech": "A shape has 4 right angles and opposite sides equal, but a long pair and a short pair. It is a rectangle. If all 4 sides were equal it would be a square.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4 right angles + long and short pairs = rectangle"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-011.guided.1",
+          "prompt": "A triangle has sides 5 cm, 5 cm and 7 cm. What kind of triangle is it?",
+          "speech": "A triangle has sides 5 centimetres, 5 centimetres and 7 centimetres. What kind of triangle is it?",
+          "options": [
+            "Equilateral",
+            "Scalene",
+            "Isosceles"
+          ],
+          "answer": "Isosceles",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Compare the three sides. How many of them are equal?",
+            "3 equal is equilateral, exactly 2 is isosceles, none is scalene."
+          ],
+          "wrong_feedback": {
+            "Equilateral": "Equilateral needs all 3 sides equal. Here only 2 match.",
+            "Scalene": "Scalene means no equal sides. Two sides match here."
+          },
+          "explanation": "5, 5, 7: two equal, so isosceles.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-011.guided.2",
+          "prompt": "A shape has 4 equal sides and 4 right angles. What is it?",
+          "speech": "A shape has 4 equal sides and 4 right angles. What is it?",
+          "options": [
+            "Rectangle",
+            "Square",
+            "Trapezium"
+          ],
+          "answer": "Square",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think about the sides first. How many are equal?",
+            "4 equal sides and 4 right angles is the shape with every side the same."
+          ],
+          "wrong_feedback": {
+            "Rectangle": "A rectangle has 4 right angles, but its sides need not all be equal. This shape has 4 equal sides.",
+            "Trapezium": "A trapezium has only one pair of parallel sides and no need for right angles. This shape has more."
+          },
+          "explanation": "4 equal sides and 4 right angles make a square.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-011.practice.1",
+          "prompt": "A triangle has sides 4 cm, 6 cm and 7 cm. What kind of triangle is it?",
+          "speech": "A triangle has sides 4 centimetres, 6 centimetres and 7 centimetres. What kind of triangle is it?",
+          "options": [
+            "Scalene",
+            "Equilateral",
+            "Isosceles"
+          ],
+          "answer": "Scalene",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Compare the three sides. How many of them are equal?",
+            "3 equal is equilateral, exactly 2 is isosceles, none is scalene."
+          ],
+          "wrong_feedback": {
+            "Equilateral": "Equilateral needs all 3 sides equal. None match here.",
+            "Isosceles": "Isosceles needs 2 equal sides. All three sides here are different."
+          },
+          "explanation": "4, 6, 7: none equal, so scalene.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-011.practice.2",
+          "prompt": "A four-sided shape has exactly one pair of parallel sides. What is it?",
+          "speech": "A four-sided shape has exactly one pair of parallel sides. What is it?",
+          "options": [
+            "Parallelogram",
+            "Rectangle",
+            "Trapezium"
+          ],
+          "answer": "Trapezium",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Count the pairs of parallel sides.",
+            "Exactly one pair is the special mark of one shape."
+          ],
+          "wrong_feedback": {
+            "Parallelogram": "A parallelogram has TWO pairs of parallel sides. This shape has only one.",
+            "Rectangle": "A rectangle has two pairs of parallel sides and 4 right angles. This shape has just one pair."
+          },
+          "explanation": "Exactly one pair of parallel sides makes a trapezium.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-011.practice.3",
+          "prompt": "Two angles of a triangle are 60° and 70°. What is the third angle?",
+          "speech": "Two angles of a triangle are 60 degrees and 70 degrees. What is the third angle?",
+          "options": [
+            "130°",
+            "50°",
+            "230°"
+          ],
+          "answer": "50°",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The three angles of any triangle add up to 180°. Add the two you know first.",
+            "Take the sum of the two angles away from 180°."
+          ],
+          "wrong_feedback": {
+            "130°": "You added the two angles but stopped. Angles of a triangle total 180°, so take that sum from 180°.",
+            "230°": "You used 360°. That is for a quadrilateral. A triangle's angles make 180°."
+          },
+          "explanation": "180° - 60° - 70° = 50°.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-011.check.1",
+          "prompt": "A triangle has sides 7 cm, 7 cm and 7 cm. What kind of triangle is it?",
+          "speech": "A triangle has sides 7 centimetres, 7 centimetres and 7 centimetres. What kind of triangle is it?",
+          "options": [
+            "Equilateral",
+            "Isosceles",
+            "Scalene"
+          ],
+          "answer": "Equilateral",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Isosceles": "Isosceles has exactly 2 equal sides. All 3 sides are equal here.",
+            "Scalene": "Scalene means no equal sides. These sides are all equal."
+          },
+          "explanation": "7, 7, 7: all equal, so equilateral.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-011.check.2",
+          "prompt": "A four-sided shape has 2 pairs of parallel sides, equal opposite sides and no right angles. What is it?",
+          "speech": "A four-sided shape has 2 pairs of parallel sides, equal opposite sides and no right angles. What is it?",
+          "options": [
+            "Rectangle",
+            "Trapezium",
+            "Parallelogram"
+          ],
+          "answer": "Parallelogram",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Rectangle": "A rectangle must have 4 right angles. This shape has none.",
+            "Trapezium": "A trapezium has only ONE pair of parallel sides. This shape has two pairs."
+          },
+          "explanation": "Two pairs of parallel sides and no right angles: a parallelogram.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-011.check.3",
+          "prompt": "Two angles of a triangle are 45° and 85°. What is the third angle?",
+          "speech": "Two angles of a triangle are 45 degrees and 85 degrees. What is the third angle?",
+          "options": [
+            "130°",
+            "50°",
+            "230°"
+          ],
+          "answer": "50°",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "130°": "You added the two angles but stopped. Angles of a triangle total 180°, so take that sum from 180°.",
+            "230°": "You used 360°. That is for a quadrilateral. A triangle's angles make 180°."
+          },
+          "explanation": "180° - 45° - 85° = 50°.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-011.remediation_explain.1",
+            "text": "Let us look again. Count the equal sides of a triangle: 3 equal is equilateral, 2 equal is isosceles, none equal is scalene.",
+            "speech": "Let us look again. Count the equal sides of a triangle: 3 equal is equilateral, 2 equal is isosceles, none equal is scalene.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3 equal · 2 equal · none equal"
+            }
+          },
+          {
+            "id": "numbers-l5-011.remediation_explain.2",
+            "text": "Parallel sides never meet, like the two sides of a railway track. A trapezium has just one such pair; a parallelogram has two pairs.",
+            "speech": "Parallel sides never meet, like the two sides of a railway track. A trapezium has just one such pair; a parallelogram has two pairs.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "trapezium: 1 pair   parallelogram: 2 pairs"
+            }
+          },
+          {
+            "id": "numbers-l5-011.remediation_explain.3",
+            "text": "The three angles of any triangle add up to 180°. If two angles are 50° and 60°, the third is 180° - 50° - 60° = 70°.",
+            "speech": "The three angles of any triangle add up to 180 degrees. If two angles are 50 degrees and 60 degrees, the third is 180 degrees minus 50 degrees minus 60 degrees equals 70 degrees.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "180° - 50° - 60° = 70°"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-011.remediation_guided.1",
+            "prompt": "A triangle has sides 3 cm, 3 cm and 5 cm. What kind of triangle is it?",
+            "speech": "A triangle has sides 3 centimetres, 3 centimetres and 5 centimetres. What kind of triangle is it?",
+            "options": [
+              "Isosceles",
+              "Equilateral",
+              "Scalene"
+            ],
+            "answer": "Isosceles",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Compare the three sides. How many of them are equal?",
+              "3 equal is equilateral, exactly 2 is isosceles, none is scalene."
+            ],
+            "wrong_feedback": {
+              "Equilateral": "Equilateral needs all 3 sides equal. Here only 2 match.",
+              "Scalene": "Scalene means no equal sides. Two sides match here."
+            },
+            "explanation": "3, 3, 5: two equal, so isosceles.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-011.remediation_guided.2",
+            "prompt": "How many right angles does a rectangle have?",
+            "speech": "How many right angles does a rectangle have?",
+            "options": [
+              "2",
+              "1",
+              "4"
+            ],
+            "answer": "4",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Picture the corners of a door or a book. How do they look?",
+              "Count the corners of a rectangle."
+            ],
+            "wrong_feedback": {
+              "2": "Only two would be a different shape. Every corner of a rectangle is a right angle.",
+              "1": "One right angle is not enough. All four corners of a rectangle are right angles."
+            },
+            "explanation": "A rectangle has 4 corners and all are right angles.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-011.remediation_check.1",
+            "prompt": "Which triangle is scalene?",
+            "speech": "Which triangle is scalene?",
+            "options": [
+              "Sides 4 cm, 4 cm, 7 cm",
+              "Sides 5 cm, 6 cm, 7 cm",
+              "Sides 6 cm, 6 cm, 6 cm"
+            ],
+            "answer": "Sides 5 cm, 6 cm, 7 cm",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Sides 4 cm, 4 cm, 7 cm": "Two sides are equal here, so it is isosceles. Scalene has no equal sides.",
+              "Sides 6 cm, 6 cm, 6 cm": "All three sides are equal here, so it is equilateral. Scalene has no equal sides."
+            },
+            "explanation": "Only 5, 6 and 7 are all different, so that triangle is scalene.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-011.remediation_check.2",
+            "prompt": "Is a square also a rectangle?",
+            "speech": "Is a square also a rectangle?",
+            "options": [
+              "Yes, it has 4 right angles",
+              "No, its sides are all equal",
+              "Only sometimes"
+            ],
+            "answer": "Yes, it has 4 right angles",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "No, its sides are all equal": "Equal sides do not stop a shape being a rectangle. A rectangle only needs 4 right angles.",
+              "Only sometimes": "It is always true: every square has 4 right angles and opposite sides equal."
+            },
+            "explanation": "A square has 4 right angles, so it is a special rectangle.",
+            "difficulty": 3
+          },
+          {
+            "id": "numbers-l5-011.remediation_check.3",
+            "prompt": "A triangle has sides 8 cm, 8 cm and 3 cm. What kind of triangle is it?",
+            "speech": "A triangle has sides 8 centimetres, 8 centimetres and 3 centimetres. What kind of triangle is it?",
+            "options": [
+              "Equilateral",
+              "Scalene",
+              "Isosceles"
+            ],
+            "answer": "Isosceles",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Equilateral": "Equilateral needs all 3 sides equal. Here only 2 match.",
+              "Scalene": "Scalene means no equal sides. Two sides match here."
+            },
+            "explanation": "8, 8, 3: two equal, so isosceles.",
+            "difficulty": 1
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: triangles by sides (equilateral, isosceles, scalene), angle sum of a triangle, square, rectangle, parallelogram, trapezium by sides, right angles and parallel pairs.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of equations, ordered pairs, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); shape-classification and probability-language items are hand-written. Every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-012",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Volume of cuboids",
+      "objective": "Find the volume of a cuboid with length x width x height.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l5-011"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l5-012.introduce.1",
+          "text": "Volume is the space inside a solid. We count it in unit cubes. A cuboid 3 cm long, 2 cm wide and 2 cm high holds 12 unit cubes, so its volume is 12 cm³.",
+          "speech": "Volume is the space inside a solid. We count it in unit cubes. A cuboid 3 centimetres long, 2 centimetres wide and 2 centimetres high holds 12 unit cubes, so its volume is 12 cubic centimetres.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🧊",
+                "count": 6
+              },
+              {
+                "emoji": "🧊",
+                "count": 6
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": true,
+            "result": 12,
+            "showResult": true
+          }
+        },
+        {
+          "id": "numbers-l5-012.introduce.2",
+          "text": "Volume = length × width × height. The unit is cm³ (cubic centimetres) because we count cubes that are 1 cm on every side.",
+          "speech": "Volume equals length times width times height. The unit is cubic centimetres (cubic centimetres) because we count cubes that are 1 centimetres on every side.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "V = l × w × h"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-012.demonstrate.1",
+          "text": "A 5 cm by 4 cm by 3 cm cuboid: the bottom layer has 5 × 4 = 20 cubes. There are 3 layers, so 20 × 3 = 60 cm³.",
+          "speech": "A 5 centimetres by 4 centimetres by 3 centimetres cuboid: the bottom layer has 5 times 4 equals 20 cubes. There are 3 layers, so 20 times 3 equals 60 cubic centimetres.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "5 × 4 = 20 per layer;  20 × 3 = 60 cm³"
+          }
+        },
+        {
+          "id": "numbers-l5-012.demonstrate.2",
+          "text": "A cube has equal edges. For a cube with edges of 4 cm: 4 × 4 × 4 = 64 cm³.",
+          "speech": "A cube has equal edges. For a cube with edges of 4 centimetres: 4 times 4 times 4 equals 64 cubic centimetres.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4 × 4 × 4 = 64 cm³"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-012.guided.1",
+          "prompt": "A cuboid is 6 cm long, 3 cm wide and 2 cm high. What is its volume?",
+          "speech": "A cuboid is 6 centimetres long, 3 centimetres wide and 2 centimetres high. What is its volume?",
+          "options": [
+            "36 cm³",
+            "18 cm³",
+            "11 cm³"
+          ],
+          "answer": "36 cm³",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Volume = length × width × height. Start with length × width.",
+            "Multiply that answer by the height, 2."
+          ],
+          "wrong_feedback": {
+            "18 cm³": "6 × 3 is only the bottom layer. Multiply by the height 2 too.",
+            "11 cm³": "You added the three sizes. Volume multiplies length, width and height."
+          },
+          "explanation": "6 × 3 × 2 = 36 cm³.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-012.guided.2",
+          "prompt": "A box is filled with 4 layers of 9 cubes. How many cubes fit in the box?",
+          "speech": "A box is filled with 4 layers of 9 cubes. How many cubes fit in the box?",
+          "options": [
+            "13",
+            "9",
+            "36"
+          ],
+          "answer": "36",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "One layer holds some cubes. How do you find the cubes in many layers?",
+            "Multiply 4 by 9."
+          ],
+          "wrong_feedback": {
+            "13": "You added. Each layer has the same number of cubes, so multiply the layers by the cubes in one layer.",
+            "9": "That is one layer only. There are more layers."
+          },
+          "explanation": "4 × 9 = 36 cubes, so the volume is 36 cm³.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-012.practice.1",
+          "prompt": "A cuboid is 4 cm long, 4 cm wide and 3 cm high. What is its volume?",
+          "speech": "A cuboid is 4 centimetres long, 4 centimetres wide and 3 centimetres high. What is its volume?",
+          "options": [
+            "16 cm³",
+            "48 cm³",
+            "11 cm³"
+          ],
+          "answer": "48 cm³",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Volume = length × width × height. Start with length × width.",
+            "Multiply that answer by the height, 3."
+          ],
+          "wrong_feedback": {
+            "16 cm³": "4 × 4 is only the bottom layer. Multiply by the height 3 too.",
+            "11 cm³": "You added the three sizes. Volume multiplies length, width and height."
+          },
+          "explanation": "4 × 4 × 3 = 48 cm³.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-012.practice.2",
+          "prompt": "A cube has edges of 3 cm. What is its volume?",
+          "speech": "A cube has edges of 3 centimetres. What is its volume?",
+          "options": [
+            "27 cm³",
+            "9 cm³",
+            "54 cm³"
+          ],
+          "answer": "27 cm³",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "All three edges of a cube are the same. What do you multiply?",
+            "Multiply 3 by itself, then by 3 again."
+          ],
+          "wrong_feedback": {
+            "9 cm³": "3 × 3 is one face. A cube is 3 layers tall, so multiply by 3 again.",
+            "54 cm³": "That counts the six faces, the outside. Volume is the space inside."
+          },
+          "explanation": "3 × 3 × 3 = 27 cm³.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-012.practice.3",
+          "prompt": "Which holds more cubes: a 2 × 3 × 4 cuboid or a 2 × 2 × 5 cuboid?",
+          "speech": "Which holds more cubes: a 2 times 3 times 4 cuboid or a 2 times 2 times 5 cuboid?",
+          "options": [
+            "2 × 2 × 5 cuboid",
+            "Both the same",
+            "2 × 3 × 4 cuboid"
+          ],
+          "answer": "2 × 3 × 4 cuboid",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Work out the volume of each cuboid.",
+            "Compare 2 × 3 × 4 with 2 × 2 × 5."
+          ],
+          "wrong_feedback": {
+            "2 × 2 × 5 cuboid": "2 × 2 × 5 is only 20 cubes. The 2 × 3 × 4 cuboid holds 24.",
+            "Both the same": "They are not equal: 2 × 3 × 4 = 24 but 2 × 2 × 5 = 20."
+          },
+          "explanation": "24 cubes is more than 20 cubes.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-012.check.1",
+          "prompt": "A cuboid is 10 cm long, 5 cm wide and 2 cm high. What is its volume?",
+          "speech": "A cuboid is 10 centimetres long, 5 centimetres wide and 2 centimetres high. What is its volume?",
+          "options": [
+            "50 cm³",
+            "100 cm³",
+            "17 cm³"
+          ],
+          "answer": "100 cm³",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "50 cm³": "10 × 5 is only the bottom layer. Multiply by the height 2 too.",
+            "17 cm³": "You added the three sizes. Volume multiplies length, width and height."
+          },
+          "explanation": "10 × 5 × 2 = 100 cm³.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-012.check.2",
+          "prompt": "A cuboid has a volume of 60 cm³ and a base area of 12 cm². What is its height?",
+          "speech": "A cuboid has a volume of 60 cubic centimetres and a base area of 12 square centimetres. What is its height?",
+          "options": [
+            "5 cm",
+            "48 cm",
+            "720 cm"
+          ],
+          "answer": "5 cm",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "48 cm": "You subtracted. Volume = base area × height, so divide to find the height.",
+            "720 cm": "You multiplied. To undo 'base area × height' you divide."
+          },
+          "explanation": "60 ÷ 12 = 5 cm.",
+          "difficulty": 3
+        },
+        {
+          "id": "numbers-l5-012.check.3",
+          "prompt": "Which unit is used to measure volume?",
+          "speech": "Which unit is used to measure volume?",
+          "options": [
+            "cm²",
+            "cm",
+            "cm³"
+          ],
+          "answer": "cm³",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "cm²": "cm² measures flat area (square centimetres). Volume fills 3 directions.",
+            "cm": "cm measures a length in one direction. Volume needs cubic units."
+          },
+          "explanation": "Volume counts cubes, so its unit is cm³.",
+          "difficulty": 1
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-012.remediation_explain.1",
+            "text": "Let us look again. A layer of cubes is length × width. 2 cm by 3 cm gives 6 cubes in one layer.",
+            "speech": "Let us look again. A layer of cubes is length times width. 2 centimetres by 3 centimetres gives 6 cubes in one layer.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🧊",
+                  "count": 6
+                }
+              ],
+              "operator": "+",
+              "revealCount": 1,
+              "countAll": true,
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l5-012.remediation_explain.2",
+            "text": "Stack the layers. 2 layers of 6 cubes make 12 cubes. The height tells you how many layers.",
+            "speech": "Stack the layers. 2 layers of 6 cubes make 12 cubes. The height tells you how many layers.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🧊",
+                  "count": 6
+                },
+                {
+                  "emoji": "🧊",
+                  "count": 6
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": true,
+              "result": 12,
+              "showResult": true
+            }
+          },
+          {
+            "id": "numbers-l5-012.remediation_explain.3",
+            "text": "So volume = length × width × height. For 2 × 3 × 2 that is 12 cm³. The unit is always cubic: cm³.",
+            "speech": "So volume equals length times width times height. For 2 times 3 times 2 that is 12 cubic centimetres. The unit is always cubic: cubic centimetres.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2 × 3 × 2 = 12 cm³"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-012.remediation_guided.1",
+            "prompt": "A cuboid is 2 cm long, 3 cm wide and 4 cm high. What is its volume?",
+            "speech": "A cuboid is 2 centimetres long, 3 centimetres wide and 4 centimetres high. What is its volume?",
+            "options": [
+              "6 cm³",
+              "24 cm³",
+              "9 cm³"
+            ],
+            "answer": "24 cm³",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Volume = length × width × height. Start with length × width.",
+              "Multiply that answer by the height, 4."
+            ],
+            "wrong_feedback": {
+              "6 cm³": "2 × 3 is only the bottom layer. Multiply by the height 4 too.",
+              "9 cm³": "You added the three sizes. Volume multiplies length, width and height."
+            },
+            "explanation": "2 × 3 × 4 = 24 cm³.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-012.remediation_guided.2",
+            "prompt": "A box is filled with 5 layers of 6 cubes. How many cubes fit in the box?",
+            "speech": "A box is filled with 5 layers of 6 cubes. How many cubes fit in the box?",
+            "options": [
+              "30",
+              "11",
+              "6"
+            ],
+            "answer": "30",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "One layer holds some cubes. How do you find the cubes in many layers?",
+              "Multiply 5 by 6."
+            ],
+            "wrong_feedback": {
+              "11": "You added. Each layer has the same number of cubes, so multiply the layers by the cubes in one layer.",
+              "6": "That is one layer only. There are more layers."
+            },
+            "explanation": "5 × 6 = 30 cubes, so the volume is 30 cm³.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-012.remediation_check.1",
+            "prompt": "A cube has edges of 2 cm. What is its volume?",
+            "speech": "A cube has edges of 2 centimetres. What is its volume?",
+            "options": [
+              "4 cm³",
+              "6 cm³",
+              "8 cm³"
+            ],
+            "answer": "8 cm³",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "4 cm³": "2 × 2 is one face. A cube is 2 layers tall, so multiply by 2 again.",
+              "6 cm³": "You added 2 three times. Volume multiplies the three edges: 2 × 2 × 2."
+            },
+            "explanation": "2 × 2 × 2 = 8 cm³.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-012.remediation_check.2",
+            "prompt": "A box is filled with 3 layers of 8 cubes. How many cubes fit in the box?",
+            "speech": "A box is filled with 3 layers of 8 cubes. How many cubes fit in the box?",
+            "options": [
+              "11",
+              "24",
+              "8"
+            ],
+            "answer": "24",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "11": "You added. Each layer has the same number of cubes, so multiply the layers by the cubes in one layer.",
+              "8": "That is one layer only. There are more layers."
+            },
+            "explanation": "3 × 8 = 24 cubes, so the volume is 24 cm³.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-012.remediation_check.3",
+            "prompt": "A cuboid is 5 cm long, 2 cm wide and 2 cm high. What is its volume?",
+            "speech": "A cuboid is 5 centimetres long, 2 centimetres wide and 2 centimetres high. What is its volume?",
+            "options": [
+              "20 cm³",
+              "10 cm³",
+              "9 cm³"
+            ],
+            "answer": "20 cm³",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "10 cm³": "5 × 2 is only the bottom layer. Multiply by the height 2 too.",
+              "9 cm³": "You added the three sizes. Volume multiplies length, width and height."
+            },
+            "explanation": "5 × 2 × 2 = 20 cm³.",
+            "difficulty": 1
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: volume of cuboids and cubes by length × width × height, layers of cubes, finding a missing height, cm³; whole numbers only.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of equations, ordered pairs, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); shape-classification and probability-language items are hand-written. Every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-013",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Mean, median and mode",
+      "objective": "Find the average, middle and most common value.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l5-012"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l5-013.introduce.1",
+          "text": "Mean, median and mode are three ways to describe a set of numbers. Mean: add all the numbers, then divide by how many there are. For 4, 6, 8 the mean is (4 + 6 + 8) ÷ 3 = 6.",
+          "speech": "Mean, median and mode are three ways to describe a set of numbers. Mean: add all the numbers, then divide by how many there are. For 4, 6, 8 the mean is (4 plus 6 plus 8) divided by 3 equals 6.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "mean = total ÷ how many"
+          }
+        },
+        {
+          "id": "numbers-l5-013.introduce.2",
+          "text": "Median: put the numbers in order and take the middle one. Mode: the number that appears most often.",
+          "speech": "Median: put the numbers in order and take the middle one. Mode: the number that appears most often.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "median = middle   mode = most often"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-013.demonstrate.1",
+          "text": "Find the mean of 4, 6, 6, 8. Total: 4 + 6 + 6 + 8 = 24. There are 4 numbers, so the mean is 24 ÷ 4 = 6.",
+          "speech": "Find the mean of 4, 6, 6, 8. Total: 4 plus 6 plus 6 plus 8 equals 24. There are 4 numbers, so the mean is 24 divided by 4 equals 6.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "24 ÷ 4 = 6"
+          }
+        },
+        {
+          "id": "numbers-l5-013.demonstrate.2",
+          "text": "For 7, 3, 9, 3, 8: sorted it is 3, 3, 7, 8, 9. The middle is 7, so the median is 7. The number 3 appears twice, so the mode is 3.",
+          "speech": "For 7, 3, 9, 3, 8: sorted it is 3, 3, 7, 8, 9. The middle is 7, so the median is 7. The number 3 appears twice, so the mode is 3.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3, 3, 7, 8, 9:  median 7,  mode 3"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-013.guided.1",
+          "prompt": "What is the mean of 2, 4, 6, 12?",
+          "speech": "What is the mean of 2, 4, 6, 12?",
+          "options": [
+            "24",
+            "6",
+            "5"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Add all the numbers first. How many numbers are there?",
+            "Divide the total 24 by 4."
+          ],
+          "wrong_feedback": {
+            "24": "That is the total. The mean also needs you to divide the total by how many numbers there are.",
+            "5": "That is the middle value (the median). The mean is the total shared out equally."
+          },
+          "explanation": "24 ÷ 4 = 6.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-013.guided.2",
+          "prompt": "What is the mode of 4, 7, 4, 9, 4, 6?",
+          "speech": "What is the mode of 4, 7, 4, 9, 4, 6?",
+          "options": [
+            "4",
+            "9",
+            "3"
+          ],
+          "answer": "4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Count how many times each number appears.",
+            "The number with the highest count is the mode."
+          ],
+          "wrong_feedback": {
+            "9": "That is the biggest number. The mode is the number that appears most often.",
+            "3": "That is how MANY times the mode appears. The mode itself is the value, 4."
+          },
+          "explanation": "4 appears 3 times, more than any other.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-013.practice.1",
+          "prompt": "What is the median of 3, 10, 2, 8, 7?",
+          "speech": "What is the median of 3, 10, 2, 8, 7?",
+          "options": [
+            "2",
+            "6",
+            "7"
+          ],
+          "answer": "7",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Put the numbers in order from smallest to biggest first.",
+            "Pick the middle one."
+          ],
+          "wrong_feedback": {
+            "2": "You took the middle of the list as given. Sort the numbers from smallest to biggest first.",
+            "6": "That is the mean (total divided by how many). The median is the middle value after sorting."
+          },
+          "explanation": "Sorted: 2, 3, 7, 8, 10. The median is 7.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-013.practice.2",
+          "prompt": "What is the mean of 1, 2, 3, 4, 20?",
+          "speech": "What is the mean of 1, 2, 3, 4, 20?",
+          "options": [
+            "30",
+            "6",
+            "3"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Add all the numbers first. How many numbers are there?",
+            "Divide the total 30 by 5."
+          ],
+          "wrong_feedback": {
+            "30": "That is the total. The mean also needs you to divide the total by how many numbers there are.",
+            "3": "That is the middle value (the median). The mean is the total shared out equally."
+          },
+          "explanation": "30 ÷ 5 = 6.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-013.practice.3",
+          "prompt": "What is the mode of 5, 8, 5, 9, 8, 5, 2?",
+          "speech": "What is the mode of 5, 8, 5, 9, 8, 5, 2?",
+          "options": [
+            "5",
+            "9",
+            "3"
+          ],
+          "answer": "5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Count how many times each number appears.",
+            "The number with the highest count is the mode."
+          ],
+          "wrong_feedback": {
+            "9": "That is the biggest number. The mode is the number that appears most often.",
+            "3": "That is how MANY times the mode appears. The mode itself is the value, 5."
+          },
+          "explanation": "5 appears 3 times, more than any other.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-013.check.1",
+          "prompt": "What is the mean of 12, 3, 5, 2, 8?",
+          "speech": "What is the mean of 12, 3, 5, 2, 8?",
+          "options": [
+            "30",
+            "5",
+            "6"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "30": "That is the total. The mean also needs you to divide the total by how many numbers there are.",
+            "5": "That is the middle value (the median). The mean is the total shared out equally."
+          },
+          "explanation": "30 ÷ 5 = 6.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-013.check.2",
+          "prompt": "What is the median of 6, 2, 10, 4?",
+          "speech": "What is the median of 6, 2, 10, 4?",
+          "options": [
+            "6",
+            "5",
+            "4"
+          ],
+          "answer": "5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "6": "You took the middle of the list as given. Sort the numbers from smallest to biggest first.",
+            "4": "With an even number of values there are two middle ones. Find the number halfway between them."
+          },
+          "explanation": "Sorted: 2, 4, 6, 10. The median is 5.",
+          "difficulty": 3
+        },
+        {
+          "id": "numbers-l5-013.check.3",
+          "prompt": "What is the mode of 7, 2, 7, 9, 2, 7, 4?",
+          "speech": "What is the mode of 7, 2, 7, 9, 2, 7, 4?",
+          "options": [
+            "7",
+            "9",
+            "3"
+          ],
+          "answer": "7",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "9": "That is the biggest number. The mode is the number that appears most often.",
+            "3": "That is how MANY times the mode appears. The mode itself is the value, 7."
+          },
+          "explanation": "7 appears 3 times, more than any other.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-013.remediation_explain.1",
+            "text": "Let us look again. Mean: share the total equally. 2, 4, 6 has total 12 and 3 numbers, so the mean is 12 ÷ 3 = 4.",
+            "speech": "Let us look again. Mean: share the total equally. 2, 4, 6 has total 12 and 3 numbers, so the mean is 12 divided by 3 equals 4.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2 + 4 + 6 = 12;  12 ÷ 3 = 4"
+            }
+          },
+          {
+            "id": "numbers-l5-013.remediation_explain.2",
+            "text": "Median: sort first, then take the middle. For 9, 2, 5 sorted is 2, 5, 9, so the median is 5. With two middle numbers, find the number halfway between them.",
+            "speech": "Median: sort first, then take the middle. For 9, 2, 5 sorted is 2, 5, 9, so the median is 5. With two middle numbers, find the number halfway between them.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2, 5, 9  →  median 5"
+            }
+          },
+          {
+            "id": "numbers-l5-013.remediation_explain.3",
+            "text": "Mode: count how often each number appears. In 3, 6, 3, 8 the number 3 appears twice, more than any other, so the mode is 3.",
+            "speech": "Mode: count how often each number appears. In 3, 6, 3, 8 the number 3 appears twice, more than any other, so the mode is 3.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3, 6, 3, 8  →  mode 3"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-013.remediation_guided.1",
+            "prompt": "What is the mean of 2, 3, 10?",
+            "speech": "What is the mean of 2, 3, 10?",
+            "options": [
+              "15",
+              "3",
+              "5"
+            ],
+            "answer": "5",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Add all the numbers first. How many numbers are there?",
+              "Divide the total 15 by 3."
+            ],
+            "wrong_feedback": {
+              "15": "That is the total. The mean also needs you to divide the total by how many numbers there are.",
+              "3": "That is the middle value (the median). The mean is the total shared out equally."
+            },
+            "explanation": "15 ÷ 3 = 5.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-013.remediation_guided.2",
+            "prompt": "What is the median of 5, 1, 9?",
+            "speech": "What is the median of 5, 1, 9?",
+            "options": [
+              "1",
+              "5",
+              "9"
+            ],
+            "answer": "5",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Put the numbers in order from smallest to biggest first.",
+              "Pick the middle one."
+            ],
+            "wrong_feedback": {
+              "1": "You took the middle of the list as given. Sort the numbers from smallest to biggest first.",
+              "9": "That is the biggest number. The median is the one in the middle."
+            },
+            "explanation": "Sorted: 1, 5, 9. The median is 5.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-013.remediation_check.1",
+            "prompt": "What is the mean of 4, 4, 10?",
+            "speech": "What is the mean of 4, 4, 10?",
+            "options": [
+              "6",
+              "18",
+              "4"
+            ],
+            "answer": "6",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "18": "That is the total. The mean also needs you to divide the total by how many numbers there are.",
+              "4": "That is the middle value (the median). The mean is the total shared out equally."
+            },
+            "explanation": "18 ÷ 3 = 6.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-013.remediation_check.2",
+            "prompt": "What is the median of 7, 2, 4?",
+            "speech": "What is the median of 7, 2, 4?",
+            "options": [
+              "2",
+              "7",
+              "4"
+            ],
+            "answer": "4",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "2": "You took the middle of the list as given. Sort the numbers from smallest to biggest first.",
+              "7": "That is the biggest number. The median is the one in the middle."
+            },
+            "explanation": "Sorted: 2, 4, 7. The median is 4.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-013.remediation_check.3",
+            "prompt": "The mean of 3 numbers is 5. Two of them are 3 and 4. What is the third number?",
+            "speech": "The mean of 3 numbers is 5. Two of them are 3 and 4. What is the third number?",
+            "options": [
+              "5",
+              "8",
+              "7"
+            ],
+            "answer": "8",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "5": "That is the mean itself. The third number is whatever makes the total right.",
+              "7": "That is the total of the two known numbers. Find what is still needed to reach the full total."
+            },
+            "explanation": "3 × 5 = 15; 15 - 3 - 4 = 8.",
+            "difficulty": 3
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: mean (whole-number result), median of odd and even sets, mode of a single clear mode, a missing value from a mean of 3 numbers.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of equations, ordered pairs, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); shape-classification and probability-language items are hand-written. Every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-014",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Probability language",
+      "objective": "Describe how likely an event is.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l5-013"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l5-014.introduce.1",
+          "text": "We describe chance with words: impossible, unlikely, even chance, likely and certain. They go from never happening to always happening.",
+          "speech": "We describe chance with words: impossible, unlikely, even chance, likely and certain. They go from never happening to always happening.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "impossible · unlikely · even chance · likely · certain"
+          }
+        },
+        {
+          "id": "numbers-l5-014.introduce.2",
+          "text": "To judge, compare the favourite outcomes with all possible outcomes. A bag with 5 red and 1 blue marble: picking red is likely because there are many more red marbles.",
+          "speech": "To judge, compare the favourite outcomes with all possible outcomes. A bag with 5 red and 1 blue marble: picking red is likely because there are many more red marbles.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔴",
+                "count": 5
+              },
+              {
+                "emoji": "🔵",
+                "count": 1
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-014.demonstrate.1",
+          "text": "A bag has 5 red marbles and 1 blue marble. Picking red is likely: 5 red marbles against 1 blue. Picking blue is unlikely.",
+          "speech": "A bag has 5 red marbles and 1 blue marble. Picking red is likely: 5 red marbles against 1 blue. Picking blue is unlikely.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔴",
+                "count": 5
+              },
+              {
+                "emoji": "🔵",
+                "count": 1
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l5-014.demonstrate.2",
+          "text": "A bag has 3 red and 3 blue marbles. Red and blue are equally likely: an even chance. The chance of red is 3 out of 6, which is 1/2.",
+          "speech": "A bag has 3 red and 3 blue marbles. Red and blue are equally likely: an even chance. The chance of red is 3 out of 6, which is 1 over 2.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔴",
+                "count": 3
+              },
+              {
+                "emoji": "🔵",
+                "count": 3
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-014.guided.1",
+          "prompt": "A bag has 1 red marbles and 5 blue marbles. You pick one without looking. How likely is it to pick red?",
+          "speech": "A bag has 1 red marbles and 5 blue marbles. You pick one without looking. How likely is it to pick red?",
+          "options": [
+            "Impossible",
+            "Even chance",
+            "Unlikely"
+          ],
+          "answer": "Unlikely",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Compare the red marbles with the other marbles. Which group is bigger?",
+            "More of that colour means likely, fewer means unlikely, equal means even chance. None means impossible and all means certain."
+          ],
+          "wrong_feedback": {
+            "Impossible": "There are 1 red marbles in the bag, so it can happen.",
+            "Even chance": "Even chance needs equal numbers. Here it is 1 red against 5 other."
+          },
+          "explanation": "1 red against 5 other: unlikely.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-014.guided.2",
+          "prompt": "Which event is impossible?",
+          "speech": "Which event is impossible?",
+          "options": [
+            "Rolling an even number on a die",
+            "Rolling a 7 on an ordinary 1 to 6 die",
+            "Rolling a number less than 7 on a die"
+          ],
+          "answer": "Rolling a 7 on an ordinary 1 to 6 die",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "An impossible event can never happen. Which faces does a die have?",
+            "A die shows 1 to 6 only."
+          ],
+          "wrong_feedback": {
+            "Rolling an even number on a die": "2, 4 and 6 are even, so it can happen. It is an even chance, not impossible.",
+            "Rolling a number less than 7 on a die": "Every face is less than 7, so this always happens. That is certain, not impossible."
+          },
+          "explanation": "A die has no 7, so rolling a 7 is impossible.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-014.practice.1",
+          "prompt": "A bag has 4 red marbles and 4 blue marbles. You pick one without looking. How likely is it to pick blue?",
+          "speech": "A bag has 4 red marbles and 4 blue marbles. You pick one without looking. How likely is it to pick blue?",
+          "options": [
+            "Even chance",
+            "Unlikely",
+            "Likely"
+          ],
+          "answer": "Even chance",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Compare the blue marbles with the other marbles. Which group is bigger?",
+            "More of that colour means likely, fewer means unlikely, equal means even chance. None means impossible and all means certain."
+          ],
+          "wrong_feedback": {
+            "Unlikely": "Unlikely needs FEWER blue marbles than the other colour. Here it is 4 against 4.",
+            "Likely": "Likely needs MORE blue marbles than the other colour. Here it is 4 against 4."
+          },
+          "explanation": "4 blue against 4 other: even chance.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-014.practice.2",
+          "prompt": "A bag has 2 red marbles and 3 blue marbles. What is the chance of picking red as a fraction?",
+          "speech": "A bag has 2 red marbles and 3 blue marbles. What is the chance of picking red as a fraction?",
+          "options": [
+            "2/3",
+            "3/5",
+            "2/5"
+          ],
+          "answer": "2/5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Favourite outcomes go on top. How many are favourites?",
+            "All the marbles go on the bottom: 2 + 3."
+          ],
+          "wrong_feedback": {
+            "2/3": "You compared with the OTHER colour only. The bottom number is ALL the marbles.",
+            "3/5": "That is the chance of the other colour. You need the red marbles on top."
+          },
+          "explanation": "2 favourite out of 5 marbles: 2/5.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-014.practice.3",
+          "prompt": "A fair coin is tossed. How likely is it to land heads?",
+          "speech": "A fair coin is tossed. How likely is it to land heads?",
+          "options": [
+            "Likely",
+            "Even chance",
+            "Unlikely"
+          ],
+          "answer": "Even chance",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "A fair coin has two sides with the same chance. Is heads favoured?",
+            "Equal chance has its own name."
+          ],
+          "wrong_feedback": {
+            "Likely": "Heads and tails have the same chance, so heads is no more likely than tails.",
+            "Unlikely": "Heads has the same chance as tails, so it is not less likely."
+          },
+          "explanation": "Heads and tails are equally likely: an even chance.",
+          "difficulty": 1
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-014.check.1",
+          "prompt": "A bag has 7 red marbles and 2 blue marbles. You pick one without looking. How likely is it to pick red?",
+          "speech": "A bag has 7 red marbles and 2 blue marbles. You pick one without looking. How likely is it to pick red?",
+          "options": [
+            "Likely",
+            "Even chance",
+            "Certain"
+          ],
+          "answer": "Likely",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Even chance": "Even chance needs equal numbers. Here it is 7 red against 2 other.",
+            "Certain": "Not certain: there are 2 marbles of the other colour that could be picked."
+          },
+          "explanation": "7 red against 2 other: likely.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-014.check.2",
+          "prompt": "Which event is the MOST likely?",
+          "speech": "Which event is the MOST likely?",
+          "options": [
+            "Rolling a 6 on a die",
+            "Tossing heads with a coin",
+            "Rolling a number less than 6 on a die"
+          ],
+          "answer": "Rolling a number less than 6 on a die",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Rolling a 6 on a die": "Only 1 face out of 6 is a 6. That is unlikely.",
+            "Tossing heads with a coin": "Heads is 1 out of 2. Less than 5 out of 6."
+          },
+          "explanation": "Rolling less than 6 can be 1, 2, 3, 4 or 5: 5 out of 6.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-014.check.3",
+          "prompt": "A bag has 3 red marbles and 5 blue marbles. What is the chance of picking blue as a fraction?",
+          "speech": "A bag has 3 red marbles and 5 blue marbles. What is the chance of picking blue as a fraction?",
+          "options": [
+            "5/3",
+            "5/8",
+            "3/8"
+          ],
+          "answer": "5/8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "5/3": "You compared with the OTHER colour only. The bottom number is ALL the marbles.",
+            "3/8": "That is the chance of the other colour. You need the blue marbles on top."
+          },
+          "explanation": "5 favourite out of 8 marbles: 5/8.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-014.remediation_explain.1",
+            "text": "Let us look again. If every marble is red, picking red is certain. If none is red, picking red is impossible.",
+            "speech": "Let us look again. If every marble is red, picking red is certain. If none is red, picking red is impossible.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🔴",
+                  "count": 4
+                }
+              ],
+              "operator": "+",
+              "revealCount": 1,
+              "countAll": false,
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l5-014.remediation_explain.2",
+            "text": "If there are more red than blue, red is likely. If there are fewer red than blue, red is unlikely. If they are equal, it is an even chance.",
+            "speech": "If there are more red than blue, red is likely. If there are fewer red than blue, red is unlikely. If they are equal, it is an even chance.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🔴",
+                  "count": 2
+                },
+                {
+                  "emoji": "🔵",
+                  "count": 6
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false,
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l5-014.remediation_explain.3",
+            "text": "A fair coin lands heads or tails, with the same chance each. So landing heads is an even chance.",
+            "speech": "A fair coin lands heads or tails, with the same chance each. So landing heads is an even chance.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "heads  ·  tails"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-014.remediation_guided.1",
+            "prompt": "A bag has 8 red marbles and 1 blue marbles. You pick one without looking. How likely is it to pick blue?",
+            "speech": "A bag has 8 red marbles and 1 blue marbles. You pick one without looking. How likely is it to pick blue?",
+            "options": [
+              "Unlikely",
+              "Impossible",
+              "Even chance"
+            ],
+            "answer": "Unlikely",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Compare the blue marbles with the other marbles. Which group is bigger?",
+              "More of that colour means likely, fewer means unlikely, equal means even chance. None means impossible and all means certain."
+            ],
+            "wrong_feedback": {
+              "Impossible": "There are 1 blue marbles in the bag, so it can happen.",
+              "Even chance": "Even chance needs equal numbers. Here it is 1 blue against 8 other."
+            },
+            "explanation": "1 blue against 8 other: unlikely.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-014.remediation_guided.2",
+            "prompt": "Which event is certain?",
+            "speech": "Which event is certain?",
+            "options": [
+              "Rolling a 6 on a die",
+              "Rolling an even number on a die",
+              "Rolling a number less than 7 on a die"
+            ],
+            "answer": "Rolling a number less than 7 on a die",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Certain means it will always happen. What faces does a die have?",
+              "Check each face of the die: 1 to 6."
+            ],
+            "wrong_feedback": {
+              "Rolling a 6 on a die": "Only one face is a 6. That is unlikely, not certain.",
+              "Rolling an even number on a die": "3 faces out of 6 are even, an even chance. Certain means every face."
+            },
+            "explanation": "Every face of a die is less than 7, so it is certain.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-014.remediation_check.1",
+            "prompt": "A bag has 0 red marbles and 5 blue marbles. You pick one without looking. How likely is it to pick red?",
+            "speech": "A bag has 0 red marbles and 5 blue marbles. You pick one without looking. How likely is it to pick red?",
+            "options": [
+              "Unlikely",
+              "Impossible",
+              "Even chance"
+            ],
+            "answer": "Impossible",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Unlikely": "Unlikely needs FEWER red marbles than the other colour. Here it is 0 against 5.",
+              "Even chance": "Even chance needs equal numbers. Here it is 0 red against 5 other."
+            },
+            "explanation": "0 red against 5 other: impossible.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-014.remediation_check.2",
+            "prompt": "Which event is the LEAST likely?",
+            "speech": "Which event is the LEAST likely?",
+            "options": [
+              "Rolling a 1 on a die",
+              "Rolling an even number on a die",
+              "Rolling a number below 5 on a die"
+            ],
+            "answer": "Rolling a 1 on a die",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Rolling an even number on a die": "3 of the 6 faces are even. That is far more often than a 1.",
+              "Rolling a number below 5 on a die": "1, 2, 3 and 4 make 4 of the 6 faces. That is likely."
+            },
+            "explanation": "Only 1 face out of 6 is a 1, the smallest chance here.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-014.remediation_check.3",
+            "prompt": "A bag has 1 red marbles and 1 blue marbles. You pick one without looking. How likely is it to pick red?",
+            "speech": "A bag has 1 red marbles and 1 blue marbles. You pick one without looking. How likely is it to pick red?",
+            "options": [
+              "Unlikely",
+              "Likely",
+              "Even chance"
+            ],
+            "answer": "Even chance",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Unlikely": "Unlikely needs FEWER red marbles than the other colour. Here it is 1 against 1.",
+              "Likely": "Likely needs MORE red marbles than the other colour. Here it is 1 against 1."
+            },
+            "explanation": "1 red against 1 other: even chance.",
+            "difficulty": 1
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: chance words (impossible, unlikely, even chance, likely, certain), comparing favourable and other outcomes, chance as a simple fraction.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of equations, ordered pairs, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); shape-classification and probability-language items are hand-written. Every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l5-015",
+      "world": "numbers",
+      "level": 5,
+      "locale": "en-IN",
+      "title": "Budget and money",
+      "objective": "Plan spending and compare costs.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l5-014"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l5-015.introduce.1",
+          "text": "A budget is a plan for your money. Money you have minus the money you plan to spend is the money left.",
+          "speech": "A budget is a plan for your money. Money you have minus the money you plan to spend is the money left.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "₹500 - spending = left"
+          }
+        },
+        {
+          "id": "numbers-l5-015.introduce.2",
+          "text": "To compare prices, find the cost of ONE. ₹60 for 4 pens is ₹60 ÷ 4 = ₹15 each. The lower price for one is the better buy.",
+          "speech": "To compare prices, find the cost of ONE. 60 rupees for 4 pens is 60 rupees divided by 4 equals 15 rupees each. The lower price for one is the better buy.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "₹60 ÷ 4 = ₹15 each"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l5-015.demonstrate.1",
+          "text": "You have ₹500. You plan: books ₹120, bag ₹180 and lunch ₹90. Spent: 120 + 180 + 90 = ₹390. Left: 500 - 390 = ₹110.",
+          "speech": "You have 500 rupees. You plan: books 120 rupees, bag 180 rupees and lunch 90 rupees. Spent: 120 plus 180 plus 90 equals 390 rupees. Left: 500 minus 390 equals 110 rupees.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "₹500 - ₹390 = ₹110"
+          }
+        },
+        {
+          "id": "numbers-l5-015.demonstrate.2",
+          "text": "Shop A: 4 pens for ₹60 is ₹15 each. Shop B: 6 pens for ₹84 is ₹14 each. Shop B is the better buy, even though its total is higher.",
+          "speech": "Shop A: 4 pens for 60 rupees is 15 rupees each. Shop B: 6 pens for 84 rupees is 14 rupees each. Shop B is the better buy, even though its total is higher.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "A: ₹15 each     B: ₹14 each"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l5-015.guided.1",
+          "prompt": "A budget is ₹300. Spending: notebooks ₹80, pens ₹45 and lunch ₹60. How much is left?",
+          "speech": "A budget is 300 rupees. Spending: notebooks 80 rupees, pens 45 rupees and lunch 60 rupees. How much is left?",
+          "options": [
+            "₹115",
+            "₹185",
+            "₹175"
+          ],
+          "answer": "₹115",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First add the three things you plan to spend on.",
+            "Take that total away from ₹300."
+          ],
+          "wrong_feedback": {
+            "₹185": "That is the money SPENT. The question asks how much is left over.",
+            "₹175": "You forgot to take away the lunch. Subtract all three amounts."
+          },
+          "explanation": "Spent ₹80 + ₹45 + ₹60 = ₹185; left ₹300 - ₹185 = ₹115.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l5-015.guided.2",
+          "prompt": "Asha buys 3 mangoes at ₹45 each and pays ₹200. How much change does Asha get?",
+          "speech": "Asha buys 3 mangoes at 45 rupees each and pays 200 rupees. How much change does Asha get?",
+          "options": [
+            "₹135",
+            "₹155",
+            "₹65"
+          ],
+          "answer": "₹65",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First find what 3 mangoes cost altogether.",
+            "Take that cost away from ₹200."
+          ],
+          "wrong_feedback": {
+            "₹135": "That is the cost of the things, not the change.",
+            "₹155": "You paid for only one. Find the cost of all 3 first."
+          },
+          "explanation": "3 × ₹45 = ₹135; ₹200 - ₹135 = ₹65.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l5-015.practice.1",
+          "prompt": "Shop A sells 4 pens for ₹100. Shop B sells 6 pens for ₹120. Which shop is cheaper per pen?",
+          "speech": "Shop A sells 4 pens for 100 rupees. Shop B sells 6 pens for 120 rupees. Which shop is cheaper per pen?",
+          "options": [
+            "Shop A",
+            "Shop B",
+            "Both the same"
+          ],
+          "answer": "Shop B",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The shops sell different numbers of pens. How can you compare fairly?",
+            "Divide each price by its number of pens."
+          ],
+          "wrong_feedback": {
+            "Shop A": "Shop A has the lower total price, but you get fewer pens. Compare the cost of ONE: ₹25 against ₹20.",
+            "Both the same": "They are not the same: ₹25 each at Shop A and ₹20 each at Shop B."
+          },
+          "explanation": "Shop A: ₹100 ÷ 4 = ₹25. Shop B: ₹120 ÷ 6 = ₹20. Shop B is cheaper per pen.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-015.practice.2",
+          "prompt": "6 pencils cost ₹90. How much do 4 pencils cost?",
+          "speech": "6 pencils cost 90 rupees. How much do 4 pencils cost?",
+          "options": [
+            "₹60",
+            "₹360",
+            "₹19"
+          ],
+          "answer": "₹60",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find the cost of ONE pencil first.",
+            "One costs ₹90 ÷ 6. Then multiply by 4."
+          ],
+          "wrong_feedback": {
+            "₹360": "You multiplied the price of 6. First find the price of one.",
+            "₹19": "You added. The cost of one has to be multiplied by how many you want."
+          },
+          "explanation": "₹90 ÷ 6 = ₹15 each; ₹15 × 4 = ₹60.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-015.practice.3",
+          "prompt": "Arun saves ₹40 a week. How many weeks will Arun need to save ₹280?",
+          "speech": "Arun saves 40 rupees a week. How many weeks will Arun need to save 280 rupees?",
+          "options": [
+            "6 weeks",
+            "8 weeks",
+            "7 weeks"
+          ],
+          "answer": "7 weeks",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Each week adds the same amount. How many of those make the target?",
+            "Divide ₹280 by ₹40."
+          ],
+          "wrong_feedback": {
+            "6 weeks": "In 6 weeks Arun has only ₹240, which is not enough.",
+            "8 weeks": "7 weeks already give ₹280, so one more week is not needed."
+          },
+          "explanation": "₹280 ÷ ₹40 = 7 weeks.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l5-015.check.1",
+          "prompt": "A budget is ₹1000. Spending: shoes ₹450, books ₹210 and snacks ₹95. How much is left?",
+          "speech": "A budget is 1000 rupees. Spending: shoes 450 rupees, books 210 rupees and snacks 95 rupees. How much is left?",
+          "options": [
+            "₹755",
+            "₹245",
+            "₹340"
+          ],
+          "answer": "₹245",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "₹755": "That is the money SPENT. The question asks how much is left over.",
+            "₹340": "You forgot to take away the snacks. Subtract all three amounts."
+          },
+          "explanation": "Spent ₹450 + ₹210 + ₹95 = ₹755; left ₹1000 - ₹755 = ₹245.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l5-015.check.2",
+          "prompt": "Shop A sells 5 balls for ₹80. Shop B sells 3 balls for ₹60. Which shop is cheaper per ball?",
+          "speech": "Shop A sells 5 balls for 80 rupees. Shop B sells 3 balls for 60 rupees. Which shop is cheaper per ball?",
+          "options": [
+            "Shop A",
+            "Shop B",
+            "Both the same"
+          ],
+          "answer": "Shop A",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Shop B": "Shop B has the lower total price, but you get fewer balls. Compare the cost of ONE: ₹20 against ₹16.",
+            "Both the same": "They are not the same: ₹16 each at Shop A and ₹20 each at Shop B."
+          },
+          "explanation": "Shop A: ₹80 ÷ 5 = ₹16. Shop B: ₹60 ÷ 3 = ₹20. Shop A is cheaper per ball.",
+          "difficulty": 3
+        },
+        {
+          "id": "numbers-l5-015.check.3",
+          "prompt": "A bag costs ₹400. It is sold at 25% off. What is the sale price?",
+          "speech": "A bag costs 400 rupees. It is sold at 25 percent off. What is the sale price?",
+          "options": [
+            "₹100",
+            "₹500",
+            "₹300"
+          ],
+          "answer": "₹300",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "₹100": "That is the discount (the money taken off), not the sale price.",
+            "₹500": "You added the discount. Discount means the price goes DOWN."
+          },
+          "explanation": "25% of ₹400 = ₹100; ₹400 - ₹100 = ₹300.",
+          "difficulty": 3
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l5-015.remediation_explain.1",
+            "text": "Let us look again. You have ₹100 and spend ₹30 and ₹20. Add the spending: 30 + 20 = ₹50. Left: 100 - 50 = ₹50.",
+            "speech": "Let us look again. You have 100 rupees and spend 30 rupees and 20 rupees. Add the spending: 30 plus 20 equals 50 rupees. Left: 100 minus 50 equals 50 rupees.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "₹100 - ₹30 - ₹20 = ₹50"
+            }
+          },
+          {
+            "id": "numbers-l5-015.remediation_explain.2",
+            "text": "If 3 pens cost ₹30, then 1 pen costs ₹30 ÷ 3 = ₹10. So 5 pens cost 5 × ₹10 = ₹50.",
+            "speech": "If 3 pens cost 30 rupees, then 1 pen costs 30 rupees divided by 3 equals 10 rupees. So 5 pens cost 5 times 10 rupees equals 50 rupees.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "₹30 ÷ 3 = ₹10;  5 × ₹10 = ₹50"
+            }
+          },
+          {
+            "id": "numbers-l5-015.remediation_explain.3",
+            "text": "A discount takes money off the price. 10% of ₹200 is ₹20, so the sale price is ₹200 - ₹20 = ₹180.",
+            "speech": "A discount takes money off the price. 10 percent of 200 rupees is 20 rupees, so the sale price is 200 rupees minus 20 rupees equals 180 rupees.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "₹200 - ₹20 = ₹180"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l5-015.remediation_guided.1",
+            "prompt": "Asha buys 2 pencils at ₹30 each and pays ₹100. How much change does Asha get?",
+            "speech": "Asha buys 2 pencils at 30 rupees each and pays 100 rupees. How much change does Asha get?",
+            "options": [
+              "₹60",
+              "₹40",
+              "₹70"
+            ],
+            "answer": "₹40",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "First find what 2 pencils cost altogether.",
+              "Take that cost away from ₹100."
+            ],
+            "wrong_feedback": {
+              "₹60": "That is the cost of the things, not the change.",
+              "₹70": "You paid for only one. Find the cost of all 2 first."
+            },
+            "explanation": "2 × ₹30 = ₹60; ₹100 - ₹60 = ₹40.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-015.remediation_guided.2",
+            "prompt": "3 balls cost ₹36. How much do 5 balls cost?",
+            "speech": "3 balls cost 36 rupees. How much do 5 balls cost?",
+            "options": [
+              "₹60",
+              "₹180",
+              "₹17"
+            ],
+            "answer": "₹60",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Find the cost of ONE ball first.",
+              "One costs ₹36 ÷ 3. Then multiply by 5."
+            ],
+            "wrong_feedback": {
+              "₹180": "You multiplied the price of 3. First find the price of one.",
+              "₹17": "You added. The cost of one has to be multiplied by how many you want."
+            },
+            "explanation": "₹36 ÷ 3 = ₹12 each; ₹12 × 5 = ₹60.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l5-015.remediation_check.1",
+            "prompt": "Arun saves ₹25 a week. How many weeks will Arun need to save ₹200?",
+            "speech": "Arun saves 25 rupees a week. How many weeks will Arun need to save 200 rupees?",
+            "options": [
+              "7 weeks",
+              "9 weeks",
+              "8 weeks"
+            ],
+            "answer": "8 weeks",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "7 weeks": "In 7 weeks Arun has only ₹175, which is not enough.",
+              "9 weeks": "8 weeks already give ₹200, so one more week is not needed."
+            },
+            "explanation": "₹200 ÷ ₹25 = 8 weeks.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l5-015.remediation_check.2",
+            "prompt": "A budget is ₹200. Spending: pens ₹40, bag ₹90 and snacks ₹30. How much is left?",
+            "speech": "A budget is 200 rupees. Spending: pens 40 rupees, bag 90 rupees and snacks 30 rupees. How much is left?",
+            "options": [
+              "₹160",
+              "₹40",
+              "₹70"
+            ],
+            "answer": "₹40",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "₹160": "That is the money SPENT. The question asks how much is left over.",
+              "₹70": "You forgot to take away the snacks. Subtract all three amounts."
+            },
+            "explanation": "Spent ₹40 + ₹90 + ₹30 = ₹160; left ₹200 - ₹160 = ₹40.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l5-015.remediation_check.3",
+            "prompt": "Which of these is a need, not a want?",
+            "speech": "Which of these is a need, not a want?",
+            "options": [
+              "School notebooks",
+              "A new video game",
+              "Festival fireworks"
+            ],
+            "answer": "School notebooks",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "A new video game": "A game is something nice to have, a want. You can live and learn without it.",
+              "Festival fireworks": "Fireworks are a treat, a want. A need is something you must have."
+            },
+            "explanation": "School notebooks are needed for learning, so they come first in a budget.",
+            "difficulty": 1
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: money left in a three-item budget, change, cost of one then many, best buy per unit, weeks to save, percent discount; whole-rupee answers only.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of equations, ordered pairs, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); shape-classification and probability-language items are hand-written. Every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    }
+  ]
+}

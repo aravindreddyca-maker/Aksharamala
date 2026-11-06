@@ -16,7 +16,9 @@ import '../result_text.dart';
 import '../services/speech_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/fit_content.dart';
 import '../widgets/writing_pad.dart';
+import 'lesson_navigation.dart';
 
 /// What the result pop-up says, in the quest's language. [gained] is what the
 /// quest actually paid, which is 0 once a quest has already paid its stars, so
@@ -133,6 +135,12 @@ class _LessonScreenState extends State<LessonScreen> {
     // before the pop-up covers them.
     await Future<void>.delayed(feedbackPause);
     if (!mounted) return;
+    final onNext = nextLessonAction(
+      context,
+      widget.world,
+      widget.lesson,
+      correct: correct,
+    );
     await showDialog<void>(
       context: context,
       barrierDismissible: false,
@@ -140,6 +148,7 @@ class _LessonScreenState extends State<LessonScreen> {
         correct: correct,
         text: ResultText.forLocale(widget.lesson.locale),
         gained: gained,
+        onNext: onNext,
         onBack: () {
           Navigator.pop(context);
           Navigator.pop(context);
@@ -222,21 +231,26 @@ class _LessonScreenState extends State<LessonScreen> {
           final twoPanel = constraints.maxWidth >= 600;
           final padding = constraints.maxHeight < 400 ? 10.0 : 18.0;
           if (_isMath) return _buildMath(twoPanel: twoPanel, padding: padding);
+          if (_isTracing) {
+            return _buildTracingScreen(twoPanel: twoPanel, padding: padding);
+          }
           final activity = _isTracing
               ? _buildTracing()
               : _isStory
                   ? _buildStory(pinned: twoPanel)
                   : _buildQuestion(pinned: twoPanel);
           if (!twoPanel) {
-            return SingleChildScrollView(
+            return Padding(
               padding: EdgeInsets.all(padding),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  _buildIntro(lesson),
-                  const SizedBox(height: 12),
-                  activity,
-                ],
+              child: FitContent(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _buildIntro(lesson),
+                    const SizedBox(height: 12),
+                    activity,
+                  ],
+                ),
               ),
             );
           }
@@ -247,7 +261,7 @@ class _LessonScreenState extends State<LessonScreen> {
               children: [
                 Expanded(
                   flex: 4,
-                  child: SingleChildScrollView(child: _buildIntro(lesson)),
+                  child: FitContent(child: _buildIntro(lesson)),
                 ),
                 SizedBox(width: padding),
                 Expanded(
@@ -257,7 +271,7 @@ class _LessonScreenState extends State<LessonScreen> {
                   // screen. Everything else scrolls as one piece.
                   child: _pinsCheck
                       ? Align(alignment: Alignment.topCenter, child: activity)
-                      : SingleChildScrollView(child: activity),
+                      : FitContent(child: activity),
                 ),
               ],
             ),
@@ -270,15 +284,22 @@ class _LessonScreenState extends State<LessonScreen> {
   Widget _buildMath({required bool twoPanel, required double padding}) {
     final visual = _mathVisual();
     if (!twoPanel) {
-      return SingleChildScrollView(
+      // Narrow or tall screen: the picture takes the room that is left and the
+      // three answers sit under it, all on one screen.
+      return Padding(
         padding: EdgeInsets.all(padding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(height: 230, child: visual),
-            const SizedBox(height: 12),
-            _mathAnswers(tileHeight: 68),
-          ],
+        child: LayoutBuilder(
+          builder: (context, box) {
+            final tile = ((box.maxHeight * .45 - 24) / 3).clamp(48.0, 84.0);
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(child: visual),
+                const SizedBox(height: 12),
+                _mathAnswers(tileHeight: tile),
+              ],
+            );
+          },
         ),
       );
     }
@@ -301,9 +322,7 @@ class _LessonScreenState extends State<LessonScreen> {
                   56.0,
                   120.0,
                 );
-                return SingleChildScrollView(
-                  child: _mathAnswers(tileHeight: tile),
-                );
+                return FitContent(child: _mathAnswers(tileHeight: tile));
               },
             ),
           ),
@@ -452,7 +471,7 @@ class _LessonScreenState extends State<LessonScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: lesson.symbol.length > 5 ? 48 : 78,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w500,
                       color: widget.world.darkColor,
                     ),
                   ),
@@ -611,12 +630,23 @@ class _LessonScreenState extends State<LessonScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Flexible(
-                    child: SingleChildScrollView(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: body,
-                      ),
-                    ),
+                    // Answers are scaled to fit the pane. Only at the very
+                    // largest text sizes on a short screen, where scaling
+                    // would shrink them below a finger-sized target, do they
+                    // scroll instead (the Check button stays pinned).
+                    child: MediaQuery.textScalerOf(context).scale(1) > 1.3
+                        ? SingleChildScrollView(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: body,
+                            ),
+                          )
+                        : FitContent(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: body,
+                            ),
+                          ),
                   ),
                   const SizedBox(height: 4),
                   check,
@@ -678,42 +708,132 @@ class _LessonScreenState extends State<LessonScreen> {
     return _buildQuestion(pinned: pinned);
   }
 
+  /// Tracing gets the whole screen. Wide: the letter card on the left, the big
+  /// tracing card on the right. Narrow or tall: a slim letter bar on top and
+  /// the tracing card under it, filling everything that is left.
+  Widget _buildTracingScreen({
+    required bool twoPanel,
+    required double padding,
+  }) {
+    final lesson = widget.lesson;
+    if (twoPanel) {
+      return Padding(
+        padding: EdgeInsets.fromLTRB(padding, 4, padding, padding),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(flex: 3, child: FitContent(child: _buildIntro(lesson))),
+            SizedBox(width: padding),
+            Expanded(flex: 8, child: _buildTracing()),
+          ],
+        ),
+      );
+    }
+    return Padding(
+      padding: EdgeInsets.fromLTRB(padding, 0, padding, padding),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Card(
+            color: Colors.white,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+              child: Row(
+                children: [
+                  Text(
+                    lesson.symbol,
+                    style: scriptStyle(
+                      lesson.symbol,
+                      TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w900,
+                        color: widget.world.darkColor,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      lesson.subtitle,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                  ),
+                  FilledButton.tonalIcon(
+                    key: const Key('speak_button'),
+                    onPressed: _speaking ? null : _speak,
+                    style:
+                        FilledButton.styleFrom(minimumSize: const Size(0, 48)),
+                    icon: Icon(
+                      _speaking
+                          ? Icons.graphic_eq_rounded
+                          : Icons.volume_up_rounded,
+                    ),
+                    label: Text(_speaking ? 'Speaking…' : 'Listen'),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 6),
+          Expanded(child: _buildTracing()),
+        ],
+      ),
+    );
+  }
+
   /// Tracing: the shared handwriting engine checks the shape against the
   /// letter's font outline, so a scribble cannot finish the quest. The quest
   /// is finished by a letter that was really traced; mastery is a separate
   /// matter (see HandwritingPolicy) and is not awarded here.
   Widget _buildTracing() {
     final lesson = widget.lesson;
-    final height = MediaQuery.sizeOf(context).height < 480 ? 255.0 : 320.0;
+    // On a short screen every pixel goes to the canvas: the instruction is
+    // already in the letter card beside it.
+    final short = MediaQuery.sizeOf(context).height < 480;
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(14),
+        padding: EdgeInsets.all(short ? 6 : 10),
         child: Column(
           children: [
-            Text(
-              lesson.challenge,
-              textAlign: TextAlign.center,
-              style: scriptStyle(
-                lesson.challenge,
-                Theme.of(context).textTheme.titleLarge!,
+            if (!short) ...[
+              SizedBox(
+                height: 28,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    lesson.challenge,
+                    textAlign: TextAlign.center,
+                    style: scriptStyle(
+                      lesson.challenge,
+                      Theme.of(context).textTheme.titleLarge!,
+                    ),
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(height: 10),
-            SizedBox(
-              height: height,
+              const SizedBox(height: 6),
+            ],
+            Expanded(
               child: WritingPad(
                 key: ValueKey('trace_${lesson.id}_$_traceRound'),
                 padKey: const Key('trace_pad'),
                 glyph: lesson.symbol,
                 mode: WriteMode.guided,
-                text: BatchText.forLocale(lesson.locale),
+                text: BatchText.forGlyph(lesson.locale, lesson.symbol),
                 color: widget.world.darkColor,
                 template: templateFor(lesson.symbol),
                 mask: _glyphMask,
                 locale: lesson.locale,
-                onResult: (r) => setState(() => _traceOk = r.shapeOk),
+                onResult: (r) {
+                  setState(() => _traceOk = r.shapeOk);
+                  // A letter traced right finishes the quest by itself; the
+                  // button stays as the other way to finish.
+                  if (r.shapeOk && !_submitted) _finish(true);
+                },
                 finish: FilledButton(
                   key: const Key('finish_trace'),
+                  style: FilledButton.styleFrom(minimumSize: const Size(0, 48)),
                   onPressed:
                       _traceOk && !_submitted ? () => _finish(true) : null,
                   child: const Text('I traced it!'),
@@ -729,7 +849,9 @@ class _LessonScreenState extends State<LessonScreen> {
 
 /// After a quest: the cheering or winking lion (its words are painted in the
 /// artwork, so they are announced through the image's label), what was earned,
-/// and the two ways on. Side by side in landscape, scroll-safe on short screens.
+/// and the ways on: Next Lesson (the main one, when there is a next lesson),
+/// play again, and back to the lessons. Side by side on a wide screen, stacked
+/// on a narrow one, and always scaled to fit, never scrolled or clipped.
 class LessonResultDialog extends StatelessWidget {
   const LessonResultDialog({
     required this.correct,
@@ -738,6 +860,7 @@ class LessonResultDialog extends StatelessWidget {
     required this.onBack,
     required this.onAgain,
     super.key,
+    this.onNext,
   });
 
   final bool correct;
@@ -746,109 +869,138 @@ class LessonResultDialog extends StatelessWidget {
   final VoidCallback onBack;
   final VoidCallback onAgain;
 
+  /// Opens the next lesson. Null when there is none (the last lesson), and
+  /// then the popup offers only play again and back to the lessons.
+  final VoidCallback? onNext;
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-    final imageHeight = (size.height * .62).clamp(150.0, 320.0);
+    final stacked = size.width < 560 || size.width < size.height;
+    final maxWidth = stacked ? size.width - 32 : 680.0;
+    final maxHeight = size.height - 32;
+    final imageHeight = stacked
+        ? (maxHeight * .30).clamp(80.0, 240.0)
+        : (maxHeight * .66).clamp(110.0, 300.0);
+    final message = text.message(correct: correct, gained: gained);
+
+    final image = Semantics(
+      image: true,
+      label: correct ? 'Wonderful!' : 'Good try!',
+      child: Image.asset(
+        correct
+            ? 'assets/images/feedback/wonderful.png'
+            : 'assets/images/feedback/good_try.png',
+        height: imageHeight,
+        fit: BoxFit.contain,
+        excludeFromSemantics: true,
+        errorBuilder: (_, __, ___) => SizedBox(
+          height: imageHeight,
+          child: Center(
+            child: Text(
+              correct ? 'Wonderful!' : 'Good try!',
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    TextStyle buttonText(String t, double size) =>
+        scriptStyle(t, TextStyle(fontSize: size, fontWeight: FontWeight.w800));
+
+    final actions = Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(
+          message,
+          textAlign: stacked ? TextAlign.center : TextAlign.start,
+          style: scriptStyle(
+            message,
+            Theme.of(context).textTheme.titleMedium!.copyWith(
+                  color: GameTokens.ink,
+                ),
+          ),
+        ),
+        const SizedBox(height: 10),
+        if (onNext != null) ...[
+          FilledButton.icon(
+            key: const Key('result_next'),
+            onPressed: onNext,
+            style: FilledButton.styleFrom(
+              minimumSize: const Size(GameTokens.minTouch, 62),
+              backgroundColor: const Color(0xFF2E9D57),
+              foregroundColor: Colors.white,
+            ),
+            iconAlignment: IconAlignment.end,
+            icon: const Icon(Icons.arrow_forward_rounded),
+            label: Text('Next Lesson', style: buttonText('Next Lesson', 20)),
+          ),
+          const SizedBox(height: 8),
+        ],
+        // Playing again is the main move only when there is no next lesson.
+        (onNext == null ? FilledButton.new : FilledButton.tonal)(
+          key: const Key('result_again'),
+          onPressed: onAgain,
+          style: FilledButton.styleFrom(
+            minimumSize: const Size(GameTokens.minTouch, 56),
+          ),
+          child: Text(
+            text.playAgain,
+            textAlign: TextAlign.center,
+            style: buttonText(text.playAgain, 17),
+          ),
+        ),
+        const SizedBox(height: 8),
+        OutlinedButton(
+          key: const Key('result_back'),
+          onPressed: onBack,
+          style: OutlinedButton.styleFrom(
+            minimumSize: const Size(GameTokens.minTouch, 56),
+          ),
+          child: Text(
+            text.backToMap,
+            textAlign: TextAlign.center,
+            style: buttonText(text.backToMap, 16),
+          ),
+        ),
+      ],
+    );
+
     return Dialog(
       backgroundColor: Colors.white,
       insetPadding: const EdgeInsets.all(16),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
       child: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxWidth: 640,
-          maxHeight: size.height - 32,
-        ),
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Semantics(
-                image: true,
-                label: correct ? 'Wonderful!' : 'Good try!',
-                child: Image.asset(
-                  correct
-                      ? 'assets/images/feedback/wonderful.png'
-                      : 'assets/images/feedback/good_try.png',
-                  height: imageHeight,
-                  fit: BoxFit.contain,
-                  excludeFromSemantics: true,
-                  errorBuilder: (_, __, ___) => SizedBox(
-                    height: imageHeight,
-                    child: Center(
-                      child: Text(
-                        correct ? 'Wonderful!' : 'Good try!',
-                        style: const TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
+        constraints: BoxConstraints(maxWidth: maxWidth, maxHeight: maxHeight),
+        // Whatever the screen or text size, the whole popup is scaled to fit
+        // instead of being cut off or made to scroll.
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: SizedBox(
+              width: maxWidth - 24,
+              child: stacked
+                  ? Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Center(child: image),
+                        const SizedBox(height: 10),
+                        actions,
+                      ],
+                    )
+                  : Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        image,
+                        const SizedBox(width: 16),
+                        Expanded(child: actions),
+                      ],
                     ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Builder(builder: (context) {
-                      final message =
-                          text.message(correct: correct, gained: gained);
-                      return Text(
-                        message,
-                        style: scriptStyle(
-                          message,
-                          Theme.of(context).textTheme.titleMedium!.copyWith(
-                                color: GameTokens.ink,
-                              ),
-                        ),
-                      );
-                    }),
-                    const SizedBox(height: 16),
-                    FilledButton(
-                      key: const Key('result_again'),
-                      onPressed: onAgain,
-                      child: Text(
-                        text.playAgain,
-                        textAlign: TextAlign.center,
-                        style: scriptStyle(
-                          text.playAgain,
-                          const TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    OutlinedButton(
-                      key: const Key('result_back'),
-                      onPressed: onBack,
-                      style: OutlinedButton.styleFrom(
-                        minimumSize: const Size(
-                          GameTokens.minTouch,
-                          GameTokens.minTouch,
-                        ),
-                      ),
-                      child: Text(
-                        text.backToMap,
-                        textAlign: TextAlign.center,
-                        style: scriptStyle(
-                          text.backToMap,
-                          const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),

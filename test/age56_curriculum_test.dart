@@ -12,6 +12,7 @@ import 'package:aksharamala/src/services/local_store.dart';
 import 'package:aksharamala/src/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'helpers/quest_trail.dart';
 
 class _NoDiskStore extends LocalStore {
   @override
@@ -186,11 +187,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(
-      find.byKey(const Key('lesson_english-56-002')),
-      400,
-      scrollable: find.byType(Scrollable).last,
-    );
+    await showQuest(tester, const Key('lesson_english-56-002'));
     final locked = tester.widget<InkWell>(
       find.byKey(const Key('lesson_english-56-002')),
     );

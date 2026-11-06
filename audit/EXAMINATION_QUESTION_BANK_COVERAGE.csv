@@ -1,14 +1,14 @@
 ﻿level,world,implemented_lessons,lessons_that_can_supply_a_question,question_items_available_today,largest_chapter_or_subject_exam_possible_without_repeats,verified_questions,unverified_questions_(TTS_audio_or_unreviewed_regional_text),proposed_lessons_not_yet_playable,status
-1,English Forest,27,26,26,26,0,26,0,ready once the bank is built
-1,Telugu Kingdom,62,61,70,70,0,70,0,ready once the bank is built
-1,Hindi Valley,47,46,46,46,0,46,0,ready once the bank is built
-1,Tamil Garden,31,30,30,30,0,30,0,ready once the bank is built
-1,Number Galaxy,13,13,35,35,0,35,0,ready once the bank is built
-2,English Forest,31,31,31,31,0,31,0,ready once the bank is built
-2,Telugu Kingdom,27,27,27,27,0,27,0,ready once the bank is built
-2,Hindi Valley,27,27,27,27,0,27,0,ready once the bank is built
-2,Tamil Garden,27,27,27,27,0,27,0,ready once the bank is built
-2,Number Galaxy,56,56,56,56,0,56,0,ready once the bank is built
+1,English Forest,27,26,26,26,0,26,0,ready (bank built from implemented lessons)
+1,Telugu Kingdom,62,60,68,68,0,68,0,ready (bank built from implemented lessons)
+1,Hindi Valley,47,46,46,46,0,46,0,ready (bank built from implemented lessons)
+1,Tamil Garden,31,30,30,30,0,30,0,ready (bank built from implemented lessons)
+1,Number Galaxy,13,13,35,35,0,35,0,ready (bank built from implemented lessons)
+2,English Forest,31,19,19,19,0,19,0,ready (bank built from implemented lessons)
+2,Telugu Kingdom,27,27,27,27,0,27,0,ready (bank built from implemented lessons)
+2,Hindi Valley,27,27,27,27,0,27,0,ready (bank built from implemented lessons)
+2,Tamil Garden,27,27,27,27,0,27,0,ready (bank built from implemented lessons)
+2,Number Galaxy,56,56,56,56,0,56,0,ready (bank built from implemented lessons)
 3,English Forest,1,1,1,1,0,1,15,too few for a subject exam (needs 10+)
 3,Telugu Kingdom,1,1,1,1,0,1,15,too few for a subject exam (needs 10+)
 3,Hindi Valley,1,1,1,1,0,1,15,too few for a subject exam (needs 10+)

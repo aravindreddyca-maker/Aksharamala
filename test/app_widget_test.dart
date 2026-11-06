@@ -8,6 +8,7 @@ import 'package:aksharamala/src/screens/world_map_screen.dart';
 import 'package:aksharamala/src/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'helpers/quest_trail.dart';
 
 void main() {
   testWidgets('age-adaptive home exposes five interactive world maps', (
@@ -41,10 +42,7 @@ void main() {
         isNotNull,
       );
     }
-    await tester.drag(
-      find.byKey(const Key('home_scroll')),
-      const Offset(0, -700),
-    );
+    // All five worlds are on screen together; there is nothing to scroll.
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('world_numbers')), findsOneWidget);
     expect(
@@ -64,14 +62,18 @@ void main() {
     );
     await tester.pump();
     expect(find.text('English Forest'), findsWidgets);
-    expect(find.byKey(const Key('lesson_en-a')), findsOneWidget);
+    await showQuest(tester, const Key('lesson_en-trace'));
+    expect(find.byKey(const Key('lesson_en-trace')), findsOneWidget);
 
     await tester.pumpWidget(
       AppScope(
         controller: controller,
         child: MaterialApp(
           theme: buildTheme(),
-          home: LessonScreen(world: world, lesson: world.lessons.first),
+          home: LessonScreen(
+            world: world,
+            lesson: world.lessons.firstWhere((l) => l.id == 'en-a'),
+          ),
         ),
       ),
     );

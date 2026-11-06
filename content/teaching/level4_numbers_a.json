@@ -1,0 +1,3272 @@
+{
+  "schema_version": 1,
+  "status": "draft_unverified",
+  "lessons": [
+    {
+      "lesson_id": "numbers-l4-001",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Place value to millions",
+      "objective": "Read, compare and round whole numbers up to the millions.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l4-001.introduce.1",
+          "text": "Big numbers have places too: ones, tens, hundreds, thousands, ten thousands, hundred thousands and millions. Look at 4,506,210.",
+          "speech": "Big numbers have places too: ones, tens, hundreds, thousands, ten thousands, hundred thousands and millions. Look at 4,506,210.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4,506,210"
+          }
+        },
+        {
+          "id": "numbers-l4-001.introduce.2",
+          "text": "In 4,506,210 the 4 is in the millions place, so it is 4 million. The 5 is 5 hundred thousand. The commas split the number into groups of three digits.",
+          "speech": "In 4,506,210 the 4 is in the millions place, so it is 4 million. The 5 is 5 hundred thousand. The commas split the number into groups of three digits.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4,000,000 + 500,000 + 6,000 + 200 + 10"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-001.demonstrate.1",
+          "text": "Name each place from the right. In 4,506,210: 0 ones, 1 ten, 2 hundreds, 6 thousands, 0 ten thousands, 5 hundred thousands, 4 millions. A zero holds a place.",
+          "speech": "Name each place from the right. In 4,506,210: 0 ones, 1 ten, 2 hundreds, 6 thousands, 0 ten thousands, 5 hundred thousands, 4 millions. A zero holds a place.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4,506,210"
+          }
+        },
+        {
+          "id": "numbers-l4-001.demonstrate.2",
+          "text": "To compare, start at the left. 3,450,120 and 3,405,999: millions are the same, hundred thousands are the same (4), but ten thousands are 5 and 0. So 3,450,120 > 3,405,999.",
+          "speech": "To compare, start at the left. 3,450,120 and 3,405,999: millions are the same, hundred thousands are the same (4), but ten thousands are 5 and 0. So 3,450,120 is greater than 3,405,999.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3,450,120 > 3,405,999"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-001.guided.1",
+          "prompt": "In 4,506,210, what is the value of the 5?",
+          "speech": "In 4,506,210, what is the value of the 5?",
+          "options": [
+            "50,000",
+            "500,000",
+            "5,000,000"
+          ],
+          "answer": "500,000",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First find which place the digit is in. Count the places from the right.",
+            "Count from the right: ones, tens, hundreds... The 5 is in the hundred thousands place, so it is worth 5 x 100,000 = 500,000."
+          ],
+          "wrong_feedback": {
+            "50,000": "The 5 is not in the ten thousands place. You counted one place too far to the right.",
+            "5,000,000": "The 5 is not in the millions place. You counted one place too far to the left."
+          },
+          "explanation": "In 4,506,210, the 5 is in the hundred thousands place, so its value is 500,000.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-001.guided.2",
+          "prompt": "Which sign fits: 3,450,120 ? 3,405,999",
+          "speech": "Which sign fits: 3,450,120 ? 3,405,999",
+          "options": [
+            "<",
+            "=",
+            ">"
+          ],
+          "answer": ">",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Compare the digits from the left. Find the first place where they differ.",
+            "The first place that differs is the ten thousands place: 5 against 0. So 3,450,120 > 3,405,999."
+          ],
+          "wrong_feedback": {
+            "<": "That sign points the wrong way. The first place that differs is the ten thousands place: 5 and 0.",
+            "=": "3,450,120 and 3,405,999 are not equal. They differ in the ten thousands place."
+          },
+          "explanation": "3,450,120 > 3,405,999, because the ten thousands digits differ: 5 and 0.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-001.practice.1",
+          "prompt": "In 7,380,452, which digit is in the ten thousands place?",
+          "speech": "In 7,380,452, which digit is in the ten thousands place?",
+          "options": [
+            "8",
+            "3",
+            "0"
+          ],
+          "answer": "8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Write the places under the digits, starting from the ones place on the right.",
+            "The places from the right are ones, tens, hundreds, thousands, ten thousands, hundred thousands, millions. The ten thousands place holds the digit 8."
+          ],
+          "wrong_feedback": {
+            "3": "3 is in the hundred thousands place, one place to the left of the ten thousands place.",
+            "0": "0 is in the thousands place, one place to the right of the ten thousands place."
+          },
+          "explanation": "In 7,380,452, the ten thousands place holds the digit 8.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-001.practice.2",
+          "prompt": "Round 4,506,210 to the nearest hundred thousand.",
+          "speech": "Round 4,506,210 to the nearest hundred thousand.",
+          "options": [
+            "4,600,000",
+            "4,500,000",
+            "4,510,000"
+          ],
+          "answer": "4,500,000",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look at the digit just to the right of the place you are rounding to.",
+            "The next digit is 0. Less than 5: round down. 4,506,210 rounds to 4,500,000."
+          ],
+          "wrong_feedback": {
+            "4,600,000": "You rounded up. The next digit is 0, which is less than 5, so keep the digit and make the rest zeros.",
+            "4,510,000": "That rounds to the nearest ten thousand, not the nearest hundred thousand."
+          },
+          "explanation": "4,506,210 rounds to 4,500,000 to the nearest hundred thousand, because the next digit is 0.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-001.practice.3",
+          "prompt": "Which number is 3,000,000 + 400,000 + 5,000 + 60?",
+          "speech": "Which number is 3,000,000 plus 400,000 plus 5,000 plus 60?",
+          "options": [
+            "3,456",
+            "7,005,060",
+            "3,405,060"
+          ],
+          "answer": "3,405,060",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Give each part its own place and fill the gaps with zeros.",
+            "3,000,000 has the digit 3 in the millions place; the other parts fill the places after it. Together: 3,405,060."
+          ],
+          "wrong_feedback": {
+            "3,456": "That drops the zeros. Zeros hold places, so each part must sit in its own place.",
+            "7,005,060": "The 400,000 is in the wrong place. Check how many zeros it needs."
+          },
+          "explanation": "3,000,000 + 400,000 + 5,000 + 60 = 3,405,060.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-001.check.1",
+          "prompt": "In 2,917,635, what is the value of the 9?",
+          "speech": "In 2,917,635, what is the value of the 9?",
+          "options": [
+            "900,000",
+            "9,000,000",
+            "9"
+          ],
+          "answer": "900,000",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "9,000,000": "The 9 is not in the millions place. You counted one place too far to the left.",
+            "9": "9 is the digit. Its value depends on its place: here it is in the hundred thousands place."
+          },
+          "explanation": "In 2,917,635, the 9 is in the hundred thousands place, so its value is 900,000.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-001.check.2",
+          "prompt": "Round 8,264,731 to the nearest thousand.",
+          "speech": "Round 8,264,731 to the nearest thousand.",
+          "options": [
+            "8,264,700",
+            "8,265,000",
+            "8,264,000"
+          ],
+          "answer": "8,265,000",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "8,264,700": "That rounds to the nearest hundred, not the nearest thousand.",
+            "8,264,000": "You rounded down. The next digit is 7, which is 5 or more, so round up."
+          },
+          "explanation": "8,264,731 rounds to 8,265,000 to the nearest thousand, because the next digit is 7.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-001.check.3",
+          "prompt": "Which sign fits: 6,215,804 ? 6,251,804",
+          "speech": "Which sign fits: 6,215,804 ? 6,251,804",
+          "options": [
+            ">",
+            "=",
+            "<"
+          ],
+          "answer": "<",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            ">": "That sign points the wrong way. The first place that differs is the ten thousands place: 1 and 5.",
+            "=": "6,215,804 and 6,251,804 are not equal. They differ in the ten thousands place."
+          },
+          "explanation": "6,215,804 < 6,251,804, because the ten thousands digits differ: 1 and 5.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-001.remediation_explain.1",
+            "text": "Another way: a number is a row of boxes. Each box is worth 10 times the box on its right. The same digit is worth more the further left it goes.",
+            "speech": "Another way: a number is a row of boxes. Each box is worth 10 times the box on its right. The same digit is worth more the further left it goes.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "M  HT  TT  T  H  T  O"
+            }
+          },
+          {
+            "id": "numbers-l4-001.remediation_explain.2",
+            "text": "To round, look at the digit just right of the place you want. 5 or more: round up. Less than 5: keep the digit. Then make every digit after it zero.",
+            "speech": "To round, look at the digit just right of the place you want. 5 or more: round up. Less than 5: keep the digit. Then make every digit after it zero.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "4,506,210 → 4,500,000"
+            }
+          },
+          {
+            "id": "numbers-l4-001.remediation_explain.3",
+            "text": "4,506,210 to the nearest hundred thousand: the next digit is 0, which is less than 5. Keep the 5. The answer is 4,500,000.",
+            "speech": "4,506,210 to the nearest hundred thousand: the next digit is 0, which is less than 5. Keep the 5. The answer is 4,500,000.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "4,506,210 ≈ 4,500,000"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-001.remediation_guided.1",
+            "prompt": "In 5,619,273, which digit is in the hundred thousands place?",
+            "speech": "In 5,619,273, which digit is in the hundred thousands place?",
+            "options": [
+              "6",
+              "1",
+              "5"
+            ],
+            "answer": "6",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Write the places under the digits, starting from the ones place on the right.",
+              "The places from the right are ones, tens, hundreds, thousands, ten thousands, hundred thousands, millions. The hundred thousands place holds the digit 6."
+            ],
+            "wrong_feedback": {
+              "1": "1 is in the ten thousands place, one place to the right of the hundred thousands place.",
+              "5": "5 is in the millions place, one place to the left of the hundred thousands place."
+            },
+            "explanation": "In 5,619,273, the hundred thousands place holds the digit 6.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-001.remediation_guided.2",
+            "prompt": "In 6,051,928, what is the value of the 5?",
+            "speech": "In 6,051,928, what is the value of the 5?",
+            "options": [
+              "5,000",
+              "50,000",
+              "500,000"
+            ],
+            "answer": "50,000",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "First find which place the digit is in. Count the places from the right.",
+              "Count from the right: ones, tens, hundreds... The 5 is in the ten thousands place, so it is worth 5 x 10,000 = 50,000."
+            ],
+            "wrong_feedback": {
+              "5,000": "The 5 is not in the thousands place. You counted one place too far to the right.",
+              "500,000": "The 5 is not in the hundred thousands place. You counted one place too far to the left."
+            },
+            "explanation": "In 6,051,928, the 5 is in the ten thousands place, so its value is 50,000.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-001.remediation_check.1",
+            "prompt": "Which number is 5,000,000 + 20,000 + 900 + 4?",
+            "speech": "Which number is 5,000,000 plus 20,000 plus 900 plus 4?",
+            "options": [
+              "5,200,904",
+              "50,020,904",
+              "5,020,904"
+            ],
+            "answer": "5,020,904",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "5,200,904": "The 20,000 is in the wrong place. Check how many zeros it needs.",
+              "50,020,904": "The 5,000,000 is in the wrong place. Check how many zeros it needs."
+            },
+            "explanation": "5,000,000 + 20,000 + 900 + 4 = 5,020,904.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-001.remediation_check.2",
+            "prompt": "Round 3,748,250 to the nearest ten thousand.",
+            "speech": "Round 3,748,250 to the nearest ten thousand.",
+            "options": [
+              "3,750,000",
+              "3,740,000",
+              "3,748,000"
+            ],
+            "answer": "3,750,000",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "3,740,000": "You rounded down. The next digit is 8, which is 5 or more, so round up.",
+              "3,748,000": "That rounds to the nearest thousand, not the nearest ten thousand."
+            },
+            "explanation": "3,748,250 rounds to 3,750,000 to the nearest ten thousand, because the next digit is 8.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-001.remediation_check.3",
+            "prompt": "Which sign fits: 9,087,654 ? 9,078,654",
+            "speech": "Which sign fits: 9,087,654 ? 9,078,654",
+            "options": [
+              "<",
+              ">",
+              "="
+            ],
+            "answer": ">",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "<": "That sign points the wrong way. The first place that differs is the ten thousands place: 8 and 7.",
+              "=": "9,087,654 and 9,078,654 are not equal. They differ in the ten thousands place."
+            },
+            "explanation": "9,087,654 > 9,078,654, because the ten thousands digits differ: 8 and 7.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l4a.py) with exact integer maths; decimals and rupees are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a specific nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-002",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Multi-digit multiplication",
+      "objective": "Multiply a three-digit or two-digit number by a two-digit number.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l4-002.introduce.1",
+          "text": "To multiply by a two-digit number, split it into ones and tens. 326 x 24 is 326 x 4 plus 326 x 20.",
+          "speech": "To multiply by a two-digit number, split it into ones and tens. 326 times 24 is 326 times 4 plus 326 times 20.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "326 x 24"
+          }
+        },
+        {
+          "id": "numbers-l4-002.introduce.2",
+          "text": "Row 1: 326 x 4 = 1,304. Row 2: 326 x 20 = 6,520 (put a 0 first). Add the rows: 1,304 + 6,520 = 7,824.",
+          "speech": "Row 1: 326 times 4 equals 1,304. Row 2: 326 times 20 equals 6,520 (put a 0 first). Add the rows: 1,304 plus 6,520 equals 7,824.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "1,304 + 6,520 = 7,824"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-002.demonstrate.1",
+          "text": "Try 145 x 12. Ones first: 145 x 2 = 290. Then tens: 145 x 10 = 1,450. The second row starts with a 0.",
+          "speech": "Try 145 times 12. Ones first: 145 times 2 equals 290. Then tens: 145 times 10 equals 1,450. The second row starts with a 0.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "290\n1,450"
+          }
+        },
+        {
+          "id": "numbers-l4-002.demonstrate.2",
+          "text": "Add the rows: 290 + 1,450 = 1,740. So 145 x 12 = 1,740. Check by estimating: 145 is about 150, and 150 x 12 = 1,800, which is close.",
+          "speech": "Add the rows: 290 plus 1,450 equals 1,740. So 145 times 12 equals 1,740. Check by estimating: 145 is about 150, and 150 times 12 equals 1,800, which is close.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "145 x 12 = 1,740"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-002.guided.1",
+          "prompt": "What is 326 x 24?",
+          "speech": "What is 326 times 24?",
+          "options": [
+            "1,956",
+            "1,304",
+            "7,824"
+          ],
+          "answer": "7,824",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Multiply by the ones digit first, then by the tens digit.",
+            "326 x 4 = 1,304 and 326 x 20 = 6,520. Now add the two rows."
+          ],
+          "wrong_feedback": {
+            "1,956": "You did not shift the second row one place to the left (put a 0 first) before adding.",
+            "1,304": "You multiplied by the ones digit only. Multiply by the tens digit too, then add."
+          },
+          "explanation": "326 x 24 = 1,304 + 6,520 = 7,824.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-002.guided.2",
+          "prompt": "What is 145 x 12?",
+          "speech": "What is 145 times 12?",
+          "options": [
+            "1,740",
+            "290",
+            "157"
+          ],
+          "answer": "1,740",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Break the multiplier into tens and ones: multiply by each and add.",
+            "145 x 2 = 290 and 145 x 10 = 1,450. Now add the two rows."
+          ],
+          "wrong_feedback": {
+            "290": "You multiplied by the ones digit only. Multiply by the tens digit too, then add.",
+            "157": "You added instead of multiplying."
+          },
+          "explanation": "145 x 12 = 290 + 1,450 = 1,740.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-002.practice.1",
+          "prompt": "What is 48 x 37?",
+          "speech": "What is 48 times 37?",
+          "options": [
+            "480",
+            "1,776",
+            "336"
+          ],
+          "answer": "1,776",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Multiply by the ones digit first, then by the tens digit.",
+            "48 x 7 = 336 and 48 x 30 = 1,440. Now add the two rows."
+          ],
+          "wrong_feedback": {
+            "480": "You did not shift the second row one place to the left (put a 0 first) before adding.",
+            "336": "You multiplied by the ones digit only. Multiply by the tens digit too, then add."
+          },
+          "explanation": "48 x 37 = 336 + 1,440 = 1,776.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-002.practice.2",
+          "prompt": "A packet has 36 sheets. Ria has 125 packets. How many sheets does she have?",
+          "speech": "A packet has 36 sheets. Ria has 125 packets. How many sheets does she have?",
+          "options": [
+            "750",
+            "161",
+            "4,500"
+          ],
+          "answer": "4,500",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Break the multiplier into tens and ones: multiply by each and add.",
+            "125 x 6 = 750 and 125 x 30 = 3,750. Now add the two rows."
+          ],
+          "wrong_feedback": {
+            "750": "You multiplied by the ones digit only. Multiply by the tens digit too, then add.",
+            "161": "You added instead of multiplying."
+          },
+          "explanation": "125 x 36 = 750 + 3,750 = 4,500.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-002.practice.3",
+          "prompt": "What is 253 x 31?",
+          "speech": "What is 253 times 31?",
+          "options": [
+            "7,843",
+            "1,012",
+            "253"
+          ],
+          "answer": "7,843",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Multiply by the ones digit first, then by the tens digit.",
+            "253 x 1 = 253 and 253 x 30 = 7,590. Now add the two rows."
+          ],
+          "wrong_feedback": {
+            "1,012": "You did not shift the second row one place to the left (put a 0 first) before adding.",
+            "253": "You multiplied by the ones digit only. Multiply by the tens digit too, then add."
+          },
+          "explanation": "253 x 31 = 253 + 7,590 = 7,843.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-002.check.1",
+          "prompt": "What is 417 x 23?",
+          "speech": "What is 417 times 23?",
+          "options": [
+            "1,251",
+            "9,591",
+            "440"
+          ],
+          "answer": "9,591",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "1,251": "You multiplied by the ones digit only. Multiply by the tens digit too, then add.",
+            "440": "You added instead of multiplying."
+          },
+          "explanation": "417 x 23 = 1,251 + 8,340 = 9,591.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-002.check.2",
+          "prompt": "A school buys 18 boxes with 215 crayons in each box. How many crayons is that?",
+          "speech": "A school buys 18 boxes with 215 crayons in each box. How many crayons is that?",
+          "options": [
+            "1,935",
+            "1,720",
+            "3,870"
+          ],
+          "answer": "3,870",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "1,935": "You did not shift the second row one place to the left (put a 0 first) before adding.",
+            "1,720": "You multiplied by the ones digit only. Multiply by the tens digit too, then add."
+          },
+          "explanation": "215 x 18 = 1,720 + 2,150 = 3,870.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-002.check.3",
+          "prompt": "What is 86 x 54?",
+          "speech": "What is 86 times 54?",
+          "options": [
+            "4,644",
+            "344",
+            "140"
+          ],
+          "answer": "4,644",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "344": "You multiplied by the ones digit only. Multiply by the tens digit too, then add.",
+            "140": "You added instead of multiplying."
+          },
+          "explanation": "86 x 54 = 344 + 4,300 = 4,644.",
+          "difficulty": 1
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-002.remediation_explain.1",
+            "text": "Another way: break up the number. 48 x 37 is 48 x 30 plus 48 x 7. Each part is easy.",
+            "speech": "Another way: break up the number. 48 times 37 is 48 times 30 plus 48 times 7. Each part is easy.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "48 x 30 = 1,440\n48 x 7 = 336"
+            }
+          },
+          {
+            "id": "numbers-l4-002.remediation_explain.2",
+            "text": "Always shift the second row one place left, which means a 0 in the ones place of the tens row. Without it the rows are in the wrong places.",
+            "speech": "Always shift the second row one place left, which means a 0 in the ones place of the tens row. Without it the rows are in the wrong places.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "  336\n1,440"
+            }
+          },
+          {
+            "id": "numbers-l4-002.remediation_explain.3",
+            "text": "Add the two parts: 1,440 + 336 = 1,776. So 48 x 37 = 1,776.",
+            "speech": "Add the two parts: 1,440 plus 336 equals 1,776. So 48 times 37 equals 1,776.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "48 x 37 = 1,776"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-002.remediation_guided.1",
+            "prompt": "What is 234 x 15?",
+            "speech": "What is 234 times 15?",
+            "options": [
+              "1,404",
+              "3,510",
+              "1,170"
+            ],
+            "answer": "3,510",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Multiply by the ones digit first, then by the tens digit.",
+              "234 x 5 = 1,170 and 234 x 10 = 2,340. Now add the two rows."
+            ],
+            "wrong_feedback": {
+              "1,404": "You did not shift the second row one place to the left (put a 0 first) before adding.",
+              "1,170": "You multiplied by the ones digit only. Multiply by the tens digit too, then add."
+            },
+            "explanation": "234 x 15 = 1,170 + 2,340 = 3,510.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-002.remediation_guided.2",
+            "prompt": "What is 62 x 47?",
+            "speech": "What is 62 times 47?",
+            "options": [
+              "434",
+              "109",
+              "2,914"
+            ],
+            "answer": "2,914",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Break the multiplier into tens and ones: multiply by each and add.",
+              "62 x 7 = 434 and 62 x 40 = 2,480. Now add the two rows."
+            ],
+            "wrong_feedback": {
+              "434": "You multiplied by the ones digit only. Multiply by the tens digit too, then add.",
+              "109": "You added instead of multiplying."
+            },
+            "explanation": "62 x 47 = 434 + 2,480 = 2,914.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-002.remediation_check.1",
+            "prompt": "What is 308 x 26?",
+            "speech": "What is 308 times 26?",
+            "options": [
+              "8,008",
+              "2,464",
+              "1,848"
+            ],
+            "answer": "8,008",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "2,464": "You did not shift the second row one place to the left (put a 0 first) before adding.",
+              "1,848": "You multiplied by the ones digit only. Multiply by the tens digit too, then add."
+            },
+            "explanation": "308 x 26 = 1,848 + 6,160 = 8,008.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-002.remediation_check.2",
+            "prompt": "A bus carries 150 passengers a day. How many passengers does it carry in 24 days?",
+            "speech": "A bus carries 150 passengers a day. How many passengers does it carry in 24 days?",
+            "options": [
+              "600",
+              "3,600",
+              "174"
+            ],
+            "answer": "3,600",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "600": "You multiplied by the ones digit only. Multiply by the tens digit too, then add.",
+              "174": "You added instead of multiplying."
+            },
+            "explanation": "150 x 24 = 600 + 3,000 = 3,600.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-002.remediation_check.3",
+            "prompt": "What is 75 x 68?",
+            "speech": "What is 75 times 68?",
+            "options": [
+              "600",
+              "143",
+              "5,100"
+            ],
+            "answer": "5,100",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "600": "You multiplied by the ones digit only. Multiply by the tens digit too, then add.",
+              "143": "You added instead of multiplying."
+            },
+            "explanation": "75 x 68 = 600 + 4,500 = 5,100.",
+            "difficulty": 1
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l4a.py) with exact integer maths; decimals and rupees are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a specific nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-003",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Long division",
+      "objective": "Divide larger whole numbers by a two-digit number, with remainders.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l4-003.introduce.1",
+          "text": "Long division follows four moves: divide, multiply, subtract, bring down. Then repeat. Try 936 ÷ 12.",
+          "speech": "Long division follows four moves: divide, multiply, subtract, bring down. Then repeat. Try 936  divided by  12.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "936 ÷ 12"
+          }
+        },
+        {
+          "id": "numbers-l4-003.introduce.2",
+          "text": "12 goes into 93 seven times (7 x 12 = 84). 93 - 84 = 9. Bring down the 6 to make 96. 12 goes into 96 eight times. So 936 ÷ 12 = 78.",
+          "speech": "12 goes into 93 seven times (7 times 12 equals 84). 93 minus 84 equals 9. Bring down the 6 to make 96. 12 goes into 96 eight times. So 936  divided by  12 equals 78.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "936 ÷ 12 = 78"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-003.demonstrate.1",
+          "text": "Now with a remainder: 457 ÷ 12. 12 goes into 45 three times (36). 45 - 36 = 9. Bring down the 7 to make 97. 12 goes into 97 eight times (96). 97 - 96 = 1.",
+          "speech": "Now with a remainder: 457  divided by  12. 12 goes into 45 three times (36). 45 minus 36 equals 9. Bring down the 7 to make 97. 12 goes into 97 eight times (96). 97 minus 96 equals 1.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "457 ÷ 12"
+          }
+        },
+        {
+          "id": "numbers-l4-003.demonstrate.2",
+          "text": "The 1 left over is the remainder. 457 ÷ 12 = 38 r 1. Check: 38 x 12 = 456, and 456 + 1 = 457. The remainder is always smaller than the divisor.",
+          "speech": "The 1 left over is the remainder. 457  divided by  12 equals 38 remainder 1. Check: 38 times 12 equals 456, and 456 plus 1 equals 457. The remainder is always smaller than the divisor.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "457 ÷ 12 = 38 r 1"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-003.guided.1",
+          "prompt": "What is 936 ÷ 12?",
+          "speech": "What is 936  divided by  12?",
+          "options": [
+            "78",
+            "79",
+            "77"
+          ],
+          "answer": "78",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Ask how many times 12 fits into the first digits of 936. Then multiply, subtract and bring down.",
+            "78 x 12 = 936, which is exactly 936. So there is no remainder."
+          ],
+          "wrong_feedback": {
+            "79": "79 x 12 = 948, which is more than 936. The answer is too big.",
+            "77": "77 x 12 = 924, which is less than 936. The answer is too small."
+          },
+          "explanation": "936 ÷ 12 = 78.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-003.guided.2",
+          "prompt": "What is 457 ÷ 12?",
+          "speech": "What is 457  divided by  12?",
+          "options": [
+            "37 r 13",
+            "38 r 1",
+            "39 r 1"
+          ],
+          "answer": "38 r 1",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Divide, multiply, subtract, bring down. Repeat until no digits are left.",
+            "38 x 12 = 456, and 457 - 456 = 1. So the answer is 38 remainder 1."
+          ],
+          "wrong_feedback": {
+            "37 r 13": "The remainder 13 is as big as or bigger than 12, so you can still share once more.",
+            "39 r 1": "39 x 12 is more than 457, so the quotient is too big."
+          },
+          "explanation": "457 ÷ 12 = 38 r 1, because 38 x 12 = 456 and 1 is left over.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-003.practice.1",
+          "prompt": "What is 853 ÷ 25?",
+          "speech": "What is 853  divided by  25?",
+          "options": [
+            "34",
+            "33 r 28",
+            "34 r 3"
+          ],
+          "answer": "34 r 3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Ask how many times 25 fits into the first digits of 853. Then multiply, subtract and bring down.",
+            "34 x 25 = 850, and 853 - 850 = 3. So the answer is 34 remainder 3."
+          ],
+          "wrong_feedback": {
+            "34": "You left out the remainder. What is left over after sharing must be written with r.",
+            "33 r 28": "The remainder 28 is as big as or bigger than 25, so you can still share once more."
+          },
+          "explanation": "853 ÷ 25 = 34 r 3, because 34 x 25 = 850 and 3 is left over.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-003.practice.2",
+          "prompt": "350 laddoos are packed into boxes of 12. How many full boxes are there?",
+          "speech": "350 laddoos are packed into boxes of 12. How many full boxes are there?",
+          "options": [
+            "29",
+            "30",
+            "2"
+          ],
+          "answer": "29",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Divide the total by the number in each box.",
+            "350 ÷ 12 = 29 remainder 2. The quotient counts the full boxes."
+          ],
+          "wrong_feedback": {
+            "30": "The last box is not full: it has only 2 laddoos. Count full boxes only.",
+            "2": "2 is the number left over, not the number of boxes."
+          },
+          "explanation": "350 ÷ 12 = 29 r 2, so there are 29 full boxes and 2 laddoos left over.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-003.practice.3",
+          "prompt": "What is 648 ÷ 18?",
+          "speech": "What is 648  divided by  18?",
+          "options": [
+            "35",
+            "36",
+            "36 r 17"
+          ],
+          "answer": "36",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Divide, multiply, subtract, bring down. Repeat until no digits are left.",
+            "36 x 18 = 648, which is exactly 648. So there is no remainder."
+          ],
+          "wrong_feedback": {
+            "35": "35 x 18 = 630, which is less than 648. The answer is too small.",
+            "36 r 17": "648 divides by 18 exactly, so there is no remainder."
+          },
+          "explanation": "648 ÷ 18 = 36.",
+          "difficulty": 1
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-003.check.1",
+          "prompt": "What is 1,000 ÷ 14?",
+          "speech": "What is 1,000  divided by  14?",
+          "options": [
+            "70 r 20",
+            "72 r 6",
+            "71 r 6"
+          ],
+          "answer": "71 r 6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "70 r 20": "The remainder 20 is as big as or bigger than 14, so you can still share once more.",
+            "72 r 6": "72 x 14 is more than 1,000, so the quotient is too big."
+          },
+          "explanation": "1,000 ÷ 14 = 71 r 6, because 71 x 14 = 994 and 6 is left over.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-003.check.2",
+          "prompt": "275 stamps are packed into boxes of 8. How many stamps are left over?",
+          "speech": "275 stamps are packed into boxes of 8. How many stamps are left over?",
+          "options": [
+            "3",
+            "34",
+            "5"
+          ],
+          "answer": "3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "34": "34 is the number of full boxes, not the number left over.",
+            "5": "5 is how many more are needed to fill one more box, not how many are left over."
+          },
+          "explanation": "275 ÷ 8 = 34 r 3, so 3 stamps are left over.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-003.check.3",
+          "prompt": "What is 735 ÷ 15?",
+          "speech": "What is 735  divided by  15?",
+          "options": [
+            "50",
+            "49",
+            "48"
+          ],
+          "answer": "49",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "50": "50 x 15 = 750, which is more than 735. The answer is too big.",
+            "48": "48 x 15 = 720, which is less than 735. The answer is too small."
+          },
+          "explanation": "735 ÷ 15 = 49.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-003.remediation_explain.1",
+            "text": "Another way: sharing. Share 457 sweets among groups of 12. You can make 38 full groups and 1 sweet is left over.",
+            "speech": "Another way: sharing. Share 457 sweets among groups of 12. You can make 38 full groups and 1 sweet is left over.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "38 groups of 12, 1 left"
+            }
+          },
+          {
+            "id": "numbers-l4-003.remediation_explain.2",
+            "text": "Check any division by multiplying back: quotient x divisor + remainder = the number you started with.",
+            "speech": "Check any division by multiplying back: quotient x divisor + remainder equals the number you started with.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "38 x 12 + 1 = 457"
+            }
+          },
+          {
+            "id": "numbers-l4-003.remediation_explain.3",
+            "text": "The remainder must be smaller than the divisor. If it is not, you can share once more.",
+            "speech": "The remainder must be smaller than the divisor. If it is not, you can share once more.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "r < divisor"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-003.remediation_guided.1",
+            "prompt": "What is 902 ÷ 21?",
+            "speech": "What is 902  divided by  21?",
+            "options": [
+              "42",
+              "41 r 41",
+              "42 r 20"
+            ],
+            "answer": "42 r 20",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Ask how many times 21 fits into the first digits of 902. Then multiply, subtract and bring down.",
+              "42 x 21 = 882, and 902 - 882 = 20. So the answer is 42 remainder 20."
+            ],
+            "wrong_feedback": {
+              "42": "You left out the remainder. What is left over after sharing must be written with r.",
+              "41 r 41": "The remainder 41 is as big as or bigger than 21, so you can still share once more."
+            },
+            "explanation": "902 ÷ 21 = 42 r 20, because 42 x 21 = 882 and 20 is left over.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-003.remediation_guided.2",
+            "prompt": "What is 845 ÷ 13?",
+            "speech": "What is 845  divided by  13?",
+            "options": [
+              "65",
+              "64",
+              "65 r 12"
+            ],
+            "answer": "65",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Divide, multiply, subtract, bring down. Repeat until no digits are left.",
+              "65 x 13 = 845, which is exactly 845. So there is no remainder."
+            ],
+            "wrong_feedback": {
+              "64": "64 x 13 = 832, which is less than 845. The answer is too small.",
+              "65 r 12": "845 divides by 13 exactly, so there is no remainder."
+            },
+            "explanation": "845 ÷ 13 = 65.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-003.remediation_check.1",
+            "prompt": "What is 619 ÷ 17?",
+            "speech": "What is 619  divided by  17?",
+            "options": [
+              "35 r 24",
+              "36 r 7",
+              "37 r 7"
+            ],
+            "answer": "36 r 7",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "35 r 24": "The remainder 24 is as big as or bigger than 17, so you can still share once more.",
+              "37 r 7": "37 x 17 is more than 619, so the quotient is too big."
+            },
+            "explanation": "619 ÷ 17 = 36 r 7, because 36 x 17 = 612 and 7 is left over.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-003.remediation_check.2",
+            "prompt": "500 pencils are packed into boxes of 15. How many full boxes are there?",
+            "speech": "500 pencils are packed into boxes of 15. How many full boxes are there?",
+            "options": [
+              "34",
+              "5",
+              "33"
+            ],
+            "answer": "33",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "34": "The last box is not full: it has only 5 pencils. Count full boxes only.",
+              "5": "5 is the number left over, not the number of boxes."
+            },
+            "explanation": "500 ÷ 15 = 33 r 5, so there are 33 full boxes and 5 pencils left over.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-003.remediation_check.3",
+            "prompt": "What is 1,234 ÷ 20?",
+            "speech": "What is 1,234  divided by  20?",
+            "options": [
+              "61 r 14",
+              "61",
+              "60 r 34"
+            ],
+            "answer": "61 r 14",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "61": "You left out the remainder. What is left over after sharing must be written with r.",
+              "60 r 34": "The remainder 34 is as big as or bigger than 20, so you can still share once more."
+            },
+            "explanation": "1,234 ÷ 20 = 61 r 14, because 61 x 20 = 1,220 and 14 is left over.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l4a.py) with exact integer maths; decimals and rupees are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a specific nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-004",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Factors and multiples",
+      "objective": "Find factors and multiples, and spot prime numbers.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l4-004.introduce.1",
+          "text": "A factor divides a number exactly, with nothing left over. The factors of 24 are 1, 2, 3, 4, 6, 8, 12 and 24.",
+          "speech": "A factor divides a number exactly, with nothing left over. The factors of 24 are 1, 2, 3, 4, 6, 8, 12 and 24.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "Factors of 24"
+          }
+        },
+        {
+          "id": "numbers-l4-004.introduce.2",
+          "text": "A multiple is in the times table of a number. The multiples of 6 are 6, 12, 18, 24, 30, and so on.",
+          "speech": "A multiple is in the times table of a number. The multiples of 6 are 6, 12, 18, 24, 30, and so on.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "6, 12, 18, 24, 30"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-004.demonstrate.1",
+          "text": "Factors come in pairs. 12 = 1 x 12, 2 x 6, 3 x 4. Three groups of 4 make 12, so 3 and 4 are factors of 12.",
+          "speech": "Factors come in pairs. 12 equals 1 times 12, 2 times 6, 3 times 4. Three groups of 4 make 12, so 3 and 4 are factors of 12.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🟦",
+                "count": 4
+              },
+              {
+                "emoji": "🟦",
+                "count": 4
+              },
+              {
+                "emoji": "🟦",
+                "count": 4
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": true,
+            "result": 12,
+            "showResult": true
+          }
+        },
+        {
+          "id": "numbers-l4-004.demonstrate.2",
+          "text": "A prime number has exactly two factors: 1 and itself. 7 is prime. 9 is not prime because 9 = 3 x 3, so it has three factors: 1, 3 and 9. The number 1 is not prime.",
+          "speech": "A prime number has exactly two factors: 1 and itself. 7 is prime. 9 is not prime because 9 equals 3 times 3, so it has three factors: 1, 3 and 9. The number 1 is not prime.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "7: 1, 7   9: 1, 3, 9"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-004.guided.1",
+          "prompt": "Which of these is a factor of 36?",
+          "speech": "Which of these is a factor of 36?",
+          "options": [
+            "8",
+            "9",
+            "14"
+          ],
+          "answer": "9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "A factor divides the number exactly, with nothing left over. Try dividing by each option.",
+            "36 ÷ 9 = 4 with nothing left over, so 9 is a factor of 36."
+          ],
+          "wrong_feedback": {
+            "8": "36 ÷ 8 does not divide exactly: 36 = 8 x 4 + 4, so 8 is not a factor.",
+            "14": "36 ÷ 14 does not divide exactly: 36 = 14 x 2 + 8, so 14 is not a factor."
+          },
+          "explanation": "9 is a factor of 36, because 9 x 4 = 36.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-004.guided.2",
+          "prompt": "Which of these is a multiple of 7?",
+          "speech": "Which of these is a multiple of 7?",
+          "options": [
+            "45",
+            "51",
+            "56"
+          ],
+          "answer": "56",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "A multiple of 7 is in the 7 times table. Divide each option by 7.",
+            "7 x 8 = 56, so 56 is a multiple of 7."
+          ],
+          "wrong_feedback": {
+            "45": "45 is not in the 7 times table: 45 ÷ 7 leaves 3 over.",
+            "51": "51 is not in the 7 times table: 51 ÷ 7 leaves 2 over."
+          },
+          "explanation": "56 is a multiple of 7, because 7 x 8 = 56.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-004.practice.1",
+          "prompt": "Which of these is a prime number?",
+          "speech": "Which of these is a prime number?",
+          "options": [
+            "29",
+            "27",
+            "33"
+          ],
+          "answer": "29",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "A prime has exactly two factors: 1 and itself. Look for an option that divides by another number.",
+            "The other options divide by 3 or 5 or another number, so they have more factors. Only 29 has just 1 and 29."
+          ],
+          "wrong_feedback": {
+            "27": "27 = 3 x 9, so it has more than two factors. It is not prime.",
+            "33": "33 = 3 x 11, so it has more than two factors. It is not prime."
+          },
+          "explanation": "29 is prime: its only factors are 1 and 29.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-004.practice.2",
+          "prompt": "How many factors does 20 have?",
+          "speech": "How many factors does 20 have?",
+          "options": [
+            "4",
+            "6",
+            "5"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "List the factors in pairs that multiply to make 20, starting with 1.",
+            "The pairs are 1 x 20, 2 x 10, 4 x 5. That is 6 factors: 1, 2, 4, 5, 10, 20."
+          ],
+          "wrong_feedback": {
+            "4": "You left out the factors 1 and 20. Both count.",
+            "5": "You missed one factor. List them in pairs so none is lost."
+          },
+          "explanation": "20 has 6 factors: 1, 2, 4, 5, 10, 20.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-004.practice.3",
+          "prompt": "What is the 7th multiple of 6?",
+          "speech": "What is the 7th multiple of 6?",
+          "options": [
+            "36",
+            "48",
+            "42"
+          ],
+          "answer": "42",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The 1st multiple is 6 itself. Multiples are the 6 times table.",
+            "The 7th multiple of 6 is 6 x 7 = 42."
+          ],
+          "wrong_feedback": {
+            "36": "That is the 6th multiple. Count one more.",
+            "48": "That is the 8th multiple. Count one fewer."
+          },
+          "explanation": "The 7th multiple of 6 is 6 x 7 = 42.",
+          "difficulty": 1
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-004.check.1",
+          "prompt": "Which of these is a factor of 48?",
+          "speech": "Which of these is a factor of 48?",
+          "options": [
+            "12",
+            "9",
+            "14"
+          ],
+          "answer": "12",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "9": "48 ÷ 9 does not divide exactly: 48 = 9 x 5 + 3, so 9 is not a factor.",
+            "14": "48 ÷ 14 does not divide exactly: 48 = 14 x 3 + 6, so 14 is not a factor."
+          },
+          "explanation": "12 is a factor of 48, because 12 x 4 = 48.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-004.check.2",
+          "prompt": "Which of these is a prime number?",
+          "speech": "Which of these is a prime number?",
+          "options": [
+            "39",
+            "37",
+            "35"
+          ],
+          "answer": "37",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "39": "39 = 3 x 13, so it has more than two factors. It is not prime.",
+            "35": "35 = 5 x 7, so it has more than two factors. It is not prime."
+          },
+          "explanation": "37 is prime: its only factors are 1 and 37.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-004.check.3",
+          "prompt": "How many factors does 18 have?",
+          "speech": "How many factors does 18 have?",
+          "options": [
+            "5",
+            "7",
+            "6"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "5": "You missed one factor. List them in pairs so none is lost.",
+            "7": "You counted a number that is not a factor. Check each one by dividing."
+          },
+          "explanation": "18 has 6 factors: 1, 2, 3, 6, 9, 18.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-004.remediation_explain.1",
+            "text": "Another way: test a number by dividing. 29 ÷ 2, 29 ÷ 3, 29 ÷ 5 all leave a remainder, so 29 has no other factor and is prime.",
+            "speech": "Another way: test a number by dividing. 29  divided by  2, 29  divided by  3, 29  divided by  5 all leave a remainder, so 29 has no other factor and is prime.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "29 = 1 x 29"
+            }
+          },
+          {
+            "id": "numbers-l4-004.remediation_explain.2",
+            "text": "To list factors without missing any, work in pairs: 1 x 20, 2 x 10, 4 x 5. Stop when the pairs meet.",
+            "speech": "To list factors without missing any, work in pairs: 1 times 20, 2 times 10, 4 times 5. Stop when the pairs meet.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "1 x 20\n2 x 10\n4 x 5"
+            }
+          },
+          {
+            "id": "numbers-l4-004.remediation_explain.3",
+            "text": "Factors are small and divide the number. Multiples are big and the number divides them. 5 is a factor of 20, and 20 is a multiple of 5.",
+            "speech": "Factors are small and divide the number. Multiples are big and the number divides them. 5 is a factor of 20, and 20 is a multiple of 5.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "5 | 20"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-004.remediation_guided.1",
+            "prompt": "Which of these is a multiple of 9?",
+            "speech": "Which of these is a multiple of 9?",
+            "options": [
+              "72",
+              "64",
+              "80"
+            ],
+            "answer": "72",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "A multiple of 9 is in the 9 times table. Divide each option by 9.",
+              "9 x 8 = 72, so 72 is a multiple of 9."
+            ],
+            "wrong_feedback": {
+              "64": "64 is not in the 9 times table: 64 ÷ 9 leaves 1 over.",
+              "80": "80 is not in the 9 times table: 80 ÷ 9 leaves 8 over."
+            },
+            "explanation": "72 is a multiple of 9, because 9 x 8 = 72.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-004.remediation_guided.2",
+            "prompt": "Which of these is a factor of 30?",
+            "speech": "Which of these is a factor of 30?",
+            "options": [
+              "4",
+              "6",
+              "9"
+            ],
+            "answer": "6",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "A factor divides the number exactly, with nothing left over. Try dividing by each option.",
+              "30 ÷ 6 = 5 with nothing left over, so 6 is a factor of 30."
+            ],
+            "wrong_feedback": {
+              "4": "30 ÷ 4 does not divide exactly: 30 = 4 x 7 + 2, so 4 is not a factor.",
+              "9": "30 ÷ 9 does not divide exactly: 30 = 9 x 3 + 3, so 9 is not a factor."
+            },
+            "explanation": "6 is a factor of 30, because 6 x 5 = 30.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-004.remediation_check.1",
+            "prompt": "Which of these is a prime number?",
+            "speech": "Which of these is a prime number?",
+            "options": [
+              "21",
+              "25",
+              "23"
+            ],
+            "answer": "23",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "21": "21 = 3 x 7, so it has more than two factors. It is not prime.",
+              "25": "25 = 5 x 5, so it has more than two factors. It is not prime."
+            },
+            "explanation": "23 is prime: its only factors are 1 and 23.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-004.remediation_check.2",
+            "prompt": "What is the 6th multiple of 8?",
+            "speech": "What is the 6th multiple of 8?",
+            "options": [
+              "48",
+              "56",
+              "14"
+            ],
+            "answer": "48",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "56": "That is the 7th multiple. Count one fewer.",
+              "14": "You added instead of multiplying. The nth multiple is k x n."
+            },
+            "explanation": "The 6th multiple of 8 is 8 x 6 = 48.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-004.remediation_check.3",
+            "prompt": "How many factors does 16 have?",
+            "speech": "How many factors does 16 have?",
+            "options": [
+              "6",
+              "5",
+              "3"
+            ],
+            "answer": "5",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "6": "You counted a number that is not a factor. Check each one by dividing.",
+              "3": "You left out the factors 1 and 16. Both count."
+            },
+            "explanation": "16 has 5 factors: 1, 2, 4, 8, 16.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l4a.py) with exact integer maths; decimals and rupees are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a specific nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-005",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Equivalent fractions",
+      "objective": "Make equivalent fractions and simplify fractions.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l4-005.introduce.1",
+          "text": "Equivalent fractions name the same amount. 2/3 is the same as 4/6. Look at them.",
+          "speech": "Equivalent fractions name the same amount. 2 over 3 is the same as 4 over 6. Look at them.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "2/3 = 4/6"
+          }
+        },
+        {
+          "id": "numbers-l4-005.introduce.2",
+          "text": "To make an equivalent fraction, multiply the top and the bottom by the same number. 2/3: multiply both by 2 to get 4/6.",
+          "speech": "To make an equivalent fraction, multiply the top and the bottom by the same number. 2 over 3: multiply both by 2 to get 4 over 6.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "2 x 2 = 4\n3 x 2 = 6"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-005.demonstrate.1",
+          "text": "To find a missing number, see what the known parts were multiplied by. 3/4 = ?/12. 4 x 3 = 12, so multiply the top by 3 too: 3 x 3 = 9.",
+          "speech": "To find a missing number, see what the known parts were multiplied by. 3 over 4 equals ?/12. 4 times 3 equals 12, so multiply the top by 3 too: 3 times 3 equals 9.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3/4 = 9/12"
+          }
+        },
+        {
+          "id": "numbers-l4-005.demonstrate.2",
+          "text": "To simplify, divide the top and the bottom by the same number. 16/40: both divide by 8, giving 2/5. Nothing more divides both, so 2/5 is in lowest terms.",
+          "speech": "To simplify, divide the top and the bottom by the same number. 16 over 40: both divide by 8, giving 2 over 5. Nothing more divides both, so 2 over 5 is in lowest terms.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "16/40 = 2/5"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-005.guided.1",
+          "prompt": "Which fraction is equal to 2/3?",
+          "speech": "Which fraction is equal to 2 over 3?",
+          "options": [
+            "4/5",
+            "4/3",
+            "4/6"
+          ],
+          "answer": "4/6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Equal fractions come from doing the SAME thing to the top and the bottom.",
+            "Multiply the top and the bottom by the same number: 2 x 2 = 4 and 3 x 2 = 6."
+          ],
+          "wrong_feedback": {
+            "4/5": "You added 2 to the top and the bottom. Multiply both by 2 instead.",
+            "4/3": "You multiplied only the top by 2. The bottom must change too."
+          },
+          "explanation": "2/3 = 4/6, because both parts were multiplied by 2.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-005.guided.2",
+          "prompt": "Find the missing top number: 3/4 = ?/12",
+          "speech": "Find the missing top number: 3 over 4 equals ?/12",
+          "options": [
+            "9",
+            "11",
+            "12"
+          ],
+          "answer": "9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find what the bottom was multiplied by. Do the same to the top.",
+            "4 x 3 = 12, so the top is 3 x 3 = 9."
+          ],
+          "wrong_feedback": {
+            "11": "You added 8 to the top. The bottom was multiplied by 3, so multiply the top by 3.",
+            "12": "That is the bottom number copied. Find what the top becomes."
+          },
+          "explanation": "3/4 = 9/12, because both parts were multiplied by 3.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-005.practice.1",
+          "prompt": "Find the missing bottom number: 3/5 = 12/?",
+          "speech": "Find the missing bottom number: 3 over 5 equals 12/?",
+          "options": [
+            "14",
+            "20",
+            "12"
+          ],
+          "answer": "20",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find what the top was multiplied by. Do the same to the bottom.",
+            "3 x 4 = 12, so the bottom is 5 x 4 = 20."
+          ],
+          "wrong_feedback": {
+            "14": "You added 9 to the bottom. The top was multiplied by 4, so multiply the bottom by 4.",
+            "12": "That is the top number copied. Find what the bottom becomes."
+          },
+          "explanation": "3/5 = 12/20, because both parts were multiplied by 4.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-005.practice.2",
+          "prompt": "Simplify 16/40 to lowest terms.",
+          "speech": "Simplify 16 over 40 to lowest terms.",
+          "options": [
+            "5/2",
+            "8/32",
+            "2/5"
+          ],
+          "answer": "2/5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find the biggest number that divides both the top and the bottom.",
+            "Both 16 and 40 divide by 8: 16 ÷ 8 = 2 and 40 ÷ 8 = 5."
+          ],
+          "wrong_feedback": {
+            "5/2": "The top and bottom are swapped. The top is the part, the bottom is the whole.",
+            "8/32": "You subtracted 8 instead of dividing by 8."
+          },
+          "explanation": "16/40 = 2/5, dividing both parts by 8.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-005.practice.3",
+          "prompt": "Which is greater: 3/4 or 5/8?",
+          "speech": "Which is greater: 3 over 4 or 5 over 8?",
+          "options": [
+            "3/4",
+            "5/8",
+            "They are equal"
+          ],
+          "answer": "3/4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Make the bottoms equal first. Then compare the tops.",
+            "3/4 = 6/8 and 5/8. Compare 6 and 5."
+          ],
+          "wrong_feedback": {
+            "5/8": "Make the bottoms equal: 3/4 = 6/8 and 5/8. 3/4 has the bigger top, so it is greater.",
+            "They are equal": "3/4 = 6/8 and 5/8. The tops 6 and 5 are different, so the fractions are not equal."
+          },
+          "explanation": "3/4 = 6/8 and 5/8, so 3/4 is greater.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-005.check.1",
+          "prompt": "Which fraction is equal to 3/5?",
+          "speech": "Which fraction is equal to 3 over 5?",
+          "options": [
+            "12/5",
+            "12/20",
+            "3/20"
+          ],
+          "answer": "12/20",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "12/5": "You multiplied only the top by 4. The bottom must change too.",
+            "3/20": "You multiplied only the bottom by 4. The top must change too."
+          },
+          "explanation": "3/5 = 12/20, because both parts were multiplied by 4.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-005.check.2",
+          "prompt": "Find the missing top number: 2/7 = ?/21",
+          "speech": "Find the missing top number: 2 over 7 equals ?/21",
+          "options": [
+            "21",
+            "5",
+            "6"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "21": "That is the bottom number copied. Find what the top becomes.",
+            "5": "You added 3 to the top. Multiply by 3 instead."
+          },
+          "explanation": "2/7 = 6/21, because both parts were multiplied by 3.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-005.check.3",
+          "prompt": "Simplify 18/30 to lowest terms.",
+          "speech": "Simplify 18 over 30 to lowest terms.",
+          "options": [
+            "3/5",
+            "12/24",
+            "5/3"
+          ],
+          "answer": "3/5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "12/24": "You subtracted 6 instead of dividing by 6.",
+            "5/3": "The top and bottom are swapped. The top is the part, the bottom is the whole."
+          },
+          "explanation": "18/30 = 3/5, dividing both parts by 6.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-005.remediation_explain.1",
+            "text": "Another way: picture a pizza. Cut into 3 slices and take 2, or cut into 6 slices and take 4: it is the same amount of pizza.",
+            "speech": "Another way: picture a pizza. Cut into 3 slices and take 2, or cut into 6 slices and take 4: it is the same amount of pizza.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2/3 = 4/6"
+            }
+          },
+          {
+            "id": "numbers-l4-005.remediation_explain.2",
+            "text": "Adding the same number to the top and the bottom changes the fraction. Multiplying or dividing both by the same number keeps it the same.",
+            "speech": "Adding the same number to the top and the bottom changes the fraction. Multiplying or dividing both by the same number keeps it the same.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "x same  or  ÷ same"
+            }
+          },
+          {
+            "id": "numbers-l4-005.remediation_explain.3",
+            "text": "To compare fractions with different bottoms, make the bottoms equal. 3/4 = 6/8, which is bigger than 5/8. So 3/4 > 5/8.",
+            "speech": "To compare fractions with different bottoms, make the bottoms equal. 3 over 4 equals 6 over 8, which is bigger than 5 over 8. So 3 over 4 is greater than 5 over 8.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3/4 = 6/8 > 5/8"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-005.remediation_guided.1",
+            "prompt": "Find the missing bottom number: 2/9 = 8/?",
+            "speech": "Find the missing bottom number: 2 over 9 equals 8/?",
+            "options": [
+              "8",
+              "36",
+              "13"
+            ],
+            "answer": "36",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Find what the top was multiplied by. Do the same to the bottom.",
+              "2 x 4 = 8, so the bottom is 9 x 4 = 36."
+            ],
+            "wrong_feedback": {
+              "8": "That is the top number copied. Find what the bottom becomes.",
+              "13": "You added 4 to the bottom. Multiply by 4 instead."
+            },
+            "explanation": "2/9 = 8/36, because both parts were multiplied by 4.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-005.remediation_guided.2",
+            "prompt": "Which fraction is equal to 5/6?",
+            "speech": "Which fraction is equal to 5 over 6?",
+            "options": [
+              "5/18",
+              "8/9",
+              "15/18"
+            ],
+            "answer": "15/18",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Equal fractions come from doing the SAME thing to the top and the bottom.",
+              "Multiply the top and the bottom by the same number: 5 x 3 = 15 and 6 x 3 = 18."
+            ],
+            "wrong_feedback": {
+              "5/18": "You multiplied only the bottom by 3. The top must change too.",
+              "8/9": "You added 3 to the top and the bottom. Multiply both by 3 instead."
+            },
+            "explanation": "5/6 = 15/18, because both parts were multiplied by 3.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-005.remediation_check.1",
+            "prompt": "Simplify 24/36 to lowest terms.",
+            "speech": "Simplify 24 over 36 to lowest terms.",
+            "options": [
+              "2/3",
+              "3/2",
+              "12/24"
+            ],
+            "answer": "2/3",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "3/2": "The top and bottom are swapped. The top is the part, the bottom is the whole.",
+              "12/24": "You subtracted 12 instead of dividing by 12."
+            },
+            "explanation": "24/36 = 2/3, dividing both parts by 12.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-005.remediation_check.2",
+            "prompt": "Which is greater: 2/3 or 5/9?",
+            "speech": "Which is greater: 2 over 3 or 5 over 9?",
+            "options": [
+              "5/9",
+              "2/3",
+              "They are equal"
+            ],
+            "answer": "2/3",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "5/9": "Make the bottoms equal: 2/3 = 6/9 and 5/9. 2/3 has the bigger top, so it is greater.",
+              "They are equal": "2/3 = 6/9 and 5/9. The tops 6 and 5 are different, so the fractions are not equal."
+            },
+            "explanation": "2/3 = 6/9 and 5/9, so 2/3 is greater.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-005.remediation_check.3",
+            "prompt": "Find the missing top number: 5/6 = ?/30",
+            "speech": "Find the missing top number: 5 over 6 equals ?/30",
+            "options": [
+              "10",
+              "29",
+              "25"
+            ],
+            "answer": "25",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "10": "You added 5 to the top. Multiply by 5 instead.",
+              "29": "You added 24 to the top. The bottom was multiplied by 5, so multiply the top by 5."
+            },
+            "explanation": "5/6 = 25/30, because both parts were multiplied by 5.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l4a.py) with exact integer maths; decimals and rupees are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a specific nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-006",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Fraction addition",
+      "objective": "Add and subtract fractions, including those with different bottoms.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l4-006.introduce.1",
+          "text": "When the bottoms are the same, add the tops and keep the bottom. 1/4 + 2/4 = 3/4.",
+          "speech": "When the bottoms are the same, add the tops and keep the bottom. 1 over 4 plus 2 over 4 equals 3 over 4.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "1/4 + 2/4 = 3/4"
+          }
+        },
+        {
+          "id": "numbers-l4-006.introduce.2",
+          "text": "Subtract the same way: keep the bottom. 7/9 - 2/9 = 5/9. The bottom tells the size of the pieces, and the pieces stay the same size.",
+          "speech": "Subtract the same way: keep the bottom. 7 over 9 minus 2 over 9 equals 5 over 9. The bottom tells the size of the pieces, and the pieces stay the same size.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "7/9 - 2/9 = 5/9"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-006.demonstrate.1",
+          "text": "Different bottoms: make them equal first. 1/2 + 1/6. Change 1/2 to sixths: 1/2 = 3/6. Now 3/6 + 1/6 = 4/6.",
+          "speech": "Different bottoms: make them equal first. 1 over 2 plus 1 over 6. Change 1 over 2 to sixths: 1 over 2 equals 3 over 6. Now 3 over 6 plus 1 over 6 equals 4 over 6.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "1/2 = 3/6"
+          }
+        },
+        {
+          "id": "numbers-l4-006.demonstrate.2",
+          "text": "Simplify the answer: 4/6 = 2/3. So 1/2 + 1/6 = 2/3. Always write the answer in lowest terms.",
+          "speech": "Simplify the answer: 4 over 6 equals 2 over 3. So 1 over 2 plus 1 over 6 equals 2 over 3. Always write the answer in lowest terms.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "1/2 + 1/6 = 2/3"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-006.guided.1",
+          "prompt": "What is 1/4 + 2/4?",
+          "speech": "What is 1 over 4 plus 2 over 4?",
+          "options": [
+            "3/4",
+            "3/8",
+            "4/3"
+          ],
+          "answer": "3/4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The bottoms are the same, so work with the tops only.",
+            "1 + 2 = 3, and the bottom stays 4. Then simplify if you can."
+          ],
+          "wrong_feedback": {
+            "3/8": "You added the bottoms as well. Add the tops only, and make the bottoms equal first.",
+            "4/3": "The top and bottom are swapped. The bottom stays as it is."
+          },
+          "explanation": "1/4 + 2/4 = 3/4.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-006.guided.2",
+          "prompt": "What is 7/9 - 2/9?",
+          "speech": "What is 7 over 9 minus 2 over 9?",
+          "options": [
+            "5/18",
+            "5/9",
+            "9/5"
+          ],
+          "answer": "5/9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The bottoms are the same, so work with the tops only.",
+            "7 - 2 = 5, and the bottom stays 9. Then simplify if you can."
+          ],
+          "wrong_feedback": {
+            "5/18": "You added the bottoms. Subtract the tops only, and make the bottoms equal first.",
+            "9/5": "The top and bottom are swapped. The bottom stays as it is."
+          },
+          "explanation": "7/9 - 2/9 = 5/9.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-006.practice.1",
+          "prompt": "What is 1/2 + 1/6?",
+          "speech": "What is 1 over 2 plus 1 over 6?",
+          "options": [
+            "2/8",
+            "2/6",
+            "2/3"
+          ],
+          "answer": "2/3",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The bottoms are different. Make them equal first.",
+            "Use 6 as the bottom: 1/2 = 3/6 and 1/6 = 1/6. Now 3 + 1 = 4, so the answer is 4/6, which simplifies to 2/3."
+          ],
+          "wrong_feedback": {
+            "2/8": "You added the bottoms as well. Add the tops only, and make the bottoms equal first.",
+            "2/6": "You added the tops but the bottoms were different. Make the bottoms equal first."
+          },
+          "explanation": "1/2 + 1/6 = 3/6 + 1/6 = 2/3.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-006.practice.2",
+          "prompt": "What is 3/4 - 1/8?",
+          "speech": "What is 3 over 4 minus 1 over 8?",
+          "options": [
+            "5/8",
+            "2/12",
+            "2/8"
+          ],
+          "answer": "5/8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The bottoms are different. Make them equal first.",
+            "Use 8 as the bottom: 3/4 = 6/8 and 1/8 = 1/8. Now 6 - 1 = 5, so the answer is 5/8."
+          ],
+          "wrong_feedback": {
+            "2/12": "You added the bottoms. Subtract the tops only, and make the bottoms equal first.",
+            "2/8": "You subtracted the tops but the bottoms were different. Make the bottoms equal first."
+          },
+          "explanation": "3/4 - 1/8 = 6/8 - 1/8 = 5/8.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-006.practice.3",
+          "prompt": "What is 2/7 + 3/7?",
+          "speech": "What is 2 over 7 plus 3 over 7?",
+          "options": [
+            "7/5",
+            "5/7",
+            "5/14"
+          ],
+          "answer": "5/7",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "The bottoms are the same, so work with the tops only.",
+            "2 + 3 = 5, and the bottom stays 7. Then simplify if you can."
+          ],
+          "wrong_feedback": {
+            "7/5": "The top and bottom are swapped. The bottom stays as it is.",
+            "5/14": "The bottom does not change when you add fractions with the same bottom."
+          },
+          "explanation": "2/7 + 3/7 = 5/7.",
+          "difficulty": 1
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-006.check.1",
+          "prompt": "What is 5/6 - 1/3?",
+          "speech": "What is 5 over 6 minus 1 over 3?",
+          "options": [
+            "4/6",
+            "3/12",
+            "1/2"
+          ],
+          "answer": "1/2",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "4/6": "You subtracted the tops but the bottoms were different. Make the bottoms equal first.",
+            "3/12": "The bottom does not change when you subtract. Keep it the same."
+          },
+          "explanation": "5/6 - 1/3 = 5/6 - 2/6 = 1/2.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-006.check.2",
+          "prompt": "Meena eats 1/3 of a cake and Ravi eats 1/6 of it. How much of the cake is eaten?",
+          "speech": "Meena eats 1 over 3 of a cake and Ravi eats 1 over 6 of it. How much of the cake is eaten?",
+          "options": [
+            "1/2",
+            "2/6",
+            "2/18"
+          ],
+          "answer": "1/2",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "2/6": "You added the tops but the bottoms were different. Make the bottoms equal first.",
+            "2/18": "You multiplied the bottoms. Use the smallest common bottom, and also change the tops."
+          },
+          "explanation": "1/3 + 1/6 = 2/6 + 1/6 = 1/2.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-006.check.3",
+          "prompt": "What is 5/8 - 3/8?",
+          "speech": "What is 5 over 8 minus 3 over 8?",
+          "options": [
+            "2/16",
+            "1/4",
+            "3/8"
+          ],
+          "answer": "1/4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "2/16": "The bottom does not change when you subtract. Keep it the same.",
+            "3/8": "Check your subtraction of the tops: 5 - 3 is not 3."
+          },
+          "explanation": "5/8 - 3/8 = 1/4.",
+          "difficulty": 1
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-006.remediation_explain.1",
+            "text": "Another way: slices. Quarters can only be added to quarters. 1 quarter + 2 quarters is 3 quarters.",
+            "speech": "Another way: slices. Quarters can only be added to quarters. 1 quarter + 2 quarters is 3 quarters.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "1/4 + 2/4 = 3/4"
+            }
+          },
+          {
+            "id": "numbers-l4-006.remediation_explain.2",
+            "text": "Never add the bottoms. 1/4 + 2/4 is not 3/8. Adding does not change the size of the pieces.",
+            "speech": "Never add the bottoms. 1 over 4 plus 2 over 4 is not 3 over 8. Adding does not change the size of the pieces.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3/4, not 3/8"
+            }
+          },
+          {
+            "id": "numbers-l4-006.remediation_explain.3",
+            "text": "Subtracting with different bottoms: 5/6 - 1/3. Change 1/3 to 2/6. Then 5/6 - 2/6 = 3/6 = 1/2.",
+            "speech": "Subtracting with different bottoms: 5 over 6 minus 1 over 3. Change 1 over 3 to 2 over 6. Then 5 over 6 minus 2 over 6 equals 3 over 6 equals 1 over 2.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "5/6 - 2/6 = 1/2"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-006.remediation_guided.1",
+            "prompt": "What is 3/10 + 1/5?",
+            "speech": "What is 3 over 10 plus 1 over 5?",
+            "options": [
+              "4/15",
+              "4/10",
+              "1/2"
+            ],
+            "answer": "1/2",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "The bottoms are different. Make them equal first.",
+              "Use 10 as the bottom: 3/10 = 3/10 and 1/5 = 2/10. Now 3 + 2 = 5, so the answer is 5/10, which simplifies to 1/2."
+            ],
+            "wrong_feedback": {
+              "4/15": "You added the bottoms as well. Add the tops only, and make the bottoms equal first.",
+              "4/10": "You added the tops but the bottoms were different. Make the bottoms equal first."
+            },
+            "explanation": "3/10 + 1/5 = 3/10 + 2/10 = 1/2.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-006.remediation_guided.2",
+            "prompt": "What is 1/2 - 1/4?",
+            "speech": "What is 1 over 2 minus 1 over 4?",
+            "options": [
+              "1/4",
+              "3/4",
+              "1/8"
+            ],
+            "answer": "1/4",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "The bottoms are different. Make them equal first.",
+              "Use 4 as the bottom: 1/2 = 2/4 and 1/4 = 1/4. Now 2 - 1 = 1, so the answer is 1/4."
+            ],
+            "wrong_feedback": {
+              "3/4": "You added instead of subtracting.",
+              "1/8": "The bottom does not change when you subtract. Keep it the same."
+            },
+            "explanation": "1/2 - 1/4 = 2/4 - 1/4 = 1/4.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-006.remediation_check.1",
+            "prompt": "What is 3/8 + 1/4?",
+            "speech": "What is 3 over 8 plus 1 over 4?",
+            "options": [
+              "4/12",
+              "5/8",
+              "4/8"
+            ],
+            "answer": "5/8",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "4/12": "You added the bottoms as well. Add the tops only, and make the bottoms equal first.",
+              "4/8": "You added the tops but the bottoms were different. Make the bottoms equal first."
+            },
+            "explanation": "3/8 + 1/4 = 3/8 + 2/8 = 5/8.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-006.remediation_check.2",
+            "prompt": "What is 2/3 - 1/6?",
+            "speech": "What is 2 over 3 minus 1 over 6?",
+            "options": [
+              "1/6",
+              "3/12",
+              "1/2"
+            ],
+            "answer": "1/2",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "1/6": "You subtracted the tops but the bottoms were different. Make the bottoms equal first.",
+              "3/12": "The bottom does not change when you subtract. Keep it the same."
+            },
+            "explanation": "2/3 - 1/6 = 4/6 - 1/6 = 1/2.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-006.remediation_check.3",
+            "prompt": "A jug has 7/10 litre of milk. Mom uses 2/5 litre. How much milk is left?",
+            "speech": "A jug has 7 over 10 litre of milk. Mom uses 2 over 5 litre. How much milk is left?",
+            "options": [
+              "3/10",
+              "5/15",
+              "5/10"
+            ],
+            "answer": "3/10",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "5/15": "You added the bottoms. Subtract the tops only, and make the bottoms equal first.",
+              "5/10": "You subtracted the tops but the bottoms were different. Make the bottoms equal first."
+            },
+            "explanation": "7/10 - 2/5 = 7/10 - 4/10 = 3/10.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l4a.py) with exact integer maths; decimals and rupees are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a specific nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-007",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Decimals and place value",
+      "objective": "Read, compare and round decimals.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l4-007.introduce.1",
+          "text": "After the decimal point the places are tenths, hundredths and thousandths. In 6.248 the 2 is 2 tenths, the 4 is 4 hundredths and the 8 is 8 thousandths.",
+          "speech": "After the decimal point the places are tenths, hundredths and thousandths. In 6.248 the 2 is 2 tenths, the 4 is 4 hundredths and the 8 is 8 thousandths.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "6.248"
+          }
+        },
+        {
+          "id": "numbers-l4-007.introduce.2",
+          "text": "Each place is 10 times smaller than the one on its left. 0.4 is 4 tenths, 0.04 is 4 hundredths and 0.004 is 4 thousandths.",
+          "speech": "Each place is 10 times smaller than the one on its left. 0.4 is 4 tenths, 0.04 is 4 hundredths and 0.004 is 4 thousandths.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "0.4  0.04  0.004"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-007.demonstrate.1",
+          "text": "To compare decimals, start at the left. 3.45 and 3.5: ones are the same, tenths are 4 and 5. So 3.45 < 3.5. More digits does not mean bigger.",
+          "speech": "To compare decimals, start at the left. 3.45 and 3.5: ones are the same, tenths are 4 and 5. So 3.45 is less than 3.5. More digits does not mean bigger.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3.45 < 3.5"
+          }
+        },
+        {
+          "id": "numbers-l4-007.demonstrate.2",
+          "text": "To round, look at the next digit. 4.76 to 1 decimal place: the next digit is 6, which is 5 or more, so 4.7 becomes 4.8.",
+          "speech": "To round, look at the next digit. 4.76 to 1 decimal place: the next digit is 6, which is 5 or more, so 4.7 becomes 4.8.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "4.76 ≈ 4.8"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-007.guided.1",
+          "prompt": "In 6.248, which digit is in the hundredths place?",
+          "speech": "In 6.248, which digit is in the hundredths place?",
+          "options": [
+            "2",
+            "4",
+            "8"
+          ],
+          "answer": "4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Count the places after the decimal point: tenths first.",
+            "After the point the places are tenths, hundredths, thousandths. The hundredths place holds 4."
+          ],
+          "wrong_feedback": {
+            "2": "2 is in the tenths place.",
+            "8": "8 is in the thousandths place."
+          },
+          "explanation": "In 6.248, the hundredths place holds the digit 4.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-007.guided.2",
+          "prompt": "Which sign fits: 3.45 ? 3.5",
+          "speech": "Which sign fits: 3.45 ? 3.5",
+          "options": [
+            ">",
+            "=",
+            "<"
+          ],
+          "answer": "<",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Compare from the left, one place at a time. More digits does not always mean bigger.",
+            "Write both with the same number of places: 3.45 and 3.50. The first difference is in the tenths place."
+          ],
+          "wrong_feedback": {
+            ">": "That sign points the wrong way. Write both with the same number of places: 3.45 and 3.50. Compare from the left.",
+            "=": "3.45 and 3.5 are different. Writing both with the same places gives 3.45 and 3.50."
+          },
+          "explanation": "3.45 < 3.5, because 3.45 < 3.50.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-007.practice.1",
+          "prompt": "Round 4.76 to 1 decimal place.",
+          "speech": "Round 4.76 to 1 decimal place.",
+          "options": [
+            "4.8",
+            "4.7",
+            "5"
+          ],
+          "answer": "4.8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look at the digit just after the place you are rounding to.",
+            "The next digit is 6. 5 or more: round up. 4.76 rounds to 4.8."
+          ],
+          "wrong_feedback": {
+            "4.7": "You rounded down. The next digit is 6, which is 5 or more, so round up.",
+            "5": "That rounds to the nearest whole number, but we need 1 decimal place."
+          },
+          "explanation": "4.76 rounds to 4.8 (next digit 6).",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-007.practice.2",
+          "prompt": "Which number lies between 0.4 and 0.5?",
+          "speech": "Which number lies between 0.4 and 0.5?",
+          "options": [
+            "0.35",
+            "0.45",
+            "0.54"
+          ],
+          "answer": "0.45",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Write both numbers with the same number of places, then look for one in the gap.",
+            "0.4 = 0.40 and 0.5 = 0.50. Only 0.45 is bigger than the first and smaller than the second."
+          ],
+          "wrong_feedback": {
+            "0.35": "0.35 is smaller than 0.4, so it is not between 0.4 and 0.5.",
+            "0.54": "0.54 is bigger than 0.5, so it is not between 0.4 and 0.5."
+          },
+          "explanation": "0.45 lies between 0.4 and 0.5.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-007.practice.3",
+          "prompt": "In 6.248, what is the value of the 8?",
+          "speech": "In 6.248, what is the value of the 8?",
+          "options": [
+            "0.08",
+            "0.0008",
+            "0.008"
+          ],
+          "answer": "0.008",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find the place of the digit first: tenths, hundredths or thousandths.",
+            "The 8 is in the thousandths place, so its value is 8 thousandths = 0.008."
+          ],
+          "wrong_feedback": {
+            "0.08": "That is 8 in the hundredths place: one place too far to the left.",
+            "0.0008": "That is 8 in the ten thousandths place: one place too far to the right."
+          },
+          "explanation": "In 6.248, the 8 is in the thousandths place, so it is worth 0.008.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-007.check.1",
+          "prompt": "Round 12.347 to 2 decimal places.",
+          "speech": "Round 12.347 to 2 decimal places.",
+          "options": [
+            "12.35",
+            "12.3",
+            "12.34"
+          ],
+          "answer": "12.35",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "12.3": "That rounds to 1 decimal place, but we need 2.",
+            "12.34": "You rounded down. The next digit is 7, which is 5 or more, so round up."
+          },
+          "explanation": "12.347 rounds to 12.35 (next digit 7).",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-007.check.2",
+          "prompt": "Which is the greatest: 0.7, 0.65 or 0.08?",
+          "speech": "Which is the greatest: 0.7, 0.65 or 0.08?",
+          "options": [
+            "0.65",
+            "0.7",
+            "0.08"
+          ],
+          "answer": "0.7",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "0.65": "0.65 is smaller. Written with the same places the numbers are 0.70, 0.65, 0.08; more digits does not mean bigger.",
+            "0.08": "0.08 is smaller. Written with the same places the numbers are 0.70, 0.65, 0.08; more digits does not mean bigger."
+          },
+          "explanation": "0.7 is the greatest: with the same places the numbers are 0.70, 0.65, 0.08.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-007.check.3",
+          "prompt": "Write 45/100 as a decimal.",
+          "speech": "Write 45 over 100 as a decimal.",
+          "options": [
+            "0.045",
+            "4.5",
+            "0.45"
+          ],
+          "answer": "0.45",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "0.045": "That is 45/1000. Count the zeros in 100: that is how many places after the point.",
+            "4.5": "That is 45/10. Count the zeros in 100: that is how many places after the point."
+          },
+          "explanation": "45/100 = 0.45.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-007.remediation_explain.1",
+            "text": "Another way: add zeros so both numbers have the same number of places. 3.5 = 3.50. Now compare 3.45 and 3.50 like whole numbers: 345 and 350.",
+            "speech": "Another way: add zeros so both numbers have the same number of places. 3.5 equals 3.50. Now compare 3.45 and 3.50 like whole numbers: 345 and 350.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "3.45\n3.50"
+            }
+          },
+          {
+            "id": "numbers-l4-007.remediation_explain.2",
+            "text": "A decimal is a fraction over 10, 100 or 1000. 7/10 = 0.7 and 45/100 = 0.45. The zeros in the bottom tell the number of places after the point.",
+            "speech": "A decimal is a fraction over 10, 100 or 1000. 7 over 10 equals 0.7 and 45 over 100 equals 0.45. The zeros in the bottom tell the number of places after the point.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "7/10 = 0.7\n45/100 = 0.45"
+            }
+          },
+          {
+            "id": "numbers-l4-007.remediation_explain.3",
+            "text": "Rounding: 5 or more, round up. Less than 5, keep the digit. 5.382 to 1 decimal place: the next digit is 8, so 5.4.",
+            "speech": "Rounding: 5 or more, round up. Less than 5, keep the digit. 5.382 to 1 decimal place: the next digit is 8, so 5.4.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "5.382 ≈ 5.4"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-007.remediation_guided.1",
+            "prompt": "In 9.516, which digit is in the tenths place?",
+            "speech": "In 9.516, which digit is in the tenths place?",
+            "options": [
+              "5",
+              "6",
+              "1"
+            ],
+            "answer": "5",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Count the places after the decimal point: tenths first.",
+              "After the point the places are tenths, hundredths, thousandths. The tenths place holds 5."
+            ],
+            "wrong_feedback": {
+              "6": "6 is in the thousandths place.",
+              "1": "1 is in the hundredths place."
+            },
+            "explanation": "In 9.516, the tenths place holds the digit 5.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-007.remediation_guided.2",
+            "prompt": "Write 7/10 as a decimal.",
+            "speech": "Write 7 over 10 as a decimal.",
+            "options": [
+              "7",
+              "0.7",
+              "0.07"
+            ],
+            "answer": "0.7",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "The number of zeros in the bottom tells you how many places after the point.",
+              "10 has 1 zero, so the decimal has 1 place: 7 in the last place gives 0.7."
+            ],
+            "wrong_feedback": {
+              "7": "That is 7/1. Count the zeros in 10: that is how many places after the point.",
+              "0.07": "That is 7/100. Count the zeros in 10: that is how many places after the point."
+            },
+            "explanation": "7/10 = 0.7.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-007.remediation_check.1",
+            "prompt": "Which sign fits: 0.82 ? 0.8",
+            "speech": "Which sign fits: 0.82 ? 0.8",
+            "options": [
+              "<",
+              "=",
+              ">"
+            ],
+            "answer": ">",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "<": "That sign points the wrong way. Write both with the same number of places: 0.82 and 0.80. Compare from the left.",
+              "=": "0.82 and 0.8 are different. Writing both with the same places gives 0.82 and 0.80."
+            },
+            "explanation": "0.82 > 0.8, because 0.82 > 0.80.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-007.remediation_check.2",
+            "prompt": "Round 5.382 to 1 decimal place.",
+            "speech": "Round 5.382 to 1 decimal place.",
+            "options": [
+              "5.4",
+              "5.3",
+              "5"
+            ],
+            "answer": "5.4",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "5.3": "You rounded down. The next digit is 8, which is 5 or more, so round up.",
+              "5": "That rounds to the nearest whole number, but we need 1 decimal place."
+            },
+            "explanation": "5.382 rounds to 5.4 (next digit 8).",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-007.remediation_check.3",
+            "prompt": "Which number lies between 1.2 and 1.3?",
+            "speech": "Which number lies between 1.2 and 1.3?",
+            "options": [
+              "1.32",
+              "1.25",
+              "1.18"
+            ],
+            "answer": "1.25",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "1.32": "1.32 is bigger than 1.3, so it is not between 1.2 and 1.3.",
+              "1.18": "1.18 is smaller than 1.2, so it is not between 1.2 and 1.3."
+            },
+            "explanation": "1.25 lies between 1.2 and 1.3.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l4a.py) with exact integer maths; decimals and rupees are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a specific nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-008",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Decimal operations",
+      "objective": "Add and subtract decimals in rupees and paise.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [],
+      "introduce": [
+        {
+          "id": "numbers-l4-008.introduce.1",
+          "text": "Money uses decimals. ₹12.50 is 12 rupees and 50 paise. Line up the decimal points, then add or subtract. ₹12.50 + ₹7.25 = ₹19.75.",
+          "speech": "Money uses decimals. 12 rupees 50 paise is 12 rupees and 50 paise. Line up the decimal points, then add or subtract. 12 rupees 50 paise + 7 rupees 25 paise equals 19 rupees 75 paise.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "₹12.50 + ₹7.25"
+          }
+        },
+        {
+          "id": "numbers-l4-008.introduce.2",
+          "text": "Add the paise first: 50 + 25 = 75. Then add the rupees: 12 + 7 = 19. So the total is ₹19.75.",
+          "speech": "Add the paise first: 50 plus 25 equals 75. Then add the rupees: 12 plus 7 equals 19. So the total is 19 rupees 75 paise.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "₹12.50\n+ ₹7.25\n₹19.75"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-008.demonstrate.1",
+          "text": "When the paise add to 100 or more, carry 1 rupee. ₹4.75 + ₹2.50: 75 + 50 = 125 paise, which is ₹1.25. Write 25 and carry 1 rupee.",
+          "speech": "When the paise add to 100 or more, carry 1 rupee. 4 rupees 75 paise + 2 rupees 50 paise: 75 plus 50 equals 125 paise, which is 1 rupees 25 paise. Write 25 and carry 1 rupee.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "₹4.75 + ₹2.50 = ₹7.25"
+          }
+        },
+        {
+          "id": "numbers-l4-008.demonstrate.2",
+          "text": "When you subtract and the paise are too small, borrow 1 rupee (100 paise). ₹5.00 - ₹1.75: 100 - 75 = 25 paise, then 4 - 1 = 3 rupees. So ₹3.25.",
+          "speech": "When you subtract and the paise are too small, borrow 1 rupee (100 paise). 5 rupees 00 paise - 1 rupees 75 paise: 100 minus 75 equals 25 paise, then 4 minus 1 equals 3 rupees. So 3 rupees 25 paise.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "₹5.00 - ₹1.75 = ₹3.25"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-008.guided.1",
+          "prompt": "What is ₹12.50 + ₹7.25?",
+          "speech": "What is 12 rupees 50 paise + 7 rupees 25 paise?",
+          "options": [
+            "₹5.25",
+            "₹197.50",
+            "₹19.75"
+          ],
+          "answer": "₹19.75",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Line up the decimal points, then add the paise first.",
+            "Paise: 50 + 25 = 75 (no carry). Then add the rupees."
+          ],
+          "wrong_feedback": {
+            "₹5.25": "You subtracted instead of adding.",
+            "₹197.50": "The decimal point slipped. Line up the points before you add."
+          },
+          "explanation": "₹12.50 + ₹7.25 = ₹19.75.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-008.guided.2",
+          "prompt": "What is ₹50.00 - ₹18.75?",
+          "speech": "What is 50 rupees 00 paise - 18 rupees 75 paise?",
+          "options": [
+            "₹31.25",
+            "₹68.75",
+            "₹312.50"
+          ],
+          "answer": "₹31.25",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Line up the decimal points, then subtract the paise first.",
+            "0 paise is less than 75, so borrow 1 rupee: 100 - 75 = 25 paise. Then subtract the rupees."
+          ],
+          "wrong_feedback": {
+            "₹68.75": "You added instead of subtracting.",
+            "₹312.50": "The decimal point slipped. Line up the points before you subtract."
+          },
+          "explanation": "₹50.00 - ₹18.75 = ₹31.25.",
+          "difficulty": 2
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-008.practice.1",
+          "prompt": "A pen costs ₹14.75 and a notebook costs ₹28.50. What is the total cost?",
+          "speech": "A pen costs 14 rupees 75 paise and a notebook costs 28 rupees 50 paise. What is the total cost?",
+          "options": [
+            "₹432.50",
+            "₹43.25",
+            "₹42.25"
+          ],
+          "answer": "₹43.25",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Line up the decimal points, then add the paise first.",
+            "Paise: 75 + 50 = 125, which is 1 rupee and 25 paise: carry the 1. Then add the rupees."
+          ],
+          "wrong_feedback": {
+            "₹432.50": "The decimal point slipped. Line up the points before you add.",
+            "₹42.25": "You forgot to carry 100 paise over to the rupees."
+          },
+          "explanation": "₹14.75 + ₹28.50 = ₹43.25.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-008.practice.2",
+          "prompt": "Ravi pays ₹100.00 for a bag that costs ₹63.40. How much change does he get?",
+          "speech": "Ravi pays 100 rupees 00 paise for a bag that costs 63 rupees 40 paise. How much change does he get?",
+          "options": [
+            "₹366.00",
+            "₹37.40",
+            "₹36.60"
+          ],
+          "answer": "₹36.60",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Line up the decimal points, then subtract the paise first.",
+            "0 paise is less than 40, so borrow 1 rupee: 100 - 40 = 60 paise. Then subtract the rupees."
+          ],
+          "wrong_feedback": {
+            "₹366.00": "The decimal point slipped. Line up the points before you subtract.",
+            "₹37.40": "You took the smaller paise from the bigger. Borrow 1 rupee (100 paise) instead."
+          },
+          "explanation": "₹100.00 - ₹63.40 = ₹36.60.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-008.practice.3",
+          "prompt": "What is ₹5.60 + ₹12.45 + ₹3.30?",
+          "speech": "What is 5 rupees 60 paise + 12 rupees 45 paise + 3 rupees 30 paise?",
+          "options": [
+            "₹21.35",
+            "₹18.05",
+            "₹213.50"
+          ],
+          "answer": "₹21.35",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Line up the decimal points and add the paise column first.",
+            "Add the paise: 60 + 45 + 30 = 135. Carry whole rupees over, then add the rupees."
+          ],
+          "wrong_feedback": {
+            "₹18.05": "You left out one of the amounts. Add all three.",
+            "₹213.50": "The decimal point slipped. Line up the points before you add."
+          },
+          "explanation": "₹5.60 + ₹12.45 + ₹3.30 = ₹21.35.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-008.check.1",
+          "prompt": "What is ₹36.75 + ₹28.45?",
+          "speech": "What is 36 rupees 75 paise + 28 rupees 45 paise?",
+          "options": [
+            "₹64.20",
+            "₹65.20",
+            "₹8.30"
+          ],
+          "answer": "₹65.20",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "₹64.20": "You forgot to carry 100 paise over to the rupees.",
+            "₹8.30": "You subtracted instead of adding."
+          },
+          "explanation": "₹36.75 + ₹28.45 = ₹65.20.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-008.check.2",
+          "prompt": "What is ₹90.00 - ₹34.50?",
+          "speech": "What is 90 rupees 00 paise - 34 rupees 50 paise?",
+          "options": [
+            "₹124.50",
+            "₹555.00",
+            "₹55.50"
+          ],
+          "answer": "₹55.50",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "₹124.50": "You added instead of subtracting.",
+            "₹555.00": "The decimal point slipped. Line up the points before you subtract."
+          },
+          "explanation": "₹90.00 - ₹34.50 = ₹55.50.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-008.check.3",
+          "prompt": "What is ₹12.75 + ₹8.50 + ₹19.90?",
+          "speech": "What is 12 rupees 75 paise + 8 rupees 50 paise + 19 rupees 90 paise?",
+          "options": [
+            "₹41.15",
+            "₹411.50",
+            "₹40.15"
+          ],
+          "answer": "₹41.15",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "₹411.50": "The decimal point slipped. Line up the points before you add.",
+            "₹40.15": "You lost 1 rupee when carrying the paise."
+          },
+          "explanation": "₹12.75 + ₹8.50 + ₹19.90 = ₹41.15.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-008.remediation_explain.1",
+            "text": "Another way: change to paise. ₹12.50 is 1,250 paise and ₹7.25 is 725 paise. Add: 1,250 + 725 = 1,975 paise, which is ₹19.75.",
+            "speech": "Another way: change to paise. 12 rupees 50 paise is 1,250 paise and 7 rupees 25 paise is 725 paise. Add: 1,250 plus 725 equals 1,975 paise, which is 19 rupees 75 paise.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "1,250 + 725 = 1,975"
+            }
+          },
+          {
+            "id": "numbers-l4-008.remediation_explain.2",
+            "text": "Always line up the decimal points, like place values. If the points are not lined up, the answer is wrong by a power of 10.",
+            "speech": "Always line up the decimal points, like place values. If the points are not lined up, the answer is wrong by a power of 10.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "  12.50\n+  7.25"
+            }
+          },
+          {
+            "id": "numbers-l4-008.remediation_explain.3",
+            "text": "To find change, subtract the price from the money paid. ₹100.00 - ₹63.40 = ₹36.60.",
+            "speech": "To find change, subtract the price from the money paid. 100 rupees 00 paise - 63 rupees 40 paise equals 36 rupees 60 paise.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "₹100.00 - ₹63.40 = ₹36.60"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-008.remediation_guided.1",
+            "prompt": "What is ₹8.95 + ₹14.70?",
+            "speech": "What is 8 rupees 95 paise + 14 rupees 70 paise?",
+            "options": [
+              "₹5.75",
+              "₹23.65",
+              "₹236.50"
+            ],
+            "answer": "₹23.65",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Line up the decimal points, then add the paise first.",
+              "Paise: 95 + 70 = 165, which is 1 rupee and 65 paise: carry the 1. Then add the rupees."
+            ],
+            "wrong_feedback": {
+              "₹5.75": "You subtracted instead of adding.",
+              "₹236.50": "The decimal point slipped. Line up the points before you add."
+            },
+            "explanation": "₹8.95 + ₹14.70 = ₹23.65.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-008.remediation_guided.2",
+            "prompt": "What is ₹40.25 - ₹13.80?",
+            "speech": "What is 40 rupees 25 paise - 13 rupees 80 paise?",
+            "options": [
+              "₹27.55",
+              "₹54.05",
+              "₹26.45"
+            ],
+            "answer": "₹26.45",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Line up the decimal points, then subtract the paise first.",
+              "25 paise is less than 80, so borrow 1 rupee: 125 - 80 = 45 paise. Then subtract the rupees."
+            ],
+            "wrong_feedback": {
+              "₹27.55": "You took the smaller paise from the bigger. Borrow 1 rupee (100 paise) instead.",
+              "₹54.05": "You added instead of subtracting."
+            },
+            "explanation": "₹40.25 - ₹13.80 = ₹26.45.",
+            "difficulty": 2
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-008.remediation_check.1",
+            "prompt": "Anu has ₹75.00. She buys a book for ₹26.75. How much money is left?",
+            "speech": "Anu has 75 rupees 00 paise. She buys a book for 26 rupees 75 paise. How much money is left?",
+            "options": [
+              "₹48.25",
+              "₹482.50",
+              "₹49.75"
+            ],
+            "answer": "₹48.25",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "₹482.50": "The decimal point slipped. Line up the points before you subtract.",
+              "₹49.75": "You took the smaller paise from the bigger. Borrow 1 rupee (100 paise) instead."
+            },
+            "explanation": "₹75.00 - ₹26.75 = ₹48.25.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-008.remediation_check.2",
+            "prompt": "Meera spends ₹22.60 on fruit and ₹39.45 on vegetables. How much does she spend altogether?",
+            "speech": "Meera spends 22 rupees 60 paise on fruit and 39 rupees 45 paise on vegetables. How much does she spend altogether?",
+            "options": [
+              "₹16.85",
+              "₹62.05",
+              "₹620.50"
+            ],
+            "answer": "₹62.05",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "₹16.85": "You subtracted instead of adding.",
+              "₹620.50": "The decimal point slipped. Line up the points before you add."
+            },
+            "explanation": "₹22.60 + ₹39.45 = ₹62.05.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-008.remediation_check.3",
+            "prompt": "What is ₹24.20 + ₹15.60 + ₹7.35?",
+            "speech": "What is 24 rupees 20 paise + 15 rupees 60 paise + 7 rupees 35 paise?",
+            "options": [
+              "₹46.15",
+              "₹39.80",
+              "₹47.15"
+            ],
+            "answer": "₹47.15",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "₹46.15": "You lost 1 rupee when carrying the paise.",
+              "₹39.80": "You left out one of the amounts. Add all three."
+            },
+            "explanation": "₹24.20 + ₹15.60 + ₹7.35 = ₹47.15.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Educator review of the teaching order, wording, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of 'x', '÷', fractions such as 3/4, and rupee amounts (not heard).",
+          "Check that the distractor feedback names a mistake a child would really make."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "All answers and distractors are computed by code (gen_l4a.py) with exact integer maths; decimals and rupees are scaled integers and fractions use the fractions module, in lowest terms. Every distractor is wrong and the answer position rotates.",
+          "Hint 1 is a specific nudge and never contains the answer; wrong_feedback names the likely mistake for each wrong option.",
+          "Check and remediation-check items carry no hints; question visuals never draw the answer.",
+          "No picture assets are used. Status draft_unverified: nothing here has been seen by a teacher or rendered on a device."
+        ]
+      }
+    }
+  ]
+}

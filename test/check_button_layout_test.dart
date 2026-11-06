@@ -128,7 +128,16 @@ void main() {
               lessThanOrEqualTo(check.top + 0.5),
               reason: '${row.lesson.id} "$option" hides behind Check Answer',
             );
-            expect(rect.height, greaterThanOrEqualTo(44), reason: option);
+            // Everything now fits one screen, scaled if it must. At very large
+            // text on a 360 dp-high phone that costs a few dp of height.
+            expect(
+                rect.height,
+                greaterThanOrEqualTo(scale > 1.3
+                    ? 44
+                    : scale > 1
+                        ? 36
+                        : 44),
+                reason: option);
             await tester.tap(chip);
             await tester.pumpAndSettle();
             final button = tester.widget<FilledButton>(

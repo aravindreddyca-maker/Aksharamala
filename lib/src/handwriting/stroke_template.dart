@@ -70,6 +70,10 @@ enum WritingMode {
 
   /// No guide; the shape is judged wherever and however big the child draws.
   independent,
+
+  /// Beginner tracing over the guide: one continuous movement or many, any
+  /// start, direction or order. Only the finished shape is judged.
+  trace,
 }
 
 /// Total length of a stroke.

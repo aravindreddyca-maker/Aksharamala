@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'levels.dart';
+import 'teaching/teaching_progress.dart';
 
 enum ExperienceStage { explorer, creator, scholar, champion }
 
@@ -279,6 +280,8 @@ class ProgressRecord {
     this.questStars = const {},
     this.levelAttempts = const {},
     this.levelCorrect = const {},
+    this.teaching = const {},
+    this.rhymes = const {},
   });
 
   factory ProgressRecord.empty() => const ProgressRecord(
@@ -318,11 +321,53 @@ class ProgressRecord {
   final Map<String, int> levelAttempts;
   final Map<String, int> levelCorrect;
 
+  /// Teaching progress per lesson id (taught lessons only). Saves made before
+  /// teaching plans existed have none. Kept apart from formal examinations.
+  final Map<String, TeachingProgress> teaching;
+
+  /// Rhymes this child has heard / finished the word game for (rhyme id ->
+  /// state). Rhymes are for fun: nothing here pays stars, unlocks or counts as
+  /// a finished lesson. Saves made before rhymes existed have none.
+  final Map<String, RhymeProgress> rhymes;
+
+  /// This record with [teaching] replaced; everything else is the same.
+  ProgressRecord withTeaching(Map<String, TeachingProgress> teaching) =>
+      ProgressRecord(
+        completedLessons: completedLessons,
+        attempts: attempts,
+        correct: correct,
+        lastPlayed: lastPlayed,
+        earnedBadges: earnedBadges,
+        questStars: questStars,
+        levelAttempts: levelAttempts,
+        levelCorrect: levelCorrect,
+        teaching: teaching,
+        rhymes: rhymes,
+      );
+
+  /// This record with [rhymes] replaced; everything else is the same.
+  ProgressRecord withRhymes(Map<String, RhymeProgress> rhymes) =>
+      ProgressRecord(
+        completedLessons: completedLessons,
+        attempts: attempts,
+        correct: correct,
+        lastPlayed: lastPlayed,
+        earnedBadges: earnedBadges,
+        questStars: questStars,
+        levelAttempts: levelAttempts,
+        levelCorrect: levelCorrect,
+        teaching: teaching,
+        rhymes: rhymes,
+      );
+
   /// Stars [lessonId] has already paid. A finished quest with no record is
   /// treated as fully paid, so old saves cannot be replayed for more stars.
   int starsPaidBy(String lessonId) =>
       questStars[lessonId] ??
-      (completedLessons.contains(lessonId)
+      // A task reached from two places pays once, whichever was done first.
+      questStars[sharedCompletions[lessonId]] ??
+      (completedLessons.contains(lessonId) ||
+              completedLessons.contains(sharedCompletions[lessonId])
           ? starsPerQuest
           : legacyQuestAliases[lessonId] == null
               ? 0
@@ -336,12 +381,56 @@ class ProgressRecord {
     'telugu-recognise-001': 'te-a',
   };
 
+  /// Two lessons that are the same task reached from two places: finishing
+  /// either one finishes both (small a on the quest map and on the All letters
+  /// path). Applied when reading; nothing in the save is rewritten or removed.
+  static const sharedCompletions = <String, String>{
+    'en-trace-a-lower': 'alpha-english-001-lower',
+    'alpha-english-001-lower': 'en-trace-a-lower',
+  };
+
   /// Finished lessons, including new lessons whose older quest was finished.
   Set<String> get completedWithLegacy => {
         ...completedLessons,
+        for (final e in sharedCompletions.entries)
+          if (completedLessons.contains(e.value)) e.key,
         for (final e in legacyQuestAliases.entries)
           if (completedLessons.contains(e.value)) e.key,
       };
+
+  /// Teaching progress from a save. Anything that is not the expected shape
+  /// is skipped; the rest of the save is never lost to it.
+  static Map<String, TeachingProgress> _teachingFrom(Object? raw) {
+    final out = <String, TeachingProgress>{};
+    if (raw is! Map) return out;
+    for (final e in raw.entries) {
+      final value = e.value;
+      if (value is! Map) continue;
+      try {
+        out[e.key.toString()] = TeachingProgress.fromJson(
+          Map<String, dynamic>.from(value),
+        );
+      } on Object {
+        // Skip this lesson's record only.
+      }
+    }
+    return out;
+  }
+
+  /// Rhyme progress from a save; anything not the expected shape is skipped.
+  static Map<String, RhymeProgress> _rhymesFrom(Object? raw) {
+    final out = <String, RhymeProgress>{};
+    if (raw is! Map) return out;
+    for (final e in raw.entries) {
+      final value = e.value;
+      if (value is! Map) continue;
+      out[e.key.toString()] = RhymeProgress(
+        heard: value['heard'] == true,
+        done: value['done'] == true,
+      );
+    }
+    return out;
+  }
 
   Map<String, Object> toJson() => {
         'completedLessons': completedLessons.toList(),
@@ -352,6 +441,13 @@ class ProgressRecord {
         'questStars': questStars,
         'levelAttempts': levelAttempts,
         'levelCorrect': levelCorrect,
+        // Written only once a taught lesson has been started, so an older save
+        // re-saves exactly as it was.
+        if (teaching.isNotEmpty)
+          'teaching': teaching.map((k, v) => MapEntry(k, v.toJson())),
+        // Same rule: absent until a rhyme has been heard.
+        if (rhymes.isNotEmpty)
+          'rhymes': rhymes.map((k, v) => MapEntry(k, v.toJson())),
       };
 
   factory ProgressRecord.fromJson(Map<String, dynamic> json) => ProgressRecord(
@@ -376,5 +472,20 @@ class ProgressRecord {
         levelCorrect: Map<String, int>.from(
           json['levelCorrect'] as Map? ?? const {},
         ),
+        teaching: _teachingFrom(json['teaching']),
+        rhymes: _rhymesFrom(json['rhymes']),
       );
+}
+
+/// What one child has done with one rhyme. Not a lesson: no stars.
+class RhymeProgress {
+  const RhymeProgress({this.heard = false, this.done = false});
+
+  /// Tapped a line or Hear all at least once.
+  final bool heard;
+
+  /// Finished the missing-word activity.
+  final bool done;
+
+  Map<String, Object> toJson() => {'heard': heard, 'done': done};
 }

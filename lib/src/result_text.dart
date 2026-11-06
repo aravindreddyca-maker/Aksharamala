@@ -58,7 +58,7 @@ class ResultText {
   final String playAgain;
 
   /// English in every language, by design (see the note at the top).
-  String get backToMap => 'Back to map';
+  String get backToMap => 'Back to lessons';
 
   /// The sentence for a result. [gained] is what was really paid.
   String message({required bool correct, required int gained}) {

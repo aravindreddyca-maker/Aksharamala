@@ -250,15 +250,25 @@ void main() {
       final next =
           tester.widget<FilledButton>(find.byKey(const Key('next_letter')));
       expect(next.onPressed, isNotNull);
-      expect(find.text('Next: B'), findsOneWidget);
+      // English: the big letter is followed by its small letter (changed
+      // from going straight to B).
+      expect(find.text('Next: a'), findsOneWidget);
       expect(c.activeProgress.completedLessons, contains('alpha-english-001'));
       expect(c.activeProfile!.stars, 3);
 
-      await tester.tap(find.byKey(const Key('next_letter')));
+      await tester.pumpAndSettle(); // the celebration popup
+      await tester.tap(find.byKey(const Key('result_next')));
+      await tester.pumpAndSettle();
+      expect(
+          tester.widget<Text>(find.byKey(const Key('letter_big'))).data, 'a');
+      await traceRing(tester);
+      expect(find.text('Next: B'), findsOneWidget);
+      await tester.pumpAndSettle(); // the celebration popup
+      await tester.tap(find.byKey(const Key('result_next')));
       await tester.pumpAndSettle();
       expect(
           tester.widget<Text>(find.byKey(const Key('letter_big'))).data, 'B');
-      expect(find.text('2 / 26'), findsOneWidget);
+      expect(find.text('2 / 26 · big'), findsOneWidget);
     });
 
     testWidgets('a scribble does not finish a letter', (tester) async {
@@ -311,6 +321,12 @@ void main() {
       await tester.ensureVisible(find.byKey(const Key('letter_tile_25')));
       await tester.tap(find.byKey(const Key('letter_tile_25')));
       await tester.pumpAndSettle();
+      // Big Z leads to small z (English); only small z ends the list.
+      await traceRing(tester);
+      await tester.pumpAndSettle(); // the celebration popup
+      await tester.tap(find.byKey(const Key('result_next')));
+      await tester.pumpAndSettle();
+      await traceRing(tester);
       expect(find.text('All letters'), findsOneWidget);
       expect(
         tester
@@ -334,15 +350,16 @@ void main() {
       await tester.tap(find.byKey(const Key('alphabet_continue')));
       await tester.pumpAndSettle();
       await traceRing(tester);
-      await tester.pageBack();
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('result_back')));
       await tester.pumpAndSettle();
       expect(find.text('1 of 26 letters traced'), findsOneWidget);
       expect(c.activeProgress.completedLessons, contains('alpha-english-001'));
-      // "Next letter" now points at B.
+      // "Next letter" now points at the small a, then on to B.
       await tester.tap(find.byKey(const Key('alphabet_continue')));
       await tester.pumpAndSettle();
       expect(
-          tester.widget<Text>(find.byKey(const Key('letter_big'))).data, 'B');
+          tester.widget<Text>(find.byKey(const Key('letter_big'))).data, 'a');
     });
 
     testWidgets('a traced letter pays 3 stars once, however often it is redone',
@@ -352,7 +369,8 @@ void main() {
         await tester.tap(find.byKey(const Key('letter_tile_0')));
         await tester.pumpAndSettle();
         await traceRing(tester);
-        await tester.pageBack();
+        await tester.pumpAndSettle();
+        await tester.tap(find.byKey(const Key('result_back')));
         await tester.pumpAndSettle();
       }
       expect(c.activeProfile!.stars, 3);

@@ -112,12 +112,14 @@ class BatchLesson extends Lesson {
     this.skill = '',
     this.examples = const [],
     this.educatorReviewVerified = false,
+    Set<int>? levelSet,
   }) : super(
           speech: steps.first.speech,
           challenge: steps.firstWhere((s) => s.kind.isQuestion).prompt,
           options: const [],
           answer: '',
           ageBands: {_stageForAgeBand(ageBand)},
+          levelSet: levelSet,
         );
 
   final List<BatchStep> steps;

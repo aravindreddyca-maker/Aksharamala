@@ -16,6 +16,7 @@ import 'package:aksharamala/src/services/local_store.dart';
 import 'package:aksharamala/src/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import '../helpers/quest_trail.dart';
 
 class _NoDiskStore extends LocalStore {
   @override
@@ -191,7 +192,7 @@ void main() {
         );
       }
       print('INV|total lessons=${_all.length}|worlds=${curriculum.length}');
-      expect(_all.length, 177);
+      expect(_all.length, 178);
     });
 
     test('lesson ids are unique across the whole curriculum', () {
@@ -616,17 +617,7 @@ void main() {
             );
             await tester.pumpAndSettle();
             final card = find.byKey(Key('lesson_${l.id}'));
-            final trail = tester.widget<ListView>(
-              find.byKey(const Key('quest_trail')),
-            );
-            final scroll = trail.controller!;
-            final index = stageWorld.lessons.indexOf(l);
-            scroll.jumpTo(
-              (index * 344.0).clamp(0, scroll.position.maxScrollExtent),
-            );
-            await tester.pumpAndSettle();
-            await tester.ensureVisible(card);
-            await tester.pumpAndSettle();
+            await showQuest(tester, Key('lesson_${l.id}'));
             await tester.tap(card);
             await tester.pumpAndSettle();
             expect(find.byType(LessonScreen), findsOneWidget, reason: l.id);

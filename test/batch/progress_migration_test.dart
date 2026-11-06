@@ -255,23 +255,25 @@ void main() {
           again.activeProgress.levelAttempts, {'1|english': 1, '2|english': 1});
     });
 
-    test('Level 5 opens with nothing broken, in every world', () async {
+    test('the top level opens with nothing broken, in every world', () async {
       final c = await open(oldSave());
-      await c.setLevel(5);
+      await c.setLevel(8);
       expect(c.worlds.length, 5);
-      for (final w in c.worlds) {
-        expect(w.lessons, isEmpty, reason: 'no Level 5 lesson exists yet');
-      }
-      expect(c.activeProfile!.level, 5);
+      // English and Number Galaxy reach Level 8; the regional worlds stop at
+      // Level 5, so there they say "coming soon" (an empty world).
+      expect(c.worlds.firstWhere((w) => w.id == 'english').lessons, isNotEmpty);
+      expect(c.worlds.firstWhere((w) => w.id == 'numbers').lessons, isNotEmpty);
+      expect(c.worlds.firstWhere((w) => w.id == 'telugu').lessons, isEmpty);
+      expect(c.activeProfile!.level, 8);
       // Going back finds everything where it was.
       await c.setLevel(1);
       expect(c.worlds.any((w) => w.lessons.isNotEmpty), isTrue);
     });
 
-    test('a level outside 1-5 is held to the nearest', () async {
+    test('a level outside 1-8 is held to the nearest', () async {
       final c = await open(oldSave());
-      await c.setLevel(9);
-      expect(c.activeProfile!.level, 5);
+      await c.setLevel(12);
+      expect(c.activeProfile!.level, 8);
       await c.setLevel(0);
       expect(c.activeProfile!.level, 1);
     });
@@ -287,30 +289,35 @@ void main() {
     test('recommending in an empty world is refused, not silently wrong',
         () async {
       final c = await open(oldSave());
-      await c.setLevel(5);
-      expect(() => c.recommendedLesson(c.worlds.first), throwsStateError);
+      await c.setLevel(8);
+      final empty = c.worlds.firstWhere((w) => w.id == 'telugu');
+      expect(() => c.recommendedLesson(empty), throwsStateError);
     });
   });
 
   group('every lesson belongs to a level', () {
-    test('each of the 360 lessons is in at least one of Levels 1-4', () {
+    test('every lesson is in at least one of Levels 1-8', () {
       final c = AppController(store: LocalStore(fileOverride: file));
       var count = 0;
       for (final w in c.allWorlds) {
         for (final l in w.lessons) {
           expect(l.levels, isNotEmpty, reason: l.id);
-          expect(l.levels.every((n) => n >= 1 && n <= 4), isTrue, reason: l.id);
+          expect(l.levels.every((n) => n >= 1 && n <= 8), isTrue, reason: l.id);
           count++;
         }
       }
       expect(count, greaterThan(300));
     });
 
-    test('no lesson is shown in Level 5 yet', () {
+    test('every world has Level 5 lessons; Levels 6-8 are English and Numbers',
+        () {
       final c = AppController(store: LocalStore(fileOverride: file));
-      expect(
-          c.allWorlds.expand((w) => w.lessons).where((l) => l.supportsLevel(5)),
-          isEmpty);
+      for (final w in c.allWorlds) {
+        expect(w.lessons.where((l) => l.supportsLevel(5)), isNotEmpty,
+            reason: w.id);
+        final upper = w.lessons.where((l) => l.supportsLevel(6)).length;
+        expect(upper > 0, w.id == 'english' || w.id == 'numbers', reason: w.id);
+      }
     });
   });
 

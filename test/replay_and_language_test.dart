@@ -114,7 +114,7 @@ void main() {
       tester,
     ) async {
       final world = _world('english');
-      final lesson = world.lessons.first;
+      final lesson = world.lessons.firstWhere((l) => l.id == 'en-a');
       final tops = <int>{};
       for (var seed = 0; seed < 40; seed++) {
         await _open(tester, world, lesson, random: Random(seed));
@@ -175,7 +175,7 @@ void main() {
 
     testWidgets('Play again always gives a different order', (tester) async {
       final world = _world('english');
-      final lesson = world.lessons.first;
+      final lesson = world.lessons.firstWhere((l) => l.id == 'en-a');
       for (var seed = 0; seed < 12; seed++) {
         await _open(tester, world, lesson, random: Random(seed));
         var before = _order(tester, lesson);
@@ -214,7 +214,7 @@ void main() {
       tester,
     ) async {
       final world = _world('english');
-      final lesson = world.lessons.first;
+      final lesson = world.lessons.firstWhere((l) => l.id == 'en-a');
       await _open(tester, world, lesson, random: Random(9));
       await tester.tap(find.byKey(Key('answer_${lesson.answer}')));
       await tester.pumpAndSettle();
@@ -279,7 +279,7 @@ void main() {
           expect(e.value.trim(), isNotEmpty, reason: '$locale ${e.key}');
           expect(e.value, isNot(contains(r'$')), reason: '$locale ${e.key}');
         }
-        expect(t.backToMap, 'Back to map', reason: '$locale back button');
+        expect(t.backToMap, 'Back to lessons', reason: '$locale back button');
         expect(all['earned3'], contains('3'), reason: locale);
         expect(all['earned2'], contains('2'), reason: locale);
         expect(all['earned1'], contains('1'), reason: locale);
@@ -341,7 +341,9 @@ void main() {
           '${entry.key} quest pop-up (${correct ? 'right' : 'wrong'}) is in its language',
           (tester) async {
             final world = _world(entry.key);
-            final lesson = world.lessons.first;
+            final lesson = entry.key == 'english'
+                ? world.lessons.firstWhere((l) => l.id == 'en-a')
+                : world.lessons.first;
             expect(lesson.locale, startsWith(entry.value.substring(0, 2)));
             await _open(tester, world, lesson, size: const Size(800, 360));
             final wrong = lesson.options.firstWhere((o) => o != lesson.answer);
@@ -360,7 +362,7 @@ void main() {
             );
             // The play button follows the quest's language; the back button is
             // English everywhere.
-            expect(find.text('Back to map'), findsOneWidget);
+            expect(find.text('Back to lessons'), findsOneWidget);
             if (entry.key != 'english') {
               expect(find.text('Play again'), findsNothing);
             }
@@ -474,7 +476,8 @@ void main() {
       // And it is saved under the new id from now on.
       await c.recordResult(
         world: curriculum.first,
-        lesson: curriculum.first.lessons[1],
+        lesson:
+            curriculum.first.lessons.firstWhere((l) => l.id == 'en-letter-002'),
         correct: true,
       );
       final saved = jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;

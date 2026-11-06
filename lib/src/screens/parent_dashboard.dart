@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import '../app.dart';
 import '../levels.dart';
 import '../widgets/common.dart';
+import '../widgets/fit_content.dart';
+import 'exam/exam_scope.dart';
+import 'exam/examination_centre.dart';
 
 class ParentDashboard extends StatelessWidget {
   const ParentDashboard({super.key});
@@ -21,11 +24,15 @@ class ParentDashboard extends StatelessWidget {
         title: const Text('Parent Dashboard'),
         backgroundColor: Colors.transparent,
       ),
+      // Nothing scrolls: on a wide screen the summary and guidance sit beside
+      // the world progress; on a tall one they stack. Either way the whole
+      // dashboard is scaled to the screen.
       child: LayoutBuilder(
         builder: (context, constraints) {
-          final wide = constraints.maxWidth >= 900;
-          return ListView(
-            padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
+          final twoColumns = constraints.maxWidth >= 620 &&
+              constraints.maxWidth > constraints.maxHeight;
+          final summary = Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
                 children: [
@@ -74,15 +81,32 @@ class ParentDashboard extends StatelessWidget {
                   ),
                 ],
               ),
+              if (ExamScope.maybeOf(context) != null) ...[
+                const SizedBox(height: 14),
+                FilledButton.icon(
+                  key: const Key('open_exam_centre'),
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size.fromHeight(52),
+                  ),
+                  onPressed: () => openExaminationCentre(context),
+                  icon: const Icon(Icons.fact_check_rounded),
+                  label: const Text('Examination Centre'),
+                ),
+              ],
+            ],
+          );
+          final progress = Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
               const SectionTitle('Progress by world'),
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: wide ? 3 : 2,
-                  childAspectRatio: wide ? 2.4 : 2.15,
+                  crossAxisCount: 2,
+                  mainAxisExtent: twoColumns ? 100 : 100,
                   crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
+                  mainAxisSpacing: 8,
                 ),
                 itemCount: controller.worlds.length,
                 itemBuilder: (context, index) {
@@ -94,6 +118,7 @@ class ParentDashboard extends StatelessWidget {
                       : (100 * (record.correct[world.id] ?? 0) / attempts)
                           .round();
                   return Card(
+                    margin: EdgeInsets.zero,
                     clipBehavior: Clip.antiAlias,
                     child: Row(
                       children: [
@@ -107,7 +132,7 @@ class ParentDashboard extends StatelessWidget {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsets.all(12),
+                            padding: const EdgeInsets.all(8),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,14 +144,16 @@ class ParentDashboard extends StatelessWidget {
                                   style:
                                       Theme.of(context).textTheme.titleMedium,
                                 ),
-                                const SizedBox(height: 8),
+                                const SizedBox(height: 4),
                                 LinearProgressIndicator(
-                                  value: complete / world.lessons.length,
+                                  value: world.lessons.isEmpty
+                                      ? 0
+                                      : complete / world.lessons.length,
                                   minHeight: 9,
                                   borderRadius: BorderRadius.circular(9),
                                   color: world.darkColor,
                                 ),
-                                const SizedBox(height: 5),
+                                const SizedBox(height: 4),
                                 Text(
                                   '$complete/${world.lessons.length} quests • $worldAccuracy%',
                                   maxLines: 1,
@@ -141,24 +168,75 @@ class ParentDashboard extends StatelessWidget {
                   );
                 },
               ),
-              const SectionTitle('Learning guidance'),
-              if (wide)
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: _Insight(message: controller.adaptiveMessage),
-                    ),
-                    const SizedBox(width: 12),
-                    const Expanded(child: _Privacy()),
-                  ],
-                )
-              else ...[
-                _Insight(message: controller.adaptiveMessage),
-                const SizedBox(height: 10),
-                const _Privacy(),
-              ],
             ],
+          );
+          final guidance = Padding(
+            padding: const EdgeInsets.only(top: 12),
+            child: FilledButton.tonalIcon(
+              key: const Key('open_guidance'),
+              style: FilledButton.styleFrom(
+                minimumSize: const Size.fromHeight(52),
+              ),
+              onPressed: () => showDialog<void>(
+                context: context,
+                builder: (context) => Dialog(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 560),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: FitContent(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            const SectionTitle('Learning guidance'),
+                            _Insight(message: controller.adaptiveMessage),
+                            const SizedBox(height: 8),
+                            const _Privacy(),
+                            const SizedBox(height: 8),
+                            FilledButton(
+                              onPressed: () => Navigator.pop(context),
+                              child: const Text('Close'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              icon: const Icon(Icons.psychology_alt_rounded),
+              label: const Text('Learning guidance'),
+            ),
+          );
+          const pad = EdgeInsets.fromLTRB(20, 8, 20, 12);
+          if (twoColumns) {
+            return Padding(
+              padding: pad,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: FitContent(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [summary, guidance],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(child: FitContent(child: progress)),
+                ],
+              ),
+            );
+          }
+          return Padding(
+            padding: pad,
+            child: FitContent(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [summary, progress, guidance],
+              ),
+            ),
           );
         },
       ),
@@ -217,9 +295,13 @@ class _Insight extends StatelessWidget {
                 children: [
                   Icon(Icons.psychology_alt_rounded),
                   SizedBox(width: 8),
-                  Text(
-                    'Adaptive insight',
-                    style: TextStyle(fontWeight: FontWeight.w900),
+                  Flexible(
+                    child: Text(
+                      'Adaptive insight',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontWeight: FontWeight.w900),
+                    ),
                   ),
                 ],
               ),
@@ -250,9 +332,13 @@ class _Privacy extends StatelessWidget {
                 children: [
                   Icon(Icons.shield_rounded),
                   SizedBox(width: 8),
-                  Text(
-                    'Offline & private',
-                    style: TextStyle(fontWeight: FontWeight.w900),
+                  Flexible(
+                    child: Text(
+                      'Offline & private',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontWeight: FontWeight.w900),
+                    ),
                   ),
                 ],
               ),

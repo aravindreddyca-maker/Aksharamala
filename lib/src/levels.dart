@@ -1,16 +1,16 @@
-/// The five learning levels. A child chooses a level; nothing is chosen by age.
+/// The learning levels (1 to [lastLevel]). A child chooses a level; nothing is chosen by age.
 ///
-/// Level 1 is foundational learning and Level 5 is higher-level learning and
-/// application. Any child may open any level at any time, and each level keeps
+/// Level 1 is foundational learning and the top level is higher-level learning
+/// and application. Any child may open any level at any time, and each level keeps
 /// its own progress (lessons finished are tracked per lesson id, and answer
 /// statistics per level and world).
 library;
 
 const int firstLevel = 1;
-const int lastLevel = 5;
+const int lastLevel = 8;
 
-/// 1, 2, 3, 4, 5.
-const List<int> allLevels = [1, 2, 3, 4, 5];
+/// 1 to [lastLevel].
+const List<int> allLevels = [1, 2, 3, 4, 5, 6, 7, 8];
 
 class LevelInfo {
   const LevelInfo(this.number, this.tagline);
@@ -29,9 +29,12 @@ const List<LevelInfo> levelInfos = [
   LevelInfo(3, 'Intermediate'),
   LevelInfo(4, 'Advanced'),
   LevelInfo(5, 'Higher level'),
+  LevelInfo(6, 'Extension'),
+  LevelInfo(7, 'Challenge'),
+  LevelInfo(8, 'Mastery'),
 ];
 
-/// The level's name and tagline; a number outside 1-5 is held to the nearest.
+/// The level's name and tagline; a number outside 1-8 is held to the nearest.
 LevelInfo levelInfo(int level) => levelInfos[clampLevel(level) - 1];
 
 int clampLevel(int level) => level < firstLevel

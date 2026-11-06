@@ -15,8 +15,10 @@ import '../result_text.dart';
 import '../services/speech_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/fit_content.dart';
 import '../widgets/learning_visuals.dart';
 import '../widgets/writing_pad.dart';
+import 'lesson_navigation.dart';
 import 'lesson_screen.dart' show LessonResultDialog;
 
 typedef GlyphMaskLoader = Future<GlyphMask> Function(String glyph);
@@ -144,6 +146,12 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
       correct: correct,
     );
     if (!mounted) return;
+    final onNext = nextLessonAction(
+      context,
+      widget.world,
+      widget.lesson,
+      correct: correct,
+    );
     await showDialog<void>(
       context: context,
       barrierDismissible: false,
@@ -151,6 +159,7 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
         correct: correct,
         text: ResultText.forLocale(widget.lesson.locale),
         gained: gained,
+        onNext: onNext,
         onBack: () {
           Navigator.pop(context);
           Navigator.pop(context);
@@ -207,22 +216,40 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
           // On a short screen the prompt is set smaller, and scrolls if a long
           // sentence still does not fit, so nothing can overflow.
           final short = box.maxHeight < 420;
-          final prompt = _promptCard(compact: short);
+          final prompt = _promptCard(compact: short || box.maxHeight < 700);
           final visual = _visual();
+          if (_step.kind == StepKind.write) {
+            return _writeScreen(
+              wide: wide,
+              pad: pad,
+              prompt: prompt,
+              visual: visual,
+            );
+          }
           final activity = _activity();
           if (!wide) {
-            return SingleChildScrollView(
+            // Narrow or tall: prompt, picture and answers share the screen;
+            // the answers shrink to fit rather than scroll.
+            return Padding(
               padding: EdgeInsets.all(pad),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   prompt,
-                  const SizedBox(height: 10),
-                  SizedBox(height: 170, child: visual),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 8),
+                  // Counting needs a roomy board; other steps need the room
+                  // for their answers.
+                  Expanded(
+                    flex: _step.kind == StepKind.count ? 3 : 1,
+                    child: visual,
+                  ),
+                  const SizedBox(height: 8),
                   _feedback(),
-                  activity,
-                  const SizedBox(height: 10),
+                  Expanded(
+                    flex: _step.kind == StepKind.count ? 3 : 4,
+                    child: FitContent(child: activity),
+                  ),
+                  const SizedBox(height: 8),
                   _nextButton(),
                 ],
               ),
@@ -241,7 +268,7 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                       if (short) ...[
                         Flexible(
                           flex: 3,
-                          child: SingleChildScrollView(child: prompt),
+                          child: FitContent(child: prompt),
                         ),
                         const SizedBox(height: 8),
                         Expanded(flex: 2, child: visual),
@@ -264,7 +291,7 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                           children: [
                             _feedback(),
                             Expanded(
-                              child: SingleChildScrollView(child: activity),
+                              child: FitContent(child: activity),
                             ),
                           ],
                         ),
@@ -322,7 +349,13 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                   Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontWeight: FontWeight.w800,
                         color: GameTokens.ink,
-                        fontSize: compact ? 16 : null,
+                        // Long prompts (reading questions) are set smaller so the
+                        // whole question and its answers fit one screen.
+                        fontSize: step.prompt.length > 110
+                            ? 14
+                            : step.prompt.length > 70
+                                ? (compact ? 15 : 17)
+                                : (compact ? 16 : null),
                       ),
                 ),
               ),
@@ -430,9 +463,19 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
         padding: const EdgeInsets.all(12),
         child: Column(
           children: [
-            Expanded(child: Center(child: _bigGlyph(glyph ?? ''))),
+            Expanded(flex: 2, child: Center(child: _bigGlyph(glyph ?? ''))),
             if (showStars)
-              SizedBox(height: 60, child: _starsRow(step.quantity ?? 0, 36)),
+              // Shrinks with a small card instead of overflowing it.
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: SizedBox(
+                    width: 280,
+                    height: 60,
+                    child: _starsRow(step.quantity ?? 0, 36),
+                  ),
+                ),
+              ),
           ],
         ),
       ),
@@ -502,7 +545,7 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
         final rows = (n / perRow).ceil();
         final size = min(
           (box.maxWidth / perRow) - 10,
-          (box.maxHeight / rows) - 10,
+          ((box.maxHeight - 40) / rows) - 10,
         ).clamp(34.0, 88.0).toDouble();
         return Column(
           children: [
@@ -604,7 +647,18 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
                   textAlign: TextAlign.center,
                   style: scriptStyle(
                     step.speech,
-                    const TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
+                    // A long sentence is set smaller so it and the examples
+                    // under it fit one screen.
+                    TextStyle(
+                      fontSize: step.speech.length > 110
+                          ? 16
+                          : step.speech.length > 60
+                              ? 20
+                              : step.speech.length > 30
+                                  ? 24
+                                  : 28,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                 ),
                 if (widget.lesson.examples.isNotEmpty) ...[
@@ -716,15 +770,74 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
     );
   }
 
+  /// A writing step gets the whole screen. Wide: the prompt and the letter on
+  /// the left, a big tracing card on the right with Next under it. Narrow or
+  /// tall: the prompt on top and the tracing card filling everything left.
+  Widget _writeScreen({
+    required bool wide,
+    required double pad,
+    required Widget prompt,
+    required Widget visual,
+  }) {
+    final write = _writeActivity(_step);
+    if (wide) {
+      return Padding(
+        padding: EdgeInsets.fromLTRB(pad, 4, pad, pad),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              flex: 3,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Flexible(flex: 3, child: FitContent(child: prompt)),
+                  const SizedBox(height: 8),
+                  Expanded(flex: 2, child: visual),
+                ],
+              ),
+            ),
+            SizedBox(width: pad),
+            Expanded(
+              flex: 8,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(child: write),
+                  const SizedBox(height: 8),
+                  _nextButton(),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+    return Padding(
+      padding: EdgeInsets.all(pad),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Flexible(child: FitContent(child: prompt)),
+          const SizedBox(height: 8),
+          Expanded(child: write),
+          const SizedBox(height: 8),
+          _nextButton(),
+        ],
+      ),
+    );
+  }
+
+  /// The tracing card: it fills the room it is given, and the pad inside
+  /// takes as much of it as it can.
   Widget _writeActivity(BatchStep step) {
     final glyph = step.glyph ?? '';
     final template = templateFor(glyph);
-    final padSize = MediaQuery.sizeOf(context).height < 480 ? 230.0 : 300.0;
     Widget pad(GlyphMask? mask) => GuidedTracingVisual(
           glyph: glyph,
           color: _color,
-          child: SizedBox(
-            height: padSize,
+          child: Padding(
+            padding: const EdgeInsets.all(6),
             child: WritingPad(
               key: ValueKey('pad_${_index}_$_writeRound'),
               glyph: glyph,
@@ -740,17 +853,14 @@ class _BatchLessonScreenState extends State<BatchLessonScreen> {
         );
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.all(8),
         child: template != null
             ? pad(null)
             : FutureBuilder<GlyphMask>(
                 future: _maskFor(glyph),
                 builder: (context, snap) => snap.hasData
                     ? pad(snap.data)
-                    : SizedBox(
-                        height: padSize,
-                        child: const Center(child: CircularProgressIndicator()),
-                      ),
+                    : const Center(child: CircularProgressIndicator()),
               ),
       ),
     );
@@ -880,7 +990,12 @@ class _AnswerCard extends StatelessWidget {
                         style: scriptStyle(
                           label,
                           TextStyle(
-                            fontSize: kind == StepKind.pickWord ? 30 : 38,
+                            // Whole sentences are set smaller than single words or numbers.
+                            fontSize: label.length > 24
+                                ? 20
+                                : label.length > 12
+                                    ? 26
+                                    : (kind == StepKind.pickWord ? 30 : 38),
                             fontWeight: FontWeight.w900,
                             color: GameTokens.ink,
                           ),

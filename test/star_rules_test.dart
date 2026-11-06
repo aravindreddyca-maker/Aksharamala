@@ -33,8 +33,8 @@ void main() {
   }
 
   final world = curriculum.first;
-  final lesson = world.lessons.first;
-  final other = world.lessons[1];
+  final lesson = world.lessons.firstWhere((l) => l.id == 'en-a');
+  final other = world.lessons.firstWhere((l) => l.id == 'en-letter-002');
 
   Future<int> play(AppController c, {required bool correct, Lesson? l}) =>
       c.recordResult(world: world, lesson: l ?? lesson, correct: correct);
@@ -90,7 +90,8 @@ void main() {
       await play(c, correct: true); // a free replay
       expect(c.activeProgress.completedLessons, {lesson.id});
       expect(c.activeProgress.earnedBadges, contains('first-step'));
-      expect(c.recommendedLesson(world).id, other.id);
+      // en-a is done; the first unfinished quest is the big-A trace.
+      expect(c.recommendedLesson(world).id, 'en-trace');
       // Accuracy statistics still count practice attempts.
       expect(c.activeProgress.attempts[world.id], 2);
       expect(c.activeProgress.correct[world.id], 2);

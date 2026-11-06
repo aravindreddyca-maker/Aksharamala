@@ -6,11 +6,33 @@ import 'curriculum.dart';
 import 'levels.dart';
 import 'models.dart';
 import 'services/local_store.dart';
+import 'teaching/teaching_plan.dart';
+import 'teaching/teaching_progress.dart';
 
 class AppController extends ChangeNotifier {
-  AppController({LocalStore? store}) : _store = store ?? LocalStore();
+  /// [teachingPlanLoader] supplies the teaching plan files (the app passes
+  /// [assetTeachingPlanLoader]). With none, no lesson has a plan and every
+  /// lesson keeps its existing screen.
+  ///
+  /// With [parseTeachingPlansInBackground] the plan files are split into
+  /// lessons on another isolate and start-up does not wait for them (the app
+  /// sets it; tests leave it off so loading is immediate and deterministic).
+  AppController({
+    LocalStore? store,
+    this.teachingPlanLoader,
+    this.parseTeachingPlansInBackground = false,
+  }) : _store = store ?? LocalStore();
 
   final LocalStore _store;
+  final TeachingPlanLoader? teachingPlanLoader;
+  final bool parseTeachingPlansInBackground;
+
+  /// Completes when the teaching plans are indexed (already complete when
+  /// there is no loader).
+  Future<void> teachingPlansReady = Future<void>.value();
+
+  /// The teaching plans that loaded and validated, by lesson id.
+  TeachingPlanLibrary teachingPlans = TeachingPlanLibrary.empty;
   List<ChildProfile> profiles = [];
   Map<String, ProgressRecord> progress = {};
   ChildProfile? activeProfile;
@@ -19,7 +41,7 @@ class AppController extends ChangeNotifier {
   /// Every lesson there is, across all levels. Which of them a child sees is
   /// decided by the child's level (see [worlds]).
   List<LearningWorld> get allWorlds =>
-      worldsWithBatch(worldsWithAge56(curriculum));
+      worldsWithBatch(worldsWithLevel3(worldsWithAge56(curriculum)));
 
   /// The worlds the child sees: the lessons of the active child's level (Level
   /// 1 when no child is chosen yet). A world with no lessons at that level is
@@ -30,11 +52,124 @@ class AppController extends ChangeNotifier {
   }
 
   Future<void> initialise() async {
+    if (parseTeachingPlansInBackground) {
+      // Do not hold the app start-up for it; lessons without a plan yet simply
+      // open their existing screen.
+      teachingPlansReady = loadTeachingPlans().then((_) => notifyListeners());
+    } else {
+      await loadTeachingPlans();
+    }
     final snapshot = await _store.load();
     profiles = List<ChildProfile>.of(snapshot.profiles);
     progress = Map<String, ProgressRecord>.of(snapshot.progress);
     if (profiles.isNotEmpty) activeProfile = profiles.first;
     loaded = true;
+    notifyListeners();
+  }
+
+  /// Loads the teaching plans. A missing or broken plan file never stops the
+  /// app: the lessons concerned simply keep their existing screens.
+  Future<void> loadTeachingPlans() async {
+    final loader = teachingPlanLoader;
+    if (loader == null) return;
+    try {
+      final files = await loader();
+      final index = parseTeachingPlansInBackground
+          ? await compute(indexPlanFiles, files)
+          : indexPlanFiles(files);
+      teachingPlans = TeachingPlanLibrary.fromIndex(index);
+    } on Object {
+      teachingPlans = TeachingPlanLibrary.empty;
+    }
+  }
+
+  /// The teaching plan for [lessonId], or null when it has none.
+  TeachingPlan? planFor(String lessonId) => teachingPlans.planFor(lessonId);
+
+  /// What the active child has done in a taught lesson.
+  TeachingProgress teachingProgressFor(String lessonId) =>
+      activeProgress.teaching[lessonId] ?? TeachingProgress.empty;
+
+  /// Saves teaching progress for the active child. It never touches stars,
+  /// finished lessons or exam records.
+  Future<void> saveTeachingProgress(
+    String lessonId,
+    TeachingProgress value,
+  ) async {
+    final profile = activeProfile;
+    if (profile == null) return;
+    final stamped = value.copyWith(
+      updatedAt: DateTime.now().toUtc().toIso8601String(),
+    );
+    final old = activeProgress;
+    progress[profile.id] =
+        old.withTeaching({...old.teaching, lessonId: stamped});
+    await _persist();
+    notifyListeners();
+  }
+
+  /// The child passed the understanding check (or the remediation check).
+  /// Saves the teaching progress as mastered and, the first time, sends the
+  /// result through [recordResult] so stars, finished lessons and unlocks work
+  /// exactly as for every other quest. Returns the stars gained.
+  Future<int> recordTeachingMastery({
+    required LearningWorld world,
+    required Lesson lesson,
+    required TeachingProgress teaching,
+  }) async {
+    await saveTeachingProgress(
+      lesson.id,
+      teaching.copyWith(mastery: MasteryStatus.mastered, clearPhase: true),
+    );
+    if (activeProgress.completedLessons.contains(lesson.id)) return 0;
+    return recordResult(world: world, lesson: lesson, correct: true);
+  }
+
+  /// The child used up the remediation cycles. The status is saved, the lesson
+  /// is NOT marked finished and no stars are paid; the child can carry on.
+  Future<void> recordTeachingNeedsSupport({
+    required Lesson lesson,
+    required TeachingProgress teaching,
+  }) =>
+      saveTeachingProgress(
+        lesson.id,
+        teaching.copyWith(
+          mastery: activeProgress.teaching[lesson.id]?.isMastered ?? false
+              ? MasteryStatus.mastered
+              : MasteryStatus.needsSupport,
+          clearPhase: true,
+        ),
+      );
+
+  /// What the active child has done with a rhyme.
+  RhymeProgress rhymeProgressFor(String rhymeId) =>
+      activeProgress.rhymes[rhymeId] ?? const RhymeProgress();
+
+  /// The active child heard the rhyme (tapped a line or Hear all). Saves only
+  /// the first time; never touches stars, finished lessons or exams.
+  Future<void> markRhymeHeard(String rhymeId) =>
+      _saveRhyme(rhymeId, heard: true, done: false);
+
+  /// The active child finished the rhyme's word game. No stars are paid.
+  Future<void> markRhymeDone(String rhymeId) =>
+      _saveRhyme(rhymeId, heard: true, done: true);
+
+  Future<void> _saveRhyme(
+    String rhymeId, {
+    required bool heard,
+    required bool done,
+  }) async {
+    final profile = activeProfile;
+    if (profile == null) return;
+    final old = activeProgress;
+    final before = old.rhymes[rhymeId] ?? const RhymeProgress();
+    final next = RhymeProgress(
+      heard: before.heard || heard,
+      done: before.done || done,
+    );
+    if (next.heard == before.heard && next.done == before.done) return;
+    progress[profile.id] = old.withRhymes({...old.rhymes, rhymeId: next});
+    await _persist();
     notifyListeners();
   }
 
@@ -196,6 +331,8 @@ class AppController extends ChangeNotifier {
       questStars: {...old.questStars, lesson.id: paid + gained},
       levelAttempts: levelAttempts,
       levelCorrect: levelCorrect,
+      teaching: old.teaching,
+      rhymes: old.rhymes,
     );
     final updated = profile.copyWith(stars: profile.stars + gained);
     profiles =

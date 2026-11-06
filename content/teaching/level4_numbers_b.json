@@ -1,0 +1,3140 @@
+{
+  "schema_version": 1,
+  "status": "draft_unverified",
+  "lessons": [
+    {
+      "lesson_id": "numbers-l4-009",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Percent as hundredths",
+      "objective": "Connect fractions, decimals and percentages.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l4-008"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l4-009.introduce.1",
+          "text": "Percent means out of 100. If 25 squares out of 100 are shaded, that is 25%.",
+          "speech": "Percent means out of 100. If 25 squares out of 100 are shaded, that is 25 percent.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "25% = 25/100"
+          }
+        },
+        {
+          "id": "numbers-l4-009.introduce.2",
+          "text": "The sign % is a short way to write hundredths. Learn these friends: 50% = 1/2, 25% = 1/4 and 10% = 1/10.",
+          "speech": "The sign % is a short way to write hundredths. Learn these friends: 50 percent equals 1 over 2, 25 percent equals 1 over 4 and 10 percent equals 1 over 10.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "50% = 1/2   25% = 1/4   10% = 1/10"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-009.demonstrate.1",
+          "text": "Find 25% of 20 apples. 25% is 1/4, so share the 20 apples into 4 equal groups. One group is 5 apples.",
+          "speech": "Find 25 percent of 20 apples. 25 percent is 1 over 4, so share the 20 apples into 4 equal groups. One group is 5 apples.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🍎",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 5
+              }
+            ],
+            "operator": "+",
+            "revealCount": 4,
+            "countAll": false,
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l4-009.demonstrate.2",
+          "text": "So 25% of 20 = 5. To change a percent to a decimal, divide by 100: 25% = 25/100 = 0.25.",
+          "speech": "So 25 percent of 20 equals 5. To change a percent to a decimal, divide by 100: 25 percent equals 25 over 100 equals 0.25.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🍎",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 5
+              }
+            ],
+            "operator": "+",
+            "revealCount": 1,
+            "countAll": false,
+            "result": 5,
+            "showResult": true
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-009.guided.1",
+          "prompt": "20 beads: 5 are red. What percent of the beads are red?",
+          "speech": "20 beads: 5 are red. What percent of the beads are red?",
+          "options": [
+            "25%",
+            "5%",
+            "75%"
+          ],
+          "answer": "25%",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔴",
+                "count": 5
+              },
+              {
+                "emoji": "⚪",
+                "count": 15
+              }
+            ],
+            "operator": "+",
+            "revealCount": 2,
+            "countAll": false,
+            "showResult": false
+          },
+          "hints": [
+            "Make the total 100. How many times does 20 go into 100?",
+            "Multiply both 5 and 20 by 5 to get ?/100."
+          ],
+          "wrong_feedback": {
+            "5%": "5% would mean 5 out of 100 beads. Here there are only 20 beads, so scale up to 100.",
+            "75%": "That is the percent of beads that are NOT red."
+          },
+          "explanation": "5/20 = 25/100 = 25%.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-009.guided.2",
+          "prompt": "What is 10% of 60?",
+          "speech": "What is 10 percent of 60?",
+          "options": [
+            "10",
+            "6",
+            "54"
+          ],
+          "answer": "6",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Percent means out of 100, so 10% is 10/100. Which friendly fraction is that?",
+            "10% = 1/10, so share 60 into 10 equal parts and take 1 of them."
+          ],
+          "wrong_feedback": {
+            "10": "10 is the percent itself, not an amount. Find 10 out of every 100 in 60.",
+            "54": "54 is what is left after taking 10% away. The question asks for the 10% part."
+          },
+          "explanation": "10% of 60 = 10/100 x 60 = 6.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-009.practice.1",
+          "prompt": "Write 7/20 as a percent.",
+          "speech": "Write 7 over 20 as a percent.",
+          "options": [
+            "7%",
+            "20%",
+            "35%"
+          ],
+          "answer": "35%",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Percent means out of 100. What do you multiply 20 by to reach 100?",
+            "Multiply the top and the bottom by 5: 7/20 = ?/100."
+          ],
+          "wrong_feedback": {
+            "7%": "You used the top number. Make the bottom number 100 first, then read the top.",
+            "20%": "20% uses the bottom number. Multiply top and bottom by 5 to get hundredths."
+          },
+          "explanation": "7/20 = 35/100 = 35%.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-009.practice.2",
+          "prompt": "Write 7% as a decimal.",
+          "speech": "Write 7 percent as a decimal.",
+          "options": [
+            "0.07",
+            "7",
+            "0.7"
+          ],
+          "answer": "0.07",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "7% means 7 out of 100. Write it as a fraction first: 7/100.",
+            "Dividing by 100 moves the decimal point two places to the left. Fill empty places with 0."
+          ],
+          "wrong_feedback": {
+            "7": "That is the percent number unchanged. Divide by 100 by moving the point two places left.",
+            "0.7": "That only divides by 10. Percent means out of 100, so divide by 100: two places left."
+          },
+          "explanation": "7% = 7/100 = 0.07.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-009.practice.3",
+          "prompt": "A class has 40 children. 25% of them walk to school. How many children walk?",
+          "speech": "A class has 40 children. 25 percent of them walk to school. How many children walk?",
+          "options": [
+            "30",
+            "10",
+            "25"
+          ],
+          "answer": "10",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Percent means out of 100. 25% of the class is 25 out of every 100.",
+            "Write 25% as a simple fraction and find that fraction of 40."
+          ],
+          "wrong_feedback": {
+            "30": "That is how many children do NOT walk. Read what the question asks.",
+            "25": "25 is the percent, not a number of children. Find 25% of 40."
+          },
+          "explanation": "25% of 40 = 25/100 x 40 = 10.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-009.check.1",
+          "prompt": "What is 75% of 40?",
+          "speech": "What is 75 percent of 40?",
+          "options": [
+            "75",
+            "30",
+            "10"
+          ],
+          "answer": "30",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "75": "75 is the percent itself, not an amount. Find 75 out of every 100 in 40.",
+            "10": "10 is what is left after taking 75% away. The question asks for the 75% part."
+          },
+          "explanation": "75% of 40 = 75/100 x 40 = 30.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-009.check.2",
+          "prompt": "Which fraction is the same as 25%?",
+          "speech": "Which fraction is the same as 25 percent?",
+          "options": [
+            "1/25",
+            "1/2",
+            "1/4"
+          ],
+          "answer": "1/4",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "1/25": "1/25 has 25 on the bottom, but 25% means 25/100. Simplify 25/100.",
+            "1/2": "1/2 is 50%, not 25%."
+          },
+          "explanation": "25% = 25/100 = 1/4.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-009.check.3",
+          "prompt": "Write 9/25 as a percent.",
+          "speech": "Write 9 over 25 as a percent.",
+          "options": [
+            "36%",
+            "9%",
+            "25%"
+          ],
+          "answer": "36%",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "9%": "You used the top number. Make the bottom number 100 first, then read the top.",
+            "25%": "25% uses the bottom number. Multiply top and bottom by 4 to get hundredths."
+          },
+          "explanation": "9/25 = 36/100 = 36%.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-009.remediation_explain.1",
+            "text": "Let us look again. Percent means out of 100. Out of 10 beads, 1 red bead is 10 out of 100, which is 10%.",
+            "speech": "Let us look again. Percent means out of 100. Out of 10 beads, 1 red bead is 10 out of 100, which is 10 percent.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🔴",
+                  "count": 1
+                },
+                {
+                  "emoji": "⚪",
+                  "count": 9
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false,
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l4-009.remediation_explain.2",
+            "text": "Use friendly fractions: 50% is a half, 25% is a quarter, 10% is one tenth. To find 10% of 60, share 60 into 10 equal parts. Each part is 6.",
+            "speech": "Use friendly fractions: 50 percent is a half, 25 percent is a quarter, 10 percent is one tenth. To find 10 percent of 60, share 60 into 10 equal parts. Each part is 6.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "10% of 60 = 60 ÷ 10 = 6"
+            }
+          },
+          {
+            "id": "numbers-l4-009.remediation_explain.3",
+            "text": "To write a percent as a decimal, divide by 100: move the decimal point two places to the left. 40% = 40/100 = 0.4.",
+            "speech": "To write a percent as a decimal, divide by 100: move the decimal point two places to the left. 40 percent equals 40 over 100 equals 0.4.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "40% = 40/100 = 0.4"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-009.remediation_guided.1",
+            "prompt": "10 beads: 3 are red. What percent of the beads are red?",
+            "speech": "10 beads: 3 are red. What percent of the beads are red?",
+            "options": [
+              "3%",
+              "70%",
+              "30%"
+            ],
+            "answer": "30%",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🔴",
+                  "count": 3
+                },
+                {
+                  "emoji": "⚪",
+                  "count": 7
+                }
+              ],
+              "operator": "+",
+              "revealCount": 2,
+              "countAll": false,
+              "showResult": false
+            },
+            "hints": [
+              "Make the total 100. How many times does 10 go into 100?",
+              "Multiply both 3 and 10 by 10 to get ?/100."
+            ],
+            "wrong_feedback": {
+              "3%": "3% would mean 3 out of 100 beads. Here there are only 10 beads, so scale up to 100.",
+              "70%": "That is the percent of beads that are NOT red."
+            },
+            "explanation": "3/10 = 30/100 = 30%.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-009.remediation_guided.2",
+            "prompt": "What is 20% of 50?",
+            "speech": "What is 20 percent of 50?",
+            "options": [
+              "10",
+              "20",
+              "40"
+            ],
+            "answer": "10",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Percent means out of 100, so 20% is 20/100. Which friendly fraction is that?",
+              "20% = 1/5, so share 50 into 5 equal parts and take 1 of them."
+            ],
+            "wrong_feedback": {
+              "20": "20 is the percent itself, not an amount. Find 20 out of every 100 in 50.",
+              "40": "40 is what is left after taking 20% away. The question asks for the 20% part."
+            },
+            "explanation": "20% of 50 = 20/100 x 50 = 10.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-009.remediation_check.1",
+            "prompt": "Write 40% as a decimal.",
+            "speech": "Write 40 percent as a decimal.",
+            "options": [
+              "40",
+              "0.4",
+              "4"
+            ],
+            "answer": "0.4",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "40": "That is the percent number unchanged. Divide by 100 by moving the point two places left.",
+              "4": "That only divides by 10. Percent means out of 100, so divide by 100: two places left."
+            },
+            "explanation": "40% = 40/100 = 0.4.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-009.remediation_check.2",
+            "prompt": "What is 10% of 90?",
+            "speech": "What is 10 percent of 90?",
+            "options": [
+              "9",
+              "10",
+              "81"
+            ],
+            "answer": "9",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "10": "10 is the percent itself, not an amount. Find 10 out of every 100 in 90.",
+              "81": "81 is what is left after taking 10% away. The question asks for the 10% part."
+            },
+            "explanation": "10% of 90 = 10/100 x 90 = 9.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-009.remediation_check.3",
+            "prompt": "Which fraction is the same as 50%?",
+            "speech": "Which fraction is the same as 50 percent?",
+            "options": [
+              "1/50",
+              "1/4",
+              "1/2"
+            ],
+            "answer": "1/2",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "1/50": "1/50 has 50 on the bottom, but 50% means 50/100. Simplify 50/100.",
+              "1/4": "1/4 is 25%, not 50%."
+            },
+            "explanation": "50% = 50/100 = 1/2.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: percent as out of 100, friendly percents (20, 25, 50, 75), percent of a quantity, percent to decimal, fraction to percent; whole-number answers only.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of percent signs, ratios, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-010",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Ratio introduction",
+      "objective": "Write simple part-to-part ratios.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l4-009"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l4-010.introduce.1",
+          "text": "A ratio compares two amounts. Here are 2 red balls and 3 blue balls. The ratio of red to blue is 2 : 3.",
+          "speech": "A ratio compares two amounts. Here are 2 red balls and 3 blue balls. The ratio of red to blue is 2 to 3.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔴",
+                "count": 2
+              },
+              {
+                "emoji": "🔵",
+                "count": 3
+              }
+            ],
+            "operator": "vs",
+            "revealCount": 2,
+            "countAll": false,
+            "labels": [
+              "red",
+              "blue"
+            ],
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l4-010.introduce.2",
+          "text": "Order matters. Red to blue is 2 : 3, but blue to red is 3 : 2. Say the first word first.",
+          "speech": "Order matters. Red to blue is 2 to 3, but blue to red is 3 to 2. Say the first word first.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "red : blue = 2 : 3"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-010.demonstrate.1",
+          "text": "Simplest form: 12 red and 8 blue make the ratio 12 : 8. Divide both numbers by 4 to get 3 : 2. That is 3 red for every 2 blue.",
+          "speech": "Simplest form: 12 red and 8 blue make the ratio 12 to 8. Divide both numbers by 4 to get 3 to 2. That is 3 red for every 2 blue.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔴",
+                "count": 12
+              },
+              {
+                "emoji": "🔵",
+                "count": 8
+              }
+            ],
+            "operator": "vs",
+            "revealCount": 2,
+            "countAll": false,
+            "labels": [
+              "red",
+              "blue"
+            ],
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l4-010.demonstrate.2",
+          "text": "Check: 3 x 4 = 12 and 2 x 4 = 8, so 3 : 2 is the same ratio as 12 : 8. Multiply or divide both parts by the same number.",
+          "speech": "Check: 3 times 4 equals 12 and 2 times 4 equals 8, so 3 to 2 is the same ratio as 12 to 8. Multiply or divide both parts by the same number.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "12 : 8 = 3 : 2"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-010.guided.1",
+          "prompt": "A bag has 3 red balls and 5 blue balls. What is the ratio of red to blue?",
+          "speech": "A bag has 3 red balls and 5 blue balls. What is the ratio of red to blue?",
+          "options": [
+            "3 : 5",
+            "5 : 3",
+            "3 : 8"
+          ],
+          "answer": "3 : 5",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔴",
+                "count": 3
+              },
+              {
+                "emoji": "🔵",
+                "count": 5
+              }
+            ],
+            "operator": "vs",
+            "revealCount": 2,
+            "countAll": false,
+            "labels": [
+              "red",
+              "blue"
+            ],
+            "showResult": false
+          },
+          "hints": [
+            "Ratio of red to blue: the red number goes first.",
+            "Write the number of red balls, then the sign :, then the number of blue balls."
+          ],
+          "wrong_feedback": {
+            "5 : 3": "That is blue to red. The question asks red to blue, so say red first.",
+            "3 : 8": "3 : 8 compares red with ALL the balls. A part-to-part ratio compares red with blue."
+          },
+          "explanation": "3 red and 5 blue give the ratio 3 : 5.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-010.guided.2",
+          "prompt": "A bag has 1 red balls and 4 blue balls. What is the ratio of red to blue?",
+          "speech": "A bag has 1 red balls and 4 blue balls. What is the ratio of red to blue?",
+          "options": [
+            "4 : 1",
+            "1 : 4",
+            "1 : 5"
+          ],
+          "answer": "1 : 4",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🔴",
+                "count": 1
+              },
+              {
+                "emoji": "🔵",
+                "count": 4
+              }
+            ],
+            "operator": "vs",
+            "revealCount": 2,
+            "countAll": false,
+            "labels": [
+              "red",
+              "blue"
+            ],
+            "showResult": false
+          },
+          "hints": [
+            "Ratio of red to blue: the red number goes first.",
+            "Write the number of red balls, then the sign :, then the number of blue balls."
+          ],
+          "wrong_feedback": {
+            "4 : 1": "That is blue to red. The question asks red to blue, so say red first.",
+            "1 : 5": "1 : 5 compares red with ALL the balls. A part-to-part ratio compares red with blue."
+          },
+          "explanation": "1 red and 4 blue give the ratio 1 : 4.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-010.practice.1",
+          "prompt": "Write the ratio 12 : 10 in its simplest form.",
+          "speech": "Write the ratio 12 to 10 in its simplest form.",
+          "options": [
+            "5 : 6",
+            "12 : 10",
+            "6 : 5"
+          ],
+          "answer": "6 : 5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Find a number that divides both 12 and 10 exactly.",
+            "Both 12 and 10 are in the 2 times table. Divide both by 2."
+          ],
+          "wrong_feedback": {
+            "5 : 6": "Right numbers, wrong order. Keep the order of the question.",
+            "12 : 10": "That is the ratio you started with. Divide both numbers by the same number to make it simpler."
+          },
+          "explanation": "12 ÷ 2 = 6 and 10 ÷ 2 = 5, so 12 : 10 = 6 : 5.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-010.practice.2",
+          "prompt": "In the ratio 3 : 4, how many equal parts are there in all?",
+          "speech": "In the ratio 3 to 4, how many equal parts are there in all?",
+          "options": [
+            "7",
+            "12",
+            "1"
+          ],
+          "answer": "7",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Each number in a ratio is a number of equal parts. All the parts are the two numbers put together.",
+            "Add the two numbers of the ratio."
+          ],
+          "wrong_feedback": {
+            "12": "You multiplied. To count all the parts, put the parts together by adding.",
+            "1": "That is the difference. All the parts together need an addition."
+          },
+          "explanation": "3 + 4 = 7 equal parts.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-010.practice.3",
+          "prompt": "Milk and water are mixed in the ratio 3 : 4. There are 12 cups of milk. How many cups of water are there?",
+          "speech": "Milk and water are mixed in the ratio 3 to 4. There are 12 cups of milk. How many cups of water are there?",
+          "options": [
+            "4",
+            "16",
+            "13"
+          ],
+          "answer": "16",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "How many times bigger is 12 than the milk part 3?",
+            "The milk part was multiplied by 4. Do the same to the water part 4."
+          ],
+          "wrong_feedback": {
+            "4": "4 is the water in just one set. There are 4 sets, because 3 x 4 = 12.",
+            "13": "You added the same amount to both parts. In a ratio, multiply both parts by the same number."
+          },
+          "explanation": "3 x 4 = 12, so water = 4 x 4 = 16.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-010.check.1",
+          "prompt": "A bag has 5 red balls and 2 blue balls. What is the ratio of red to blue?",
+          "speech": "A bag has 5 red balls and 2 blue balls. What is the ratio of red to blue?",
+          "options": [
+            "2 : 5",
+            "5 : 2",
+            "5 : 7"
+          ],
+          "answer": "5 : 2",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "2 : 5": "That is blue to red. The question asks red to blue, so say red first.",
+            "5 : 7": "5 : 7 compares red with ALL the balls. A part-to-part ratio compares red with blue."
+          },
+          "explanation": "5 red and 2 blue give the ratio 5 : 2.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-010.check.2",
+          "prompt": "Write the ratio 18 : 6 in its simplest form.",
+          "speech": "Write the ratio 18 to 6 in its simplest form.",
+          "options": [
+            "1 : 3",
+            "18 : 6",
+            "3 : 1"
+          ],
+          "answer": "3 : 1",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "1 : 3": "Right numbers, wrong order. Keep the order of the question.",
+            "18 : 6": "That is the ratio you started with. Divide both numbers by the same number to make it simpler."
+          },
+          "explanation": "18 ÷ 6 = 3 and 6 ÷ 6 = 1, so 18 : 6 = 3 : 1.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-010.check.3",
+          "prompt": "A basket has 3 apples and 2 oranges. What fraction of the fruit is apples?",
+          "speech": "A basket has 3 apples and 2 oranges. What fraction of the fruit is apples?",
+          "options": [
+            "3/5",
+            "3/2",
+            "2/5"
+          ],
+          "answer": "3/5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "3/2": "That compares apples with oranges. A fraction of the fruit compares apples with ALL the fruit.",
+            "2/5": "That is the fraction of oranges, not apples."
+          },
+          "explanation": "There are 3 + 2 = 5 fruits, so apples are 3/5.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-010.remediation_explain.1",
+            "text": "Let us count again. 4 laddoos and 1 jalebi. The ratio of laddoos to jalebis is 4 : 1.",
+            "speech": "Let us count again. 4 laddoos and 1 jalebi. The ratio of laddoos to jalebis is 4 to 1.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🟠",
+                  "count": 4
+                },
+                {
+                  "emoji": "🥨",
+                  "count": 1
+                }
+              ],
+              "operator": "vs",
+              "revealCount": 2,
+              "countAll": false,
+              "labels": [
+                "laddoos",
+                "jalebi"
+              ],
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l4-010.remediation_explain.2",
+            "text": "Keep the order of the question. Laddoos to jalebis is 4 : 1. Jalebis to laddoos is 1 : 4.",
+            "speech": "Keep the order of the question. Laddoos to jalebis is 4 to 1. Jalebis to laddoos is 1 to 4.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "4 : 1   not   1 : 4"
+            }
+          },
+          {
+            "id": "numbers-l4-010.remediation_explain.3",
+            "text": "To simplify a ratio, divide both parts by the same number. 6 : 4 divided by 2 is 3 : 2.",
+            "speech": "To simplify a ratio, divide both parts by the same number. 6 to 4 divided by 2 is 3 to 2.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "6 : 4 = 3 : 2"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-010.remediation_guided.1",
+            "prompt": "A bag has 4 red balls and 3 blue balls. What is the ratio of red to blue?",
+            "speech": "A bag has 4 red balls and 3 blue balls. What is the ratio of red to blue?",
+            "options": [
+              "3 : 4",
+              "4 : 7",
+              "4 : 3"
+            ],
+            "answer": "4 : 3",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🔴",
+                  "count": 4
+                },
+                {
+                  "emoji": "🔵",
+                  "count": 3
+                }
+              ],
+              "operator": "vs",
+              "revealCount": 2,
+              "countAll": false,
+              "labels": [
+                "red",
+                "blue"
+              ],
+              "showResult": false
+            },
+            "hints": [
+              "Ratio of red to blue: the red number goes first.",
+              "Write the number of red balls, then the sign :, then the number of blue balls."
+            ],
+            "wrong_feedback": {
+              "3 : 4": "That is blue to red. The question asks red to blue, so say red first.",
+              "4 : 7": "4 : 7 compares red with ALL the balls. A part-to-part ratio compares red with blue."
+            },
+            "explanation": "4 red and 3 blue give the ratio 4 : 3.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-010.remediation_guided.2",
+            "prompt": "In the ratio 2 : 5, how many equal parts are there in all?",
+            "speech": "In the ratio 2 to 5, how many equal parts are there in all?",
+            "options": [
+              "7",
+              "10",
+              "3"
+            ],
+            "answer": "7",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Each number in a ratio is a number of equal parts. All the parts are the two numbers put together.",
+              "Add the two numbers of the ratio."
+            ],
+            "wrong_feedback": {
+              "10": "You multiplied. To count all the parts, put the parts together by adding.",
+              "3": "That is the difference. All the parts together need an addition."
+            },
+            "explanation": "2 + 5 = 7 equal parts.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-010.remediation_check.1",
+            "prompt": "Write the ratio 10 : 4 in its simplest form.",
+            "speech": "Write the ratio 10 to 4 in its simplest form.",
+            "options": [
+              "2 : 5",
+              "5 : 2",
+              "10 : 4"
+            ],
+            "answer": "5 : 2",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "2 : 5": "Right numbers, wrong order. Keep the order of the question.",
+              "10 : 4": "That is the ratio you started with. Divide both numbers by the same number to make it simpler."
+            },
+            "explanation": "10 ÷ 2 = 5 and 4 ÷ 2 = 2, so 10 : 4 = 5 : 2.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-010.remediation_check.2",
+            "prompt": "Milk and water are mixed in the ratio 1 : 3. There are 5 cups of milk. How many cups of water are there?",
+            "speech": "Milk and water are mixed in the ratio 1 to 3. There are 5 cups of milk. How many cups of water are there?",
+            "options": [
+              "15",
+              "3",
+              "7"
+            ],
+            "answer": "15",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "3": "3 is the water in just one set. There are 5 sets, because 1 x 5 = 5.",
+              "7": "You added the same amount to both parts. In a ratio, multiply both parts by the same number."
+            },
+            "explanation": "1 x 5 = 5, so water = 3 x 5 = 15.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-010.remediation_check.3",
+            "prompt": "A bag has 6 red balls and 1 blue balls. What is the ratio of red to blue?",
+            "speech": "A bag has 6 red balls and 1 blue balls. What is the ratio of red to blue?",
+            "options": [
+              "1 : 6",
+              "6 : 7",
+              "6 : 1"
+            ],
+            "answer": "6 : 1",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "1 : 6": "That is blue to red. The question asks red to blue, so say red first.",
+              "6 : 7": "6 : 7 compares red with ALL the balls. A part-to-part ratio compares red with blue."
+            },
+            "explanation": "6 red and 1 blue give the ratio 6 : 1.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: part-to-part ratios up to 20 counters, order of a ratio, simplest form, equal scaling, total parts, part-to-whole fraction; no decimals.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of percent signs, ratios, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-011",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Angles and measurement",
+      "objective": "Identify acute, right and obtuse angles.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l4-010"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l4-011.introduce.1",
+          "text": "An angle is made where two lines meet. A right angle is exactly 90°, like the corner of a book.",
+          "speech": "An angle is made where two lines meet. A right angle is exactly 90 degrees, like the corner of a book.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "90°"
+          }
+        },
+        {
+          "id": "numbers-l4-011.introduce.2",
+          "text": "An angle smaller than 90° is acute, like a sharp point. An angle between 90° and 180° is obtuse, like a wide open door.",
+          "speech": "An angle smaller than 90 degrees is acute, like a sharp point. An angle between 90 degrees and 180 degrees is obtuse, like a wide open door.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "acute < 90° < obtuse < 180°"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-011.demonstrate.1",
+          "text": "Is 45° acute, right or obtuse? 45 is less than 90, so it is acute.",
+          "speech": "Is 45 degrees acute, right or obtuse? 45 is less than 90, so it is acute.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "45° < 90°  acute"
+          }
+        },
+        {
+          "id": "numbers-l4-011.demonstrate.2",
+          "text": "Is 120° acute, right or obtuse? 120 is more than 90 but less than 180, so it is obtuse.",
+          "speech": "Is 120 degrees acute, right or obtuse? 120 is more than 90 but less than 180, so it is obtuse.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "90° < 120° < 180°  obtuse"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-011.guided.1",
+          "prompt": "What kind of angle is 40°?",
+          "speech": "What kind of angle is 40 degrees?",
+          "options": [
+            "Acute",
+            "Right",
+            "Obtuse"
+          ],
+          "answer": "Acute",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Imagine the corner of a book on this angle. Is the angle smaller than, the same as, or wider than that corner?",
+            "A right angle is 90°. Is 40 less than 90, equal to 90, or between 90 and 180?"
+          ],
+          "wrong_feedback": {
+            "Right": "A right angle is exactly 90°. 40° is smaller than that.",
+            "Obtuse": "Obtuse angles are between 90° and 180°. 40° is less than 90°."
+          },
+          "explanation": "40° is less than 90°, so it is acute.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-011.guided.2",
+          "prompt": "What kind of angle is 130°?",
+          "speech": "What kind of angle is 130 degrees?",
+          "options": [
+            "Acute",
+            "Obtuse",
+            "Right"
+          ],
+          "answer": "Obtuse",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Imagine the corner of a book on this angle. Is the angle smaller than, the same as, or wider than that corner?",
+            "A right angle is 90°. Is 130 less than 90, equal to 90, or between 90 and 180?"
+          ],
+          "wrong_feedback": {
+            "Acute": "Acute angles are smaller than 90°. 130° is wider than a right angle.",
+            "Right": "A right angle is exactly 90°. 130° is wider than that."
+          },
+          "explanation": "130° is between 90° and 180°, so it is obtuse.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-011.practice.1",
+          "prompt": "Which of these angles is obtuse?",
+          "speech": "Which of these angles is obtuse?",
+          "options": [
+            "75°",
+            "90°",
+            "110°"
+          ],
+          "answer": "110°",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Sort each angle by comparing it with the corner of a book: smaller, the same, or wider.",
+            "Obtuse means more than 90° but less than 180°."
+          ],
+          "wrong_feedback": {
+            "75°": "75° is less than 90°, so it is acute.",
+            "90°": "90° is exactly 90°, so it is a right angle."
+          },
+          "explanation": "110° is between 90° and 180°, so it is obtuse.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-011.practice.2",
+          "prompt": "Two angles lie on a straight line. One angle is 65°. What is the other angle?",
+          "speech": "Two angles lie on a straight line. One angle is 65 degrees. What is the other angle?",
+          "options": [
+            "115°",
+            "25°",
+            "245°"
+          ],
+          "answer": "115°",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "A straight line is a half turn. The two angles on it share the same total.",
+            "That total is 180°. Subtract the angle you know from 180°."
+          ],
+          "wrong_feedback": {
+            "25°": "That uses 90°. Angles on a straight line add up to 180°.",
+            "245°": "That adds 65° to 180°. The two angles together make 180°, so subtract."
+          },
+          "explanation": "180° - 65° = 115°.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-011.practice.3",
+          "prompt": "The corner of a book is what kind of angle?",
+          "speech": "The corner of a book is what kind of angle?",
+          "options": [
+            "Acute",
+            "Right",
+            "Obtuse"
+          ],
+          "answer": "Right",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Think of the corner of a page or a notebook. How many degrees is it?",
+            "It is exactly 90°, and that size has a special name."
+          ],
+          "wrong_feedback": {
+            "Acute": "An acute angle is smaller than the corner of a book.",
+            "Obtuse": "An obtuse angle is wider than the corner of a book."
+          },
+          "explanation": "The corner of a book is exactly 90°, a right angle.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-011.check.1",
+          "prompt": "What kind of angle is 90°?",
+          "speech": "What kind of angle is 90 degrees?",
+          "options": [
+            "Acute",
+            "Right",
+            "Obtuse"
+          ],
+          "answer": "Right",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Acute": "Acute angles are smaller than 90°. This one is exactly 90°.",
+            "Obtuse": "Obtuse angles are more than 90°. This angle is exactly 90°."
+          },
+          "explanation": "90° is exactly 90°, so it is right.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-011.check.2",
+          "prompt": "Which of these angles is acute?",
+          "speech": "Which of these angles is acute?",
+          "options": [
+            "90°",
+            "150°",
+            "35°"
+          ],
+          "answer": "35°",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "90°": "90° is exactly 90°, so it is a right angle.",
+            "150°": "150° is between 90° and 180°, so it is obtuse."
+          },
+          "explanation": "35° is less than 90°, so it is acute.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-011.check.3",
+          "prompt": "An angle of 35° and another angle together make a right angle. What is the other angle?",
+          "speech": "An angle of 35 degrees and another angle together make a right angle. What is the other angle?",
+          "options": [
+            "55°",
+            "145°",
+            "125°"
+          ],
+          "answer": "55°",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "145°": "That uses 180°, the straight line. A right angle is 90°, so subtract from 90°.",
+            "125°": "That adds 35° to 90°. The two angles together make 90°, so subtract."
+          },
+          "explanation": "90° - 35° = 55°.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-011.remediation_explain.1",
+            "text": "Use the corner of a book as a test. An angle exactly like the corner is a right angle: 90°.",
+            "speech": "Use the corner of a book as a test. An angle exactly like the corner is a right angle: 90 degrees.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "90° = right angle"
+            }
+          },
+          {
+            "id": "numbers-l4-011.remediation_explain.2",
+            "text": "Narrower than the corner of the book is acute. 25° is acute because 25 is less than 90.",
+            "speech": "Narrower than the corner of the book is acute. 25 degrees is acute because 25 is less than 90.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "25° < 90°  acute"
+            }
+          },
+          {
+            "id": "numbers-l4-011.remediation_explain.3",
+            "text": "Wider than the corner but not a straight line is obtuse. 150° is obtuse because 90 is less than 150 and 150 is less than 180.",
+            "speech": "Wider than the corner but not a straight line is obtuse. 150 degrees is obtuse because 90 is less than 150 and 150 is less than 180.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "90° < 150° < 180°  obtuse"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-011.remediation_guided.1",
+            "prompt": "What kind of angle is 30°?",
+            "speech": "What kind of angle is 30 degrees?",
+            "options": [
+              "Right",
+              "Obtuse",
+              "Acute"
+            ],
+            "answer": "Acute",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Imagine the corner of a book on this angle. Is the angle smaller than, the same as, or wider than that corner?",
+              "A right angle is 90°. Is 30 less than 90, equal to 90, or between 90 and 180?"
+            ],
+            "wrong_feedback": {
+              "Right": "A right angle is exactly 90°. 30° is smaller than that.",
+              "Obtuse": "Obtuse angles are between 90° and 180°. 30° is less than 90°."
+            },
+            "explanation": "30° is less than 90°, so it is acute.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-011.remediation_guided.2",
+            "prompt": "Which of these angles is a right angle?",
+            "speech": "Which of these angles is a right angle?",
+            "options": [
+              "90°",
+              "60°",
+              "120°"
+            ],
+            "answer": "90°",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Sort each angle by comparing it with the corner of a book: smaller, the same, or wider.",
+              "A right angle is exactly 90°, the corner of a book."
+            ],
+            "wrong_feedback": {
+              "60°": "60° is less than 90°, so it is acute.",
+              "120°": "120° is between 90° and 180°, so it is obtuse."
+            },
+            "explanation": "90° is exactly 90°, so it is a right angle.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-011.remediation_check.1",
+            "prompt": "What kind of angle is 155°?",
+            "speech": "What kind of angle is 155 degrees?",
+            "options": [
+              "Acute",
+              "Obtuse",
+              "Right"
+            ],
+            "answer": "Obtuse",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Acute": "Acute angles are smaller than 90°. 155° is wider than a right angle.",
+              "Right": "A right angle is exactly 90°. 155° is wider than that."
+            },
+            "explanation": "155° is between 90° and 180°, so it is obtuse.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-011.remediation_check.2",
+            "prompt": "Two angles lie on a straight line. One angle is 130°. What is the other angle?",
+            "speech": "Two angles lie on a straight line. One angle is 130 degrees. What is the other angle?",
+            "options": [
+              "50°",
+              "40°",
+              "310°"
+            ],
+            "answer": "50°",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "40°": "That uses 90°. Angles on a straight line add up to 180°.",
+              "310°": "That adds 130° to 180°. The two angles together make 180°, so subtract."
+            },
+            "explanation": "180° - 130° = 50°.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-011.remediation_check.3",
+            "prompt": "What do we call an angle that is smaller than a right angle?",
+            "speech": "What do we call an angle that is smaller than a right angle?",
+            "options": [
+              "Right",
+              "Obtuse",
+              "Acute"
+            ],
+            "answer": "Acute",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Right": "A right angle is exactly 90°, not smaller than 90°.",
+              "Obtuse": "An obtuse angle is wider than 90°, not smaller."
+            },
+            "explanation": "An angle smaller than 90° is acute.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: acute, right and obtuse angles up to 180 degrees, missing angle on a straight line and in a right angle; no protractor reading.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of percent signs, ratios, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-012",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Perimeter and area",
+      "objective": "Calculate the perimeter and area of rectangles.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l4-011"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l4-012.introduce.1",
+          "text": "Perimeter is the distance around a shape. A rectangle 6 cm long and 4 cm wide has two lengths and two widths: 6 + 4 + 6 + 4 = 20 cm.",
+          "speech": "Perimeter is the distance around a shape. A rectangle 6 centimetres long and 4 centimetres wide has two lengths and two widths: 6 plus 4 plus 6 plus 4 equals 20 centimetres.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "6 + 4 + 6 + 4 = 20 cm"
+          }
+        },
+        {
+          "id": "numbers-l4-012.introduce.2",
+          "text": "Area is the space inside. A rectangle 4 cm long and 3 cm wide is covered by 3 rows of 4 squares. Area = length x width = 4 x 3 = 12 cm².",
+          "speech": "Area is the space inside. A rectangle 4 centimetres long and 3 centimetres wide is covered by 3 rows of 4 squares. Area equals length times width equals 4 times 3 equals 12 square centimetres.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🟦",
+                "count": 4
+              },
+              {
+                "emoji": "🟦",
+                "count": 4
+              },
+              {
+                "emoji": "🟦",
+                "count": 4
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": false,
+            "showResult": false
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-012.demonstrate.1",
+          "text": "Perimeter of a rectangle 7 cm long and 5 cm wide: add length and width, 7 + 5 = 12, then double it. 2 x 12 = 24 cm.",
+          "speech": "Perimeter of a rectangle 7 centimetres long and 5 centimetres wide: add length and width, 7 plus 5 equals 12, then double it. 2 times 12 equals 24 centimetres.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "2 x (7 + 5) = 24 cm"
+          }
+        },
+        {
+          "id": "numbers-l4-012.demonstrate.2",
+          "text": "Area of the same rectangle: length x width = 7 x 5 = 35 cm². Perimeter is in cm and area is in cm².",
+          "speech": "Area of the same rectangle: length times width equals 7 times 5 equals 35 square centimetres. Perimeter is in cm and area is in square centimetres.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "7 x 5 = 35 cm²"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-012.guided.1",
+          "prompt": "A rectangle is 9 cm long and 4 cm wide. What is its perimeter?",
+          "speech": "A rectangle is 9 centimetres long and 4 centimetres wide. What is its perimeter?",
+          "options": [
+            "26 cm",
+            "36 cm²",
+            "13 cm"
+          ],
+          "answer": "26 cm",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Perimeter is the distance all the way round the edge. A rectangle has 2 lengths and 2 widths.",
+            "Add 9 + 4, then double the sum."
+          ],
+          "wrong_feedback": {
+            "36 cm²": "That is the area. Perimeter is the distance around: 2 x (length + width).",
+            "13 cm": "13 cm is only one length plus one width. A rectangle has two of each, so double it."
+          },
+          "explanation": "2 x (9 + 4) = 26 cm.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-012.guided.2",
+          "prompt": "A rectangle is 8 cm long and 5 cm wide. What is its area?",
+          "speech": "A rectangle is 8 centimetres long and 5 centimetres wide. What is its area?",
+          "options": [
+            "26 cm",
+            "40 cm²",
+            "13 cm²"
+          ],
+          "answer": "40 cm²",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Area is the space inside. Picture 1 cm squares covering the rectangle: rows x squares in each row.",
+            "Multiply the length 8 by the width 5."
+          ],
+          "wrong_feedback": {
+            "26 cm": "That is the perimeter; area multiplies length by width.",
+            "13 cm²": "You added length and width. Area needs a multiplication: length x width."
+          },
+          "explanation": "8 x 5 = 40 cm².",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-012.practice.1",
+          "prompt": "A farmer builds a fence around a field 15 m long and 9 m wide. How many metres of fence are needed?",
+          "speech": "A farmer builds a fence around a field 15 metres long and 9 metres wide. How many metres of fence are needed?",
+          "options": [
+            "135 m²",
+            "24 m",
+            "48 m"
+          ],
+          "answer": "48 m",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "A fence goes around the edge of the field. Is that the perimeter or the area?",
+            "Perimeter = 2 x (length + width). Add 15 and 9 first."
+          ],
+          "wrong_feedback": {
+            "135 m²": "That is the area inside the field. A fence goes around the edge, so find the perimeter.",
+            "24 m": "That is only half the way round. A field has two lengths and two widths."
+          },
+          "explanation": "2 x (15 + 9) = 48 m of fence.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-012.practice.2",
+          "prompt": "A square has sides of 9 cm. What is its area?",
+          "speech": "A square has sides of 9 centimetres. What is its area?",
+          "options": [
+            "81 cm²",
+            "36 cm",
+            "18 cm²"
+          ],
+          "answer": "81 cm²",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "All four sides of a square are equal. Area is length x width, and here both are the same.",
+            "Multiply 9 x 9."
+          ],
+          "wrong_feedback": {
+            "36 cm": "That is the perimeter, 4 x side. Area is side x side.",
+            "18 cm²": "18 comes from 9 + 9. Area multiplies: side x side."
+          },
+          "explanation": "9 x 9 = 81 cm².",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-012.practice.3",
+          "prompt": "A rectangle has an area of 48 cm² and a length of 8 cm. What is its width?",
+          "speech": "A rectangle has an area of 48 square centimetres and a length of 8 centimetres. What is its width?",
+          "options": [
+            "384 cm",
+            "6 cm",
+            "40 cm"
+          ],
+          "answer": "6 cm",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Area = length x width. One side is missing.",
+            "Ask: 8 x ? = 48. Divide 48 by 8."
+          ],
+          "wrong_feedback": {
+            "384 cm": "You multiplied. Area = length x width, so width = area ÷ length.",
+            "40 cm": "You subtracted. Area = length x width, so use division to find the missing side."
+          },
+          "explanation": "48 ÷ 8 = 6 cm.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-012.check.1",
+          "prompt": "A rectangle is 12 cm long and 7 cm wide. What is its perimeter?",
+          "speech": "A rectangle is 12 centimetres long and 7 centimetres wide. What is its perimeter?",
+          "options": [
+            "84 cm²",
+            "38 cm",
+            "19 cm"
+          ],
+          "answer": "38 cm",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "84 cm²": "That is the area. Perimeter is the distance around: 2 x (length + width).",
+            "19 cm": "19 cm is only one length plus one width. A rectangle has two of each, so double it."
+          },
+          "explanation": "2 x (12 + 7) = 38 cm.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-012.check.2",
+          "prompt": "A rectangle is 9 cm long and 7 cm wide. What is its area?",
+          "speech": "A rectangle is 9 centimetres long and 7 centimetres wide. What is its area?",
+          "options": [
+            "32 cm",
+            "16 cm²",
+            "63 cm²"
+          ],
+          "answer": "63 cm²",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "32 cm": "That is the perimeter; area multiplies length by width.",
+            "16 cm²": "You added length and width. Area needs a multiplication: length x width."
+          },
+          "explanation": "9 x 7 = 63 cm².",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-012.check.3",
+          "prompt": "A square has sides of 8 cm. What is its perimeter?",
+          "speech": "A square has sides of 8 centimetres. What is its perimeter?",
+          "options": [
+            "32 cm",
+            "64 cm²",
+            "16 cm"
+          ],
+          "answer": "32 cm",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "64 cm²": "That is the area. Perimeter is the distance around: add all 4 sides.",
+            "16 cm": "That is only two sides. A square has four equal sides."
+          },
+          "explanation": "4 x 8 = 32 cm.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-012.remediation_explain.1",
+            "text": "Perimeter is a walk around the edge. A rectangle 5 cm long and 3 cm wide: 5 + 3 + 5 + 3 = 16 cm.",
+            "speech": "Perimeter is a walk around the edge. A rectangle 5 centimetres long and 3 centimetres wide: 5 plus 3 plus 5 plus 3 equals 16 centimetres.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "5 + 3 + 5 + 3 = 16 cm"
+            }
+          },
+          {
+            "id": "numbers-l4-012.remediation_explain.2",
+            "text": "Area is the space inside. Count the squares: 3 rows of 5 squares make 3 x 5 = 15 cm².",
+            "speech": "Area is the space inside. Count the squares: 3 rows of 5 squares make 3 times 5 equals 15 square centimetres.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🟦",
+                  "count": 5
+                },
+                {
+                  "emoji": "🟦",
+                  "count": 5
+                },
+                {
+                  "emoji": "🟦",
+                  "count": 5
+                }
+              ],
+              "operator": "+",
+              "revealCount": 3,
+              "countAll": false,
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l4-012.remediation_explain.3",
+            "text": "Do not mix them up. Perimeter adds the sides and is in cm. Area multiplies length x width and is in cm².",
+            "speech": "Do not mix them up. Perimeter adds the sides and is in cm. Area multiplies length times width and is in square centimetres.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "Perimeter: cm   Area: cm²"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-012.remediation_guided.1",
+            "prompt": "A rectangle is 8 cm long and 3 cm wide. What is its perimeter?",
+            "speech": "A rectangle is 8 centimetres long and 3 centimetres wide. What is its perimeter?",
+            "options": [
+              "24 cm²",
+              "11 cm",
+              "22 cm"
+            ],
+            "answer": "22 cm",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Perimeter is the distance all the way round the edge. A rectangle has 2 lengths and 2 widths.",
+              "Add 8 + 3, then double the sum."
+            ],
+            "wrong_feedback": {
+              "24 cm²": "That is the area. Perimeter is the distance around: 2 x (length + width).",
+              "11 cm": "11 cm is only one length plus one width. A rectangle has two of each, so double it."
+            },
+            "explanation": "2 x (8 + 3) = 22 cm.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-012.remediation_guided.2",
+            "prompt": "A rectangle is 5 cm long and 4 cm wide. What is its area?",
+            "speech": "A rectangle is 5 centimetres long and 4 centimetres wide. What is its area?",
+            "options": [
+              "20 cm²",
+              "18 cm",
+              "9 cm²"
+            ],
+            "answer": "20 cm²",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Area is the space inside. Picture 1 cm squares covering the rectangle: rows x squares in each row.",
+              "Multiply the length 5 by the width 4."
+            ],
+            "wrong_feedback": {
+              "18 cm": "That is the perimeter; area multiplies length by width.",
+              "9 cm²": "You added length and width. Area needs a multiplication: length x width."
+            },
+            "explanation": "5 x 4 = 20 cm².",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-012.remediation_check.1",
+            "prompt": "A rectangle is 12 cm long and 5 cm wide. What is its area?",
+            "speech": "A rectangle is 12 centimetres long and 5 centimetres wide. What is its area?",
+            "options": [
+              "34 cm",
+              "60 cm²",
+              "17 cm²"
+            ],
+            "answer": "60 cm²",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "34 cm": "That is the perimeter; area multiplies length by width.",
+              "17 cm²": "You added length and width. Area needs a multiplication: length x width."
+            },
+            "explanation": "12 x 5 = 60 cm².",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-012.remediation_check.2",
+            "prompt": "A rectangle has an area of 36 cm² and a length of 9 cm. What is its width?",
+            "speech": "A rectangle has an area of 36 square centimetres and a length of 9 centimetres. What is its width?",
+            "options": [
+              "4 cm",
+              "324 cm",
+              "27 cm"
+            ],
+            "answer": "4 cm",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "324 cm": "You multiplied. Area = length x width, so width = area ÷ length.",
+              "27 cm": "You subtracted. Area = length x width, so use division to find the missing side."
+            },
+            "explanation": "36 ÷ 9 = 4 cm.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-012.remediation_check.3",
+            "prompt": "A farmer builds a fence around a field 11 m long and 8 m wide. How many metres of fence are needed?",
+            "speech": "A farmer builds a fence around a field 11 metres long and 8 metres wide. How many metres of fence are needed?",
+            "options": [
+              "88 m²",
+              "19 m",
+              "38 m"
+            ],
+            "answer": "38 m",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "88 m²": "That is the area inside the field. A fence goes around the edge, so find the perimeter.",
+              "19 m": "That is only half the way round. A field has two lengths and two widths."
+            },
+            "explanation": "2 x (11 + 8) = 38 m of fence.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: perimeter and area of rectangles and squares with whole centimetres or metres, and a missing side from area; no composite shapes.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of percent signs, ratios, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-013",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Units and conversions",
+      "objective": "Convert within metric length, mass and capacity.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l4-012"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l4-013.introduce.1",
+          "text": "We change units using these facts: 1 m = 100 cm, 1 km = 1000 m, 1 kg = 1000 g and 1 L = 1000 mL.",
+          "speech": "We change units using these facts: 1 metres equals 100 centimetres, 1 kilometres equals 1000 metres, 1 kilograms equals 1000 grams and 1 litres equals 1000 millilitres.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "1 m = 100 cm   1 km = 1000 m"
+          }
+        },
+        {
+          "id": "numbers-l4-013.introduce.2",
+          "text": "Big unit to small unit: multiply. Small unit to big unit: divide. A big unit is made of many small ones.",
+          "speech": "Big unit to small unit: multiply. Small unit to big unit: divide. A big unit is made of many small ones.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "big to small: x   small to big: ÷"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-013.demonstrate.1",
+          "text": "Change 3 m to cm. Metres are big and cm are small, so multiply: 3 x 100 = 300 cm.",
+          "speech": "Change 3 metres to cm. Metres are big and cm are small, so multiply: 3 times 100 equals 300 centimetres.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3 m = 3 x 100 = 300 cm"
+          }
+        },
+        {
+          "id": "numbers-l4-013.demonstrate.2",
+          "text": "Change 2000 g to kg. Grams are small and kg are big, so divide: 2000 ÷ 1000 = 2 kg.",
+          "speech": "Change 2000 grams to kg. Grams are small and kg are big, so divide: 2000 divided by 1000 equals 2 kilograms.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "2000 g = 2000 ÷ 1000 = 2 kg"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-013.guided.1",
+          "prompt": "Convert 700 cm to m.",
+          "speech": "Convert 700 centimetres to m.",
+          "options": [
+            "7 m",
+            "70000 m",
+            "70 m"
+          ],
+          "answer": "7 m",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "You are changing a small unit (cm) into a big one (m), so the number will get smaller.",
+            "1 m = 100 cm. Divide 700 by 100."
+          ],
+          "wrong_feedback": {
+            "70000 m": "You multiplied. Going from a small unit (cm) to a big unit (m) gives a smaller number: divide.",
+            "70 m": "You divided by 10, but 1 m = 100 cm. Divide by 100."
+          },
+          "explanation": "700 ÷ 100 = 7, so 700 cm = 7 m.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-013.guided.2",
+          "prompt": "Convert 6 m to cm.",
+          "speech": "Convert 6 metres to cm.",
+          "options": [
+            "60 cm",
+            "600 cm",
+            "106 cm"
+          ],
+          "answer": "600 cm",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "You are changing a big unit (m) into small ones (cm), so the number will get bigger.",
+            "1 m = 100 cm. Multiply 6 by 100."
+          ],
+          "wrong_feedback": {
+            "60 cm": "You multiplied by 10. 1 m = 100 cm, so multiply by 100.",
+            "106 cm": "You added. To change a big unit into a small unit, multiply."
+          },
+          "explanation": "6 x 100 = 600, so 6 m = 600 cm.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-013.practice.1",
+          "prompt": "Convert 3000 g to kg.",
+          "speech": "Convert 3000 grams to kg.",
+          "options": [
+            "3000000 kg",
+            "30 kg",
+            "3 kg"
+          ],
+          "answer": "3 kg",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "You are changing a small unit (g) into a big one (kg), so the number will get smaller.",
+            "1 kg = 1000 g. Divide 3000 by 1000."
+          ],
+          "wrong_feedback": {
+            "3000000 kg": "You multiplied. Going from a small unit (g) to a big unit (kg) gives a smaller number: divide.",
+            "30 kg": "You divided by 100, but 1 kg = 1000 g. Divide by 1000."
+          },
+          "explanation": "3000 ÷ 1000 = 3, so 3000 g = 3 kg.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-013.practice.2",
+          "prompt": "Which unit is best for measuring the distance between two cities?",
+          "speech": "Which unit is best for measuring the distance between two cities?",
+          "options": [
+            "km",
+            "cm",
+            "mL"
+          ],
+          "answer": "km",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Cities are far apart. Which unit is used for long distances?",
+            "Think of road signs. Their distances use the unit that starts with k."
+          ],
+          "wrong_feedback": {
+            "cm": "A centimetre is far too small. You would need a huge number of them.",
+            "mL": "mL measures liquid, not distance."
+          },
+          "explanation": "Long distances between cities are measured in kilometres.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-013.practice.3",
+          "prompt": "Convert 2 kg to g.",
+          "speech": "Convert 2 kilograms to g.",
+          "options": [
+            "200 g",
+            "2000 g",
+            "1002 g"
+          ],
+          "answer": "2000 g",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "You are changing a big unit (kg) into small ones (g), so the number will get bigger.",
+            "1 kg = 1000 g. Multiply 2 by 1000."
+          ],
+          "wrong_feedback": {
+            "200 g": "You multiplied by 100. 1 kg = 1000 g, so multiply by 1000.",
+            "1002 g": "You added. To change a big unit into a small unit, multiply."
+          },
+          "explanation": "2 x 1000 = 2000, so 2 kg = 2000 g.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-013.check.1",
+          "prompt": "Convert 5000 m to km.",
+          "speech": "Convert 5000 metres to km.",
+          "options": [
+            "5000000 km",
+            "5 km",
+            "50 km"
+          ],
+          "answer": "5 km",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "5000000 km": "You multiplied. Going from a small unit (m) to a big unit (km) gives a smaller number: divide.",
+            "50 km": "You divided by 100, but 1 km = 1000 m. Divide by 1000."
+          },
+          "explanation": "5000 ÷ 1000 = 5, so 5000 m = 5 km.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-013.check.2",
+          "prompt": "Convert 5 L to mL.",
+          "speech": "Convert 5 litres to mL.",
+          "options": [
+            "500 mL",
+            "1005 mL",
+            "5000 mL"
+          ],
+          "answer": "5000 mL",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "500 mL": "You multiplied by 100. 1 L = 1000 mL, so multiply by 1000.",
+            "1005 mL": "You added. To change a big unit into a small unit, multiply."
+          },
+          "explanation": "5 x 1000 = 5000, so 5 L = 5000 mL.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-013.check.3",
+          "prompt": "Which is longer: 2 m or 150 cm?",
+          "speech": "Which is longer: 2 metres or 150 centimetres?",
+          "options": [
+            "2 m",
+            "150 cm",
+            "They are equal"
+          ],
+          "answer": "2 m",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "150 cm": "2 m = 200 cm, and 200 is more than 150, so 150 cm is shorter.",
+            "They are equal": "2 m = 200 cm, which is not the same as 150 cm."
+          },
+          "explanation": "2 m = 200 cm, and 200 cm is longer than 150 cm.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-013.remediation_explain.1",
+            "text": "Think of 1 m as 100 cm. 2 m is two hundreds: 2 x 100 = 200 cm.",
+            "speech": "Think of 1 metres as 100 centimetres. 2 metres is two hundreds: 2 times 100 equals 200 centimetres.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2 m = 2 x 100 = 200 cm"
+            }
+          },
+          {
+            "id": "numbers-l4-013.remediation_explain.2",
+            "text": "Going back, small to big: divide. 500 cm ÷ 100 = 5 m.",
+            "speech": "Going back, small to big: divide. 500 centimetres divided by 100 equals 5 metres.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "500 cm = 500 ÷ 100 = 5 m"
+            }
+          },
+          {
+            "id": "numbers-l4-013.remediation_explain.3",
+            "text": "Always ask first: am I going from a big unit to a small one (multiply) or from small to big (divide)?",
+            "speech": "Always ask first: am I going from a big unit to a small one (multiply) or from small to big (divide)?",
+            "visual": {
+              "type": "glyph",
+              "glyph": "big to small: x   small to big: ÷"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-013.remediation_guided.1",
+            "prompt": "Convert 4000 mL to L.",
+            "speech": "Convert 4000 millilitres to L.",
+            "options": [
+              "4000000 L",
+              "40 L",
+              "4 L"
+            ],
+            "answer": "4 L",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "You are changing a small unit (mL) into a big one (L), so the number will get smaller.",
+              "1 L = 1000 mL. Divide 4000 by 1000."
+            ],
+            "wrong_feedback": {
+              "4000000 L": "You multiplied. Going from a small unit (mL) to a big unit (L) gives a smaller number: divide.",
+              "40 L": "You divided by 100, but 1 L = 1000 mL. Divide by 1000."
+            },
+            "explanation": "4000 ÷ 1000 = 4, so 4000 mL = 4 L.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-013.remediation_guided.2",
+            "prompt": "Convert 3 km to m.",
+            "speech": "Convert 3 kilometres to m.",
+            "options": [
+              "3000 m",
+              "300 m",
+              "1003 m"
+            ],
+            "answer": "3000 m",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "You are changing a big unit (km) into small ones (m), so the number will get bigger.",
+              "1 km = 1000 m. Multiply 3 by 1000."
+            ],
+            "wrong_feedback": {
+              "300 m": "You multiplied by 100. 1 km = 1000 m, so multiply by 1000.",
+              "1003 m": "You added. To change a big unit into a small unit, multiply."
+            },
+            "explanation": "3 x 1000 = 3000, so 3 km = 3000 m.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-013.remediation_check.1",
+            "prompt": "Convert 900 cm to m.",
+            "speech": "Convert 900 centimetres to m.",
+            "options": [
+              "90000 m",
+              "9 m",
+              "90 m"
+            ],
+            "answer": "9 m",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "90000 m": "You multiplied. Going from a small unit (cm) to a big unit (m) gives a smaller number: divide.",
+              "90 m": "You divided by 10, but 1 m = 100 cm. Divide by 100."
+            },
+            "explanation": "900 ÷ 100 = 9, so 900 cm = 9 m.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-013.remediation_check.2",
+            "prompt": "Which unit is best for measuring the mass of a bag of rice?",
+            "speech": "Which unit is best for measuring the mass of a bag of rice?",
+            "options": [
+              "kg",
+              "mL",
+              "km"
+            ],
+            "answer": "kg",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "mL": "mL measures how much liquid there is, not how heavy something is.",
+              "km": "km measures distance, not mass."
+            },
+            "explanation": "The mass of a bag of rice is measured in kilograms.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-013.remediation_check.3",
+            "prompt": "Convert 12 m to cm.",
+            "speech": "Convert 12 metres to cm.",
+            "options": [
+              "120 cm",
+              "112 cm",
+              "1200 cm"
+            ],
+            "answer": "1200 cm",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "120 cm": "You multiplied by 10. 1 m = 100 cm, so multiply by 100.",
+              "112 cm": "You added. To change a big unit into a small unit, multiply."
+            },
+            "explanation": "12 x 100 = 1200, so 12 m = 1200 cm.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: m and cm, km and m, kg and g, L and mL with whole-number answers; choosing a sensible unit; no decimals.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of percent signs, ratios, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-014",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Tables and bar charts",
+      "objective": "Read and compare values in a small table.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l4-013"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l4-014.introduce.1",
+          "text": "A bar chart shows each group as a bar. A taller bar means a bigger number. Mango has 5 votes, Apple 3 and Banana 4.",
+          "speech": "A bar chart shows each group as a bar. A taller bar means a bigger number. Mango has 5 votes, Apple 3 and Banana 4.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🥭",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 3
+              },
+              {
+                "emoji": "🍌",
+                "count": 4
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": false,
+            "showResult": false
+          }
+        },
+        {
+          "id": "numbers-l4-014.introduce.2",
+          "text": "To answer a question, first read the numbers. Then decide: add for 'in all' or 'together', subtract for 'how many more' or 'how many fewer'.",
+          "speech": "To answer a question, first read the numbers. Then decide: add for 'in all' or 'together', subtract for 'how many more' or 'how many fewer'.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "in all: +    how many more: -"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-014.demonstrate.1",
+          "text": "How many votes in all? Add every bar: 5 + 3 + 4 = 12.",
+          "speech": "How many votes in all? Add every bar: 5 plus 3 plus 4 equals 12.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🥭",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 3
+              },
+              {
+                "emoji": "🍌",
+                "count": 4
+              }
+            ],
+            "operator": "+",
+            "revealCount": 3,
+            "countAll": false,
+            "result": 12,
+            "showResult": true
+          }
+        },
+        {
+          "id": "numbers-l4-014.demonstrate.2",
+          "text": "How many more votes for Mango than Apple? Subtract: 5 - 3 = 2.",
+          "speech": "How many more votes for Mango than Apple? Subtract: 5 minus 3 equals 2.",
+          "visual": {
+            "type": "objects",
+            "groups": [
+              {
+                "emoji": "🥭",
+                "count": 5
+              },
+              {
+                "emoji": "🍎",
+                "count": 3
+              }
+            ],
+            "operator": "vs",
+            "revealCount": 2,
+            "countAll": false,
+            "labels": [
+              "Mango",
+              "Apple"
+            ],
+            "showResult": false
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-014.guided.1",
+          "prompt": "Votes for favourite fruit: Mango 12, Apple 8, Banana 15, Orange 5. How many children voted in all?",
+          "speech": "Votes for favourite fruit: Mango 12, Apple 8, Banana 15, Orange 5. How many children voted in all?",
+          "options": [
+            "40",
+            "35",
+            "15"
+          ],
+          "answer": "40",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "'In all' means every bar counts. Read each number from the table.",
+            "Add the numbers of all the groups."
+          ],
+          "wrong_feedback": {
+            "35": "That leaves out the last bar (5). Add every bar.",
+            "15": "15 is just the tallest bar. Add all the bars to find the total."
+          },
+          "explanation": "12 + 8 + 15 + 5 = 40.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-014.guided.2",
+          "prompt": "Pets owned by the class: Dogs 9, Cats 14, Fish 6, Birds 3. How many more for Cats than for Dogs?",
+          "speech": "Pets owned by the class: Dogs 9, Cats 14, Fish 6, Birds 3. How many more for Cats than for Dogs?",
+          "options": [
+            "23",
+            "5",
+            "14"
+          ],
+          "answer": "5",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "'How many more' compares two bars. Read the two numbers from the table.",
+            "Subtract the smaller number from the bigger one."
+          ],
+          "wrong_feedback": {
+            "23": "You added. 'How many more' means subtract the smaller number from the bigger.",
+            "14": "That is just the Cats bar. Take away the Dogs number from it."
+          },
+          "explanation": "14 - 9 = 5.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-014.practice.1",
+          "prompt": "Books read this week: Mon 4, Tue 7, Wed 3, Thu 9, Fri 6. Which has the lowest number?",
+          "speech": "Books read this week: Mon 4, Tue 7, Wed 3, Thu 9, Fri 6. Which has the lowest number?",
+          "options": [
+            "Thu",
+            "Mon",
+            "Wed"
+          ],
+          "answer": "Wed",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Look at all the numbers and find the smallest.",
+            "Compare the numbers one pair at a time and keep the smaller."
+          ],
+          "wrong_feedback": {
+            "Thu": "That is the opposite: the tallest bar.",
+            "Mon": "Mon is not the shortest bar. Compare all the numbers."
+          },
+          "explanation": "3 is the smallest number, so the answer is Wed.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-014.practice.2",
+          "prompt": "Favourite sport votes: Football 18, Cricket 25, Kabaddi 12, Hockey 9. How many more for Cricket than for Hockey?",
+          "speech": "Favourite sport votes: Football 18, Cricket 25, Kabaddi 12, Hockey 9. How many more for Cricket than for Hockey?",
+          "options": [
+            "16",
+            "34",
+            "25"
+          ],
+          "answer": "16",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "'How many more' compares two bars. Read the two numbers from the table.",
+            "Subtract the smaller number from the bigger one."
+          ],
+          "wrong_feedback": {
+            "34": "You added. 'How many more' means subtract the smaller number from the bigger.",
+            "25": "That is just the Cricket bar. Take away the Hockey number from it."
+          },
+          "explanation": "25 - 9 = 16.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-014.practice.3",
+          "prompt": "Rainfall in mm: Jun 120, Jul 210, Aug 180, Sep 90. How many for Jul and Aug together?",
+          "speech": "Rainfall in mm: Jun 120, Jul 210, Aug 180, Sep 90. How many for Jul and Aug together?",
+          "options": [
+            "30",
+            "390",
+            "600"
+          ],
+          "answer": "390",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Only two bars are needed: Jul and Aug. Read their numbers.",
+            "Add the two numbers."
+          ],
+          "wrong_feedback": {
+            "30": "You subtracted. 'Together' means add.",
+            "600": "That adds every bar, but only Jul and Aug are asked."
+          },
+          "explanation": "210 + 180 = 390.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-014.check.1",
+          "prompt": "Goals scored this term: Ravi 7, Sita 11, Tom 4, Uma 9. Which has the highest number?",
+          "speech": "Goals scored this term: Ravi 7, Sita 11, Tom 4, Uma 9. Which has the highest number?",
+          "options": [
+            "Tom",
+            "Sita",
+            "Ravi"
+          ],
+          "answer": "Sita",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "Tom": "That is the opposite: the shortest bar.",
+            "Ravi": "Ravi is not the tallest bar. Compare all the numbers."
+          },
+          "explanation": "11 is the biggest number, so the answer is Sita.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-014.check.2",
+          "prompt": "Passengers on the school bus: Mon 32, Tue 28, Wed 35, Thu 30. How many passengers travelled in all?",
+          "speech": "Passengers on the school bus: Mon 32, Tue 28, Wed 35, Thu 30. How many passengers travelled in all?",
+          "options": [
+            "95",
+            "35",
+            "125"
+          ],
+          "answer": "125",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "95": "That leaves out the last bar (30). Add every bar.",
+            "35": "35 is just the tallest bar. Add all the bars to find the total."
+          },
+          "explanation": "32 + 28 + 35 + 30 = 125.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-014.check.3",
+          "prompt": "Marks in the maths test: Anil 38, Bela 46, Chitra 41, Dev 44. How many fewer for Anil than for Bela?",
+          "speech": "Marks in the maths test: Anil 38, Bela 46, Chitra 41, Dev 44. How many fewer for Anil than for Bela?",
+          "options": [
+            "8",
+            "84",
+            "46"
+          ],
+          "answer": "8",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "84": "You added. 'How many fewer' means find the difference between the two bars.",
+            "46": "That is the whole Bela bar. Take away the Anil number from it."
+          },
+          "explanation": "46 - 38 = 8.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-014.remediation_explain.1",
+            "text": "Read the table slowly. Cats 6, Dogs 4. Every bar is a number.",
+            "speech": "Read the table slowly. Cats 6, Dogs 4. Every bar is a number.",
+            "visual": {
+              "type": "objects",
+              "groups": [
+                {
+                  "emoji": "🐱",
+                  "count": 6
+                },
+                {
+                  "emoji": "🐶",
+                  "count": 4
+                }
+              ],
+              "operator": "vs",
+              "revealCount": 2,
+              "countAll": false,
+              "labels": [
+                "Cats",
+                "Dogs"
+              ],
+              "showResult": false
+            }
+          },
+          {
+            "id": "numbers-l4-014.remediation_explain.2",
+            "text": "'In all' means add all the bars: 6 + 4 = 10.",
+            "speech": "'In all' means add all the bars: 6 plus 4 equals 10.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "6 + 4 = 10"
+            }
+          },
+          {
+            "id": "numbers-l4-014.remediation_explain.3",
+            "text": "'How many more' means subtract the smaller from the bigger: 6 - 4 = 2.",
+            "speech": "'How many more' means subtract the smaller from the bigger: 6 minus 4 equals 2.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "6 - 4 = 2"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-014.remediation_guided.1",
+            "prompt": "Tickets sold: Sat 14, Sun 19, Mon 7. How many tickets were sold in all?",
+            "speech": "Tickets sold: Sat 14, Sun 19, Mon 7. How many tickets were sold in all?",
+            "options": [
+              "33",
+              "19",
+              "40"
+            ],
+            "answer": "40",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "'In all' means every bar counts. Read each number from the table.",
+              "Add the numbers of all the groups."
+            ],
+            "wrong_feedback": {
+              "33": "That leaves out the last bar (7). Add every bar.",
+              "19": "19 is just the tallest bar. Add all the bars to find the total."
+            },
+            "explanation": "14 + 19 + 7 = 40.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-014.remediation_guided.2",
+            "prompt": "Cups of tea sold: Mon 17, Tue 9, Wed 12. How many more for Mon than for Tue?",
+            "speech": "Cups of tea sold: Mon 17, Tue 9, Wed 12. How many more for Mon than for Tue?",
+            "options": [
+              "8",
+              "26",
+              "17"
+            ],
+            "answer": "8",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "'How many more' compares two bars. Read the two numbers from the table.",
+              "Subtract the smaller number from the bigger one."
+            ],
+            "wrong_feedback": {
+              "26": "You added. 'How many more' means subtract the smaller number from the bigger.",
+              "17": "That is just the Mon bar. Take away the Tue number from it."
+            },
+            "explanation": "17 - 9 = 8.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-014.remediation_check.1",
+            "prompt": "Eggs collected: Mon 24, Tue 31, Wed 18. How many for Tue and Wed together?",
+            "speech": "Eggs collected: Mon 24, Tue 31, Wed 18. How many for Tue and Wed together?",
+            "options": [
+              "13",
+              "49",
+              "73"
+            ],
+            "answer": "49",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "13": "You subtracted. 'Together' means add.",
+              "73": "That adds every bar, but only Tue and Wed are asked."
+            },
+            "explanation": "31 + 18 = 49.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-014.remediation_check.2",
+            "prompt": "Stickers collected: Anu 12, Bala 17, Cara 9, Dia 14. Which has the highest number?",
+            "speech": "Stickers collected: Anu 12, Bala 17, Cara 9, Dia 14. Which has the highest number?",
+            "options": [
+              "Bala",
+              "Cara",
+              "Anu"
+            ],
+            "answer": "Bala",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Cara": "That is the opposite: the shortest bar.",
+              "Anu": "Anu is not the tallest bar. Compare all the numbers."
+            },
+            "explanation": "17 is the biggest number, so the answer is Bala.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-014.remediation_check.3",
+            "prompt": "Plants in the garden: Rose 8, Lily 5, Jasmine 12. Which has the lowest number?",
+            "speech": "Plants in the garden: Rose 8, Lily 5, Jasmine 12. Which has the lowest number?",
+            "options": [
+              "Jasmine",
+              "Rose",
+              "Lily"
+            ],
+            "answer": "Lily",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "Jasmine": "That is the opposite: the tallest bar.",
+              "Rose": "Rose is not the shortest bar. Compare all the numbers."
+            },
+            "explanation": "5 is the smallest number, so the answer is Lily.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: small tables of 3 to 5 groups, totals, more or fewer, together, highest and lowest; the table is given as text in the prompt, no chart picture.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of percent signs, ratios, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    },
+    {
+      "lesson_id": "numbers-l4-015",
+      "world": "numbers",
+      "level": 4,
+      "locale": "en-IN",
+      "title": "Multi-step word problems",
+      "objective": "Solve two-step real-world problems.",
+      "mastery": {
+        "check_total": 3,
+        "check_pass": 2,
+        "remediation_pass": 2,
+        "max_remediation_cycles": 2,
+        "after_limit": "offer_parent_support"
+      },
+      "prerequisites": [
+        "numbers-l4-014"
+      ],
+      "introduce": [
+        {
+          "id": "numbers-l4-015.introduce.1",
+          "text": "A two-step problem needs two small sums. Read it, find what is asked, then split it into steps. Step 1 finds a helper number. Step 2 gives the answer.",
+          "speech": "A two-step problem needs two small sums. Read it, find what is asked, then split it into steps. Step 1 finds a helper number. Step 2 gives the answer.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "Step 1  →  Step 2"
+          }
+        },
+        {
+          "id": "numbers-l4-015.introduce.2",
+          "text": "Example: Ria buys 2 pens at ₹10 each and pays ₹50. Step 1: cost = 2 x 10 = ₹20. Step 2: change = 50 - 20 = ₹30.",
+          "speech": "Example: Ria buys 2 pens at 10 rupees each and pays 50 rupees. Step 1: cost equals 2 times 10 equals 20 rupees. Step 2: change equals 50 minus 20 equals 30 rupees.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "2 x ₹10 = ₹20     ₹50 - ₹20 = ₹30"
+          }
+        }
+      ],
+      "demonstrate": [
+        {
+          "id": "numbers-l4-015.demonstrate.1",
+          "text": "Gita buys 3 books at ₹20 each and pays ₹100. Step 1: find the total cost. 3 x ₹20 = ₹60.",
+          "speech": "Gita buys 3 books at 20 rupees each and pays 100 rupees. Step 1: find the total cost. 3 times 20 rupees equals 60 rupees.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "3 x ₹20 = ₹60"
+          }
+        },
+        {
+          "id": "numbers-l4-015.demonstrate.2",
+          "text": "Step 2: find the change. ₹100 - ₹60 = ₹40. Check: ₹60 + ₹40 = ₹100.",
+          "speech": "Step 2: find the change. 100 rupees minus 60 rupees equals 40 rupees. Check: 60 rupees plus 40 rupees equals 100 rupees.",
+          "visual": {
+            "type": "glyph",
+            "glyph": "₹100 - ₹60 = ₹40"
+          }
+        }
+      ],
+      "guided": [
+        {
+          "id": "numbers-l4-015.guided.1",
+          "prompt": "Asha buys 3 notebooks at ₹45 each. She pays ₹200. How much change does Asha get?",
+          "speech": "Asha buys 3 notebooks at 45 rupees each. She pays 200 rupees. How much change does Asha get?",
+          "options": [
+            "₹65",
+            "₹135",
+            "₹155"
+          ],
+          "answer": "₹65",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "Two steps. First find what all 3 notebooks cost together.",
+            "Cost = 3 x ₹45. Then take that away from ₹200."
+          ],
+          "wrong_feedback": {
+            "₹135": "That is the total cost of the notebooks, not the change. Subtract it from ₹200.",
+            "₹155": "You took away the price of only one. Find the cost of all 3 first."
+          },
+          "explanation": "Step 1: 3 x ₹45 = ₹135. Step 2: ₹200 - ₹135 = ₹65.",
+          "difficulty": 1
+        },
+        {
+          "id": "numbers-l4-015.guided.2",
+          "prompt": "Meena has ₹240. She buys a pen for ₹90 and a book for ₹70. How much money is left?",
+          "speech": "Meena has 240 rupees. She buys a pen for 90 rupees and a book for 70 rupees. How much money is left?",
+          "options": [
+            "₹160",
+            "₹80",
+            "₹150"
+          ],
+          "answer": "₹80",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "How much did the two things cost together?",
+            "Add ₹90 and ₹70, then take that away from ₹240."
+          ],
+          "wrong_feedback": {
+            "₹160": "That is the money spent, not the money left.",
+            "₹150": "You paid for the first item only. Take away the price of the book as well."
+          },
+          "explanation": "Step 1: ₹90 + ₹70 = ₹160. Step 2: ₹240 - ₹160 = ₹80.",
+          "difficulty": 1
+        }
+      ],
+      "practice": [
+        {
+          "id": "numbers-l4-015.practice.1",
+          "prompt": "A hall has 5 rows of 48 seats. 212 people are sitting. How many seats are empty?",
+          "speech": "A hall has 5 rows of 48 seats. 212 people are sitting. How many seats are empty?",
+          "options": [
+            "240",
+            "452",
+            "28"
+          ],
+          "answer": "28",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First find how many seats there are in all.",
+            "All the seats = 5 x 48. Then subtract the 212 people."
+          ],
+          "wrong_feedback": {
+            "240": "That is all the seats in the hall. Take away the seats people are using.",
+            "452": "You added the people. Empty seats = all the seats - the people sitting."
+          },
+          "explanation": "Step 1: 5 x 48 = 240 seats. Step 2: 240 - 212 = 28.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-015.practice.2",
+          "prompt": "Ravi saves ₹25 every week for 12 weeks. Then he spends ₹120. How much money is left?",
+          "speech": "Ravi saves 25 rupees every week for 12 weeks. Then he spends 120 rupees. How much money is left?",
+          "options": [
+            "₹180",
+            "₹300",
+            "₹420"
+          ],
+          "answer": "₹180",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First find how much Ravi saved in 12 weeks.",
+            "Savings = 12 x ₹25. Then take away what he spent."
+          ],
+          "wrong_feedback": {
+            "₹300": "That is the total he saved. He then spent some, so subtract.",
+            "₹420": "He spent money, so take it away; do not add it."
+          },
+          "explanation": "Step 1: 12 x ₹25 = ₹300. Step 2: ₹300 - ₹120 = ₹180.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-015.practice.3",
+          "prompt": "A pack of 6 pens costs ₹90. How much do 9 pens cost?",
+          "speech": "A pack of 6 pens costs 90 rupees. How much do 9 pens cost?",
+          "options": [
+            "₹15",
+            "₹135",
+            "₹810"
+          ],
+          "answer": "₹135",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [
+            "First find the cost of one pen.",
+            "One pen = ₹90 ÷ 6. Then multiply by 9."
+          ],
+          "wrong_feedback": {
+            "₹15": "That is the price of one pen. You need 9 pens.",
+            "₹810": "That is the price of 9 packs. First find the cost of one pen: ₹90 ÷ 6."
+          },
+          "explanation": "Step 1: ₹90 ÷ 6 = ₹15. Step 2: 9 x ₹15 = ₹135.",
+          "difficulty": 2
+        }
+      ],
+      "check": [
+        {
+          "id": "numbers-l4-015.check.1",
+          "prompt": "Rohan buys 4 pens at ₹15 each. He pays ₹100. How much change does Rohan get?",
+          "speech": "Rohan buys 4 pens at 15 rupees each. He pays 100 rupees. How much change does Rohan get?",
+          "options": [
+            "₹60",
+            "₹40",
+            "₹85"
+          ],
+          "answer": "₹40",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "₹60": "That is the total cost of the pens, not the change. Subtract it from ₹100.",
+            "₹85": "You took away the price of only one. Find the cost of all 4 first."
+          },
+          "explanation": "Step 1: 4 x ₹15 = ₹60. Step 2: ₹100 - ₹60 = ₹40.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-015.check.2",
+          "prompt": "A hall has 8 rows of 25 seats. 168 people are sitting. How many seats are empty?",
+          "speech": "A hall has 8 rows of 25 seats. 168 people are sitting. How many seats are empty?",
+          "options": [
+            "200",
+            "368",
+            "32"
+          ],
+          "answer": "32",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "200": "That is all the seats in the hall. Take away the seats people are using.",
+            "368": "You added the people. Empty seats = all the seats - the people sitting."
+          },
+          "explanation": "Step 1: 8 x 25 = 200 seats. Step 2: 200 - 168 = 32.",
+          "difficulty": 2
+        },
+        {
+          "id": "numbers-l4-015.check.3",
+          "prompt": "Priya has 24 marbles. She wins 12 more and then shares all the marbles equally among 4 friends. How many marbles does each friend get?",
+          "speech": "Priya has 24 marbles. She wins 12 more and then shares all the marbles equally among 4 friends. How many marbles does each friend get?",
+          "options": [
+            "9",
+            "36",
+            "32"
+          ],
+          "answer": "9",
+          "visual": {
+            "type": "none"
+          },
+          "hints": [],
+          "wrong_feedback": {
+            "36": "That is the total number of marbles. Now share it equally among 4 friends.",
+            "32": "You subtracted 4. Sharing equally means dividing."
+          },
+          "explanation": "Step 1: 24 + 12 = 36. Step 2: 36 ÷ 4 = 9.",
+          "difficulty": 2
+        }
+      ],
+      "remediation": {
+        "explain": [
+          {
+            "id": "numbers-l4-015.remediation_explain.1",
+            "text": "Slow down. Underline the numbers and the question. What must we find first? Usually a total.",
+            "speech": "Slow down. Underline the numbers and the question. What must we find first? Usually a total.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "Find the helper number first"
+            }
+          },
+          {
+            "id": "numbers-l4-015.remediation_explain.2",
+            "text": "Dev buys 2 toffee packs at ₹5 each. Step 1: total cost = 2 x ₹5 = ₹10.",
+            "speech": "Dev buys 2 toffee packs at 5 rupees each. Step 1: total cost equals 2 times 5 rupees equals 10 rupees.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "2 x ₹5 = ₹10"
+            }
+          },
+          {
+            "id": "numbers-l4-015.remediation_explain.3",
+            "text": "Step 2: Dev pays ₹20, so the change is ₹20 - ₹10 = ₹10. Always check that the answer makes sense.",
+            "speech": "Step 2: Dev pays 20 rupees, so the change is 20 rupees minus 10 rupees equals 10 rupees. Always check that the answer makes sense.",
+            "visual": {
+              "type": "glyph",
+              "glyph": "₹20 - ₹10 = ₹10"
+            }
+          }
+        ],
+        "guided": [
+          {
+            "id": "numbers-l4-015.remediation_guided.1",
+            "prompt": "Kabir has ₹160. He buys a kite for ₹45 and a top for ₹25. How much money is left?",
+            "speech": "Kabir has 160 rupees. He buys a kite for 45 rupees and a top for 25 rupees. How much money is left?",
+            "options": [
+              "₹70",
+              "₹115",
+              "₹90"
+            ],
+            "answer": "₹90",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "How much did the two things cost together?",
+              "Add ₹45 and ₹25, then take that away from ₹160."
+            ],
+            "wrong_feedback": {
+              "₹70": "That is the money spent, not the money left.",
+              "₹115": "You paid for the first item only. Take away the price of the top as well."
+            },
+            "explanation": "Step 1: ₹45 + ₹25 = ₹70. Step 2: ₹160 - ₹70 = ₹90.",
+            "difficulty": 1
+          },
+          {
+            "id": "numbers-l4-015.remediation_guided.2",
+            "prompt": "Zoya buys 2 erasers at ₹12 each. She pays ₹50. How much change does Zoya get?",
+            "speech": "Zoya buys 2 erasers at 12 rupees each. She pays 50 rupees. How much change does Zoya get?",
+            "options": [
+              "₹26",
+              "₹24",
+              "₹38"
+            ],
+            "answer": "₹26",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [
+              "Two steps. First find what all 2 erasers cost together.",
+              "Cost = 2 x ₹12. Then take that away from ₹50."
+            ],
+            "wrong_feedback": {
+              "₹24": "That is the total cost of the erasers, not the change. Subtract it from ₹50.",
+              "₹38": "You took away the price of only one. Find the cost of all 2 first."
+            },
+            "explanation": "Step 1: 2 x ₹12 = ₹24. Step 2: ₹50 - ₹24 = ₹26.",
+            "difficulty": 1
+          }
+        ],
+        "check": [
+          {
+            "id": "numbers-l4-015.remediation_check.1",
+            "prompt": "Ravi saves ₹30 every week for 8 weeks. Then he spends ₹150. How much money is left?",
+            "speech": "Ravi saves 30 rupees every week for 8 weeks. Then he spends 150 rupees. How much money is left?",
+            "options": [
+              "₹240",
+              "₹90",
+              "₹390"
+            ],
+            "answer": "₹90",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "₹240": "That is the total he saved. He then spent some, so subtract.",
+              "₹390": "He spent money, so take it away; do not add it."
+            },
+            "explanation": "Step 1: 8 x ₹30 = ₹240. Step 2: ₹240 - ₹150 = ₹90.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-015.remediation_check.2",
+            "prompt": "A pack of 4 pens costs ₹60. How much do 10 pens cost?",
+            "speech": "A pack of 4 pens costs 60 rupees. How much do 10 pens cost?",
+            "options": [
+              "₹150",
+              "₹15",
+              "₹600"
+            ],
+            "answer": "₹150",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "₹15": "That is the price of one pen. You need 10 pens.",
+              "₹600": "That is the price of 10 packs. First find the cost of one pen: ₹60 ÷ 4."
+            },
+            "explanation": "Step 1: ₹60 ÷ 4 = ₹15. Step 2: 10 x ₹15 = ₹150.",
+            "difficulty": 2
+          },
+          {
+            "id": "numbers-l4-015.remediation_check.3",
+            "prompt": "Kiran has 14 marbles. He wins 16 more and then shares all the marbles equally among 5 friends. How many marbles does each friend get?",
+            "speech": "Kiran has 14 marbles. He wins 16 more and then shares all the marbles equally among 5 friends. How many marbles does each friend get?",
+            "options": [
+              "30",
+              "25",
+              "6"
+            ],
+            "answer": "6",
+            "visual": {
+              "type": "none"
+            },
+            "hints": [],
+            "wrong_feedback": {
+              "30": "That is the total number of marbles. Now share it equally among 5 friends.",
+              "25": "You subtracted 5. Sharing equally means dividing."
+            },
+            "explanation": "Step 1: 14 + 16 = 30. Step 2: 30 ÷ 5 = 6.",
+            "difficulty": 2
+          }
+        ]
+      },
+      "review": {
+        "native_review_needed": false,
+        "items_to_review": [
+          "Scope: two-step problems with whole numbers and rupees: cost then change, add then subtract, multiply then subtract, unit price, add then share; all answers whole.",
+          "Educator review of the teaching steps, item difficulty and pass marks (all UNVERIFIED).",
+          "en-IN TTS reading of percent signs, ratios, degrees, units and rupee amounts (not heard)."
+        ],
+        "assets_missing": [],
+        "notes": [
+          "Draft by content-creator. Arithmetic answers and distractors are computed by code (tool script, integer maths); every distractor is wrong and each wrong option has its own feedback. Option order is mixed; the UI may shuffle.",
+          "Check and remediation-check items carry no hints and no visual that shows the answer."
+        ]
+      }
+    }
+  ]
+}
